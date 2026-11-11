@@ -13363,7 +13363,7 @@ proxies:
     short-id: 9a79807253c040
   client-fingerprint: chrome
   network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
+- name: "SG \U0001F1F8\U0001F1EC | رادار | 7C4F6D"
   server: zfapi.zalolink.com
   port: 35460
   type: vless
@@ -13377,7 +13377,7 @@ proxies:
     short-id: 30d976db3eab32
   client-fingerprint: ios
   network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
+- name: "SG \U0001F1F8\U0001F1EC | رادار | C9C257"
   server: zfapi.zalolink.com
   port: 46105
   type: vless
@@ -70727,8 +70727,8 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 4C2CA5"
   - "US \U0001F1FA\U0001F1F8 | رادار | BF4658"
   - "HK \U0001F1ED\U0001F1F0 | رادار | AEA12F"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
+  - "SG \U0001F1F8\U0001F1EC | رادار | 7C4F6D"
+  - "SG \U0001F1F8\U0001F1EC | رادار | C9C257"
   - "FI \U0001F1EB\U0001F1EE | رادار | 61C839"
   - "FI \U0001F1EB\U0001F1EE | رادار | 56A19A"
   - "FI \U0001F1EB\U0001F1EE | رادار | 575D2D"
@@ -76507,8 +76507,8 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 4C2CA5"
   - "US \U0001F1FA\U0001F1F8 | رادار | BF4658"
   - "HK \U0001F1ED\U0001F1F0 | رادار | AEA12F"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
+  - "SG \U0001F1F8\U0001F1EC | رادار | 7C4F6D"
+  - "SG \U0001F1F8\U0001F1EC | رادار | C9C257"
   - "FI \U0001F1EB\U0001F1EE | رادار | 61C839"
   - "FI \U0001F1EB\U0001F1EE | رادار | 56A19A"
   - "FI \U0001F1EB\U0001F1EE | رادار | 575D2D"

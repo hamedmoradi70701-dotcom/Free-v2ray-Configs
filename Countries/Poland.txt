@@ -2,15 +2,14 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — POLAND (PL) — 8 configs
+# رادار — POLAND (PL) — 7 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZXRrN3B3@54.36.174.140:443#PL 🇵🇱 | رادار | 9B0BD2
+vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | رادار | 76B2DF
 vless://3f5e89d5-591f-4ac9-b071-b05680b573c3@138.124.242.46:8443?encryption=none&fp=safari&security=tls&serviceName=connect-pl&sni=pl2-edge.gacvpn.site&type=grpc#PL 🇵🇱 | رادار | C877C8
 vmess://eyJ2IjoiMiIsInBzIjoiUEwg8J+HtfCfh7EgfCDYsdin2K/Yp9ixIHwgQ0YwRUY5IiwiYWRkIjoiNTQuMzcuMTMxLjEyNiIsInBvcnQiOiI4MCIsImlkIjoiMWU1NWJlY2EtM2M2OS00ZmE3LWZiMWYtMTVjMWI3Njc0MzVmIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJhbHBuIjoiIiwicGF0aCI6Ii8iLCJob3N0IjoiZ29vZ2xlLndoYXRzYXBwLnNuYXBwLnRvcm9iLmJhc2FsYW0uaGVzYW5pZDguaXIuIn0=
-vless://a4e5f910-23f4-470f-82a7-ed9d7be71dec@2.26.224.174:8445?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=blog.ncknms.com&fp=edge&pbk=d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc&sid=10983e6c816181c2#PL 🇵🇱 | رادار | 005C3B
-vless://42a64b9a-ab79-4094-8656-30366a7c2ea3@13.143.167.154:443?security=reality&encryption=none&pbk=Y2uyTCt5ofoFht6Xl-55dBPCBUiYi1fFTVcmZtoiqFw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=pl-balancer.peregrine-sub.net#PL 🇵🇱 | رادار | 5621B1
-vless://42a64b9a-ab79-4094-8656-30366a7c2ea3@pl-balancer.peregrine-sub.net:443?security=reality&encryption=none&pbk=Y2uyTCt5ofoFht6Xl-55dBPCBUiYi1fFTVcmZtoiqFw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=pl-balancer.peregrine-sub.net#PL 🇵🇱 | رادار | 1EBBE2
 vless://a4e5f910-23f4-470f-82a7-ed9d7be71dec@2.26.224.174:8443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc&security=reality&sid=10983e6c816181c2&sni=teamdocs.su&type=tcp#PL 🇵🇱 | رادار | 67D8CF
-vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | رادار | 76B2DF
+vless://a4e5f910-23f4-470f-82a7-ed9d7be71dec@2.26.224.174:8445?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=blog.ncknms.com&fp=edge&pbk=d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc&sid=10983e6c816181c2#PL 🇵🇱 | رادار | 005C3B
+vless://52a5a29f-c162-411a-8a37-a3f11b0dc537@20.215.66.17:2083?security=reality&type=tcp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=0123456789abcdef&pbk=WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4&encryption=none#PL 🇵🇱 | رادار | 3DEACA

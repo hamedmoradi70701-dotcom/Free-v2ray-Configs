@@ -1,0 +1,12 @@
+#profile-title: رادار — UNITED ARAB EMIRATES (AE)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — UNITED ARAB EMIRATES (AE) — 4 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?security=none&type=ws&path=%2Fvless#AE 🇦🇪 | رادار | 01F511
+vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?path=%2Fvless&security=none&sni=95.174.68.188&type=ws#AE 🇦🇪 | رادار | 607218
+vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?security=none&type=ws&path=%2Fvless&host=95.174.68.188&sni=95.174.68.188#AE 🇦🇪 | رادار | F16E75
+vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?host=95.174.68.188&path=%2Fvless&security=none&type=ws#AE 🇦🇪 | رادار | 64BB8E

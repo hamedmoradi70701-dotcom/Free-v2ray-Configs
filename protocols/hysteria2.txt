@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — hysteria2 — 203 configs
+# رادار — hysteria2 — 202 configs
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=off#US 🇺🇸 | رادار | 19974A
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=163.192.14.135#US 🇺🇸 | رادار | 4929FF
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=css.rbxcdn.com#US 🇺🇸 | رادار | BDDA85
@@ -197,7 +197,6 @@ hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@hold.wwwinternetvid
 hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@144.31.221.57:443?insecure=1&sni=player.wwwinternetvideo.click#DE 🇩🇪 | رادار | D04D7A
 hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@player.wwwinternetvideo.click:443?insecure=1&sni=player.wwwinternetvideo.click#DE 🇩🇪 | رادار | 23DFE5
 hysteria2://VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC@82.38.60.15:8443?insecure=1&sni=hopp-us.yyuyy.com#US 🇺🇸 | رادار | 9B0747
-hysteria2://VPNJey@179.61.138.145:36264/?insecure=1&obfs=salamander&obfs-password=Telegram%40vpnjey&sni=de2.jey.cc.cd#DE 🇩🇪 | رادار | 1D19F4
 hysteria2://wrSuBorIlf@72.56.116.57:443?insecure=1&sni=hys9.wba-pn.ru#NL 🇳🇱 | رادار | 68AEDF
 hysteria2://wrSuBorIlf@hys9.wba-pn.ru:443?insecure=1#NL 🇳🇱 | رادار | FA225A
 hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.49.47:443?insecure=1&sni=admin.wwwinternetvideo.click#RU 🇷🇺 | رادار | 507E18

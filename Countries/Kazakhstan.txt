@@ -1,0 +1,10 @@
+#profile-title: رادار — KAZAKHSTAN (KZ)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — KAZAKHSTAN (KZ) — 2 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://83cc8226-1087-49ae-aac3-1f157ddc57b4@176.120.21.23:443?encryption=none&flow=xtls-rprx-vision&pbk=OAU9917HKYqvTO59c9SvAL9BBh8v85tfJhw5PMg-2iU&security=reality&sid=c4d4cf50489d51&sni=yahoo.com&type=tcp#KZ 🇰🇿 | رادار | E7ADF0
+vless://2424febb-43cb-488d-bdd1-401e923c8e48@3h-kazakhstan1.09vpn.com:8443?&security=tls&fp=chrome&sni=3h-kazakhstan1.09vpn.com&type=ws&headerType=none&host=3h-kazakhstan1.09vpn.com&path=%2Fvless%2F#KZ 🇰🇿 | رادار | 4A1162
