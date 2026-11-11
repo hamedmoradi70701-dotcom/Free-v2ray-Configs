@@ -1,0 +1,60 @@
+strictDepBuilds: false
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  lmdb: true
+  msgpackr-extract: true
+  esbuild: true
+
+# --- Security overrides (GHSA-xvch-5gv4-984h / CVE-2021-44906, CRITICAL,
+#     and GHSA-vh95-rmgr-6w4m / CVE-2020-7598, MEDIUM: prototype pollution,
+#     CWE-1321) ---
+#
+# minimist reached this tree ONLY as a transitive devDependency of
+# html-inline@1.2.0 (used by the `bundle` script):
+#   html-inline@1.2.0 -> minimist@1.1.3            (vulnerable)
+#   html-inline@1.2.0 -> trumpet@1.7.2
+#                          -> html-select@2.3.24   -> minimist@0.0.10 (vulnerable)
+#                          -> html-tokenize@1.2.5  -> minimist@0.0.10 (vulnerable)
+#
+# Upgrading html-inline CANNOT fix this: its latest release is 1.2.0
+# (published 2015-10-02, unmaintained) and it pins `minimist: ~1.1.0`,
+# a range that excludes every patched version (1.2.6 / 1.2.8).
+# An override is therefore the only available remediation.
+#
+# Validated before adoption (see AUDIT notes):
+#   * only these 3 packages depend on minimist -> parcel/esbuild/swc/postcss
+#     /tailwind are entirely unaffected;
+#   * 75/75 differential argv-parse comparisons (all 3 consumers' exact option
+#     shapes, incl. the real `--ignore-links=true dist/index.html` invocation)
+#     are byte-identical between 0.0.10/1.1.3 and 1.2.8;
+#   * running the real html-inline bin/cmd.js on the real dist/index.html under
+#     1.2.8 reproduces bundle.html byte-for-byte
+#     (md5 d6fccff705d3964dfe1aeea17954bc86);
+#   * 1.2.8 is immune to all three PoC pollution vectors, both CVEs.
+#
+# NOTE: this MUST live here and not in package.json - since pnpm v11, pnpm no
+# longer reads settings from the `pnpm` field of package.json, so a
+# `pnpm.overrides` block there would be silently ignored.
+overrides:
+  minimist: ^1.2.8
+
+  # --- GHSA-rj75-hqrm-r3gf / CVE-2026-104844 (MEDIUM, CPU exhaustion) ---
+  # postcss-selector-parser < 7.1.6 parses flat selectors (`.a.a.a…`) in O(n²).
+  # Reaches this tree only as a devDependency of tailwindcss 3.4.1, which pins
+  # `^6.0.11` (and postcss-nested `^6.1.1`), so neither Dependabot nor a
+  # tailwind 3.x upgrade can lift it: there is no fixed 6.x release (6.1.4 is
+  # the last). Forcing 7.1.6 under tailwind 3 was verified before adoption:
+  #   * tailwind output on a stress set of variant/arbitrary selectors is
+  #     byte-identical between 6.1.4 and 7.1.6 (negative control: a one-class
+  #     input change does change it, so the comparison is sensitive);
+  #   * the full `pnpm run bundle` reproduces docs/index.html and the CSS
+  #     byte-for-byte;
+  #   * 40k-class flat selector: 1667 ms on 6.1.4 → 146 ms on 7.1.6.
+  postcss-selector-parser@<7.1.6: 7.1.6
+  # --- GHSA-2v37-7h3g-55p8 / CVE-2026-67213 (HIGH, infinite loop) ---
+  # nanoid < 3.3.18 loops forever in customAlphabet/customRandom with size 0.
+  # Reaches this tree only via postcss (`nanoid: ^3.3.16`), so a 3.x patch
+  # stays inside the range postcss asks for. Dependabot had auto-dismissed it
+  # (development scope) while 3.3.16 was still in the lockfile.
+  nanoid@<3.3.18: ^3.3.18

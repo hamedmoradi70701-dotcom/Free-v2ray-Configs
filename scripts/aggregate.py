@@ -1,0 +1,1384 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+aggregate.py — خط‌لولهٔ اصلیِ تجمیع کانفیگ‌های @رادار.
+
+جریان کار (هیچ TCP-connect ای انجام نمی‌شود — مطابق تصمیم کاربر):
+  ۱) واکشیِ هم‌زمانِ ۱۳ منبع (۸ سبک + ۵ انبوه) با ThreadPool
+  ۲) استخراجِ کانفیگ‌های معتبر از هر منبع (direct یا base64)
+  ۳) برای سه دستهٔ ALL / HEAVY / LIGHT:
+       • حذف خراب‌ها (dummy)  → بایگانیِ broken
+       • حذف تکراری‌ها (CDN-aware dedup) → بایگانیِ duplicates
+       • برندینگِ یکتاها  «{CC} {flag} | @رادار | {idx}»
+  ۴) نوشتنِ خروجی‌ها:
+       all|heavy|light/  : configs.txt , configs_base64.txt , clash.yaml , singbox.json
+       protocols/        : vless.txt , vmess.txt , ... (روی دستهٔ ALL)
+       archive/          : <cat>_broken.txt , <cat>_duplicates.txt  (+ base64)
+       index.json        : متادیتای کامل (شمارش‌ها، زمان، پروتکل‌ها، CDN URLها)
+
+اجرا:
+    python scripts/aggregate.py --out <output_dir>
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as _dt
+import hashlib
+import json
+import os
+import random
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Dict, List, Optional, Tuple
+from urllib.parse import parse_qs, urlsplit
+
+import requests
+
+# اجازهٔ import وقتی از ریشهٔ ریپو یا از scripts/ اجرا شود
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+import core  # noqa: E402
+import converters  # noqa: E402
+import mihomo_compat  # noqa: E402
+import state as memory  # noqa: E402
+from sources import LIGHT_SOURCES, HEAVY_SOURCES, VIFY_ALIVE_URL  # noqa: E402
+
+# geo اختیاری است: اگر پایگاه‌دادهٔ GeoIP یا کتابخانه‌اش در دسترس نباشد، خط‌لوله
+# باید همان‌طور که پیش از این کار می‌کرد کار کند، فقط با برچسب‌های ضعیف‌تر.
+# پس ایمپورتِ آن هرگز نباید اجرا را متوقف کند.
+try:
+    import geo  # noqa: E402
+except Exception:  # pragma: no cover - محیطِ بدونِ geo
+    geo = None  # type: ignore
+
+# ──────────────────────────────────────────────────────────────────────────────
+# پایهٔ لینک‌ها — برای درج در index.json
+#
+# چرا raw شد لینکِ «اصلی» و jsDelivr شد «آینه»؟
+#   این یک سلیقه نیست؛ اندازه‌گیریِ زندهٔ همین مخزن است:
+#     raw.githubusercontent →  cache-control: max-age=300            (۵ دقیقه)
+#     cdn.jsdelivr.net      →  cache-control: ... s-maxage=43200     (۱۲ ساعت)
+#   و مستنداتِ رسمیِ jsDelivr هم صریح می‌گوید کشِ «Branches» دوازده ساعت است.
+#   در یک سنجشِ زنده، jsDelivr نسخه‌ای ۱۲ساعت‌و‌۴۵دقیقه‌ای را سرو می‌کرد
+#   (۴٬۳۵۳ کانفیگ) در حالی که raw نسخهٔ تازه را می‌داد (۸٬۱۶۸ کانفیگ) —
+#   یعنی ۵۱ برابرِ بازهٔ هدفِ ۱۵ دقیقه‌ای. پس تلاش برای رسیدن به آپدیتِ
+#   ۱۵ دقیقه‌ای، برای هر کسی که لینکِ jsDelivr را subscribe کرده بود، بی‌اثر بود.
+#   حالا: لینکِ اصلی = raw (۱۴۴ برابر تازه‌تر)، و jsDelivr به‌عنوان mirror
+#   می‌ماند (برای کاربرانی که raw برایشان فیلتر است) و در هر دور با
+#   Purge API پاک می‌شود (مرحلهٔ پاک‌سازیِ کش در ورک‌فلو).
+#
+# خروجی‌ها روی همان برنچِ پیش‌فرض (`main`) منتشر می‌شوند.
+#
+#   یک نسخهٔ میانی خروجی‌ها را به شاخهٔ جداگانهٔ `data` برد تا تاریخِ `main`
+#   متورم نشود. آن تصمیم از نظرِ حجمِ گیت درست بود ولی از نظرِ محصول اشتباه:
+#
+#     • کاربری که دنبالِ کانفیگ است لازم نیست بداند «برنچ» چیست؛ او صفحهٔ
+#       اصلیِ ریپو را باز می‌کند و روی فایل کلیک می‌کند. با انتقال به `data`
+#       صفحهٔ اصلی خالی می‌شد و کانفیگ‌ها عملاً پنهان می‌شدند.
+#     • هر لینکی که کاربران قبلاً کپی کرده بودند (`.../main/all/configs.txt`)
+#       ۴۰۴ می‌شد — سنجیده و تأییدشده. یعنی subscriptionِ کارِ مردم می‌شکست.
+#     • موتورهای جست‌وجو و ویترینِ ریپو هم فقط برنچِ پیش‌فرض را نشان می‌دهند،
+#       پس کشف‌پذیری و ستاره‌گرفتن آسیب می‌دید.
+#
+#   بررسیِ ریپوهای شاخصِ همین حوزه هم همین را می‌گوید: هیچ‌کدام خروجی را روی
+#   برنچِ جدا نمی‌گذارند (Epodonios روی main، mahdibland روی master،
+#   Pawdroid روی main).
+#
+#   مسئلهٔ حجم به‌جای «برنچِ جدا» با دو کار حل می‌شود:
+#     ۱) پایدارسازیِ خروجی (برچسبِ کشور و شناسهٔ ریمارک دیگر بین اجراها
+#        نمی‌رقصند و خطوط مرتب‌اند) ⇒ diffِ هر انتشار کوچک می‌شود.
+#     ۲) «rolling squash» در ورک‌فلو: کامیتِ خروجی همیشه روی آخرین کامیتِ
+#        سورس بسته می‌شود، پس در هر لحظه فقط یک کامیتِ خروجی روی `main`
+#        وجود دارد و تاریخ انباشته نمی‌شود (هزینهٔ O(1) به‌جای O(commits)).
+#
+#   برنچ hard-code نیست تا تست‌ها و ورک‌فلو بتوانند مقدارش را بدهند.
+# ──────────────────────────────────────────────────────────────────────────────
+GH_USER = os.environ.get("AGG_GH_USER", "hamedmoradi70701-dotcom")
+GH_REPO = os.environ.get("AGG_GH_REPO", "Free-v2ray-Configs")
+
+# نامِ برنچِ انتشار از محیط خوانده می‌شود. `PUBLISH_BRANCH` نامِ صریحِ امروزی
+# است؛ دو نامِ قدیمی (`AGG_DATA_BRANCH` / `DATA_BRANCH`) برای سازگاریِ عقب‌رو
+# پذیرفته می‌شوند تا اگر جایی مانده باشد بی‌صدا خراب نشود. اگر هیچ‌کدام ست
+# نشده باشند، پیش‌فرض همان برنچِ پیش‌فرضِ ریپو است.
+GH_BRANCH = (os.environ.get("AGG_PUBLISH_BRANCH")
+             or os.environ.get("PUBLISH_BRANCH")
+             or os.environ.get("AGG_DATA_BRANCH")
+             or os.environ.get("DATA_BRANCH")
+             or "main")
+RAW_BASE = f"https://raw.githubusercontent.com/{GH_USER}/{GH_REPO}/{GH_BRANCH}"
+CDN_BASE = f"https://cdn.jsdelivr.net/gh/{GH_USER}/{GH_REPO}@{GH_BRANCH}"
+# از این پس هرجا یک لینکِ «اصلی» لازم است از PRIMARY_BASE استفاده می‌شود.
+PRIMARY_BASE = RAW_BASE
+MIRROR_BASE = CDN_BASE
+
+# چند User-Agent متفاوت — برخی منابع به UAِ خاصی پاسخِ بهتر می‌دهند
+USER_AGENTS = (
+    "v2rayNG/1.8.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "ClashforWindows/0.20.39",
+)
+FETCH_TIMEOUT = int(os.getenv("AGG_FETCH_TIMEOUT", "15"))
+MAX_WORKERS = int(os.getenv("AGG_MAX_WORKERS", "16"))
+FETCH_RETRIES = int(os.getenv("AGG_FETCH_RETRIES", "3"))  # تعدادِ تلاشِ مجدد در صورتِ خطا/خالی‌بودن
+RETRY_BACKOFF = 1.5        # ثانیه × شمارهٔ تلاش
+
+#: سقفِ برداشت از هر منبعِ HEAVY در هر دور (خط، پیش از dedup).
+#: قابلِ override با متغیرِ محیطی AGG_HEAVY_INTAKE_CAP؛ مقدارِ ≤ ۰ یعنی خاموش.
+#:
+#: چرا لازم شد: منابعِ HEAVY آینه‌های توده‌ای‌اند و چندتایشان به‌تنهایی
+#: چند هزار خط می‌دهند (سنجیده‌شده ۲۰۲۶-۱۱-۱۰، پیش از dedup: SoliSpirit
+#: ‏۱۱٬۷۴۰ خط، Farid-Karimi ‏۶٬۲۶۹، mahdibland ‏۴٬۵۱۶، alireza786786 ‏۴٬۱۲۳).
+#: ورودیِ آبشارِ تأیید (`all/configs.txt`) از همین استخر ساخته می‌شود و
+#: بودجهٔ گامِ آبشار در CI **۹۰۰ ثانیه** است (`timeout-minutes: 15`)، در
+#: حالی که هزینهٔ L2+L3 با اندازهٔ استخر خطی رشد می‌کند (سنجشِ مرجع:
+#: ۸٬۱۵۸ کانفیگ ⇒ ۱۴۹ ثانیه). بدونِ سقف، رشدِ چند آینهٔ توده‌ای به‌تنهایی
+#: می‌تواند دور را از بودجه بیرون بزند و `verified/` آن دور ساخته نشود —
+#: یعنی دقیقاً خروجیِ «زنده» قربانیِ حجمِ استخر می‌شد.
+#:
+#: چرا فقط HEAVY: منابعِ LIGHT طبقِ تعریفِ `sources.py` دستچین یا
+#: ازپیش‌آزموده‌اند (از جمله خوراکِ زنده‌آزمودهٔ vify)؛ سقف‌گذاشتن رویشان
+#: یعنی دورریختنِ باکیفیت‌ترین بخشِ استخر. سقف فقط روی HEAVY اعمال می‌شود
+#: (`cap_heavy_intake`).
+#:
+#: چرا ۳۰۰۰: از یک سو آن‌قدر بزرگ است که بازدهِ یکتای معمولِ یک منبعِ
+#: HEAVY (صدها تا ~۲هزار) دست‌نخورده بماند؛ از سوی دیگر سهمِ هیچ آینهٔ
+#: تکی از استخرِ ورودیِ آبشار از حدودِ یک‌هشتمِ دورِ ~۲۵هزارتایی بیشتر
+#: نمی‌شود و رشدِ یک فایلِ تکی دیگر نمی‌تواند بودجهٔ آبشار را ببلعد.
+HEAVY_INTAKE_CAP = int(os.getenv("AGG_HEAVY_INTAKE_CAP", "3000"))
+
+#: بازهٔ به‌روزرسانی (دقیقه) — باید با raydikalx/repo_trigger.py و
+#: UPDATE_INTERVAL_MINUTES در aggregate.yml هماهنگ باشد (پیش‌فرض ۱۵).
+#: قابلِ override با متغیرِ محیطی AGG_UPDATE_INTERVAL_MIN.
+UPDATE_INTERVAL_MIN = int(os.getenv("AGG_UPDATE_INTERVAL_MIN", "15"))
+
+#: گزارشِ سلامتِ منابع (پر می‌شود در fetch_all) — برای index.json و health.json
+SOURCE_HEALTH: Dict[str, dict] = {}
+
+
+def log(msg: str) -> None:
+    ts = _dt.datetime.now(_dt.timezone.utc).strftime("%H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# واکشی منابع (با retry + backoff + گزارشِ سلامت)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def fetch_source(url: str) -> Tuple[str, List[str]]:
+    """یک منبع → (url, لیست کانفیگ‌های معتبر) + ثبتِ سلامت در SOURCE_HEALTH.
+
+    رفتارِ مقاوم: تا FETCH_RETRIES بار تلاش می‌کند؛ بینِ تلاش‌ها UA را می‌چرخاند
+    و backoff اعمال می‌کند. اگر همهٔ تلاش‌ها ناموفق/خالی بودند، لیستِ خالی برمی‌گرداند
+    (مطابقِ رفتارِ قبلی) اما دلیلِ آن در گزارشِ سلامت ثبت می‌شود.
+    """
+    name = url.rsplit("/", 1)[-1] or url
+    last_err = ""
+    last_code = 0
+    t_start = time.time()
+
+    # ── چرا `max(1, …)` و چرا یک نامِ محلی (F-1) ──────────────────────────────
+    # `FETCH_RETRIES` از محیط می‌آید (سطرِ ۱۲۰) و هیچ‌جا اعتبارسنجی نمی‌شد. با
+    # `AGG_FETCH_RETRIES=0` (یا هر عددِ ≤ ۰) بدنهٔ حلقه **هرگز** اجرا نمی‌شد،
+    # پس `attempt` هیچ‌گاه مقدار نمی‌گرفت و دو سطرِ پایین‌ترِ همین تابع که آن را
+    # می‌خوانند (`"attempts": attempt` و پیامِ `log`) با
+    #     UnboundLocalError: cannot access local variable 'attempt'
+    # می‌شکستند. این با اجرا اثبات شد، نه با خواندن: `0` و `-1` هر دو خطا دادند
+    # و `1`/`3` سالم بودند.
+    #
+    # شعاعِ انفجار — چرا این «فقط یک لبهٔ نادر» نیست: `fetch_source` درونِ
+    # `ThreadPoolExecutor` اجرا می‌شود و `fetch_all` نتیجه را با
+    # `fut.result()` (سطرِ ~۲۱۹) می‌گیرد که استثنا را **بازپرتاب** می‌کند.
+    # پس یک متغیرِ محیطیِ بدتنظیم، نه یک منبع، بلکه *کلِ* دورِ تجمیع را
+    # می‌کشت. (این بازپرتاب عمداً دست‌نخورده می‌ماند — دلیلش در `fetch_all`.)
+    #
+    # چرا نامِ محلیِ `tries` و نه کلمپ در سطرِ تعریف:
+    #   ۱) هر دو مصرف‌کنندهٔ عدد (`range` و شرطِ backoff) از **یک** مقدار
+    #      می‌خوانند، پس نمی‌توانند با هم ناسازگار شوند.
+    #   ۲) `FETCH_RETRIES` دست‌نخورده می‌ماند و در زمانِ *فراخوانی* خوانده
+    #      می‌شود، پس آزمون می‌تواند آن را monkeypatch کند و همین مسیر را
+    #      واقعاً بپیماید؛ کلمپ در زمانِ import آن مسیر را غیرقابل‌آزمون می‌کرد.
+    #   ۳) همین اصطلاحِ `max(1, …)` از قبل در `geo.py:320` و
+    #      `reachability.py:186` برای `DNS_WORKERS` به‌کار رفته؛ این تغییر
+    #      سبکِ تازه‌ای نمی‌آورد، فقط تنها نقطهٔ جامانده را هم‌راستا می‌کند.
+    tries = max(1, FETCH_RETRIES)
+
+    for attempt in range(1, tries + 1):
+        ua = USER_AGENTS[(attempt - 1) % len(USER_AGENTS)]
+        try:
+            resp = requests.get(url, timeout=FETCH_TIMEOUT, headers={"User-Agent": ua})
+            last_code = resp.status_code
+            body = resp.text.strip() if resp.text else ""
+            if resp.status_code == 200 and body:
+                cfgs = core.extract_valid_lines(body)
+                if cfgs:
+                    SOURCE_HEALTH[url] = {
+                        "name": name, "status": "ok", "count": len(cfgs),
+                        "http_code": resp.status_code, "attempts": attempt,
+                        "latency_ms": int((time.time() - t_start) * 1000),
+                    }
+                    return url, cfgs
+                # ۲۰۰ ولی صفر کانفیگِ معتبر → ممکن است فرمتِ ناشناخته باشد
+                last_err = "200 but 0 valid configs"
+            else:
+                last_err = f"HTTP {resp.status_code}" if resp.status_code != 200 else "empty body"
+                # fail-fast روی خطاهای دائمیِ کلاینت: 404/410/451 با تلاش مجدد
+                # هرگز درست نمی‌شوند. تلاش مجدد فقط ۴.۵ ثانیه از بودجهٔ زمانی
+                # ورک‌فلو را هدر می‌دهد (۳ تلاش × backoff) بدون هیچ فایده‌ای.
+                if resp.status_code in (400, 401, 403, 404, 410, 451):
+                    break
+        except Exception as e:  # noqa: BLE001
+            last_err = f"{type(e).__name__}: {str(e)[:80]}"
+        # `tries` (نه `FETCH_RETRIES`) تا شرطِ خواب و شرطِ حلقه هرگز از هم
+        # جدا نیفتند. با یک تلاش، هیچ خوابی نباید رخ دهد — اندازه‌گیری شد:
+        # tries=1 → sleeps=[] · tries=2 → [1.5] · tries=3 → [1.5, 3.0]
+        if attempt < tries:
+            time.sleep(RETRY_BACKOFF * attempt)
+    # شکستِ نهایی
+    SOURCE_HEALTH[url] = {
+        "name": name, "status": "empty" if "0 valid" in last_err else "fail",
+        "count": 0, "http_code": last_code, "attempts": attempt,
+        "latency_ms": int((time.time() - t_start) * 1000), "error": last_err,
+    }
+    log(f"  ⚠️ fetch fail {name}: {last_err} (after {attempt} tries)")
+    return url, []
+
+
+def fetch_all(urls: List[str]) -> Dict[str, List[str]]:
+    """واکشیِ هم‌زمانِ همهٔ URLها → نگاشت url→configs.
+
+    ── دو نکتهٔ عامدانه (F-1) ────────────────────────────────────────────────
+
+    ۱) `max(1, MAX_WORKERS)` — نه `MAX_WORKERS` خام.
+       `MAX_WORKERS` هم از محیط می‌آید (سطرِ ۱۱۹) و اعتبارسنجی نمی‌شد. با اجرا
+       سنجیده شد (نه با حدس): `AGG_MAX_WORKERS=0` و `=-1` هر دو پیش از هر
+       واکشی‌ای با
+           ValueError: max_workers must be greater than 0
+       کلِ تابع را می‌شکستند — یعنی هیچ منبعی واکشی نمی‌شد. `1` و `16` سالم
+       بودند. این همان اصطلاحی است که `geo.py:320` و `reachability.py:186`
+       سال‌ها برای `DNS_WORKERS` به‌کار برده‌اند؛ سطرِ زیر تنها نقطهٔ جامانده
+       در پروژه بود.
+
+    ۲) `fut.result()` عامدانه **بی‌گارد** می‌ماند.
+       وسوسه‌اش هست که دورش `try/except` بگذاریم تا «یک منبعِ خراب کلِ دور را
+       نکشد». این کار در این پروژه **زیان‌آور** است، و دلیلش ساختارِ ورک‌فلو
+       است نه سلیقه:
+
+         • `fetch_source` خودش هر خطای *شبکه‌ای* را می‌گیرد (سطرِ ۲۰۳) و
+           `(url, [])` برمی‌گرداند. پس هر استثنایی که به این‌جا برسد، خطای
+           شبکه نیست — یک **خطای برنامه‌نویسی** است (مثلاً همان
+           `UnboundLocalError`ِ بالا).
+         • گامِ «🚀 Run aggregator» در `aggregate.yml:328-330` هیچ
+           `continue-on-error` ندارد (در کلِ ورک‌فلو فقط دو گام دارند: لایهٔ
+           L3 و پاک‌سازیِ jsDelivr). پس استثنا ⇒ شکستِ بلندِ job ⇒ گامِ انتشار
+           هرگز اجرا نمی‌شود ⇒ snapshotِ سالمِ قبلی دست‌نخورده می‌ماند.
+
+       یعنی رفتارِ امروز از قبل fail-closed است. اگر گارد بگذاریم، یک خطای
+       برنامه‌نویسی به «تجمیعِ ناقصِ خاموش» تبدیل می‌شود: چند منبع غایب،
+       کانفیگ‌های کمتر، و چون سنجهٔ کمینه فقط ۱۰۰ خط است
+       (`aggregate.yml:813-816`) احتمالاً همان خروجیِ لاغرشده **منتشر**
+       می‌شود. آن، بدتر از شکستِ بلند است. پس این‌جا عمداً دست نمی‌زنیم.
+    """
+    results: Dict[str, List[str]] = {}
+    with ThreadPoolExecutor(max_workers=max(1, MAX_WORKERS)) as ex:
+        futs = {ex.submit(fetch_source, u): u for u in urls}
+        for fut in as_completed(futs):
+            url, cfgs = fut.result()
+            results[url] = cfgs
+            log(f"  ✓ {len(cfgs):>5} configs ← {url.rsplit('/', 1)[-1]}")
+    return results
+
+
+def cap_heavy_intake(per_source: Dict[str, List[str]]) -> Dict[str, List[str]]:
+    """سقفِ برداشتِ هر منبعِ HEAVY را اعمال می‌کند (`HEAVY_INTAKE_CAP`).
+
+    فقط منابعی که در `HEAVY_SOURCES` هستند و بیش از سقف خط داده‌اند
+    دست می‌خورند؛ LIGHT و خوراک‌های زنده‌آزموده **هرگز** سقف نمی‌خورند.
+
+    نمونه‌برداری قطعی است، نه تصادفیِ لحظه‌ای: بذر از `sha256(url)` گرفته
+    می‌شود (همان رویهٔ `state.source_key`)، پس در هر اجرا و روی هر ماشینی
+    دقیقاً همان زیرمجموعه انتخاب می‌شود و خروجیِ دور قابلِ بازتولید و
+    diffِ آن معنادار می‌ماند. `hash()` پایتون عمداً استفاده نمی‌شود چون
+    بین اجراها تصادفی‌سازی می‌شود (PYTHONHASHSEED). اندیس‌های انتخاب‌شده
+    صعودی مرتب می‌شوند تا ترتیبِ درونیِ خودِ منبع در نمونه حفظ شود.
+
+    ⚠️ پیامدِ دانسته: این تابع **پیش از** `process_category` و
+    `advance_memory` صدا زده می‌شود، پس شمارنده‌های آن دور (از جمله
+    بازدهِ یکتایی که حافظه ثبت می‌کند) برداشتِ سقف‌خورده را می‌بینند، نه
+    واکشیِ خام را. این عمدی است: حافظه باید چیزی را بسنجد که خطِ لوله
+    واقعاً از آن منبع مصرف می‌کند. قاعدهٔ غیرفعال‌سازی هم آسیب نمی‌بیند —
+    «۱۰ دورِ پیاپی بازدهِ یکتای صفر» برای منبعی که در نمونهٔ ۳۰۰۰تایی‌اش
+    هم هیچ یکتایی ندارد، همان‌قدر معتبر است. شمارِ خامِ واکشی در
+    `SOURCE_HEALTH` دست‌نخورده می‌ماند و در health.json دیده می‌شود.
+    """
+    if HEAVY_INTAKE_CAP <= 0:
+        return per_source
+    out = dict(per_source)
+    for url in HEAVY_SOURCES:
+        lines = out.get(url)
+        if not lines or len(lines) <= HEAVY_INTAKE_CAP:
+            continue
+        seed = int(hashlib.sha256(url.encode("utf-8")).hexdigest()[:16], 16)
+        rng = random.Random(seed)
+        idx = sorted(rng.sample(range(len(lines)), HEAVY_INTAKE_CAP))
+        out[url] = [lines[i] for i in idx]
+        log(f"  ✂️ heavy intake cap: {len(lines)} → {HEAVY_INTAKE_CAP} "
+            f"← {url.rsplit('/', 1)[-1]}")
+    return out
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ترتیبِ «اول زنده‌ها» (۲۰۲۶-۱۱-۱۱، درخواستِ مالکِ فورکِ «رادار»)
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# چرا: خروجیِ این فایل (`all/configs.txt`) ورودیِ آبشارِ تأیید
+# (`pipeline.py`: L2 بعد L3×۳ با xray-knife) است و آبشار خطوط را **به همان
+# ترتیبی** می‌آزماید که این‌جا نوشته شده‌اند. پیش از این، ترتیب فقط
+# الفباییِ `dedup_key` بود، پس خوراکِ زنده‌آزمودهٔ vify و Realityهای ۴۴۳
+# — محتمل‌ترینِ زنده‌بودن — هیچ اولویتی نداشتند و اگر دورِ CI به سقفِ
+# ۱۵ دقیقه‌ای می‌خورد، `verified/` با همان‌هایی پر می‌شد که اتفاقی زودتر
+# در الفبا بودند. سقفِ برداشتِ HEAVY (`HEAVY_INTAKE_CAP`) جلوی باد کردنِ
+# استخر را می‌گیرد، ولی ترتیبِ داخلِ استخر را عوض نمی‌کند؛ این مرتب‌سازی
+# همان تکهٔ گم‌شده است.
+#
+# سه ردیف، قطعی و بازتولیدپذیر (در هر ردیف، `dedup_key` صعودی — همان
+# ناوردایِ قبلی، فقط حالا **داخلِ ردیف**):
+#   ۰) روی فهرستِ «زنده»ی vify هست (کلیدِ یکتاسازی‌اش با آن فهرست می‌خواند،
+#      حتی اگر خودِ خط از منبعِ دیگری آمده باشد)
+#   ۱) Reality روی پورتِ ۴۴۳ (کلاسی که روی نتِ مالک وصل شد و کار کرد)
+#   ۲) بقیه
+#
+# چرا برندینگ از جابه‌جایی نمی‌ترسد: `brand_remark` برچسب را از محتوا
+# می‌سازد، نه از موقعیت (`idx` در برچسب به کار نمی‌رود — ر.ک. تستِ
+# `test_remark_tag_is_content_derived_not_positional`)، پس تغییرِ ترتیب
+# ریمارکِ هیچ خطی را عوض نمی‌کند و diffِ انتشار فقط جابه‌جاییِ خط‌هاست.
+
+
+def _is_reality_443(line: str) -> bool:
+    """آیا این کانفیگ Reality روی پورتِ ۴۴۳ است؟
+
+    هر شکلی که تجزیه نشود، «نه» برمی‌گرداند (fail-open به ردیفِ ۲)، نه
+    استثنا — مرتب‌سازی هرگز نباید تجمیع را متوقف کند.
+    """
+    line = (line or "").strip()
+    if not line or "://" not in line:
+        return False
+    try:
+        if line.startswith("vmess://"):
+            # بدنهٔ base64+JSON: {"port": 443, "tls": "reality", ...}
+            b64 = line[8:].split("#", 1)[0].strip()
+            txt = core.decode_base64_text(b64)
+            obj = json.loads(txt) if txt else None
+            if not isinstance(obj, dict):
+                return False
+            return (str(obj.get("port")) == "443"
+                    and str(obj.get("tls") or "").strip().lower() == "reality")
+        head = line.split("#", 1)[0]
+        if "?" not in head:
+            return False
+        query = parse_qs(urlsplit(head).query)
+        sec = ""
+        for key in ("security", "tls"):
+            vals = query.get(key)
+            if vals:
+                sec = vals[0]
+                break
+        if (sec or "").strip().lower() != "reality":
+            return False
+        rest = urlsplit(head).netloc
+        if "@" in rest:
+            rest = rest.rsplit("@", 1)[1]
+        if rest.startswith("["):  # IPv6 literal
+            port = rest.split("]:", 1)[1].split("/", 1)[0] if "]:" in rest else ""
+        else:
+            port = rest.rsplit(":", 1)[1] if ":" in rest else ""
+        return port == "443"
+    except Exception:
+        return False
+
+
+def _alive_dedup_keys(per_source: Dict[str, List[str]]) -> set:
+    """کلیدهای یکتاسازیِ فهرستِ زندهٔ vify (برای ردیفِ ۰)."""
+    keys = set()
+    for ln in per_source.get(VIFY_ALIVE_URL, []) or []:
+        if not (ln or "").strip():
+            continue
+        keys.add(core.dedup_key(ln) or ln)
+    return keys
+
+
+def _live_tier(line: str, alive_keys: set) -> int:
+    """ردیفِ «اول زنده‌ها» برای یک خط (۰ زنده‌تر، ۲ معمولی)."""
+    if (core.dedup_key(line) or line) in alive_keys:
+        return 0
+    return 1 if _is_reality_443(line) else 2
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# پردازش یک دسته (dedup + brand)
+# ──────────────────────────────────────────────────────────────────────────────
+
+class CategoryResult:
+    def __init__(self) -> None:
+        self.unique: List[str] = []        # برند‌شده، یکتا
+        self.broken: List[str] = []        # خراب/جعلی
+        self.duplicates: List[str] = []    # تکراریِ حذف‌شده
+        self.total_seen = 0
+        self.active_sources = 0
+        self.protocol_counts: Dict[str, int] = {}
+        # ── دروازهٔ برندینگ (E-6) ────────────────────────────────────────────
+        # خطوطی که حتی بعد از تلاشِ دوباره برند نخوردند و **منتشر نشدند**.
+        # امروز اندازه‌گیری‌شده = ۰ (روی ۸٬۱۳۶ خطِ زندهٔ منتشرشده). نگه‌داشتنِ
+        # شمارنده برای وقتی است که صفر نماند: بی‌شمارنده، نقضِ ناوردا بی‌صدا
+        # می‌شد و کسی نمی‌فهمید.
+        self.unbranded_dropped = 0
+        self.unbranded_rebranded = 0
+        self.unbranded_samples: List[str] = []
+        # ── دروازهٔ سازگاریِ mihomo ──────────────────────────────────────────
+        # خطوطی که mihomo (و هر کلاینتِ مبتنی بر آن) با دیدنشان **کلِ** اشتراک
+        # را رد می‌کند. جزئیات و مدرکِ اجرایی در `mihomo_compat.py`.
+        self.mihomo_fatal: Dict[str, int] = {}
+        self.mihomo_fatal_samples: List[str] = []
+
+
+def _note_mihomo_fatal(r: "CategoryResult", line: str) -> bool:
+    """اگر خط برای mihomo مرگبار است، شمارش کن و True بده (یعنی: منتشر نکن).
+
+    چرا حذف و نه ترمیم: هر شش خطِ مرگبارِ اندازه‌گیری‌شده در پیکرهٔ زنده
+    (۲۰۲۶-۱۰-۱۵) از L0 هم رد نمی‌شدند یا کلیدشان قابلِ ترمیمِ امن نبود؛
+    ترمیمِ حدسی (مثلاً عوض‌کردنِ رمزِ ss) کانفیگی می‌سازد که «معتبر به‌نظر
+    می‌رسد ولی هرگز وصل نمی‌شود».
+    """
+    why = mihomo_compat.fatal_reason(line)
+    if not why:
+        return False
+    r.mihomo_fatal[why] = r.mihomo_fatal.get(why, 0) + 1
+    if len(r.mihomo_fatal_samples) < 3:
+        r.mihomo_fatal_samples.append(line[:160])
+    return True
+
+
+def process_category(
+    per_source: Dict[str, List[str]],
+    source_urls: List[str],
+    _cache: Optional[Dict[str, Tuple[bool, str]]] = None,
+) -> CategoryResult:
+    """dedup سراسری + برندینگ روی کانفیگ‌های یک دسته.
+
+    این تابع سه بار صدا زده می‌شود (all / heavy / light) و منابعِ HEAVY و LIGHT
+    هر دو داخلِ ALL هم هستند، پس `is_dummy_config` و `dedup_key` روی هر خط
+    **دو بار** محاسبه می‌شد. با `_cache` مشترک، هر خط فقط یک بار تحلیل می‌شود.
+    هر دو تابع خالص‌اند (ورودی یکسان ← خروجی یکسان)، پس caching بی‌خطر است.
+    """
+    if _cache is None:
+        _cache = {}
+    r = CategoryResult()
+    seen_cores: set = set()
+    raw_unique: List[str] = []
+
+    for url in source_urls:
+        cfgs = per_source.get(url, [])
+        if not cfgs:
+            continue
+        r.active_sources += 1
+        for line in cfgs:
+            r.total_seen += 1
+            cached = _cache.get(line)
+            if cached is None:
+                cached = (core.is_dummy_config(line), "")
+                if not cached[0]:
+                    cached = (False, core.dedup_key(line))
+                _cache[line] = cached
+            is_dummy, key = cached
+            if is_dummy:
+                r.broken.append(line)
+                continue
+            # دروازهٔ سازگاریِ mihomo — **پیش از** یکتاسازی. اگر بعد از آن بود،
+            # یک خطِ مرگبار می‌توانست کلیدِ یکتاسازی را تصاحب کند و همزادِ سالمش
+            # (مثلاً `AES-128-GCM` در برابرِ `aes-128-gcm` که کلیدِ یکسان دارند)
+            # به‌عنوانِ «تکراری» دور ریخته شود.
+            if _note_mihomo_fatal(r, line):
+                continue
+            if key not in seen_cores:
+                seen_cores.add(key)
+                raw_unique.append(line)
+            else:
+                r.duplicates.append(line)
+
+    # برندینگ یکتاها + شمارش پروتکل‌ها
+    #
+    # ترتیبِ خروجی: پیش از این، خطوط به ترتیبِ واکشیِ منابع نوشته می‌شدند. آن
+    # ترتیب به سرعتِ پاسخِ شبکه بستگی دارد، پس در هر اجرا عوض می‌شد و فایل
+    # ظاهراً «کلاً تغییر کرده» به نظر می‌رسید. مرتب‌سازی بر اساسِ کلیدِ یکتاسازی
+    # ترتیب را به محتوا گره می‌زند: تا وقتی مجموعهٔ کانفیگ‌ها ثابت باشد، ترتیب
+    # هم ثابت است.
+    #
+    # از ۲۰۲۶-۱۱-۱۱: مرتب‌سازی **ردیف‌دار** است («اول زنده‌ها»، ر.ک. بالای
+    # همین فایل): اول فهرستِ زندهٔ vify، بعد Realityهای ۴۴۳، بعد بقیه — و
+    # داخلِ هر ردیف، همان `dedup_key` صعودی. پس ترتیب هنوز قطعی و
+    # بازتولیدپذیر است و `verified/`ی آبشار اول با محتمل‌ترینِ زنده‌بودن پر
+    # می‌شود.
+    alive_keys = _alive_dedup_keys(per_source)
+    ordered = sorted(raw_unique,
+                     key=lambda ln: (_live_tier(ln, alive_keys),
+                                     core.dedup_key(ln) or ln))
+
+    # ── گرم‌کردنِ کشِ کشور، پیش از حلقهٔ برندینگ ─────────────────────────────
+    #
+    # `core.brand_remark` برای هر خط `country_for_endpoint` را صدا می‌زند و آن هم
+    # در صورتِ نیاز DNS حل می‌کند. اگر این کار داخلِ حلقه و *تک‌تک* انجام شود،
+    # هر میزبانِ نامی یک رفت‌وبرگشتِ سریِ DNS می‌شود.
+    #
+    # اندازه‌گیریِ واقعی روی همین دادهٔ زنده:
+    #   ۵٬۰۸۵ میزبانِ یکتا  →  ۳٬۷۲۰ (۷۳٫۲٪) از قبل IP خام‌اند و DNS نمی‌خواهند
+    #                          ۱٬۳۶۵ میزبانِ نامی باقی می‌ماند
+    #   ۱٬۳۶۵ میزبان به‌صورتِ هم‌زمان با ۶۴ کارگر  →  ۴٫۹ ثانیه
+    #   (۱۲۸ کارگر *بدتر* بود: ۸٫۴ ثانیه — گلوگاه، خودِ resolver بالادستی است،
+    #    نه پهنای‌باند، پس افزودنِ کارگر بیشتر فقط صف‌بندی ایجاد می‌کند.)
+    #
+    # کلِ خط‌لوله الان ۴٫۸ ثانیه طول می‌کشد، پس بدترین حالت تقریباً دو برابر
+    # می‌شود و همچنان بسیار کمتر از بازهٔ ۱۵ دقیقه‌ای است.
+    #
+    # این تابع سه بار صدا زده می‌شود (all/heavy/light) ولی کشِ `geo` سراسری است،
+    # پس دورهای دوم و سوم عملاً هزینه‌ای ندارند.
+    if geo is not None:
+        try:
+            hosts = []
+            for ln in ordered:
+                ep = core.endpoint_of(ln)
+                if ep:
+                    hosts.append(ep)
+            geo.warm_up(hosts)
+        except Exception as e:  # هرگز نباید تجمیع را متوقف کند
+            log(f"  ⚠️ geo warm-up skipped: {e}")
+
+    for idx, line in enumerate(ordered, start=1):
+        branded = core.brand_remark(line, idx)
+
+        # ══════════════════════════════════════════════════════════════════════
+        # 🔒 دروازهٔ ایمن‌ازکارِ برندینگ (E-6)
+        # ══════════════════════════════════════════════════════════════════════
+        # سیاستِ مالکِ مخزن (بالای `core.py`): «همیشه» باید آیدیِ کانال روی
+        # کانفیگ‌ها باشد. `brand_remark` امروز روی ۱۰۰٫۰۰٪ خطوط موفق است
+        # (اندازه‌گیری‌شده)، ولی «امروز موفق است» ضمانت نیست: یک قالبِ تازهٔ
+        # بالادست می‌تواند مسیری بسازد که برندینگ خاموشانه ردش کند و کانفیگِ
+        # بی‌برند — یا بدتر، با تبلیغِ کانالِ رقیب — منتشر شود.
+        #
+        # سه تصمیمِ عمدی، هر کدام با دلیل:
+        #
+        #  ۱) **یک بار تلاشِ دوباره.** `brand_remark` خودتوان است (اندازه‌گیری‌شده
+        #     روی پیکرهٔ خصمانه: ۵۶ نمونه × ۵ اعمالِ متوالی)، پس اعمالِ دوباره
+        #     روی خطِ سالم بی‌اثر است و فقط حالتِ گذرا را نجات می‌دهد.
+        #
+        #  ۲) **حذفِ همان یک خط، نه توقفِ اجرا.** وسوسه‌ی «abort» غلط است:
+        #     یک خطِ بدشکل نباید کلِ اشتراکِ کاربران را خالی کند. دروازهٔ
+        #     `if not res_all.unique` پایین‌تر، حالتِ فروپاشیِ کامل را جدا
+        #     پوشش می‌دهد.
+        #
+        #  ۳) **حذف، نه انتشارِ بی‌برند.** چون ناوردا، الزامِ محصول است. سکوت
+        #     هم ممنوع: شمارش و نمونه در `health.json` می‌رود تا دیده شود.
+        # ══════════════════════════════════════════════════════════════════════
+        if not core.is_branded(branded):
+            retry = core.brand_remark(branded, idx)
+            if core.is_branded(retry):
+                branded = retry
+                r.unbranded_rebranded += 1
+            else:
+                r.unbranded_dropped += 1
+                # نمونه‌ها سقف دارند: `health.json` را مصرف‌کنندگان دانلود
+                # می‌کنند و نباید با هزاران رشته باد کند. سه نمونه برای
+                # ریشه‌یابیِ الگو کافی است.
+                if len(r.unbranded_samples) < 3:
+                    r.unbranded_samples.append(branded[:160])
+                continue
+
+        r.unique.append(branded)
+        proto = core.protocol_of(branded)
+        if proto:
+            r.protocol_counts[proto] = r.protocol_counts.get(proto, 0) + 1
+    return r
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# نوشتن فایل‌ها
+# ──────────────────────────────────────────────────────────────────────────────
+
+def _write_text(path: str, content: str) -> None:
+    # گاردِ خروجی **پیش از** باز کردنِ فایل اجرا می‌شود تا در صورتِ شکست، فایلِ
+    # نیمه‌نوشته یا truncate‌شده روی دیسک نماند. توضیحِ کامل: core.py، بخشِ
+    # «گاردِ خروجی».
+    core.assert_no_control_bytes(path, content)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
+#: خرابیِ نوشتنِ خروجیِ مبدل‌ها، به‌تفکیکِ دسته و هدف. کلید: `"{cat}/{target}"`.
+#: مقدار: متنِ کوتاهِ خطا. این نگاشت در `health.json` (کلیدِ `converter_gate`)
+#: منتشر می‌شود تا خرابی **ماشین‌خوان** باشد، نه فقط یک خطِ لاگ.
+#:
+#: چرا `converter_gate` و **نه** `output_gate`: در واژگانِ همین پروژه،
+#: «دروازهٔ خروجی / output gate» از قبل نامِ گاردِ **بایتِ کنترلی** است
+#: (`core.ControlByteInOutput` و سه آزمونِ `test_zzz_p2_output_gate_*`).
+#: هم‌نام‌کردن، مانیتورینگ را دوپهلو می‌کرد: خواننده نمی‌فهمید این کلید از
+#: «بایتِ کنترلی» می‌گوید یا از «شکستِ مبدل». این نام‌گذاری قرینهٔ
+#: `brand_gate` است — «دروازهٔ <چیزی که سنجیده می‌شود>».
+CONVERT_FAILURES: Dict[str, str] = {}
+
+
+def write_category(out_dir: str, cat: str, r: CategoryResult) -> None:
+    """فایل‌های یک دسته (configs.txt / base64 / clash / singbox).
+
+    ══════════════════════════════════════════════════════════════════════════
+    🔒 دروازهٔ مبدل‌ها — چرا شکستِ یک مبدل دیگر «بی‌صدا» نیست
+    ══════════════════════════════════════════════════════════════════════════
+    پیش از این، استثنای `build_clash_yaml`/`build_singbox_json` فقط لاگ
+    می‌شد و فایل نوشته نمی‌شد. سه پیامدِ **اندازه‌گیری‌شده** داشت:
+
+      ۱) **کهنگیِ خاموش، نه ۴۰۴.** این فایل‌ها در `main` ردگیری می‌شوند
+         (`git ls-files` تأیید شد) و ورک‌فلو با `actions/checkout` شروع
+         می‌شود، پس نسخهٔ دورِ قبل روی دیسک هست. «ننوشتن» یعنی همان فایلِ
+         **بایات** دوباره منتشر می‌شود؛ مشترک سرورهای قدیمی می‌گیرد بی هیچ
+         سیگنالی. این از ۴۰۴ بدتر است (سیاستِ `_remove_if_exists` در همین
+         فایل، ۴۰۴ را عمداً بر «بدنهٔ خالی» ترجیح می‌دهد — به همان دلیل).
+      ۲) **تلمتریِ نادرست.** `index.json` بی‌قید `clash_yaml` و
+         `singbox_json` را تبلیغ می‌کرد و `health.json` هیچ کلیدی نداشت.
+      ۳) **گاردِ fail-closed دور می‌خورد.** `MUST_EXIST`ِ ورک‌فلو فقط
+         `all/clash.yaml` و `all/singbox.json` را می‌دید؛ `heavy/*` و
+         `light/*` سوراخ بودند (۴ سوراخِ سنجیده‌شده).
+
+    درمان — دقیقاً همان الگویی که «دروازهٔ برندینگ (E-6)» در این پروژه دارد:
+    شکست **ثبت** می‌شود (`CONVERT_FAILURES` → `health.json.converter_gate`) و
+    فایلِ بایات **حذف** می‌شود تا لینک ۴۰۴ بدهد (سیگنالِ صادق) نه دادهٔ
+    کهنه. اجرا متوقف نمی‌شود: `configs.txt` مستقل است و نباید قربانی شود.
+    """
+    base = os.path.join(out_dir, cat)
+    # سرآیندِ درون‌فایلیِ Hiddify **همیشه اولین چیزِ فایل** است: پویشگرِ Hiddify
+    # فقط ۲۹ خطِ نخست را می‌بیند (توضیح و مدرک در core.py، بخشِ «سرآیندِ
+    # درون‌فایلیِ Hiddify»).
+    hh = core.hiddify_profile_header(cat.upper())
+    header = hh + f"# @رادار — {cat.upper()} — {len(r.unique)} unique configs\n"
+    # سپرِ `#`: توضیحِ کامل در core.py، بخشِ «سپرِ `#`». شمارشِ سرآیند عمداً از
+    # `r.unique` گرفته می‌شود، نه از لیستِ سپرخورده — سپر «کانفیگ» نیست.
+    _write_text(os.path.join(base, "configs.txt"),
+                header + "\n".join(core.shield_unsupported_runs(r.unique)) + "\n")
+    _write_text(os.path.join(base, "configs_base64.txt"),
+                core.encode_base64_subscription(r.unique, header=hh))
+    try:
+        # yaml: سرآیند به‌شکلِ کامنتِ YAML می‌آید. اندازه‌گیری شد که
+        # `yaml.safe_load` قبل و بعد **دقیقاً برابر** است (۱۰۵۸۶ پروکسی).
+        _write_text(os.path.join(base, "clash.yaml"),
+                    hh + converters.build_clash_yaml(r.unique))
+        CONVERT_FAILURES.pop(f"{cat}/clash", None)
+    except Exception as e:
+        log(f"  ⚠️ clash {cat}: {e}")
+        CONVERT_FAILURES[f"{cat}/clash"] = f"{type(e).__name__}: {e}"[:200]
+        if _remove_if_exists(os.path.join(base, "clash.yaml")):
+            log(f"  🗑️ pruned stale {cat}/clash.yaml (404 beats stale data)")
+    try:
+        _write_text(os.path.join(base, "singbox.json"), converters.build_singbox_json(r.unique))
+        CONVERT_FAILURES.pop(f"{cat}/singbox", None)
+    except Exception as e:
+        log(f"  ⚠️ singbox {cat}: {e}")
+        CONVERT_FAILURES[f"{cat}/singbox"] = f"{type(e).__name__}: {e}"[:200]
+        if _remove_if_exists(os.path.join(base, "singbox.json")):
+            log(f"  🗑️ pruned stale {cat}/singbox.json (404 beats stale data)")
+
+
+def _remove_if_exists(path: str) -> bool:
+    """حذفِ فایلِ منتشرشدهٔ قبلی (اگر هست). برمی‌گرداند: آیا حذف شد؟
+
+    چرا «حذف» و نه «نوشتنِ فایلِ خالی»؟ اگر فایل را خالی بنویسیم، مشترکی که
+    آن لینک را subscribe کرده هر بار یک پاسخِ ۲۰۰ با بدنهٔ خالی می‌گیرد و
+    کلاینت لیستِ قبلی‌اش را با «هیچ» جانشین می‌کند. اگر فایل را حذف کنیم،
+    لینک ۴۰۴ می‌دهد و کلاینت‌ها لیستِ قبلی را نگه می‌دارند — رفتارِ درست‌تر.
+    مهم‌تر: هر فایلِ نوشته‌شده در هر دور یک blob جدید در تاریخِ git می‌سازد.
+    """
+    if os.path.exists(path):
+        try:
+            os.remove(path)
+            return True
+        except OSError as e:
+            log(f"  ⚠️ could not remove {path}: {e}")
+    return False
+
+
+def write_archive(out_dir: str, cat: str, r: CategoryResult) -> None:
+    """بایگانیِ خراب‌های یک دسته (txt + base64).
+
+    حذفِ تولیدِ archive/*_duplicates* ★
+    اندازه‌گیریِ واقعی روی همین مخزن:
+        archive/all_duplicates_base64.txt    4,286,344 B
+        archive/heavy_duplicates_base64.txt  3,720,596 B
+        archive/all_duplicates.txt           3,214,809 B
+        archive/heavy_duplicates.txt         2,790,499 B
+        archive/light_duplicates_base64.txt    274,408 B
+        archive/light_duplicates.txt           205,857 B
+        ─────────────────────────────────────────────────
+        جمع                                 14,492,513 B ≈ 13.82 MiB
+    این ۱۳.۸ مگابایت در «هر» دور (۹۸ دور در روز) از نو نوشته می‌شود و چون
+    محتوایش با هر دور عوض می‌شود، هر بار blobهای تازه به تاریخِ git اضافه
+    می‌کند. آزمایشِ کنترل‌شده (۳ کامیتِ بازتولید + ۱۰٪ جابه‌جاییِ خطوط، سپس
+    gc) نشان داد حذفِ همین پوشه هزینهٔ هر کامیت را از ۱۶۸۰ به ۱۳۲۸ کیلوبایت
+    می‌رساند (−۲۱٪).
+    ارزشِ کاربردی این فایل‌ها صفر است: «تکراری‌ها» به تعریف، کانفیگ‌هایی
+    هستند که نسخهٔ یکتای‌شان همین حالا در all/ منتشر شده — هیچ کاربری به
+    نسخهٔ دومِ همان سرور نیاز ندارد.
+    فایل‌های broken نگه داشته می‌شوند: کوچک‌اند (۱۶۸ و ۱۷۰ بایت) و برای
+    عیب‌یابیِ منابع مفیدند.
+    """
+    base = os.path.join(out_dir, "archive")
+    btxt = os.path.join(base, f"{cat}_broken.txt")
+    bb64 = os.path.join(base, f"{cat}_broken_base64.txt")
+    if r.broken:
+        bh = f"# @رادار — {cat.upper()} BROKEN/dummy — {len(r.broken)} configs\n"
+        _write_text(btxt, bh + "\n".join(core.shield_unsupported_runs(r.broken)) + "\n")
+        _write_text(bb64, core.encode_base64_subscription(r.broken))
+    else:
+        # همان سیاستِ «فایلِ خالی منتشر نمی‌شود»: وقتی این دور هیچ کانفیگِ خرابی نبود،
+        # فایلِ توخالی منتشر نمی‌کنیم (در تستِ واقعی light_broken.txt با ۵۱
+        # بایتِ سرآیندِ تنها و light_broken_base64.txt با ۰ بایت تولید می‌شد).
+        gone_txt = _remove_if_exists(btxt)
+        gone_b64 = _remove_if_exists(bb64)
+        if gone_txt or gone_b64:
+            log(f"  🗑️ pruned empty archive/{cat}_broken*")
+    # ── پاک‌سازیِ فایل‌های duplicates که در دورهای قبل منتشر شده‌اند ──
+    for stale in (f"{cat}_duplicates.txt", f"{cat}_duplicates_base64.txt"):
+        if _remove_if_exists(os.path.join(base, stale)):
+            log(f"  🗑️ removed obsolete archive/{stale}")
+
+
+def write_protocols(out_dir: str, all_unique: List[str]) -> Dict[str, int]:
+    """فایل‌های per-protocol (روی دستهٔ ALL).
+
+    ننوشتنِ فایلِ پروتکلِ خالی ★
+    وضعیتِ اندازه‌گیری‌شدهٔ مخزن پیش از این تغییر: از ۲۸ فایلِ پوشهٔ
+    protocols/، ۱۴ فایل هیچ کانفیگی نداشتند —
+      ۷ فایلِ ‎*_base64.txt‎ با اندازهٔ دقیقاً ۰ بایت:
+        anytls, hysteria, juicity, mieru, snell, socks, wireguard
+      ۷ فایلِ ‎*.txt‎ فقط شاملِ خطِ سرآیند (۳۸ تا ۴۲ بایت، «۰ configs»):
+        mieru(38) snell(38) socks(38) anytls(39) juicity(40) hysteria(41)
+        wireguard(42)
+    این فایل‌ها سه ضررِ هم‌زمان داشتند:
+      ۱) کاربر لینک را باز می‌کند، پاسخِ ۲۰۰ با بدنهٔ خالی می‌گیرد و
+         تصور می‌کند مخزن خراب است (نه اینکه آن پروتکل موجود نیست).
+      ۲) کلاینتی که این لینک را subscribe کرده، لیستش را با «هیچ» جانشین
+         می‌کند — یعنی فایلِ خالی از نبودِ فایل بدتر است.
+      ۳) هر کدام یک ورودیِ درختِ git در هر یک از ۹۸ دورِ روزانه است.
+
+    سیاستِ جدید: فایل فقط وقتی نوشته می‌شود که حداقل یک کانفیگ داشته باشد؛
+    در غیر این صورت فایلِ منتشرشدهٔ قبلی حذف می‌شود تا لینک ۴۰۴ بدهد
+    (سیگنالِ صادق) و دادهٔ بایات هم در مخزن نماند.
+    مقادیرِ شمارش برای همهٔ پروتکل‌ها — حتی صفرها — در index.json می‌مانند،
+    پس هیچ اطلاعاتی از دست نمی‌رود؛ فقط فایلِ توخالی منتشر نمی‌شود.
+    """
+    base = os.path.join(out_dir, "protocols")
+    buckets: Dict[str, List[str]] = {}
+    for line in all_unique:
+        proto = core.protocol_of(line)
+        if proto:
+            buckets.setdefault(proto, []).append(line)
+
+    counts: Dict[str, int] = {}
+    written = 0
+    pruned = 0
+
+    def emit(proto: str, lines: List[str]) -> None:
+        """نوشتن (یا حذفِ) جفت‌فایلِ یک پروتکل."""
+        nonlocal written, pruned
+        txt = os.path.join(base, f"{proto}.txt")
+        b64 = os.path.join(base, f"{proto}_base64.txt")
+        if lines:
+            hh = core.hiddify_profile_header(proto.upper())
+            h = hh + f"# @رادار — {proto} — {len(lines)} configs\n"
+            _write_text(txt, h + "\n".join(core.shield_unsupported_runs(lines)) + "\n")
+            _write_text(b64, core.encode_base64_subscription(lines, header=hh))
+            written += 1
+        else:
+            # فایلِ توخالی منتشر نمی‌شود و نسخهٔ قبلی پاک می‌شود.
+            # ⚠️ هر دو حذف باید «مستقل» ارزیابی شوند. نوشتنِ
+            #    `if _remove_if_exists(txt) or _remove_if_exists(b64)`
+            #    باگ می‌سازد: عملگر `or` کوتاه‌مدار است، پس وقتی فایلِ txt
+            #    حذف شود، تابعِ دومی هرگز صدا زده نمی‌شود و فایلِ base64
+            #    برای همیشه در مخزن باقی می‌ماند (در تستِ واقعی دقیقاً همین
+            #    رخ داد: ۷ فایلِ ‎*_base64.txt‎ صفر-بایتی باقی مانده بودند).
+            gone_txt = _remove_if_exists(txt)
+            gone_b64 = _remove_if_exists(b64)
+            if gone_txt or gone_b64:
+                pruned += 1
+
+    for proto in core.PROTOCOL_ORDER:
+        lines = buckets.get(proto, [])
+        counts[proto] = len(lines)
+        emit(proto, lines)
+
+    # 🧠 پروتکل‌های ناشناخته/جدید (خارج از ترتیبِ شناخته‌شده) — خودکار فایل می‌سازند
+    for proto, lines in sorted(buckets.items(), key=lambda x: -len(x[1])):
+        if proto not in counts:
+            counts[proto] = len(lines)
+            emit(proto, lines)
+
+    log(f"  📁 protocols: {written} file-pairs written, {pruned} empty pruned")
+    return counts
+
+
+def build_index(results: Dict[str, CategoryResult], proto_counts: Dict[str, int],
+                elapsed: float, out_dir: Optional[str] = None) -> dict:
+    """سندِ `index.json` — فهرستِ ماشین‌خوانِ هر چیزی که منتشر شده.
+
+    ══════════════════════════════════════════════════════════════════════════
+    ⚠️ `out_dir` — چرا این پارامتر لازم شد (F-9)
+    ══════════════════════════════════════════════════════════════════════════
+    قراردادِ همیشگیِ این مخزن: «هیچ URLی تبلیغ نمی‌شود که فایلش نیست»
+    (`test_index_only_advertises_urls_whose_files_exist`). این تابع آن قرارداد
+    را تا امروز با **نماینده** برقرار می‌کرد، نه با واقعیتِ دیسک:
+      • `protocol_files` به `proto_counts[p] > 0` نگاه می‌کرد،
+      • `archive` به `results[cat].broken` نگاه می‌کرد،
+      • ولی `clash_yaml` و `singbox_json` **بی‌هیچ شرطی** تبلیغ می‌شدند.
+
+    آن نماینده تا پیش از F-8 کافی بود، چون این دو فایل «همیشه» نوشته می‌شدند.
+    اما دروازهٔ مبدل‌ها (F-8) حالا فایلِ بایات را **حذف** می‌کند، پس نماینده
+    دیگر با واقعیت یکی نیست. اندازه‌گیریِ اجرایی با شکستِ مبدلِ clash: هر سه
+    دسته فایل نداشتند و index.json هر سه را تبلیغ کرد ⇒ **۳ لینکِ ۴۰۴**، یعنی
+    نقضِ مستقیمِ قراردادِ خودِ مخزن.
+
+    راه‌حل — همان کاری که `pipeline.merge_index` از قبل می‌کند: وجودِ فایل روی
+    دیسک بررسی می‌شود. `out_dir=None` رفتارِ قبلی را نگه می‌دارد (سازگاریِ
+    عقب‌رو برای فراخوانی‌های بدونِ دیسک، مثل آزمون‌های واحد)؛ `main()` مقدارِ
+    واقعی می‌دهد تا تبلیغ با واقعیت گره بخورد.
+    """
+    now = _dt.datetime.now(_dt.timezone.utc)
+    next_run = now + _dt.timedelta(minutes=UPDATE_INTERVAL_MIN)
+
+    def _published(*parts: str) -> bool:
+        """آیا این فایل واقعاً روی دیسک هست؟
+
+        `out_dir=None` یعنی «نمی‌دانم» و عمداً به `True` تفسیر می‌شود، نه
+        `False`: در آن حالت هیچ اطلاعی از دیسک نداریم و حذفِ لینک، سندی
+        ناقص‌تر از سندِ امروز می‌ساخت. تنها وقتی چیزی را حذف می‌کنیم که
+        **مطمئن** باشیم نیست.
+        """
+        if out_dir is None:
+            return True
+        return os.path.exists(os.path.join(out_dir, *parts))
+
+    def cat_block(cat: str, r: CategoryResult) -> dict:
+        # فقط فایل‌هایی که واقعاً نوشته شده‌اند تبلیغ می‌شوند. کلیدِ اصلی و
+        # کلیدِ آینه **باهم** حذف می‌شوند: آینه از همان فایل تغذیه می‌کند، پس
+        # نگه‌داشتنِ یکی بدونِ دیگری یعنی تبلیغِ ۴۰۴ از مسیرِ آینه.
+        # ترتیبِ کلیدها عمداً همان ترتیبِ قبلی است (همهٔ اصلی‌ها، بعد همهٔ
+        # آینه‌ها) نه جفت‌جفت: `index.json` منتشر می‌شود و هر بازچینشِ بی‌دلیل،
+        # یک diffِ پرنویز در تاریخِ git می‌سازد بی هیچ سودی.
+        _pairs = (("configs.txt", "configs_txt"),
+                  ("configs_base64.txt", "configs_base64"),
+                  ("clash.yaml", "clash_yaml"),
+                  ("singbox.json", "singbox_json"))
+        _live = [(f, k) for f, k in _pairs if _published(cat, f)]
+        files: Dict[str, str] = {}
+        for fname, key in _live:
+            files[key] = f"{PRIMARY_BASE}/{cat}/{fname}"
+        for fname, key in _live:
+            files[f"{key}_mirror"] = f"{MIRROR_BASE}/{cat}/{fname}"
+        return {
+            "unique": len(r.unique),
+            "broken": len(r.broken),
+            "duplicates": len(r.duplicates),
+            "total_fetched": r.total_seen,
+            "active_sources": r.active_sources,
+            "protocols": dict(sorted(r.protocol_counts.items(), key=lambda x: -x[1])),
+            # لینکِ اصلی raw است (کشِ ۵ دقیقه‌ای)، jsDelivr آینه
+            #   (کشِ ۱۲ ساعته). کلیدهای قدیمی حذف نشدند تا هیچ مصرف‌کننده‌ای
+            #   نشکند؛ فقط مقدارشان به raw تغییر کرد و آینه در کلیدهای
+            #   جداگانهٔ *_mirror در دسترس است.
+            "files": files,
+        }
+
+    return {
+        "brand": core.BRAND,
+        "generator": "رادارBot aggregator",
+        "updated_at": now.isoformat(),
+        "updated_at_unix": int(now.timestamp()),
+        "next_update_eta": next_run.isoformat(),
+        "update_interval_minutes": UPDATE_INTERVAL_MIN,
+        "elapsed_seconds": round(elapsed, 1),
+        # اولویتِ لینک‌ها به‌صورتِ ماشین‌خوان اعلام می‌شود تا هر
+        #   مصرف‌کننده‌ای (ربات، اپ، اسکریپت) بداند کدام تازه‌تر است.
+        "raw_base": RAW_BASE,
+        "cdn_base": CDN_BASE,
+        "primary_base": PRIMARY_BASE,
+        "mirror_base": MIRROR_BASE,
+        # نامِ برنچی که فایل‌ها از آن سرو می‌شوند. کلیدِ `data_branch` هم با
+        # همان مقدار می‌ماند: مصرف‌کننده‌هایی که آن را می‌خوانند نباید بشکنند.
+        "publish_branch": GH_BRANCH,
+        "data_branch": GH_BRANCH,
+        # index.json آدرسِ خودش را هم منتشر می‌کند.
+        #   چرا: یک بازبینیِ کاملِ «هر فایلِ منتشرشده باید تبلیغ شود» نشان داد
+        #   تنها فایلِ منتشرشده‌ای که در index.json آدرسی نداشت، خودِ index.json
+        #   بود. این یعنی مصرف‌کننده‌ای که فقط همین سند را در دست دارد (مثل یک
+        #   ربات یا آینه‌ساز) نمی‌تواند بفهمد از کجا باید آن را دوباره بگیرد و
+        #   ناچار است آدرس را hard-code کند — همان چیزی که این تغییر حذفش کرد.
+        "self_url": f"{PRIMARY_BASE}/index.json",
+        "self_url_mirror": f"{MIRROR_BASE}/index.json",
+        "link_policy": {
+            "primary": "raw.githubusercontent.com",
+            "primary_cache_seconds": 300,
+            "mirror": "cdn.jsdelivr.net",
+            "mirror_cache_seconds": 43200,
+            "note": ("raw is ~144x fresher (300s vs 43200s cache). The jsDelivr "
+                     "mirror is purged on every run, but use raw when possible."),
+        },
+        "categories": {
+            "all": cat_block("all", results["all"]),
+            "heavy": cat_block("heavy", results["heavy"]),
+            "light": cat_block("light", results["light"]),
+        },
+        "protocols": dict(sorted(proto_counts.items(), key=lambda x: -x[1])),
+        # فقط پروتکل‌هایی که واقعاً فایل دارند اینجا فهرست می‌شوند.
+        #   پیش‌تر همهٔ ۱۴ پروتکلِ PROTOCOL_ORDER بی‌قید فهرست می‌شدند، حتی
+        #   ۷ موردی که صفر کانفیگ داشتند → index.json لینکی را تبلیغ می‌کرد
+        #   که بدنهٔ خالی برمی‌گرداند. حالا که فایلِ خالی حذف می‌شود، فهرست‌کردنِ
+        #   بی‌قید به تبلیغِ ۴۰۴ تبدیل می‌شد؛ پس فهرست هم شرطی شد.
+        #   شمارشِ همهٔ پروتکل‌ها (شاملِ صفرها) در کلیدِ "protocols" باقی است،
+        #   پس هیچ اطلاعاتی از دست نمی‌رود.
+        # شرطِ `> 0` نمایندهٔ درستی است ولی **کافی نیست**: `_write_text` می‌تواند
+        # پیش از نوشتن، با `ControlByteInOutput` شکست بخورد (گاردِ بایتِ کنترلی).
+        # در آن حالت شمارش غیرِصفر است ولی فایل روی دیسک نیست. پس شرطِ شمارش با
+        # واقعیتِ دیسک **و** می‌شود، نه جانشینِ آن.
+        "protocol_files": {
+            p: f"{PRIMARY_BASE}/protocols/{p}.txt"
+            for p in core.PROTOCOL_ORDER
+            if proto_counts.get(p, 0) > 0 and _published("protocols", f"{p}.txt")
+        },
+        "protocol_files_base64": {
+            p: f"{PRIMARY_BASE}/protocols/{p}_base64.txt"
+            for p in core.PROTOCOL_ORDER
+            if proto_counts.get(p, 0) > 0 and _published("protocols", f"{p}_base64.txt")
+        },
+        "protocol_files_mirror": {
+            p: f"{MIRROR_BASE}/protocols/{p}.txt"
+            for p in core.PROTOCOL_ORDER
+            if proto_counts.get(p, 0) > 0 and _published("protocols", f"{p}.txt")
+        },
+        # کلیدهای *_duplicates حذف شدند چون فایل‌شان دیگر تولید نمی‌شود.
+        #   نگه‌داشتنِ کلید بدونِ فایل = تبلیغِ لینکِ ۴۰۴ در index.json.
+        #   کلیدهای broken هم شرطی شدند: اگر یک دسته این دور صفر کانفیگِ خراب
+        #   داشته باشد، فایلش نوشته نمی‌شود، پس نباید تبلیغ شود. (در تستِ واقعی
+        #   light صفر خراب داشت و index.json لینکِ ۴۰۴ تبلیغ می‌کرد.)
+        # همان استدلالِ `protocol_files`: شرطِ `results[cat].broken` نمایندهٔ
+        # درستی است ولی وجودِ فایل را تضمین نمی‌کند.
+        "archive": {
+            **{f"{cat}_broken": f"{PRIMARY_BASE}/archive/{cat}_broken.txt"
+               for cat in ("all", "heavy", "light")
+               if results[cat].broken and _published("archive", f"{cat}_broken.txt")},
+            # فایل base64 پیش‌تر تولید می‌شد ولی هیچ‌جا فهرست نشده بود
+            # (منتشرشده اما کشف‌ناپذیر). حالا فهرست می‌شود.
+            **{f"{cat}_broken_base64": f"{PRIMARY_BASE}/archive/{cat}_broken_base64.txt"
+               for cat in ("all", "heavy", "light")
+               if results[cat].broken and _published("archive", f"{cat}_broken_base64.txt")},
+        },
+        "sources": {
+            "light_count": len(LIGHT_SOURCES),
+            "heavy_count": len(HEAVY_SOURCES),
+            "total_count": len(LIGHT_SOURCES) + len(HEAVY_SOURCES),
+            # ── گزارشِ سلامتِ منابع (حرفه‌ای): چند منبع زنده/مرده‌اند ──────────
+            "healthy": sum(1 for h in SOURCE_HEALTH.values() if h.get("status") == "ok"),
+            "unhealthy": sum(1 for h in SOURCE_HEALTH.values() if h.get("status") != "ok"),
+            "health_url": f"{PRIMARY_BASE}/health.json",
+            "health_url_mirror": f"{MIRROR_BASE}/health.json",
+        },
+    }
+
+
+def disabled_reasons_for(mem: Dict, skipped: List[str]) -> Dict[str, str]:
+    """url → علتِ ثبت‌شدهٔ غیرفعال‌سازی، فقط برای urlهایی که این دور رد شدند.
+
+    چرا یک تابعِ نام‌دار و نه یک حلقهٔ درجا در `main` (سنجیده، نه سلیقه):
+    نسخهٔ اول همین منطق درونِ `main` بود و آزمونِ AST فقط *وجودِ نام* را
+    می‌سنجید. یک جهشِ عمدی که بدنهٔ حلقه را با `pass` جایگزین می‌کرد **زنده
+    ماند**: نگاشت خالی می‌شد، همهٔ منابعِ خاموش دوباره `unknown` برچسب
+    می‌خوردند، و هیچ آزمونی نمی‌فهمید. حالا که تابعِ جداست، آزمون می‌تواند
+    مستقیم صدایش بزند و آن جهش گرفته می‌شود.
+
+    در برابرِ حافظهٔ بدشکل امن است: هر ورودیِ غیرِ dict یا بدونِ `url`ِ رشته‌ای
+    نادیده گرفته می‌شود. نبودِ فایل ⇒ نگاشتِ خالی ⇒ همان رفتارِ پیشین.
+    """
+    out: Dict[str, str] = {}
+    wanted = set(skipped)
+    entries = mem.get("sources") if isinstance(mem, dict) else None
+    for ent in (entries or {}).values():
+        if not isinstance(ent, dict):
+            continue
+        url = ent.get("url")
+        if isinstance(url, str) and url in wanted:
+            out[url] = str(ent.get("reason") or "disabled by memory")
+    return out
+
+
+def build_health_report(
+    elapsed: float,
+    conv_by_category: Optional[Dict[str, dict]] = None,
+    results: Optional[Dict[str, "CategoryResult"]] = None,
+    disabled: Optional[Dict[str, str]] = None,
+) -> dict:
+    """گزارشِ کاملِ سلامتِ هر منبع — برای مانیتورینگ و دیباگِ منابعِ مرده.
+
+    از این نسخه، گزارش سه بخشِ تازه هم دارد:
+
+      `converters` — چند کانفیگ در تبدیل به Clash/Sing-box حذف شد و چرا.
+                     تا پیش از این، حذف بی‌صدا بود؛ حالا اگر یک تغییر باعث شود
+                     ناگهان هزاران کانفیگ حذف شوند، در همین فایل دیده می‌شود.
+
+      `geo`        — چند برچسبِ کشور از GeoIP آمد، چند تا از DNS، چند DNS شکست
+                     خورد و آیا پایگاه‌داده اصلاً بارگذاری شد یا نه. بدونِ این،
+                     اگر دانلودِ mmdb در ورک‌فلو خراب شود، خط‌لوله بی‌صدا به
+                     برچسب‌گذاریِ ضعیفِ قدیمی برمی‌گشت و کسی نمی‌فهمید.
+
+      `converter_gate` — کدام مبدل در کدام دسته **نوشته نشد** (F-8).
+                     خالی‌بودنش یعنی همهٔ خروجی‌ها این دور تازه نوشته شدند.
+                     غیرِخالی یعنی آن لینک عمداً ۴۰۴ شده تا دادهٔ بایات منتشر
+                     نشود. (نامش عمداً `output_gate` نیست — آن اصطلاح در این
+                     پروژه از قبل به گاردِ بایتِ کنترلی تعلق دارد.)
+
+    هر دو بخش «بهترین تلاش»اند: اگر ماژول در دسترس نباشد، مقدارشان None می‌شود و
+    گزارش همان ساختارِ قبلی را حفظ می‌کند (سازگاریِ عقب‌رو برای هر مصرف‌کننده‌ای
+    که health.json را پارس می‌کند).
+    """
+    now = _dt.datetime.now(_dt.timezone.utc)
+
+    # ── چرا «disabled» و نه «unknown» (اصلاحِ یک گزارشِ گمراه‌کننده) ──────────
+    # `main` پیش از واکشی، منابعی را که حافظهٔ بین‌دوره‌ای غیرفعال کرده از
+    # `all_urls` بیرون می‌گذارد (سطرِ ~۱۰۱۲). آن منابع هرگز واکشی نمی‌شوند، پس
+    # کلیدی در `SOURCE_HEALTH` ندارند و تا پیش از این با برچسبِ `unknown` و
+    # بدونِ `http_code`/`latency_ms` در گزارش می‌آمدند.
+    #
+    # این گمراه‌کننده بود: `unknown` مثلِ «نمی‌دانیم، احتمالاً خراب» خوانده
+    # می‌شد، در حالی که واقعیت «عمداً خاموش، چون بازدهِ یکتا نداشت» است. با
+    # اندازه‌گیریِ زنده (۱۳ سپتامبر ۲۰۲۶) هر ۱۹ منبع در سه دورِ متوالی
+    # HTTP 200 با بدنهٔ غیرخالی دادند — پس هیچ‌کدام «مرده» نبودند؛ ۱۱ تا
+    # غیرفعال بودند و مجموعاً ۲۳ کانفیگِ یکتا (۰.۲۰٪) اضافه می‌کردند.
+    #
+    # `summary` هم تا پیش از این `fail: 0` می‌گفت و همان ۱۱ منبع را در هیچ
+    # سطلی نمی‌شمرد، پس `ok + empty + fail != total` می‌شد و خواننده فکر
+    # می‌کرد ۱۱ منبع بی‌صدا گم شده‌اند. کلیدِ تازهٔ `disabled` این حساب را
+    # می‌بندد. کلیدهای قبلی دست‌نخورده‌اند تا مصرف‌کننده‌ها نشکنند.
+    disabled_map = dict(disabled or {})
+    items = []
+    for url in (LIGHT_SOURCES + HEAVY_SOURCES):
+        fallback: dict = {"name": url.rsplit("/", 1)[-1], "count": 0}
+        if url in disabled_map:
+            fallback["status"] = "disabled"
+            fallback["reason"] = disabled_map[url]
+        else:
+            fallback["status"] = "unknown"
+        h = SOURCE_HEALTH.get(url, fallback)
+        tier = "light" if url in LIGHT_SOURCES else "heavy"
+        items.append({"url": url, "tier": tier, **h})
+
+    # ═════════════════════════════════════════════════════════════════════════
+    # آمارِ حذفِ مبدل‌ها — اصلاحِ یک عددِ غلطِ منتشرشده (E-11)
+    # ═════════════════════════════════════════════════════════════════════════
+    # `converters._drops` یک شمارشگرِ **سراسری** است و `build_clash_yaml` /
+    # `build_singbox_json` در شروعِ کار `clear_target()` می‌زنند. فایل‌ها به
+    # ترتیبِ all → heavy → light نوشته می‌شوند، و این گزارش **بعد** از همهٔ
+    # آن نوشتن‌ها ساخته می‌شود — پس تا پیش از این، عددِ منتشرشده فقط به
+    # دستهٔ **light** تعلق داشت در حالی که مانندِ آمارِ کل خوانده می‌شد.
+    # اندازه‌گیریِ زنده (فاز E): light = ۲۱ حذف، در حالی که all = ۹۳.
+    #
+    # راه‌حل: خط‌لوله پس از نوشتنِ هر دسته، یک snapshot می‌گیرد و همه را
+    # اینجا می‌دهد. کلیدِ `converters` عمداً به دستهٔ `all` می‌ماند (همانی که
+    # لینکِ پیش‌فرضِ کاربران است) تا مصرف‌کننده‌های فعلی نشکنند؛ تفکیکِ
+    # کامل در کلیدِ تازهٔ `converters_by_category` می‌آید.
+    #
+    # اگر خط‌لوله snapshot نداد (مسیرِ قدیمی/آزمونی)، رفتارِ قبلی حفظ
+    # می‌شود تا امضای تابع سازگارِ عقب‌رو بماند.
+    conv_by_cat = dict(conv_by_category or {})
+    try:
+        conv_stats = conv_by_cat.get("all") or converters.drop_stats()
+    except Exception:
+        conv_stats = None
+
+    # ── دروازهٔ برندینگ (E-6) — رصدپذیری ──────────────────────────────
+    # این اعداد باید همیشه صفر باشند. هر عددِ غیرِصفر یعنی قالبی از
+    # بالادست آمده که `brand_remark` بلد نیست — یعنی کارِ توسعهٔ فوری.
+    brand_gate = None
+    if results:
+        brand_gate = {
+            cat: {"dropped": r.unbranded_dropped,
+                  "rebranded": r.unbranded_rebranded,
+                  "samples": list(r.unbranded_samples)}
+            for cat, r in results.items()
+        }
+
+    geo_stats = None
+    if geo is not None:
+        try:
+            geo_stats = geo.stats()
+        except Exception:
+            geo_stats = None
+
+    # ── دروازهٔ مبدل‌ها (F-8) — رصدپذیریِ شکستِ نوشتنِ خروجی ────────────
+    # چرا اینجا و چرا **همیشه یک dict** (نه None وقتی خالی است):
+    # این کلید باید سه حالت را از هم جدا کند، نه دو حالت:
+    #   `{}`            → دروازه اجرا شد و **هیچ** شکستی نبود (سلامتِ اثبات‌شده)
+    #   `{"heavy/clash": "..."}` → دروازه اجرا شد و شکست دارد (کارِ فوری)
+    #   کلید **غایب**    → این نسخهٔ قدیمیِ health.json است (نه ادعای سلامت)
+    # اگر `or None` می‌گذاشتیم، حالتِ اول و سوم یکی می‌شدند و مانیتورینگ
+    # نمی‌توانست «سالم» را از «اندازه‌گیری‌نشده» تشخیص دهد. همین منطقِ
+    # `brand_gate` هم هست: وقتی سنجش انجام شده، dictِ واقعی می‌آید — حتی اگر
+    # همهٔ عددهایش صفر باشند.
+    #
+    # کپیِ سطحی (`dict(...)`) عمدی است: گزارش نباید به نگاشتِ سراسریِ زنده
+    # ارجاع بدهد، وگرنه هر نوشتنِ بعدی گزارشِ سریال‌نشده را از زیرِ پا تغییر
+    # می‌دهد. مقدارها `str` هستند، پس کپیِ سطحی کافی است.
+    converter_gate = dict(CONVERT_FAILURES)
+
+    return {
+        "brand": core.BRAND,
+        "checked_at": now.isoformat(),
+        "checked_at_unix": int(now.timestamp()),
+        "elapsed_seconds": round(elapsed, 1),
+        "summary": {
+            "total": len(items),
+            "ok": sum(1 for i in items if i.get("status") == "ok"),
+            "empty": sum(1 for i in items if i.get("status") == "empty"),
+            "fail": sum(1 for i in items if i.get("status") == "fail"),
+            # ★ دو سطلِ تازه تا جمعِ سطل‌ها با `total` برابر شود. پیش از این
+            #   منابعِ غیرفعال در هیچ سطلی نبودند و گزارش بی‌صدا کم می‌آورد.
+            "disabled": sum(1 for i in items if i.get("status") == "disabled"),
+            "unknown": sum(1 for i in items if i.get("status") == "unknown"),
+        },
+        "sources": items,
+        "converters": conv_stats,
+        "converters_by_category": conv_by_cat or None,
+        "brand_gate": brand_gate,
+        # دروازهٔ سازگاریِ mihomo — همان قاعدهٔ سه‌حالته‌ی `brand_gate`:
+        # dict ⇒ سنجیده شد؛ کلیدِ غایب ⇒ نسخهٔ قدیمی. صفرِ امروز سلامت است.
+        "mihomo_gate": ({cat: {"dropped": sum(getattr(r, "mihomo_fatal", {}).values()),
+                               "by_reason": dict(sorted(getattr(r, "mihomo_fatal", {}).items())),
+                               "samples": list(getattr(r, "mihomo_fatal_samples", []))}
+                         for cat, r in results.items()} if results else None),
+        "converter_gate": converter_gate,
+        "geo": geo_stats,
+    }
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# حافظهٔ بین‌دوره‌ای (فاز D)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def source_keys(per_source: Dict[str, List[str]]) -> Dict[str, set]:
+    """مجموعهٔ کلیدهای یکتاسازیِ هر منبع (همان هویتی که خروجی با آن یکتا می‌شود).
+
+    هم `unique_yield` و هم گاردِ آینه‌ها در `state.disable_candidates` از همین
+    یک تعریف می‌خوانند تا نتوانند با هم ناسازگار شوند.
+    """
+    keys: Dict[str, set] = {}
+    for url, cfgs in per_source.items():
+        ks = set()
+        for line in cfgs:
+            try:
+                if not core.is_dummy_config(line):
+                    ks.add(core.dedup_key(line))
+            except Exception:
+                continue
+        keys[url] = ks
+    return keys
+
+
+def unique_yield(per_source: Dict[str, List[str]]) -> Tuple[Dict[str, int], Dict[str, int], int]:
+    """بازدهِ **یکتا**ی هر منبع → (total, unique, union_size).
+
+    «یکتا» یعنی کلیدی که *هیچ منبعِ دیگری* در همین دور نداشته است. این سنجه —
+    نه «تعدادِ کانفیگ» و نه «HTTP 200» — تنها چیزی است که افزونگی را می‌بیند.
+
+    چرا لازم است، با عددِ سنجیده: `mahdibland/Eternity.txt` امروز ۱۹۸ کانفیگ و
+    `status: ok` دارد، ولی **زیرمجموعهٔ محضِ ۱۰۰.۰۰٪** از
+    `mahdibland/sub/sub_merge.txt` است (هر دو از یک مخزنِ بالادست). با معیارِ
+    «کانفیگ» یا «سلامت» نامرئی است؛ با معیارِ «یکتا» عددش صفر می‌شود.
+
+    از `core.dedup_key` — همان تابعِ هویتی که خطِ لوله برای تکراری‌زدایی به‌کار
+    می‌برد — استفاده می‌شود، تا این سنجه با خروجیِ واقعی هم‌داستان باشد.
+    """
+    keys = source_keys(per_source)
+
+    owners: Dict[str, int] = {}
+    for ks in keys.values():
+        for k in ks:
+            owners[k] = owners.get(k, 0) + 1
+
+    totals = {u: len(ks) for u, ks in keys.items()}
+    uniq = {u: sum(1 for k in ks if owners.get(k) == 1) for u, ks in keys.items()}
+    return totals, uniq, len(owners)
+
+
+def advance_memory(state: dict, per_source: Dict[str, List[str]],
+                   live_urls: List[str], state_path: str) -> dict:
+    """یک دور را در حافظه ثبت کن، تصمیمِ auto-disable بگیر، و ذخیره کن.
+
+    کلِ این تابع «بهترین تلاش» است: هیچ خرابی‌ای در حافظه نباید دورِ سالمی را
+    بشکند، چون خروجیِ منتشرشده به حافظه وابسته نیست — حافظه فقط دورِ *بعد* را
+    بهتر می‌کند.
+    """
+    try:
+        totals, uniq, union = unique_yield(per_source)
+        obs = {u: {"tier": "light" if u in LIGHT_SOURCES else "heavy",
+                   "total": totals.get(u, 0), "unique": uniq.get(u, 0)}
+               for u in per_source}
+        state = memory.record_round(state, obs, live_urls)
+
+        # کلیدهای هر منبع به گاردِ آینه‌ها داده می‌شود تا دو آینهٔ کامل در یک
+        # دور با هم خاموش نشوند (توضیح در `state.disable_candidates`).
+        cand = memory.disable_candidates(state, uniq, union,
+                                         keys_by_url=source_keys(per_source))
+        if cand:
+            state = memory.mark_disabled(state, cand)
+            for url, why in cand.items():
+                log(f"  🚫 auto-disabling {url.rsplit('/', 1)[-1]} — {why}")
+        memory.save_state(state, state_path)
+
+        top = sorted(uniq.items(), key=lambda kv: -kv[1])[:3]
+        zero = [u.rsplit("/", 1)[-1] for u, n in uniq.items() if n == 0]
+        log(memory.summary(state))
+        log(f"  📊 union={union} · top unique: "
+            + ", ".join(f"{u.rsplit('/', 1)[-1]}={n}" for u, n in top))
+        if zero:
+            log(f"  ⚠️ zero unique yield this round ({len(zero)}): {', '.join(zero)}")
+    except Exception as exc:  # noqa: BLE001 — حافظه هرگز دور را نمی‌شکند
+        log(f"  ⚠️ memory step failed ({type(exc).__name__}) — round continues")
+    return state
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# main
+# ──────────────────────────────────────────────────────────────────────────────
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="رادار config aggregator")
+    ap.add_argument("--out", default=os.getcwd(), help="output directory (repo root)")
+    args = ap.parse_args()
+    out_dir = os.path.abspath(args.out)
+    os.makedirs(out_dir, exist_ok=True)
+
+    t0 = time.time()
+    log(f"🚀 Aggregator start → out={out_dir}")
+    log(f"📡 Fetching {len(LIGHT_SOURCES)} light + {len(HEAVY_SOURCES)} heavy sources …")
+
+    # ── حافظهٔ بین‌دوره‌ای (فاز D) ───────────────────────────────────────────
+    # پیش از واکشی خوانده می‌شود تا منابعی که حافظه غیرفعال کرده رد شوند.
+    # `load_state` هرگز استثنا نمی‌دهد؛ نبودِ فایل = حافظهٔ خالی = رفتارِ قبلی.
+    state_path = os.path.join(out_dir, memory.STATE_PATH)
+    mem = memory.load_state(state_path)
+    skipped = [u for u in memory.disabled_urls(mem)
+               if u in (LIGHT_SOURCES + HEAVY_SOURCES)]
+    # علتِ ثبت‌شدهٔ هر غیرفعال‌سازی، برای گزارشِ سلامت.
+    disabled_reasons = disabled_reasons_for(mem, skipped)
+
+    all_urls = [u for u in (LIGHT_SOURCES + HEAVY_SOURCES) if u not in set(skipped)]
+    if skipped:
+        log(f"🧠 memory disabled {len(skipped)} source(s) → fetching "
+            f"{len(all_urls)} of {len(LIGHT_SOURCES) + len(HEAVY_SOURCES)}")
+        for u in skipped:
+            log(f"     ⏭️ {u.rsplit('/', 1)[-1]}")
+    per_source = fetch_all(all_urls)
+    # سقفِ برداشتِ HEAVY — پیش از هر پردازشی، تا آینه‌های توده‌ای نتوانند
+    # استخرِ ورودیِ آبشار را بی‌سقف باد کنند (ر.ک. HEAVY_INTAKE_CAP).
+    per_source = cap_heavy_intake(per_source)
+
+    log("🧮 Processing categories (dedup + brand) …")
+    # cache مشترک بین سه دسته — هر خط فقط یک بار تحلیل می‌شود
+    analysis_cache: Dict[str, Tuple[bool, str]] = {}
+    res_all = process_category(per_source, all_urls, analysis_cache)
+    res_heavy = process_category(per_source, HEAVY_SOURCES, analysis_cache)
+    res_light = process_category(per_source, LIGHT_SOURCES, analysis_cache)
+    results = {"all": res_all, "heavy": res_heavy, "light": res_light}
+
+    for cat, r in results.items():
+        log(f"  • {cat:<5}: {len(r.unique):>6} unique | "
+            f"{len(r.duplicates):>6} dup | {len(r.broken):>5} broken | "
+            f"{r.active_sources}/{len(HEAVY_SOURCES if cat=='heavy' else LIGHT_SOURCES if cat=='light' else all_urls)} src")
+
+    # ── دروازهٔ ایمنی: پیش از **هر** نوشتنی بررسی کن ────────────────────────────
+    # قبلاً این بررسی بعد از نوشتن همهٔ فایل‌ها انجام می‌شد؛ یعنی اگر همهٔ منابع
+    # از کار می‌افتادند، فایل‌های خوبِ موجود در ریپو با فایل‌های خالی بازنویسی
+    # می‌شدند و بعد کد ۲ برمی‌گشت — دادهٔ سالم قبلی از دست می‌رفت.
+    if not res_all.unique:
+        log("❌ No configs produced — aborting BEFORE writing (existing files preserved)")
+        return 2
+
+    # ── ثبتِ دور در حافظه (فاز D) ─────────────────────────────────────────────
+    # عمداً **بعدِ** دروازهٔ ایمنی: دوری که هیچ کانفیگی نساخته، شاهدِ معتبری از
+    # بازدهِ منابع نیست و نباید تاریخچه را آلوده کند یا کسی را غیرفعال کند.
+    # `live_urls` فهرستِ کاملِ `sources.py` است — نه `all_urls`ِ فیلترشده —
+    # وگرنه منبعی که خودمان رد کردیم، در همان دور GC می‌شد و حافظه‌اش (و دلیلِ
+    # غیرفعال‌شدنش) پاک می‌شد؛ یعنی دورِ بعد دوباره واکشی می‌شد.
+    mem = advance_memory(mem, per_source, LIGHT_SOURCES + HEAVY_SOURCES, state_path)
+
+    log("💾 Writing output files …")
+    # snapshot ِآمارِ حذف **بلافاصله پس از هر دسته** گرفته می‌شود، وگرنه
+    # `clear_target()`ِ دستهٔ بعدی آن را پاک می‌کند (ریشهٔ باگِ E-11).
+    conv_by_cat: Dict[str, dict] = {}
+    for cat, r in results.items():
+        write_category(out_dir, cat, r)
+        try:
+            conv_by_cat[cat] = converters.drop_stats()
+        except Exception:
+            pass
+        write_archive(out_dir, cat, r)
+
+    # گزارشِ دروازهٔ برندینگ (E-6) — در لاگ هم دیده شود، نه فقط در فایل
+    for cat, r in results.items():
+        if r.unbranded_dropped or r.unbranded_rebranded:
+            log(f"  ⚠️ brand gate [{cat}]: dropped={r.unbranded_dropped} "
+                f"rebranded={r.unbranded_rebranded}")
+            for s in r.unbranded_samples:
+                log(f"       ↳ {s}")
+    for cat, r in results.items():
+        if r.mihomo_fatal:
+            log(f"  🛡️ mihomo gate [{cat}]: dropped {sum(r.mihomo_fatal.values())} "
+                f"line(s) that would empty the whole subscription — {r.mihomo_fatal}")
+
+    proto_counts = write_protocols(out_dir, res_all.unique)
+    log("  • protocols: " + ", ".join(f"{k}={v}" for k, v in proto_counts.items() if v))
+
+    elapsed = time.time() - t0
+    # `out_dir` پاس داده می‌شود تا تبلیغ به **واقعیتِ دیسک** گره بخورد، نه به
+    # نماینده‌ها (F-9). این فراخوانی پس از `write_category` و `write_protocols`
+    # است، پس هر حذفی که دروازهٔ مبدل‌ها انجام داده اینجا دیده می‌شود.
+    index = build_index(results, proto_counts, elapsed, out_dir)
+    _write_text(os.path.join(out_dir, "index.json"),
+                json.dumps(index, ensure_ascii=False, indent=2))
+
+    # ── گزارشِ سلامتِ منابع (حرفه‌ای) ─────────────────────────────────────────
+    health = build_health_report(elapsed, conv_by_cat, results,
+                                 disabled=disabled_reasons)
+    _write_text(os.path.join(out_dir, "health.json"),
+                json.dumps(health, ensure_ascii=False, indent=2))
+    hs = health["summary"]
+    log(f"  • source health: {hs['ok']} ok / {hs['empty']} empty / {hs['fail']} fail"
+        f" / {hs['disabled']} disabled / {hs['unknown']} unknown"
+        f"  (total {hs['total']})")
+
+    cs = health.get("converters") or {}
+    for target in ("clash", "singbox"):
+        t = cs.get(target)
+        if t:
+            reasons = ", ".join(f"{k}={v}" for k, v in (t.get("by_reason") or {}).items())
+            log(f"  • {target} drops: {t.get('total', 0)}" + (f" ({reasons})" if reasons else ""))
+
+    gs = health.get("geo")
+    if gs:
+        log("  • geo: db=" + ("yes" if gs.get("db_loaded") else "no")
+            + f" ip={gs.get('by_ip_literal', 0)}"
+            + f" dns={gs.get('by_dns', 0)}"
+            + f" dns_failed={gs.get('dns_failed', 0)}"
+            + f" unknown={gs.get('unknown_ip_literal', 0) + gs.get('unknown_after_dns', 0)}")
+
+    # خروجی برای GitHub Actions summary
+    log(f"✅ Done in {elapsed:.1f}s — "
+        f"ALL={len(res_all.unique)} HEAVY={len(res_heavy.unique)} LIGHT={len(res_light.unique)} unique")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

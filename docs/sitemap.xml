@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/
+
+  The site has five language versions of the landing page — English (/),
+  Persian (/fa/), Chinese (/zh/), Russian (/ru/) and Arabic (/ar/) — plus
+  the technical status dashboard (/status/). The language versions point
+  at each other with xhtml:link hreflang entries, matching the
+  <link rel="alternate"> tags in each page's <head>.
+
+  Three deliberate omissions. Per the sitemaps.org protocol only <loc> is
+  required; <lastmod>, <changefreq> and <priority> are optional, and each of
+  the three would have been either false or meaningless here:
+
+  * No <lastmod>. The spec is explicit that this must be the date the page
+    was last modified, not the date the sitemap was written. This page is
+    rebuilt by hand from /docs-src and /dashboard-src, so any date baked in here would
+    start drifting the moment it was committed. A stale value is worse than
+    none, because a crawler that trusts it schedules re-crawls from a false
+    date.
+
+  * No <changefreq>. It is tempting to write "hourly" because the project
+    republishes data every 15 minutes — but that cadence belongs to
+    index.json and health.json, which this page fetches at runtime. The HTML
+    document itself changes only when the dashboard is rebuilt, which is
+    irregular and infrequent. Claiming "hourly" would be describing the data,
+    not the document.
+
+  * No <priority>. The spec defines it as the priority of a URL *relative to
+    other URLs on the same site*. With exactly one URL there is nothing to
+    rank it against, so any value would be noise.
+
+  Also note the spec's single-host rule: a sitemap may only list URLs on the
+  host that serves it. The subscription files live on raw.githubusercontent.com,
+  a different host, so they are exposed as links in the page body instead —
+  which is the supported way to do it.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+  </url>
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+  </url>
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+  </url>
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+  </url>
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/fa/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/"/>
+  </url>
+  <url>
+    <loc>https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/status/</loc>
+  </url>
+</urlset>
