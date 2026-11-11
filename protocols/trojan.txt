@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — trojan — 2223 configs
+# رادار — trojan — 2218 configs
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?security=tls&sni=searchcreativejobsandshowcaseyourartistictalents.com#SG 🇸🇬 | رادار | D156D8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | رادار | DE0128
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.175:443?security=tls&sni=blog.browseseniorrolesandenhanceyourcareertoday.com#US 🇺🇸 | رادار | 223C95
@@ -164,7 +164,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimat
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=learn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | 50D925
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?allowInsecure=0&sni=courses.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | C6F0FA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?sni=cdn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 82B9CD
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.155:443?security=tls&insecure=0&host=%2F%3FTELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&amp;…#US 🇺🇸 | رادار | 50A979
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.155:443?security=tls&fp=chrome&sni=api.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | رادار | 412F3F
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.32:443?security=tls&headerType=none&type=tcp&sni=blog.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | رادار | C8D4AD
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.33:443?security=tls&fp=chrome&sni=resources.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | رادار | A0C347
@@ -232,7 +231,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?allowInsecure=1&fp=chrome#CL 🇨🇱 | رادار | 37D68D
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?sni=advanceyouremploymentskillsandcareerdevelopmenthub.com&type=tcp#CL 🇨🇱 | رادار | 3679D3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&sni=66.163.112.121&type=tcp#US 🇺🇸 | رادار | CFA29A
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=0&sni=www.unlockyourfuturefindyourperfectcareer.com#US 🇺🇸 | رادار | 4934D4
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&fp=chrome&sni=www.unlockyourfuturefindyourperfectcareer.com#US 🇺🇸 | رادار | 4934D4
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?allowInsecure=1&sni=66.163.112.13&type=tcp#US 🇺🇸 | رادار | 67F66B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?allowInsecure=1&sni=api.nextjobopportunityandclaimyouridealrole.com&type=tcp#US 🇺🇸 | رادار | 186908
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?allowInsecure=1&sni=cdn.unlockyourfuturefindyourperfectcareer.com&type=tcp#US 🇺🇸 | رادار | B1D7F7
@@ -274,11 +273,11 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.251:443#ES 🇪🇸 | را�
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.251:443?security=tls#ES 🇪🇸 | رادار | A1F5C9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.251:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=resources.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | رادار | 2A8C03
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.40:443?security=tls#ES 🇪🇸 | رادار | 79371A
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443?#ES 🇪🇸 | رادار | 32DD1D
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443?security=tls#ES 🇪🇸 | رادار | 26CD25
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | رادار | 2712B5
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?allowInsecure=1&sni=api.searchnationwidecareerchangehelperandguidancetoday.com&type=tcp#US 🇺🇸 | رادار | 4AC1E7
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.searchnationwidecareerchangehelperandguidancetoday.com#US 🇺🇸 | رادار | 651D8C
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.25:443?sni=cdn.searchnationwidecareerchangehelperandguidancetoday.com&type=tcp&fp=chrome#US 🇺🇸 | رادار | 86F297
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.25:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.searchnationwidecareerchangehelperandguidancetoday.com#US 🇺🇸 | رادار | 77C617
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.30:443?security=tls&fp=chrome&sni=resources.searchnationwidecareerchangehelperandguidancetoday.com#US 🇺🇸 | رادار | 120146
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.46:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=searchnationwidecareerchangehelperandguidancetoday.com#US 🇺🇸 | رادار | 412587
@@ -294,7 +293,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443#NL 🇳🇱 | را�
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443?security=tls#NL 🇳🇱 | رادار | 3A127D
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443?fp=chrome&sni=www.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | رادار | FFCC17
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=www.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | رادار | B8902A
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?#NL 🇳🇱 | رادار | 0F27E9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | رادار | 8B573E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | رادار | 4C40A9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?fp=chrome&sni=courses.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | رادار | 7BB734
@@ -610,7 +608,6 @@ trojan://573bf780-4684-11f0-bda5-1239d0255272@uk1.test3.net:443?security=tls&hea
 trojan://587e3b70-fd1f-11ef-a75a-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | رادار | F68137
 trojan://58dcd460-65df-47b1-b062-517df30bef29@46.137.203.18:443?sni=sg.liangyuandian.top&peer=sg.liangyuandian.top&security=tls#SG 🇸🇬 | رادار | C1AA71
 trojan://5931134d1cde66bf83a54acdfebe7ab2@47.250.84.25:443?security=tls#MY 🇲🇾 | رادار | 03EE74
-trojan://5931134d1cde66bf83a54acdfebe7ab2@47.250.84.25:443?security=tls&sni=moltbot.doctoroyy.net#MY 🇲🇾 | رادار | 7C5353
 trojan://5a1b98a0-0a7d-11f0-9eda-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | رادار | F4F8F5
 trojan://5a1b98a0-0a7d-11f0-9eda-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | رادار | D59230
 trojan://5a92d674-308c-4d95-b283-28383e63a59b@103.9.77.6:443?sni=103.9.77.6&type=tcp#VN 🇻🇳 | رادار | A83E23
@@ -646,6 +643,7 @@ trojan://5f9b5bfbf52c85aeddefdca3abc694b1@tyy129.magiclampcloud.com:59443?allowI
 trojan://5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm@161.114.15.215:30502?sni=www.cloudflare.com&allowInsecure=1&type=tcp#US 🇺🇸 | رادار | DB0DEA
 trojan://5t6i121em5lkmsmk@108.61.177.57:16778?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=fr001.zestapp778.com#FR 🇫🇷 | رادار | 6E5D35
 trojan://5t6i121em5lkmsmk@130.94.19.95:57277?security=tls&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=us001.zestapp778.com#US 🇺🇸 | رادار | 4D35E7
+trojan://5t6i121em5lkmsmk@149.248.50.252:46977?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=ca001.zestapp778.com#CA 🇨🇦 | رادار | B726F9
 trojan://5t6i121em5lkmsmk@45.77.54.204:51520?allowInsecure=1&fp=chrome#DE 🇩🇪 | رادار | 8737B2
 trojan://5t6i121em5lkmsmk@45.77.54.204:51520?fp=chrome&sni=de001.zestapp778.com#DE 🇩🇪 | رادار | BEC4C0
 trojan://5t6i121em5lkmsmk@au001.zestapp778.com:54374?type=tcp&security=tls&fp=chrome&sni=au001.zestapp778.com#AU 🇦🇺 | رادار | 52AF17
@@ -849,6 +847,7 @@ trojan://800eb26c-cd0c-4269-aae7-e63d75de4edd@135.148.148.4:80?security=tls&sni=
 trojan://803200a0-ceb8-11ef-9955-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | رادار | 29A011
 trojan://807248b3ad214e8ce1ace68cb2080851@146.103.42.112:443?sni=cdn-edge-eu-Germany-probe02.cdn-status.info&allowInsecure=1&type=tcp#DE 🇩🇪 | رادار | 32D7B1
 trojan://8078dd51-d4d9-4024-89df-50e358a00a54@103.195.236.24:443?security=tls#VN 🇻🇳 | رادار | A551D6
+trojan://80d4cb87-ac70-e074-bc82-6313d2d1b539@www.pdnczone.com:2087?security=tls&sni=ayhanmansur-zedmeli.kdns.fr&fp=chrome&alpn=http%2F1.1&ech=cloudflare-ech.com%2Budp%3A%2F%2F78.157.42.100&type=ws&host=ayhanmansur-zedmeli.kdns.fr&path=%2FeyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ%3D%3D#CA 🇨🇦 | رادار | FB284B
 trojan://81352974801287f06ab58f555f45ef0b@ja304.magiclampcloud.cn:59443?allowInsecure=1&sni=ja304.magiclampcloud.cn&type=tcp#CN 🇨🇳 | رادار | E6679D
 trojan://81d93f62-15a2-4994-adb9-0b5d906aac7e@31.72img.xyz:443?allowInsecure=0#AU 🇦🇺 | رادار | 8A69A5
 trojan://81d93f62-15a2-4994-adb9-0b5d906aac7e@32.72img.xyz:443?allowInsecure=0#AU 🇦🇺 | رادار | DDBDE5
@@ -873,7 +872,7 @@ trojan://881ff9e8588eaf4a7dd8352005921fa5@ja262.magiclampcloud.cn:59443?type=tcp
 trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@104.17.10.171:443?path=/categories/community/&security=tls&insecure=0&host=ltf8.jueson.de5.net&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | 6E0C5F
 trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@104.24.165.182:443?path=%2Fdocument%2F&security=tls&insecure=0&host=ltf8.jueson.de5.net&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | BDA873
 trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@104.25.95.49:443?security=tls&insecure=0&host=ltf8.jueson.de5.net&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | 3A32B9
-trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@188.114.98.0:443?pcs=a1fb265103a8dc86f09e8a3ea92e9b7155267bb47cc598deee44b3e47df699cd&path=%2Forder%2Fads%2F&security=tls&alpn=http%2F1.1&fm=%7B%22tcp%22%3A%20%5B%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%22tlshello%22%2C%20%22lengths%22%3A%20%5B%220%22%2C%20%22104%22%2C%20%221%22%5D%2C%20%22delays%22%3A%20%5B%220%22%5D%2C%20%22maxSplit%22%3A%20%220%22%7D%7D%2C%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%221-1%22%2C%20%22lengths%22%3A%20%5B%22114%22%2C%20%221%22%5D%2C%20%22delays%22%3A%20%5B%221%22%5D%2C%20%22maxSplit%22%3A%20%2211%22%7D%7D%5D%7D&insecure=0&host=ltf8.jueson.de5.net&fp=unsafe&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | FEA1C1
+trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@188.114.98.0:443?pcs=a1fb265103a8dc86f09e8a3ea92e9b7155267bb47cc598deee44b3e47df699cd&path=%2Forder%2Fads%2F&security=tls&alpn=http%2F1.1&insecure=0&host=ltf8.jueson.de5.net&fp=unsafe&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | FEA1C1
 trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@188.114.98.0:443?security=tls&alpn=http%2F1.1&fm=%7B%22tcp%22%3A%20%5B%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%22tlshello%22%2C%20%22lengths%22%3A%20%5B%220%22%2C%20%22104%22%2C%20%221%22%5D%2C%20%22delays%22%3A%20%5B%220%22%5D%2C%20%22maxSplit%22%3A%20%220%22%7D%7D%2C%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%221-1%22%2C%20%22lengths%22%3A%20%5B%22114%22%2C%20%221%22%5D%2C%20%22delays%22%3A%20%5B%221%22%5D%2C%20%22maxSplit%22%3A%20%2211%22%7D%7D%5D%7D&insecure=0&host=ltf8.jueson.de5.net&fp=unsafe&type=ws&allowInsecure=0&sni=ltf8.jueson.de5.net#CA 🇨🇦 | رادار | 3665ED
 trojan://88bac5c0-066f-11f0-992d-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | رادار | 1F2401
 trojan://88bac5c0-066f-11f0-992d-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | رادار | 82DEF3
@@ -1442,7 +1441,6 @@ trojan://f1f6dad0-0622-11f0-92c5-1239d0255272@uk1.test3.net:443?security=tls&hea
 trojan://f2117e99-9b6e-47fd-b0a9-634a0b15b998@146.56.189.146:443?security=tls#KR 🇰🇷 | رادار | 23EE21
 trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?allowInsecure=1&sni=www.microsoft.com#JP 🇯🇵 | رادار | 7353B1
 trojan://f426d3c9-fb43-43c0-868b-898dfa451a74@121.127.33.130:443?security=tls&sni=likejennie.pages.dev&fp=chrome&type=ws&host=likejennie.pages.dev&path=/#SE 🇸🇪 | رادار | 029B2A
-trojan://f426d3c9-fb43-43c0-868b-898dfa451a74@121.127.33.130:443?sni=likejennie.pages.dev&peer=likejennie.pages.dev&security=tls#SE 🇸🇪 | رادار | 0A24F2
 trojan://f42e1a2e-e650-44f4-8d17-bcb68663da18@150.230.201.192:443?security=tls&sni=www.seetheworldjp.ga#JP 🇯🇵 | رادار | 45A006
 trojan://f53247e0-fd1e-11ef-8370-1239d0255272@51.38.65.155:443?security=tls&sni=vkvd127.mycdn.me&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | رادار | 01557F
 trojan://f53247e0-fd1e-11ef-8370-1239d0255272@uk1.test3.net:443?type=tcp&sni=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc&allowInsecure=1&fp=chrome#GB 🇬🇧 | رادار | 1FE512
@@ -1588,7 +1586,7 @@ trojan://humanity@104.27.201.80:443?path=%2Fassignment&security=tls&insecure=0&h
 trojan://humanity@104.27.203.207:443?path=/assignment&security=tls&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | 234D06
 trojan://humanity@108.162.194.134:443?path=/assignment?ed#CA 🇨🇦 | رادار | DBDAB4
 trojan://humanity@108.162.194.134:443?path=%2Fassignment&security=tls&insecure=0&host=www.pleadcourt.org&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | 9E1B7C
-trojan://humanity@109.234.211.232:443?path=%2Fassignment&security=tls&alpn=http%2F1.1&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#ES 🇪🇸 | رادار | B76CDE
+trojan://humanity@109.234.211.232:443?path=%2Fassignment&security=tls&alpn=http%2F1.1&insecure=0&host=www.pleadcourt.org&type=ws&allowInsecure=0&sni=www.pleadcourt.org#ES 🇪🇸 | رادار | B76CDE
 trojan://humanity@127.0.0.1:40443?path=%2Fassignment&security=tls&alpn=http%2F1.1&host=www.calmloud.com&type=ws&sni=www.calmloud.com#Global 🌐 | رادار | 0A9B98
 trojan://humanity@127.0.0.1:40443?path=%2Fassignment&security=tls&host=www.calmlunch.com&type=ws&sni=www.calmlunch.com#Global 🌐 | رادار | BFB9F7
 trojan://humanity@127.0.0.1:40443?path=%2Fassignment&security=tls&host=www.creationlong.org&type=ws&sni=www.creationlong.org#Global 🌐 | رادار | E609D7
@@ -1789,7 +1787,7 @@ trojan://IQ68037294@giving-bird.rooster465.autos:443?security=tls&sni=giving-bir
 trojan://IQ68037294@pl.levikogjgfdd.ir:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=optimal-urchin.rooster465.autos#Global 🌐 | رادار | D69160
 trojan://IQ68037294@pleased-sawfly.rooster465.autos:443#SG 🇸🇬 | رادار | F69ED3
 trojan://iWnFtzMiac@205.185.115.223:19258?mode=gun&security=reality&pbk=q_lg6VnOGhN_Ow5gHtZoDv_mJp-8W7m51N6vKamsMXk&fp=chrome&spx=%2F&type=grpc&sni=cloudflare.com&sid=6d7efa97b2#US 🇺🇸 | رادار | A7D119
-trojan://IY_3c4apu-y6GUQv@oeptestwqee-production.up.railway.app:443?path=%2Fapi%2FCDSqFt&security=tls&alpn=http%2F1.1&insecure=0&host=oeptestwqee-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=oeptestwqee-production.up.railway.app#SG 🇸🇬 | رادار | 2830C1
+trojan://IY_3c4apu-y6GUQv@oeptestwqee-production.up.railway.app:443?path=/api/CDSqFt&security=tls&alpn=http/1.1&insecure=0&host=oeptestwqee-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=oeptestwqee-production.up.railway.app#SG 🇸🇬 | رادار | 2830C1
 trojan://iyinglong@13.213.69.245:443?security=tls#SG 🇸🇬 | رادار | 472367
 trojan://iyinglong@18.140.67.76:443?security=tls#SG 🇸🇬 | رادار | 7CCFB5
 trojan://iyinglong@18.141.8.87:443?security=tls#SG 🇸🇬 | رادار | FBF0BE
@@ -1831,7 +1829,6 @@ trojan://MiTiVPN@104.18.152.229:443?path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40M
 trojan://MiTiVPN@140.248.185.253:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/s-w@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=4-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | رادار | F4B4A7
 trojan://MiTiVPN@140.248.185.253:443?path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2Fs-w%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN&security=tls&host=4x-mitivpn--mitivpn------mitivpn.global.ssl.fastly.net&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 2188FC
 trojan://MiTiVPN@146.75.57.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mtlooabmakaakaoijji.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | رادار | D6CAF8
-trojan://MiTiVPN@146.75.57.120:443?type=ws&security=tls&path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2FNLSus---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN&host=mitivpn--mitivpn-mitivpn.ac.ir&sni=firefox.com&alpn=http%2F1.1&fp=chrome&pinSHA256=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e#US 🇺🇸 | رادار | CFA9C4
 trojan://MiTiVPN@146.75.57.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn--mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | رادار | 30B815
 trojan://M%69TiVPN@146.75.57.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn--mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | رادار | C6957B
 trojan://MiTiVPN@146.75.57.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | رادار | 20CD51
@@ -1853,6 +1850,7 @@ trojan://MiTiVPN@151.101.36.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece
 trojan://mitivpn@151.101.36.244:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=ns2.firefox.com#US 🇺🇸 | رادار | 9BBE21
 trojan://MiTiVPN@151.101.36.7:443?alpn=http%2F1.1&fp=chrome&host=Abu.ac.ir&path=%2F---%40MiTiVPN---%40MiTiVPN&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&sni=cdn.akamai.steamstatic.com&type=ws#US 🇺🇸 | رادار | B2E636
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | رادار | 26F46F
+trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=&security=tls&alpn=http%2F1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | رادار | F199AE
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-vip-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | رادار | 8DD865
 trojan://MiTiVPN@151.101.56.101:443?path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2Fdes---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN&security=tls&alpn=http%2F1.1&host=mitivpn---ss--s---mitivpn-5.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 5D6D82
 trojan://MiTiVPN@151.101.56.255:443?path=%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http%2F1.1&host=mitivpn---nl--s---mitivpn-2.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | FF9900
@@ -1876,7 +1874,6 @@ trojan://MiTiVPN@151.101.56.9:443?security=tls&alpn=http%2F1.1&insecure=0&host=m
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/—@MiTiVPN—@MiTiVPN?ed#US 🇺🇸 | رادار | 12687D
 trojan://MiTiVPN@167.82.64.120:443?allowInsecure=1&sni=firefox.com&type=ws#US 🇺🇸 | رادار | 3CB367
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mtlooabmakaakaoijji.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | رادار | 56A580
-trojan://MiTiVPN@167.82.64.120:443?type=ws&security=tls&path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2FNLSus---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN&host=mitivpn--mitivpn-mitivpn.ac.ir&sni=community.fastly.steamstatic.com&alpn=http%2F1.1&fp=chrome&pinSHA256=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e#US 🇺🇸 | رادار | 2751A9
 trojan://M%69TiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn--mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=community.fastly.steamstatic.com#US 🇺🇸 | رادار | 52B4F2
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=%2F%3FTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn--mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | رادار | 5C6D55
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | رادار | 221BD0
@@ -1915,7 +1912,6 @@ trojan://mitivpn@188.114.97.6:443?path=/ed=mitivpn&security=tls&alpn=http/1.1&ho
 trojan://mitivpn@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=d-e.mitivpn.in.net&fp=chrome&ech=cloudflare-ech.com+udp://78.157.42.100&type=ws&allowInsecure=0&sni=d-e.mitivpn.in.net#CA 🇨🇦 | رادار | 2FA295
 trojan://m%69tivpn@188.114.97.6:443?security=tls&alpn=http%2F1.1&insecure=0&host=d-e.mitivpn.in.net&fp=chrome&ech=cloudflare-ech.com%2Budp%3A%2F%2F78.157.42.100&type=ws&allowInsecure=0&sni=d-e.mitivpn.in.net#CA 🇨🇦 | رادار | 8FEB81
 trojan://mitivpn@188.114.97.6:443?path=https://chatgpt.com&security=tls&alpn=http/1.1&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=mitivpn.sddde.ssddl.globddal.fassdtdly.cow.mitivpn.site#CA 🇨🇦 | رادار | 58374D
-trojan://M%69TiVPN@188.114.97.6:443?path=%2F---%40M%69TiVPN---%40M%69TiVPN&security=tls&alpn=http%2F1.1&insecure=0&host=s-s1.mitivpn-cdn.lifestyle&fp=chrome&type=ws&allowInsecure=0&sni=s-s1.mitivpn-cdn.lifestyle#CA 🇨🇦 | رادار | C078C6
 trojan://MiTiVPN@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=s-s3.mitivpn-cdn.lifestyle&fp=chrome&type=ws&allowInsecure=0&sni=s-s3.mitivpn-cdn.lifestyle#CA 🇨🇦 | رادار | 25F2D2
 trojan://mitivpn@188.114.97.6:443?path=https%3A%2F%2Fchatgpt.com&security=tls&alpn=http%2F1.1&insecure=1&host=s-mitivpn.global.ssl.b5r.ir&fp=chrome&type=ws&allowInsecure=1&sni=sadszdx.global.ssl.fastly.net.b5r.ir#CA 🇨🇦 | رادار | C5389E
 trojan://MiTiVPN@188.114.97.6:443?path=/ed=mitivpn&security=tls&alpn=http/1.1&insecure=0&host=wwww.95r.ir&fp=chrome&type=ws&allowInsecure=0&sni=wwww.95r.ir#CA 🇨🇦 | رادار | F11726
@@ -1965,7 +1961,7 @@ trojan://MITIVPN@199.232.78.160:443?path=mehrosaboram&security=tls&alpn=http%2F1
 trojan://MiTIVPN@199.232.78.160:443?path=%2F------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------Configvibes------%26&security=tls&alpn=http%2F1.1&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 324DD7
 trojan://MiTIVPN@199.232.78.160:443?path=%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2Fdes---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN%2F---%40MiTiVPN---%40MiTiVPN&security=tls&alpn=http%2F1.1&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 9DCF39
 trojan://mitivpn@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | رادار | 675C3A
-trojan://MiTIVPN@199.232.78.160:443?security=tls&alpn=http%2F1.1&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | F78E64
+trojan://MItIVPN@199.232.78.160:443?security=tls&alpn=http%2F1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | رادار | F78E64
 trojan://MITIVPN@199.232.78.160:443?path=%40mehrosabora%20&security=tls&alpn=http%2F1.1&host=mitivpn---ss--s---mitivpn-55s.global.ssl.fastly.net&fp=chrome&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 075420
 trojan://MiTiVPN@199.232.78.160:443?security=tls&alpn=http%2F1.1&host=mitivpn---us--s---mitivpn-1.global.ssl.fastly.net&fp=firefox&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | C79049
 trojan://mitivpn@199.232.78.160:443?path=%40mehrosaboran&security=tls&alpn=http%2F1.1&host=mitivpn---us--s---mitivpn-11.global.ssl.fastly.net&fp=firefox&type=ws&sni=ssl.fastly.com#US 🇺🇸 | رادار | 830053
@@ -2070,7 +2066,7 @@ trojan://qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS@checkout.salu.lalibobi.online:443?secu
 trojan://qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS@checkout.skog.lalibobi.online:443?sni=checkout.skog.lalibobi.online&type=tcp#SE 🇸🇪 | رادار | 6B632D
 trojan://qV2wW%20mxlLFpREM4sw4LOInVEWufCl55nkhIulUTwyI=@178.105.168.171:2123?sni=qapartners.sec.samsung.com&type=tcp#DE 🇩🇪 | رادار | 0515BC
 trojan://qV2wW+mxlLFpREM4sw4LOInVEWufCl55nkhIulUTwyI=@178.105.168.171:2123?security=reality&sni=qapartners.sec.samsung.com&type=tcp&fp=chrome&pbk=GrJwMyeMU8CZEilo0M6lMzhilPVRSBxxNKzc6R69LDo&sid=da#DE 🇩🇪 | رادار | D9E4E1
-trojan://QzVKeGlc2qYRxyzWb3xZFjHbqY2JmOfZ@nava.zandix.ir:2087?allowInsecure=1&alpn=http%2F1.1&fp=firefox&host=astra.zandix.ir&path=%2Fwss&security=tls&sni=astra.zandix.ir&type=ws#DE 🇩🇪 | رادار | 340B5A
+trojan://QzVKeGlc2qYRxyzWb3xZFjHbqY2JmOfZ@nava.zandix.ir:2087?allowInsecure=1&alpn=http/1.1&fp=firefox&host=astra.zandix.ir&path=/wss&security=tls&sni=astra.zandix.ir&type=ws#DE 🇩🇪 | رادار | 340B5A
 trojan://RJbtIstwtcU5buDY3r@194.124.216.53:443?security=tls&type=tcp&headerType=none#NL 🇳🇱 | رادار | BCC9CA
 trojan://RJbtIstwtcU5buDY3r@194.124.216.54:443?sni=nl-4.tr202604.com&fp=chrome&alpn=http%2F1.1&type=tcp#NL 🇳🇱 | رادار | CDA2A3
 trojan://RJbtIstwtcU5buDY3r@78.142.194.31:443?security=tls&type=tcp&headerType=none#NL 🇳🇱 | رادار | B59C68
@@ -2085,7 +2081,6 @@ trojan://SoftNetConnect@185.204.169.164:8443?security=reality&pbk=5FGOl7H4K-VOCZ
 trojan://SoftNetConnect@37.156.44.6:42549?security=tls&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1&sni=www.speedtest.net#CH 🇨🇭 | رادار | 593A4A
 trojan://SoftNetConnect@83.228.230.226:8443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&type=tcp&security=reality&sni=play.google.com&fp=chrome&insecure=1&allowInsecure=1&pbk=h0Lem3eyDGqkye4yAMuxixCMI2EqD1EKdH9Ky0Xetjg&sid=c7&spx=/#CH 🇨🇭 | رادار | E7C258
 trojan://Sp3eDVp@185.212.200.75:443?security=tls#US 🇺🇸 | رادار | BE9679
-trojan://SPARTAN_YT@151.101.56.9:443?security=tls&alpn=http%2F1.1&insecure=0&host=spartan_yt---gb--s---spartan_yr-1.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | رادار | 3E0625
 trojan://SyOxpKxC8u5jgNa3DCZ34y3D9CRenFcaABpYATEeqI2RSaXD76zS8YF0Owl3lZ@219.76.13.181:443?security=tls&sni=arbettp.freetrade.link#HK 🇭🇰 | رادار | E4B2D5
 trojan://T-me-DarkVPNpro@91.107.187.135:443?type=tcp&security=tls&fp=safari&alpn=h2&allowInsecure=1&sni=iranserver.com#DE 🇩🇪 | رادار | 384247
 trojan://t5FsyeQXkNCY6eVGiqBXmPu4..jBEpNbak@38.60.220.65:443?security=tls&sni=38.60.220.65#KR 🇰🇷 | رادار | 431516
