@@ -6,5 +6,5 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@130.94.95.198:57353/?type=tcp&encryption=none&flow=&security=tls&sni=in001.zestapp778.com&fp=firefox#ID 🇮🇩 | رادار | E1822C
 vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@in001.zestapp778.com:57353?type=tcp&security=tls&fp=chrome&sni=in001.zestapp778.com#ID 🇮🇩 | رادار | 8281C8
+vless://e9a8144e-5237-488a-afb1-9ca3d8d54c80@130.94.95.198:57353/?type=tcp&encryption=none&flow=&security=tls&sni=in001.zestapp778.com&fp=firefox#ID 🇮🇩 | رادار | E1822C

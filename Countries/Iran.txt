@@ -2,13 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — IRAN (IR) — 6 configs
+# رادار — IRAN (IR) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://3f5e89d5-591f-4ac9-b071-b05680b573c3@94.183.164.142:443?encryption=none&fp=firefox&path=/static/js/vendor.cc1645b6.js?ed=2048&security=tls&sni=nl4.gacvpn.site&type=ws#IR 🇮🇷 | رادار | 432889
+vless://549766c3-fa5f-471e-8031-ffc1f8d5064f@94.183.164.119:22843?encryption=none&type=tcp&security=reality&flow=xtls-rprx-vision&sni=nl16.blog-forme.ru&pbk=b4IjSqjLCM2MZyRiqv-VBsRB1D7CrRaQCDXaUIfp6mA&sid=646903b46c069439&fp=chrome#IR 🇮🇷 | رادار | 3AD7B1
 vless://3f5e89d5-591f-4ac9-b071-b05680b573c3@94.183.164.142:443?encryption=none&fp=firefox&path=%2Fstatic%2Fjs%2Fvendor.cc1645b6.js&security=tls&sni=nl4.gacvpn.site&type=ws#IR 🇮🇷 | رادار | 883EF5
-vless://25ce9135-58c0-46fb-97ad-a39eeff459e9@94.183.164.141:7443/?type=grpc&encryption=none&flow=&serviceName=ebl&sni=optim.tildacdn.pub&fp=chrome&security=reality&pbk=unNROkbh95ZZNHzG2RIkgrFftOLldNH0ccmtW63CziE&sid=#IR 🇮🇷 | رادار | 98C572
-vless://1942ae5f-ed90-4bba-b842-204073b9f0ca@94.182.108.34:31272?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&security=none&type=tcp#IR 🇮🇷 | رادار | 33C47E
-vless://8f8c2244-f23f-4c04-85f3-562d7d6d2eb0@dpt2.codmaxx.ir:1212?path=video&security=tls&encryption=none&insecure=0&host=tls.ultranv.ir&fp=chrome&type=ws&allowInsecure=0&sni=tls.ultranv.ir#IR 🇮🇷 | رادار | 58FA30
-vless://8f8c2244-f23f-4c04-85f3-562d7d6d2eb0@dpt2.codmaxx.ir:1010?path=video&security=tls&encryption=none&insecure=0&host=tls.ultranv.ir&fp=chrome&type=ws&allowInsecure=0&sni=tls.ultranv.ir#IR 🇮🇷 | رادار | A468F9
+vless://1942ae5f-ed90-4bba-b842-204073b9f0ca@94.182.108.34:31272?encryption=none&security=none&type=tcp#IR 🇮🇷 | رادار | 33C47E
+vless://40f77cf9-599e-4b9e-a4ae-c33d3fd3352a@94.184.42.15:1080?security=&encryption=none&headerType=none&type=tcp#IR 🇮🇷 | رادار | 4CFFEF

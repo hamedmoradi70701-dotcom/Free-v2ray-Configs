@@ -6,9 +6,9 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53
-vless://3dad6500-9910-4aae-9422-7374a0e422f6@2.59.21.188:443?security=reality&flow=xtls-rprx-vision&fp=edge&pbk=_0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I&sid=f00f58383241c807&sni=tg-lovers-free.com#AT 🇦🇹 | رادار | 3E2BFA
 vless://90157e25-cee1-4217-921e-91f300bc1a24@66.90.106.28:443?encryption=none&flow=xtls-rprx-vision&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&security=reality&sid=428ef87fd47a3a32&sni=banket-restoran.su&type=tcp&fp=chrome#AT 🇦🇹 | رادار | 42BF89
+vless://3dad6500-9910-4aae-9422-7374a0e422f6@2.59.21.188:443?security=reality&flow=xtls-rprx-vision&fp=edge&pbk=_0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I&sid=f00f58383241c807&sni=tg-lovers-free.com#AT 🇦🇹 | رادار | 3E2BFA
 vmess://eyJ2IjpudWxsLCJwcyI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IENDNzAwOCIsImFkZCI6IjE1NC40Ny4xOS4yMjUiLCJwb3J0IjoxMjcwLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6bnVsbCwiaG9zdCI6IiIsImFscG4iOm51bGwsInBhdGgiOiIvIiwidGxzIjoidGxzIiwic25pIjoieG1maGxweS5jb20iLCJmcCI6bnVsbCwibmFtZSI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IENDNzAwOCJ9
 vless://90157e25-cee1-4217-921e-91f300bc1a24@fdat.titun.su:443?flow=xtls-rprx-vision&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&security=reality&sid=428ef87fd47a3a32&sni=banket-restoran.su&type=raw&fp=ios#AT 🇦🇹 | رادار | 7EAFB7
+vless://cf1b08a7-55b7-4241-b80a-c59116272b43@beck.mossgill.top:443?mode=auto&path=/&security=reality&encryption=none&pbk=Mwczt2QjgQo3q8N10PVx8bWNubwiNhgka5GvxUy-GHQ&fp=firefox&type=xhttp&sni=beck.mossgill.top&sid=c4f0253a#AT 🇦🇹 | رادار | 9D1641
 vless://cf1b08a7-55b7-4241-b80a-c59116272b43@tarn.hazelmoor.top:443?security=reality&encryption=none&pbk=Mwczt2QjgQo3q8N10PVx8bWNubwiNhgka5GvxUy-GHQ&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=tarn.hazelmoor.top&sid=7d1c7473#AT 🇦🇹 | رادار | 1029C2
