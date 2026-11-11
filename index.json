@@ -1,11 +1,11 @@
 {
   "brand": "رادار",
   "generator": "رادارBot aggregator",
-  "updated_at": "2026-11-11T19:01:00.174829+00:00",
-  "updated_at_unix": 1794423660,
-  "next_update_eta": "2026-11-11T19:16:00.174829+00:00",
+  "updated_at": "2026-11-11T19:15:16.726554+00:00",
+  "updated_at_unix": 1794424516,
+  "next_update_eta": "2026-11-11T19:30:16.726554+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 37.9,
+  "elapsed_seconds": 37.5,
   "raw_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
@@ -23,25 +23,24 @@
   },
   "categories": {
     "all": {
-      "unique": 17728,
+      "unique": 17784,
       "broken": 1,
-      "duplicates": 16313,
-      "total_fetched": 34117,
+      "duplicates": 16423,
+      "total_fetched": 34279,
       "active_sources": 25,
       "protocols": {
-        "vless": 6721,
-        "vmess": 5595,
-        "shadowsocks": 2918,
-        "trojan": 2218,
-        "hysteria2": 216,
+        "vless": 6720,
+        "vmess": 5609,
+        "shadowsocks": 2959,
+        "trojan": 2230,
+        "hysteria2": 203,
         "shadowsocksr": 45,
-        "socks": 8,
+        "socks": 12,
         "slipnet-enc": 2,
         "ssvless": 1,
         "trojanvless": 1,
         "vlessvless": 1,
-        "hysteria": 1,
-        "tuic": 1
+        "hysteria": 1
       },
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/all/configs.txt",
@@ -55,24 +54,23 @@
       }
     },
     "heavy": {
-      "unique": 15257,
+      "unique": 15337,
       "broken": 1,
-      "duplicates": 11086,
-      "total_fetched": 26416,
+      "duplicates": 11184,
+      "total_fetched": 26590,
       "active_sources": 18,
       "protocols": {
-        "vless": 6246,
-        "vmess": 3880,
-        "shadowsocks": 2875,
-        "trojan": 2103,
-        "hysteria2": 99,
+        "vless": 6270,
+        "vmess": 3893,
+        "shadowsocks": 2915,
+        "trojan": 2116,
+        "hysteria2": 86,
         "shadowsocksr": 45,
-        "socks": 3,
+        "socks": 7,
         "slipnet-enc": 2,
         "ssvless": 1,
         "trojanvless": 1,
-        "vlessvless": 1,
-        "tuic": 1
+        "vlessvless": 1
       },
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/heavy/configs.txt",
@@ -86,14 +84,14 @@
       }
     },
     "light": {
-      "unique": 5795,
+      "unique": 5794,
       "broken": 0,
-      "duplicates": 1903,
-      "total_fetched": 7701,
+      "duplicates": 1892,
+      "total_fetched": 7689,
       "active_sources": 7,
       "protocols": {
         "vmess": 4004,
-        "vless": 1057,
+        "vless": 1056,
         "shadowsocks": 288,
         "trojan": 250,
         "hysteria2": 190,
@@ -113,19 +111,19 @@
     }
   },
   "protocols": {
-    "vless": 6721,
-    "vmess": 5595,
-    "shadowsocks": 2918,
-    "trojan": 2218,
-    "hysteria2": 216,
+    "vless": 6720,
+    "vmess": 5609,
+    "shadowsocks": 2959,
+    "trojan": 2230,
+    "hysteria2": 203,
     "shadowsocksr": 45,
-    "socks": 8,
+    "socks": 12,
     "slipnet-enc": 2,
     "hysteria": 1,
-    "tuic": 1,
     "ssvless": 1,
     "trojanvless": 1,
     "vlessvless": 1,
+    "tuic": 0,
     "wireguard": 0,
     "juicity": 0,
     "anytls": 0,
@@ -140,7 +138,6 @@
     "shadowsocksr": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/shadowsocksr.txt",
     "hysteria2": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/hysteria2.txt",
     "hysteria": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/hysteria.txt",
-    "tuic": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/tuic.txt",
     "socks": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/socks.txt"
   },
   "protocol_files_base64": {
@@ -151,7 +148,6 @@
     "shadowsocksr": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/shadowsocksr_base64.txt",
     "hysteria2": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/hysteria2_base64.txt",
     "hysteria": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/hysteria_base64.txt",
-    "tuic": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/tuic_base64.txt",
     "socks": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/protocols/socks_base64.txt"
   },
   "protocol_files_mirror": {
@@ -162,7 +158,6 @@
     "shadowsocksr": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/protocols/shadowsocksr.txt",
     "hysteria2": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/protocols/hysteria2.txt",
     "hysteria": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/protocols/hysteria.txt",
-    "tuic": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/protocols/tuic.txt",
     "socks": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/protocols/socks.txt"
   },
   "archive": {
@@ -182,7 +177,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1187,
+      "unique": 1174,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt",
@@ -196,7 +191,7 @@
       }
     },
     "fast": {
-      "unique": 779,
+      "unique": 806,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/fast/configs.txt",
@@ -210,7 +205,7 @@
       }
     },
     "secure": {
-      "unique": 832,
+      "unique": 809,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/secure/configs.txt",
@@ -231,8 +226,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 45,
-    "configs": 1187,
+    "count": 43,
+    "configs": 1174,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/Countries/index.json",

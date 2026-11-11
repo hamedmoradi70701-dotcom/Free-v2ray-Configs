@@ -132,7 +132,6 @@
         "LV 🇱🇻 | رادار | A2CA2C",
         "SE 🇸🇪 | رادار | 5EA78A",
         "NL 🇳🇱 | رادار | 702CEF",
-        "NL 🇳🇱 | رادار | CDB4EB",
         "DE 🇩🇪 | رادار | 79D38F",
         "LV 🇱🇻 | رادار | B55611",
         "DE 🇩🇪 | رادار | 3C8FD0",
@@ -1274,9 +1273,9 @@
         "SG 🇸🇬 | رادار | E1BB9A",
         "SG 🇸🇬 | رادار | 16FAE1",
         "RU 🇷🇺 | رادار | 1ED45F",
-        "RU 🇷🇺 | رادار | 360AEB",
         "RU 🇷🇺 | رادار | FCC8A2",
         "NL 🇳🇱 | رادار | 84B170",
+        "RU 🇷🇺 | رادار | 716F58",
         "RU 🇷🇺 | رادار | 44ABD3",
         "CA 🇨🇦 | رادار | B8ABE9",
         "CA 🇨🇦 | رادار | AC72F3",
@@ -1346,8 +1345,8 @@
         "US 🇺🇸 | رادار | 4C2CA5",
         "US 🇺🇸 | رادار | BF4658",
         "HK 🇭🇰 | رادار | AEA12F",
-        "SG 🇸🇬 | رادار | 7C4F6D",
-        "SG 🇸🇬 | رادار | C9C257",
+        "JP 🇯🇵 | رادار | 7C4F6D",
+        "JP 🇯🇵 | رادار | C9C257",
         "FI 🇫🇮 | رادار | 61C839",
         "FI 🇫🇮 | رادار | 56A19A",
         "FI 🇫🇮 | رادار | 575D2D",
@@ -5808,7 +5807,6 @@
         "LV 🇱🇻 | رادار | A2CA2C",
         "SE 🇸🇪 | رادار | 5EA78A",
         "NL 🇳🇱 | رادار | 702CEF",
-        "NL 🇳🇱 | رادار | CDB4EB",
         "DE 🇩🇪 | رادار | 79D38F",
         "LV 🇱🇻 | رادار | B55611",
         "DE 🇩🇪 | رادار | 3C8FD0",
@@ -6950,9 +6948,9 @@
         "SG 🇸🇬 | رادار | E1BB9A",
         "SG 🇸🇬 | رادار | 16FAE1",
         "RU 🇷🇺 | رادار | 1ED45F",
-        "RU 🇷🇺 | رادار | 360AEB",
         "RU 🇷🇺 | رادار | FCC8A2",
         "NL 🇳🇱 | رادار | 84B170",
+        "RU 🇷🇺 | رادار | 716F58",
         "RU 🇷🇺 | رادار | 44ABD3",
         "CA 🇨🇦 | رادار | B8ABE9",
         "CA 🇨🇦 | رادار | AC72F3",
@@ -7022,8 +7020,8 @@
         "US 🇺🇸 | رادار | 4C2CA5",
         "US 🇺🇸 | رادار | BF4658",
         "HK 🇭🇰 | رادار | AEA12F",
-        "SG 🇸🇬 | رادار | 7C4F6D",
-        "SG 🇸🇬 | رادار | C9C257",
+        "JP 🇯🇵 | رادار | 7C4F6D",
+        "JP 🇯🇵 | رادار | C9C257",
         "FI 🇫🇮 | رادار | 61C839",
         "FI 🇫🇮 | رادار | 56A19A",
         "FI 🇫🇮 | رادار | 575D2D",
@@ -13087,27 +13085,6 @@
     },
     {
       "type": "vless",
-      "tag": "NL 🇳🇱 | رادار | CDB4EB",
-      "server": "87.199.205.28",
-      "server_port": 443,
-      "uuid": "501a2da5-cb22-4a3f-915e-e3b821d1d62d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "vkvd754.okcdn.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw",
-          "short_id": "ef1d3554c652a436"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "DE 🇩🇪 | رادار | 79D38F",
       "server": "gemsubbgem.world",
       "server_port": 443,
@@ -15075,7 +15052,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -28766,28 +28743,6 @@
     },
     {
       "type": "vless",
-      "tag": "RU 🇷🇺 | رادار | 360AEB",
-      "server": "188.225.37.175",
-      "server_port": 443,
-      "uuid": "4b50270b-5caf-4c34-b3da-17b4525604a6",
-      "tls": {
-        "enabled": true,
-        "server_name": "cryptoventura.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/api/de3/live",
-        "headers": {
-          "Host": "cryptoventura.online"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "RU 🇷🇺 | رادار | FCC8A2",
       "server": "cryptoventura.online",
       "server_port": 443,
@@ -28810,6 +28765,28 @@
       "server": "159.223.209.139",
       "server_port": 46964,
       "uuid": "4bb35928-40bb-4bf3-95f1-9efdc4169147"
+    },
+    {
+      "type": "vless",
+      "tag": "RU 🇷🇺 | رادار | 716F58",
+      "server": "188.225.37.43",
+      "server_port": 443,
+      "uuid": "4cabcd59-a405-4c00-96f5-03507e1e28fa",
+      "tls": {
+        "enabled": true,
+        "server_name": "torvani.cyou",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/boards/live",
+        "headers": {
+          "Host": "torvani.cyou"
+        }
+      }
     },
     {
       "type": "vless",
@@ -30182,7 +30159,7 @@
     },
     {
       "type": "vless",
-      "tag": "SG 🇸🇬 | رادار | 7C4F6D",
+      "tag": "JP 🇯🇵 | رادار | 7C4F6D",
       "server": "zfapi.zalolink.com",
       "server_port": 35460,
       "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
@@ -30203,7 +30180,7 @@
     },
     {
       "type": "vless",
-      "tag": "SG 🇸🇬 | رادار | C9C257",
+      "tag": "JP 🇯🇵 | رادار | C9C257",
       "server": "zfapi.zalolink.com",
       "server_port": 46105,
       "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
