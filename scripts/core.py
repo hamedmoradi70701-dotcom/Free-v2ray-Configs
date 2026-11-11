@@ -1893,3 +1893,5 @@ def assert_no_control_bytes(path: str, content: str) -> None:
         f"(byte offset {offset}); {total} forbidden byte(s) in total; "
         f"excerpt={excerpt!r}"
     )
+
+# radar keep-alive: manual trigger 2026-11-11
