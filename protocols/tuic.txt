@@ -1,6 +1,0 @@
-#profile-title: رادار — TUIC
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — tuic — 1 configs
-tuic://73bfcc1c-5814-5f2a-b43a-3ef6af011db8:73bfcc1c-5814-5f2a-b43a-3ef6af011db8@58.152.81.104:443?sni=54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com&alpn=h3#HK 🇭🇰 | رادار | B7CCAE

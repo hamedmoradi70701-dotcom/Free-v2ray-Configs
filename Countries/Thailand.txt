@@ -2,10 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — THAILAND (TH) — 3 configs
+# رادار — THAILAND (TH) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vmess://eyJ2IjoiMiIsInBzIjoiVEgg8J+HufCfh60gfCDYsdin2K/Yp9ixIHwgODU3NjgzIiwiYWRkIjoiOC4yMTMuMjA5LjEiLCJwb3J0IjoiMTg5MTgiLCJpZCI6IjZkNjQ3ODlhLTRkNWUtNGVmNy1jOWFjLTBmYzU0M2I0ZTYzNSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6IiIsInRscyI6IiJ9
+vmess://eyJ2IjpudWxsLCJwcyI6IlRIIPCfh7nwn4etIHwg2LHYp9iv2KfYsSB8IDg2RkY3NiIsImFkZCI6IjExOS40Ni41MS40NSIsInBvcnQiOjM3NTE1LCJpZCI6IjliNzZiYzMxLTE3YTUtNDQ1NC05MzRhLThkNWZiNjAyY2Q3MCIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6bnVsbCwiaG9zdCI6bnVsbCwiYWxwbiI6bnVsbCwicGF0aCI6Ii8iLCJ0bHMiOiJub25lIiwic25pIjpudWxsLCJmcCI6bnVsbCwibmFtZSI6IlRIIPCfh7nwn4etIHwg2LHYp9iv2KfYsSB8IDg2RkY3NiJ9
 trojan://5t6i121em5lkmsmk@th001.zestapp778.com:33079?security=tls&sni=th001.zestapp778.com#TH 🇹🇭 | رادار | 093A6B
 trojan://5t6i121em5lkmsmk@th001.zestapp778.com:33079?allowInsecure=1&sni=th001.zestapp778.com&type=tcp#TH 🇹🇭 | رادار | 5B2CEE
 trojan://5t6i121em5lkmsmk@38.60.233.126:33079?security=tls&sni=th001.zestapp778.com#TH 🇹🇭 | رادار | 324DD7

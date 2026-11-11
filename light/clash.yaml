@@ -4012,7 +4012,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 66830B"
   server: 15.204.97.216
@@ -4138,7 +4138,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 2A97EE"
   server: 51.158.206.34
@@ -4152,7 +4152,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 977409"
   server: 51.158.206.80
@@ -4194,7 +4194,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 18CC48"
   server: 51.158.206.8
@@ -5798,7 +5798,7 @@ proxies:
   reality-opts:
     public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
     short-id: 896f52ba2cfca903
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: tcp
 - name: "EE \U0001F1EA\U0001F1EA | رادار | 48FECC"
   server: 185.252.177.178
@@ -8708,7 +8708,7 @@ proxies:
   reality-opts:
     public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
     short-id: 9c56fddf237e8eaf
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 6AFD1A"
   server: 195.211.98.43
@@ -9832,6 +9832,20 @@ proxies:
     short-id: 8f79726c5002
   client-fingerprint: firefox
   network: tcp
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | C70F26"
+  server: 152.70.58.201
+  port: 443
+  type: vless
+  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.nvidia.com
+  reality-opts:
+    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
+    short-id: 52c723e0fad49689
+  client-fingerprint: random
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 5AA744"
   server: 144.31.225.74
   port: 443
@@ -10428,6 +10442,20 @@ proxies:
   reality-opts:
     public-key: 7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI
     short-id: ''
+  client-fingerprint: chrome
+  network: tcp
+- name: "GB \U0001F1EC\U0001F1E7 | رادار | B39CFA"
+  server: ww3.levikogjgfdd.ir
+  port: 443
+  type: vless
+  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: passport.yandex.ru
+  reality-opts:
+    public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0
+    short-id: e6
   client-fingerprint: chrome
   network: tcp
 - name: "GR \U0001F1EC\U0001F1F7 | رادار | EEF8E4"
@@ -11763,6 +11791,20 @@ proxies:
     short-id: c39cc7310a
   client-fingerprint: chrome
   network: tcp
+- name: "PL \U0001F1F5\U0001F1F1 | رادار | 2A6D0A"
+  server: 150.251.113.34
+  port: 443
+  type: vless
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: 8yMLSTbkpJFfbgTjNzotzz7U8OT6AERrclgKdKrXXW8
+    short-id: 150a627d15154cf2
+  client-fingerprint: chrome
+  network: tcp
 - name: "UA \U0001F1FA\U0001F1E6 | رادار | 957C79"
   server: 31.222.235.81
   port: 443
@@ -12937,12 +12979,12 @@ proxies:
   password: 8674df07-56b3-43ea-b687-aef2b1a20137
   sni: crt.ultimagamest.com
   skip-cert-verify: true
-- name: "US \U0001F1FA\U0001F1F8 | رادار | 71EE3B"
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 7CFC83"
   server: 155.248.209.237
   port: 33333
   type: hysteria2
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
+  skip-cert-verify: true
 - name: "US \U0001F1FA\U0001F1F8 | رادار | D31C11"
   server: 155.248.209.237
   port: 33333
@@ -13136,15 +13178,6 @@ proxies:
   password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
   sni: hopp-legend-se.roxa.org
   skip-cert-verify: true
-- name: "NL \U0001F1F3\U0001F1F1 | رادار | 3ACE09"
-  server: hysteria.udpgw.com
-  port: 8443
-  type: hysteria2
-  password: HowdyHysteria2023w0W
-  sni: hysteria.udpgw.com
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: HysteriaHowdy
 - name: "RO \U0001F1F7\U0001F1F4 | رادار | 1B770D"
   server: 85.204.107.178
   port: 8080
@@ -13179,6 +13212,13 @@ proxies:
   type: hysteria2
   password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
   sni: germany3.h2corp.local
+  skip-cert-verify: true
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 28B318"
+  server: 35.207.53.51
+  port: 20999
+  type: hysteria2
+  password: MZKlrFbG73bKvCDe8VPul5PR9xQm
+  sni: www.apple.com
   skip-cert-verify: true
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | AF7F39"
   server: 201.51.24.4
@@ -13440,6 +13480,13 @@ proxies:
   cipher: 2022-blake3-aes-256-gcm
   password: Q2YsIzc5YkchSFjsqUZWrQAFtsSpqf7XxYxkG4+Jbsk=:zT1SecPttPY/XPW6NwjK5Wql+/6zbcGSDJK21Jk8uLo=
   udp: true
+- name: "DE \U0001F1E9\U0001F1EA | رادار | DD96D4"
+  server: tuns.rupfem.ir
+  port: 8080
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: YZa1hYrK/xilZEfMJbGFPAdN1Oh/YIVIoDpyDZwHW5E=:zN4Jk+n+Va0MxBrTunjmyb+VZ/GjPs2xB4V0wLVM+xw=
+  udp: true
 - name: "SE \U0001F1F8\U0001F1EA | رادار | 917AE2"
   server: 51.21.253.12
   port: 58317
@@ -13474,6 +13521,13 @@ proxies:
   type: ss
   cipher: aes-128-gcm
   password: 881cf39affc5286799a585f1acd24d11
+  udp: true
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 1A14DC"
+  server: 168.138.205.100
+  port: 53758
+  type: ss
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
   udp: true
 - name: "ES \U0001F1EA\U0001F1F8 | رادار | F9A668"
   server: 193.148.19.214
@@ -13608,6 +13662,55 @@ proxies:
   cipher: aes-256-cfb
   password: 1234!@#$
   udp: true
+- name: "FR \U0001F1EB\U0001F1F7 | رادار | AB2D1A"
+  server: 13.38.12.246
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 2C3DB8"
+  server: 15.156.192.45
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 | رادار | BCB3C7"
+  server: 15.237.53.254
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 | رادار | ED1B7B"
+  server: 16.60.30.137
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 1995B3"
+  server: 35.182.245.215
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 | رادار | C01AB2"
+  server: 51.44.170.122
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 12B966"
+  server: 54.196.238.241
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
 - name: "KR \U0001F1F0\U0001F1F7 | رادار | 81E9CD"
   server: 211.178.105.134
   port: 6123
@@ -13629,6 +13732,13 @@ proxies:
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
   udp: true
+- name: "SE \U0001F1F8\U0001F1EA | رادار | F94C4A"
+  server: 70.34.212.124
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+  udp: true
 - name: "JP \U0001F1EF\U0001F1F5 | رادار | 18C85F"
   server: 154.36.158.197
   port: 8388
@@ -13649,6 +13759,13 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  udp: true
+- name: "IL \U0001F1EE\U0001F1F1 | رادار | F16C3F"
+  server: 64.177.66.60
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: jfWoSVCVYXRmNBfC
   udp: true
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 5DCDAB"
   server: 15.204.233.41
@@ -14230,6 +14347,13 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
+  udp: true
+- name: "SE \U0001F1F8\U0001F1EA | رادار | 1D5700"
+  server: 62.182.193.228
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 2e555e46dbc421452416834962fd014f
   udp: true
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | D006FC"
   server: 194.87.233.93
@@ -14864,6 +14988,13 @@ proxies:
   udp: true
   sni: api.browseseniorrolesandenhanceyourcareertoday.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 4876F2"
+  server: 167.88.61.52
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | C55613"
   server: 167.88.61.85
   port: 443
@@ -14959,6 +15090,13 @@ proxies:
   udp: true
   sni: www.discoverfreshgraduatejobsstartyourprofessionaljourney.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | EB8289"
+  server: 170.101.101.112
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | BB9EC6"
   server: 170.101.101.112
   port: 443
@@ -15023,6 +15161,13 @@ proxies:
   udp: true
   sni: api.explorecreativejobsandenhanceyourcareerportfolio.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | B7861A"
+  server: 170.101.101.237
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | E8963D"
   server: 170.101.101.237
   port: 443
@@ -15070,6 +15215,13 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   sni: resources.iloverussia2026.com
+  network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 1ED687"
+  server: 193.108.119.29
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
   network: tcp
 - name: "DE \U0001F1E9\U0001F1EA | رادار | 1921E5"
   server: 193.108.119.29
@@ -15151,6 +15303,13 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 67BE6A"
+  server: 216.106.186.46
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | FB18EA"
   server: 216.106.186.46
@@ -15607,6 +15766,13 @@ proxies:
   udp: true
   sni: resources.unlockyourfuturefindyourperfectcareer.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | A3EBC0"
+  server: 66.163.112.31
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 1BAF48"
   server: 66.163.112.31
   port: 443
@@ -15638,6 +15804,13 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   sni: api.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | A9905F"
+  server: 66.163.114.106
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 3274C4"
   server: 66.163.114.106
@@ -15688,6 +15861,13 @@ proxies:
   sni: resources.findconnectwithemployersandbuildprofessionalnetwork.com
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 4EBD64"
+  server: 66.163.114.132
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 408FF6"
   server: 66.163.114.132
   port: 443
   type: trojan
@@ -15748,6 +15928,13 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
   sni: findconnectwithemployersandbuildprofessionalnetwork.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | EA5CBD"
+  server: 66.163.114.45
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 4538E8"
   server: 66.163.114.45
@@ -15947,6 +16134,7 @@ proxies:
   password: 5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm
   udp: true
   sni: www.cloudflare.com
+  client-fingerprint: chrome
   network: tcp
 - name: "FR \U0001F1EB\U0001F1F7 | رادار | 6E5D35"
   server: 108.61.177.57
@@ -15956,6 +16144,31 @@ proxies:
   udp: true
   sni: fr001.zestapp778.com
   client-fingerprint: chrome
+  network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | C69D78"
+  server: 136.244.91.14
+  port: 51520
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  udp: true
+  sni: de001.zestapp778.com
+  client-fingerprint: chrome
+  network: tcp
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 96DA13"
+  server: 149.248.50.252
+  port: 46977
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  udp: true
+  sni: ca001.zestapp778.com
+  network: tcp
+- name: "AU \U0001F1E6\U0001F1FA | رادار | 1AED59"
+  server: au001.zestapp778.com
+  port: 54374
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  udp: true
+  sni: au001.zestapp778.com
   network: tcp
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | AA675E"
   server: ca001.zestapp778.com
@@ -16065,6 +16278,14 @@ proxies:
   password: 9646699a-18b0-4ebc-9f53-453cc1c8e637
   udp: true
   sni: 43.167.186.78
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 0B770A"
+  server: 66.23.203.21
+  port: 59689
+  type: trojan
+  password: ae7eb4dwyaz25pxwgq59
+  udp: true
+  sni: 66.23.203.21
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | D4C9E4"
   server: 66.23.203.21
@@ -16215,6 +16436,15 @@ proxies:
   password: f0eb8c92ce8946aaba856569cff1a16b
   udp: true
   sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  network: tcp
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 7353B1"
+  server: 193.123.160.109
+  port: 8443
+  type: trojan
+  password: F3NzMNuYnG7akU2mSlBY
+  udp: true
+  sni: www.microsoft.com
+  client-fingerprint: chrome
   network: tcp
 - name: "SE \U0001F1F8\U0001F1EA | رادار | 19D6DC"
   server: 95.143.196.97
@@ -16654,6 +16884,14 @@ proxies:
     path: /trsVu9Ualb1DOfGjpw
     headers:
       Host: AZaDneT-692.PagEs.DEv
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 9A53B9"
+  server: ca.tronsg.com
+  port: 443
+  type: trojan
+  password: Trojan@82164024
+  udp: true
+  sni: ca.tronsg.com
+  network: tcp
 - name: "HK \U0001F1ED\U0001F1F0 | رادار | 73C465"
   server: 2.27.109.179
   port: 45464
@@ -16662,6 +16900,19 @@ proxies:
   udp: true
   sni: 2.27.109.179
   network: tcp
+- name: "RO \U0001F1F7\U0001F1F4 | رادار | 6E74B7"
+  server: 82.152.132.74
+  port: 443
+  type: vless
+  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
+  udp: true
+  tls: true
+  servername: 82.152.132.74
+  network: ws
+  ws-opts:
+    path: /assets/sync-8f3a71
+    headers:
+      Host: 82.152.132.74
 - name: "RU \U0001F1F7\U0001F1FA | رادار | 1F5346"
   server: 95.163.232.240
   port: 443
@@ -16703,6 +16954,34 @@ proxies:
     path: /@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7@V2RAYFAST_7?ed=2048
     headers:
       Host: www.dollardoon.com
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 835860"
+  server: 2.28.102.229
+  port: 3939
+  type: vless
+  uuid: 032c5a4d-0e1b-4077-89ad-129386180d2c
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: ai.android
+  reality-opts:
+    public-key: dnnN66V_xqEbGoG5P8E_Zqk3TaZt2lM4SI9N7Ana7FA
+    short-id: d9a2600fdecd7be2
+  client-fingerprint: firefox
+  network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | D8DBF2"
+  server: zibanabz.jonsonvip.ir
+  port: 3939
+  type: vless
+  uuid: 032c5a4d-0e1b-4077-89ad-129386180d2c
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: ai.android
+  reality-opts:
+    public-key: dnnN66V_xqEbGoG5P8E_Zqk3TaZt2lM4SI9N7Ana7FA
+    short-id: d9a2600fdecd7be2
+  client-fingerprint: chrome
+  network: tcp
 - name: "SG \U0001F1F8\U0001F1EC | رادار | 6123A7"
   server: puohertestc-production.up.railway.app
   port: 443
@@ -16739,20 +17018,6 @@ proxies:
   udp: true
   tls: true
   servername: sino.bestsellers1.site
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sino.bestsellers1.site
-- name: "DE \U0001F1E9\U0001F1EA | رادار | DD938E"
-  server: sino.bestsellers1.site
-  port: 2083
-  type: vless
-  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
-  udp: true
-  tls: true
-  servername: sino.bestsellers1.site
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
@@ -17094,7 +17359,7 @@ proxies:
   reality-opts:
     public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
     short-id: ''
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 2DA3D1"
   server: 199.232.78.120
@@ -17109,6 +17374,39 @@ proxies:
     path: /?Telegram---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP---@pirozi_ArGaP
     headers:
       Host: fraboijji.global.ssl.fastly.net
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 3EFA6D"
+  server: 89.105.195.147
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: live.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v1.ObjectService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 6A6D20"
+  server: 89.105.195.148
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: api.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gw.v2.PushService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 18CBA9"
+  server: 89.105.195.149
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: data.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v2.MetricsService
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 163C09"
   server: 89.105.195.150
   port: 443
@@ -17168,6 +17466,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: api.v1.FeedService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 0BBFBB"
+  server: assets.mediacorphub.org
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: assets.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: hub.v1.ObjectService
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | FFAC68"
   server: cdn.mediacorphub.org
   port: 443
@@ -17180,18 +17489,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: stats.v2.StreamService
-- name: "NL \U0001F1F3\U0001F1F1 | رادار | D98975"
-  server: edge.mediacorphub.org
-  port: 443
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  udp: true
-  tls: true
-  servername: edge.mediacorphub.org
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: hub.v1.ObjectService
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 1D7DD4"
   server: edge.mediacorphub.org
   port: 443
@@ -17204,6 +17501,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: hub.v1.ObjectService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | F403C3"
+  server: gateway.mediacorphub.org
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: gateway.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v1.ObjectService
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 49608C"
   server: get.mediacorphub.org
   port: 443
@@ -17228,6 +17536,39 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: stats.v2.StreamService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 2EBA2B"
+  server: img.mediacorphub.org
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: img.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v2.MetricsService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 62E38D"
+  server: net.mediacorphub.org
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: net.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: home.v2.MetricsService
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | AAD714"
+  server: relay.mediacorphub.org
+  port: 443
+  type: vless
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  udp: true
+  tls: true
+  servername: relay.mediacorphub.org
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api.v1.FeedService
 - name: "IN \U0001F1EE\U0001F1F3 | رادار | 8537A4"
   server: 122.176.216.52
   port: 443
@@ -17255,6 +17596,14 @@ proxies:
     public-key: D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec
     short-id: 17a35165f9d25923
   client-fingerprint: chrome
+  network: tcp
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | CFEA5D"
+  server: 168.110.21.56
+  port: 18453
+  type: vless
+  uuid: 1751bebc-1bf1-420c-8b9d-97157aad179b
+  udp: true
+  tls: false
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 921D48"
   server: 38.107.232.36
@@ -17615,6 +17964,19 @@ proxies:
   servername: 1lpxy6haqm-451516713-direct.zamam.co
   client-fingerprint: chrome
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 7B3CB9"
+  server: 129.153.128.162
+  port: 853
+  type: vless
+  uuid: 2006aa32-9ba2-4fe0-bd3d-3deaceb621e1
+  udp: true
+  tls: false
+  servername: firsty.app
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: firsty.app
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | C04896"
   server: 188.114.98.0
   port: 443
@@ -17642,6 +18004,17 @@ proxies:
     path: /api
     headers:
       Host: bahari.kiamobilepart.com
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | C4DE22"
+  server: 177.177.215.45
+  port: 444
+  type: vless
+  uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: ams2.shtil.io
+  client-fingerprint: chrome
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 20AF1C"
   server: ams2.shtil.io
   port: 444
@@ -17651,6 +18024,7 @@ proxies:
   tls: true
   flow: xtls-rprx-vision
   servername: ams2.shtil.io
+  client-fingerprint: chrome
   network: tcp
 - name: "IR \U0001F1EE\U0001F1F7 | رادار | 98C572"
   server: 94.183.164.141
@@ -18283,6 +18657,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: "AE \U0001F1E6\U0001F1EA | رادار | 2B1CF9"
+  server: uae.unixzone.us
+  port: 22573
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  servername: uae.unixzone.us
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 - name: "AE \U0001F1E6\U0001F1EA | رادار | ABB365"
   server: uae.unixzone.us
   port: 22573
@@ -18291,7 +18678,6 @@ proxies:
   udp: true
   tls: false
   servername: uae.unixzone.us
-  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /
@@ -18310,6 +18696,16 @@ proxies:
     public-key: 48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM
     short-id: dbef98744832b751
   client-fingerprint: firefox
+  network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | B343FE"
+  server: 46.225.251.213
+  port: 9090
+  type: vless
+  uuid: 3a667b02-3e6e-439e-9fdb-720ab7a5d306
+  udp: true
+  tls: false
+  flow: xtls-rprx-vision
+  servername: dynu.com
   network: tcp
 - name: "DE \U0001F1E9\U0001F1EA | رادار | E6EBAD"
   server: static.107.217.233.167.clients.your-server.de
@@ -18412,6 +18808,21 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 1A3996"
+  server: 95.140.152.173
+  port: 2083
+  type: vless
+  uuid: 3e40a4ab-efc5-4023-8e0e-9a10324ad44a
+  udp: true
+  tls: true
+  servername: dl.google.com
+  reality-opts:
+    public-key: B7x5bYp-YhtLeH31zYcilpKFCkGTMe3jtSECSw-bMC4
+    short-id: bc306875
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: google.storage.v2.Storage
 - name: "DE \U0001F1E9\U0001F1EA | رادار | 69CC85"
   server: 95.140.152.173
   port: 2083
@@ -18899,34 +19310,6 @@ proxies:
     short-id: '01'
   client-fingerprint: chrome
   network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | رادار | 877A9A"
-  server: 51.158.206.12
-  port: 23576
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
-  network: tcp
-- name: "NL \U0001F1F3\U0001F1F1 | رادار | E66F76"
-  server: 51.158.206.20
-  port: 23576
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: ''
-  client-fingerprint: chrome
-  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | C7E577"
   server: 51.158.206.25
   port: 23576
@@ -18999,6 +19382,20 @@ proxies:
   network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | AA6F51"
   server: 51.158.206.87
+  port: 23576
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: ''
+  client-fingerprint: chrome
+  network: tcp
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | B02D3A"
+  server: 51.158.206.93
   port: 23576
   type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
@@ -19212,6 +19609,19 @@ proxies:
     short-id: 7f342137c20387
   client-fingerprint: random
   network: tcp
+- name: "RU \U0001F1F7\U0001F1FA | رادار | FCC8A2"
+  server: cryptoventura.online
+  port: 443
+  type: vless
+  uuid: 4b50270b-5caf-4c34-b3da-17b4525604a6
+  udp: true
+  tls: true
+  servername: cryptoventura.online
+  network: ws
+  ws-opts:
+    path: /api/de3/live
+    headers:
+      Host: cryptoventura.online
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 84B170"
   server: 159.223.209.139
   port: 46964
@@ -19220,6 +19630,17 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "RU \U0001F1F7\U0001F1FA | رادار | 44ABD3"
+  server: 188.225.73.41
+  port: 443
+  type: vless
+  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
+  udp: true
+  tls: true
+  servername: cadrin.wtf
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cache.sync.v1
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | B8ABE9"
   server: 104.16.0.1
   port: 443
@@ -19759,6 +20180,45 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | DC6C36"
+  server: 62.106.75.86
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 5660CD"
+  server: 116.203.217.48
+  port: 1155
+  type: vless
+  uuid: 4e55449f-dcdd-41b4-a31e-dad1e3d420db
+  udp: true
+  tls: true
+  servername: tgju.org
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    short-id: 4e4aaad65cc07da8
+  client-fingerprint: edge
+  network: tcp
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 8E2132"
+  server: s1.berluno.ir
+  port: 1155
+  type: vless
+  uuid: 4e55449f-dcdd-41b4-a31e-dad1e3d420db
+  udp: true
+  tls: true
+  servername: tgju.org
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    short-id: 4e4aaad65cc07da8
+  client-fingerprint: edge
+  network: tcp
 - name: "IN \U0001F1EE\U0001F1F3 | رادار | DF5BF0"
   server: 5.253.30.99
   port: 40443
@@ -19801,8 +20261,50 @@ proxies:
     short-id: 0123456789abcdef
   client-fingerprint: chrome
   network: tcp
+- name: "FR \U0001F1EB\U0001F1F7 | رادار | 8554CE"
+  server: 20.19.83.143
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  client-fingerprint: chrome
+  network: tcp
 - name: "ES \U0001F1EA\U0001F1F8 | رادار | 01473A"
   server: 68.221.177.135
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  client-fingerprint: chrome
+  network: tcp
+- name: "CH \U0001F1E8\U0001F1ED | رادار | A43E99"
+  server: 74.161.152.237
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  client-fingerprint: chrome
+  network: tcp
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | EF113C"
+  server: 9.163.235.73
   port: 2083
   type: vless
   uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
@@ -20081,76 +20583,6 @@ proxies:
     public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
     short-id: bb82c8
   client-fingerprint: random
-  network: tcp
-- name: "HK \U0001F1ED\U0001F1F0 | رادار | AEA12F"
-  server: doghkzf.zalolink.com
-  port: 28675
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.lamer.com.hk
-  reality-opts:
-    public-key: jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA
-    short-id: 9a79807253c040
-  client-fingerprint: chrome
-  network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | D758E6"
-  server: zfapi.zalolink.com
-  port: 11802
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: psstatic.cdn.bcebos.com
-  reality-opts:
-    public-key: FUBjYwXlKIVwF7IuJf5dt_HU2sUnrEt10s4TIlTe8Q4
-    short-id: 6c84fbac2d
-  client-fingerprint: ios
-  network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
-  server: zfapi.zalolink.com
-  port: 35460
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: psstatic.cdn.bcebos.com
-  reality-opts:
-    public-key: mkVsbEvwaiSo9QwnrVN65YZ92QntQQyYs2iDxN6yTlw
-    short-id: 30d976db3eab32
-  client-fingerprint: ios
-  network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | EEA403"
-  server: zfapi.zalolink.com
-  port: 41295
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.lamer.com.sg
-  reality-opts:
-    public-key: x1nqrSzJzU5Hq7fr36PEmtBfOf98A2XiFuRzIsdcz20
-    short-id: 5895914d
-  client-fingerprint: safari
-  network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 60E71D"
-  server: zfapi.zalolink.com
-  port: 43149
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: psstatic.cdn.bcebos.com
-  reality-opts:
-    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
-    short-id: 15aa0ad4
-  client-fingerprint: firefox
   network: tcp
 - name: "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
   server: zfapi.zalolink.com
@@ -20451,26 +20883,6 @@ proxies:
     path: ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048
     headers:
       Host: rb24.ir
-- name: "FI \U0001F1EB\U0001F1EE | رادار | 2C6F8E"
-  server: 65.109.208.183
-  port: 443
-  type: vless
-  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
-  udp: true
-  tls: true
-  servername: free.for.member.iiproxy.com
-  client-fingerprint: firefox
-  network: tcp
-- name: "FI \U0001F1EB\U0001F1EE | رادار | 6EE0B4"
-  server: free.for.member.iiproxy.com
-  port: 443
-  type: vless
-  uuid: 5f07a2a1-82a5-494d-847b-b882e6903192
-  udp: true
-  tls: true
-  servername: free.for.member.iiproxy.com
-  client-fingerprint: chrome
-  network: tcp
 - name: "DE \U0001F1E9\U0001F1EA | رادار | 20D176"
   server: static.66.192.105.178.clients.your-server.de.savfasf.ir
   port: 443
@@ -20539,6 +20951,14 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | A170D4"
+  server: 87.248.149.50
+  port: 443
+  type: vless
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  udp: true
+  tls: true
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | D53BE2"
   server: base.hosamobenl.co.uk
   port: 443
@@ -20626,6 +21046,14 @@ proxies:
     short-id: 4e0418d648f86141
   client-fingerprint: random
   network: tcp
+- name: "FI \U0001F1EB\U0001F1EE | رادار | 73658D"
+  server: 2.31.100.78
+  port: 13060
+  type: vless
+  uuid: 679d0fcc-4c72-4073-8f1d-311b69ef72b5
+  udp: true
+  tls: false
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | A29EA7"
   server: 151.101.36.61
   port: 443
@@ -20654,7 +21082,7 @@ proxies:
     path: /
     headers:
       Host: d1afk2ndm8pox3.cloudfront.net
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 744C49"
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 79165B"
   server: 3.169.9.125
   port: 443
   type: vless
@@ -20662,13 +21090,25 @@ proxies:
   udp: true
   tls: true
   servername: d2ex4nxd2e01ub.cloudfront.net
-  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /
     headers:
       Host: d2ex4nxd2e01ub.cloudfront.net
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 310B57"
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | A695F3"
+  server: 3.169.9.125
+  port: 443
+  type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  udp: true
+  tls: true
+  servername: d4afoyczh5tek.cloudfront.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: d4afoyczh5tek.cloudfront.net
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 11A43D"
   server: 3.169.9.125
   port: 443
   type: vless
@@ -20676,7 +21116,6 @@ proxies:
   udp: true
   tls: true
   servername: dkfsoyk9ju2as.cloudfront.net
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
@@ -20893,6 +21332,14 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 12325F"
+  server: 15.222.9.129
+  port: 80
+  type: vless
+  uuid: 6daa0b95-9210-4f29-be40-8c6db00bc5bb
+  udp: true
+  tls: false
+  network: tcp
 - name: "GB \U0001F1EC\U0001F1E7 | رادار | 81B068"
   server: 5.104.74.70
   port: 8443
@@ -21062,7 +21509,7 @@ proxies:
   reality-opts:
     public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
     short-id: 8debcf36f1cc69ff
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: tcp
 - name: "FR \U0001F1EB\U0001F1F7 | رادار | C35436"
   server: 152.228.139.33
@@ -21442,7 +21889,7 @@ proxies:
     short-id: 48050fab
   client-fingerprint: random
   network: tcp
-- name: "IR \U0001F1EE\U0001F1F7 | رادار | 91E3AE"
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 91E3AE"
   server: free.2freenet.ddns.info
   port: 2083
   type: vless
@@ -21513,6 +21960,20 @@ proxies:
     path: ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048
     headers:
       Host: rb24.ir
+- name: "NL \U0001F1F3\U0001F1F1 | رادار | 6D439B"
+  server: 78.159.245.40
+  port: 8445
+  type: vless
+  uuid: 84a56b88-2f89-4a57-b925-74abd5b7fd87
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: passport.yandex.ru
+  reality-opts:
+    public-key: I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4
+    short-id: ''
+  client-fingerprint: firefox
+  network: tcp
 - name: "DE \U0001F1E9\U0001F1EA | رادار | 459C1F"
   server: 159.195.207.238
   port: 49313
@@ -21540,6 +22001,15 @@ proxies:
   tls: true
   servername: us3.shtil.io
   client-fingerprint: chrome
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | CD9CBF"
+  server: 85.155.179.206
+  port: 443
+  type: vless
+  uuid: 86a83d11-d751-4b60-aa4e-1dca5cff7028
+  udp: true
+  tls: true
+  servername: us3.shtil.io
   network: tcp
 - name: "JP \U0001F1EF\U0001F1F5 | رادار | F54D4A"
   server: 18.183.215.124
@@ -21676,6 +22146,34 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 61D8FC"
+  server: 199.232.78.120
+  port: 443
+  type: vless
+  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: finalnsdger.global.ssl.fastly.net
+- name: "US \U0001F1FA\U0001F1F8 | رادار | BC6FB9"
+  server: 199.232.78.159
+  port: 443
+  type: vless
+  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: finalnsdger.global.ssl.fastly.net
 - name: "Global \U0001F310 | رادار | D0198D"
   server: sca23.myfymain.com
   port: 8880
@@ -22293,6 +22791,84 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vless
+- name: "SE \U0001F1F8\U0001F1EA | رادار | 64ED49"
+  server: 109.120.134.181
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "SE \U0001F1F8\U0001F1EA | رادار | 32CB75"
+  server: 138.124.124.157
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "SE \U0001F1F8\U0001F1EA | رادار | 6F2CAC"
+  server: 138.124.49.108
+  port: 8443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "PL \U0001F1F5\U0001F1F1 | رادار | BCB2B2"
+  server: 151.245.112.193
+  port: 8443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fs.qicai99.com
+- name: "PL \U0001F1F5\U0001F1F1 | رادار | EEEF51"
+  server: 188.137.178.174
+  port: 8443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "IL \U0001F1EE\U0001F1F1 | رادار | 67191C"
+  server: 192.71.27.237
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
 - name: "AT \U0001F1E6\U0001F1F9 | رادار | 0ED7CD"
   server: 193.219.97.198
   port: 443
@@ -22305,6 +22881,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: fs.qicai99.com
+- name: "AT \U0001F1E6\U0001F1F9 | رادار | 881C59"
+  server: 193.219.97.198
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
     headers:
       Host: fs.qicai99.com
 - name: "HU \U0001F1ED\U0001F1FA | رادار | 8631B5"
@@ -22320,6 +22909,45 @@ proxies:
     path: /
     headers:
       Host: fs.qicai99.com
+- name: "HU \U0001F1ED\U0001F1FA | رادار | 725CC4"
+  server: 38.180.225.247
+  port: 2053
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "HK \U0001F1ED\U0001F1F0 | رادار | A49BB2"
+  server: 38.207.177.204
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 4FE24F"
+  server: 45.32.230.60
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
 - name: "EE \U0001F1EA\U0001F1EA | رادار | FAC345"
   server: 45.83.182.80
   port: 443
@@ -22331,6 +22959,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: fs.qicai99.com
+- name: "AU \U0001F1E6\U0001F1FA | رادار | 2BE43A"
+  server: 46.250.242.104
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
     headers:
       Host: fs.qicai99.com
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 545C25"
@@ -22347,6 +22988,58 @@ proxies:
     path: /
     headers:
       Host: fs.qicai99.com
+- name: "KR \U0001F1F0\U0001F1F7 | رادار | 60448E"
+  server: 64.110.79.66
+  port: 8443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "HK \U0001F1ED\U0001F1F0 | رادار | 40ED9E"
+  server: 68.64.182.205
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "GR \U0001F1EC\U0001F1F7 | رادار | 0B689A"
+  server: 85.90.197.158
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: "GR \U0001F1EC\U0001F1F7 | رادار | C4F857"
+  server: 85.90.197.159
+  port: 443
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fs.qicai99.com
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | 107113"
   server: fs.qicai99.com
   port: 443
@@ -22356,19 +23049,6 @@ proxies:
   tls: true
   servername: fs.qicai99.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fs.qicai99.com
-- name: "CA \U0001F1E8\U0001F1E6 | رادار | A6C283"
-  server: fs.qicai99.com
-  port: 443
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  servername: fs.qicai99.com
   network: ws
   ws-opts:
     path: /
@@ -22557,6 +23237,20 @@ proxies:
     short-id: 7205d9079521832c
   client-fingerprint: random
   network: tcp
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 469DB0"
+  server: 168-110-32-255.sslip.io
+  port: 443
+  type: vless
+  uuid: 9e9e7dee-684e-4065-afc2-1f139faaa6b0
+  udp: true
+  tls: true
+  servername: 168-110-32-255.sslip.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ray
+    headers:
+      Host: 168-110-32-255.sslip.io
 - name: "SG \U0001F1F8\U0001F1EC | رادار | 996117"
   server: ertyuioiuyhb-production.up.railway.app
   port: 443
@@ -23200,6 +23894,17 @@ proxies:
     path: /ccxf5snr06b8xxb6
     host: fafeqdhlett2p5la6d.cdn.cachefleet.com
     mode: auto
+- name: "SE \U0001F1F8\U0001F1EA | رادار | A7082B"
+  server: 138.124.86.230
+  port: 48115
+  type: vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+  udp: true
+  tls: true
+  servername: 138-124-86-230.sslip.io
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
 - name: "DE \U0001F1E9\U0001F1EA | رادار | 70E517"
   server: nodc.bazarkha.sbs
   port: 6003
@@ -23328,6 +24033,20 @@ proxies:
     path: /dragon-stream
     host: fortuna.golden-dragon.de5.net
     mode: packet-up
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 6CA34A"
+  server: websaitiran.zorfel.ir
+  port: 443
+  type: vless
+  uuid: b7450b04-ffa9-43ea-b8f5-045ccd0bd79e
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: v2German8443as.global.ssl.fastly.net
+    mode: auto
 - name: "FI \U0001F1EB\U0001F1EE | رادار | 0ED90B"
   server: 95.216.27.15
   port: 2053
@@ -23382,6 +24101,15 @@ proxies:
     path: /
     host: cplusshape.global.ssl.fastly.net
     mode: packet-up
+- name: "SG \U0001F1F8\U0001F1EC | رادار | 18B553"
+  server: 207.148.124.12
+  port: 8443
+  type: vless
+  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
+  udp: true
+  tls: true
+  servername: www.bing.com
+  network: tcp
 - name: "SG \U0001F1F8\U0001F1EC | رادار | B0E48E"
   server: 207.148.124.12
   port: 8443
@@ -23466,6 +24194,28 @@ proxies:
     path: /Telegram@v2rayng_76=?ed=2560
     headers:
       Host: bm.boulvarmoein.shop
+- name: "GB \U0001F1EC\U0001F1E7 | رادار | C7436E"
+  server: 51.38.71.147
+  port: 8443
+  type: vless
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  udp: true
+  tls: true
+  network: tcp
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 42572C"
+  server: chatgpt.com
+  port: 443
+  type: vless
+  uuid: c0dd2b42-41b1-4e9e-9876-e708b4204a6f
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: sk.subgift.cyou
+  network: ws
+  ws-opts:
+    path: /t.me-SubGift
+    headers:
+      Host: sk.subgift.cyou
 - name: "CH \U0001F1E8\U0001F1ED | رادار | C5E5CF"
   server: 208.69.78.217
   port: 2053
@@ -23611,19 +24361,6 @@ proxies:
     path: /ws
     headers:
       Host: a.cwvps.eu.org
-- name: "CA \U0001F1E8\U0001F1E6 | رادار | D4666C"
-  server: 188.114.98.0
-  port: 443
-  type: vless
-  uuid: c56cfec1-156f-44b5-bec5-dbd296400253
-  udp: true
-  tls: true
-  servername: ir.vnexjet.ir
-  network: xhttp
-  xhttp-opts:
-    path: /videofjrj
-    host: ir.vnexjet.ir
-    mode: auto
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 7970DB"
   server: ir.vnexjet.ir
   port: 443
@@ -23964,6 +24701,32 @@ proxies:
     host: sub.r7vx4-shadow-matrix.space
     mode: auto
     x-padding-bytes: 100-1000
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 1D5827"
+  server: 147.224.54.25
+  port: 2053
+  type: vless
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
+    short-id: '68'
+  client-fingerprint: firefox
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 976F3D"
+  server: panel.apexkey.store
+  port: 2053
+  type: vless
+  uuid: cdb7fa1d-6e7a-467c-da9c-da363c7bf779
+  udp: true
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: DEFJSLdILrvauMpwtpvFZddadpt3rNtv03Dui2EkmRk
+    short-id: '68'
+  client-fingerprint: chrome
+  network: tcp
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | A06C7A"
   server: 172.67.141.182
   port: 443
@@ -24023,6 +24786,19 @@ proxies:
     path: /vl/r3Zrm5J7JaNhw63ELnYpVqujQ?ed=2560
     headers:
       Host: oqf3f1i0fm6msn3hwht.pages.dev
+- name: "DE \U0001F1E9\U0001F1EA | رادار | 05C832"
+  server: s1.berluno.ir
+  port: 1155
+  type: vless
+  uuid: d07acc1a-c51d-4a1e-93d9-4753d29ae24b
+  udp: true
+  tls: true
+  servername: tgju.org
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+    short-id: 4e4aaad65cc07da8
+  client-fingerprint: edge
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 07218F"
   server: 192.142.53.38
   port: 16529
@@ -24256,6 +25032,20 @@ proxies:
     path: ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048
     headers:
       Host: rb24.ir
+- name: "JP \U0001F1EF\U0001F1F5 | رادار | 42DF43"
+  server: 168.110.48.252
+  port: 10018
+  type: vless
+  uuid: d8fc873b-860d-4490-b2f0-300d6ae3c2d3
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.ebay.com
+  reality-opts:
+    public-key: YxoFVB0NhCx4BJCgq5Ey5jdteRU2H2toGa-ZKW5XV3c
+    short-id: ''
+  client-fingerprint: firefox
+  network: tcp
 - name: "IR \U0001F1EE\U0001F1F7 | رادار | F96C12"
   server: ip2.immahan.ir
   port: 443
@@ -24351,6 +25141,22 @@ proxies:
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 406008"
   server: 207.246.104.91
+  port: 32932
+  type: vless
+  uuid: dc7b1d7a-23ae-436b-996d-23cbfbe8ab8d
+  udp: true
+  tls: true
+  servername: aws.amazon.com
+  reality-opts:
+    public-key: i0EJqjDTrTlMqJJKaDmFr8E3lEI3H1VEC7qhwCEI5W8
+    short-id: 98a6439e
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: aws.amazon.com
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 8B1736"
+  server: xuius.907737.xyz
   port: 32932
   type: vless
   uuid: dc7b1d7a-23ae-436b-996d-23cbfbe8ab8d
@@ -24823,6 +25629,19 @@ proxies:
     path: ws/?ed=2048/@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr@vpnserverrr/?2048
     headers:
       Host: rb24.ir
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 9F9B04"
+  server: 129.146.5.35
+  port: 20000
+  type: vless
+  uuid: e668c236-dead-4ea2-8a99-812a738afd13
+  udp: true
+  tls: true
+  servername: tesla.com
+  reality-opts:
+    public-key: aCKxBnWGJSFRLP1TC7cvV6lwNBsEdrW3fIqRnVD131w
+    short-id: 144d7588628c0387
+  client-fingerprint: firefox
+  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | 8B9401"
   server: 72.56.23.254
   port: 41827
@@ -25095,16 +25914,6 @@ proxies:
   servername: us007.zestapp778.com
   client-fingerprint: firefox
   network: tcp
-- name: "SG \U0001F1F8\U0001F1EC | رادار | CC9818"
-  server: 45.76.155.179
-  port: 443
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  udp: true
-  tls: true
-  servername: sg003.zestapp778.com
-  client-fingerprint: chrome
-  network: tcp
 - name: "ES \U0001F1EA\U0001F1F8 | رادار | 88827A"
   server: 212.227.235.66
   port: 2053
@@ -25186,14 +25995,6 @@ proxies:
     short-id: e3a57469d9a51ee4
   client-fingerprint: firefox
   network: tcp
-- name: "JP \U0001F1EF\U0001F1F5 | رادار | 96E0EB"
-  server: 152.69.195.67
-  port: 47878
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-  udp: true
-  tls: false
-  network: tcp
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | 1106A3"
   server: www.speedtest.net
   port: 443
@@ -25221,6 +26022,19 @@ proxies:
     short-id: 6f903d8e630fc0aa
   client-fingerprint: chrome
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 51B7E9"
+  server: 170.114.45.6
+  port: 2096
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
+  udp: true
+  tls: true
+  servername: pcloud.z-tas.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pcloud.z-tas.com
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 242572"
   server: 170.114.46.6
   port: 2096
@@ -25230,6 +26044,19 @@ proxies:
   tls: true
   servername: pcloud.z-tas.com
   client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pcloud.z-tas.com
+- name: "US \U0001F1FA\U0001F1F8 | رادار | C85BCD"
+  server: 170.114.46.6
+  port: 2096
+  type: vless
+  uuid: efd11a89-7506-44ce-95b6-6654859f155b
+  udp: true
+  tls: true
+  servername: pcloud.z-tas.com
   network: ws
   ws-opts:
     path: /
@@ -33168,6 +33995,16 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   network: tcp
+- name: "GB \U0001F1EC\U0001F1E7 | رادار | 3E5525"
+  server: 149.7.16.228
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "GB \U0001F1EC\U0001F1E7 | رادار | 033C21"
   server: 149.7.16.228
   port: 1270
@@ -34117,6 +34954,16 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | 27326A"
+  server: 158.51.121.246
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | 8E778B"
   server: 158.51.121.246
   port: 1270
@@ -34619,6 +35466,16 @@ proxies:
   tls: true
   servername: b6l6d2yh4747.dop74.com
   network: tcp
+- name: "FR \U0001F1EB\U0001F1F7 | رادار | 4E2F45"
+  server: 162.19.82.57
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | C3E30F"
   server: 162.251.60.97
   port: 1270
@@ -34640,6 +35497,16 @@ proxies:
   udp: true
   tls: true
   servername: xmfhlpy.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 8AB05A"
+  server: 162.251.62.31
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 60BC4E"
   server: 162.251.62.31
@@ -35188,6 +36055,16 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 910430"
+  server: 167.88.62.51
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | D57391"
   server: 167.88.62.51
   port: 1270
@@ -35257,6 +36134,16 @@ proxies:
     path: /linkvws
     headers:
       Host: vspeedfast.org
+- name: "US \U0001F1FA\U0001F1F8 | رادار | BE0F3D"
+  server: 167.88.63.99
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 855C81"
   server: 167.88.63.99
   port: 1270
@@ -35769,6 +36656,16 @@ proxies:
   udp: true
   tls: true
   servername: xmfhlpy.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 9F6087"
+  server: 172.111.36.126
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | FC2D02"
   server: 172.111.36.126
@@ -45724,6 +46621,16 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 35CF84"
+  server: 38.22.17.89
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 923D7E"
   server: 38.22.17.89
   port: 1270
@@ -45806,6 +46713,16 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 377EA9"
+  server: 38.64.138.135
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | FC978E"
   server: 38.64.138.135
   port: 1270
@@ -45860,6 +46777,16 @@ proxies:
   udp: true
   tls: true
   servername: xmfhlpy.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 3DE3C6"
+  server: 38.91.107.188
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 853160"
   server: 38.91.107.188
@@ -45934,6 +46861,16 @@ proxies:
   udp: true
   tls: false
   servername: guanwang.awsno.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | D35007"
+  server: 38.91.107.57
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | F44C8D"
   server: 38.91.107.57
@@ -50181,6 +51118,16 @@ proxies:
   udp: true
   tls: false
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | F01C09"
+  server: 67.220.74.188
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 723EDE"
   server: 67.220.74.188
   port: 1270
@@ -50192,6 +51139,16 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | BA6C21"
+  server: 67.220.74.197
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | B58698"
   server: 67.220.74.197
   port: 1270
@@ -50202,6 +51159,16 @@ proxies:
   udp: true
   tls: true
   servername: xmfhlpy.com
+  network: tcp
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 3CE65E"
+  server: 67.220.74.250
+  port: 1270
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
   network: tcp
 - name: "US \U0001F1FA\U0001F1F8 | رادار | 788142"
   server: 67.220.74.250
@@ -50968,6 +51935,16 @@ proxies:
     path: /ws-vmess
     headers:
       Host: bzqHefRtvpQyiUQb.v.3dns.vip
+- name: "TH \U0001F1F9\U0001F1ED | رادار | 857683"
+  server: 8.213.209.1
+  port: 18918
+  type: vmess
+  uuid: 6d64789a-4d5e-4ef7-c9ac-0fc543b4e635
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
 - name: "HK \U0001F1ED\U0001F1F0 | رادار | 692BEC"
   server: 8.217.13.103
   port: 443
@@ -76197,6 +77174,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | رادار | 76B2DF"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 08B5EE"
   - "FI \U0001F1EB\U0001F1EE | رادار | 6C3DC6"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | C70F26"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 5AA744"
   - "US \U0001F1FA\U0001F1F8 | رادار | F03A14"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 752B4B"
@@ -76239,6 +77217,7 @@ proxy-groups:
   - "CZ \U0001F1E8\U0001F1FF | رادار | 2451A9"
   - "UA \U0001F1FA\U0001F1E6 | رادار | FCB590"
   - "US \U0001F1FA\U0001F1F8 | رادار | A27DA4"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | B39CFA"
   - "GR \U0001F1EC\U0001F1F7 | رادار | EEF8E4"
   - "DE \U0001F1E9\U0001F1EA | رادار | D32DAA"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 94019B"
@@ -76334,6 +77313,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | E60E02"
   - "US \U0001F1FA\U0001F1F8 | رادار | 80DAC5"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 05C849"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | 2A6D0A"
   - "UA \U0001F1FA\U0001F1E6 | رادار | 957C79"
   - "US \U0001F1FA\U0001F1F8 | رادار | 043C6E"
   - "NL \U0001F1F3\U0001F1F1 | رادار | FDAE32"
@@ -76481,7 +77461,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 02181F"
   - "TH \U0001F1F9\U0001F1ED | رادار | 84D0BF"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 9BED5E"
-  - "US \U0001F1FA\U0001F1F8 | رادار | 71EE3B"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 7CFC83"
   - "US \U0001F1FA\U0001F1F8 | رادار | D31C11"
   - "US \U0001F1FA\U0001F1F8 | رادار | 515331"
   - "FI \U0001F1EB\U0001F1EE | رادار | 99E962"
@@ -76511,12 +77491,12 @@ proxy-groups:
   - "UA \U0001F1FA\U0001F1E6 | رادار | 55828C"
   - "FI \U0001F1EB\U0001F1EE | رادار | AB8199"
   - "FI \U0001F1EB\U0001F1EE | رادار | 456C6A"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | 3ACE09"
   - "RO \U0001F1F7\U0001F1F4 | رادار | 1B770D"
   - "RO \U0001F1F7\U0001F1F4 | رادار | 73C6C6"
   - "DE \U0001F1E9\U0001F1EA | رادار | BC4ABB"
   - "DE \U0001F1E9\U0001F1EA | رادار | 8EB60A"
   - "DE \U0001F1E9\U0001F1EA | رادار | F4B200"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 28B318"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AF7F39"
   - "NL \U0001F1F3\U0001F1F1 | رادار | F3AEB3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 432B4C"
@@ -76556,11 +77536,13 @@ proxy-groups:
   - "FI \U0001F1EB\U0001F1EE | رادار | CA47E6"
   - "FI \U0001F1EB\U0001F1EE | رادار | 315FA2"
   - "US \U0001F1FA\U0001F1F8 | رادار | FE0326"
+  - "DE \U0001F1E9\U0001F1EA | رادار | DD96D4"
   - "SE \U0001F1F8\U0001F1EA | رادار | 917AE2"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 3B17D8"
   - "NL \U0001F1F3\U0001F1F1 | رادار | BA4344"
   - "RU \U0001F1F7\U0001F1FA | رادار | 510B01"
   - "IE \U0001F1EE\U0001F1EA | رادار | CE2581"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 1A14DC"
   - "ES \U0001F1EA\U0001F1F8 | رادار | F9A668"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3C84FB"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 4A01A8"
@@ -76580,12 +77562,21 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | BB7720"
   - "KR \U0001F1F0\U0001F1F7 | رادار | FBAF15"
   - "KR \U0001F1F0\U0001F1F7 | رادار | D5B1C0"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | AB2D1A"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 2C3DB8"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | BCB3C7"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | ED1B7B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 1995B3"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | C01AB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 12B966"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 81E9CD"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 17E3DC"
   - "JP \U0001F1EF\U0001F1F5 | رادار | EA55E0"
+  - "SE \U0001F1F8\U0001F1EA | رادار | F94C4A"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 18C85F"
   - "MX \U0001F1F2\U0001F1FD | رادار | 321663"
   - "FI \U0001F1EB\U0001F1EE | رادار | E71624"
+  - "IL \U0001F1EE\U0001F1F1 | رادار | F16C3F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 5DCDAB"
   - "RU \U0001F1F7\U0001F1FA | رادار | C79225"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9522DF"
@@ -76669,6 +77660,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 983667"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 2F6C44"
   - "NL \U0001F1F3\U0001F1F1 | رادار | BF566D"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 1D5700"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D006FC"
   - "ZA \U0001F1FF\U0001F1E6 | رادار | 2DA946"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 32113F"
@@ -76758,6 +77750,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 00771D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8DA169"
   - "US \U0001F1FA\U0001F1F8 | رادار | E55E18"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 4876F2"
   - "US \U0001F1FA\U0001F1F8 | رادار | C55613"
   - "US \U0001F1FA\U0001F1F8 | رادار | F2A0CA"
   - "US \U0001F1FA\U0001F1F8 | رادار | F044F6"
@@ -76770,6 +77763,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | F77BD3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 736062"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9E1F5F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | EB8289"
   - "US \U0001F1FA\U0001F1F8 | رادار | BB9EC6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 62617D"
   - "US \U0001F1FA\U0001F1F8 | رادار | FE1AD2"
@@ -76778,12 +77772,14 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 6E20D3"
   - "US \U0001F1FA\U0001F1F8 | رادار | A08D26"
   - "US \U0001F1FA\U0001F1F8 | رادار | 18FC9B"
+  - "US \U0001F1FA\U0001F1F8 | رادار | B7861A"
   - "US \U0001F1FA\U0001F1F8 | رادار | E8963D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 949227"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3DB93D"
   - "US \U0001F1FA\U0001F1F8 | رادار | D9696F"
   - "DE \U0001F1E9\U0001F1EA | رادار | F81FC5"
   - "DE \U0001F1E9\U0001F1EA | رادار | 33F8BE"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 1ED687"
   - "DE \U0001F1E9\U0001F1EA | رادار | 1921E5"
   - "DE \U0001F1E9\U0001F1EA | رادار | B194A8"
   - "CH \U0001F1E8\U0001F1ED | رادار | 252CA9"
@@ -76794,6 +77790,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | 50D925"
   - "CH \U0001F1E8\U0001F1ED | رادار | 82B9CD"
   - "US \U0001F1FA\U0001F1F8 | رادار | C8D4AD"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 67BE6A"
   - "US \U0001F1FA\U0001F1F8 | رادار | FB18EA"
   - "US \U0001F1FA\U0001F1F8 | رادار | F195D8"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 65E3BE"
@@ -76851,10 +77848,12 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 684C69"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6572E1"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4D517A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | A3EBC0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1BAF48"
   - "US \U0001F1FA\U0001F1F8 | رادار | 52E9AA"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9BDFE6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 80BAA3"
+  - "US \U0001F1FA\U0001F1F8 | رادار | A9905F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3274C4"
   - "US \U0001F1FA\U0001F1F8 | رادار | AB4065"
   - "US \U0001F1FA\U0001F1F8 | رادار | 16AFF6"
@@ -76862,6 +77861,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 741BF9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8BF190"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4EBD64"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 408FF6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 5BCD6B"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1F99DB"
   - "US \U0001F1FA\U0001F1F8 | رادار | D6E3E8"
@@ -76869,6 +77869,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 23538E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 599A9F"
   - "US \U0001F1FA\U0001F1F8 | رادار | D13F6E"
+  - "US \U0001F1FA\U0001F1F8 | رادار | EA5CBD"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4538E8"
   - "US \U0001F1FA\U0001F1F8 | رادار | BFD934"
   - "ES \U0001F1EA\U0001F1F8 | رادار | FA4837"
@@ -76894,6 +77895,9 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | B16D95"
   - "US \U0001F1FA\U0001F1F8 | رادار | DB0DEA"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 6E5D35"
+  - "DE \U0001F1E9\U0001F1EA | رادار | C69D78"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 96DA13"
+  - "AU \U0001F1E6\U0001F1FA | رادار | 1AED59"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AA675E"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 515F34"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 29B220"
@@ -76908,6 +77912,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 98BD54"
   - "JP \U0001F1EF\U0001F1F5 | رادار | A8789C"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 217E0D"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 0B770A"
   - "US \U0001F1FA\U0001F1F8 | رادار | D4C9E4"
   - "US \U0001F1FA\U0001F1F8 | رادار | B9311F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8E596B"
@@ -76926,6 +77931,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 001B88"
   - "US \U0001F1FA\U0001F1F8 | رادار | C4ED52"
   - "US \U0001F1FA\U0001F1F8 | رادار | 20635B"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 7353B1"
   - "SE \U0001F1F8\U0001F1EA | رادار | 19D6DC"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7E1AB6"
   - "CA \U0001F1E8\U0001F1E6 | رادار | F2E0E3"
@@ -76964,14 +77970,17 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 5FAE6B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 5A27C6"
   - "CA \U0001F1E8\U0001F1E6 | رادار | ED2778"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 9A53B9"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 73C465"
+  - "RO \U0001F1F7\U0001F1F4 | رادار | 6E74B7"
   - "RU \U0001F1F7\U0001F1FA | رادار | 1F5346"
   - "TR \U0001F1F9\U0001F1F7 | رادار | C12F5D"
   - "CA \U0001F1E8\U0001F1E6 | رادار | FE5B05"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 835860"
+  - "DE \U0001F1E9\U0001F1EA | رادار | D8DBF2"
   - "SG \U0001F1F8\U0001F1EC | رادار | 6123A7"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9C6D8A"
   - "DE \U0001F1E9\U0001F1EA | رادار | 4C22B2"
-  - "DE \U0001F1E9\U0001F1EA | رادار | DD938E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 874735"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9E8DF2"
   - "US \U0001F1FA\U0001F1F8 | رادار | E04D5F"
@@ -76999,18 +78008,26 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 489FEF"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2CDE8F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2DA3D1"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 3EFA6D"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 6A6D20"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 18CBA9"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 163C09"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 3D182A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | C9B4A3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | EF37CD"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 161791"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 0BBFBB"
   - "NL \U0001F1F3\U0001F1F1 | رادار | FFAC68"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | D98975"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 1D7DD4"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | F403C3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 49608C"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D27E79"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 2EBA2B"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 62E38D"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | AAD714"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 8537A4"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 8B2EA0"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | CFEA5D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 921D48"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 49EEB8"
   - "FR \U0001F1EB\U0001F1F7 | رادار | CC4CA6"
@@ -77041,8 +78058,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | B231F8"
   - "Global \U0001F310 | رادار | BB933B"
   - "LI \U0001F1F1\U0001F1EE | رادار | 62FCBB"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 7B3CB9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | C04896"
   - "CA \U0001F1E8\U0001F1E6 | رادار | D747CC"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | C4DE22"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 20AF1C"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 98C572"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 554FB2"
@@ -77094,8 +78113,10 @@ proxy-groups:
   - "AE \U0001F1E6\U0001F1EA | رادار | 4D5793"
   - "AE \U0001F1E6\U0001F1EA | رادار | 03AC51"
   - "AE \U0001F1E6\U0001F1EA | رادار | 7A5ED4"
+  - "AE \U0001F1E6\U0001F1EA | رادار | 2B1CF9"
   - "AE \U0001F1E6\U0001F1EA | رادار | ABB365"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 7DCB51"
+  - "DE \U0001F1E9\U0001F1EA | رادار | B343FE"
   - "DE \U0001F1E9\U0001F1EA | رادار | E6EBAD"
   - "DE \U0001F1E9\U0001F1EA | رادار | A2239F"
   - "DE \U0001F1E9\U0001F1EA | رادار | 47D6D1"
@@ -77105,6 +78126,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 5F04C6"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 4A0E6B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 00E626"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 1A3996"
   - "DE \U0001F1E9\U0001F1EA | رادار | 69CC85"
   - "LT \U0001F1F1\U0001F1F9 | رادار | D0CE2C"
   - "LT \U0001F1F1\U0001F1F9 | رادار | B7A976"
@@ -77142,14 +78164,13 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 1FD863"
   - "US \U0001F1FA\U0001F1F8 | رادار | 004A5D"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 0F5B15"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | 877A9A"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | E66F76"
   - "NL \U0001F1F3\U0001F1F1 | رادار | C7E577"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8C47F0"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8570B0"
   - "NL \U0001F1F3\U0001F1F1 | رادار | B45C67"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 117AFE"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AA6F51"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | B02D3A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 265FB8"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D401D2"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 67C96C"
@@ -77165,7 +78186,9 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 06ADB4"
   - "SG \U0001F1F8\U0001F1EC | رادار | E1BB9A"
   - "SG \U0001F1F8\U0001F1EC | رادار | 16FAE1"
+  - "RU \U0001F1F7\U0001F1FA | رادار | FCC8A2"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 84B170"
+  - "RU \U0001F1F7\U0001F1FA | رادار | 44ABD3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | B8ABE9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AC72F3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 5F26A6"
@@ -77206,10 +78229,16 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8A3F38"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 90A79B"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 645DE6"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | DC6C36"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 5660CD"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 8E2132"
   - "IN \U0001F1EE\U0001F1F3 | رادار | DF5BF0"
   - "CA \U0001F1E8\U0001F1E6 | رادار | F4EDDB"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 3B5C2D"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | 8554CE"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 01473A"
+  - "CH \U0001F1E8\U0001F1ED | رادار | A43E99"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | EF113C"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 8E9B38"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 3D7AF8"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 406926"
@@ -77230,11 +78259,6 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 3B710B"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 7C5B65"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 7FA2C6"
-  - "HK \U0001F1ED\U0001F1F0 | رادار | AEA12F"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | D758E6"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | EEA403"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 60E71D"
   - "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 02F663"
   - "FI \U0001F1EB\U0001F1EE | رادار | 61C839"
@@ -77257,13 +78281,12 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | F87C61"
   - "US \U0001F1FA\U0001F1F8 | رادار | 175774"
   - "US \U0001F1FA\U0001F1F8 | رادار | 55E4BA"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 2C6F8E"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 6EE0B4"
   - "DE \U0001F1E9\U0001F1EA | رادار | 20D176"
   - "US \U0001F1FA\U0001F1F8 | رادار | 06800F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AE04BD"
   - "US \U0001F1FA\U0001F1F8 | رادار | E7C728"
   - "US \U0001F1FA\U0001F1F8 | رادار | E05CC7"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | A170D4"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D53BE2"
   - "SG \U0001F1F8\U0001F1EC | رادار | 6998DB"
   - "SG \U0001F1F8\U0001F1EC | رادار | 56E419"
@@ -77271,10 +78294,12 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 46D075"
   - "SG \U0001F1F8\U0001F1EC | رادار | 812ADF"
   - "SG \U0001F1F8\U0001F1EC | رادار | 3C27CB"
+  - "FI \U0001F1EB\U0001F1EE | رادار | 73658D"
   - "US \U0001F1FA\U0001F1F8 | رادار | A29EA7"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 8F37BD"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 744C49"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 310B57"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 79165B"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | A695F3"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 11A43D"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 2BC896"
   - "IT \U0001F1EE\U0001F1F9 | رادار | F29707"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 9F64B5"
@@ -77296,6 +78321,7 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | رادار | A0F6F6"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 31156F"
   - "FR \U0001F1EB\U0001F1F7 | رادار | B4F2B9"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 12325F"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 81B068"
   - "SG \U0001F1F8\U0001F1EC | رادار | 3B8236"
   - "NL \U0001F1F3\U0001F1F1 | رادار | E431A9"
@@ -77337,14 +78363,16 @@ proxy-groups:
   - "KR \U0001F1F0\U0001F1F7 | رادار | F949F0"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 4AE7A6"
   - "KR \U0001F1F0\U0001F1F7 | رادار | E3757C"
-  - "IR \U0001F1EE\U0001F1F7 | رادار | 91E3AE"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 91E3AE"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 96AC3B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 620ADB"
   - "FR \U0001F1EB\U0001F1F7 | رادار | BB08A4"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9F8AE5"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 6D439B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 459C1F"
   - "BG \U0001F1E7\U0001F1EC | رادار | 887AEA"
   - "US \U0001F1FA\U0001F1F8 | رادار | C355BB"
+  - "US \U0001F1FA\U0001F1F8 | رادار | CD9CBF"
   - "JP \U0001F1EF\U0001F1F5 | رادار | F54D4A"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 4C5B39"
   - "JP \U0001F1EF\U0001F1F5 | رادار | C99F45"
@@ -77356,6 +78384,8 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | ABA085"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3136E0"
   - "BY \U0001F1E7\U0001F1FE | رادار | A0F4D9"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 61D8FC"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BC6FB9"
   - "Global \U0001F310 | رادار | D0198D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 53B118"
   - "GB \U0001F1EC\U0001F1E7 | رادار | D8FF49"
@@ -77405,12 +78435,26 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | F0691B"
   - "US \U0001F1FA\U0001F1F8 | رادار | B881CB"
   - "GE \U0001F1EC\U0001F1EA | رادار | E470F0"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 64ED49"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 32CB75"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 6F2CAC"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | BCB2B2"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | EEEF51"
+  - "IL \U0001F1EE\U0001F1F1 | رادار | 67191C"
   - "AT \U0001F1E6\U0001F1F9 | رادار | 0ED7CD"
+  - "AT \U0001F1E6\U0001F1F9 | رادار | 881C59"
   - "HU \U0001F1ED\U0001F1FA | رادار | 8631B5"
+  - "HU \U0001F1ED\U0001F1FA | رادار | 725CC4"
+  - "HK \U0001F1ED\U0001F1F0 | رادار | A49BB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 4FE24F"
   - "EE \U0001F1EA\U0001F1EA | رادار | FAC345"
+  - "AU \U0001F1E6\U0001F1FA | رادار | 2BE43A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 545C25"
+  - "KR \U0001F1F0\U0001F1F7 | رادار | 60448E"
+  - "HK \U0001F1ED\U0001F1F0 | رادار | 40ED9E"
+  - "GR \U0001F1EC\U0001F1F7 | رادار | 0B689A"
+  - "GR \U0001F1EC\U0001F1F7 | رادار | C4F857"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 107113"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | A6C283"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 9E5EA1"
   - "US \U0001F1FA\U0001F1F8 | رادار | 298A7E"
   - "US \U0001F1FA\U0001F1F8 | رادار | A94445"
@@ -77424,6 +78468,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | FD8EA3"
   - "SG \U0001F1F8\U0001F1EC | رادار | 860381"
   - "SG \U0001F1F8\U0001F1EC | رادار | 9C70F7"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 469DB0"
   - "SG \U0001F1F8\U0001F1EC | رادار | 996117"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 1DEC53"
   - "DE \U0001F1E9\U0001F1EA | رادار | F8D7E9"
@@ -77477,6 +78522,7 @@ proxy-groups:
   - "HU \U0001F1ED\U0001F1FA | رادار | C2D8E0"
   - "DE \U0001F1E9\U0001F1EA | رادار | 06C67A"
   - "RU \U0001F1F7\U0001F1FA | رادار | 132ABA"
+  - "SE \U0001F1F8\U0001F1EA | رادار | A7082B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 70E517"
   - "JP \U0001F1EF\U0001F1F5 | رادار | CB0C73"
   - "KZ \U0001F1F0\U0001F1FF | رادار | 620A80"
@@ -77487,11 +78533,13 @@ proxy-groups:
   - "BY \U0001F1E7\U0001F1FE | رادار | AD592D"
   - "SG \U0001F1F8\U0001F1EC | رادار | E4AF81"
   - "LV \U0001F1F1\U0001F1FB | رادار | 04936E"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 6CA34A"
   - "FI \U0001F1EB\U0001F1EE | رادار | 0ED90B"
   - "VN \U0001F1FB\U0001F1F3 | رادار | DE68F9"
   - "DE \U0001F1E9\U0001F1EA | رادار | 5D9E5B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 7FED36"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4E9C6D"
+  - "SG \U0001F1F8\U0001F1EC | رادار | 18B553"
   - "SG \U0001F1F8\U0001F1EC | رادار | B0E48E"
   - "KR \U0001F1F0\U0001F1F7 | رادار | E4D8F9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 1163EF"
@@ -77499,6 +78547,8 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | رادار | 97FE26"
   - "FI \U0001F1EB\U0001F1EE | رادار | EC8ECD"
   - "DE \U0001F1E9\U0001F1EA | رادار | 16FA57"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | C7436E"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 42572C"
   - "CH \U0001F1E8\U0001F1ED | رادار | C5E5CF"
   - "CH \U0001F1E8\U0001F1ED | رادار | 1ED64E"
   - "CH \U0001F1E8\U0001F1ED | رادار | 99AF64"
@@ -77510,7 +78560,6 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 890F83"
   - "LT \U0001F1F1\U0001F1F9 | رادار | F0DF41"
   - "LT \U0001F1F1\U0001F1F9 | رادار | DA992A"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | D4666C"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7970DB"
   - "FR \U0001F1EB\U0001F1F7 | رادار | DDE0C3"
   - "DE \U0001F1E9\U0001F1EA | رادار | E4B5F0"
@@ -77538,10 +78587,13 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | رادار | 5AEB29"
   - "DE \U0001F1E9\U0001F1EA | رادار | 74A900"
   - "US \U0001F1FA\U0001F1F8 | رادار | 409849"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 1D5827"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 976F3D"
   - "CA \U0001F1E8\U0001F1E6 | رادار | A06C7A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 3403BA"
   - "CH \U0001F1E8\U0001F1ED | رادار | 716AD1"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 6B9E2B"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 05C832"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 07218F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 117F1E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7D0853"
@@ -77560,6 +78612,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | رادار | E61538"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 5C9974"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1B82A4"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 42DF43"
   - "IR \U0001F1EE\U0001F1F7 | رادار | F96C12"
   - "FR \U0001F1EB\U0001F1F7 | رادار | B44BEC"
   - "IT \U0001F1EE\U0001F1F9 | رادار | B7C33A"
@@ -77568,6 +78621,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 9ABF67"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 225811"
   - "US \U0001F1FA\U0001F1F8 | رادار | 406008"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 8B1736"
   - "AU \U0001F1E6\U0001F1FA | رادار | 45BDB9"
   - "RU \U0001F1F7\U0001F1FA | رادار | B17691"
   - "MD \U0001F1F2\U0001F1E9 | رادار | 2B9AC3"
@@ -77610,6 +78664,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | A2B6D6"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 4B30EE"
   - "US \U0001F1FA\U0001F1F8 | رادار | 799B77"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 9F9B04"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8B9401"
   - "CA \U0001F1E8\U0001F1E6 | رادار | E5BE9B"
   - "Global \U0001F310 | رادار | 319589"
@@ -77630,17 +78685,17 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | 2D0ED1"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 550CAF"
   - "US \U0001F1FA\U0001F1F8 | رادار | BB2350"
-  - "SG \U0001F1F8\U0001F1EC | رادار | CC9818"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 88827A"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 2F676D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 751892"
   - "PT \U0001F1F5\U0001F1F9 | رادار | 3B95A4"
   - "AT \U0001F1E6\U0001F1F9 | رادار | 920657"
   - "NL \U0001F1F3\U0001F1F1 | رادار | B242AB"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 96E0EB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 1106A3"
   - "SG \U0001F1F8\U0001F1EC | رادار | BA1F75"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 51B7E9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 242572"
+  - "US \U0001F1FA\U0001F1F8 | رادار | C85BCD"
   - "SG \U0001F1F8\U0001F1EC | رادار | C5EC8D"
   - "RU \U0001F1F7\U0001F1FA | رادار | 3E6E92"
   - "BG \U0001F1E7\U0001F1EC | رادار | D2D685"
@@ -78248,6 +79303,7 @@ proxy-groups:
   - "IT \U0001F1EE\U0001F1F9 | رادار | FB6C85"
   - "IT \U0001F1EE\U0001F1F9 | رادار | C3D0C5"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 9CBBD7"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | 3E5525"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 033C21"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 831E0F"
   - "SG \U0001F1F8\U0001F1EC | رادار | 32C65E"
@@ -78325,6 +79381,7 @@ proxy-groups:
   - "RU \U0001F1F7\U0001F1FA | رادار | 9B9CD3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 3B4C92"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 702C4F"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 27326A"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8E778B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 593A59"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 577620"
@@ -78363,8 +79420,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | BD9466"
   - "DE \U0001F1E9\U0001F1EA | رادار | 8BC23F"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9E8BBF"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | 4E2F45"
   - "US \U0001F1FA\U0001F1F8 | رادار | C3E30F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 072F29"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 8AB05A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 60BC4E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6DB3A4"
   - "US \U0001F1FA\U0001F1F8 | رادار | A8D213"
@@ -78415,12 +79474,14 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 9F5A7D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7AA8C3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 67B835"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 910430"
   - "US \U0001F1FA\U0001F1F8 | رادار | D57391"
   - "US \U0001F1FA\U0001F1F8 | رادار | 541574"
   - "US \U0001F1FA\U0001F1F8 | رادار | F55BCB"
   - "US \U0001F1FA\U0001F1F8 | رادار | 53FCC0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4B0BA9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 801724"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BE0F3D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 855C81"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 41C7D7"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 6343C8"
@@ -78460,6 +79521,7 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | رادار | 23C275"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 7B4ED8"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2334B9"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 9F6087"
   - "US \U0001F1FA\U0001F1F8 | رادار | FC2D02"
   - "US \U0001F1FA\U0001F1F8 | رادار | D87097"
   - "US \U0001F1FA\U0001F1F8 | رادار | 143737"
@@ -79277,6 +80339,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 781051"
   - "US \U0001F1FA\U0001F1F8 | رادار | E7611E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 766FED"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 35CF84"
   - "US \U0001F1FA\U0001F1F8 | رادار | 923D7E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8D6535"
   - "US \U0001F1FA\U0001F1F8 | رادار | 52807C"
@@ -79284,11 +80347,13 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | AA9499"
   - "FR \U0001F1EB\U0001F1F7 | رادار | D56E69"
   - "MX \U0001F1F2\U0001F1FD | رادار | 8D829F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 377EA9"
   - "US \U0001F1FA\U0001F1F8 | رادار | FC978E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 64D2F8"
   - "US \U0001F1FA\U0001F1F8 | رادار | C286F0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 565AA4"
   - "US \U0001F1FA\U0001F1F8 | رادار | 0CBFCD"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 3DE3C6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 853160"
   - "US \U0001F1FA\U0001F1F8 | رادار | B7DF3B"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3A610C"
@@ -79296,6 +80361,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 978E21"
   - "US \U0001F1FA\U0001F1F8 | رادار | CA0DCB"
   - "US \U0001F1FA\U0001F1F8 | رادار | F52172"
+  - "US \U0001F1FA\U0001F1F8 | رادار | D35007"
   - "US \U0001F1FA\U0001F1F8 | رادار | F44C8D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6D6C73"
   - "US \U0001F1FA\U0001F1F8 | رادار | E86D90"
@@ -79627,8 +80693,11 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | B9C716"
   - "US \U0001F1FA\U0001F1F8 | رادار | D8C1A6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 120B0A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | F01C09"
   - "US \U0001F1FA\U0001F1F8 | رادار | 723EDE"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BA6C21"
   - "US \U0001F1FA\U0001F1F8 | رادار | B58698"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 3CE65E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 788142"
   - "US \U0001F1FA\U0001F1F8 | رادار | 46741C"
   - "US \U0001F1FA\U0001F1F8 | رادار | BA43A3"
@@ -79690,6 +80759,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | CCD2B6"
   - "HK \U0001F1ED\U0001F1F0 | رادار | B8EF38"
   - "DE \U0001F1E9\U0001F1EA | رادار | 4B7538"
+  - "TH \U0001F1F9\U0001F1ED | رادار | 857683"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 692BEC"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 5B1771"
   - "HK \U0001F1ED\U0001F1F0 | رادار | E28C7A"
@@ -82497,6 +83567,7 @@ proxy-groups:
   - "PL \U0001F1F5\U0001F1F1 | رادار | 76B2DF"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 08B5EE"
   - "FI \U0001F1EB\U0001F1EE | رادار | 6C3DC6"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | C70F26"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 5AA744"
   - "US \U0001F1FA\U0001F1F8 | رادار | F03A14"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 752B4B"
@@ -82539,6 +83610,7 @@ proxy-groups:
   - "CZ \U0001F1E8\U0001F1FF | رادار | 2451A9"
   - "UA \U0001F1FA\U0001F1E6 | رادار | FCB590"
   - "US \U0001F1FA\U0001F1F8 | رادار | A27DA4"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | B39CFA"
   - "GR \U0001F1EC\U0001F1F7 | رادار | EEF8E4"
   - "DE \U0001F1E9\U0001F1EA | رادار | D32DAA"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 94019B"
@@ -82634,6 +83706,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | E60E02"
   - "US \U0001F1FA\U0001F1F8 | رادار | 80DAC5"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 05C849"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | 2A6D0A"
   - "UA \U0001F1FA\U0001F1E6 | رادار | 957C79"
   - "US \U0001F1FA\U0001F1F8 | رادار | 043C6E"
   - "NL \U0001F1F3\U0001F1F1 | رادار | FDAE32"
@@ -82781,7 +83854,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 02181F"
   - "TH \U0001F1F9\U0001F1ED | رادار | 84D0BF"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 9BED5E"
-  - "US \U0001F1FA\U0001F1F8 | رادار | 71EE3B"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 7CFC83"
   - "US \U0001F1FA\U0001F1F8 | رادار | D31C11"
   - "US \U0001F1FA\U0001F1F8 | رادار | 515331"
   - "FI \U0001F1EB\U0001F1EE | رادار | 99E962"
@@ -82811,12 +83884,12 @@ proxy-groups:
   - "UA \U0001F1FA\U0001F1E6 | رادار | 55828C"
   - "FI \U0001F1EB\U0001F1EE | رادار | AB8199"
   - "FI \U0001F1EB\U0001F1EE | رادار | 456C6A"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | 3ACE09"
   - "RO \U0001F1F7\U0001F1F4 | رادار | 1B770D"
   - "RO \U0001F1F7\U0001F1F4 | رادار | 73C6C6"
   - "DE \U0001F1E9\U0001F1EA | رادار | BC4ABB"
   - "DE \U0001F1E9\U0001F1EA | رادار | 8EB60A"
   - "DE \U0001F1E9\U0001F1EA | رادار | F4B200"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 28B318"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AF7F39"
   - "NL \U0001F1F3\U0001F1F1 | رادار | F3AEB3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 432B4C"
@@ -82856,11 +83929,13 @@ proxy-groups:
   - "FI \U0001F1EB\U0001F1EE | رادار | CA47E6"
   - "FI \U0001F1EB\U0001F1EE | رادار | 315FA2"
   - "US \U0001F1FA\U0001F1F8 | رادار | FE0326"
+  - "DE \U0001F1E9\U0001F1EA | رادار | DD96D4"
   - "SE \U0001F1F8\U0001F1EA | رادار | 917AE2"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 3B17D8"
   - "NL \U0001F1F3\U0001F1F1 | رادار | BA4344"
   - "RU \U0001F1F7\U0001F1FA | رادار | 510B01"
   - "IE \U0001F1EE\U0001F1EA | رادار | CE2581"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 1A14DC"
   - "ES \U0001F1EA\U0001F1F8 | رادار | F9A668"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3C84FB"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 4A01A8"
@@ -82880,12 +83955,21 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | BB7720"
   - "KR \U0001F1F0\U0001F1F7 | رادار | FBAF15"
   - "KR \U0001F1F0\U0001F1F7 | رادار | D5B1C0"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | AB2D1A"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 2C3DB8"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | BCB3C7"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | ED1B7B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 1995B3"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | C01AB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 12B966"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 81E9CD"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 17E3DC"
   - "JP \U0001F1EF\U0001F1F5 | رادار | EA55E0"
+  - "SE \U0001F1F8\U0001F1EA | رادار | F94C4A"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 18C85F"
   - "MX \U0001F1F2\U0001F1FD | رادار | 321663"
   - "FI \U0001F1EB\U0001F1EE | رادار | E71624"
+  - "IL \U0001F1EE\U0001F1F1 | رادار | F16C3F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 5DCDAB"
   - "RU \U0001F1F7\U0001F1FA | رادار | C79225"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9522DF"
@@ -82969,6 +84053,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 983667"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 2F6C44"
   - "NL \U0001F1F3\U0001F1F1 | رادار | BF566D"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 1D5700"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D006FC"
   - "ZA \U0001F1FF\U0001F1E6 | رادار | 2DA946"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 32113F"
@@ -83058,6 +84143,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 00771D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8DA169"
   - "US \U0001F1FA\U0001F1F8 | رادار | E55E18"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 4876F2"
   - "US \U0001F1FA\U0001F1F8 | رادار | C55613"
   - "US \U0001F1FA\U0001F1F8 | رادار | F2A0CA"
   - "US \U0001F1FA\U0001F1F8 | رادار | F044F6"
@@ -83070,6 +84156,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | F77BD3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 736062"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9E1F5F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | EB8289"
   - "US \U0001F1FA\U0001F1F8 | رادار | BB9EC6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 62617D"
   - "US \U0001F1FA\U0001F1F8 | رادار | FE1AD2"
@@ -83078,12 +84165,14 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 6E20D3"
   - "US \U0001F1FA\U0001F1F8 | رادار | A08D26"
   - "US \U0001F1FA\U0001F1F8 | رادار | 18FC9B"
+  - "US \U0001F1FA\U0001F1F8 | رادار | B7861A"
   - "US \U0001F1FA\U0001F1F8 | رادار | E8963D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 949227"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3DB93D"
   - "US \U0001F1FA\U0001F1F8 | رادار | D9696F"
   - "DE \U0001F1E9\U0001F1EA | رادار | F81FC5"
   - "DE \U0001F1E9\U0001F1EA | رادار | 33F8BE"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 1ED687"
   - "DE \U0001F1E9\U0001F1EA | رادار | 1921E5"
   - "DE \U0001F1E9\U0001F1EA | رادار | B194A8"
   - "CH \U0001F1E8\U0001F1ED | رادار | 252CA9"
@@ -83094,6 +84183,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | 50D925"
   - "CH \U0001F1E8\U0001F1ED | رادار | 82B9CD"
   - "US \U0001F1FA\U0001F1F8 | رادار | C8D4AD"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 67BE6A"
   - "US \U0001F1FA\U0001F1F8 | رادار | FB18EA"
   - "US \U0001F1FA\U0001F1F8 | رادار | F195D8"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 65E3BE"
@@ -83151,10 +84241,12 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 684C69"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6572E1"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4D517A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | A3EBC0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1BAF48"
   - "US \U0001F1FA\U0001F1F8 | رادار | 52E9AA"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9BDFE6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 80BAA3"
+  - "US \U0001F1FA\U0001F1F8 | رادار | A9905F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3274C4"
   - "US \U0001F1FA\U0001F1F8 | رادار | AB4065"
   - "US \U0001F1FA\U0001F1F8 | رادار | 16AFF6"
@@ -83162,6 +84254,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 741BF9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8BF190"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4EBD64"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 408FF6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 5BCD6B"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1F99DB"
   - "US \U0001F1FA\U0001F1F8 | رادار | D6E3E8"
@@ -83169,6 +84262,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 23538E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 599A9F"
   - "US \U0001F1FA\U0001F1F8 | رادار | D13F6E"
+  - "US \U0001F1FA\U0001F1F8 | رادار | EA5CBD"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4538E8"
   - "US \U0001F1FA\U0001F1F8 | رادار | BFD934"
   - "ES \U0001F1EA\U0001F1F8 | رادار | FA4837"
@@ -83194,6 +84288,9 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | B16D95"
   - "US \U0001F1FA\U0001F1F8 | رادار | DB0DEA"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 6E5D35"
+  - "DE \U0001F1E9\U0001F1EA | رادار | C69D78"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 96DA13"
+  - "AU \U0001F1E6\U0001F1FA | رادار | 1AED59"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AA675E"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 515F34"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 29B220"
@@ -83208,6 +84305,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 98BD54"
   - "JP \U0001F1EF\U0001F1F5 | رادار | A8789C"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 217E0D"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 0B770A"
   - "US \U0001F1FA\U0001F1F8 | رادار | D4C9E4"
   - "US \U0001F1FA\U0001F1F8 | رادار | B9311F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8E596B"
@@ -83226,6 +84324,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 001B88"
   - "US \U0001F1FA\U0001F1F8 | رادار | C4ED52"
   - "US \U0001F1FA\U0001F1F8 | رادار | 20635B"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 7353B1"
   - "SE \U0001F1F8\U0001F1EA | رادار | 19D6DC"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7E1AB6"
   - "CA \U0001F1E8\U0001F1E6 | رادار | F2E0E3"
@@ -83264,14 +84363,17 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 5FAE6B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 5A27C6"
   - "CA \U0001F1E8\U0001F1E6 | رادار | ED2778"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 9A53B9"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 73C465"
+  - "RO \U0001F1F7\U0001F1F4 | رادار | 6E74B7"
   - "RU \U0001F1F7\U0001F1FA | رادار | 1F5346"
   - "TR \U0001F1F9\U0001F1F7 | رادار | C12F5D"
   - "CA \U0001F1E8\U0001F1E6 | رادار | FE5B05"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 835860"
+  - "DE \U0001F1E9\U0001F1EA | رادار | D8DBF2"
   - "SG \U0001F1F8\U0001F1EC | رادار | 6123A7"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9C6D8A"
   - "DE \U0001F1E9\U0001F1EA | رادار | 4C22B2"
-  - "DE \U0001F1E9\U0001F1EA | رادار | DD938E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 874735"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9E8DF2"
   - "US \U0001F1FA\U0001F1F8 | رادار | E04D5F"
@@ -83299,18 +84401,26 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 489FEF"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2CDE8F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2DA3D1"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 3EFA6D"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 6A6D20"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 18CBA9"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 163C09"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 3D182A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | C9B4A3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | EF37CD"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 161791"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 0BBFBB"
   - "NL \U0001F1F3\U0001F1F1 | رادار | FFAC68"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | D98975"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 1D7DD4"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | F403C3"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 49608C"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D27E79"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 2EBA2B"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 62E38D"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | AAD714"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 8537A4"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 8B2EA0"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | CFEA5D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 921D48"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 49EEB8"
   - "FR \U0001F1EB\U0001F1F7 | رادار | CC4CA6"
@@ -83341,8 +84451,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | B231F8"
   - "Global \U0001F310 | رادار | BB933B"
   - "LI \U0001F1F1\U0001F1EE | رادار | 62FCBB"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 7B3CB9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | C04896"
   - "CA \U0001F1E8\U0001F1E6 | رادار | D747CC"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | C4DE22"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 20AF1C"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 98C572"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 554FB2"
@@ -83394,8 +84506,10 @@ proxy-groups:
   - "AE \U0001F1E6\U0001F1EA | رادار | 4D5793"
   - "AE \U0001F1E6\U0001F1EA | رادار | 03AC51"
   - "AE \U0001F1E6\U0001F1EA | رادار | 7A5ED4"
+  - "AE \U0001F1E6\U0001F1EA | رادار | 2B1CF9"
   - "AE \U0001F1E6\U0001F1EA | رادار | ABB365"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 7DCB51"
+  - "DE \U0001F1E9\U0001F1EA | رادار | B343FE"
   - "DE \U0001F1E9\U0001F1EA | رادار | E6EBAD"
   - "DE \U0001F1E9\U0001F1EA | رادار | A2239F"
   - "DE \U0001F1E9\U0001F1EA | رادار | 47D6D1"
@@ -83405,6 +84519,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 5F04C6"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 4A0E6B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 00E626"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 1A3996"
   - "DE \U0001F1E9\U0001F1EA | رادار | 69CC85"
   - "LT \U0001F1F1\U0001F1F9 | رادار | D0CE2C"
   - "LT \U0001F1F1\U0001F1F9 | رادار | B7A976"
@@ -83442,14 +84557,13 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 1FD863"
   - "US \U0001F1FA\U0001F1F8 | رادار | 004A5D"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 0F5B15"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | 877A9A"
-  - "NL \U0001F1F3\U0001F1F1 | رادار | E66F76"
   - "NL \U0001F1F3\U0001F1F1 | رادار | C7E577"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8C47F0"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8570B0"
   - "NL \U0001F1F3\U0001F1F1 | رادار | B45C67"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 117AFE"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AA6F51"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | B02D3A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 265FB8"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D401D2"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 67C96C"
@@ -83465,7 +84579,9 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 06ADB4"
   - "SG \U0001F1F8\U0001F1EC | رادار | E1BB9A"
   - "SG \U0001F1F8\U0001F1EC | رادار | 16FAE1"
+  - "RU \U0001F1F7\U0001F1FA | رادار | FCC8A2"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 84B170"
+  - "RU \U0001F1F7\U0001F1FA | رادار | 44ABD3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | B8ABE9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AC72F3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 5F26A6"
@@ -83506,10 +84622,16 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8A3F38"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 90A79B"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 645DE6"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | DC6C36"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 5660CD"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 8E2132"
   - "IN \U0001F1EE\U0001F1F3 | رادار | DF5BF0"
   - "CA \U0001F1E8\U0001F1E6 | رادار | F4EDDB"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 3B5C2D"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | 8554CE"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 01473A"
+  - "CH \U0001F1E8\U0001F1ED | رادار | A43E99"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | EF113C"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 8E9B38"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 3D7AF8"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 406926"
@@ -83530,11 +84652,6 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 3B710B"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 7C5B65"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 7FA2C6"
-  - "HK \U0001F1ED\U0001F1F0 | رادار | AEA12F"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | D758E6"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 7C4F6D"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | EEA403"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 60E71D"
   - "JP \U0001F1EF\U0001F1F5 | رادار | C9C257"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 02F663"
   - "FI \U0001F1EB\U0001F1EE | رادار | 61C839"
@@ -83557,13 +84674,12 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | F87C61"
   - "US \U0001F1FA\U0001F1F8 | رادار | 175774"
   - "US \U0001F1FA\U0001F1F8 | رادار | 55E4BA"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 2C6F8E"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 6EE0B4"
   - "DE \U0001F1E9\U0001F1EA | رادار | 20D176"
   - "US \U0001F1FA\U0001F1F8 | رادار | 06800F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | AE04BD"
   - "US \U0001F1FA\U0001F1F8 | رادار | E7C728"
   - "US \U0001F1FA\U0001F1F8 | رادار | E05CC7"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | A170D4"
   - "NL \U0001F1F3\U0001F1F1 | رادار | D53BE2"
   - "SG \U0001F1F8\U0001F1EC | رادار | 6998DB"
   - "SG \U0001F1F8\U0001F1EC | رادار | 56E419"
@@ -83571,10 +84687,12 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 46D075"
   - "SG \U0001F1F8\U0001F1EC | رادار | 812ADF"
   - "SG \U0001F1F8\U0001F1EC | رادار | 3C27CB"
+  - "FI \U0001F1EB\U0001F1EE | رادار | 73658D"
   - "US \U0001F1FA\U0001F1F8 | رادار | A29EA7"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 8F37BD"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 744C49"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 310B57"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 79165B"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | A695F3"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 11A43D"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 2BC896"
   - "IT \U0001F1EE\U0001F1F9 | رادار | F29707"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 9F64B5"
@@ -83596,6 +84714,7 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | رادار | A0F6F6"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 31156F"
   - "FR \U0001F1EB\U0001F1F7 | رادار | B4F2B9"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 12325F"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 81B068"
   - "SG \U0001F1F8\U0001F1EC | رادار | 3B8236"
   - "NL \U0001F1F3\U0001F1F1 | رادار | E431A9"
@@ -83637,14 +84756,16 @@ proxy-groups:
   - "KR \U0001F1F0\U0001F1F7 | رادار | F949F0"
   - "KR \U0001F1F0\U0001F1F7 | رادار | 4AE7A6"
   - "KR \U0001F1F0\U0001F1F7 | رادار | E3757C"
-  - "IR \U0001F1EE\U0001F1F7 | رادار | 91E3AE"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 91E3AE"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 96AC3B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 620ADB"
   - "FR \U0001F1EB\U0001F1F7 | رادار | BB08A4"
   - "US \U0001F1FA\U0001F1F8 | رادار | 9F8AE5"
+  - "NL \U0001F1F3\U0001F1F1 | رادار | 6D439B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 459C1F"
   - "BG \U0001F1E7\U0001F1EC | رادار | 887AEA"
   - "US \U0001F1FA\U0001F1F8 | رادار | C355BB"
+  - "US \U0001F1FA\U0001F1F8 | رادار | CD9CBF"
   - "JP \U0001F1EF\U0001F1F5 | رادار | F54D4A"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 4C5B39"
   - "JP \U0001F1EF\U0001F1F5 | رادار | C99F45"
@@ -83656,6 +84777,8 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | ABA085"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3136E0"
   - "BY \U0001F1E7\U0001F1FE | رادار | A0F4D9"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 61D8FC"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BC6FB9"
   - "Global \U0001F310 | رادار | D0198D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 53B118"
   - "GB \U0001F1EC\U0001F1E7 | رادار | D8FF49"
@@ -83705,12 +84828,26 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | F0691B"
   - "US \U0001F1FA\U0001F1F8 | رادار | B881CB"
   - "GE \U0001F1EC\U0001F1EA | رادار | E470F0"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 64ED49"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 32CB75"
+  - "SE \U0001F1F8\U0001F1EA | رادار | 6F2CAC"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | BCB2B2"
+  - "PL \U0001F1F5\U0001F1F1 | رادار | EEEF51"
+  - "IL \U0001F1EE\U0001F1F1 | رادار | 67191C"
   - "AT \U0001F1E6\U0001F1F9 | رادار | 0ED7CD"
+  - "AT \U0001F1E6\U0001F1F9 | رادار | 881C59"
   - "HU \U0001F1ED\U0001F1FA | رادار | 8631B5"
+  - "HU \U0001F1ED\U0001F1FA | رادار | 725CC4"
+  - "HK \U0001F1ED\U0001F1F0 | رادار | A49BB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 4FE24F"
   - "EE \U0001F1EA\U0001F1EA | رادار | FAC345"
+  - "AU \U0001F1E6\U0001F1FA | رادار | 2BE43A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 545C25"
+  - "KR \U0001F1F0\U0001F1F7 | رادار | 60448E"
+  - "HK \U0001F1ED\U0001F1F0 | رادار | 40ED9E"
+  - "GR \U0001F1EC\U0001F1F7 | رادار | 0B689A"
+  - "GR \U0001F1EC\U0001F1F7 | رادار | C4F857"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 107113"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | A6C283"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 9E5EA1"
   - "US \U0001F1FA\U0001F1F8 | رادار | 298A7E"
   - "US \U0001F1FA\U0001F1F8 | رادار | A94445"
@@ -83724,6 +84861,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | FD8EA3"
   - "SG \U0001F1F8\U0001F1EC | رادار | 860381"
   - "SG \U0001F1F8\U0001F1EC | رادار | 9C70F7"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 469DB0"
   - "SG \U0001F1F8\U0001F1EC | رادار | 996117"
   - "FR \U0001F1EB\U0001F1F7 | رادار | 1DEC53"
   - "DE \U0001F1E9\U0001F1EA | رادار | F8D7E9"
@@ -83777,6 +84915,7 @@ proxy-groups:
   - "HU \U0001F1ED\U0001F1FA | رادار | C2D8E0"
   - "DE \U0001F1E9\U0001F1EA | رادار | 06C67A"
   - "RU \U0001F1F7\U0001F1FA | رادار | 132ABA"
+  - "SE \U0001F1F8\U0001F1EA | رادار | A7082B"
   - "DE \U0001F1E9\U0001F1EA | رادار | 70E517"
   - "JP \U0001F1EF\U0001F1F5 | رادار | CB0C73"
   - "KZ \U0001F1F0\U0001F1FF | رادار | 620A80"
@@ -83787,11 +84926,13 @@ proxy-groups:
   - "BY \U0001F1E7\U0001F1FE | رادار | AD592D"
   - "SG \U0001F1F8\U0001F1EC | رادار | E4AF81"
   - "LV \U0001F1F1\U0001F1FB | رادار | 04936E"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 6CA34A"
   - "FI \U0001F1EB\U0001F1EE | رادار | 0ED90B"
   - "VN \U0001F1FB\U0001F1F3 | رادار | DE68F9"
   - "DE \U0001F1E9\U0001F1EA | رادار | 5D9E5B"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 7FED36"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4E9C6D"
+  - "SG \U0001F1F8\U0001F1EC | رادار | 18B553"
   - "SG \U0001F1F8\U0001F1EC | رادار | B0E48E"
   - "KR \U0001F1F0\U0001F1F7 | رادار | E4D8F9"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 1163EF"
@@ -83799,6 +84940,8 @@ proxy-groups:
   - "FR \U0001F1EB\U0001F1F7 | رادار | 97FE26"
   - "FI \U0001F1EB\U0001F1EE | رادار | EC8ECD"
   - "DE \U0001F1E9\U0001F1EA | رادار | 16FA57"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | C7436E"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 42572C"
   - "CH \U0001F1E8\U0001F1ED | رادار | C5E5CF"
   - "CH \U0001F1E8\U0001F1ED | رادار | 1ED64E"
   - "CH \U0001F1E8\U0001F1ED | رادار | 99AF64"
@@ -83810,7 +84953,6 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 890F83"
   - "LT \U0001F1F1\U0001F1F9 | رادار | F0DF41"
   - "LT \U0001F1F1\U0001F1F9 | رادار | DA992A"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | D4666C"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7970DB"
   - "FR \U0001F1EB\U0001F1F7 | رادار | DDE0C3"
   - "DE \U0001F1E9\U0001F1EA | رادار | E4B5F0"
@@ -83838,10 +84980,13 @@ proxy-groups:
   - "IR \U0001F1EE\U0001F1F7 | رادار | 5AEB29"
   - "DE \U0001F1E9\U0001F1EA | رادار | 74A900"
   - "US \U0001F1FA\U0001F1F8 | رادار | 409849"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 1D5827"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 976F3D"
   - "CA \U0001F1E8\U0001F1E6 | رادار | A06C7A"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 3403BA"
   - "CH \U0001F1E8\U0001F1ED | رادار | 716AD1"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 6B9E2B"
+  - "DE \U0001F1E9\U0001F1EA | رادار | 05C832"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 07218F"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 117F1E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7D0853"
@@ -83860,6 +85005,7 @@ proxy-groups:
   - "NL \U0001F1F3\U0001F1F1 | رادار | E61538"
   - "PL \U0001F1F5\U0001F1F1 | رادار | 5C9974"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1B82A4"
+  - "JP \U0001F1EF\U0001F1F5 | رادار | 42DF43"
   - "IR \U0001F1EE\U0001F1F7 | رادار | F96C12"
   - "FR \U0001F1EB\U0001F1F7 | رادار | B44BEC"
   - "IT \U0001F1EE\U0001F1F9 | رادار | B7C33A"
@@ -83868,6 +85014,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | 9ABF67"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 225811"
   - "US \U0001F1FA\U0001F1F8 | رادار | 406008"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 8B1736"
   - "AU \U0001F1E6\U0001F1FA | رادار | 45BDB9"
   - "RU \U0001F1F7\U0001F1FA | رادار | B17691"
   - "MD \U0001F1F2\U0001F1E9 | رادار | 2B9AC3"
@@ -83910,6 +85057,7 @@ proxy-groups:
   - "CA \U0001F1E8\U0001F1E6 | رادار | A2B6D6"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 4B30EE"
   - "US \U0001F1FA\U0001F1F8 | رادار | 799B77"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 9F9B04"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 8B9401"
   - "CA \U0001F1E8\U0001F1E6 | رادار | E5BE9B"
   - "Global \U0001F310 | رادار | 319589"
@@ -83930,17 +85078,17 @@ proxy-groups:
   - "IN \U0001F1EE\U0001F1F3 | رادار | 2D0ED1"
   - "IN \U0001F1EE\U0001F1F3 | رادار | 550CAF"
   - "US \U0001F1FA\U0001F1F8 | رادار | BB2350"
-  - "SG \U0001F1F8\U0001F1EC | رادار | CC9818"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 88827A"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 2F676D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 751892"
   - "PT \U0001F1F5\U0001F1F9 | رادار | 3B95A4"
   - "AT \U0001F1E6\U0001F1F9 | رادار | 920657"
   - "NL \U0001F1F3\U0001F1F1 | رادار | B242AB"
-  - "JP \U0001F1EF\U0001F1F5 | رادار | 96E0EB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 1106A3"
   - "SG \U0001F1F8\U0001F1EC | رادار | BA1F75"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 51B7E9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 242572"
+  - "US \U0001F1FA\U0001F1F8 | رادار | C85BCD"
   - "SG \U0001F1F8\U0001F1EC | رادار | C5EC8D"
   - "RU \U0001F1F7\U0001F1FA | رادار | 3E6E92"
   - "BG \U0001F1E7\U0001F1EC | رادار | D2D685"
@@ -84548,6 +85696,7 @@ proxy-groups:
   - "IT \U0001F1EE\U0001F1F9 | رادار | FB6C85"
   - "IT \U0001F1EE\U0001F1F9 | رادار | C3D0C5"
   - "IT \U0001F1EE\U0001F1F9 | رادار | 9CBBD7"
+  - "GB \U0001F1EC\U0001F1E7 | رادار | 3E5525"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 033C21"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 831E0F"
   - "SG \U0001F1F8\U0001F1EC | رادار | 32C65E"
@@ -84625,6 +85774,7 @@ proxy-groups:
   - "RU \U0001F1F7\U0001F1FA | رادار | 9B9CD3"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 3B4C92"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 702C4F"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | 27326A"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 8E778B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 593A59"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 577620"
@@ -84663,8 +85813,10 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | BD9466"
   - "DE \U0001F1E9\U0001F1EA | رادار | 8BC23F"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9E8BBF"
+  - "FR \U0001F1EB\U0001F1F7 | رادار | 4E2F45"
   - "US \U0001F1FA\U0001F1F8 | رادار | C3E30F"
   - "US \U0001F1FA\U0001F1F8 | رادار | 072F29"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 8AB05A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 60BC4E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6DB3A4"
   - "US \U0001F1FA\U0001F1F8 | رادار | A8D213"
@@ -84715,12 +85867,14 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 9F5A7D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7AA8C3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 67B835"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 910430"
   - "US \U0001F1FA\U0001F1F8 | رادار | D57391"
   - "US \U0001F1FA\U0001F1F8 | رادار | 541574"
   - "US \U0001F1FA\U0001F1F8 | رادار | F55BCB"
   - "US \U0001F1FA\U0001F1F8 | رادار | 53FCC0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 4B0BA9"
   - "US \U0001F1FA\U0001F1F8 | رادار | 801724"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BE0F3D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 855C81"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 41C7D7"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 6343C8"
@@ -84760,6 +85914,7 @@ proxy-groups:
   - "JP \U0001F1EF\U0001F1F5 | رادار | 23C275"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 7B4ED8"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2334B9"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 9F6087"
   - "US \U0001F1FA\U0001F1F8 | رادار | FC2D02"
   - "US \U0001F1FA\U0001F1F8 | رادار | D87097"
   - "US \U0001F1FA\U0001F1F8 | رادار | 143737"
@@ -85577,6 +86732,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 781051"
   - "US \U0001F1FA\U0001F1F8 | رادار | E7611E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 766FED"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 35CF84"
   - "US \U0001F1FA\U0001F1F8 | رادار | 923D7E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 8D6535"
   - "US \U0001F1FA\U0001F1F8 | رادار | 52807C"
@@ -85584,11 +86740,13 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | AA9499"
   - "FR \U0001F1EB\U0001F1F7 | رادار | D56E69"
   - "MX \U0001F1F2\U0001F1FD | رادار | 8D829F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 377EA9"
   - "US \U0001F1FA\U0001F1F8 | رادار | FC978E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 64D2F8"
   - "US \U0001F1FA\U0001F1F8 | رادار | C286F0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 565AA4"
   - "US \U0001F1FA\U0001F1F8 | رادار | 0CBFCD"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 3DE3C6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 853160"
   - "US \U0001F1FA\U0001F1F8 | رادار | B7DF3B"
   - "US \U0001F1FA\U0001F1F8 | رادار | 3A610C"
@@ -85596,6 +86754,7 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | 978E21"
   - "US \U0001F1FA\U0001F1F8 | رادار | CA0DCB"
   - "US \U0001F1FA\U0001F1F8 | رادار | F52172"
+  - "US \U0001F1FA\U0001F1F8 | رادار | D35007"
   - "US \U0001F1FA\U0001F1F8 | رادار | F44C8D"
   - "US \U0001F1FA\U0001F1F8 | رادار | 6D6C73"
   - "US \U0001F1FA\U0001F1F8 | رادار | E86D90"
@@ -85927,8 +87086,11 @@ proxy-groups:
   - "US \U0001F1FA\U0001F1F8 | رادار | B9C716"
   - "US \U0001F1FA\U0001F1F8 | رادار | D8C1A6"
   - "US \U0001F1FA\U0001F1F8 | رادار | 120B0A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | F01C09"
   - "US \U0001F1FA\U0001F1F8 | رادار | 723EDE"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BA6C21"
   - "US \U0001F1FA\U0001F1F8 | رادار | B58698"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 3CE65E"
   - "US \U0001F1FA\U0001F1F8 | رادار | 788142"
   - "US \U0001F1FA\U0001F1F8 | رادار | 46741C"
   - "US \U0001F1FA\U0001F1F8 | رادار | BA43A3"
@@ -85990,6 +87152,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | CCD2B6"
   - "HK \U0001F1ED\U0001F1F0 | رادار | B8EF38"
   - "DE \U0001F1E9\U0001F1EA | رادار | 4B7538"
+  - "TH \U0001F1F9\U0001F1ED | رادار | 857683"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 692BEC"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 5B1771"
   - "HK \U0001F1ED\U0001F1F0 | رادار | E28C7A"

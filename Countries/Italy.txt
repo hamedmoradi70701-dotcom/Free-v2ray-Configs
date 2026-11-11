@@ -2,33 +2,32 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — ITALY (IT) — 26 configs
+# رادار — ITALY (IT) — 25 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.45:19999#IT 🇮🇹 | رادار | 3FA46F
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.18:19999#IT 🇮🇹 | رادار | BB8168
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.164.175.81:19999#IT 🇮🇹 | رادار | 8FB4B4
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.63:19999#IT 🇮🇹 | رادار | ED56A4
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.90:19999#IT 🇮🇹 | رادار | 075327
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.18:19999#IT 🇮🇹 | رادار | BB8168
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@149.50.215.234:19999#IT 🇮🇹 | رادار | 05551F
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.54:19999#IT 🇮🇹 | رادار | 8B9F9D
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.164.175.81:19999#IT 🇮🇹 | رادار | 8FB4B4
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.99:19999#IT 🇮🇹 | رادار | C5B75A
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.36:19999#IT 🇮🇹 | رادار | 982F42
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.72:19999#IT 🇮🇹 | رادار | 8DCE34
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.27:19999#IT 🇮🇹 | رادار | 42A105
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.63:19999#IT 🇮🇹 | رادار | ED56A4
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.81:19999#IT 🇮🇹 | رادار | 9453B9
-vless://52a5a29f-c162-411a-8a37-a3f11b0dc537@172.213.24.16:2083?security=reality&type=raw&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=0123456789abcdef&pbk=WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4#IT 🇮🇹 | رادار | 3B5C2D
-vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@151.243.199.136:443?encryption=none&security=reality&sni=www.apple.com&fp=chrome&pbk=-Av3XhLUiIhW1nbejSq0OZgH8cNfLbH1qytIhDIl_VU&sid=03cb729f3186c7fb&type=tcp&headerType=none&insecure=0&flow=xtls-rprx-vision#IT 🇮🇹 | رادار | 6197FD
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@202.50.253.36:19999#IT 🇮🇹 | رادار | 982F42
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.27:19999#IT 🇮🇹 | رادار | 42A105
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.72:19999#IT 🇮🇹 | رادار | 8DCE34
+vless://52a5a29f-c162-411a-8a37-a3f11b0dc537@172.213.24.16:2083?security=reality&type=tcp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=0123456789abcdef&pbk=WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4&encryption=none#IT 🇮🇹 | رادار | 3B5C2D
 vmess://eyJhZGQiOiIxNDkuNTAuMjE1LjIzOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMjcwIiwicHMiOiJJVCDwn4eu8J+HuSB8INix2KfYr9in2LEgfCBDM0QwQzUiLCJzY3kiOiJhdXRvIiwic25pIjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-vmess://eyJhZGQiOiIxNDkuNTAuMjE1LjI0MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMjcwIiwicHMiOiJJVCDwn4eu8J+HuSB8INix2KfYr9in2LEgfCA5Q0JCRDciLCJzY3kiOiJhdXRvIiwic25pIjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@216.106.191.201:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ&security=reality&sid=6aa50b0cc8d23464&sni=www.apple.com&type=tcp#IT 🇮🇹 | رادار | A0C92F
+vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@151.243.199.136:443?encryption=none&security=reality&sni=www.apple.com&fp=chrome&pbk=-Av3XhLUiIhW1nbejSq0OZgH8cNfLbH1qytIhDIl_VU&sid=03cb729f3186c7fb&type=tcp&headerType=none&insecure=0&flow=xtls-rprx-vision#IT 🇮🇹 | رادار | 6197FD
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.45:19999#IT 🇮🇹 | رادار | 3FA46F
 vless://eb9e2536-cdf0-43f7-975a-35e8aedd0081@57.131.21.102:8080?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=XUrnU0EJoQu1CEZRKE15G_eA9ZY2RyYCZMO60_ays1o&security=reality&sid=8f&sni=dl.google.com&spx=%2F15a196e071781ff&support-x25519mlkem768=true&type=tcp#IT 🇮🇹 | رادار | 39FDED
 vless://29f178f7-f96f-46ba-8fc0-bbcd690ba788@82.118.16.189:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4&security=reality&sid=1e9a49dd374c1191&sni=www.cloudflare.com&type=tcp#IT 🇮🇹 | رادار | 550EAE
-vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@216.106.191.201:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ&security=reality&sid=6aa50b0cc8d23464&sni=www.apple.com&type=tcp#IT 🇮🇹 | رادار | A0C92F
 vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=cd6065902eea7a02&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU#IT 🇮🇹 | رادار | 8AF267
 vmess://eyJhZGQiOiIxNDkuMjIuOTEuMjAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTI3MCIsInBzIjoiSVQg8J+HrvCfh7kgfCDYsdin2K/Yp9ixIHwgRkI2Qzg1Iiwic2N5IjoiYXV0byIsInNuaSI6InhtZmhscHkuY29tIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@216.106.191.201:10303?encryption=none&flow=xtls-rprx-vision&fp=&pbk=suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ&security=reality&sid=6aa50b0cc8d23464&sni=www.apple.com&type=tcp#IT 🇮🇹 | رادار | B7C33A
+vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?security=none&type=ws&path=%2Fvless&host=13.140.56.100&sni=13.140.56.100#IT 🇮🇹 | رادار | 2BC896
+vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?security=none&type=ws&path=%2Fvless&host=13.140.56.100&encryption=none#IT 🇮🇹 | رادار | F29707
 vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?path=%2Fvless&security=none&type=ws#IT 🇮🇹 | رادار | 89E794
-vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?host=13.140.56.100&path=%2Fvless&security=none&type=ws#IT 🇮🇹 | رادار | F29707
-vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?fp=unsafe&host=13.140.56.100&path=%2Fvless&security=none&sni=13.140.56.100&type=ws#IT 🇮🇹 | رادار | 2BC896
 vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@216.106.191.201:10403?&security=reality&flow=xtls-rprx-vision&pbk=suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ&sid=6aa50b0cc8d23464&fp=chrome&sni=www.apple.com&type=tcp&headerType=none&host=www.apple.com&path=%2F#IT 🇮🇹 | رادار | 48611C
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@202.50.253.54:19999#IT 🇮🇹 | رادار | 8B9F9D
+vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@216.106.191.201:10303?encryption=none&flow=xtls-rprx-vision&fp=&pbk=suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ&security=reality&sid=6aa50b0cc8d23464&sni=www.apple.com&type=tcp#IT 🇮🇹 | رادار | B7C33A
