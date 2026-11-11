@@ -2628,8 +2628,44 @@ def test_filters_stats_are_internally_consistent() -> None:
     """input = kept + dropped، بی استثنا. تراز، خودش یک ناوردا است."""
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(repo, "all", "configs.txt")
-    assert os.path.exists(path), f"{path} is tracked in git; it must exist"
-    res = filters.filter_file(path)
+    if os.path.exists(path):
+        res = filters.filter_file(path)
+    else:
+        # این فورک خروجی‌های داده را در گیت نگه نمی‌دارد (تصمیمِ محصولی: داده را
+        # رباتِ CI می‌سازد و روی شاخه منتشر می‌کند)، پس در checkoutِ تازهٔ CI
+        # فایلِ `all/configs.txt` هنوز نیست. ناوردا وابسته به پیکرهٔ خاصی نیست:
+        # روی پیکره‌ای مصنوعی ولی نماینده — هر پنج دلیلِ حذف و یک endpointِ
+        # تکراری — و از همان ورودیِ `filter_file` سنجیده می‌شود.
+        import tempfile
+
+        corpus = "\n".join([
+            "# Free V2Ray configs — header",
+            "",
+            "trojan://pw@example.org:443#A",
+            "trojan://pw@example.org:443#B",
+            "vless://741535af-0b98-4dd4-a0a6-3faf022ed404"
+            "@185.220.101.4:443?security=tls#V",
+            "ss://YWVzLTI1Ni1nY206cGFzc3dvcmQ@45.148.10.7:8388#S",
+            "not-a-proxy-line at all",
+            "trojan://pw@example.org:0#badport",
+            "trojan://pw@127.0.0.1:443#loopback",
+            "trojan://pw@:443#nohost",
+            "vless://zzzzzzzz-0000-0000-0000-000000000000"
+            "@example.org:443#baduuid",
+        ]) + "\n"
+        fd, tmp = tempfile.mkstemp(suffix=".txt")
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as fh:
+                fh.write(corpus)
+            res = filters.filter_file(tmp)
+        finally:
+            os.unlink(tmp)
+        # پیکره باید هر دو سویِ تراز و دست‌کم یک endpointِ تکراری داشته باشد؛
+        # وگرنه ناورداهای زیر روی این شاخه پوچ سنجیده می‌شوند.
+        assert res["stats"]["kept"] > 0 and res["stats"]["dropped"] > 0, \
+            res["stats"]
+        assert res["stats"]["endpoints_unique"] < res["stats"]["kept"], \
+            res["stats"]
     st = res["stats"]
     assert st["input"] == st["kept"] + st["dropped"], st
     assert st["dropped"] == sum(res["dropped"].values()), res["dropped"]
