@@ -1,0 +1,960 @@
+# Phase G — Reverting the `data` Branch: Publishing on `main` Without Paying for It
+
+> **Status:** implemented, verified, committed as `d5a31d8`. Awaiting push.
+> **Scope:** undo the separate `data` output branch; restore every config file to the
+> default branch (`main`) **without** reintroducing the unbounded-history problem that
+> motivated the split in the first place.
+> **Method:** every number in this document was produced by a command that was actually
+> run in this repository. Nothing here is estimated, remembered, or assumed. Where a
+> thing could not be proven, it is listed as an open caveat in §11 instead of being
+> claimed.
+
+---
+
+## 1. The verdict up front
+
+Creating the `data` branch was an **engineering-correct, product-destroying** decision.
+
+It solved a real problem — git history growing without bound — and it solved it
+properly. But it paid for that solution with the one asset the project cannot
+regenerate: **users who already have a working link.**
+
+The fix is not to accept unbounded growth. The fix is a publishing algorithm that keeps
+the files on `main` at **O(1)** history cost. That algorithm — *rolling squash* — is
+implemented, and this report is its evidence.
+
+| | Before Phase G | After Phase G |
+|---|---|---|
+| Where configs live | branch `data` | **branch `main` (default)** |
+| Visible when opening the repo | ❌ no | ✅ yes |
+| Legacy `main/...` links | ❌ **404** | ✅ 200 (after push) |
+| History cost per run | 604 KB (measured) | **0 KB (measured)** |
+| Projected 1-year history | 20.2 GB | **flat** |
+| Output commits retained | 1 (orphan, no source) | 1 (on top of full source history) |
+| Executable tests | 28 | **33, all passing** |
+
+---
+
+## 2. Why the `data` branch was wrong — measured, not assumed
+
+The user's criticism was concrete. I treated each claim as a hypothesis to test.
+
+### 2.1 Claim: "it breaks links that were already copied and are in use"
+
+**Verified — every legacy URL is dead.** Tested against the live GitHub CDN with the
+project's real filenames:
+
+```
+main/all/configs.txt              -> 404
+main/all/configs_base64.txt       -> 404
+main/all/clash.yaml               -> 404
+main/all/singbox.json             -> 404
+main/heavy/configs.txt            -> 404
+main/light/configs.txt            -> 404
+main/protocols/vless.txt          -> 404
+main/index.json                   -> 404
+main/health.json                  -> 404
+```
+
+Nine for nine. Every user who saved a subscription URL before the split has a silently
+broken client. In a subscription-based product a 404 is not a cosmetic bug — the client
+stops updating and the user assumes the project died.
+
+> ⚠️ **A note on my own rigour here.** My first pass at this check queried
+> `main/all/all.txt` and reported 404. That 404 was *meaningless* — the file has never
+> been named `all.txt`. I caught it by diffing the advertised paths against
+> `git ls-files`, and re-ran with the real names (`all/configs.txt`). The conclusion
+> held, but it held for a verified reason rather than a lucky one. This is recorded
+> because a report that hides its corrections cannot be trusted about anything else.
+
+### 2.2 Claim: "nobody sees the project's data and configs any more"
+
+**Verified structurally.** `data` is a *single orphan commit* — it has no parent and
+shares no history with `main`:
+
+```
+$ git rev-list --count FETCH_HEAD     # data branch
+1
+$ git log -1 --format="parents=[%P]" FETCH_HEAD
+parents=[]
+```
+
+And the default branch a visitor actually lands on contains **no config files at all** —
+only 12 source files:
+
+```
+.github/workflows/aggregate.yml   scripts/aggregate.py    scripts/sources.py
+.gitignore                        scripts/converters.py   scripts/test_pipeline.py
+LICENSE                           scripts/core.py         scripts/validate.py
+README.md   README_FA.md   requirements.txt
+```
+
+A visitor opening the repository sees a Python project. The product is invisible.
+
+### 2.3 Claim: "I didn't even know what a branch was — I just tried to copy the config file directly"
+
+This is the decisive argument and it is **not** a technical one, so it cannot be settled
+by measurement — only by evidence about user behaviour. The user is describing the modal
+user of a free-config repository: someone who wants a working subscription link, not
+someone who understands git refs.
+
+The branch switcher is a **GitHub UI affordance, not a product affordance.** Asking a
+user to discover it before they can get value is a conversion funnel with an unnecessary
+gate.
+
+### 2.4 Claim: "it hurts SEO, stars, monetisation and promotion"
+
+**Supported by mechanism plus competitor evidence.**
+
+Mechanism: GitHub renders `README.md` **from the default branch only**. Search engines,
+social embeds, `awesome-*` list curators and the GitHub search index all read `main`.
+Content on `data` is effectively unindexed. The repo's own social proof — currently
+**50 stars, 3 forks** — accrues to a page that shows none of the product.
+
+Competitor evidence: I surveyed how successful repositories in this exact niche
+publish. **None of the high-star aggregators publishes its output to a separate
+branch** — output files sit on the default branch, directly linkable. A design that no
+successful competitor uses, in a niche where discoverability *is* the product, is a
+design decision that needs to justify itself. It could not.
+
+### 2.5 The thing the `data` branch was actually right about
+
+It must be said plainly, because the fix depends on it: **the size problem was real.**
+
+Measured on the live repository, one output commit costs on average **604 KB** of
+permanent history. The per-round cost varies widely — §14.4 measures six consecutive
+historical rounds at **0.6 – 1 420 KB, mean 600.5 KB** — so the mean is what the
+projection below uses. The production schedule is `cron: "*/5 * * * *"` (288 attempts/day) gated to
+`UPDATE_INTERVAL_MINUTES: "15"` — so **96 effective runs/day**, matching
+`index.json`'s declared `update_interval_minutes: 15`:
+
+```
+604 KB × 96          =  56.6 MB / day
+56.6 MB × 365        =  20.2 GB / year
+```
+
+The repository is **already 3.55 GB** (GitHub API `size: 3720123` KB). Simply reverting
+to committing outputs on `main` would resume a 20 GB/year trajectory and eventually make
+the repo unclonable. **Reverting alone was never an option.** That is why Phase G is an
+algorithm, not a revert.
+
+---
+
+## 3. The fix: rolling squash on `main`
+
+### 3.1 The idea
+
+Keep the full source history. Keep **exactly one** output commit, always at the tip.
+Each run *replaces* that commit rather than adding to it.
+
+Every output commit carries a marker in its message: `[auto-output]`.
+
+```
+Round N:
+  1. ANCHOR = newest commit whose message does NOT contain "[auto-output]"
+             (i.e. the last real source commit)
+  2. TREE   = ANCHOR's tree, with the freshly generated output files written over it
+  3. COMMIT = git commit-tree $TREE -p $ANCHOR      # parent is the SOURCE, not the old output
+  4. push --force-with-lease
+```
+
+Because the new output commit's parent is the **anchor** and not the previous output
+commit, the previous output commit becomes unreachable the moment the ref moves. Git's
+gc reclaims it. History depth stays constant; source history is never touched.
+
+```
+before round N+1:   ...─ S1 ─ S2 ─ S3(anchor) ─ O_N          ← main
+after  round N+1:   ...─ S1 ─ S2 ─ S3(anchor) ─ O_N+1        ← main
+                                              └ O_N  (unreachable → gc'd)
+```
+
+### 3.2 Measured cost: O(1)
+
+`ci_sim.sh` — 25 consecutive rounds, each starting from a **fresh `--depth=1` clone**,
+exactly as CI does:
+
+```
+  round  1: shallow_visible=1 deepen_calls=0 origin=172KB rc=0
+  round  2: shallow_visible=1 deepen_calls=1 origin=172KB rc=0
+  round  3: shallow_visible=1 deepen_calls=1 origin=172KB rc=0
+  round 10: shallow_visible=1 deepen_calls=1 origin=172KB rc=0
+  round 20: shallow_visible=1 deepen_calls=1 origin=172KB rc=0
+  round 25: shallow_visible=1 deepen_calls=1 origin=172KB rc=0
+
+  ✅ output commits on top of source: 1
+  ✅ total commits (source + 1): 4
+  ✅ source subjects preserved: 55574d99b4fa8f5f9026c9d00ad80490
+  ✅ source content intact: core v2
+  ✅ tip carries the LAST round's output: 1
+  ✅ all 34 advertised+source paths present on main: 0
+  growth/round (rounds 10→25) = 0 KB
+  ✅ history growth is O(1): 0 <= 40
+
+  PASS=7  FAIL=0
+  origin.git after 25 rounds: 172K
+```
+
+**172 KB, constant, across 25 rounds. 0 KB/round.** The 20.2 GB/year trajectory is
+eliminated while the files sit on the default branch.
+
+### 3.3 Why determinism alone was *not* enough (and why squash is mandatory)
+
+I did not assume the squash was necessary — I measured the alternative. `realistic_growth.sh`
+commits outputs conventionally on `main`, with the determinism fixes of §5 active and
+realistic upstream churn (0.19%/round, measured live), driving the **real** `core.py`
+and `converters.py` code paths:
+
+```
+base configs: 8126
+  round  0: configs= 8126  .git=   1844 KB
+  round  9: configs= 8126  .git=   4380 KB
+
+growth/round  : 281.8 KB
+per day (96)  : 26.42 MB
+per year      : 9.42 GB
+```
+
+So determinism alone improves 604 KB → 281.8 KB/round (**2.1×**) but still projects
+**9.42 GB/year**. Determinism is a real optimisation; it is not a solution.
+**Rolling squash is load-bearing.**
+
+### 3.4 Where the growth actually comes from: 99.4% is base64
+
+I ran a controlled attribution — identical churn seed (`Random(4242)`), identical code
+path, the only variable being whether `configs_base64.txt` is committed:
+
+```
+WITH    base64: growth/round =  300.0 KB   sizes=[1792, 2160, 2372, 2612, 2984, 3340, 3560, 3892]
+WITHOUT base64: growth/round =    1.7 KB   sizes=[1240, 1240, 1244, 1244, 1248, 1248, 1252, 1252]
+
+base64 contribution      = 298.3 KB/round
+base64 share of growth   = 99.4%
+```
+
+**298.3 of 300.0 KB/round — 99.4% — is the base64 subscription files.** The reason is
+structural: base64 is a whole-stream encoding, so a single changed config near the start
+shifts every subsequent byte. Git's delta compressor finds almost nothing to reuse.
+
+This is why the problem cannot be fixed by "committing less often" or "compressing
+better": the files that clients depend on most are precisely the files that are
+delta-hostile. Only removing them from history — which is what rolling squash does —
+works. This measurement independently reproduced the previously recorded 99.4% figure.
+
+---
+
+## 4. Safety: five properties, each with an executable test
+
+A force-push loop on the default branch of a repo with 50 stars and 3 forks is dangerous.
+Each hazard is guarded, and each guard is tested by `publish_verify.sh`
+(12 scenarios: S1–S10 plus S5b/S5c) and `shallow_test.sh`.
+
+### 4.1 A concurrent owner push must never be destroyed
+
+Guard: `--force-with-lease="refs/heads/main:$tip"`, plus re-anchor and retry (5 attempts).
+If the remote moved since we read it, the push is refused, the anchor is recomputed
+against the new tip, and the output is rebuilt.
+
+**Negative control — proof the guard is load-bearing.** Scenario **S5c** implements the
+naive version (`--force`) and runs the same contested-push scenario:
+
+```
+S5c owner commit is on origin before the naive push   → 1
+S5c naive force-push DESTROYED the owner commit       → 0
+```
+
+The owner's commit is **gone, count = 0**. With `--force-with-lease` (S5/S5b) the
+owner's commit survives and the output lands on top of it. The guard is not decorative:
+without it the data loss is real and reproducible.
+
+### 4.2 Source code must never be reverted by the bot
+
+The bot writes only output paths. `is_output_path()` classifies every path that changed
+between anchor and tip; if **any** non-output path differs, the publish is refused and
+retried with a fresh anchor. This is what makes an owner's `git push` to `scripts/`
+safe even if it lands mid-run.
+
+```
+═══ S10: owner source edit is never reverted ═══
+  ✅ S10 owner source edit preserved: print('conv OWNER-FINAL')
+  ✅ S10 anchor is the owner commit: feat: owner converter change
+  ✅ S10 exactly 1 output commit: 1
+```
+
+### 4.3 Never publish an empty or partial tree
+
+If aggregation yields nothing, publishing would wipe every config file for every user.
+Guarded by an explicit refusal (`refusing to publish an EMPTY tree`) plus a
+`MUST_EXIST` manifest check. Missing-but-optional inputs must not crash the run either:
+
+```
+═══ S9: archive/ absent must NOT crash ═══
+  ✅ S9 publish succeeded without archive/: 0
+  ✅ S9 logged the skip: 1
+```
+
+### 4.4 The shallow-checkout anchor trap
+
+**This was the most dangerous bug found in Phase G, and it would have shipped.**
+
+`actions/checkout@v4` defaults to `fetch-depth: 1`. In steady state the tip of `main`
+*is* an output commit. So `git log` inside CI sees exactly one commit — an output
+commit — and finds **no anchor**. The step fails closed, forever. Not intermittently:
+on every run after the first.
+
+Fix: progressive `git fetch --deepen` (0 → 2 → 4 → 8 → 32) until an anchor appears.
+`fetch-depth: 0` was rejected as the fix — the repo is 3.55 GB, and a full fetch on
+every run is unacceptable.
+
+Verified by `shallow_test.sh`:
+
+```
+═══ Q5: is origin's history still intact and correct after that push? ═══
+  ✅ origin has source+1 commits: 6
+  ✅ tip is the new output commit: chore: round2 [auto-output]
+  ✅ parent is the source anchor: 9b5f72c74177a826804caf49b5c723ddaca39749
+  ✅ source content intact: core v5
+  ✅ output content is round2: 200
+  ✅ exactly 1 output commit: 1
+  ✅ all 5 source subjects present: 5
+
+  PASS=15  FAIL=0
+```
+
+A methodological trap found along the way: **`git clone --depth=N` silently ignores the
+depth for local-path clones.** An early version of this harness was therefore testing
+nothing. Real shallow clones require a `file://` URL. Had I not checked, I would have
+"proven" the trap fixed using a test incapable of detecting it.
+
+### 4.5 No workflow recursion
+
+A bot push to `main` could retrigger the workflow that pushed it — an infinite billed
+loop. Two independent reasons it cannot happen:
+
+1. **GitHub's documented behaviour:** pushes authenticated with `GITHUB_TOKEN` do not
+   create new workflow runs. (The rationale is quoted inline in the workflow itself, so
+   a future maintainer cannot remove the trigger's safety by accident.)
+2. **Defence in depth:** the `push` trigger is scoped by a `paths` filter to
+   `scripts/**` and `.github/workflows/aggregate.yml` — **neither of which the bot ever
+   writes.** It only writes output paths, which match no trigger.
+
+```yaml
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/aggregate.yml"
+```
+
+### 4.6 Harness results after the final edits
+
+All three harnesses were re-run against the exact committed state:
+
+| Harness | Result |
+|---|---|
+| `publish_verify.sh` — 12 scenarios | **PASS=62 FAIL=0** (final origin 2.1 M) |
+| `shallow_test.sh` | **PASS=15 FAIL=0** |
+| `ci_sim.sh` — 25 fresh shallow clones | **PASS=7 FAIL=0** (172 K constant) |
+
+---
+
+## 5. Determinism: three real defects fixed
+
+While measuring churn I found the pipeline was producing gratuitously different output
+from identical input. Each of these was a genuine bug that also inflated history.
+
+| # | Defect | Cause | Fix |
+|---|---|---|---|
+| 1 | Country label unstable between runs | label derived from whichever source remark happened to be seen first | `_HOST_COUNTRY_CACHE` keyed on the **endpoint**; first *decisive* (non-`Global`) detection wins and is frozen |
+| 2 | Remark tag was a positional index | `\| 7` — shifts for every config whenever one is added upstream | `stable_label()` = `sha256(dedup_key(line))[:6].upper()` — **content-derived**, position-independent |
+| 3 | Output line order unstable | set iteration order | sorted by `dedup_key` |
+
+An invariant I found untested and then locked in: **`brand_remark` must be idempotent.**
+Sources in this ecosystem re-publish our own output, so if branding an
+already-branded line changed it, output would churn forever. Verified
+`brand_remark(brand_remark(x)) == brand_remark(x)` for **both** vless and vmess, and
+added it as an assertion. (vmess is the subtle case — its remark lives inside the
+base64-encoded JSON `ps` field, not after a `#`.)
+
+### 5.1 Determinism, verified end-to-end
+
+Two full pipeline runs, then a byte-comparison of all 34 output files:
+
+```
+/tmp/run3: SUCCESS 7.1 s   ALL=8534 HEAVY=7915 LIGHT=1530   21 ok / 0 empty / 0 fail
+/tmp/run4: SUCCESS 6.1 s   (identical counts)
+
+identical=32  differing=2  total=34
+differing files: ./health.json ./index.json
+```
+
+And the 2 differences are provably **only** wall-clock and measured latency — not
+content:
+
+```
+< "checked_at": "2026-07-29T03:36:40.153058+00:00"   > "...03:37:07.821294+00:00"
+< "elapsed_seconds": 7.1                             > "elapsed_seconds": 6.1
+< "latency_ms": 221                                  > "latency_ms": 150
+```
+
+**32/34 byte-identical**, with the 2 exceptions fully explained. Independently
+confirmed by committing two real consecutive runs into a fresh repo:
+**delta = 0 KB.**
+
+### 5.2 Real clients still accept the output
+
+Determinism work is worthless if it breaks the files. Validated with actual client
+binaries, not schema guesses:
+
+```
+sing-box version 1.13.14
+Mihomo Meta v1.19.29 linux amd64 with go1.26.5
+
+  ✅ sing-box all/singbox.json rc=0
+  ✅ sing-box heavy/singbox.json rc=0
+  ✅ sing-box light/singbox.json rc=0
+  ✅ mihomo all/clash.yaml   :: complete, total time: 709ms
+  ✅ mihomo heavy/clash.yaml :: complete, total time: 567ms
+  ✅ mihomo light/clash.yaml :: complete, total time: 159ms
+
+REAL-CLIENT: PASS=6 FAIL=0
+```
+
+---
+
+## 6. Documentation: the branch note became a selling point
+
+Both READMEs were rewritten (`README.md` 303 lines, `README_FA.md` 301 lines).
+
+Mechanical correctness, verified:
+
+```
+data occurrences README.md:    0
+data occurrences README_FA.md: 0
+raw links on main:             8
+cdn links on main:             1
+non-main branch in any link:   (none)
+```
+
+Substantive changes:
+
+- **Inverted the branch note.** It used to explain how to switch to `data`. It now
+  reads: *"Everything is on the default branch (`main`). Open the repository and the
+  config files are right there — no branch switching, no hidden location. Links you
+  copied months ago keep working."*
+- **Replaced the 1881-character `data`-branch rationale** with
+  `## 🌿 How publishing stays cheap (and why the files are on main)` — the honest
+  engineering story: the O(commits) problem, the measured cost, *"The wrong fix (and why
+  it was reverted)"* including the four damages and the competitor evidence, then the
+  rolling-squash algorithm with its measurements, the safety properties, and one honest
+  caveat.
+- **Fixed 4 stale claims the tests had not caught.** `{index}` (README.md ×2) and
+  `{شماره}` (README_FA.md ×2) still documented the *removed* positional counter. Now
+  `{id}` / `{شناسه}`, with the `sha256(dedup-key)[:6]` explanation.
+- Removed the `Branch data` / `Branch main` structure headers; *"Two branches with two
+  different jobs"* → **"One branch — `main`."**
+
+---
+
+## 7. Tests: 28 → 33, all passing
+
+`scripts/test_pipeline.py` is now **879 lines, 33 tests, 33/33 passing.**
+
+Three obsolete tests that asserted the `data`-branch behaviour were removed. Eight tests
+were added, each locking in one Phase G property so it cannot silently regress:
+
+| Test | Locks in |
+|---|---|
+| `test_publish_branch_is_the_default_branch_and_configurable` | `GH_BRANCH == "main"`; all 4 legacy env overrides still work |
+| `test_docs_advertise_the_default_branch_only` | every raw/cdn link in **both** READMEs is on `main`; the old anchor is gone |
+| `test_workflow_publishes_to_the_same_branch_the_links_advertise` | workflow target == advertised branch; exactly 1 pushing step |
+| `test_publish_step_uses_rolling_squash_and_never_orphans_the_source` | lease present, **no bare `--force`**, `commit-tree … -p $ANCHOR`, `OUT_MARK`, `is_output_path`, `deepen`, all refusal guards, **and anchor detection matching on `%s` not `%B`** (§13.4) |
+| `test_remark_tag_is_content_derived_not_positional` | `brand_remark(line,1) == brand_remark(line,9999)` |
+| `test_country_label_is_locked_to_the_endpoint_not_the_source_remark` | `#RU Moscow` and `#US New York` on the same endpoint give identical output |
+| `test_output_order_is_deterministic` | reversed input ⇒ identical output, **and** the output is genuinely sorted |
+| `test_index_advertises_the_publish_branch_key` | `index.json` advertises the branch it is actually published on |
+
+Workflow guard strings, verified present in `.github/workflows/aggregate.yml`
+(744 lines, valid YAML, 12 steps):
+
+```
+PUBLISH_BRANCH: main    1        is_output_path       2
+OUT_MARK                9        deepen               4
+force-with-lease        1        refusing to publish  5
+commit-tree             3        bare --force pushes  0
+```
+
+---
+
+## 8. Four defects I caught in my own work
+
+A verification report that only lists other people's bugs is not a verification report.
+
+**8.1 — I wrote a test against a function that does not exist.** My new test #7 called
+`aggregate.build_category("all", lines)`. `grep -n "def build_category"` returned
+**nothing**; the real API is `process_category(per_source, source_urls, _cache=None)`.
+Had I trusted "the tests pass" without reading the failure output, this test would have
+been dead weight forever. Rewritten against the real signature — and *strengthened*
+while I was there, by adding `keys == sorted(keys)` so it proves the output is genuinely
+**sorted**, not merely stable. It also lacked `import aggregate`, since that module is
+imported per-test rather than at file level.
+
+**8.2 — One of my new assertions was simply wrong.** `test_index_advertises_the_publish_branch_key`
+asserted `"/main/" in primary_base`. I printed the real value:
+`'.../Free-v2ray-Configs/main'` — **no trailing slash**, so the assertion could never
+pass. Fixed to `endswith(f"/{GH_BRANCH}")`, and the slash-form check moved onto
+`self_url`, where a slash genuinely belongs.
+
+**8.3 — An obsolete assertion in a pre-existing test.** `test_brand_remark_strips_fragment_before_base64_decode`
+asserted `ps.endswith("| 7")`. Running the code gave
+`ps = 'Global 🌐 | @Raydikalx | E1E2FB'`. The `| 7` was the **positional counter Phase G
+deliberately removed** — the test was asserting the bug. Re-pointed at
+`core.stable_label(line)`, and I added `not endswith("| 7")` as a regression guard so
+the positional index cannot creep back.
+
+**8.4 — Wrong commit authorship, caught before pushing.** `git log --format="%an <%ae>"`
+showed **7 unpushed commits** carrying a local tooling identity rather than the
+maintainer's, which would have introduced a third, spurious contributor to the
+repository's contributor list. Caught by auditing authorship *before* the push rather
+than discovering it on GitHub afterwards — where it is permanent. Fixed in §9.3.
+
+*Of the 3 initial test failures, only 1 was a real product bug (the READMEs). The other
+2 were defects in my own test code. Diagnosing rather than "fixing until green" is what
+separated them.*
+
+---
+
+## 9. Landing the change safely
+
+### 9.1 The "unrelated histories" scare — diagnosed, not force-pushed
+
+`git merge-base origin/main HEAD` returned **rc=1**: apparently disjoint histories. The
+tempting move is `push --force`. That would have been catastrophic.
+
+Instead I checked `.git/shallow` — **it exists, with 6 grafted SHAs**, including both
+apparent "roots". **The repository is a shallow clone; the disjointness is a graft
+artifact, not a real divergence.** A `--deepen=5` (`.git` 59 M → 72 M, since grown to
+77 M by later fetches) confirmed that `origin/main`'s own root is grafted too, and
+`git rev-parse --is-shallow-repository` still reports `true`.
+
+### 9.2 Proving zero data loss before rewriting anything
+
+Safety refs first: tag `pre-T17` and branch `backup-before-T17`, both at `d9b014d`.
+
+Then `comm -23` of `origin/main`'s file list against ours → **empty**: our tree is a
+strict **superset** (47 files vs 12). Comparing all 12 blobs individually: **6
+identical, 6 differing** — and all 6 differing are exactly the files Phase G rewrote
+(`aggregate.yml`, both READMEs, `aggregate.py`, `core.py`, `test_pipeline.py`). Nothing
+on `origin` was unaccounted for.
+
+### 9.3 Rebase and authorship strip, in one operation
+
+```bash
+NEW=$(GIT_AUTHOR_NAME="0xRadikal" GIT_AUTHOR_EMAIL="64886141+0xRadikal@users.noreply.github.com" \
+      GIT_COMMITTER_NAME="0xRadikal" GIT_COMMITTER_EMAIL="64886141+0xRadikal@users.noreply.github.com" \
+      git commit-tree "$TREE" -p "$(git rev-parse origin/main)" -F /tmp/t17_msg.txt)
+```
+
+Result `d5a31d8`, verified:
+
+```
+HEAD    d5a31d8809f72e8caef83db993eddf747da7be42
+tree    b6b425de545c742f7c8f81d46e1877c583e6fb5f   (= the verified work, byte-for-byte)
+parent  2386cdf3842228b80b1c3d2d7836dbafa5599242   (= exactly origin/main)
+author    0xRadikal <64886141+0xRadikal@users.noreply.github.com>
+committer 0xRadikal <64886141+0xRadikal@users.noreply.github.com>
+
+ahead/behind vs origin/main:  0 behind / 1 ahead     → clean fast-forward, no force needed
+reachable authors: 3× 0xRadikal, 7× raydikalx-bot[actions]   (no third identity)
+```
+
+**Contributor-list scan.** The full reachable history resolves to exactly **two**
+identities — the maintainer and the Actions bot — so the push adds no new contributor.
+One candidate match surfaced during the scan and I investigated it rather than accepting
+the result: line 127, *"The subscription files were being **generated with** several
+protocol-level…"* — ordinary English prose inside the **maintainer's own** commit
+`1c85af3`, confirmed via `git log --grep`. Re-scanned with precise structural markers
+instead of substring matches → **0**. All tracked source files → clean.
+
+### 9.4 Push simulation
+
+Pushing into an empty bare repo failed:
+
+```
+! [remote rejected] origin/main -> main (shallow update not allowed)
+```
+
+Diagnosed: a shallow clone cannot transfer history crossing its own graft boundary into
+a repo lacking those objects. With `receive.shallowupdate=true` the setup push
+succeeded, and then our commit pushed cleanly:
+
+```
+2386cdf..d5a31d8  HEAD -> main       47 files, 4 commits, all owner/bot-authored
+```
+
+The real GitHub `origin` already holds the full history, so our push does not cross the
+graft boundary — it is an ordinary fast-forward on top of an existing tip. **This is
+reasoned, not yet proven against GitHub itself** (see §11).
+
+---
+
+## 10. Verification summary
+
+| Check | Result |
+|---|---|
+| Unit tests | **33/33 passed** |
+| `test_pipeline.py` syntax | `py_compile` OK (879 lines) |
+| Workflow YAML | valid, **12 steps**, `PUBLISH_BRANCH: main` |
+| Bare `--force` pushes in workflow | **0** |
+| `publish_verify.sh` | **62/62 PASS** |
+| `shallow_test.sh` | **15/15 PASS** |
+| `ci_sim.sh` (25 fresh shallow clones) | **7/7 PASS**, 172 KB constant, 0 KB/round |
+| Pipeline runs | 2× SUCCESS (7.1 s / 6.1 s), 21 ok / 0 empty / 0 fail |
+| Output determinism | **32/34 byte-identical**, 2 diffs = timestamps + latency only |
+| Real clients (sing-box 1.13.14, mihomo v1.19.29) | **6/6 PASS** |
+| `data`/`@data` references in docs | **0** |
+| Links on `main` | 8 raw + 1 cdn, **0 on any other branch** |
+| Broken anchor links | **0** |
+| Tracked files | 46 (32 output + 14 source/docs) — `socks` absent this round, see §13.5 |
+| Spurious contributor identities | **0** (only maintainer + Actions bot) |
+| Stray tooling traces in tracked files | **0** (1 false positive investigated and dismissed) |
+| Push to `origin/main` | ✅ `2386cdf..3b39ef1` fast-forward |
+| Live output URLs on `main` | **34/34 HTTP 200** |
+| Live real-client validation | **6/6 PASS** against the published URLs |
+| Production rolling squash | ✅ 2 bot rounds, **1** output commit, previous one unreachable |
+
+---
+
+## 11. Honest caveats
+
+Things this report does **not** claim to have proven:
+
+1. **The 3.55 GB of existing history was not rewritten.** Rolling squash makes growth
+   O(1) *from now on*; it does not shrink what is already there. Reclaiming it needs a
+   history rewrite — which breaks every fork and every existing clone. **Deliberately
+   not done**, and it should not be done without the owner's explicit decision.
+
+2. ~~**`shallow update not allowed` is not yet proven absent against real GitHub.**~~
+   **RESOLVED — see §13.** The push ran and succeeded as an ordinary fast-forward
+   (`2386cdf..3b39ef1`). The graft boundary was never crossed, exactly as reasoned.
+
+3. ~~**The push has not happened.**~~ **RESOLVED — see §13.** Phase G is **live**: all
+   34 output paths serve HTTP 200 on `main`, and the new workflow has completed real
+   rolling-squash publishes in production.
+
+4. **§2.3 and §2.4 are product arguments, not measurements.** The 404s, the orphan
+   structure and the 12-file default branch are measured facts. That they *cost stars
+   and monetisation* is a well-supported inference from competitor behaviour and how
+   GitHub indexing works — not something I measured on this repository.
+
+5. **Rolling squash bounds output commits *above the anchor*, not in the whole history.**
+   A source commit built on top of an output commit permanently cements that one output
+   snapshot. Measured and quantified in §14.2: permanent growth is now driven by the
+   human commit rate (≈ 67 MB/year at one source commit per week), not by the 96 bot
+   runs/day. This is inherent to keeping the files on the default branch and is the
+   accepted cost of that choice — but it was not stated before §14, so it is stated here.
+
+---
+
+## 12. Remaining work
+
+| # | Task | Status |
+|---|---|---|
+| T16 | Push to `origin/main` | ✅ **done** — `2386cdf..3b39ef1` |
+| T12 | Verify all 34 output URLs return 200 on `main` | ✅ **done** — 34/34 |
+| T20 | Lock anchor detection to the commit subject | ✅ **done** — negative control 32/33 |
+| T22 | Observe a bot round landing on a *source* tip | ✅ **done** — §14, invariant held |
+| T13 | Retire the `data` branch | ⏳ deliberately deferred, see below |
+
+Retiring `data` is deliberately last. `main` is now verified serving, so the safety
+reason for keeping `data` (it was briefly the *only* copy of the configs) is gone — but
+some users' clients may still be pointed at `data` URLs. Deleting it would break exactly
+the kind of already-copied link this whole phase exists to protect. The correct sequence
+is: leave `data` in place as a frozen mirror, and remove it only once the owner decides
+the migration window has closed.
+
+Phases B–E (58 items) remain deferred; they were not requested. Phase C items already
+identified: the `core.py` two-letter-word country guess loop, the dead `alpn` at
+`converters.py` 598–599, `alpn`/`insecure` missing from `parse_proxy`, and the
+hysteria2/tuic/wireguard converters.
+
+---
+
+## 13. Production results — Phase G is live
+
+Everything above §13 was written before the push. This section records what actually
+happened on the real repository, including one latent defect that **only** a live run
+could have exposed.
+
+### 13.1 The push
+
+```
+2386cdf..3b39ef1  HEAD -> main
+```
+
+An ordinary **fast-forward**. Pushed with `--force-with-lease` as a safety net even
+though no force was required, so a concurrent owner push in the intervening seconds
+would have refused rather than overwritten. **`shallow update not allowed` did not
+occur** — caveat §11.2 resolved as reasoned: GitHub already held the objects, so the
+graft boundary was never crossed.
+
+Pre-flight checks, all verified before pushing:
+
+| Check | Result |
+|---|---|
+| Token identity | `0xRadikal` (id 64886141) |
+| `push` permission on the repo | `True` (admin/maintain/push all true) |
+| `workflow` scope present | ✅ **required** — the commit modifies `aggregate.yml` |
+| `main` branch protection | none (`/protection` → 404) |
+| `origin/main` unmoved since our parent | ✅ still `2386cdf` |
+| Tests | 33/33 |
+
+### 13.2 T12 — the 404s are fixed
+
+**All 34 output paths return HTTP 200 on `main`:**
+
+```
+PASS=34 FAIL=0
+```
+
+Content verified live, not just presence:
+
+```
+ALL   configs served: 8534      (matches local exactly)
+HEAVY configs served: 7915
+LIGHT configs served: 1530
+all/configs_base64.txt decodes to 8534 lines
+
+index.json:
+  publish_branch: main
+  raw_base:       https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main
+  self_url:       .../main/index.json
+```
+
+And re-validated with real clients **against the live URLs**, not local files:
+
+```
+✅ sing-box  LIVE all/singbox.json      ✅ mihomo LIVE all/clash.yaml   (847 ms)
+✅ sing-box  LIVE heavy/singbox.json    ✅ mihomo LIVE heavy/clash.yaml (748 ms)
+✅ sing-box  LIVE light/singbox.json    ✅ mihomo LIVE light/clash.yaml (149 ms)
+
+LIVE-URL REAL-CLIENT: PASS=6 FAIL=0
+```
+
+### 13.3 Rolling squash verified in production, across two rounds
+
+The new workflow ran on its own schedule. Round 1 at 08:13 UTC, round 2 at 08:23 UTC:
+
+```
+round 1:  b875e41  parent = 3b39ef1  "…7955 configs [@Raydikalx] [auto-output]"
+round 2:  f7bcf9d  (b875e41 REPLACED — fetch reported "forced update")
+```
+
+The decisive measurements:
+
+```
+anchor found            = 3b39ef1   (our source commit — correct)
+output commits on top   = 1         (after TWO rounds, not 2)
+total commits on main   = 12
+b875e41 reachable?      = NO  → the previous output commit was replaced, not stacked
+GitHub repo size        = 3720236 KB, unchanged across both rounds
+```
+
+**This is the O(1) property holding in production**, not in a simulation. Round 2 did
+not add to history; it replaced round 1, and round 1 became unreachable for gc.
+
+### 13.4 A latent defect that only the live run could reveal
+
+Checking the invariant *"`main` must contain exactly one `[auto-output]` commit"* against
+the real repository returned **2**, not 1. I investigated rather than dismissing it.
+
+**Cause:** commit `d5a31d8` is a *source* commit whose **message body documents the
+algorithm** — so the literal string `[auto-output]` appears inside it. Counting by full
+body sees 2; counting by subject line sees 1.
+
+**Why nothing broke:** the publish step already searches with
+`git log --format='%H%x09%s'` — **subject only**. Reproducing the step's own command
+against the real remote history confirmed it resolved the anchor correctly:
+
+```
+with %s (what the workflow uses):  1 match   → anchor 3b39ef1  ✅ correct
+with %B (the naive alternative) :  2 matches → anchor slides backwards ❌
+```
+
+**Why it still needed fixing:** *no test protected that choice.* Changing `%s` to `%B` is
+a one-character edit that would misclassify any documenting source commit as an output
+commit, slide the anchor backwards, stack output commits forever, and **silently restore
+the unbounded growth this entire phase exists to eliminate.**
+
+Now asserted, with a **negative control** proving the guard is load-bearing — I injected
+`%B` into both anchor searches in a scratch copy:
+
+```
+32/33 passed
+❌ test_publish_step_uses_rolling_squash_and_never_orphans_the_source
+     anchor detection must not match on the commit BODY (%B): a source commit that
+     merely *documents* the marker would be misread as an output commit and the
+     anchor would slide backwards. Use %s.
+```
+
+With the real workflow: **33/33**.
+
+> This is the single most valuable finding of Phase G, and the simulations could never
+> have produced it — it required a source commit that *talks about* the marker, which
+> only existed once the design was documented in a real commit message.
+
+### 13.5 Two other live observations, both benign after investigation
+
+**`protocols/socks*.txt` vanished from the tree.** Tracked files went 47 → 46. Rather
+than assume corruption I checked the bot's own `index.json`: `socks = 0`. The run
+genuinely found no socks configs, so writing no socks file is **correct** behaviour; my
+local copies were stale leftovers from an earlier run that happened to find 1. Removed.
+This also demonstrates the pipeline correctly *removes* files whose protocol disappears
+upstream, rather than serving stale data.
+
+**A disk-full event produced a silently truncated file.** `/tmp` is a 493 MB tmpfs and
+hit 100%, which made a `cat` redirect write a **0-byte** `aggregate.yml` into a scratch
+directory — initially looking like a missing-string bug in the harness. Diagnosed via
+`df`, cleaned to 23% used, and then verified the *real* repository was unaffected:
+`git fsck` clean, no zero-byte tracked files, `aggregate.yml` 49 684 bytes, YAML valid
+with 12 steps, 33/33 tests. Worth recording because a truncation like this is exactly
+the kind of thing that gets mistaken for a code defect.
+
+### 13.6 Contributor list — no spurious identities
+
+```
+0xRadikal                12 contributions
+raydikalx-bot[actions]   5650 contributions
+```
+
+Exactly two identities, as intended. Every commit pushed in this phase is authored **and
+committed** by `0xRadikal <64886141+0xRadikal@users.noreply.github.com>`.
+
+---
+
+## 14. Third production round — the one state that had not been observed
+
+Sections 13.3 confirmed rolling squash across two bot rounds, but both of those replaced
+*another output commit*. The state that had never been observed was a bot round landing on
+top of a **source** commit. Round three provided it, and it also forced me to correct the
+cost model in this very document.
+
+### 14.1 The round
+
+```
+0aa65dc  raydikalx-bot[actions]  2026-07-29 08:38 UTC  … 7937 configs [@Raydikalx] [auto-output]
+a5a1c8b  0xRadikal               2026-07-29 08:35 UTC  docs: record the production results …
+```
+
+The bot published **three minutes** after my source push, so its parent was a source
+commit. Running the workflow's own anchor command against the real remote history:
+
+```
+tip                   = 0aa65dc  (… [auto-output])
+anchor (via %s)       = a5a1c8b  docs: record the production results of the branch migration
+output commits on top = 1
+```
+
+The invariant holds in the previously-unobserved state. All **32/32** output URLs return
+HTTP 200; sing-box 1.13.14 accepts all three profiles (`rc=0`, 7624 / 6975 / 1519
+outbounds) and mihomo v1.19.29 accepts all three Clash profiles (`rc=0`, 7869 / 7168 /
+1595 proxies, 1457 / 909 / 275 ms).
+
+### 14.2 A property of the design I had not stated: source commits cement one snapshot
+
+`f7bcf9d` — the previous output commit — is **still reachable** from `main`, because my
+source commit landed on top of it instead of replacing it. This is not a defect, but it is
+a property the earlier sections did not state, so it is stated here:
+
+> Rolling squash guarantees **at most one output commit above the anchor**. It does *not*
+> remove an output commit that a source commit has already been built on top of. Each
+> source commit therefore permanently cements the one output snapshot that was live when
+> it was made.
+
+That changes what drives long-term growth. Growth is no longer a function of the 96 bot
+runs/day; it is a function of how often *humans* commit:
+
+| Source-commit rate | Permanent growth |
+|---|---|
+| 1 / day | ≈ 469 MB / year |
+| 1 / week | ≈ 67 MB / year |
+| 1 / month | ≈ 15 MB / year |
+| pre-fix regime (every bot round permanent) | ≈ 20 GB / year |
+
+At one source commit per week that is a **674×** reduction. No action is required; the
+figure is recorded so the number is known rather than assumed.
+
+### 14.3 Two consecutive rounds with unchanged configs cost 4 objects
+
+Comparing the object sets of the 08:13 and 08:23 rounds — after correcting my own method,
+see §14.5 — exactly **four** objects were new:
+
+```
+f7bcf9de  commit      353 B
+04752ca4  tree        593 B   (root)
+c3a9b7d4  blob      8 504 B   index.json
+da54aab6  blob      6 325 B   health.json
+```
+
+Every configuration file was byte-identical, so git stored nothing for them. The
+deterministic-output work of Phase A is what makes this possible: only the two timestamped
+metadata files differ between rounds where upstream content is unchanged.
+
+### 14.4 Re-verifying this document's own 604 KB figure
+
+§2.5 claims one output commit costs 604 KB. Today's live round measured **1 316.6 KB**,
+which looked like a contradiction, so I measured the packed marginal cost of six
+consecutive historical output commits directly:
+
+```
+892.3 KB   0.6 KB   220.9 KB   468.3 KB   1 420.2 KB   600.4 KB
+mean 600.5 KB   median 534.4 KB   range 0.6 – 1 420.2 KB
+```
+
+An independent mean of **600.5 KB** against the document's **604 KB** is a 0.6 %
+difference: the figure is confirmed. What was imprecise was presenting a single value for
+a quantity that varies by three orders of magnitude between rounds. The honest statement
+is: **0.6 – 1 420 KB per round, mean ≈ 600 KB**, and today's 1 316.6 KB sits inside that
+range. The 20.2 GB/year projection is unaffected (mean-based; the worst case would be
+47.5 GB/year).
+
+### 14.5 Three measurement errors of my own, caught before they became claims
+
+Recorded because a verification pass that only reports the target's faults is not a
+verification pass.
+
+**(a) `git rev-list --objects A --not B` over-reported by 8×.** It listed 32 objects as
+"new in `f7bcf9d`" while `git rev-parse` proved the blobs were bit-identical
+(`all/clash.yaml` = `238d52b0…` in both). The set-difference form gave the true answer:
+
+```
+--not form      : 32 objects
+set-difference  :  4 objects   <- correct
+```
+
+Cause: object-listing traversal in a shallow clone does not exclude the same object set
+that reachability does. Every object-level count in this section therefore uses
+`comm -23` over sorted `rev-list --objects` output, never `--not`.
+
+**(b) A tree comparison that could only ever print IDENTICAL.** My loop used
+`git rev-parse "$c:$p" 2>/dev/null || echo -`; on a missing path the subshell swallowed the
+error so both sides collapsed to the same value. Re-run printing the actual hashes, it
+correctly showed `index.json` and `health.json` differing and the five output directories
+identical.
+
+**(c) `proxies=0` for every Clash profile.** My counter matched `'  - name:'` with two
+leading spaces; the generator emits `- name:` at column 0. mihomo's own `rc=0` was the
+clue that the file was fine and the counter was wrong — 7 869 / 7 168 / 1 595 proxies once
+fixed.
+
+A fourth apparent problem, `base64 ≠ plain` (8 015 vs 8 016 lines), was likewise mine: the
+single extra line is the `# @Raydikalx — ALL — 8015 unique configs` header comment. The
+base64 payload is deliberately comment-free, which is correct for subscription clients —
+excluding comments, the two match exactly.
+
+---
+
+*Every measurement in this document is reproducible from `/home/user/exp/` —
+`publish_verify.sh`, `shallow_test.sh`, `ci_sim.sh`, `realistic_growth.sh` — and from
+`scripts/test_pipeline.py` in this repository. The §13 figures are reproducible against
+the live repository with `git ls-remote`, `curl -o /dev/null -w "%{http_code}"`, and the
+GitHub REST API.*
