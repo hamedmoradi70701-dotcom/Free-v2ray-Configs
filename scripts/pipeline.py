@@ -357,14 +357,14 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
     heads = {
         "verified": (
             hh["verified"] +
-            f"# @Raydikalx — VERIFIED — {st['verified']} configs\n"
+            f"# {core.BRAND} — VERIFIED — {st['verified']} configs\n"
             f"# criterion: a real proxied request to {realtest.TEST_URL} succeeded\n"
             f"# in ALL {rounds} independent runs of this round.\n"
             f"# measured: {st['flaky_pct']}% of everything that ever worked is "
             f"flaky, so a single run is not enough.\n"),
         "fast": (
             hh["fast"] +
-            f"# @Raydikalx — FAST — {st['fast']} configs\n"
+            f"# {core.BRAND} — FAST — {st['fast']} configs\n"
             f"# criterion: verified AND median delay across {rounds} runs "
             f"< {st['fast_threshold_ms']}ms.\n"
             f"# the median (not one sample) is used because configs cross this "
@@ -373,7 +373,7 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
             f"as the reason for using a median, not as a constant.\n"),
         "secure": (
             hh["secure"] +
-            f"# @Raydikalx — SECURE — {st['secure']} configs\n"
+            f"# {core.BRAND} — SECURE — {st['secure']} configs\n"
             f"# criterion: verified AND forward secrecy — the session key comes\n"
             f"# from an (EC)DHE handshake (TLS/REALITY, or QUIC which mandates\n"
             f"# TLS 1.3 per RFC 9001 §4.2) AND the link does not disable\n"
@@ -428,7 +428,7 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
     short = st["top_short_by"]
     top_head = (
         core.hiddify_profile_header(f"TOP {len(buckets['top'])}") +
-        f"# @Raydikalx — TOP {len(buckets['top'])} — sorted by median delay\n"
+        f"# {core.BRAND} — TOP {len(buckets['top'])} — sorted by median delay\n"
         f"# every entry passed a real proxied request in all {rounds} runs.\n")
     if short:
         # اعلامِ صریح به‌جای پرکردنِ مصنوعی. کاربر باید بداند استخر کوچک بود.

@@ -658,7 +658,7 @@ def write_category(out_dir: str, cat: str, r: CategoryResult) -> None:
     # فقط ۲۹ خطِ نخست را می‌بیند (توضیح و مدرک در core.py، بخشِ «سرآیندِ
     # درون‌فایلیِ Hiddify»).
     hh = core.hiddify_profile_header(cat.upper())
-    header = hh + f"# @رادار — {cat.upper()} — {len(r.unique)} unique configs\n"
+    header = hh + f"# {core.BRAND} — {cat.upper()} — {len(r.unique)} unique configs\n"
     # سپرِ `#`: توضیحِ کامل در core.py، بخشِ «سپرِ `#`». شمارشِ سرآیند عمداً از
     # `r.unique` گرفته می‌شود، نه از لیستِ سپرخورده — سپر «کانفیگ» نیست.
     _write_text(os.path.join(base, "configs.txt"),
@@ -732,7 +732,7 @@ def write_archive(out_dir: str, cat: str, r: CategoryResult) -> None:
     btxt = os.path.join(base, f"{cat}_broken.txt")
     bb64 = os.path.join(base, f"{cat}_broken_base64.txt")
     if r.broken:
-        bh = f"# @رادار — {cat.upper()} BROKEN/dummy — {len(r.broken)} configs\n"
+        bh = f"# {core.BRAND} — {cat.upper()} BROKEN/dummy — {len(r.broken)} configs\n"
         _write_text(btxt, bh + "\n".join(core.shield_unsupported_runs(r.broken)) + "\n")
         _write_text(bb64, core.encode_base64_subscription(r.broken))
     else:
@@ -791,7 +791,7 @@ def write_protocols(out_dir: str, all_unique: List[str]) -> Dict[str, int]:
         b64 = os.path.join(base, f"{proto}_base64.txt")
         if lines:
             hh = core.hiddify_profile_header(proto.upper())
-            h = hh + f"# @رادار — {proto} — {len(lines)} configs\n"
+            h = hh + f"# {core.BRAND} — {proto} — {len(lines)} configs\n"
             _write_text(txt, h + "\n".join(core.shield_unsupported_runs(lines)) + "\n")
             _write_text(b64, core.encode_base64_subscription(lines, header=hh))
             written += 1

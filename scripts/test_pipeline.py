@@ -233,7 +233,7 @@ def test_brand_remark_strips_fragment_before_base64_decode():
     branded = core.brand_remark(line, 7)
     decoded = json.loads(base64.b64decode(
         branded[8:].split("#")[0] + "=" * (-len(branded[8:].split("#")[0]) % 4)))
-    assert "@Raydikalx" in decoded["ps"], f"برند درج نشد: {decoded['ps']!r}"
+    assert core.BRAND in decoded["ps"], f"برند درج نشد: {decoded['ps']!r}"
 
     # ★ این assert عوض شد و دلیلش یک اندازه‌گیری است:
     #   قبلاً انتظار `| 7` بود، یعنی شمارندهٔ **موقعیتی**. آن شمارنده حذف شد
@@ -278,7 +278,7 @@ def test_plain_uri_vmess_is_branded_not_passed_through():
     branded = core.brand_remark(line, 1)
     assert "#" in branded, branded
     remark = urllib.parse.unquote(branded.split("#", 1)[1])
-    assert "@Raydikalx" in remark, f"برند درج نشد: {remark!r}"
+    assert core.BRAND in remark, f"برند درج نشد: {remark!r}"
     assert "oneclickvpnkeys" not in branded, (
         f"a competitor's channel must not survive branding: {remark!r}"
     )
@@ -5344,7 +5344,7 @@ def test_brand_remark_is_idempotent_over_the_adversarial_corpus():
     (کلیدِ `ps`) می‌نشیند، پس رشتهٔ برند در متنِ خامِ خط **صفر** بار دیده
     می‌شود در حالی که کاربر آن را می‌بیند. شمارشِ خام، آزمونی غلط می‌ساخت.
     """
-    brand = core.BRAND_CHANNEL
+    brand = core.BRAND
     _e4_freeze_country("test-node.example.com", 443)
 
     for kind, line in _e4_corpus():
@@ -5671,7 +5671,7 @@ def test_is_branded_reads_the_remark_the_user_actually_sees():
       • مثبتِ کاذب — برند جایی غیر از ریمارک (مثلاً در query یا نامِ میزبان)
         نباید «برنددار» شمرده شود، چون کاربر چیزی نمی‌بیند.
     """
-    brand = core.BRAND_CHANNEL
+    brand = core.BRAND
     _e4_freeze_country("test-node.example.com", 443)
 
     # همهٔ اعضای پیکره پس از برندینگ باید «برنددار» تشخیص داده شوند
@@ -8041,7 +8041,7 @@ def test_zz_c12_the_two_decoders_diverge_and_that_is_the_root_cause():
     obj = converters._b64_json(body)
     assert isinstance(obj, dict), "دیکودرِ سهل‌گیرِ converters باید موفق شود"
     assert obj.get("ps") == _C12_FOREIGN, f"psِ خوانده‌شده: {obj.get('ps')!r}"
-    assert core.BRAND_CHANNEL not in obj["ps"], "psِ درونی باید بی‌برند باشد"
+    assert core.BRAND not in obj["ps"], "psِ درونی باید بی‌برند باشد"
 
     # حالتِ سالم برای مقایسه: هر دو دیکودر موفق
     ok_body = _c12_vmess(ps="whatever", broken=False)[8:]
@@ -8249,11 +8249,11 @@ def test_zz_c12_enforce_brand_is_idempotent_and_byte_preserving():
     از «۱ نام» بزرگ‌تر می‌شد — یعنی سنجشِ پایه بی‌اعتبار می‌شد.
     """
     keep = [
-        "DE 🇩🇪 | @Raydikalx | ABC123",
-        "Global 🌐 | @Raydikalx | CFC895",
-        " @Raydikalx ",                      # فاصلهٔ عمدی در دو سر
-        "@Raydikalx",
-        "x" * 300 + " @Raydikalx",
+        f"DE 🇩🇪 | {core.BRAND} | ABC123",
+        f"Global 🌐 | {core.BRAND} | CFC895",
+        f" {core.BRAND} ",                      # فاصلهٔ عمدی در دو سر
+        core.BRAND,
+        "x" * 300 + " " + core.BRAND,
     ]
     for nm in keep:
         got = converters._enforce_brand(nm, "vmess")
@@ -8262,7 +8262,7 @@ def test_zz_c12_enforce_brand_is_idempotent_and_byte_preserving():
 
     for nm in ("", None, "   ", _C12_FOREIGN, "🇮🇳TM (@AZARBAYJAB1)"):
         got = converters._enforce_brand(nm, "vmess")
-        assert core.BRAND_CHANNEL in got, f"{nm!r} برنددار نشد: {got!r}"
+        assert core.BRAND in got, f"{nm!r} برنددار نشد: {got!r}"
         assert converters._enforce_brand(got, "vmess") == got, "خودتوان نیست"
 
     # سازگاریِ عقب‌رو: رفتارِ قدیمِ «نامِ تهی ⇒ fallback» باید عیناً حفظ شود
@@ -9485,33 +9485,91 @@ def _hd_trim_prefix(s: str, prefix: str) -> str:
     return s[len(prefix):] if s.startswith(prefix) else s
 
 
+def _hd_expected_keys():
+    """کلیدهایی که بلوکِ سرآیند در مشخصاتِ فعلی واقعاً منتشر می‌کند.
+
+    `core.HIDDIFY_HEADER_KEYS` فهرستِ کاملِ مستند است؛ وقتی `SUPPORT_URL`
+    تنظیم نشده (کانال تلگرام هنوز ساخته نشده)، خطِ `support-url` کلاً
+    حذف می‌شود ⇒ مجموعهٔ منتشرشده یکی کمتر است. وقتی تنظیم شود، هر پنج
+    کلید برمی‌گردند.
+    """
+    keys = set(core.HIDDIFY_HEADER_KEYS)
+    if not core.SUPPORT_URL:
+        keys.discard("support-url")
+    return keys
+
+
+def _hd_expected_key_order():
+    """همان کلیدهای منتشرشده، به همان ترتیبِ اعلام‌شده در `HIDDIFY_HEADER_KEYS`."""
+    return [k for k in core.HIDDIFY_HEADER_KEYS
+            if k != "support-url" or core.SUPPORT_URL]
+
+
 def test_zzz_hdr_block_has_exactly_the_five_documented_keys():
-    """بلوک باید همان ۵ کلیدِ مستندشده را بدهد — نه کمتر، نه بیشتر."""
+    """بلوک باید همان کلیدهای مستندشده را بدهد — نه کمتر، نه بیشتر.
+
+    استثنای مشخصاتِ فعلی: وقتی `SUPPORT_URL` تنظیم نشده، خطِ
+    `support-url` کلاً حذف می‌شود (هرگز URLِ جعلی ساخته نمی‌شود)؛ هر دو
+    شاخه اینجا سنجیده می‌شوند.
+    """
     blk = core.hiddify_profile_header("ALL")
     assert blk.endswith("\n"), "بلوک باید با newline تمام شود تا قابلِ چسباندن باشد"
     lines = blk.rstrip("\n").split("\n")
-    assert len(lines) == 5, lines
+    assert len(lines) == len(_hd_expected_key_order()), lines
     got = _hd_headers(blk + "vless://x@h:443#n\n")
-    assert set(got) == set(core.HIDDIFY_HEADER_KEYS), (set(got), core.HIDDIFY_HEADER_KEYS)
+    assert set(got) == _hd_expected_keys(), (set(got), core.HIDDIFY_HEADER_KEYS)
     # ترتیبِ اعلام‌شده هم باید همان ترتیبِ واقعیِ خطوط باشد
-    assert [ln.split(":", 1)[0].lstrip("#") for ln in lines] == list(core.HIDDIFY_HEADER_KEYS)
+    assert [ln.split(":", 1)[0].lstrip("#") for ln in lines] == _hd_expected_key_order()
+
+    # شاخهٔ «تنظیم‌شده»: با یک SUPPORT_URL، هر پنج کلید برمی‌گردند
+    saved = core.SUPPORT_URL
+    try:
+        core.SUPPORT_URL = "https://t.me/example"
+        blk2 = core.hiddify_profile_header("ALL")
+        lines2 = blk2.rstrip("\n").split("\n")
+        assert len(lines2) == len(core.HIDDIFY_HEADER_KEYS), lines2
+        got2 = _hd_headers(blk2 + "vless://x@h:443#n\n")
+        assert set(got2) == set(core.HIDDIFY_HEADER_KEYS), set(got2)
+        assert got2["support-url"] == "https://t.me/example", got2
+        assert [ln.split(":", 1)[0].lstrip("#") for ln in lines2] == \
+            list(core.HIDDIFY_HEADER_KEYS)
+    finally:
+        core.SUPPORT_URL = saved
 
 
 def test_zzz_hdr_values_are_what_hiddify_will_actually_show():
     """مقادیر از دیدِ خودِ Hiddify سنجیده می‌شوند، نه از دیدِ ما."""
     got = _hd_headers(core.hiddify_profile_header("TOP 100") + "x\n")
-    assert got["profile-title"] == f"{core.BRAND_CHANNEL} — TOP 100", got
+    assert got["profile-title"] == f"{core.BRAND} — TOP 100", got
     # `Parse` مقدار را با ParseDuration(v+"h") می‌خواند ⇒ باید عددِ برهنه باشد
     iv = got["profile-update-interval"]
     assert float(iv) > 0, iv
     assert not iv.endswith(("h", "m", "s")), f"واحد نباید نوشته شود: {iv!r}"
     # `subscription-userinfo` دروازهٔ آن دو URL است (Parse خطوط ۸۰-۸۷)
     assert "subscription-userinfo" in got, got
-    assert got["support-url"] == core.SUPPORT_URL
     assert got["profile-web-page-url"] == core.PROJECT_URL
-    for u in (got["support-url"], got["profile-web-page-url"]):
+    # `support-url` فقط وقتی هست که SUPPORT_URL تنظیم شده باشد؛ وگرنه
+    # کلید باید کاملاً غایب باشد، نه خالی و نه جعلی.
+    if core.SUPPORT_URL:
+        assert got["support-url"] == core.SUPPORT_URL
+    else:
+        assert "support-url" not in got, got
+    urls = [got["profile-web-page-url"]]
+    if core.SUPPORT_URL:
+        urls.append(got["support-url"])
+    for u in urls:
         p = urllib.parse.urlparse(u)
         assert p.scheme in ("http", "https") and p.netloc, u
+
+    # شاخهٔ «تنظیم‌شده»: مقدارِ support-url باید عینِ SUPPORT_URL باشد
+    saved = core.SUPPORT_URL
+    try:
+        core.SUPPORT_URL = "https://t.me/example"
+        got2 = _hd_headers(core.hiddify_profile_header("TOP 100") + "x\n")
+        assert got2["support-url"] == "https://t.me/example", got2
+        assert got2["profile-title"] == f"{core.BRAND} — TOP 100", got2
+    finally:
+        core.SUPPORT_URL = saved
 
 
 def test_zzz_hdr_total_and_expire_are_zero_meaning_unlimited():
@@ -9561,7 +9619,7 @@ def test_zzz_hdr_survives_the_29_line_scan_window_in_every_output():
     # مرزِ منفی: اگر بلوک را عقب بیندازیم واقعاً گم می‌شود
     assert _hd_headers("\n".join(["# pad"] * 30) + "\n" + blk + "x\n") == {}
     # و در جایگاهِ درست (خطِ اول) خوانده می‌شود
-    assert set(_hd_headers(blk + "x\n")) == set(core.HIDDIFY_HEADER_KEYS)
+    assert set(_hd_headers(blk + "x\n")) == _hd_expected_keys()
 
 
 def _hdr_sample_lines():
@@ -9582,14 +9640,14 @@ def test_zzz_hdr_aggregate_writes_headers_into_txt_b64_yaml_but_not_json():
         aggregate.write_category(d, "all", r)
 
         txt = open(os.path.join(d, "all", "configs.txt"), encoding="utf-8").read()
-        assert set(_hd_headers(txt)) >= set(core.HIDDIFY_HEADER_KEYS), _hd_headers(txt)
+        assert set(_hd_headers(txt)) >= _hd_expected_keys(), _hd_headers(txt)
         assert txt.startswith("#profile-title:"), txt[:80]
         # سرآیندِ توضیحیِ قدیمی نباید حذف شده باشد (رگرسیون)
-        assert "# @Raydikalx — ALL — 3 unique configs" in txt
+        assert f"# {core.BRAND} — ALL — 3 unique configs" in txt
 
         raw_b64 = open(os.path.join(d, "all", "configs_base64.txt"), encoding="utf-8").read()
         assert "#" not in raw_b64, "سرآیند باید *درونِ* payload باشد، نه بیرونش"
-        assert set(_hd_headers(raw_b64)) >= set(core.HIDDIFY_HEADER_KEYS)
+        assert set(_hd_headers(raw_b64)) >= _hd_expected_keys()
         decoded = base64.b64decode(raw_b64).decode("utf-8")
         assert decoded.startswith("#profile-title:"), decoded[:80]
         # base64 و متن نباید در کانفیگ‌ها واگرا شوند
@@ -9597,7 +9655,7 @@ def test_zzz_hdr_aggregate_writes_headers_into_txt_b64_yaml_but_not_json():
                 if ln.startswith(("vless://", "trojan://", "ss://"))] == lines
 
         y = open(os.path.join(d, "all", "clash.yaml"), encoding="utf-8").read()
-        assert set(_hd_headers(y)) >= set(core.HIDDIFY_HEADER_KEYS)
+        assert set(_hd_headers(y)) >= _hd_expected_keys()
         # و مهم‌تر: معنیِ YAML عوض نشده باشد
         assert yaml.safe_load(y) == yaml.safe_load(converters.build_clash_yaml(lines))
 
@@ -9617,11 +9675,11 @@ def test_zzz_hdr_protocol_files_get_headers_labelled_by_protocol():
         p = os.path.join(d, "protocols", "vless.txt")
         assert os.path.exists(p)
         got = _hd_headers(open(p, encoding="utf-8").read())
-        assert set(got) >= set(core.HIDDIFY_HEADER_KEYS), got
+        assert set(got) >= _hd_expected_keys(), got
         assert got["profile-title"].endswith("VLESS"), got["profile-title"]
         b = open(os.path.join(d, "protocols", "vless_base64.txt"), encoding="utf-8").read()
         assert "#" not in b
-        assert set(_hd_headers(b)) >= set(core.HIDDIFY_HEADER_KEYS)
+        assert set(_hd_headers(b)) >= _hd_expected_keys()
 
 
 def test_zzz_hdr_archive_files_never_get_a_profile_header():
@@ -9664,7 +9722,7 @@ def test_zzz_hdr_pipeline_buckets_and_top100_get_correct_labels():
         for cat in pipeline.CATEGORIES:
             txt = open(os.path.join(d, cat, "configs.txt"), encoding="utf-8").read()
             got = _hd_headers(txt)
-            assert set(got) >= set(core.HIDDIFY_HEADER_KEYS), (cat, got)
+            assert set(got) >= _hd_expected_keys(), (cat, got)
             assert got["profile-title"].endswith(cat.upper()), (cat, got["profile-title"])
             assert txt.startswith("#profile-title:"), (cat, txt[:60])
 
@@ -9703,8 +9761,17 @@ def test_zzz_hdr_project_and_support_urls_cannot_drift():
     """
     assert core.PROJECT_URL == f"https://github.com/{aggregate.GH_USER}/{aggregate.GH_REPO}", (
         core.PROJECT_URL, aggregate.GH_USER, aggregate.GH_REPO)
-    assert core.SUPPORT_URL == "https://t.me/" + core.BRAND_CHANNEL.lstrip("@").lower(), (
-        core.SUPPORT_URL, core.BRAND_CHANNEL)
+    # SUPPORT_URL دقیقاً از همان قاعدهٔ `core` مشتق می‌شود و نمی‌تواند
+    # واگرا شود: overrideِ محیطی برنده است؛ هندلِ کانال ⇒ URLِ t.me؛ و
+    # وقتی هندل تنظیم نشده، خالی است (هرگز URLِ جعلی ساخته نمی‌شود).
+    if os.environ.get("AGG_SUPPORT_URL"):
+        assert core.SUPPORT_URL == os.environ["AGG_SUPPORT_URL"], (
+            core.SUPPORT_URL, os.environ["AGG_SUPPORT_URL"])
+    elif core.BRAND_CHANNEL:
+        assert core.SUPPORT_URL == "https://t.me/" + core.BRAND_CHANNEL.lstrip("@").lower(), (
+            core.SUPPORT_URL, core.BRAND_CHANNEL)
+    else:
+        assert core.SUPPORT_URL == "", (core.SUPPORT_URL, core.BRAND_CHANNEL)
 
 
 # ── index.json: تبلیغِ دسته‌های آبشاری ────────────────────────────────────────
@@ -13276,9 +13343,13 @@ def test_zzz_cty_header_is_inside_the_hiddify_window() -> None:
     with open(path, encoding="utf-8") as fh:
         lines = fh.read().split("\n")
     assert lines[0].startswith("#profile-title:"), lines[0]
-    assert core.BRAND_CHANNEL in lines[0]
-    for key in ("#profile-update-interval:", "#subscription-userinfo:",
-                "#support-url:", "#profile-web-page-url:"):
+    assert core.BRAND in lines[0]
+    _cty_keys = ["#profile-update-interval:", "#subscription-userinfo:",
+                 "#profile-web-page-url:"]
+    if core.SUPPORT_URL:
+        # خطِ support-url فقط وقتی هست که لینکِ پشتیبانی تنظیم شده باشد
+        _cty_keys.append("#support-url:")
+    for key in _cty_keys:
         hits = [i for i, ln in enumerate(lines[:29]) if ln.startswith(key)]
         assert hits, f"کلیدِ {key} در پنجرهٔ ۲۹ خطیِ Hiddify نیست"
     first_cfg = next(i for i, ln in enumerate(lines)
