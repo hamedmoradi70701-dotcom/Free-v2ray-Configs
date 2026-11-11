@@ -62098,7 +62098,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | رادار | 0D1653"
+- name: "IR \U0001F1EE\U0001F1F7 | رادار | 0D1653"
   server: getnet.serversubasli.top
   port: 8080
   type: vmess
@@ -62110,7 +62110,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: "DE \U0001F1E9\U0001F1EA | رادار | CF2049"
+- name: "IR \U0001F1EE\U0001F1F7 | رادار | CF2049"
   server: getnet.serversubasli.top
   port: 8080
   type: vmess
@@ -73173,7 +73173,7 @@ proxies:
     path: /ws-vmess
     headers:
       Host: vah4urdzl3jdx5r2.v.3dns.vip
-- name: "BR \U0001F1E7\U0001F1F7 | رادار | D4672F"
+- name: "IR \U0001F1EE\U0001F1F7 | رادار | D4672F"
   server: varzesh3.com
   port: 8080
   type: vmess
@@ -80883,8 +80883,8 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 8886C7"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9B851D"
   - "DE \U0001F1E9\U0001F1EA | رادار | B45A68"
-  - "DE \U0001F1E9\U0001F1EA | رادار | 0D1653"
-  - "DE \U0001F1E9\U0001F1EA | رادار | CF2049"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 0D1653"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | CF2049"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 593440"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 9FF19C"
   - "ES \U0001F1EA\U0001F1F8 | رادار | EFE452"
@@ -81737,7 +81737,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 2F845E"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 867005"
   - "HK \U0001F1ED\U0001F1F0 | رادار | FB921B"
-  - "BR \U0001F1E7\U0001F1F7 | رادار | D4672F"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | D4672F"
   - "GB \U0001F1EC\U0001F1E7 | رادار | B9C52A"
   - "IR \U0001F1EE\U0001F1F7 | رادار | CD9008"
   - "IR \U0001F1EE\U0001F1F7 | رادار | AD6A30"
@@ -87217,8 +87217,8 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 8886C7"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9B851D"
   - "DE \U0001F1E9\U0001F1EA | رادار | B45A68"
-  - "DE \U0001F1E9\U0001F1EA | رادار | 0D1653"
-  - "DE \U0001F1E9\U0001F1EA | رادار | CF2049"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 0D1653"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | CF2049"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 593440"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 9FF19C"
   - "ES \U0001F1EA\U0001F1F8 | رادار | EFE452"
@@ -88071,7 +88071,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | 2F845E"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 867005"
   - "HK \U0001F1ED\U0001F1F0 | رادار | FB921B"
-  - "BR \U0001F1E7\U0001F1F7 | رادار | D4672F"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | D4672F"
   - "GB \U0001F1EC\U0001F1E7 | رادار | B9C52A"
   - "IR \U0001F1EE\U0001F1F7 | رادار | CD9008"
   - "IR \U0001F1EE\U0001F1F7 | رادار | AD6A30"
