@@ -685,7 +685,22 @@ def run_pipeline(lines: Iterable[str], out_dir: str,
                  rounds: Optional[int] = None, fast_ms: Optional[int] = None,
                  top_n: Optional[int] = None, **kwargs: Any) -> Dict[str, Any]:
     """آبشارِ کامل: L0/L1 → L2 → L3×n → سبدها → فایل‌ها → health.json."""
-    lines = list(lines)
+    # ── پالایهٔ کشورهایِ محروم از انتشار (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱) ──────────
+    # دروازهٔ اصلی در `aggregate.process_category` است و در اجرای معمولِ
+    # ورک‌فلو ورودیِ این‌جا (`all/configs.txt`) از همان گذشته. این پالایه
+    # برای اجراهای مستقیمِ همین فایل است (ورودیِ کهنه یا خارجی) تا سبدها،
+    # `top100.txt` و `Countries/` در هیچ مسیری کانفیگِ محروم نگیرند. داوری
+    # از روی **برچسبِ خودِ خط** است (`countries.country_code_of`) — شبکه
+    # پرسیده نمی‌شود، و خطِ بی‌برچسب دست‌نخورده می‌ماند چون داوریِ بی‌برچسب
+    # کارِ لایه‌های بعدی است، نه این پالایه.
+    lines_in = list(lines)
+    lines = [ln for ln in lines_in
+             if not core.is_excluded_country(countries.country_code_of(ln or ""))]
+    excluded_country_dropped = len(lines_in) - len(lines)
+    if excluded_country_dropped:
+        print(f"🚫 excluded-country filter: dropped {excluded_country_dropped} "
+              f"line(s) — countries={sorted(core.EXCLUDED_COUNTRIES)}",
+              flush=True)
     t_all = time.time()
 
     # ── چرا L0/L1 دوباره صدا زده می‌شود ────────────────────────────────────
@@ -712,6 +727,7 @@ def run_pipeline(lines: Iterable[str], out_dir: str,
     buckets = build_buckets(rr, fast_ms=fast_ms, top_n=top_n)
     paths = write_buckets(out_dir, buckets)
     st = buckets["stats"]
+    st["excluded_country_dropped"] = excluded_country_dropped
     st["l2"] = l2["stats"]
     buckets["paths"] = paths
 

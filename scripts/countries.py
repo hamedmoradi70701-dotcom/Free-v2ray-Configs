@@ -320,6 +320,13 @@ def group_by_country(lines: Iterable[str]) -> Dict[str, List[str]]:
         code = country_code_of(s)
         if not code or code == GLOBAL_CODE:
             continue
+        # کشورهایِ محروم از انتشار (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱ — تعریفِ سیاست
+        # در `core.EXCLUDED_COUNTRIES`): گروهی برایشان ساخته نمی‌شود، پس نه
+        # فایلی دارند و نه در `Countries/index.json` نامی از آن‌ها می‌آید.
+        # دروازهٔ اصلی بالادست است (`aggregate`)؛ این‌جا آخرین خطِ دفاعِ
+        # لایهٔ کشوری است تا فراخوانیِ مستقیمِ این ماژول هم قانون را نشکند.
+        if core.is_excluded_country(code):
+            continue
         groups.setdefault(code, []).append(s)
     return groups
 
@@ -619,6 +626,18 @@ def write_countries(out_dir: str, lines: Sequence[str]) -> Dict[str, Any]:
     # ۳
     names = resolve_names(groups) if groups else {}
 
+    # ۳٫۵ — داوریِ دومِ محرومیت، این بار با **نام** (`core.EXCLUDED_COUNTRY_NAMES`).
+    # گروه‌بندی با کد داوری کرده؛ این‌جا، که نامِ هر گروه از پایگاه‌داده معلوم
+    # شده، همان سیاست با بازنمایِ دوم هم اعمال می‌شود تا هیچ مسیری — حتی
+    # ناهمخوانیِ روزیِ کد و نام در پایگاه‌داده — فایلِ کشورِ محروم نسازد.
+    excluded_named = {c: len(v) for c, v in groups.items()
+                      if core.is_excluded_country_name(names.get(c, ""))}
+    for code in excluded_named:
+        groups.pop(code, None)
+        names.pop(code, None)
+    if excluded_named:
+        log(f"  🚫 {COUNTRIES_DIR}: excluded by name: {excluded_named}")
+
     # ۴ — نامِ فایل. برخوردِ نام روی هر ۲۵۱ نامِ پایگاه‌داده سنجیده شد و
     # صفر بود؛ ولی «سنجیده‌شده صفر» با «ناممکن» یکی نیست: نسخهٔ آیندهٔ
     # پایگاه‌داده می‌تواند دو نام بدهد که به یک slug برسند. در آن حالت
@@ -695,6 +714,7 @@ def write_countries(out_dir: str, lines: Sequence[str]) -> Dict[str, Any]:
         "input": len([ln for ln in lines if (ln or "").strip()]),
         "pruned": pruned,
         "skipped_small": skipped,
+        "excluded_named": excluded_named,
         "failed": failed,
         "named_from_db": sum(1 for c in written if names.get(c) != c),
         "min_per_country": MIN_PER_COUNTRY,

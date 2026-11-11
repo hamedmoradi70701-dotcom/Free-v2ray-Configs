@@ -1445,6 +1445,41 @@ def test_live_first_ordering_alive_match_is_by_dedup_key_not_text():
     core.reset_country_cache()
 
 
+def test_excluded_country_is_dropped_at_the_aggregate_branding_gate():
+    """کانفیگِ کشورِ محروم در دروازهٔ برندینگِ تجمیع حذف می‌شود (۲۰۲۶-۱۱-۱۱).
+
+    این دروازه نخستین نقطه‌ای است که کشور معلوم است و همهٔ خروجی‌ها
+    پایین‌دستش‌اند؛ اگر این‌جا نشت کند، به همهٔ رده‌ها و `protocols/` و
+    آبشار می‌رسد. مکان با بدلِ `geo.country_for_host` قفل می‌شود تا تست
+    به پایگاه‌داده و DNS گره نخورد.
+    """
+    import aggregate
+
+    il_line = "vless://aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa@1.2.3.4:443?type=tcp"
+    de_line = "vless://bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb@5.6.7.8:443?type=tcp"
+
+    real_cf = geo.country_for_host
+    geo.country_for_host = lambda host: (("IL", "🇮🇱") if host == "1.2.3.4"
+                                         else ("DE", "🇩🇪"))
+    try:
+        core.reset_country_cache()
+        # نسخهٔ دومِ همان خطِ محروم عمداً هست: اولی در دروازهٔ برندینگ
+        # می‌افتد و دومی در فهرستِ تکراری‌ها می‌نشیند — و بایگانیِ تکراری‌ها
+        # هم منتشر می‌شود، پس آن هم باید پالوده شود.
+        r = aggregate.process_category({"u": [il_line, il_line, de_line]}, ["u"])
+    finally:
+        geo.country_for_host = real_cf
+        core.reset_country_cache()
+
+    assert r.excluded_country_dropped == 2, r.excluded_country_dropped
+    # نمونه‌ها فقط نقطهٔ پایانی‌اند، نه خطِ کانفیگ (`health.json` منتشر می‌شود)
+    assert r.excluded_country_samples == ["1.2.3.4"], r.excluded_country_samples
+    assert r.duplicates == [], r.duplicates
+    assert [core.endpoint_of(ln) for ln in r.unique] == ["5.6.7.8"], r.unique
+    assert countries.country_code_of(r.unique[0]) == "DE"
+    assert all(countries.country_code_of(ln) != "IL" for ln in r.unique)
+
+
 def test_index_advertises_the_publish_branch_key():
     """index.json باید شاخهٔ انتشار را با نامِ جدید و قدیمی اعلام کند."""
     import aggregate
@@ -13346,6 +13381,48 @@ def test_zzz_cty_global_never_becomes_a_country_file() -> None:
     assert "Global.txt" not in present
     assert not [p for p in present if p.endswith(".txt")], \
         f"از ورودیِ تماماً Global فایل ساخته شد: {present}"
+
+
+def test_zzz_cty_excluded_country_never_becomes_a_country_file() -> None:
+    """کشورِ محروم از انتشار (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱) فایل و فهرست ندارد.
+
+    سیاست در `core.EXCLUDED_COUNTRIES` / `EXCLUDED_COUNTRY_NAMES` تعریف
+    شده و این‌جا هر دو بازنمایش سنجیده می‌شود: کدِ ISO روی برچسبِ خط، و
+    نامِ کشور در مرحلهٔ نام‌گذاری. «نبودن» باید **کامل** باشد: نه گروه،
+    نه `Israel.txt`، نه ردیفی در `Countries/index.json` — و شمارش‌ها هم
+    باید با همان واقعیت بخوانند (کانفیگِ محروم در هیچ جمعی نیست).
+    """
+    # خودِ داورها
+    assert core.is_excluded_country("IL")
+    assert core.is_excluded_country("il")
+    assert not core.is_excluded_country("DE")
+    assert not core.is_excluded_country("Global")
+    assert not core.is_excluded_country("")
+    assert not core.is_excluded_country(None)
+    assert core.is_excluded_country_name("Israel")
+    assert not core.is_excluded_country_name("Germany")
+    assert not core.is_excluded_country_name("")
+
+    # گروه‌بندی: گروهِ IL ساخته نمی‌شود، بقیه دست‌نخورده می‌مانند
+    lines = ([_cty_line("IL", ip=f"7.7.7.{i}") for i in range(3)] +
+             [_cty_line("DE", ip=f"5.5.5.{i}") for i in range(2)])
+    groups = countries.group_by_country(lines)
+    assert sorted(groups) == ["DE"], f"گروهِ محروم ساخته شد: {sorted(groups)}"
+    assert len(groups["DE"]) == 2
+
+    # نوشتنِ واقعی: نه فایل، نه فهرست، نه شمارش
+    out = _tmpdir("cty_excl_")
+    stats = countries.write_countries(out, lines)
+    base = os.path.join(out, countries.COUNTRIES_DIR)
+    present = sorted(os.listdir(base)) if os.path.isdir(base) else []
+    assert not [p for p in present if "Israel" in p], \
+        f"فایلِ کشورِ محروم ساخته شد: {present}"
+    assert stats["countries"] == 1, stats
+    assert stats["configs"] == 2, stats
+    idx = json.loads(open(os.path.join(base, countries.INDEX_NAME),
+                          encoding="utf-8").read())
+    assert [c["code"] for c in idx["countries"]] == ["DE"], idx["countries"]
+    assert all(c["name"] != "Israel" for c in idx["countries"])
 
 
 def test_zzz_cty_every_config_survives_a_real_write() -> None:

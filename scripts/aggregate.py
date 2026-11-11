@@ -40,6 +40,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import core  # noqa: E402
 import converters  # noqa: E402
+import countries  # noqa: E402
 import mihomo_compat  # noqa: E402
 import state as memory  # noqa: E402
 from sources import LIGHT_SOURCES, HEAVY_SOURCES, VIFY_ALIVE_URL  # noqa: E402
@@ -440,6 +441,12 @@ class CategoryResult:
         # را رد می‌کند. جزئیات و مدرکِ اجرایی در `mihomo_compat.py`.
         self.mihomo_fatal: Dict[str, int] = {}
         self.mihomo_fatal_samples: List[str] = []
+        # ── دروازهٔ کشورهایِ محروم از انتشار (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱) ──────
+        # خطوطی که کشورِ مقصدشان در `core.EXCLUDED_COUNTRIES` است و پس از
+        # برندینگ حذف شدند تا وارد هیچ خروجی‌ای نشوند. تعریفِ سیاست و دلیلِ
+        # جای این دروازه: بخشِ «کشورهای محروم از انتشار» در `core.py`.
+        self.excluded_country_dropped = 0
+        self.excluded_country_samples: List[str] = []
 
 
 def _note_mihomo_fatal(r: "CategoryResult", line: str) -> bool:
@@ -593,10 +600,58 @@ def process_category(
                     r.unbranded_samples.append(branded[:160])
                 continue
 
+        # ══════════════════════════════════════════════════════════════════════
+        # 🚫 دروازهٔ کشورهایِ محروم از انتشار (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱)
+        # ══════════════════════════════════════════════════════════════════════
+        # جای این دروازه **دقیقاً این‌جا**ست: نخستین نقطه‌ای که کشورِ هر
+        # کانفیگ معلوم است (برچسب تازه روی خط نشسته) و هنوز هیچ خروجی‌ای از
+        # استخرِ یکتاها تغذیه نشده — دسته‌ها، `protocols/` و `index.json`
+        # همه پایین‌دستِ `r.unique`‌اند و آبشارِ `pipeline.py` هم ورودی‌اش
+        # را از همین استخر (`all/configs.txt`) می‌گیرد. خواندنِ کد از **خودِ
+        # برچسب** (همان خوانندهٔ `countries.country_code_of` که لایهٔ کشوری
+        # به کار می‌برد) تضمین می‌کند داوریِ حذف با داوریِ گروه‌بندی یکی
+        # باشد؛ بازسنجی از روی شبکه هم هزینه داشت هم می‌توانست با برچسبِ
+        # چاپ‌شده واگرا شود.
+        # ══════════════════════════════════════════════════════════════════════
+        if core.is_excluded_country(countries.country_code_of(branded)):
+            r.excluded_country_dropped += 1
+            # نمونه فقط **نقطهٔ پایانی** است، نه خودِ خط: `health.json` منتشر
+            # می‌شود و نمونهٔ کامل یعنی انتشارِ همان کانفیگی که سیاست حذفش
+            # کرده. برای ریشه‌یابی، دانستنِ مقصد کافی است.
+            if len(r.excluded_country_samples) < 3:
+                r.excluded_country_samples.append(core.endpoint_of(branded))
+            continue
+
         r.unique.append(branded)
         proto = core.protocol_of(branded)
         if proto:
             r.protocol_counts[proto] = r.protocol_counts.get(proto, 0) + 1
+
+    # ── همان سیاست روی بایگانی‌ها ────────────────────────────────────────────
+    # `archive/<cat>_broken.txt` و `<cat>_duplicates.txt` هم **منتشر** می‌شوند
+    # و `index.json` تبلیغشان می‌کند؛ خطِ محروم اگر در آن‌ها بماند، دستورِ
+    # «در هیچ خروجی‌ای نباشد» نقض شده، حتی اگر در رده‌ها نباشد. تکراری‌ها
+    # همزادِ یک خطِ نگه‌داشته‌شده‌اند (همان هویتِ سرور در `dedup_key`)، پس
+    # کشورِ مقصدشان در کش‌های همین حلقه آماده است؛ خراب‌ها ممکن است مقصدِ
+    # تازه داشته باشند، پس یک گرم‌کردنِ دسته‌ایِ دیگر — با همان سیاستِ
+    # «هرگز تجمیع را متوقف نکن».
+    if r.broken or r.duplicates:
+        if geo is not None:
+            try:
+                geo.warm_up([core.endpoint_of(ln)
+                             for ln in r.broken + r.duplicates])
+            except Exception as e:  # هرگز نباید تجمیع را متوقف کند
+                log(f"  ⚠️ geo warm-up (archive) skipped: {e}")
+        for attr in ("broken", "duplicates"):
+            kept_lines: List[str] = []
+            for ln in getattr(r, attr):
+                code, _flag = core.country_for_endpoint(
+                    core.endpoint_of(ln), core.remark_of(ln))
+                if core.is_excluded_country(code):
+                    r.excluded_country_dropped += 1
+                    continue
+                kept_lines.append(ln)
+            setattr(r, attr, kept_lines)
     return r
 
 
@@ -1158,6 +1213,12 @@ def build_health_report(
                                "by_reason": dict(sorted(getattr(r, "mihomo_fatal", {}).items())),
                                "samples": list(getattr(r, "mihomo_fatal_samples", []))}
                          for cat, r in results.items()} if results else None),
+        # دروازهٔ کشورهایِ محروم از انتشار — همان قاعدهٔ سه‌حالته: dict یعنی
+        # سنجیده شد (و صفرش یعنی این دور هیچ کانفیگِ محرومی در منابع نبود).
+        "excluded_country_gate": ({cat: {"dropped": getattr(r, "excluded_country_dropped", 0),
+                                         "countries": sorted(core.EXCLUDED_COUNTRIES),
+                                         "samples": list(getattr(r, "excluded_country_samples", []))}
+                                    for cat, r in results.items()} if results else None),
         "converter_gate": converter_gate,
         "geo": geo_stats,
     }
@@ -1337,6 +1398,11 @@ def main() -> int:
         if r.mihomo_fatal:
             log(f"  🛡️ mihomo gate [{cat}]: dropped {sum(r.mihomo_fatal.values())} "
                 f"line(s) that would empty the whole subscription — {r.mihomo_fatal}")
+    for cat, r in results.items():
+        if getattr(r, "excluded_country_dropped", 0):
+            log(f"  🚫 excluded-country gate [{cat}]: dropped "
+                f"{r.excluded_country_dropped} line(s) — "
+                f"countries={sorted(core.EXCLUDED_COUNTRIES)}")
 
     proto_counts = write_protocols(out_dir, res_all.unique)
     log("  • protocols: " + ", ".join(f"{k}={v}" for k, v in proto_counts.items() if v))
