@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — hysteria2 — 202 configs
+# رادار — hysteria2 — 204 configs
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=off#US 🇺🇸 | رادار | 19974A
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=163.192.14.135#US 🇺🇸 | رادار | 4929FF
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=css.rbxcdn.com#US 🇺🇸 | رادار | BDDA85
@@ -126,6 +126,8 @@ hysteria2://65ec84f5-0dd4-4582-8b4f-592e50b22116@usm2.473221.xyz:23452?sni=usm2.
 hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?security=tls&obfs=salamander&obfs-password=uw9b2qq5rx&insecure=0&sni=fiproxy1.lockdwn.com#FI 🇫🇮 | رادار | A5D1E1
 hysteria2://6f7a8009ecf6a12e10d03f9d88493c89@167.179.34.13:55443?insecure=1&sni=gorbachev-th.kvnfreetest.uk#TH 🇹🇭 | رادار | 84D0BF
 hysteria2://8674df07-56b3-43ea-b687-aef2b1a20137@31.76.22.210:443?insecure=1&sni=crt.ultimagamest.com#PL 🇵🇱 | رادار | 9BED5E
+hysteria2://a35c508f-4d5d-4531-842e-6e9d43c762c0@13.143.189.101:4444?security=tls&insecure=0&sni=pl1.nexfile.net#PL 🇵🇱 | رادار | 145130
+hysteria2://a35c508f-4d5d-4531-842e-6e9d43c762c0@13.143.189.146:4444?security=tls&insecure=0&sni=pl3.nexfile.net#PL 🇵🇱 | رادار | 65324A
 hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@181.214.99.162:35000?security=tls&obfs=salamander&obfs-password=@JavidnamanIran-Javid-SHAH-KingRezaPahlavi&insecure=1&sni=api.kermanshahi.org#DE 🇩🇪 | رادار | 9BA342
 hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?sni=hy2.123266.xyz#US 🇺🇸 | رادار | 71EE3B
 hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?insecure=1#US 🇺🇸 | رادار | 7CFC83

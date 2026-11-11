@@ -2,30 +2,27 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — SWITZERLAND (CH) — 23 configs
+# رادار — SWITZERLAND (CH) — 20 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.127:19999#CH 🇨🇭 | رادار | ACB330
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@23.166.88.189:19999#CH 🇨🇭 | رادار | 68B652
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.166.88.127:19999#CH 🇨🇭 | رادار | ACB330
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@186.190.215.251:19999#CH 🇨🇭 | رادار | 0AC273
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@79.127.184.104:19999#CH 🇨🇭 | رادار | A80DAC
+vless://7163913b-0d6c-4a5a-933b-b6f61c1807da@179.254.183.17:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=ch2.docuflow.pw&fp=firefox&pbk=K6gjLMpQGTgIcRyUyixXVFkLvHscKVmpyZFNkBy1rBY&sid=47483658f59442b6#CH 🇨🇭 | رادار | 249AEB
+vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?encryption=none&security=reality&flow=xtls-rprx-vision&type=tcp&sni=www.cloudflare.com&fp=firefox&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&sid=19253fae84102271#CH 🇨🇭 | رادار | 15C43B
 vless://3950b45e-740d-4dca-ac95-505ec8534592@45.90.59.15:443?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY&security=reality&sid=19253fae84102271&sni=www.cloudflare.com&type=tcp#CH 🇨🇭 | رادار | 0B7909
 vless://9dd38d60-e683-47c6-bd53-d71bdfee78f3@179.43.187.67:443?security=tls&encryption=none&headerType=none&type=tcp&sni=portal.mavexa.ir#CH 🇨🇭 | رادار | A19323
-vless://TG-FuckTheWall@201.8.81.117:443?encryption=none&extra={"mode":"packet-up","uplinkHTTPMethod":"GET","xPaddingBytes":"100-1000"}&fp=chrome&host=www.ethz.ch&mode=packet-up&path=/api/v1/stream&pbk=k7RqsI1Kip_ORgCMLeDHjyleJFoN0AJqxOXXCQnGjG4&security=reality&sid=6266751745c4f0df&sni=ethz.ch&spx=/f2e942ae3003092&support-x25519mlkem768=true&type=xhttp&x_padding_bytes=100-1000#CH 🇨🇭 | رادار | B8A2CC
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@79.127.184.104:19999#CH 🇨🇭 | رادار | A80DAC
 vless://90157e25-cee1-4217-921e-91f300bc1a24@prvtch.titun.su:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=firefox&spx=/&type=tcp&flow=xtls-rprx-vision&sni=perevodchiki.su&sid=428ef87fd47a3a32#CH 🇨🇭 | رادار | E668FC
-vless://c0dd6d59-1573-43af-8b70-1470b2632a6d@208.69.78.217:2053?fp=random&pbk=A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0&security=reality&sid=ad86e2d52ff40ebd&sni=www.apple.com&type=tcp#CH 🇨🇭 | رادار | 1ED64E
-vless://c0dd6d59-1573-43af-8b70-1470b2632a6d@208.69.78.217:2053?fp=random&host=www.apple.com&pbk=A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0&security=reality&sid=ad86e2d52ff40ebd&sni=www.apple.com&type=tcp#CH 🇨🇭 | رادار | 99AF64
-vless://c0dd6d59-1573-43af-8b70-1470b2632a6d@208.69.78.217:2053?fp=firefox&path=%2F&pbk=A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0&security=reality&sid=ad86e2d52ff40ebd&sni=www.apple.com&type=tcp#CH 🇨🇭 | رادار | C5E5CF
-vless://7163913b-0d6c-4a5a-933b-b6f61c1807da@179.254.183.17:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=ch2.docuflow.pw&fp=firefox&pbk=K6gjLMpQGTgIcRyUyixXVFkLvHscKVmpyZFNkBy1rBY&sid=47483658f59442b6#CH 🇨🇭 | رادار | 249AEB
+vless://ce8faf30-b1d6-4a53-95a0-8520dc609db3@85.208.69.43:33055?mode=auto&path=%2F&security=reality&encryption=none&pbk=1rvxGeCvBMccFM2LKGJ4SqezdkMxS4ZZagHR1MGdCgo&fp=chrome&type=xhttp&sni=yandex.ru&sid=77#CH 🇨🇭 | رادار | 716AD1
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | 8433E8
-vless://52a5a29f-c162-411a-8a37-a3f11b0dc537@74.161.152.237:2083?security=reality&type=tcp&allowInsecure=1&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=0123456789abcdef&pbk=WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4#CH 🇨🇭 | رادار | A43E99
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?allowInsecure=0&sni=courses.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | C6F0FA
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?fp=chrome&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | 5C059F
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?security=tls&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&sni=resources.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | A652DE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?sni=cdn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 82B9CD
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 894BDE
+vless://52a5a29f-c162-411a-8a37-a3f11b0dc537@74.161.152.237:2083?security=reality&type=tcp&allowInsecure=1&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=0123456789abcdef&pbk=WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4#CH 🇨🇭 | رادار | A43E99
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=learn.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | 50D925
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?sni=resources.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | DA2ACE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?sni=www.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 252CA9
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?fp=chrome&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | 5C059F
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=yourultimateprofessionalcareerhub.com#CH 🇨🇭 | رادار | A7A956
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 894BDE
+vless://c0dd6d59-1573-43af-8b70-1470b2632a6d@208.69.78.217:2053?fp=random&host=www.apple.com&pbk=A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0&security=reality&sid=ad86e2d52ff40ebd&sni=www.apple.com&type=tcp#CH 🇨🇭 | رادار | 99AF64
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.60:443?sni=cdn.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | 82B9CD
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?sni=resources.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | رادار | DA2ACE

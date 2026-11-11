@@ -1,13 +1,13 @@
 {
-  "round": 13,
+  "round": 14,
   "schema": 1,
   "sources": {
     "02f36a4da70c": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         160,
@@ -22,13 +22,15 @@
         157,
         159,
         157,
-        156
+        156,
+        157
       ],
       "url": "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt",
       "yield": [
         306,
         306,
         306,
+        323,
         323,
         323,
         323,
@@ -77,9 +79,9 @@
     "07d2577deb24": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         675,
@@ -93,6 +95,7 @@
         675,
         675,
         1034,
+        1039,
         1039,
         1039
       ],
@@ -110,17 +113,19 @@
         1627,
         1616,
         1616,
+        1616,
         1616
       ]
     },
     "099e14c9420a": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
+        1,
         1,
         1,
         1,
@@ -137,6 +142,7 @@
       ],
       "url": "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
       "yield": [
+        4,
         4,
         4,
         4,
@@ -188,9 +194,9 @@
     "16ff92e05f8b": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         1111,
@@ -205,7 +211,8 @@
         1102,
         1097,
         1099,
-        1108
+        1108,
+        1104
       ],
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/ss_iran.txt",
       "yield": [
@@ -214,6 +221,7 @@
         2369,
         2369,
         2369,
+        2345,
         2345,
         2345,
         2345,
@@ -260,9 +268,9 @@
     "17d79afe99aa": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         13,
@@ -276,6 +284,7 @@
         10,
         10,
         10,
+        11,
         11,
         11
       ],
@@ -293,15 +302,16 @@
         174,
         174,
         162,
+        162,
         162
       ]
     },
     "1b69e56c1acc": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         35,
@@ -309,6 +319,7 @@
         35,
         35,
         35,
+        37,
         37,
         37,
         37,
@@ -332,15 +343,16 @@
         126,
         126,
         126,
+        126,
         126
       ]
     },
     "26c4b656bc53": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         565,
@@ -355,10 +367,12 @@
         569,
         566,
         564,
-        566
+        566,
+        565
       ],
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
       "yield": [
+        944,
         944,
         944,
         944,
@@ -377,9 +391,9 @@
     "270e367f8c5e": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         1865,
@@ -394,10 +408,12 @@
         1828,
         1824,
         1824,
+        1831,
         1831
       ],
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
       "yield": [
+        2967,
         2967,
         2967,
         2967,
@@ -416,9 +432,9 @@
     "3d9683d61c66": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         6,
@@ -433,7 +449,8 @@
         4,
         4,
         7,
-        6
+        6,
+        7
       ],
       "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
       "yield": [
@@ -449,21 +466,23 @@
         150,
         149,
         150,
+        150,
         150
       ]
     },
     "4afe05d07a5b": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         16,
         16,
         16,
         16,
+        17,
         17,
         17,
         17,
@@ -488,15 +507,16 @@
         332,
         332,
         332,
+        332,
         332
       ]
     },
     "5b2086a46f9f": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         696,
@@ -511,7 +531,8 @@
         707,
         668,
         713,
-        710
+        710,
+        713
       ],
       "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
       "yield": [
@@ -527,15 +548,16 @@
         2775,
         2788,
         2777,
+        2777,
         2777
       ]
     },
     "650075ca00cb": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         8,
@@ -543,6 +565,7 @@
         8,
         8,
         8,
+        9,
         9,
         9,
         9,
@@ -566,15 +589,16 @@
         15,
         15,
         15,
+        15,
         15
       ]
     },
     "651369651731": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         1426,
@@ -589,10 +613,12 @@
         1440,
         1436,
         1435,
-        1437
+        1437,
+        1433
       ],
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
       "yield": [
+        2197,
         2197,
         2197,
         2197,
@@ -611,9 +637,9 @@
     "7a13c5ecd078": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         98,
@@ -628,7 +654,8 @@
         85,
         126,
         85,
-        77
+        77,
+        94
       ],
       "url": "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/all_servers.txt",
       "yield": [
@@ -644,15 +671,16 @@
         742,
         972,
         972,
-        734
+        734,
+        648
       ]
     },
     "8686f61fd235": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         635,
@@ -667,7 +695,8 @@
         609,
         581,
         606,
-        605
+        605,
+        612
       ],
       "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
       "yield": [
@@ -683,15 +712,16 @@
         1988,
         1988,
         1988,
+        1988,
         1988
       ]
     },
     "a04365da7f6d": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         1743,
@@ -706,7 +736,8 @@
         1778,
         1742,
         1724,
-        1728
+        1728,
+        1730
       ],
       "url": "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt",
       "yield": [
@@ -722,15 +753,16 @@
         4386,
         4368,
         4368,
+        4368,
         4368
       ]
     },
     "ab64febd34a1": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         341,
@@ -745,7 +777,8 @@
         338,
         334,
         338,
-        341
+        341,
+        336
       ],
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/trojan_iran.txt",
       "yield": [
@@ -761,15 +794,16 @@
         493,
         493,
         493,
+        493,
         493
       ]
     },
     "b6a175df3297": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         453,
@@ -784,6 +818,7 @@
         437,
         454,
         458,
+        459,
         459
       ],
       "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
@@ -800,15 +835,16 @@
         2949,
         2949,
         2949,
+        2949,
         2949
       ]
     },
     "c751be4ebbaa": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         50,
@@ -823,6 +859,7 @@
         28,
         28,
         25,
+        26,
         26
       ],
       "url": "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
@@ -834,6 +871,7 @@
         629,
         629,
         629,
+        551,
         551,
         551,
         551,
@@ -878,9 +916,9 @@
     "dbf1e97aa252": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         21,
@@ -895,7 +933,8 @@
         33,
         36,
         33,
-        33
+        33,
+        30
       ],
       "url": "https://raw.githubusercontent.com/iampedii/whitedns-sub/main/base64.txt",
       "yield": [
@@ -911,15 +950,16 @@
         120,
         128,
         128,
+        128,
         128
       ]
     },
     "dca83f2b40d2": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         4,
@@ -933,6 +973,7 @@
         9,
         9,
         2,
+        9,
         9,
         9
       ],
@@ -950,15 +991,16 @@
         18,
         18,
         19,
+        19,
         19
       ]
     },
     "e0e00f921e84": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         285,
@@ -973,7 +1015,8 @@
         69,
         105,
         115,
-        94
+        94,
+        164
       ],
       "url": "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/main/all_servers.txt",
       "yield": [
@@ -989,15 +1032,16 @@
         802,
         805,
         979,
+        979,
         979
       ]
     },
     "ec3b2e2b4363": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         83,
@@ -1010,6 +1054,7 @@
         82,
         82,
         82,
+        83,
         83,
         83,
         83
@@ -1028,15 +1073,16 @@
         106,
         106,
         106,
+        106,
         106
       ]
     },
     "f0c5974733af": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "heavy",
       "unique": [
         1180,
@@ -1051,7 +1097,8 @@
         1160,
         1136,
         1138,
-        1158
+        1158,
+        1147
       ],
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/vless_iran.txt",
       "yield": [
@@ -1067,15 +1114,16 @@
         2250,
         2250,
         2250,
+        2250,
         2250
       ]
     },
     "f9192be4f09b": {
       "disabled_since": null,
       "fail": 0,
-      "last_seen": "2026-11-11T19:24:09Z",
+      "last_seen": "2026-11-11T19:38:23Z",
       "reason": null,
-      "rounds": 13,
+      "rounds": 14,
       "tier": "light",
       "unique": [
         2,
@@ -1088,6 +1136,7 @@
         34,
         33,
         34,
+        33,
         33,
         33,
         33
@@ -1106,9 +1155,10 @@
         263,
         263,
         263,
+        263,
         263
       ]
     }
   },
-  "updated_at": "2026-11-11T19:24:09Z"
+  "updated_at": "2026-11-11T19:38:23Z"
 }
