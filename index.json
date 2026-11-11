@@ -1,11 +1,11 @@
 {
   "brand": "رادار",
   "generator": "رادارBot aggregator",
-  "updated_at": "2026-11-11T09:58:19.742455+00:00",
-  "updated_at_unix": 1794391099,
-  "next_update_eta": "2026-11-11T10:13:19.742455+00:00",
+  "updated_at": "2026-11-11T10:08:36.125766+00:00",
+  "updated_at_unix": 1794391716,
+  "next_update_eta": "2026-11-11T10:23:36.125766+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 43.4,
+  "elapsed_seconds": 39.2,
   "raw_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
@@ -23,19 +23,19 @@
   },
   "categories": {
     "all": {
-      "unique": 18026,
+      "unique": 18023,
       "broken": 1,
-      "duplicates": 17104,
-      "total_fetched": 35173,
+      "duplicates": 16838,
+      "total_fetched": 34904,
       "active_sources": 27,
       "protocols": {
         "vless": 6962,
-        "vmess": 5578,
-        "shadowsocks": 2954,
-        "trojan": 2239,
-        "hysteria2": 236,
+        "vmess": 5579,
+        "shadowsocks": 2950,
+        "trojan": 2235,
+        "hysteria2": 239,
         "shadowsocksr": 45,
-        "socks": 4,
+        "socks": 5,
         "ssvless": 2,
         "slipnet-enc": 2,
         "trojanvless": 1,
@@ -55,23 +55,23 @@
       }
     },
     "heavy": {
-      "unique": 15581,
+      "unique": 15565,
       "broken": 1,
-      "duplicates": 11068,
-      "total_fetched": 26691,
+      "duplicates": 10815,
+      "total_fetched": 26422,
       "active_sources": 18,
       "protocols": {
-        "vless": 6485,
-        "vmess": 3874,
-        "shadowsocks": 2916,
-        "trojan": 2132,
-        "hysteria2": 121,
+        "vless": 6482,
+        "vmess": 3867,
+        "shadowsocks": 2912,
+        "trojan": 2126,
+        "hysteria2": 124,
         "shadowsocksr": 45,
         "ssvless": 2,
         "slipnet-enc": 2,
+        "socks": 2,
         "trojanvless": 1,
         "vlessvless": 1,
-        "socks": 1,
         "tuic": 1
       },
       "files": {
@@ -117,12 +117,12 @@
   },
   "protocols": {
     "vless": 6962,
-    "vmess": 5578,
-    "shadowsocks": 2954,
-    "trojan": 2239,
-    "hysteria2": 236,
+    "vmess": 5579,
+    "shadowsocks": 2950,
+    "trojan": 2235,
+    "hysteria2": 239,
     "shadowsocksr": 45,
-    "socks": 4,
+    "socks": 5,
     "ssvless": 2,
     "slipnet-enc": 2,
     "hysteria": 1,
@@ -185,7 +185,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1220,
+      "unique": 1293,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt",
@@ -199,7 +199,7 @@
       }
     },
     "fast": {
-      "unique": 855,
+      "unique": 896,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/fast/configs.txt",
@@ -213,7 +213,7 @@
       }
     },
     "secure": {
-      "unique": 845,
+      "unique": 883,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/secure/configs.txt",
@@ -234,8 +234,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 49,
-    "configs": 1220,
+    "count": 44,
+    "configs": 1293,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/Countries/index.json",
