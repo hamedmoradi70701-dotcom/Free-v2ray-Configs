@@ -6,5 +6,5 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHMnNobGJlUlhkRTQ1YVZB@68.219.96.146:443#IE 🇮🇪 | رادار | 469CD5
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4ZHMxMGJRcnZZNEtFOFR6@68.219.96.146:443#IE 🇮🇪 | رادار | 3CFCC6
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHMnNobGJlUlhkRTQ1YVZB@68.219.96.146:443?spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM#IE 🇮🇪 | رادار | 469CD5

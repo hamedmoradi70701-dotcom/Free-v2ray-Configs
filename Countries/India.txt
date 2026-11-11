@@ -1,0 +1,11 @@
+#profile-title: رادار — INDIA (IN)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — INDIA (IN) — 3 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://7d53c50c-3abf-4cb5-9d58-e7a42ce1d1c6@148.113.5.22:443?security=reality&encryption=none&pbk=Z427KvuqeeUvrRo-BDKuc9xG5t0z0y4zAnhA_NIFFwI&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=7ff98efcced3fd5b#IN 🇮🇳 | رادار | A9A46D
+vless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&alpn=networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-&fp=chrome&security=reality&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&sid=68a8#IN 🇮🇳 | رادار | 685828
+vless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443?alpn=h2%2Chttp%2F1.1&flow=xtls-rprx-vision&fp=chrome&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&security=reality&sid=68a8&sni=deepl.com&type=raw#IN 🇮🇳 | رادار | 2D0ED1

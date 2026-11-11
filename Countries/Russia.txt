@@ -6,26 +6,26 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vless://97fd7807-7e2b-49da-8a0e-e40197088f97@196.240.125.6:8443?flow=xtls-rprx-vision&security=tls&sni=api-v1-6af3f40b.vmagnum.win&alpn=h2&fp=firefox#RU 🇷🇺 | رادار | 721ECC
 ss://YWVzLTEyOC1nY206ODcyMmRlNTZiNmMwYjNmNmE0ZDAxY2Y5MWMwN2U2YWE=@38.60.223.125:13108#RU 🇷🇺 | رادار | 510B01
-ss://YWVzLTI1Ni1nY206Y0NNSmdKVEEzQkE0ODlZVVlyRnE3WEhYU2lTcFdsTGE@46.17.47.58:18443#RU 🇷🇺 | رادار | 3B5218
-vless://c8c2ddff-825a-46c3-bbdd-4a101de468a7@188.130.209.212:443?security=reality&encryption=none&pbk=6vubZmkLVtaiFF8JyGFy7XSy2pc7ywN4P625QLKw8wc&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=thumbs.mycdn-io.ru&sid=11979c0c9b2da371#RU 🇷🇺 | رادار | E7FEE8
-vless://87c35d3a-36f1-fade-90b7-af60506efbb8@176.108.245.237:443?security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=tfusq-ru-40sb.fade.mom#RU 🇷🇺 | رادار | 8E5DED
-vless://db57c865-2318-4fd2-8aea-e8ba58ec696d@212.41.9.190:2087?encryption=none&pbk=YhkmKAgHTooOB7pfAPXt63-4WY6X1f4kVe1USOjYd2M&security=reality&serviceName=cas-al&sid=045cb3a9&sni=s3.storage.selcloud.ru&type=grpc&fp=ios#RU 🇷🇺 | رادار | 46F1DA
-vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f&type=tcp&headerType=none#RU 🇷🇺 | رادار | 820CA6
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@136.234.9.28:443?type=grpc&security=reality&fp=firefox&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&sid=d3bd772514c87d28&sni=717252g.nl8.h1clayd.click&serviceName=204adda7e3da#RU 🇷🇺 | رادار | F4B380
-vless://010be6fa-ab5f-404a-9edf-ab2db1f09f0c@lt.krevetkabs111.net:14443?security=tls&sni=lt.krevetkabs111.net&fp=firefox&type=ws&host=lt.krevetkabs111.net&path=%2Fapi%2Fgenerate&encryption=none#RU 🇷🇺 | رادار | 48638D
-vless://4777d90d-265b-4927-a0d1-63f36ed1421c@193.160.208.240:443?encryption=none&fp=firefox&mode=auto&path=%2Fassets%2Ftwru01%2F&security=tls&sni=193.160.208.240&type=xhttp#RU 🇷🇺 | رادار | ECB71A
+ss://YWVzLTI1Ni1nY206Y0NNSmdKVEEzQkE0ODlZVVlyRnE3WEhYU2lTcFdsTGE=@46.17.47.58:18443#RU 🇷🇺 | رادار | 3B5218
+vless://a628c583-24a8-4ce5-98ad-c6458abf1cc4@84.38.184.126:2092?type=grpc&security=reality&encryption=none&sni=s3.storage.selcloud.ru&fp=chrome&pbk=DAmuGIDPePcOcjrme7P9mSurDbw3TJMpb7xjFMyixnc&sid=53823c70&serviceName=cas-it#RU 🇷🇺 | رادار | 0D35CD
+vless://87c35d3a-36f1-fade-90b7-af60506efbb8@176.108.245.237:443?alpn=h2,http/1.1&encryption=none&security=tls&sni=tfusq-ru-40sb.fade.mom&type=tcp#RU 🇷🇺 | رادار | 8E5DED
+vless://7ad63b26-bf70-4872-8fab-ebaf73a1e19d@5.129.202.80:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=mirror-50.topp-con.xyz&fp=chrome&security=reality&pbk=NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8&sid=2ef2b10d5143d798#RU 🇷🇺 | رادار | 5EAFAF
 vless://010be6fa-ab5f-404a-9edf-ab2db1f09f0c@138.16.249.118:14443?security=tls&sni=lt.krevetkabs111.net&fp=firefox&type=ws&host=lt.krevetkabs111.net&path=%2Fapi%2Fgenerate#RU 🇷🇺 | رادار | BEEFDD
-vless://4777d90d-265b-4927-a0d1-63f36ed1421c@201.34.142.108:443?fp=chrome&mode=auto&path=/assets/nlrelay01/&security=tls&type=xhttp#RU 🇷🇺 | رادار | 8378B9
+vless://1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200@201.51.11.65:443?security=reality&encryption=none&pbk=GiDgVRVYrTkv1mZJeFVWkr736Iey2kqLM6L0eUbffV8&headerType=none&type=tcp&sni=absolute-disaster.org&insecure=0&flow=xtls-rprx-vision#RU 🇷🇺 | رادار | F2F792
+vless://010be6fa-ab5f-404a-9edf-ab2db1f09f0c@lt.krevetkabs111.net:14443?security=tls&sni=lt.krevetkabs111.net&fp=firefox&type=ws&host=lt.krevetkabs111.net&path=%2Fapi%2Fgenerate&encryption=none#RU 🇷🇺 | رادار | 48638D
 vless://4cabcd59-a405-4c00-96f5-03507e1e28fa@188.225.73.41:443?security=tls&serviceName=cache.sync.v1&sni=cadrin.wtf&type=grpc#RU 🇷🇺 | رادار | 44ABD3
+vless://4cabcd59-a405-4c00-96f5-03507e1e28fa@188.225.73.41:443?encryption=none&fp=firefox&mode=gun&security=tls&serviceName=cache.sync.v1&sni=cadrin.wtf&type=grpc#RU 🇷🇺 | رادار | 468C09
+vless://4777d90d-265b-4927-a0d1-63f36ed1421c@201.34.142.108:443?fp=chrome&mode=auto&path=/assets/nlrelay01/&security=tls&type=xhttp#RU 🇷🇺 | رادار | 8378B9
 vless://4777d90d-265b-4927-a0d1-63f36ed1421c@201.34.142.108:443?encryption=none&fp=firefox&mode=auto&path=%2Fassets%2Fnlrelay01%2F&security=tls&sni=201.34.142.108&type=xhttp#RU 🇷🇺 | رادار | 6C7278
+vless://4cabcd59-a405-4c00-96f5-03507e1e28fa@188.225.37.43:443?encryption=none&fp=firefox&host=torvani.cyou&path=/api/boards/live&security=tls&sni=torvani.cyou&type=ws#RU 🇷🇺 | رادار | 716F58
+vless://4777d90d-265b-4927-a0d1-63f36ed1421c@193.160.208.240:443?encryption=none&fp=firefox&mode=auto&path=%2Fassets%2Ftwru01%2F&security=tls&sni=193.160.208.240&type=xhttp#RU 🇷🇺 | رادار | ECB71A
 vless://010be6fa-ab5f-404a-9edf-ab2db1f09f0c@lt.neuroblur.top:14443?type=ws&security=tls&path=/api/generate&host=lt.neuroblur.top&sni=lt.neuroblur.top&alpn=http%2F1.1&fp=firefox&encryption=none#RU 🇷🇺 | رادار | E6025B
 vless://010be6fa-ab5f-404a-9edf-ab2db1f09f0c@nlf2.krevetkabs111.net:14443?security=tls&sni=nlf2.krevetkabs111.net&fp=firefox&type=ws&host=nlf2.krevetkabs111.net&path=%2Fapi%2Fgenerate&encryption=none#RU 🇷🇺 | رادار | 764AF4
-vless://4cabcd59-a405-4c00-96f5-03507e1e28fa@188.225.37.43:443?encryption=none&fp=firefox&host=torvani.cyou&path=/api/boards/live&security=tls&sni=torvani.cyou&type=ws#RU 🇷🇺 | رادار | 716F58
-ss://YWVzLTI1Ni1nY206TlRpSEJnNjRmc1k4dThEYkdydHlwRDlnUEdTTDM4NnA@185.22.153.117:18443#RU 🇷🇺 | رادار | C79225
-vless://db57c865-2318-4fd2-8aea-e8ba58ec696d@212.41.9.190:14443?type=grpc&security=reality&fp=chrome&pbk=6ire5xfQhZ2rq-fMvnm_f3AzHOkY0LXBh-3msGfK0jw&sid=be69581b&sni=s3.storage.selcloud.ru&serviceName=cas-jp#RU 🇷🇺 | رادار | A41F95
+vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f&type=tcp&headerType=none#RU 🇷🇺 | رادار | 820CA6
+vless://4b50270b-5caf-4c34-b3da-17b4525604a6@astravellion.xyz:443?encryption=none&type=grpc&mode=gun&serviceName=glush.de1.v1&security=tls&sni=astravellion.xyz&alpn=h2&fp=firefox#RU 🇷🇺 | رادار | 0335CB
+vless://4b50270b-5caf-4c34-b3da-17b4525604a6@188.225.37.175:443?alpn=http/1.1&encryption=none&fp=firefox&host=cryptoventura.online&path=/api/de3/live&security=tls&sni=cryptoventura.online&type=ws#RU 🇷🇺 | رادار | 360AEB
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@f0d7aft.nl17.h1clayd.click:443?encryption=none&type=tcp&security=reality&sni=f0d7aft.nl17.h1clayd.click&pbk=kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI&sid=8956c57cb4c4f8d2&fp=firefox&spx=/#RU 🇷🇺 | رادار | 9AA255
-vless://ebd1c0d6-7ff4-4b9f-8692-237517a27a64@104.171.133.209:443?security=reality&encryption=none&pbk=mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=anyfile2file.com&sid=64c1fe36c7846400#RU 🇷🇺 | رادار | 264AEB
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@0592efg.us8.h1clayd.click:443?type=grpc&headerType=none&security=reality&encryption=none&sni=0592efg.us8.h1clayd.click&fp=firefox&pbk=cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk&sid=bd8f712209a9c283&spx=%2F&serviceName=99f2107b03f8&mode=gun#RU 🇷🇺 | رادار | 7C5E74
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@961ec0g.nl17.h1clayd.click:443?encryption=none&type=grpc&security=reality&sni=961ec0g.nl17.h1clayd.click&pbk=xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA&sid=6d289ff0f47c0aac&fp=firefox&spx=/&serviceName=7d5abcd7d8a1#RU 🇷🇺 | رادار | 74B793
-vless://4b50270b-5caf-4c34-b3da-17b4525604a6@188.225.37.175:443?alpn=http%2F1.1&encryption=none&fp=firefox&host=cryptoventura.online&path=%2Fapi%2Fde3%2Flive&security=tls&sni=cryptoventura.online&type=ws#RU 🇷🇺 | رادار | 360AEB
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@0592efg.us8.h1clayd.click:443?type=grpc&headerType=none&security=reality&encryption=none&sni=0592efg.us8.h1clayd.click&fp=firefox&pbk=cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk&sid=bd8f712209a9c283&spx=%2F&serviceName=99f2107b03f8&mode=gun#RU 🇷🇺 | رادار | 7C5E74
