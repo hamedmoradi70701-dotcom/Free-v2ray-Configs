@@ -1,0 +1,7 @@
+#profile-title: رادار — TROJANVLESS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — trojanvless — 1 configs
+# --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
+trojanvless://a52ac672-0f5f-4070-b8fd-6b5685fc8004@199.7.140.201:443?security=reality&encryption=none&pbk=LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE&headerType=none&fp=firefox&type=tcp&sni=www.cloudflare.com#US 🇺🇸 | رادار | EFC4F8

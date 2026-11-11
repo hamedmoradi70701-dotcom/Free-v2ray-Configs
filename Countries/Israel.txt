@@ -1,0 +1,11 @@
+#profile-title: رادار — ISRAEL (IL)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — ISRAEL (IL) — 3 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://YWVzLTI1Ni1nY206amZXb1NWQ1ZZWFJtTkJmQw@64.177.66.60:8388#IL 🇮🇱 | رادار | F16C3F
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?security=tls&insecure=0&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=exploreeducationsectoropportunitiestodayandadvancecareers.com#IL 🇮🇱 | رادار | 60EE8A
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?allowInsecure=1&sni=exploreeducationsectoropportunitiestodayandadvancecareers.com&type=tcp#IL 🇮🇱 | رادار | 7C445A
