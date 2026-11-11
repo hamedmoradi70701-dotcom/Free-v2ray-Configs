@@ -1447,6 +1447,11 @@ jobs:
               echo "🔎 total commits on '$PUBLISH_BRANCH' = $(git rev-list --count "$NEW_TIP")"
             fi
           fi
+      - name: 📣 Post to Telegram channel
+        if: success() && steps.gate.outputs.should_run == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python scripts/notify_telegram.py
       # ── پاک‌سازیِ کشِ jsDelivr ★★★ ─────────────────────────────
       #
       # مسئله (اندازه‌گیریِ زندهٔ همین مخزن، نه حدس)
