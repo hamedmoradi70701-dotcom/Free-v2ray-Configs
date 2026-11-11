@@ -2,5 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — socks — 1 configs
-socks://45.74.31.46:9524#NL 🇳🇱 | رادار | 12D254
+# رادار — socks — 8 configs
+socks://dGVzdDEyMzp0ZXN0MTIz@104.168.249.36:1080#US 🇺🇸 | رادار | 291B2C
+socks://Og%3D%3D@20.83.154.79:7070#US 🇺🇸 | رادار | 43E1F4
+socks://Og%3D%3D@47.251.166.203:1080#US 🇺🇸 | رادار | E183C2
+socks://Og%3D%3D@5.255.117.127:1080#NL 🇳🇱 | رادار | 43EDA0
+socks://Og%3D%3D@69.55.49.177:38182#US 🇺🇸 | رادار | E208F9
+socks://Og==@#Global 🌐 | رادار | B064AB
+socks://Ok5vbmU%3D@69.55.49.177:38182#US 🇺🇸 | رادار | EE3388
+socks://Ok5vbmU=@#Global 🌐 | رادار | F328CD

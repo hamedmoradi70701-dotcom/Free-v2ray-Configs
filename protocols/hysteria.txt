@@ -1,0 +1,6 @@
+#profile-title: رادار — HYSTERIA
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — hysteria — 1 configs
+hysteria://62.210.28.175:24667?alpn=h3&auth_str=dongtaiwang.com&downmbps=55&obfsParam=&insecure=1&peer=bing.com&upmbps=11#FR 🇫🇷 | رادار | 6A95D7
