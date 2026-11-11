@@ -55,7 +55,6 @@
       </a>
       <nav class="primary-nav" aria-label="{{nav.label}}">
         <a href="#hub">{{nav.hub}}</a>
-        <a href="#bot">{{nav.bot}}</a>
         <a href="#explorer">{{nav.explorer}}</a>
         <a href="#countries">{{nav.countries}}</a>
         <a href="#proof">{{nav.proof}}</a>
@@ -68,7 +67,6 @@
         <summary aria-label="{{nav.menu}}"><span aria-hidden="true">☰</span></summary>
         <nav aria-label="{{nav.label}}">
           <a href="#hub">{{nav.hub}}</a>
-          <a href="#bot">{{nav.bot}}</a>
           <a href="#explorer">{{nav.explorer}}</a>
           <a href="#countries">{{nav.countries}}</a>
           <a href="#proof">{{nav.proof}}</a>
@@ -209,47 +207,6 @@
             <div class="app-links" id="appLinks"></div>
             <p class="apps-note">{{hub.appsNote}}</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── telegram bot ──────────────────────────────────────────────── -->
-  <section class="bot shell" id="bot" aria-labelledby="bot-title">
-    <div class="bot-card">
-      <div class="bot-content">
-        <div class="bot-eyebrow"><span class="bot-mark" aria-hidden="true"></span>{{bot.eyebrow}}</div>
-        <div class="bot-state"><span class="state-dot" aria-hidden="true"></span>{{bot.state}}</div>
-        <h2 id="bot-title">{{bot.title}}</h2>
-        <p class="bot-desc">{{{bot.desc_html}}}</p>
-        <ul class="bot-points">
-          <li>{{bot.p1}}</li>
-          <li>{{bot.p2}}</li>
-          <li>{{bot.p3}}</li>
-        </ul>
-        <div class="bot-actions">
-          <a class="bot-btn secondary" href="https://t.me/v2adikal" target="_blank" rel="noopener noreferrer"><span>{{bot.group}}</span><span aria-hidden="true">↗</span></a>
-        </div>
-        <a class="bot-browse" href="#explorer">{{bot.browse}}<span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="bot-visual">
-        <div class="bot-orbit bot-orbit-a" aria-hidden="true"></div>
-        <div class="bot-orbit bot-orbit-b" aria-hidden="true"></div>
-        <div class="bot-visual-title">{{bot.visualTitle}}</div>
-        <div class="device" role="img" aria-label="{{bot.flowAlt}}">
-          <div class="device-top">
-            <span class="device-avatar"><img src="{{@base}}assets/brand-icon.webp" width="42" height="42" alt="" loading="lazy" decoding="async"></span>
-            <span class="device-name"><strong>v2Ray Extractor</strong></span>
-            <span class="device-dots" aria-hidden="true">•••</span>
-          </div>
-          <div class="device-flow">
-            <div class="node"><span class="node-i">01</span><span>{{bot.n1}}</span><span class="pip" aria-hidden="true"></span></div>
-            <div class="node-line" aria-hidden="true"><span></span></div>
-            <div class="node"><span class="node-i">02</span><span>{{bot.n2}}</span><span class="pip" aria-hidden="true"></span></div>
-            <div class="node-line" aria-hidden="true"><span></span></div>
-            <div class="node"><span class="node-i">03</span><span>{{bot.n3}}</span><span class="pip" aria-hidden="true"></span></div>
-          </div>
-          <div class="device-foot"><span class="tech" dir="ltr">V2Ray · Xray</span><span>{{bot.foot}}</span></div>
         </div>
       </div>
     </div>

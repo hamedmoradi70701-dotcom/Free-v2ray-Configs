@@ -197,10 +197,6 @@
       [
         "Is it safe? Can the server see my traffic?",
         "The server operator can see your IP and connection metadata, and any traffic that is not encrypted end to end. Use HTTPS, prefer the Secure list, and never use these for sensitive accounts. This project does not certify any operator."
-      ],
-      [
-        "What is the Radar Telegram bot?",
-        "The رادار Telegram bot (v2Ray Extractor). It is connected to this repository and gives out free configs inside Telegram, so you do not have to visit a website."
       ]
     ]
   },
