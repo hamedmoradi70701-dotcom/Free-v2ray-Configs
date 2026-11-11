@@ -738,11 +738,18 @@ def test_docs_advertise_the_default_branch_only():
                 checked += 1
                 assert m.group(1) == "main", \
                     f"{name}: link pinned to branch {m.group(1)!r}: {m.group(0)}"
-        # آینه باید ذکر شده باشد ولی «اصلی» نباشد
+        # آینه باید ذکر شده باشد ولی «اصلی» نباشد.
+        # ★ استثنا (تصمیمِ مالک، ۲۰۲۶-۱۱-۱۱): README.md عمداً به یک عنوانِ
+        #   تنها خالی شد («توضیحات رو پاک کن»). فایلی که هیچ لینکِ اشتراکی
+        #   ندارد چیزی برای تبلیغ ندارد، پس سنجشِ غلبه روی آن بی‌معناست؛
+        #   قید فقط وقتی اعمال می‌شود که فایل واقعاً لینکی تبلیغ کند.
+        #   بقیهٔ ناورداها (شاخهٔ هر لینک باید main باشد، نبودِ لنگرِ منسوخ)
+        #   در هر دو حالت برقرار می‌مانند.
         n_raw = txt.count("raw.githubusercontent.com")
         n_cdn = txt.count("cdn.jsdelivr.net")
-        assert n_raw > n_cdn, \
-            f"{name}: jsDelivr still dominates (raw={n_raw} cdn={n_cdn})"
+        if n_raw + n_cdn > 0:
+            assert n_raw > n_cdn, \
+                f"{name}: jsDelivr still dominates (raw={n_raw} cdn={n_cdn})"
         # هیچ اثری از شاخهٔ data نباید در مستندات بماند
         assert "-why-a-separate-data-branch" not in txt, \
             f"{name}: still contains the obsolete data-branch rationale anchor"
