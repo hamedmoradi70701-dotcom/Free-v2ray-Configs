@@ -1,11 +1,11 @@
 {
   "brand": "رادار",
   "generator": "رادارBot aggregator",
-  "updated_at": "2026-11-11T17:35:59.468224+00:00",
-  "updated_at_unix": 1794418559,
-  "next_update_eta": "2026-11-11T17:50:59.468224+00:00",
+  "updated_at": "2026-11-11T18:00:47.696644+00:00",
+  "updated_at_unix": 1794420047,
+  "next_update_eta": "2026-11-11T18:15:47.696644+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 35.8,
+  "elapsed_seconds": 44.5,
   "raw_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
@@ -23,17 +23,17 @@
   },
   "categories": {
     "all": {
-      "unique": 17712,
+      "unique": 17701,
       "broken": 1,
-      "duplicates": 16810,
-      "total_fetched": 34599,
+      "duplicates": 16866,
+      "total_fetched": 34641,
       "active_sources": 27,
       "protocols": {
-        "vless": 6707,
-        "vmess": 5596,
-        "shadowsocks": 2916,
-        "trojan": 2230,
-        "hysteria2": 211,
+        "vless": 6703,
+        "vmess": 5597,
+        "shadowsocks": 2920,
+        "trojan": 2226,
+        "hysteria2": 203,
         "shadowsocksr": 45,
         "ssvless": 2,
         "slipnet-enc": 2,
@@ -53,17 +53,17 @@
       }
     },
     "heavy": {
-      "unique": 15202,
+      "unique": 15183,
       "broken": 1,
-      "duplicates": 10893,
-      "total_fetched": 26167,
+      "duplicates": 10950,
+      "total_fetched": 26202,
       "active_sources": 18,
       "protocols": {
-        "vless": 6214,
+        "vless": 6202,
         "vmess": 3864,
-        "shadowsocks": 2866,
-        "trojan": 2110,
-        "hysteria2": 96,
+        "shadowsocks": 2870,
+        "trojan": 2107,
+        "hysteria2": 88,
         "shadowsocksr": 45,
         "ssvless": 2,
         "slipnet-enc": 2,
@@ -83,13 +83,13 @@
       }
     },
     "light": {
-      "unique": 6346,
+      "unique": 6353,
       "broken": 0,
       "duplicates": 2081,
-      "total_fetched": 8432,
+      "total_fetched": 8439,
       "active_sources": 9,
       "protocols": {
-        "vmess": 3994,
+        "vmess": 4001,
         "vless": 1395,
         "shadowsocks": 487,
         "trojan": 278,
@@ -111,11 +111,11 @@
     }
   },
   "protocols": {
-    "vless": 6707,
-    "vmess": 5596,
-    "shadowsocks": 2916,
-    "trojan": 2230,
-    "hysteria2": 211,
+    "vless": 6703,
+    "vmess": 5597,
+    "shadowsocks": 2920,
+    "trojan": 2226,
+    "hysteria2": 203,
     "shadowsocksr": 45,
     "ssvless": 2,
     "slipnet-enc": 2,
@@ -174,7 +174,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1247,
+      "unique": 1158,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt",
@@ -188,7 +188,7 @@
       }
     },
     "fast": {
-      "unique": 772,
+      "unique": 780,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/fast/configs.txt",
@@ -202,7 +202,7 @@
       }
     },
     "secure": {
-      "unique": 880,
+      "unique": 786,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/secure/configs.txt",
@@ -223,8 +223,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 50,
-    "configs": 1247,
+    "count": 45,
+    "configs": 1158,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/Countries/index.json",

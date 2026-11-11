@@ -1,9 +1,0 @@
-#profile-title: رادار — COSTA RICA (CR)
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — COSTA RICA (CR) — 1 configs
-# source: verified/ — every config passed a real proxied request in ALL L3 rounds
-# location: GeoIP (DB-IP Country Lite) on the real network address of the server
-# note: this is where the SERVER is, not necessarily where your traffic exits
-vless://9443badf-414f-4b12-b19a-7cc2c7431163@190.93.247.95:8443?encryption=none&security=tls&sni=moz.ar-marz.fun&fp=firefox&type=ws&host=moz.ar-marz.fun&path=%2Fman#CR 🇨🇷 | رادار | 128D78

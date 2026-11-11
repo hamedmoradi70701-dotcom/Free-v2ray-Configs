@@ -2,9 +2,11 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — UKRAINE (UA) — 2 configs
+# رادار — UKRAINE (UA) — 4 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://d8b58872-cc25-4bb2-badb-b86399c075fa@netx.smrtai.top:443?security=reality&encryption=none&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&headerType=none&fp=chrome&type=tcp&sni=www.cloudflare.com&sid=d8b58872#UA 🇺🇦 | رادار | 6AAD21
+vless://7be1d25f-bc02-4eed-aa34-4bbc1bcabb55@sin5.fereshtehagonahnemikonnad.ir:2097?security=reality&encryption=none&pbk=bJUsLMshGFxw4AFJslDjNzBigCzHmGVWfeaRImnwo04&headerType=none&fp=chrome&type=tcp&sni=chatgpt.com&sid=30ae0eeeff39adde#UA 🇺🇦 | رادار | 749263
+vless://7be1d25f-bc02-4eed-aa34-4bbc1bcabb55@sin4.fereshtehagonahnemikonnad.ir:2097?security=reality&encryption=none&pbk=bJUsLMshGFxw4AFJslDjNzBigCzHmGVWfeaRImnwo04&headerType=none&fp=chrome&type=tcp&sni=chatgpt.com&sid=30ae0eeeff39adde#UA 🇺🇦 | رادار | 5E61B6
+vless://7be1d25f-bc02-4eed-aa34-4bbc1bcabb55@sin6.fereshtehagonahnemikonnad.ir:2097?security=reality&encryption=none&pbk=bJUsLMshGFxw4AFJslDjNzBigCzHmGVWfeaRImnwo04&headerType=none&fp=chrome&type=tcp&sni=chatgpt.com&sid=30ae0eeeff39adde#UA 🇺🇦 | رادار | 991C69
 vless://d8b58872-cc25-4bb2-badb-b86399c075fa@31.222.235.81:443?security=reality&encryption=none&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&headerType=none&fp=chrome&type=tcp&sni=www.cloudflare.com&sid=d8b58872#UA 🇺🇦 | رادار | 957C79

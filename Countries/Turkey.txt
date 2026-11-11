@@ -2,15 +2,14 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — TURKEY (TR) — 8 configs
+# رادار — TURKEY (TR) — 7 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://9beb7deb-9063-4244-9a54-03fd2504023b@trn21.mobileemdad.top:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ&security=reality&sid=9ed2fa&sni=delivery.mp.microsoft.com&type=tcp#TR 🇹🇷 | رادار | AADB81
 vless://a346c521-7a7f-452b-9356-a4893feb5982@62.133.63.45:8444?fp=firefox&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&security=reality&serviceName=GunService&sni=github.com&type=grpc#TR 🇹🇷 | رادار | 468FEB
 vless://a346c521-7a7f-452b-9356-a4893feb5982@62.133.63.45:8444?fp=chrome&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&security=reality&serviceName=GunService&sid=457fab2ac885dbe0&sni=github.com&type=grpc#TR 🇹🇷 | رادار | E6EE31
-vless://0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8@151.241.226.201:2053?fp=random&host=www.apple.com&pbk=bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104&security=reality&sid=9e419c0759b54d6f&sni=www.apple.com&type=tcp#TR 🇹🇷 | رادار | 581807
 vless://25e16692-d097-4e69-9e2d-8415609c1968@78.135.73.47:443?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8&security=reality&sid=f46cd3ea3d1eb72d&sni=www.datadoghq.com&type=tcp#TR 🇹🇷 | رادار | C0A394
-vless://25e16692-d097-4e69-9e2d-8415609c1968@78.135.73.47:443?security=reality&encryption=none&pbk=sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.datadoghq.com&sid=f46cd3ea3d1eb72d#TR 🇹🇷 | رادار | C33205
-vless://3f25b15b-1777-4c08-9ade-60336ac92a82@81.177.215.81:443?flow=xtls-rprx-vision&type=raw&security=reality&sni=misha2.plus-hit.ru&pbk=N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA&sid=7c8e3d4a9b1f26d3&fp=chrome&spx=/#TR 🇹🇷 | رادار | 557E63
 vless://0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8@151.241.226.201:2053?fp=random&pbk=bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104&security=reality&sid=9e419c0759b54d6f&sni=www.apple.com&type=tcp#TR 🇹🇷 | رادار | 9D9693
+vless://25e16692-d097-4e69-9e2d-8415609c1968@78.135.73.47:443?security=reality&encryption=none&pbk=sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.datadoghq.com&sid=f46cd3ea3d1eb72d#TR 🇹🇷 | رادار | C33205
+vless://0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8@151.241.226.201:2053?fp=random&host=www.apple.com&pbk=bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104&security=reality&sid=9e419c0759b54d6f&sni=www.apple.com&type=tcp#TR 🇹🇷 | رادار | 581807
+vless://3f25b15b-1777-4c08-9ade-60336ac92a82@81.177.215.81:443?flow=xtls-rprx-vision&type=raw&security=reality&sni=misha2.plus-hit.ru&pbk=N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA&sid=7c8e3d4a9b1f26d3&fp=chrome&spx=/#TR 🇹🇷 | رادار | 557E63
