@@ -26,6 +26,24 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/manrope-latin.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
 <link rel="stylesheet" href="../styles.css?v=ae9746b52d">
+<script>try{var _rs=JSON.parse(localStorage.getItem('radar_session')||'null');if(!_rs||!_rs.token)document.documentElement.classList.add('radar-locked')}catch(e){document.documentElement.classList.add('radar-locked')}</script>
+<style>
+.radar-locked body{overflow:hidden}
+#radarGate{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:18px;background:radial-gradient(1000px 600px at 70% -10%,rgba(168,85,247,.28),transparent 60%),linear-gradient(160deg,#150826,#2b1252)}
+.radar-locked #radarGate{display:flex}
+.rg-card{width:min(92vw,380px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px 24px;text-align:center;color:#f3efff;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.rg-logo{font-size:52px;line-height:1}
+.rg-title{font-size:30px;font-weight:800;margin-top:6px}
+.rg-sub{opacity:.8;font-size:14px;margin:6px 0 18px}
+.rg-tabs{display:flex;gap:8px;margin-bottom:14px}
+.rg-tab{flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:transparent;color:#e9e2ff;font-size:15px;cursor:pointer}
+.rg-tab.rg-on{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent;color:#fff;font-weight:700}
+.rg-in{width:100%;box-sizing:border-box;margin:6px 0;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.25);color:#fff;font-size:16px}
+.rg-in::placeholder{color:rgba(255,255,255,.45)}
+.rg-err{min-height:20px;color:#ff9db0;font-size:13.5px;margin:4px 0}
+.rg-go{width:100%;padding:13px;border:none;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#d946ef);color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+.rg-go:disabled{opacity:.55}
+</style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="zh_CN">
@@ -48,6 +66,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/#website","url":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/","name":"رادار Free V2Ray Configs","inLanguage":["en","fa","zh","ru","ar"]},{"@type":"WebPage","@id":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/#webpage","url":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/","name":"免费 V2Ray 配置 — 已验证的 VLESS、VMess、Trojan 与 Reality 订阅 | رادار","description":"免费 V2Ray / Xray 订阅，每 15 分钟重新构建一次。已验证列表中的每个配置都在全部 3 轮测试中通过了真实代理请求。支持 v2rayNG、Hiddify、Clash Meta 和 sing-box 一键导入。","inLanguage":"zh","isPartOf":{"@id":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/#website"}},{"@type":"SoftwareSourceCode","name":"Free-v2ray-Configs","codeRepository":"https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs","programmingLanguage":"Python","license":"https://spdx.org/licenses/MIT.html","creator":{"@type":"Person","name":"0xRadikal","url":"https://github.com/0xRadikal"}},{"@type":"Dataset","name":"Free V2Ray Configs (verified subscription)","description":"免费 V2Ray / Xray 订阅，每 15 分钟重新构建一次。已验证列表中的每个配置都在全部 3 轮测试中通过了真实代理请求。支持 v2rayNG、Hiddify、Clash Meta 和 sing-box 一键导入。","url":"https://hamedmoradi70701-dotcom.github.io/Free-v2ray-Configs/zh/","sameAs":"https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs","isAccessibleForFree":true,"license":"https://spdx.org/licenses/MIT.html","creator":{"@type":"Person","name":"0xRadikal"},"distribution":[{"@type":"DataDownload","encodingFormat":"text/plain","contentUrl":"https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs_base64.txt"},{"@type":"DataDownload","encodingFormat":"text/plain","contentUrl":"https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt"},{"@type":"DataDownload","encodingFormat":"application/yaml","contentUrl":"https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/clash.yaml"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/singbox.json"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/index.json"}]},{"@type":"FAQPage","inLanguage":"zh","mainEntity":[{"@type":"Question","name":"什么是 Free-v2ray-Configs？","acceptedAnswer":{"@type":"Answer","text":"一个开源的 V2Ray / Xray 配置集合（VLESS、Reality、VMess、Trojan、Shadowsocks、Hysteria2），由 0xRadikal 以 رادار 品牌维护。它大约每 15 分钟在 GitHub Actions 上重建一次，并发布纯文本、Base64、Clash 和 sing-box 订阅。"}},{"@type":"Question","name":"我应该用哪个列表？","acceptedAnswer":{"@type":"Answer","text":"从“已验证”开始。“快速”是中位延迟低于阈值的已验证配置，“安全”只保留启用了前向保密和证书校验的已验证配置。All / Heavy / Light 池大得多，但大多未经测试。"}},{"@type":"Question","name":"配置是如何验证的？","acceptedAnswer":{"@type":"Answer","text":"每个配置都会被拨号连接，然后用它向 cp.cloudflare.com/generate_204 发出真实 HTTP 请求。只有在本构建全部 3 个独立轮次中都成功的配置才能进入已验证列表。仅有 TCP 连接是不够的。"}},{"@type":"Question","name":"我的应用需要哪种格式？","acceptedAnswer":{"@type":"Answer","text":"Base64 是经典订阅，也是最安全的默认选择（v2rayNG、v2rayN、Hiddify、Streisand、Shadowrocket）。纯文本是同一列表的未编码版本。clash.yaml 是完整的 mihomo / Clash Meta 配置文件，singbox.json 是完整的 sing-box 配置。"}},{"@type":"Question","name":"这些配置能在我的网络上用吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。测试从本页显示的运行节点位置进行。过滤因国家和 ISP 而异，因此已验证的配置只能证明它在测试地可用，并不代表在所有地方都可用。"}},{"@type":"Question","name":"安全吗？服务器能看到我的流量吗？","acceptedAnswer":{"@type":"Answer","text":"服务器运营者可以看到你的 IP 和连接元数据，以及任何未端到端加密的流量。请使用 HTTPS，优先选择“安全”列表，切勿将这些配置用于敏感账户。本项目不对任何运营者做担保。"}}]}]}</script>
 </head>
 <body>
+<div id="radarGate"></div>
+<script src="../auth-gate.js"></script>
 <a class="skip" href="#hub">跳到订阅中心</a>
 
 <div class="site-top" id="top">

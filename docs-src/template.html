@@ -21,6 +21,24 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="{{@base}}{{@font_preload}}">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
 <link rel="stylesheet" href="{{@base}}styles.css?v={{@css_v}}">
+<script>try{var _rs=JSON.parse(localStorage.getItem('radar_session')||'null');if(!_rs||!_rs.token)document.documentElement.classList.add('radar-locked')}catch(e){document.documentElement.classList.add('radar-locked')}</script>
+<style>
+.radar-locked body{overflow:hidden}
+#radarGate{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:18px;background:radial-gradient(1000px 600px at 70% -10%,rgba(168,85,247,.28),transparent 60%),linear-gradient(160deg,#150826,#2b1252)}
+.radar-locked #radarGate{display:flex}
+.rg-card{width:min(92vw,380px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px 24px;text-align:center;color:#f3efff;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.rg-logo{font-size:52px;line-height:1}
+.rg-title{font-size:30px;font-weight:800;margin-top:6px}
+.rg-sub{opacity:.8;font-size:14px;margin:6px 0 18px}
+.rg-tabs{display:flex;gap:8px;margin-bottom:14px}
+.rg-tab{flex:1;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:transparent;color:#e9e2ff;font-size:15px;cursor:pointer}
+.rg-tab.rg-on{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent;color:#fff;font-weight:700}
+.rg-in{width:100%;box-sizing:border-box;margin:6px 0;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.25);color:#fff;font-size:16px}
+.rg-in::placeholder{color:rgba(255,255,255,.45)}
+.rg-err{min-height:20px;color:#ff9db0;font-size:13.5px;margin:4px 0}
+.rg-go{width:100%;padding:13px;border:none;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#d946ef);color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+.rg-go:disabled{opacity:.55}
+</style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="{{@og_locale}}">
@@ -40,6 +58,8 @@
 <script type="application/ld+json">{{{@jsonld}}}</script>
 </head>
 <body>
+<div id="radarGate"></div>
+<script src="{{@base}}auth-gate.js"></script>
 <a class="skip" href="#hub">{{skip}}</a>
 
 <div class="site-top" id="top">
