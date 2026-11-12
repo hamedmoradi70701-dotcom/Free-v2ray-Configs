@@ -83,6 +83,7 @@
         <p class="hero-desc">{{hero.desc}}</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">{{hero.cta1}}<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">{{golden.cta}}<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>{{hero.note}}</p>
       </div>
@@ -281,6 +282,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>{{map.overline}}</div>
+        <h2 id="worldmap-title">{{map.title}}</h2>
+        <p>{{map.sub}}</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>{{growth.overline}}</div>
+        <h2 id="growth-title">{{growth.title}}</h2>
+        <p>{{growth.sub}}</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -365,6 +398,7 @@
     <a href="#top">{{footer.top}} ↑</a>
     {{{@lang_links_html}}}
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="{{dock.label}}">

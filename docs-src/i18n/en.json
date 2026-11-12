@@ -131,6 +131,19 @@
     "search": "Search countries",
     "searchPh": "Search country…"
   },
+  "map": {
+    "overline": "LIVE WORLD MAP",
+    "title": "Radar on the world map.",
+    "sub": "One circle per country, sized by how many verified configs live there right now."
+  },
+  "growth": {
+    "overline": "TIME MACHINE",
+    "title": "Radar's growth, run by run.",
+    "sub": "Verified configs in every run, exactly as the robot recorded them."
+  },
+  "golden": {
+    "cta": "🥇 Golden Sub — the 50 fastest"
+  },
   "proof": {
     "overline": "BUILT FOR PROOF, NOT CLAIMS",
     "title": "Trust the process.",
@@ -303,6 +316,7 @@
     "use": "Use",
     "waitingJs": "LOADING",
     "livePool": "Live from repos — not tunnel-tested",
-    "mirrorStale": "GitHub unreachable · showing the jsDelivr mirror copy from {age} (the mirror caches longer). If GitHub is blocked for you, turn on the mirror switch in the hub."
+    "mirrorStale": "GitHub unreachable · showing the jsDelivr mirror copy from {age} (the mirror caches longer). If GitHub is blocked for you, turn on the mirror switch in the hub.",
+    "counter": "Visits today: {today} • Total: {total}"
   }
 }

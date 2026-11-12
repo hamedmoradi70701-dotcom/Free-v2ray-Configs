@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/estedad-arabic.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
-<link rel="stylesheet" href="../styles.css?v=c2edf4fd09">
+<link rel="stylesheet" href="../styles.css?v=ae9746b52d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="fa_IR">
@@ -91,6 +91,7 @@
         <p class="hero-desc">اشتراکِ متن‌بازِ VLESS · Reality · VMess · Trojan · Shadowsocks · Hysteria2. هر کانفیگِ تأییدشده پیش از انتشار، در سه دورِ مستقل یک درخواستِ واقعیِ HTTP را عبور داده است.</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">دریافت لینک اشتراک<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">🥇 ساب طلایی — ۵۰ سریع‌ترین<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>تست از محلِ سرورِ آزمون انجام می‌شود — تضمینی برای اینترنتِ شما نیست.</p>
       </div>
@@ -289,6 +290,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>نقشهٔ زندهٔ جهان</div>
+        <h2 id="worldmap-title">رادار روی نقشهٔ جهان.</h2>
+        <p>هر دایره یک کشور است و اندازه‌اش با تعدادِ کانفیگ‌های تأییدشده‌ای که همین حالا آنجاست بزرگ می‌شود.</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>ماشین زمان</div>
+        <h2 id="growth-title">رشدِ رادار، دور به دور.</h2>
+        <p>کانفیگ‌های تأییدشده در هر دورِ اجرا، دقیقاً همان‌طور که ربات ثبتشان کرده است.</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -378,6 +411,7 @@
     <a href="#top">بازگشت به بالا ↑</a>
     <a href="../" hreflang="en" lang="en">English</a><a href="../zh/" hreflang="zh" lang="zh">中文</a><a href="../ru/" hreflang="ru" lang="ru">Русский</a><a href="../ar/" hreflang="ar" lang="ar">العربية</a>
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="دسترسی سریع">
@@ -397,8 +431,8 @@
   </div>
 </dialog>
 
-<script id="i18n" type="application/json">{"lang":"fa","dir":"rtl","loading":"در حال بارگذاری دادهٔ زنده…","fresh":"دادهٔ زنده · {age}","stale":"داده دیر شده · آخرین ساخت {age}","broken":"خطِ تولید متوقف به نظر می‌رسد · آخرین ساخت {age}","unknownAge":"داده بارگذاری شد · زمانِ ساخت نامعلوم","mirrored":" (از آینهٔ jsDelivr)","failed":"دسترسی به گیت‌هاب و آینه ممکن نشد. لینک‌ها همچنان کار می‌کنند — «تازه‌سازی» را بزنید.","ago":"{n} پیش","inT":"{n} دیگر","now":"همین حالا","overdue":"با تأخیر","min":"{n} دقیقه","hr":"{n} ساعت","runner":"تست از {loc}","fastFoot":"تأییدشده، میانه زیرِ {ms} میلی‌ثانیه","configs":"{n} کانفیگ","verifiedDesc":"در هر ۳ دور یک درخواستِ واقعی را عبور داده. پیشنهاد برای همه.","fastDesc":"تأییدشده و تأخیرِ میانه زیرِ {ms} میلی‌ثانیه. بهترین برای سرعت.","secureDesc":"تأییدشده، محرمانگیِ پیشرو، بررسیِ گواهی روشن. بهترین برای حریمِ خصوصی.","top100Desc":"۱۰۰ کانفیگِ تأییدشدهٔ سریع‌تر. فهرستی کوتاه و سبک.","allDesc":"همهٔ موارد جمع‌آوری‌شده، بدونِ تکرار. بزرگ‌ترین فهرست — اغلب تست‌نشده.","heavyDesc":"فقط منابعِ پرحجمِ بالادستی. تست‌نشده.","lightDesc":"فقط منابعِ گزیدهٔ بالادستی. تست‌نشده.","countryDesc":"کانفیگ‌های تأییدشده‌ای که سرورشان در {name} است.","protocolDesc":"همهٔ کانفیگ‌های یکتای {name} از استخر. تست‌نشده.","tVerified":"تأییدشده","tFast":"سریع","tSecure":"امن","tTop100":"۱۰۰ برتر","tAll":"همه","tHeavy":"سنگین","tLight":"سبک","fBase64":"Base64","fBase64d":"اشتراکِ کلاسیک","fTxt":"متنِ ساده","fTxtd":"هر خط یک لینک","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"پیکربندیِ کاملِ JSON","copied":"در حافظه کپی شد","copyFail":"کپی ناموفق بود — لینک را انتخاب و دستی کپی کنید","copiedN":"{n} کانفیگ کپی شد","copy":"کپی","qr":"QR","showing":"نمایش {a} از {b}","failedList":"فهرستِ تأییدشده بارگذاری نشد.","retry":"تلاش دوباره","ready":"تأییدشده · زنده","readyMirror":"تأییدشده · آینه","unavailable":"در دسترس نیست","copyCountry":"کپی","countryNote":"{n} کشور · {c} کانفیگِ تأییدشده · مکان‌یابی با {m}","ofPool":"{p} از استخر","fRaw":"جمع‌آوری‌شده","fUnique":"یکتا پس از حذفِ تکراری","fTcp":"قابلِ اتصالِ TCP","fEver":"دست‌کم یک بار کار کرده","fStable":"قبول در همهٔ دورها","funnelNote":"{f}٪ از کانفیگ‌هایی که یک بار کار کردند در دورِ دیگری رد شدند — برای همین یک دور کافی نیست.","srcTag":"{ok} سالم · {d} غیرفعال · {n} کل","stOk":"سالم","stDisabled":"غیرفعال","stEmpty":"خالی","stFail":"خطا","noTls":"ندارد","noData":"—","qrTooLong":"این لینک برای کد QR بیش از حد طولانی است — آن را کپی کنید.","fParse":"قابلِ تجزیه و معتبر","clearJs":"پاک کردن فیلترها","emptyTitleJs":"کانفیگِ منطبقی پیدا نشد","emptyDescJs":"جستجو یا فیلترِ دیگری را امتحان کنید.","platAndroid":"اندروید","platMulti":"اندروید · iOS","secCipher":"رمز","secUnset":"نامشخص","use":"انتخاب","waitingJs":"در حال بارگذاری","livePool":"زنده از مخزن‌ها — تست تونل نشده","mirrorStale":"گیت‌هاب در دسترس نیست · نسخهٔ آینهٔ jsDelivr مربوط به {age} نمایش داده می‌شود (آینه دیرتر به‌روز می‌شود). اگر گیت‌هاب برایتان مسدود است، کلیدِ آینه را در مرکزِ اشتراک روشن کنید."}</script>
+<script id="i18n" type="application/json">{"lang":"fa","dir":"rtl","loading":"در حال بارگذاری دادهٔ زنده…","fresh":"دادهٔ زنده · {age}","stale":"داده دیر شده · آخرین ساخت {age}","broken":"خطِ تولید متوقف به نظر می‌رسد · آخرین ساخت {age}","unknownAge":"داده بارگذاری شد · زمانِ ساخت نامعلوم","mirrored":" (از آینهٔ jsDelivr)","failed":"دسترسی به گیت‌هاب و آینه ممکن نشد. لینک‌ها همچنان کار می‌کنند — «تازه‌سازی» را بزنید.","ago":"{n} پیش","inT":"{n} دیگر","now":"همین حالا","overdue":"با تأخیر","min":"{n} دقیقه","hr":"{n} ساعت","runner":"تست از {loc}","fastFoot":"تأییدشده، میانه زیرِ {ms} میلی‌ثانیه","configs":"{n} کانفیگ","verifiedDesc":"در هر ۳ دور یک درخواستِ واقعی را عبور داده. پیشنهاد برای همه.","fastDesc":"تأییدشده و تأخیرِ میانه زیرِ {ms} میلی‌ثانیه. بهترین برای سرعت.","secureDesc":"تأییدشده، محرمانگیِ پیشرو، بررسیِ گواهی روشن. بهترین برای حریمِ خصوصی.","top100Desc":"۱۰۰ کانفیگِ تأییدشدهٔ سریع‌تر. فهرستی کوتاه و سبک.","allDesc":"همهٔ موارد جمع‌آوری‌شده، بدونِ تکرار. بزرگ‌ترین فهرست — اغلب تست‌نشده.","heavyDesc":"فقط منابعِ پرحجمِ بالادستی. تست‌نشده.","lightDesc":"فقط منابعِ گزیدهٔ بالادستی. تست‌نشده.","countryDesc":"کانفیگ‌های تأییدشده‌ای که سرورشان در {name} است.","protocolDesc":"همهٔ کانفیگ‌های یکتای {name} از استخر. تست‌نشده.","tVerified":"تأییدشده","tFast":"سریع","tSecure":"امن","tTop100":"۱۰۰ برتر","tAll":"همه","tHeavy":"سنگین","tLight":"سبک","fBase64":"Base64","fBase64d":"اشتراکِ کلاسیک","fTxt":"متنِ ساده","fTxtd":"هر خط یک لینک","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"پیکربندیِ کاملِ JSON","copied":"در حافظه کپی شد","copyFail":"کپی ناموفق بود — لینک را انتخاب و دستی کپی کنید","copiedN":"{n} کانفیگ کپی شد","copy":"کپی","qr":"QR","showing":"نمایش {a} از {b}","failedList":"فهرستِ تأییدشده بارگذاری نشد.","retry":"تلاش دوباره","ready":"تأییدشده · زنده","readyMirror":"تأییدشده · آینه","unavailable":"در دسترس نیست","copyCountry":"کپی","countryNote":"{n} کشور · {c} کانفیگِ تأییدشده · مکان‌یابی با {m}","ofPool":"{p} از استخر","fRaw":"جمع‌آوری‌شده","fUnique":"یکتا پس از حذفِ تکراری","fTcp":"قابلِ اتصالِ TCP","fEver":"دست‌کم یک بار کار کرده","fStable":"قبول در همهٔ دورها","funnelNote":"{f}٪ از کانفیگ‌هایی که یک بار کار کردند در دورِ دیگری رد شدند — برای همین یک دور کافی نیست.","srcTag":"{ok} سالم · {d} غیرفعال · {n} کل","stOk":"سالم","stDisabled":"غیرفعال","stEmpty":"خالی","stFail":"خطا","noTls":"ندارد","noData":"—","qrTooLong":"این لینک برای کد QR بیش از حد طولانی است — آن را کپی کنید.","fParse":"قابلِ تجزیه و معتبر","clearJs":"پاک کردن فیلترها","emptyTitleJs":"کانفیگِ منطبقی پیدا نشد","emptyDescJs":"جستجو یا فیلترِ دیگری را امتحان کنید.","platAndroid":"اندروید","platMulti":"اندروید · iOS","secCipher":"رمز","secUnset":"نامشخص","use":"انتخاب","waitingJs":"در حال بارگذاری","livePool":"زنده از مخزن‌ها — تست تونل نشده","mirrorStale":"گیت‌هاب در دسترس نیست · نسخهٔ آینهٔ jsDelivr مربوط به {age} نمایش داده می‌شود (آینه دیرتر به‌روز می‌شود). اگر گیت‌هاب برایتان مسدود است، کلیدِ آینه را در مرکزِ اشتراک روشن کنید.","counter":"بازدید امروز: {today} • کل: {total}"}</script>
 <script src="../vendor/qrcode-generator-1.4.4.js?v=18ae399f81" defer></script>
-<script src="../app.js?v=793a427688" defer></script>
+<script src="../app.js?v=23712a21f8" defer></script>
 </body>
 </html>

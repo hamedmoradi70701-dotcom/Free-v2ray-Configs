@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/manrope-latin.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
-<link rel="stylesheet" href="styles.css?v=c2edf4fd09">
+<link rel="stylesheet" href="styles.css?v=ae9746b52d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="en_US">
@@ -91,6 +91,7 @@
         <p class="hero-desc">An open-source VLESS · Reality · VMess · Trojan · Shadowsocks · Hysteria2 subscription. Each verified config carried a real HTTP request in three independent rounds before it was published.</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">Get your subscription<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">🥇 Golden Sub — the 50 fastest<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>Tested from the runner location — not a guarantee for your ISP.</p>
       </div>
@@ -289,6 +290,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>LIVE WORLD MAP</div>
+        <h2 id="worldmap-title">Radar on the world map.</h2>
+        <p>One circle per country, sized by how many verified configs live there right now.</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>TIME MACHINE</div>
+        <h2 id="growth-title">Radar&#x27;s growth, run by run.</h2>
+        <p>Verified configs in every run, exactly as the robot recorded them.</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -378,6 +411,7 @@
     <a href="#top">Back to top ↑</a>
     <a href="fa/" hreflang="fa" lang="fa">فارسی</a><a href="zh/" hreflang="zh" lang="zh">中文</a><a href="ru/" hreflang="ru" lang="ru">Русский</a><a href="ar/" hreflang="ar" lang="ar">العربية</a>
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="Quick actions">
@@ -397,8 +431,8 @@
   </div>
 </dialog>
 
-<script id="i18n" type="application/json">{"lang":"en","dir":"ltr","loading":"Loading live data…","fresh":"Live data · {age}","stale":"Data is late · last build {age}","broken":"Pipeline looks stalled · last build {age}","unknownAge":"Data loaded · build time unknown","mirrored":" (via jsDelivr mirror)","failed":"Could not reach GitHub or the mirror. The links still work — try Refresh.","ago":"{n} ago","inT":"in {n}","now":"just now","overdue":"overdue","min":"{n} min","hr":"{n} h","runner":"Tested from {loc}","fastFoot":"Verified, median \u003c {ms} ms","configs":"{n} configs","verifiedDesc":"Passed a real request in all 3 rounds. Recommended for everyone.","fastDesc":"Verified and median delay under {ms} ms. Best for speed.","secureDesc":"Verified, forward secrecy, certificate validation left on. Best for privacy.","top100Desc":"The 100 fastest verified configs. A short, light list.","allDesc":"Everything collected, deduplicated. Largest list — mostly untested.","heavyDesc":"Only the high-volume upstream sources. Untested.","lightDesc":"Only the curated upstream sources. Untested.","countryDesc":"Verified configs whose server is in {name}.","protocolDesc":"Every unique {name} config from the pool. Not tested.","tVerified":"Verified","tFast":"Fast","tSecure":"Secure","tTop100":"Top 100","tAll":"All","tHeavy":"Heavy","tLight":"Light","fBase64":"Base64","fBase64d":"Classic subscription","fTxt":"Plain text","fTxtd":"One link per line","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"Full JSON config","copied":"Copied to clipboard","copyFail":"Copy failed — select the link and copy it manually","copiedN":"{n} configs copied","copy":"Copy","qr":"QR","showing":"Showing {a} of {b}","failedList":"The verified list could not be loaded.","retry":"Retry","ready":"VERIFIED · LIVE","readyMirror":"VERIFIED · MIRROR","unavailable":"UNAVAILABLE","copyCountry":"Copy","countryNote":"{n} countries · {c} verified configs · location by {m}","ofPool":"{p} of the pool","fRaw":"Collected","fUnique":"Unique after dedup","fTcp":"TCP reachable","fEver":"Worked at least once","fStable":"Passed every round","funnelNote":"{f}% of configs that worked once failed another round — that is why one round is not enough.","srcTag":"{ok} ok · {d} disabled · {n} total","stOk":"ok","stDisabled":"disabled","stEmpty":"empty","stFail":"fail","noTls":"none","noData":"—","qrTooLong":"This link is too long for a QR code — copy it instead.","fParse":"Parsable \u0026 valid","clearJs":"Clear filters","emptyTitleJs":"No matching configs","emptyDescJs":"Try a different search or filter.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"cipher","secUnset":"unspecified","use":"Use","waitingJs":"LOADING","livePool":"Live from repos — not tunnel-tested","mirrorStale":"GitHub unreachable · showing the jsDelivr mirror copy from {age} (the mirror caches longer). If GitHub is blocked for you, turn on the mirror switch in the hub."}</script>
+<script id="i18n" type="application/json">{"lang":"en","dir":"ltr","loading":"Loading live data…","fresh":"Live data · {age}","stale":"Data is late · last build {age}","broken":"Pipeline looks stalled · last build {age}","unknownAge":"Data loaded · build time unknown","mirrored":" (via jsDelivr mirror)","failed":"Could not reach GitHub or the mirror. The links still work — try Refresh.","ago":"{n} ago","inT":"in {n}","now":"just now","overdue":"overdue","min":"{n} min","hr":"{n} h","runner":"Tested from {loc}","fastFoot":"Verified, median \u003c {ms} ms","configs":"{n} configs","verifiedDesc":"Passed a real request in all 3 rounds. Recommended for everyone.","fastDesc":"Verified and median delay under {ms} ms. Best for speed.","secureDesc":"Verified, forward secrecy, certificate validation left on. Best for privacy.","top100Desc":"The 100 fastest verified configs. A short, light list.","allDesc":"Everything collected, deduplicated. Largest list — mostly untested.","heavyDesc":"Only the high-volume upstream sources. Untested.","lightDesc":"Only the curated upstream sources. Untested.","countryDesc":"Verified configs whose server is in {name}.","protocolDesc":"Every unique {name} config from the pool. Not tested.","tVerified":"Verified","tFast":"Fast","tSecure":"Secure","tTop100":"Top 100","tAll":"All","tHeavy":"Heavy","tLight":"Light","fBase64":"Base64","fBase64d":"Classic subscription","fTxt":"Plain text","fTxtd":"One link per line","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"Full JSON config","copied":"Copied to clipboard","copyFail":"Copy failed — select the link and copy it manually","copiedN":"{n} configs copied","copy":"Copy","qr":"QR","showing":"Showing {a} of {b}","failedList":"The verified list could not be loaded.","retry":"Retry","ready":"VERIFIED · LIVE","readyMirror":"VERIFIED · MIRROR","unavailable":"UNAVAILABLE","copyCountry":"Copy","countryNote":"{n} countries · {c} verified configs · location by {m}","ofPool":"{p} of the pool","fRaw":"Collected","fUnique":"Unique after dedup","fTcp":"TCP reachable","fEver":"Worked at least once","fStable":"Passed every round","funnelNote":"{f}% of configs that worked once failed another round — that is why one round is not enough.","srcTag":"{ok} ok · {d} disabled · {n} total","stOk":"ok","stDisabled":"disabled","stEmpty":"empty","stFail":"fail","noTls":"none","noData":"—","qrTooLong":"This link is too long for a QR code — copy it instead.","fParse":"Parsable \u0026 valid","clearJs":"Clear filters","emptyTitleJs":"No matching configs","emptyDescJs":"Try a different search or filter.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"cipher","secUnset":"unspecified","use":"Use","waitingJs":"LOADING","livePool":"Live from repos — not tunnel-tested","mirrorStale":"GitHub unreachable · showing the jsDelivr mirror copy from {age} (the mirror caches longer). If GitHub is blocked for you, turn on the mirror switch in the hub.","counter":"Visits today: {today} • Total: {total}"}</script>
 <script src="vendor/qrcode-generator-1.4.4.js?v=18ae399f81" defer></script>
-<script src="app.js?v=793a427688" defer></script>
+<script src="app.js?v=23712a21f8" defer></script>
 </body>
 </html>

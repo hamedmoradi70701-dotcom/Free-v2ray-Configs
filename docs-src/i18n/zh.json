@@ -131,6 +131,19 @@
     "search": "搜索国家",
     "searchPh": "搜索国家…"
   },
+  "map": {
+    "overline": "实时世界地图",
+    "title": "世界地图上的雷达。",
+    "sub": "每个圆圈代表一个国家，大小取决于该国当前已验证配置的数量。"
+  },
+  "growth": {
+    "overline": "时光机",
+    "title": "雷达的成长，一轮又一轮。",
+    "sub": "每一轮运行的已验证配置数量，与机器人记录的完全一致。"
+  },
+  "golden": {
+    "cta": "🥇 黄金订阅 — 最快的 50 个"
+  },
   "proof": {
     "overline": "为证据而建，而非口号",
     "title": "相信流程。",
@@ -303,6 +316,7 @@
     "use": "使用",
     "waitingJs": "加载中",
     "livePool": "来自仓库的实时配置 — 未经隧道测试",
-    "mirrorStale": "GitHub 无法访问 · 当前显示的是 {age} 的 jsDelivr 镜像副本（镜像缓存时间更长）。如果 GitHub 被你所在网络屏蔽，请在订阅中心打开镜像开关。"
+    "mirrorStale": "GitHub 无法访问 · 当前显示的是 {age} 的 jsDelivr 镜像副本（镜像缓存时间更长）。如果 GitHub 被你所在网络屏蔽，请在订阅中心打开镜像开关。",
+    "counter": "今日访问：{today} • 总计：{total}"
   }
 }

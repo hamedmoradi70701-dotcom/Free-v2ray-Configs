@@ -24,6 +24,15 @@ SUBSCRIPTION_URL = (
     "https://raw.githubusercontent.com/"
     "hamedmoradi70701-dotcom/Free-v2ray-Configs/main/top100.txt"
 )
+GOLDEN_URL = (
+    "https://raw.githubusercontent.com/"
+    "hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt"
+)
+
+#: آستانهٔ هشدارِ افت: شمارِ تأییدشده بیش از این درصد نسبت به دورِ قبل
+#: کم شده باشد. (در `stats/last_run.json` درصد از پیش حساب شده می‌آید.)
+DROP_ALERT_PCT = 40
+MAX_DEAD_SOURCES_SHOWN = 8
 
 MAX_MESSAGE_CHARS = 4096          # سقفِ پیامِ تلگرام
 MAX_CONFIGS = 10                  # حداکثر کانفیگ در هر پست
@@ -94,7 +103,49 @@ def read_top_configs(limit=MAX_CONFIGS):
     return configs
 
 
-def compose_message(stats, configs):
+def read_alerts():
+    """بخشِ هشدار از `stats/last_run.json` — نبود/خرابیِ فایل → هیچ هشداری.
+
+    آبشار (`pipeline.py` + `radar_extras.py`) این فایل را در پایانِ هر
+    دور می‌نویسد: منابعِ مُردهٔ این دور و درصدِ افتِ شمارِ تأییدشده نسبت
+    به دورِ قبل. هشدار فقط وقتی ساخته می‌شود که چیزی برای گفتن باشد.
+    """
+    try:
+        with open(os.path.join(ROOT, "stats", "last_run.json"),
+                  encoding="utf-8") as fh:
+            last = json.load(fh)
+    except (OSError, ValueError):
+        return []
+    if not isinstance(last, dict):
+        return []
+
+    lines = []
+    dead = last.get("dead_sources")
+    if isinstance(dead, list) and dead:
+        names = []
+        for src in dead:
+            if isinstance(src, dict) and src.get("name"):
+                name = str(src["name"])
+                if name not in names:
+                    names.append(name)
+        if names:
+            shown = names[:MAX_DEAD_SOURCES_SHOWN]
+            extra = len(names) - len(shown)
+            suffix = f" و {extra} منبعِ دیگر" if extra > 0 else ""
+            lines.append("🪦 منابعِ مُردهٔ این دور: "
+                         + "، ".join(shown) + suffix)
+
+    drop = last.get("drop_pct")
+    prev = _int_or_none(last.get("prev_verified_count"))
+    cur = _int_or_none(last.get("verified_count"))
+    if (isinstance(drop, (int, float)) and drop > DROP_ALERT_PCT
+            and prev is not None and cur is not None):
+        lines.append(f"📉 افتِ کانفیگِ تأییدشده: {prev} ← {cur} "
+                     f"({abs(drop):g}٪ کمتر از دورِ قبل)")
+    return lines
+
+
+def compose_message(stats, configs, alerts=None):
     """یک پیامِ HTML برای تلگرام؛ متنِ داینامیک escape می‌شود."""
     esc = html.escape
     parts = ["📡 <b>رادار — کانفیگ‌های تازه رسید</b>"]
@@ -117,20 +168,26 @@ def compose_message(stats, configs):
                      "(برای کپی، روی هرکدام بزنید):")
         parts.extend(f"<code>{esc(cfg)}</code>" for cfg in configs)
 
+    if alerts:
+        parts.append("")
+        parts.append("⚠️ <b>هشدار رادار</b>")
+        parts.extend(esc(line) for line in alerts)
+
     parts.append("")
     parts.append(f"🌐 سایت رادار: {esc(SITE_URL)}")
+    parts.append(f"🥇 ساب طلایی (۵۰ سریع‌ترین): {esc(GOLDEN_URL)}")
     parts.append(f"🔗 اشتراکِ ۱۰۰ کانفیگِ برتر: {esc(SUBSCRIPTION_URL)}")
     parts.append(f"📣 کانال: {esc(CHAT_ID)}")
     return "\n".join(parts)
 
 
-def fit_message(stats, configs):
+def fit_message(stats, configs, alerts=None):
     """پیام را زیرِ سقفِ ۴۰۹۶ کاراکتر نگه می‌دارد: کانفیگ از ته کم می‌شود."""
     chosen = list(configs)
-    message = compose_message(stats, chosen)
+    message = compose_message(stats, chosen, alerts)
     while len(message) > MAX_MESSAGE_CHARS and len(chosen) > MIN_CONFIGS:
         chosen.pop()
-        message = compose_message(stats, chosen)
+        message = compose_message(stats, chosen, alerts)
     return message
 
 
@@ -177,7 +234,8 @@ def main():
 
     stats = read_stats()
     configs = read_top_configs()
-    message = fit_message(stats, configs)
+    alerts = read_alerts()
+    message = fit_message(stats, configs, alerts)
     send_message(token, message)
     return 0
 

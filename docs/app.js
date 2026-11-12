@@ -1105,3 +1105,234 @@
   else init();
 
 })();
+
+/* ────────────────────────────────────────────────────────────────────
+ * رادار — افزوده‌ها: نقشهٔ زندهٔ جهان، نمودارِ رشد، شمارندهٔ بازدید.
+ *
+ * یک IIFEِ جدا از runtimeِ اصلی، با همان قراردادها: دادهٔ شبکه نامعتبر
+ * فرض می‌شود و هر مقدار پیش از نمایش guard می‌خورد؛ هیچ رشته‌ای از
+ * شبکه به‌صورت HTML وارد صفحه نمی‌شود؛ و **هر قابلیت مستقل** است —
+ * اگر CDNِ Leaflet نرسد، فایلِ تاریخچه نباشد، یا شمارنده خاموش باشد،
+ * فقط همان بخش پنهان می‌ماند و بقیهٔ صفحه دست‌نخورده کار می‌کند.
+ * بخش‌های متناظر در HTML با `hidden` می‌آیند و فقط پس از بارگذاریِ
+ * موفقِ داده‌شان آشکار می‌شوند.
+ * ──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  var RAW = 'https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main';
+  var CDN = 'https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main';
+  var COUNTER_URL = 'https://radar-counter.hamed-moradi-70701.workers.dev/count';
+  var TIMEOUT_MS = 12000;
+
+  var T = {};
+  try { T = JSON.parse(document.getElementById('i18n').textContent); } catch (e) { T = {}; }
+  var LANG = document.documentElement.lang || 'en';
+  var NUMFMT;
+  try { NUMFMT = new Intl.NumberFormat(LANG); } catch (e) { NUMFMT = new Intl.NumberFormat('en'); }
+
+  function $(id) { return document.getElementById(id); }
+  function intOrNull(v) {
+    var n = (typeof v === 'number') ? v : parseInt(v, 10);
+    return (isFinite(n) && n >= 0) ? Math.floor(n) : null;
+  }
+  function fmt(n) { return NUMFMT.format(n); }
+  function str(key, vars) {
+    var s = T[key];
+    if (typeof s !== 'string') return '';
+    Object.keys(vars || {}).forEach(function (k) {
+      s = s.split('{' + k + '}').join(String(vars[k]));
+    });
+    return s;
+  }
+  function fetchJson(url, timeoutMs) {
+    var ctl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = ctl ? setTimeout(function () { ctl.abort(); }, timeoutMs || TIMEOUT_MS) : null;
+    return fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    }).catch(function (e) { if (timer) clearTimeout(timer); throw e; });
+  }
+  function fetchRepoJson(rel) {
+    return fetchJson(RAW + '/' + rel).catch(function () {
+      return fetchJson(CDN + '/' + rel);
+    });
+  }
+
+  /* ── شمارندهٔ بازدید ───────────────────────────────────────────────
+   * ورکرِ شمارنده جدا از این صفحه زندگی می‌کند. هر خطایی (ورکر ساخته
+   * نشده، شبکه، شکلِ پاسخ) یعنی سکوت: عنصر برای همیشه `hidden` می‌ماند. */
+  function initCounter() {
+    var el = $('visitorCounter');
+    if (!el || typeof T.counter !== 'string') return;
+    fetchJson(COUNTER_URL, 8000).then(function (doc) {
+      if (!doc || typeof doc !== 'object') return;
+      var today = intOrNull(doc.today);
+      var total = intOrNull(doc.total);
+      if (today === null || total === null) return;
+      el.textContent = str('counter', { today: fmt(today), total: fmt(total) });
+      el.hidden = false;
+    }).catch(function () { /* شمارنده اختیاری است — سکوت */ });
+  }
+
+  /* ── نقشهٔ زندهٔ جهان ──────────────────────────────────────────────
+   * مرکزِ جغرافیاییِ کشورها بر پایهٔ کدِ ISO — همان کدی که
+   * `Countries/index.json` برای هر کشور می‌دهد. کشورِ بی‌مرکز این‌جا
+   * فقط روی نقشه نمی‌آید؛ در شبکهٔ کشورها (بخشِ خودش) همچنان هست. */
+  var CENTROIDS = {
+    US: [39.8, -98.6], CA: [56.1, -106.3], MX: [23.6, -102.6], BR: [-14.2, -51.9],
+    CL: [-31.8, -70.7], CR: [9.7, -84.1], GB: [54.0, -2.5], IE: [53.4, -8.2],
+    FR: [46.6, 2.5], ES: [40.2, -3.6], PT: [39.6, -8.0], IT: [42.8, 12.8],
+    DE: [51.2, 10.4], NL: [52.1, 5.3], BE: [50.5, 4.5], CH: [46.8, 8.2],
+    AT: [47.6, 14.1], PL: [51.9, 19.1], CZ: [49.8, 15.5], SK: [48.7, 19.5],
+    DK: [56.3, 9.5], SE: [60.1, 18.6], NO: [60.5, 8.5], FI: [61.9, 25.7],
+    EE: [58.6, 25.0], LV: [56.9, 24.6], LT: [55.9, 23.9], GR: [39.1, 21.8],
+    RO: [45.9, 25.0], BG: [42.8, 25.5], UA: [48.4, 31.2], BY: [53.7, 27.9],
+    MD: [47.4, 28.4], RS: [44.0, 20.8], RU: [61.5, 105.3], TR: [39.0, 35.2],
+    IR: [32.4, 53.7], AE: [24.2, 55.4], KZ: [48.0, 66.9], IN: [21.1, 78.0],
+    ID: [-2.2, 118.0], TH: [15.9, 101.0], VN: [14.1, 108.3], SG: [1.35, 103.8],
+    HK: [22.3, 114.2], TW: [23.7, 121.0], JP: [36.2, 138.3], KR: [36.4, 127.9],
+    AU: [-25.3, 133.8], ZA: [-29.0, 24.7], NG: [9.6, 8.0]
+  };
+
+  function loadLeaflet() {
+    return new Promise(function (resolve, reject) {
+      if (window.L) { resolve(); return; }
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      document.head.appendChild(css);
+      var js = document.createElement('script');
+      js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      js.onload = function () { window.L ? resolve() : reject(new Error('leaflet empty')); };
+      js.onerror = function () { reject(new Error('leaflet failed')); };
+      document.head.appendChild(js);
+    });
+  }
+
+  function initMap() {
+    var section = $('worldmap');
+    var holder = $('radarMap');
+    if (!section || !holder) return;
+    Promise.all([loadLeaflet(), fetchRepoJson('Countries/index.json')]).then(function (res) {
+      var doc = res[1];
+      if (!doc || !Array.isArray(doc.countries)) return;
+      var rows = [];
+      doc.countries.forEach(function (c) {
+        if (!c || typeof c !== 'object') return;
+        var count = intOrNull(c.count);
+        var at = (typeof c.code === 'string') ? CENTROIDS[c.code.toUpperCase()] : null;
+        if (count === null || count === 0 || !at) return;
+        rows.push({ name: String(c.name || c.code || ''), count: count, at: at });
+      });
+      if (!rows.length) return;
+
+      section.hidden = false;
+      requestAnimationFrame(function () {
+        var map = L.map(holder, { worldCopyJump: true, scrollWheelZoom: false })
+          .setView([28, 12], 2);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        map.on('focus', function () { map.scrollWheelZoom.enable(); });
+        map.on('blur', function () { map.scrollWheelZoom.disable(); });
+        rows.forEach(function (r) {
+          var radius = Math.min(30, 5 + Math.sqrt(r.count) * 1.15);
+          var marker = L.circleMarker(r.at, {
+            radius: radius, color: '#7C3AED', weight: 1.5,
+            fillColor: '#C026D3', fillOpacity: 0.45
+          }).addTo(map);
+          var pop = document.createElement('div');
+          var b = document.createElement('strong');
+          b.textContent = r.name;
+          pop.appendChild(b);
+          pop.appendChild(document.createTextNode(' · ' + str('configs', { n: fmt(r.count) })));
+          marker.bindPopup(pop);
+        });
+        setTimeout(function () { map.invalidateSize(); }, 60);
+      });
+    }).catch(function () { /* بدونِ نقشه هم صفحه کامل است */ });
+  }
+
+  /* ── نمودارِ رشد (ماشین زمان) ──────────────────────────────────────
+   * SVGِ دست‌ساز با DOM API — هیچ رشتهٔ شبکه‌ای HTML نمی‌شود و هیچ
+   * کتابخانهٔ دومی لازم نیست. کمتر از دو نقطه ⇒ بخش برای همیشه پنهان. */
+  function initGrowth() {
+    var section = $('growth');
+    var holder = $('growthChart');
+    if (!section || !holder) return;
+    fetchRepoJson('stats/history.json').then(function (doc) {
+      if (!Array.isArray(doc)) return;
+      var pts = [];
+      doc.forEach(function (row) {
+        if (!row || typeof row !== 'object') return;
+        var v = intOrNull(row.verified_count);
+        var t = Date.parse(row.ts);
+        if (v === null || !isFinite(t)) return;
+        pts.push({ t: t, v: v });
+      });
+      pts.sort(function (a, b) { return a.t - b.t; });
+      if (pts.length < 2) return;
+      var MAXP = 160;
+      if (pts.length > MAXP) {
+        var stride = Math.ceil(pts.length / MAXP);
+        var slim = pts.filter(function (_, i) { return i % stride === 0; });
+        if (slim[slim.length - 1] !== pts[pts.length - 1]) slim.push(pts[pts.length - 1]);
+        pts = slim;
+      }
+      var W = 720, H = 240, PL = 46, PR = 12, PT = 16, PB = 26;
+      var min = Math.min.apply(null, pts.map(function (p) { return p.v; }));
+      var max = Math.max.apply(null, pts.map(function (p) { return p.v; }));
+      if (max === min) { max = min + 1; }
+      var X = function (i) { return PL + (W - PL - PR) * (i / (pts.length - 1)); };
+      var Y = function (v) { return PT + (H - PT - PB) * (1 - (v - min) / (max - min)); };
+      var NS = 'http://www.w3.org/2000/svg';
+      function el(name, attrs) {
+        var n = document.createElementNS(NS, name);
+        Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+        return n;
+      }
+      var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img' });
+      var dAttr = pts.map(function (p, i) {
+        return (i === 0 ? 'M' : 'L') + X(i).toFixed(1) + ' ' + Y(p.v).toFixed(1);
+      }).join(' ');
+      svg.appendChild(el('path', {
+        d: dAttr + ' L' + X(pts.length - 1).toFixed(1) + ' ' + (H - PB) +
+           ' L' + PL + ' ' + (H - PB) + ' Z',
+        fill: 'rgba(124,58,237,.13)', stroke: 'none'
+      }));
+      svg.appendChild(el('path', {
+        d: dAttr, fill: 'none', stroke: '#7C3AED', 'stroke-width': '2.5',
+        'stroke-linejoin': 'round', 'stroke-linecap': 'round'
+      }));
+      var last = pts[pts.length - 1];
+      svg.appendChild(el('circle', {
+        cx: X(pts.length - 1), cy: Y(last.v), r: '4.5', fill: '#C026D3'
+      }));
+      function label(x, y, text, anchor) {
+        var t = el('text', { x: x, y: y, 'text-anchor': anchor, 'class': 'growth-axis' });
+        t.textContent = text;
+        svg.appendChild(t);
+      }
+      label(PL - 8, Y(max) + 4, fmt(max), 'end');
+      label(PL - 8, Y(min) + 4, fmt(min), 'end');
+      label(PL, H - 6, new Date(pts[0].t).toISOString().slice(0, 10), 'start');
+      label(W - PR, H - 6, new Date(last.t).toISOString().slice(0, 10), 'end');
+      holder.appendChild(svg);
+      section.hidden = false;
+    }).catch(function () { /* تاریخچه هنوز نیست — بخش پنهان می‌ماند */ });
+  }
+
+  function initExtras() {
+    initCounter();
+    initMap();
+    initGrowth();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initExtras);
+  } else {
+    initExtras();
+  }
+})();

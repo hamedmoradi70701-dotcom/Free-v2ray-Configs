@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/manrope-latin.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
-<link rel="stylesheet" href="../styles.css?v=c2edf4fd09">
+<link rel="stylesheet" href="../styles.css?v=ae9746b52d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="zh_CN">
@@ -91,6 +91,7 @@
         <p class="hero-desc">开源的 VLESS · Reality · VMess · Trojan · Shadowsocks · Hysteria2 订阅。每个已验证配置在发布前，都在三个独立轮次中成功承载了一次真实 HTTP 请求。</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">获取你的订阅<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">🥇 黄金订阅 — 最快的 50 个<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>测试在运行节点所在地进行 — 不保证适用于你的 ISP。</p>
       </div>
@@ -289,6 +290,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>实时世界地图</div>
+        <h2 id="worldmap-title">世界地图上的雷达。</h2>
+        <p>每个圆圈代表一个国家，大小取决于该国当前已验证配置的数量。</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>时光机</div>
+        <h2 id="growth-title">雷达的成长，一轮又一轮。</h2>
+        <p>每一轮运行的已验证配置数量，与机器人记录的完全一致。</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -378,6 +411,7 @@
     <a href="#top">回到顶部 ↑</a>
     <a href="../fa/" hreflang="fa" lang="fa">فارسی</a><a href="../" hreflang="en" lang="en">English</a><a href="../ru/" hreflang="ru" lang="ru">Русский</a><a href="../ar/" hreflang="ar" lang="ar">العربية</a>
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="快捷操作">
@@ -397,8 +431,8 @@
   </div>
 </dialog>
 
-<script id="i18n" type="application/json">{"lang":"zh","dir":"ltr","loading":"正在加载实时数据…","fresh":"实时数据 · {age}","stale":"数据已延迟 · 上次构建 {age}","broken":"流水线似乎已停滞 · 上次构建 {age}","unknownAge":"数据已加载 · 构建时间未知","mirrored":"（通过 jsDelivr 镜像）","failed":"无法访问 GitHub 或镜像。链接仍然有效 — 请尝试刷新。","ago":"{n} 前","inT":"{n} 后","now":"刚刚","overdue":"已逾期","min":"{n} 分钟","hr":"{n} 小时","runner":"测试自 {loc}","fastFoot":"已验证，中位数 \u003c {ms} 毫秒","configs":"{n} 个配置","verifiedDesc":"在全部 3 轮中都通过了真实请求。推荐所有人使用。","fastDesc":"已验证且中位延迟低于 {ms} 毫秒。最适合追求速度。","secureDesc":"已验证，前向保密，证书校验开启。最适合隐私。","top100Desc":"最快的 100 个已验证配置。简短轻量的列表。","allDesc":"收集到的全部内容，已去重。最大的列表 — 大多未经测试。","heavyDesc":"仅高容量上游来源。未经测试。","lightDesc":"仅精选上游来源。未经测试。","countryDesc":"服务器位于 {name} 的已验证配置。","protocolDesc":"池中每个唯一的 {name} 配置。未经测试。","tVerified":"已验证","tFast":"快速","tSecure":"安全","tTop100":"前 100","tAll":"全部","tHeavy":"重型","tLight":"轻型","fBase64":"Base64","fBase64d":"经典订阅","fTxt":"纯文本","fTxtd":"每行一个链接","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"完整 JSON 配置","copied":"已复制到剪贴板","copyFail":"复制失败 — 请手动选择链接并复制","copiedN":"已复制 {n} 个配置","copy":"复制","qr":"二维码","showing":"显示 {a}，共 {b}","failedList":"无法加载已验证列表。","retry":"重试","ready":"已验证 · 实时","readyMirror":"已验证 · 镜像","unavailable":"不可用","copyCountry":"复制","countryNote":"{n} 个国家 · {c} 个已验证配置 · 位置由 {m} 确定","ofPool":"占池的 {p}","fRaw":"已收集","fUnique":"去重后唯一","fTcp":"TCP 可达","fEver":"至少成功过一次","fStable":"每一轮都通过","funnelNote":"{f}% 曾经成功过一次的配置在另一轮失败了 — 这就是为什么一轮不够。","srcTag":"{ok} 正常 · {d} 已禁用 · 共 {n}","stOk":"正常","stDisabled":"已禁用","stEmpty":"空","stFail":"失败","noTls":"无","noData":"—","qrTooLong":"此链接太长，无法生成二维码 — 请改为复制它。","fParse":"可解析且有效","clearJs":"清除筛选","emptyTitleJs":"没有匹配的配置","emptyDescJs":"试试其他搜索或筛选条件。","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"加密","secUnset":"未指定","use":"使用","waitingJs":"加载中","livePool":"来自仓库的实时配置 — 未经隧道测试","mirrorStale":"GitHub 无法访问 · 当前显示的是 {age} 的 jsDelivr 镜像副本（镜像缓存时间更长）。如果 GitHub 被你所在网络屏蔽，请在订阅中心打开镜像开关。"}</script>
+<script id="i18n" type="application/json">{"lang":"zh","dir":"ltr","loading":"正在加载实时数据…","fresh":"实时数据 · {age}","stale":"数据已延迟 · 上次构建 {age}","broken":"流水线似乎已停滞 · 上次构建 {age}","unknownAge":"数据已加载 · 构建时间未知","mirrored":"（通过 jsDelivr 镜像）","failed":"无法访问 GitHub 或镜像。链接仍然有效 — 请尝试刷新。","ago":"{n} 前","inT":"{n} 后","now":"刚刚","overdue":"已逾期","min":"{n} 分钟","hr":"{n} 小时","runner":"测试自 {loc}","fastFoot":"已验证，中位数 \u003c {ms} 毫秒","configs":"{n} 个配置","verifiedDesc":"在全部 3 轮中都通过了真实请求。推荐所有人使用。","fastDesc":"已验证且中位延迟低于 {ms} 毫秒。最适合追求速度。","secureDesc":"已验证，前向保密，证书校验开启。最适合隐私。","top100Desc":"最快的 100 个已验证配置。简短轻量的列表。","allDesc":"收集到的全部内容，已去重。最大的列表 — 大多未经测试。","heavyDesc":"仅高容量上游来源。未经测试。","lightDesc":"仅精选上游来源。未经测试。","countryDesc":"服务器位于 {name} 的已验证配置。","protocolDesc":"池中每个唯一的 {name} 配置。未经测试。","tVerified":"已验证","tFast":"快速","tSecure":"安全","tTop100":"前 100","tAll":"全部","tHeavy":"重型","tLight":"轻型","fBase64":"Base64","fBase64d":"经典订阅","fTxt":"纯文本","fTxtd":"每行一个链接","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"完整 JSON 配置","copied":"已复制到剪贴板","copyFail":"复制失败 — 请手动选择链接并复制","copiedN":"已复制 {n} 个配置","copy":"复制","qr":"二维码","showing":"显示 {a}，共 {b}","failedList":"无法加载已验证列表。","retry":"重试","ready":"已验证 · 实时","readyMirror":"已验证 · 镜像","unavailable":"不可用","copyCountry":"复制","countryNote":"{n} 个国家 · {c} 个已验证配置 · 位置由 {m} 确定","ofPool":"占池的 {p}","fRaw":"已收集","fUnique":"去重后唯一","fTcp":"TCP 可达","fEver":"至少成功过一次","fStable":"每一轮都通过","funnelNote":"{f}% 曾经成功过一次的配置在另一轮失败了 — 这就是为什么一轮不够。","srcTag":"{ok} 正常 · {d} 已禁用 · 共 {n}","stOk":"正常","stDisabled":"已禁用","stEmpty":"空","stFail":"失败","noTls":"无","noData":"—","qrTooLong":"此链接太长，无法生成二维码 — 请改为复制它。","fParse":"可解析且有效","clearJs":"清除筛选","emptyTitleJs":"没有匹配的配置","emptyDescJs":"试试其他搜索或筛选条件。","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"加密","secUnset":"未指定","use":"使用","waitingJs":"加载中","livePool":"来自仓库的实时配置 — 未经隧道测试","mirrorStale":"GitHub 无法访问 · 当前显示的是 {age} 的 jsDelivr 镜像副本（镜像缓存时间更长）。如果 GitHub 被你所在网络屏蔽，请在订阅中心打开镜像开关。","counter":"今日访问：{today} • 总计：{total}"}</script>
 <script src="../vendor/qrcode-generator-1.4.4.js?v=18ae399f81" defer></script>
-<script src="../app.js?v=793a427688" defer></script>
+<script src="../app.js?v=23712a21f8" defer></script>
 </body>
 </html>

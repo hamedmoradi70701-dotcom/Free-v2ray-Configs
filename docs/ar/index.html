@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/estedad-arabic.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
-<link rel="stylesheet" href="../styles.css?v=c2edf4fd09">
+<link rel="stylesheet" href="../styles.css?v=ae9746b52d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="ar_SA">
@@ -91,6 +91,7 @@
         <p class="hero-desc">اشتراك مفتوح المصدر لبروتوكولات VLESS · Reality · VMess · Trojan · Shadowsocks · Hysteria2. كل إعداد تم التحقق منه حمل طلب HTTP حقيقيًا في ثلاث جولات مستقلة قبل نشره.</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">احصل على اشتراكك<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">🥇 الاشتراك الذهبي — أسرع ٥٠<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>تم الاختبار من موقع خادم الاختبار — وليس ضمانًا لمزود الإنترنت لديك.</p>
       </div>
@@ -289,6 +290,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>خريطة العالم الحية</div>
+        <h2 id="worldmap-title">الرادار على خريطة العالم.</h2>
+        <p>دائرة لكل دولة، يكبر حجمها بعدد الإعدادات المؤكدة الموجودة فيها الآن.</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>آلة الزمن</div>
+        <h2 id="growth-title">نمو الرادار، تشغيلًا بعد تشغيل.</h2>
+        <p>الإعدادات المؤكدة في كل تشغيل، كما سجلها الروبوت تمامًا.</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -378,6 +411,7 @@
     <a href="#top">العودة إلى الأعلى ↑</a>
     <a href="../fa/" hreflang="fa" lang="fa">فارسی</a><a href="../" hreflang="en" lang="en">English</a><a href="../zh/" hreflang="zh" lang="zh">中文</a><a href="../ru/" hreflang="ru" lang="ru">Русский</a>
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="إجراءات سريعة">
@@ -397,8 +431,8 @@
   </div>
 </dialog>
 
-<script id="i18n" type="application/json">{"lang":"ar","dir":"rtl","loading":"جارٍ تحميل البيانات المباشرة…","fresh":"بيانات مباشرة · {age}","stale":"البيانات متأخرة · آخر بناء {age}","broken":"يبدو أن خط الإنتاج متوقف · آخر بناء {age}","unknownAge":"تم تحميل البيانات · وقت البناء غير معروف","mirrored":" (عبر مرآة jsDelivr)","failed":"تعذر الوصول إلى GitHub أو المرآة. الروابط ما تزال تعمل — جرّب «تحديث».","ago":"قبل {n}","inT":"بعد {n}","now":"الآن","overdue":"متأخر","min":"{n} دقيقة","hr":"{n} ساعة","runner":"تم الاختبار من {loc}","fastFoot":"تم التحقق، الوسيط \u003c {ms} مللي ثانية","configs":"{n} إعداد","verifiedDesc":"اجتاز طلبًا حقيقيًا في الجولات الثلاث كلها. موصى به للجميع.","fastDesc":"تم التحقق ووسيط التأخير دون {ms} مللي ثانية. الأفضل للسرعة.","secureDesc":"تم التحقق، السرية الأمامية، التحقق من الشهادات مفعّل. الأفضل للخصوصية.","top100Desc":"أسرع 100 إعداد تم التحقق منها. قائمة قصيرة وخفيفة.","allDesc":"كل ما جُمع، دون تكرار. أكبر قائمة — معظمها غير مختبر.","heavyDesc":"المصادر عالية الحجم فقط. غير مختبرة.","lightDesc":"المصادر المنتقاة فقط. غير مختبرة.","countryDesc":"إعدادات تم التحقق منها وخادمها في {name}.","protocolDesc":"كل إعداد فريد من {name} في المجموعة. غير مختبر.","tVerified":"تم التحقق","tFast":"السريعة","tSecure":"الآمنة","tTop100":"أفضل 100","tAll":"الكل","tHeavy":"الثقيلة","tLight":"الخفيفة","fBase64":"Base64","fBase64d":"الاشتراك الكلاسيكي","fTxt":"نص عادي","fTxtd":"رابط واحد في كل سطر","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"إعداد JSON كامل","copied":"نُسخ إلى الحافظة","copyFail":"فشل النسخ — حدد الرابط وانسخه يدويًا","copiedN":"نُسخ {n} إعداد","copy":"نسخ","qr":"QR","showing":"عرض {a} من {b}","failedList":"تعذر تحميل القائمة المتحقق منها.","retry":"إعادة المحاولة","ready":"تم التحقق · مباشر","readyMirror":"تم التحقق · مرآة","unavailable":"غير متاح","copyCountry":"نسخ","countryNote":"{n} دولة · {c} إعداد تم التحقق منه · الموقع بواسطة {m}","ofPool":"{p} من المجموعة","fRaw":"تم جمعها","fUnique":"فريدة بعد إزالة التكرار","fTcp":"قابلة للوصول عبر TCP","fEver":"عملت مرة واحدة على الأقل","fStable":"اجتازت كل الجولات","funnelNote":"{f}٪ من الإعدادات التي عملت مرة واحدة فشلت في جولة أخرى — لهذا لا تكفي جولة واحدة.","srcTag":"{ok} سليم · {d} معطّل · {n} إجمالي","stOk":"سليم","stDisabled":"معطّل","stEmpty":"فارغ","stFail":"فشل","noTls":"لا يوجد","noData":"—","qrTooLong":"هذا الرابط أطول من أن يُرمّز في رمز QR — انسخه بدلًا من ذلك.","fParse":"قابل للتحليل وصالح","clearJs":"مسح عوامل التصفية","emptyTitleJs":"لا توجد إعدادات مطابقة","emptyDescJs":"جرّب بحثًا أو عامل تصفية مختلفًا.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"الشفرة","secUnset":"غير محدد","use":"استخدام","waitingJs":"جارٍ التحميل","livePool":"مباشر من المستودعات — لم يُختبر عبر النفق","mirrorStale":"GitHub غير متاح · تُعرض نسخة مرآة jsDelivr من {age} (تحتفظ المرآة بالنسخ لفترة أطول). إذا كان GitHub محجوبًا لديك، فعّل مفتاح المرآة في مركز الاشتراك."}</script>
+<script id="i18n" type="application/json">{"lang":"ar","dir":"rtl","loading":"جارٍ تحميل البيانات المباشرة…","fresh":"بيانات مباشرة · {age}","stale":"البيانات متأخرة · آخر بناء {age}","broken":"يبدو أن خط الإنتاج متوقف · آخر بناء {age}","unknownAge":"تم تحميل البيانات · وقت البناء غير معروف","mirrored":" (عبر مرآة jsDelivr)","failed":"تعذر الوصول إلى GitHub أو المرآة. الروابط ما تزال تعمل — جرّب «تحديث».","ago":"قبل {n}","inT":"بعد {n}","now":"الآن","overdue":"متأخر","min":"{n} دقيقة","hr":"{n} ساعة","runner":"تم الاختبار من {loc}","fastFoot":"تم التحقق، الوسيط \u003c {ms} مللي ثانية","configs":"{n} إعداد","verifiedDesc":"اجتاز طلبًا حقيقيًا في الجولات الثلاث كلها. موصى به للجميع.","fastDesc":"تم التحقق ووسيط التأخير دون {ms} مللي ثانية. الأفضل للسرعة.","secureDesc":"تم التحقق، السرية الأمامية، التحقق من الشهادات مفعّل. الأفضل للخصوصية.","top100Desc":"أسرع 100 إعداد تم التحقق منها. قائمة قصيرة وخفيفة.","allDesc":"كل ما جُمع، دون تكرار. أكبر قائمة — معظمها غير مختبر.","heavyDesc":"المصادر عالية الحجم فقط. غير مختبرة.","lightDesc":"المصادر المنتقاة فقط. غير مختبرة.","countryDesc":"إعدادات تم التحقق منها وخادمها في {name}.","protocolDesc":"كل إعداد فريد من {name} في المجموعة. غير مختبر.","tVerified":"تم التحقق","tFast":"السريعة","tSecure":"الآمنة","tTop100":"أفضل 100","tAll":"الكل","tHeavy":"الثقيلة","tLight":"الخفيفة","fBase64":"Base64","fBase64d":"الاشتراك الكلاسيكي","fTxt":"نص عادي","fTxtd":"رابط واحد في كل سطر","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"إعداد JSON كامل","copied":"نُسخ إلى الحافظة","copyFail":"فشل النسخ — حدد الرابط وانسخه يدويًا","copiedN":"نُسخ {n} إعداد","copy":"نسخ","qr":"QR","showing":"عرض {a} من {b}","failedList":"تعذر تحميل القائمة المتحقق منها.","retry":"إعادة المحاولة","ready":"تم التحقق · مباشر","readyMirror":"تم التحقق · مرآة","unavailable":"غير متاح","copyCountry":"نسخ","countryNote":"{n} دولة · {c} إعداد تم التحقق منه · الموقع بواسطة {m}","ofPool":"{p} من المجموعة","fRaw":"تم جمعها","fUnique":"فريدة بعد إزالة التكرار","fTcp":"قابلة للوصول عبر TCP","fEver":"عملت مرة واحدة على الأقل","fStable":"اجتازت كل الجولات","funnelNote":"{f}٪ من الإعدادات التي عملت مرة واحدة فشلت في جولة أخرى — لهذا لا تكفي جولة واحدة.","srcTag":"{ok} سليم · {d} معطّل · {n} إجمالي","stOk":"سليم","stDisabled":"معطّل","stEmpty":"فارغ","stFail":"فشل","noTls":"لا يوجد","noData":"—","qrTooLong":"هذا الرابط أطول من أن يُرمّز في رمز QR — انسخه بدلًا من ذلك.","fParse":"قابل للتحليل وصالح","clearJs":"مسح عوامل التصفية","emptyTitleJs":"لا توجد إعدادات مطابقة","emptyDescJs":"جرّب بحثًا أو عامل تصفية مختلفًا.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"الشفرة","secUnset":"غير محدد","use":"استخدام","waitingJs":"جارٍ التحميل","livePool":"مباشر من المستودعات — لم يُختبر عبر النفق","mirrorStale":"GitHub غير متاح · تُعرض نسخة مرآة jsDelivr من {age} (تحتفظ المرآة بالنسخ لفترة أطول). إذا كان GitHub محجوبًا لديك، فعّل مفتاح المرآة في مركز الاشتراك.","counter":"زيارات اليوم: {today} • المجموع: {total}"}</script>
 <script src="../vendor/qrcode-generator-1.4.4.js?v=18ae399f81" defer></script>
-<script src="../app.js?v=793a427688" defer></script>
+<script src="../app.js?v=23712a21f8" defer></script>
 </body>
 </html>

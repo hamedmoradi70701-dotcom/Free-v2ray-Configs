@@ -739,3 +739,23 @@ html[lang="fa"] .live-chip,html[lang="ar"] .live-chip{letter-spacing:0;font-size
 .cfg-src{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;border:1px dashed rgba(124,58,237,.5);color:#5E4BC0;background:rgba(139,124,240,.10);white-space:nowrap}
 .cfg-src::before{content:"";width:6px;height:6px;border-radius:50%;background:#22C55E;flex:none}
 
+
+/* ════════════════════════════════════════════════════════════════════
+   RADAR EXTRAS — golden button · live world map · growth chart ·
+   visitor counter (appended with the Liquid Glass skin; every block
+   is progressive enhancement — the sections ship `hidden` and the
+   runtime unhides them only after their data actually loads)
+   ════════════════════════════════════════════════════════════════════ */
+#worldmap[hidden],#growth[hidden],#visitorCounter[hidden]{display:none!important}
+.btn-golden{background:linear-gradient(135deg,#F59E0B,#FBBF24 55%,#FDE68A);color:#451A03;box-shadow:0 12px 30px rgba(245,158,11,.35),inset 0 1px 0 rgba(255,255,255,.7)}
+.btn-golden:hover{box-shadow:0 16px 36px rgba(245,158,11,.45),inset 0 1px 0 rgba(255,255,255,.8)}
+.worldmap,.growth{margin-top:72px}
+.map-frame,.growth-card{position:relative;background:rgba(255,255,255,.46);-webkit-backdrop-filter:blur(24px) saturate(200%);backdrop-filter:blur(24px) saturate(200%);border:1px solid rgba(255,255,255,.78);border-radius:26px;box-shadow:0 18px 42px rgba(76,29,149,.14),inset 0 1px 0 rgba(255,255,255,.95);padding:14px;overflow:hidden}
+.radar-map{height:440px;border-radius:18px;overflow:hidden;background:#2A1650;z-index:0}
+.radar-map .leaflet-container{background:#2A1650;font:inherit}
+.map-sweep{position:absolute;inset:14px;border-radius:18px;pointer-events:none;background:conic-gradient(from 0deg at 50% 50%,rgba(167,139,250,0) 0deg,rgba(167,139,250,.16) 40deg,rgba(167,139,250,0) 80deg);animation:radar-sweep 7s linear infinite;mix-blend-mode:screen}
+@keyframes radar-sweep{to{transform:rotate(360deg)}}
+.growth-chart svg{width:100%;height:auto;display:block}
+.growth-axis{fill:#8291AA;font-size:12px;font-family:var(--font)}
+.visitor-counter{flex-basis:100%;margin-top:14px;font-size:13px;font-weight:600;color:var(--muted)}
+@media (max-width:640px){.radar-map{height:320px}}

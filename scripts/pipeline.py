@@ -73,6 +73,7 @@ import filters  # noqa: E402
 import converters  # noqa: E402
 import core  # noqa: E402
 import countries  # noqa: E402
+import radar_extras  # noqa: E402
 
 # ──────────────────────────────────────────────────────────────────────────────
 # ثابت‌ها
@@ -437,6 +438,29 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
                      f"padded with untested configs.\n")
     _write_lines(top_path, top_head, core.shield_unsupported_runs(buckets["top"]))
     written["top"] = top_path
+
+    # ── سابِ طلایی (`subs/golden.txt`) ──────────────────────────────────
+    # همان فهرستِ رتبه‌بندی‌شدهٔ `top` است، بریده به ۵۰تای اول: «سریع‌ترینِ
+    # تأییدشده‌های همین دور» در یک لینکِ ثابت که کاربر یک بار در کلاینتش
+    # می‌گذارد و هر دور خودش تازه می‌شود. قابلیتِ **افزوده** است، پس مثلِ
+    # مبدل‌های بالا در `try` می‌نشیند: شکستِ نوشتنش نباید سبدهای اصلی را
+    # با خود ببرد؛ و چون `merge_index` فقط فایلِ موجود را تبلیغ می‌کند،
+    # نبودنش هم بی‌صدا از `index.json` بیرون می‌ماند.
+    try:
+        golden = buckets["top"][:radar_extras.GOLDEN_N]
+        golden_head = (
+            core.hiddify_profile_header(f"GOLDEN {len(golden)}") +
+            f"# {core.BRAND} — GOLDEN — the {len(golden)} fastest verified "
+            f"configs of this run\n"
+            f"# criterion: verified (a real proxied request succeeded in ALL "
+            f"{rounds} runs) AND ranked in the top {radar_extras.GOLDEN_N} "
+            f"by median delay across runs.\n")
+        golden_path = os.path.join(out_dir, "subs", "golden.txt")
+        _write_lines(golden_path, golden_head,
+                     core.shield_unsupported_runs(golden))
+        written["golden"] = golden_path
+    except Exception as exc:  # noqa: BLE001
+        print(f"⚠️ subs/golden.txt: {exc}", file=sys.stderr)
     return written
 
 
@@ -627,6 +651,27 @@ def merge_index(out_dir: str, buckets: Dict[str, Any]) -> Optional[str]:
         if mirror:
             top_block["url_mirror"] = f"{mirror}/{top_name}"
         doc["top100"] = top_block
+
+    # ── تبلیغِ سابِ طلایی (`subs/golden.txt`) ────────────────────────────
+    # همان قراردادِ بقیهٔ این تابع: فقط فایلِ موجود تبلیغ می‌شود، و اگر
+    # این دور ساخته نشد تبلیغِ دورِ قبل هم برداشته می‌شود تا `index.json`
+    # به فایلِ جاروشده اشاره نکند (همان سیاستی که پایین برای `Countries/`
+    # آمده). کلیدِ جدا و بیرون از `categories`/`cascade_categories`،
+    # چون شکلش (یک فایلِ یگانه) با هیچ‌کدام نمی‌خواند.
+    golden_rel = _rel("subs", "golden.txt")
+    if os.path.exists(os.path.join(out_dir, "subs", "golden.txt")):
+        golden_block: Dict[str, Any] = {
+            "count": min(radar_extras.GOLDEN_N, len(buckets.get("top", []))),
+            "criterion": ("the fastest verified configs of this run, "
+                          "sorted by median delay (fastest first); "
+                          "never padded with untested ones"),
+            "url": f"{primary}/{golden_rel}",
+        }
+        if mirror:
+            golden_block["url_mirror"] = f"{mirror}/{golden_rel}"
+        doc["golden"] = golden_block
+    else:
+        doc.pop("golden", None)
 
     # ── تبلیغِ `Countries/` ────────────────────────────────────────────────
     #
@@ -820,6 +865,22 @@ def run_pipeline(lines: Iterable[str], out_dir: str,
     index = merge_index(out_dir, buckets)
     if index:
         buckets["paths"]["index.json"] = index
+    # ── افزوده‌های رادار: تاریخچهٔ اجراها + خلاصهٔ هشدار ─────────────────
+    # `stats/history.json` (برای نمودارِ رشدِ سایت) و `stats/last_run.json`
+    # (برای بخشِ هشدارِ پیامِ تلگرام) این‌جا، در پایانِ دور، نوشته می‌شوند
+    # چون هر دو به عددهای نهاییِ همین دور (تأییدشده/کشورها) و به
+    # `health.json`ِ همین دور نیاز دارند. قابلیتِ **افزوده** است ⇒ همان
+    # سیاستِ `Countries/`: خطا خورده می‌شود، دیده می‌شود، و هرگز انتشارِ
+    # کانفیگ‌ها را زمین نمی‌اندازد.
+    try:
+        cstats = st.get("countries") or {}
+        radar_extras.record_run(
+            out_dir,
+            verified_count=st["verified"],
+            country_count=int(cstats.get("countries") or 0),
+        )
+    except Exception as exc:  # noqa: BLE001 - گاردِ آخر
+        print(f"⚠️ radar extras (history/last_run): {exc}", file=sys.stderr)
     return buckets
 
 

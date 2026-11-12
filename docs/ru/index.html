@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/manrope-latin.woff2">
 <link rel="preconnect" crossorigin href="https://raw.githubusercontent.com">
-<link rel="stylesheet" href="../styles.css?v=c2edf4fd09">
+<link rel="stylesheet" href="../styles.css?v=ae9746b52d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="رادار">
 <meta property="og:locale" content="ru_RU">
@@ -91,6 +91,7 @@
         <p class="hero-desc">Подписка с открытым кодом: VLESS · Reality · VMess · Trojan · Shadowsocks · Hysteria2. Каждый проверенный конфиг до публикации провёл реальный HTTP-запрос в трёх независимых раундах.</p>
         <div class="hero-actions">
           <a class="btn btn-white" href="#hub">Получить подписку<span aria-hidden="true" class="arrow">↓</span></a>
+          <a class="btn btn-golden" href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/subs/golden.txt" target="_blank" rel="noopener noreferrer">🥇 Золотая подписка — 50 самых быстрых<span aria-hidden="true" class="arrow">↗</span></a>
         </div>
         <p class="hero-note"><span class="dot-light" aria-hidden="true"></span>Тестирование выполняется из места расположения раннера — это не гарантия для вашего провайдера.</p>
       </div>
@@ -289,6 +290,38 @@
     <p class="country-note" id="ctNote"></p>
   </section>
 
+  <!-- ── world map (progressive enhancement: app.js unhides it once the
+         Leaflet CDN and the Countries data are both in; without either it
+         simply never appears) ─────────────────────────────────────── -->
+  <section class="worldmap shell" id="worldmap" aria-labelledby="worldmap-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>ЖИВАЯ КАРТА МИРА</div>
+        <h2 id="worldmap-title">Радар на карте мира.</h2>
+        <p>Один круг — одна страна, а его размер зависит от числа проверенных конфигов в ней прямо сейчас.</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="radarMap" class="radar-map"></div>
+      <div class="map-sweep" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ── growth / time machine (hidden until stats/history.json holds
+         at least two runs; app.js renders it as an inline SVG chart) ── -->
+  <section class="growth shell" id="growth" aria-labelledby="growth-title" hidden>
+    <div class="section-head">
+      <div>
+        <div class="overline"><span class="overline-line"></span>МАШИНА ВРЕМЕНИ</div>
+        <h2 id="growth-title">Рост радара, запуск за запуском.</h2>
+        <p>Проверенные конфиги в каждом запуске — в точности как записал робот.</p>
+      </div>
+    </div>
+    <div class="growth-card">
+      <div id="growthChart" class="growth-chart"></div>
+    </div>
+  </section>
+
   <!-- ── proof ─────────────────────────────────────────────────────── -->
   <section class="proof" id="proof" aria-labelledby="proof-title">
     <div class="shell">
@@ -378,6 +411,7 @@
     <a href="#top">Наверх ↑</a>
     <a href="../fa/" hreflang="fa" lang="fa">فارسی</a><a href="../" hreflang="en" lang="en">English</a><a href="../zh/" hreflang="zh" lang="zh">中文</a><a href="../ar/" hreflang="ar" lang="ar">العربية</a>
   </nav>
+  <p class="visitor-counter" id="visitorCounter" hidden></p>
 </footer>
 
 <nav class="glass-dock" aria-label="Быстрые действия">
@@ -397,8 +431,8 @@
   </div>
 </dialog>
 
-<script id="i18n" type="application/json">{"lang":"ru","dir":"ltr","loading":"Загрузка актуальных данных…","fresh":"Актуальные данные · {age}","stale":"Данные устарели · последняя сборка {age}","broken":"Конвейер, похоже, остановился · последняя сборка {age}","unknownAge":"Данные загружены · время сборки неизвестно","mirrored":" (через зеркало jsDelivr)","failed":"Не удалось достучаться до GitHub или зеркала. Ссылки по-прежнему работают — попробуйте «Обновить».","ago":"{n} назад","inT":"через {n}","now":"только что","overdue":"просрочено","min":"{n} мин","hr":"{n} ч","runner":"Тестирование из {loc}","fastFoot":"Проверено, медиана \u003c {ms} мс","configs":"{n} конфигов","verifiedDesc":"Прошёл реальный запрос во всех 3 раундах. Рекомендуется всем.","fastDesc":"Проверен, медианная задержка ниже {ms} мс. Лучший для скорости.","secureDesc":"Проверен, прямая секретность, проверка сертификатов включена. Лучший для приватности.","top100Desc":"100 самых быстрых проверенных конфигов. Короткий и лёгкий список.","allDesc":"Всё собранное, без дублей. Самый большой список — в основном без тестов.","heavyDesc":"Только объёмные источники. Без тестов.","lightDesc":"Только отобранные источники. Без тестов.","countryDesc":"Проверенные конфиги, чей сервер находится в {name}.","protocolDesc":"Каждый уникальный конфиг {name} из пула. Без тестов.","tVerified":"Проверенные","tFast":"Быстрые","tSecure":"Безопасные","tTop100":"Топ-100","tAll":"Все","tHeavy":"Тяжёлые","tLight":"Лёгкие","fBase64":"Base64","fBase64d":"Классическая подписка","fTxt":"Обычный текст","fTxtd":"Одна ссылка на строку","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"Полная конфигурация JSON","copied":"Скопировано в буфер обмена","copyFail":"Не удалось скопировать — выделите ссылку и скопируйте вручную","copiedN":"Скопировано конфигов: {n}","copy":"Копировать","qr":"QR","showing":"Показано {a} из {b}","failedList":"Не удалось загрузить проверенный список.","retry":"Повторить","ready":"ПРОВЕРЕНО · ОНЛАЙН","readyMirror":"ПРОВЕРЕНО · ЗЕРКАЛО","unavailable":"НЕДОСТУПНО","copyCountry":"Копировать","countryNote":"{n} стран · {c} проверенных конфигов · локация по {m}","ofPool":"{p} пула","fRaw":"Собрано","fUnique":"Уникальных после дедупликации","fTcp":"Доступны по TCP","fEver":"Сработал хотя бы раз","fStable":"Прошёл все раунды","funnelNote":"{f}% конфигов, сработавших однажды, провалили другой раунд — поэтому одного раунда недостаточно.","srcTag":"{ok} ок · {d} отключено · всего {n}","stOk":"ок","stDisabled":"отключено","stEmpty":"пусто","stFail":"ошибка","noTls":"нет","noData":"—","qrTooLong":"Эта ссылка слишком длинная для QR-кода — скопируйте её.","fParse":"Разбирается и валиден","clearJs":"Сбросить фильтры","emptyTitleJs":"Нет подходящих конфигов","emptyDescJs":"Попробуйте другой запрос или фильтр.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"шифр","secUnset":"не указан","use":"Использовать","waitingJs":"ЗАГРУЗКА","livePool":"Вживую из репозиториев — без туннельной проверки","mirrorStale":"GitHub недоступен · показана копия зеркала jsDelivr от {age} (зеркало кэширует дольше). Если GitHub у вас заблокирован, включите переключатель зеркала в центре подписки."}</script>
+<script id="i18n" type="application/json">{"lang":"ru","dir":"ltr","loading":"Загрузка актуальных данных…","fresh":"Актуальные данные · {age}","stale":"Данные устарели · последняя сборка {age}","broken":"Конвейер, похоже, остановился · последняя сборка {age}","unknownAge":"Данные загружены · время сборки неизвестно","mirrored":" (через зеркало jsDelivr)","failed":"Не удалось достучаться до GitHub или зеркала. Ссылки по-прежнему работают — попробуйте «Обновить».","ago":"{n} назад","inT":"через {n}","now":"только что","overdue":"просрочено","min":"{n} мин","hr":"{n} ч","runner":"Тестирование из {loc}","fastFoot":"Проверено, медиана \u003c {ms} мс","configs":"{n} конфигов","verifiedDesc":"Прошёл реальный запрос во всех 3 раундах. Рекомендуется всем.","fastDesc":"Проверен, медианная задержка ниже {ms} мс. Лучший для скорости.","secureDesc":"Проверен, прямая секретность, проверка сертификатов включена. Лучший для приватности.","top100Desc":"100 самых быстрых проверенных конфигов. Короткий и лёгкий список.","allDesc":"Всё собранное, без дублей. Самый большой список — в основном без тестов.","heavyDesc":"Только объёмные источники. Без тестов.","lightDesc":"Только отобранные источники. Без тестов.","countryDesc":"Проверенные конфиги, чей сервер находится в {name}.","protocolDesc":"Каждый уникальный конфиг {name} из пула. Без тестов.","tVerified":"Проверенные","tFast":"Быстрые","tSecure":"Безопасные","tTop100":"Топ-100","tAll":"Все","tHeavy":"Тяжёлые","tLight":"Лёгкие","fBase64":"Base64","fBase64d":"Классическая подписка","fTxt":"Обычный текст","fTxtd":"Одна ссылка на строку","fClash":"Clash","fClashd":"mihomo · Clash Meta","fSingbox":"sing-box","fSingboxd":"Полная конфигурация JSON","copied":"Скопировано в буфер обмена","copyFail":"Не удалось скопировать — выделите ссылку и скопируйте вручную","copiedN":"Скопировано конфигов: {n}","copy":"Копировать","qr":"QR","showing":"Показано {a} из {b}","failedList":"Не удалось загрузить проверенный список.","retry":"Повторить","ready":"ПРОВЕРЕНО · ОНЛАЙН","readyMirror":"ПРОВЕРЕНО · ЗЕРКАЛО","unavailable":"НЕДОСТУПНО","copyCountry":"Копировать","countryNote":"{n} стран · {c} проверенных конфигов · локация по {m}","ofPool":"{p} пула","fRaw":"Собрано","fUnique":"Уникальных после дедупликации","fTcp":"Доступны по TCP","fEver":"Сработал хотя бы раз","fStable":"Прошёл все раунды","funnelNote":"{f}% конфигов, сработавших однажды, провалили другой раунд — поэтому одного раунда недостаточно.","srcTag":"{ok} ок · {d} отключено · всего {n}","stOk":"ок","stDisabled":"отключено","stEmpty":"пусто","stFail":"ошибка","noTls":"нет","noData":"—","qrTooLong":"Эта ссылка слишком длинная для QR-кода — скопируйте её.","fParse":"Разбирается и валиден","clearJs":"Сбросить фильтры","emptyTitleJs":"Нет подходящих конфигов","emptyDescJs":"Попробуйте другой запрос или фильтр.","platAndroid":"Android","platMulti":"Android · iOS","secCipher":"шифр","secUnset":"не указан","use":"Использовать","waitingJs":"ЗАГРУЗКА","livePool":"Вживую из репозиториев — без туннельной проверки","mirrorStale":"GitHub недоступен · показана копия зеркала jsDelivr от {age} (зеркало кэширует дольше). Если GitHub у вас заблокирован, включите переключатель зеркала в центре подписки.","counter":"Визитов сегодня: {today} • Всего: {total}"}</script>
 <script src="../vendor/qrcode-generator-1.4.4.js?v=18ae399f81" defer></script>
-<script src="../app.js?v=793a427688" defer></script>
+<script src="../app.js?v=23712a21f8" defer></script>
 </body>
 </html>
