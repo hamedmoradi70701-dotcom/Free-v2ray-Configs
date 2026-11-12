@@ -2,13 +2,14 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — INDIA (IN) — 6 configs
+# رادار — INDIA (IN) — 7 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp4TWZlbjJiU3BVWXlQM0dqWEhQX2txTEExOUw5cjFjag@160.236.238.232:543?#IN 🇮🇳 | رادار | 6BD999
-vless://914f3806-07a1-4158-9624-e183de065a38@india.letsconnectpoint.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=india.letsconnectpoint.com&fp=chrome&pbk=erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0&sid=c1e3d5d4&type=tcp&headerType=none#IN 🇮🇳 | رادار | 209409
-vless://a368752a-32fc-42f3-980a-6b049218b23f@india.letsconnectpoint.com:443?&security=reality&flow=xtls-rprx-vision&pbk=erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0&sid=c1e3d5d4&fp=chrome&sni=india.letsconnectpoint.com&type=tcp&headerType=none&host=india.letsconnectpoint.com&path=%2F#IN 🇮🇳 | رادار | 4D5D2D
 vless://7d53c50c-3abf-4cb5-9d58-e7a42ce1d1c6@148.113.5.22:443?security=reality&encryption=none&pbk=Z427KvuqeeUvrRo-BDKuc9xG5t0z0y4zAnhA_NIFFwI&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=7ff98efcced3fd5b#IN 🇮🇳 | رادار | A9A46D
+vless://a368752a-32fc-42f3-980a-6b049218b23f@india.letsconnectpoint.com:443?&security=reality&flow=xtls-rprx-vision&pbk=erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0&sid=c1e3d5d4&fp=chrome&sni=india.letsconnectpoint.com&type=tcp&headerType=none&host=india.letsconnectpoint.com&path=%2F#IN 🇮🇳 | رادار | 4D5D2D
+vless://914f3806-07a1-4158-9624-e183de065a38@india.letsconnectpoint.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=india.letsconnectpoint.com&fp=chrome&pbk=erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0&sid=c1e3d5d4&type=tcp&headerType=none#IN 🇮🇳 | رادار | 209409
 vless://a368752a-32fc-42f3-980a-6b049218b23f@india.letsconnectpoint.com:443?encryption=none&security=reality&flow=xtls-rprx-vision&type=tcp&sni=india.letsconnectpoint.com&fp=chrome&pbk=erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0&sid=c1e3d5d4#IN 🇮🇳 | رادار | 2F675B
-vless://16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88@122.176.216.52:443?fp=chrome&host=app-6ada5023.deploy.meerasolution.com&path=%2Fws%2F16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88&security=tls&sni=app-6ada5023.deploy.meerasolution.com&type=ws#IN 🇮🇳 | رادار | 8537A4
+ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@172.105.39.124:7002#IN 🇮🇳 | رادار | A6FE37
+vless://e99ba96d-dec8-42eb-be53-19e71eef7cab@5.253.42.164:40443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&alpn=networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-&fp=chrome&security=reality&pbk=g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw&sid=68a8#IN 🇮🇳 | رادار | 685828

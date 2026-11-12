@@ -2,11 +2,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — UKRAINE (UA) — 4 configs
+# رادار — UKRAINE (UA) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://d8b58872-cc25-4bb2-badb-b86399c075fa@31.222.235.81:443?encryption=none&security=reality&type=tcp&sni=www.cloudflare.com&fp=chrome&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&sid=d8b58872#UA 🇺🇦 | رادار | 957C79
-vless://d8b58872-cc25-4bb2-badb-b86399c075fa@netx.smrtai.top:443?security=reality&encryption=none&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&headerType=none&fp=chrome&type=tcp&sni=www.cloudflare.com&sid=d8b58872#UA 🇺🇦 | رادار | 6AAD21
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@dns24.m3hrzd.ir:1352?#UA 🇺🇦 | رادار | F72D3E
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@185.194.191.35:1353?#UA 🇺🇦 | رادار | DFA978
