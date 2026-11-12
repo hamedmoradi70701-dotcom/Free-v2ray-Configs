@@ -1,4 +1,5 @@
-/* Radar login gate — talks to radar-auth.pages.dev; session kept in localStorage. */
+/* Radar login gate — talks to radar-login-70701.pages.dev; session kept in localStorage.
+   Smart lock: if the auth server is unreachable (e.g. filtered network), visitors are let in. */
 (function () {
   "use strict";
   var API = "https://radar-login-70701.pages.dev/auth";
@@ -80,16 +81,34 @@
           }
         })
         .catch(function () {
-          go.disabled = false; go.textContent = mode === "login" ? t.go : t.goNew;
-          err.textContent = t.netErr;
+          // Auth server unreachable: smart lock lets the visitor in.
+          unlock();
         });
     }
     go.addEventListener("click", submit);
     document.getElementById("rgPass").addEventListener("keydown", function (e) { if (e.key === "Enter") submit(); });
   }
 
+  function probe() {
+    // Resolves true if the auth server answers at all, false if unreachable.
+    return new Promise(function (resolve) {
+      var done = false;
+      var timer = setTimeout(function () { if (!done) { done = true; resolve(false); } }, 6500);
+      fetch(API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "me", user: "probe", token: "" })
+      }).then(function () { if (!done) { done = true; clearTimeout(timer); resolve(true); } })
+        .catch(function () { if (!done) { done = true; clearTimeout(timer); resolve(false); } });
+    });
+  }
+
   var session = getSession();
-  if (!session || !session.token) { lock(); return; }
+  if (!session || !session.token) {
+    lock();
+    probe().then(function (up) { if (!up && !getSession()) unlock(); });
+    return;
+  }
   // Session exists: let them in right away, verify in the background.
   unlock();
   fetch(API, {
