@@ -447,7 +447,22 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
     # با خود ببرد؛ و چون `merge_index` فقط فایلِ موجود را تبلیغ می‌کند،
     # نبودنش هم بی‌صدا از `index.json` بیرون می‌ماند.
     try:
-        golden = buckets["top"][:radar_extras.GOLDEN_N]
+        # طلایی نباید هیچ خطی با پرچمِ insecure داشته باشد: کلاینت‌های تازه
+        # (v2rayNGِ جدید) روی `allowInsecure=1` خطای ایمپورت می‌دهند. خطِ
+        # کثیف حذف و از رتبه‌های بعدیِ تمیز پُر می‌شود تا طلایی باز ۵۰تا
+        # بماند. داوریِ کلید/مقدار عیناً همانِ `core` است.
+        def _golden_clean(uri: str) -> bool:
+            q = uri.split("?", 1)[1] if "?" in uri else ""
+            q = q.split("#", 1)[0]
+            for pair in q.split("&"):
+                k, _, v = pair.partition("=")
+                if k in core._INSECURE_KEYS and \
+                        v.strip().lower() in core._TRUTHY_VALUES:
+                    return False
+            return True
+
+        golden = [c for c in buckets["top"]
+                  if _golden_clean(c)][:radar_extras.GOLDEN_N]
         golden_head = (
             core.hiddify_profile_header(f"GOLDEN {len(golden)}") +
             f"# {core.BRAND} — GOLDEN — the {len(golden)} fastest verified "
