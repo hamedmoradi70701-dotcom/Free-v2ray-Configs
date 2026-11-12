@@ -2,11 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — UNITED ARAB EMIRATES (AE) — 4 configs
+# رادار — UNITED ARAB EMIRATES (AE) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?host=95.174.68.188&path=%2Fvless&security=none&type=ws#AE 🇦🇪 | رادار | 64BB8E
 vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?path=%2Fvless&security=none&sni=95.174.68.188&type=ws#AE 🇦🇪 | رادار | 607218
 vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?path=%2Fvless&security=none&type=ws#AE 🇦🇪 | رادار | 01F511
-vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?host=95.174.68.188&path=%2Fvless&security=none&type=ws#AE 🇦🇪 | رادار | 64BB8E
 vless://965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0@95.174.68.188:14430?fp=unsafe&host=95.174.68.188&path=%2Fvless&security=none&sni=95.174.68.188&type=ws#AE 🇦🇪 | رادار | F16E75
+vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@84.235.245.65:2096/?type=ws&encryption=none&flow=&host=fs.qicai99.com&path=/&security=tls&sni=fs.qicai99.com&fp=chrome#AE 🇦🇪 | رادار | 2B3BB4

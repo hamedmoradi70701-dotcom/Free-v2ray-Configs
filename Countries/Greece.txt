@@ -1,9 +1,9 @@
-#profile-title: رادار — MALAYSIA (MY)
+#profile-title: رادار — GREECE (GR)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — MALAYSIA (MY) — 1 configs
+# رادار — GREECE (GR) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vmess://eyJ2IjoiMiIsInBzIjoiTVkg8J+HsvCfh74gfCDYsdin2K/Yp9ixIHwgQUQ4RTM3IiwiYWRkIjoiNDcuMjUwLjEzNS4yNDQiLCJwb3J0IjoiMTAwMDAiLCJpZCI6ImFlZGM2NmI4LTk5ZDctNGEyMS04MzEwLTYxODcwZTdmODcwZCIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoicmF3IiwidHlwZSI6IiIsInRscyI6IiJ9
+vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@85.90.197.158:443?host=fs.qicai99.com&path=%2Ffp%3Dchrome&security=tls&sni=fs.qicai99.com&type=ws#GR 🇬🇷 | رادار | 0B689A

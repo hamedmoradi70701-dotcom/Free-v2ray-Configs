@@ -2,19 +2,21 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — FINLAND (FI) — 12 configs
+# رادار — FINLAND (FI) — 14 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://679d0fcc-4c72-4073-8f1d-311b69ef72b5@2.31.100.78:13060?security=none&type=tcp&encryption=none#FI 🇫🇮 | رادار | 73658D
-vless://622654a4-b666-000b-9260-fb717e05154f@169.40.34.41:443?security=reality&encryption=none&pbk=6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY&headerType=none&fp=ios&type=tcp&flow=xtls-rprx-vision&sni=key-master-saver.com&sid=1c3e8241a8743df9#FI 🇫🇮 | رادار | E45567
-vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgQzY0MTYwIiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiIyMDUzIiwiaWQiOiJhZWIzYzAxOS1hZTgzLTQ2NzctYWY5Ny04NDZiYWE3ODdhZDUiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJodHRwIiwidGxzIjoiIiwiYWxwbiI6IiIsInBhdGgiOiIvM3giLCJob3N0IjoiZG93bi1jZG4uZGluZ3RhbGsuY29tIn0=
-vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgM0E5NEM3IiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiI1MjA4MCIsImlkIjoiZWMzYzhiOTctZjMwOC00ZmVlLWFhMTYtOTVlMmM3NTk1YWNkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLzN4In0=
-vless://5f07a2a1-82a5-494d-847b-b882e6903192@free.for.member.iiproxy.com:443?security=tls&sni=free.for.member.iiproxy.com&type=tcp#FI 🇫🇮 | رادار | 6EE0B4
-vless://5f07a2a1-82a5-494d-847b-b882e6903192@65.109.208.183:443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=free.for.member.iiproxy.com#FI 🇫🇮 | رادار | 2C6F8E
+vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?fp=unsafe&host=45.144.234.157&path=%2Fvless&security=none&sni=45.144.234.157&type=ws#FI 🇫🇮 | رادار | 56A19A
 vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgQzU3RUFBIiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiI1MjA4MCIsImlkIjoiZWMzYzhiOTctZjMwOC00ZmVlLWFhMTYtOTVlMmM3NTk1YWNkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLzN4IiwiaG9zdCI6ImRvd24tY2RuLmRpbmd0YWxrLmNvbSJ9
+vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgQzY0MTYwIiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiIyMDUzIiwiaWQiOiJhZWIzYzAxOS1hZTgzLTQ2NzctYWY5Ny04NDZiYWE3ODdhZDUiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJodHRwIiwidGxzIjoiIiwiYWxwbiI6IiIsInBhdGgiOiIvM3giLCJob3N0IjoiZG93bi1jZG4uZGluZ3RhbGsuY29tIn0=
+vless://b79d736d-0f10-4169-b626-362059d18204@95.216.27.15:2053?encryption=none&fp=&pbk=aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs&security=reality&sid=10351b07c712d2a2&sni=www.cloudflare.com&type=tcp#FI 🇫🇮 | رادار | 0ED90B
+vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?host=45.144.234.157&path=%2Fvless&security=none&type=ws#FI 🇫🇮 | رادار | 575D2D
+vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?encryption=none&type=ws&path=%2Fvless%23Farah_VPN-178#FI 🇫🇮 | رادار | CC1942
 ss://YWVzLTI1Ni1nY206RGdNeXdYS3FvakhYZXVYWThoT0phWUdQRmNqd2VDSUplRDVjZGcvY1VVWT0@213.176.92.148:40647#FI 🇫🇮 | رادار | E71624
 vless://5f07a2a1-82a5-494d-847b-b882e6903192@free.for.member.iiproxy.com:443?security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&allowInsecure=0&sni=free.for.member.iiproxy.com#FI 🇫🇮 | رادار | 881033
-vless://b79d736d-0f10-4169-b626-362059d18204@95.216.27.15:2053?encryption=none&fp=&pbk=aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs&security=reality&sid=10351b07c712d2a2&sni=www.cloudflare.com&type=tcp#FI 🇫🇮 | رادار | 0ED90B
+vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgM0E5NEM3IiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiI1MjA4MCIsImlkIjoiZWMzYzhiOTctZjMwOC00ZmVlLWFhMTYtOTVlMmM3NTk1YWNkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLzN4In0=
 vless://5f07a2a1-82a5-494d-847b-b882e6903192@65.109.208.183:443?security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=free.for.member.iiproxy.com#FI 🇫🇮 | رادار | 0B087A
+vless://4201786b-d99b-4147-a5f0-20d47acddb81@196.245.217.70:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA&security=reality&sid=8d0d0679f42ffd98&sni=8a2e72t.nl11.h1clayd.click&type=tcp#FI 🇫🇮 | رادار | 2F321D
+vless://ba52cc43-700d-4040-9444-29214c98e6e0@213.176.92.168:10444?encryption=none&flow=xtls-rprx-vision&security=reality&sni=video.yandex.ru&fp=chrome&pbk=0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo&sid=8debcf36f1cc69ff&type=tcp&headerType=none&path=%2F#FI 🇫🇮 | رادار | 7F223E
 vless://b0a76856-69a7-456f-8ffe-c903e2893b7c@n8.hyby.ir:2087?mode=auto&path=/&security=tls&alpn=h3,h2,http/1.1&encryption=mlkem768x25519plus.native.0rtt.Fy1WuRvH1VNIEda4AC61jAhcBFLzuYHcwbUO7mNjxwY&insecure=0&host=www.hyby.ir&fp=chrome&type=xhttp&allowInsecure=0#FI 🇫🇮 | رادار | D05535

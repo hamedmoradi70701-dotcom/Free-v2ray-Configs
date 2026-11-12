@@ -2,10 +2,8 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — IRELAND (IE) — 3 configs
+# رادار — IRELAND (IE) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vmess://eyJ2IjoiMiIsInBzIjoiSUUg8J+HrvCfh6ogfCDYsdin2K/Yp9ixIHwgQTNEOERGIiwiYWRkIjoiNTQuMjI5LjE1MS45NyIsInBvcnQiOiI1OTIzNiIsImlkIjoiMjM4N2JmYmMtMTBhNi00YmQ3LWRjNTUtN2NiYTk1NGNlNmU4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyJ9
-vmess://eyJ2IjoiMiIsInBzIjoiSUUg8J+HrvCfh6ogfCDYsdin2K/Yp9ixIHwgMDM3NjBEIiwiYWRkIjoiNTQuMjI5LjE1MS45NyIsInBvcnQiOiI1OTIzNiIsImlkIjoiMjM4N2JmYmMtMTBhNi00YmQ3LWRjNTUtN2NiYTk1NGNlNmU4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyIsImhvc3QiOiJ0bXMuZGluZ3RhbGsuY29tIn0=
 vless://232fa5fc-f8af-4c96-a6cf-f69d3c60fa33@83.141.88.177:443?mode=auto&path=%2Fapi%2Fv1%2Fsync&security=tls&alpn=h2&encryption=none&insecure=0&host=vector-gate.ru&fp=ios&type=xhttp&allowInsecure=0&sni=vector-gate.ru#IE 🇮🇪 | رادار | 4E3C44

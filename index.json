@@ -1,11 +1,11 @@
 {
   "brand": "رادار",
   "generator": "رادارBot aggregator",
-  "updated_at": "2026-11-12T12:15:30.698858+00:00",
-  "updated_at_unix": 1794485730,
-  "next_update_eta": "2026-11-12T12:30:30.698858+00:00",
+  "updated_at": "2026-11-12T12:29:57.542725+00:00",
+  "updated_at_unix": 1794486597,
+  "next_update_eta": "2026-11-12T12:44:57.542725+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 38.1,
+  "elapsed_seconds": 32.4,
   "raw_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
@@ -172,7 +172,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1190,
+      "unique": 1213,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt",
@@ -186,7 +186,7 @@
       }
     },
     "fast": {
-      "unique": 797,
+      "unique": 775,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/fast/configs.txt",
@@ -200,7 +200,7 @@
       }
     },
     "secure": {
-      "unique": 800,
+      "unique": 821,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/secure/configs.txt",
@@ -228,7 +228,7 @@
   },
   "countries": {
     "count": 45,
-    "configs": 1190,
+    "configs": 1213,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/Countries/index.json",
