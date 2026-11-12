@@ -8,4 +8,4 @@
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://3f5e89d5-591f-4ac9-b071-b05680b573c3@94.183.164.142:443?encryption=none&fp=firefox&path=/static/js/vendor.cc1645b6.js?ed=2048&security=tls&sni=nl4.gacvpn.site&type=ws#IR 🇮🇷 | رادار | 432889
 vless://3f5e89d5-591f-4ac9-b071-b05680b573c3@94.183.164.142:443?encryption=none&fp=chrome&path=/static/js/vendor.cc1645b6.js&security=tls&sni=nl4.gacvpn.site&type=ws#IR 🇮🇷 | رادار | 883EF5
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp2bzNSdkM4WlZkc21veHhycHdXb0s0X1pQbWdpMVlLNQ==@p1tun2.greewebservices.ir:2050#IR 🇮🇷 | رادار | BA6C40
+vless://549766c3-fa5f-471e-8031-ffc1f8d5064f@94.183.164.119:443?type=xhttp&security=reality&fp=chrome&pbk=31_G-lTr8GVS33I-ySfmMOXJ7SzpS48Ela7xXeT9D1Y&sid=29f834cf893710f9&sni=tgnl2.blog-forme.ru&path=/v2/notes/86cf7ba6ede1&host=tgnl2.blog-forme.ru#IR 🇮🇷 | رادار | 4BDACF
