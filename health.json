@@ -1,8 +1,8 @@
 {
   "brand": "رادار",
-  "checked_at": "2026-11-13T12:30:04.614025+00:00",
-  "checked_at_unix": 1794573004,
-  "elapsed_seconds": 32.9,
+  "checked_at": "2026-11-13T12:44:39.836993+00:00",
+  "checked_at_unix": 1794573879,
+  "elapsed_seconds": 41.9,
   "summary": {
     "total": 29,
     "ok": 25,
@@ -20,7 +20,7 @@
       "count": 184,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 191
+      "latency_ms": 428
     },
     {
       "url": "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
@@ -30,7 +30,7 @@
       "count": 166,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 145
+      "latency_ms": 287
     },
     {
       "url": "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mci/sub_1.txt",
@@ -40,7 +40,7 @@
       "count": 6,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 149
+      "latency_ms": 134
     },
     {
       "url": "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mtn/sub_1.txt",
@@ -58,7 +58,7 @@
       "count": 4566,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 600
+      "latency_ms": 1020
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -68,7 +68,7 @@
       "count": 1751,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 262
+      "latency_ms": 537
     },
     {
       "url": "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
@@ -78,7 +78,7 @@
       "count": 644,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 204
+      "latency_ms": 547
     },
     {
       "url": "https://raw.githubusercontent.com/LalatinaHub/LatinaSub/main/result/sub",
@@ -88,7 +88,7 @@
       "count": 500,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 163
+      "latency_ms": 317
     },
     {
       "url": "https://raw.githubusercontent.com/Mr-Meshky/vify/main/configs/alive.txt",
@@ -106,7 +106,7 @@
       "count": 150,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 193
+      "latency_ms": 328
     },
     {
       "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
@@ -116,7 +116,7 @@
       "count": 9132,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 848
+      "latency_ms": 1210
     },
     {
       "url": "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
@@ -126,7 +126,7 @@
       "count": 143,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 212
+      "latency_ms": 361
     },
     {
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
@@ -136,7 +136,7 @@
       "count": 3678,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 393
+      "latency_ms": 707
     },
     {
       "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
@@ -154,7 +154,7 @@
       "count": 11887,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 1019
+      "latency_ms": 1461
     },
     {
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
@@ -164,7 +164,7 @@
       "count": 4547,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 317
+      "latency_ms": 570
     },
     {
       "url": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
@@ -174,7 +174,7 @@
       "count": 3999,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 457
+      "latency_ms": 461
     },
     {
       "url": "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/main/all_servers.txt",
@@ -184,7 +184,7 @@
       "count": 879,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 352
+      "latency_ms": 588
     },
     {
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/ss_iran.txt",
@@ -194,7 +194,7 @@
       "count": 6321,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 674
+      "latency_ms": 891
     },
     {
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/vless_iran.txt",
@@ -204,7 +204,7 @@
       "count": 3176,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 385
+      "latency_ms": 714
     },
     {
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/trojan_iran.txt",
@@ -214,7 +214,7 @@
       "count": 630,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 124
+      "latency_ms": 132
     },
     {
       "url": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/vmess_iran.txt",
@@ -224,7 +224,7 @@
       "count": 138,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 103
+      "latency_ms": 180
     },
     {
       "url": "https://raw.githubusercontent.com/Mr-Meshky/vify/main/configs/all.txt",
@@ -234,7 +234,7 @@
       "count": 1612,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 230
+      "latency_ms": 336
     },
     {
       "url": "https://raw.githubusercontent.com/DukeMehdi/FreeList-V2ray-Configs/main/Configs/All-DukeMehdi-Configs.txt",
@@ -252,7 +252,7 @@
       "count": 708,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 271
+      "latency_ms": 267
     },
     {
       "url": "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt",
@@ -262,7 +262,7 @@
       "count": 359,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 132
+      "latency_ms": 318
     },
     {
       "url": "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/main/mix/sub.html",
@@ -272,7 +272,7 @@
       "count": 332,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 114
+      "latency_ms": 510
     },
     {
       "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
@@ -282,7 +282,7 @@
       "count": 11,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 79
+      "latency_ms": 178
     },
     {
       "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
@@ -292,7 +292,7 @@
       "count": 15,
       "http_code": 200,
       "attempts": 1,
-      "latency_ms": 99
+      "latency_ms": 152
     }
   ],
   "converters": {
@@ -541,17 +541,17 @@
     "db_loaded": 1,
     "by_ip_literal": 7470,
     "unknown_ip_literal": 6,
-    "by_dns": 2040,
-    "dns_failed": 992,
+    "by_dns": 2039,
+    "dns_failed": 993,
     "unknown_after_dns": 3,
     "skipped_no_db": 0,
-    "hosts_resolved": 9510,
-    "hosts_unknown": 1001
+    "hosts_resolved": 9509,
+    "hosts_unknown": 1002
   },
   "cascade": {
     "exit_country": {
-      "colo": "IAD",
-      "loc": "US",
+      "colo": "DFW",
+      "loc": "MX",
       "source": "https://cp.cloudflare.com/cdn-cgi/trace"
     },
     "layers": {
@@ -567,42 +567,42 @@
         },
         "endpoints_unique": 12525,
         "dedup_saving_pct": 27.76,
-        "seconds": 0.48
+        "seconds": 0.83
       },
       "l2": {
         "in": 17338,
-        "out": 8984,
-        "open_pct": 51.82,
-        "open_pct_of_raw_input": 50.8,
+        "out": 9007,
+        "open_pct": 51.95,
+        "open_pct_of_raw_input": 50.93,
         "dns_failed": 854,
-        "dns_seconds": 20.92,
-        "tcp_seconds": 19.63,
+        "dns_seconds": 20.06,
+        "tcp_seconds": 19.94,
         "fd_before": 6,
         "fd_after": 6,
-        "seconds": 41.09
+        "seconds": 40.9
       },
       "l3": {
-        "in": 8984,
+        "in": 9007,
         "rounds": 3,
         "per_run_ok": [
-          1407,
-          1422,
-          1463
+          1440,
+          1404,
+          1457
         ],
-        "ever_ok": 1639,
-        "stable": 1196,
-        "flaky_pct": 27.03,
-        "seconds": 276.66
+        "ever_ok": 1621,
+        "stable": 1224,
+        "flaky_pct": 24.49,
+        "seconds": 299.55
       }
     },
     "buckets": {
-      "verified": 1196,
-      "fast": 930,
-      "secure": 780,
+      "verified": 1224,
+      "fast": 869,
+      "secure": 808,
       "top": 100,
       "top_short_by": 0,
       "fast_threshold_ms": 800
     },
-    "total_seconds": 318.83
+    "total_seconds": 342.09
   }
 }
