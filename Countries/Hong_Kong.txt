@@ -2,13 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — HONG KONG (HK) — 6 configs
+# رادار — HONG KONG (HK) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vmess://eyJ2IjpudWxsLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDE5MDE3MSIsImFkZCI6IjQ3LjI0NC4xMjAuMTk3IiwicG9ydCI6MjMwMjYsImlkIjoiYjlkZTFiYzktYmFhNy00MWFjLTg2ZjctY2NkNTk2OTVjYjIxIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOm51bGwsImhvc3QiOiI0Ny4yNDQuMTIwLjE5NyIsImFscG4iOm51bGwsInBhdGgiOiIvYXJraSIsInRscyI6Im5vbmUiLCJzbmkiOm51bGwsImZwIjpudWxsLCJuYW1lIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgMTkwMTcxIn0=
 vmess://eyJhZGQiOiIxNTYuMjM5LjIyNC4xMDciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyNzBiZWQ1LWY5MDgtNGVjYy1mMWM4LWRlMjQ2MDMzYjE4NiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNTcyNzgiLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDZBMEFEQyIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@23.156.153.40:443?&security=tls&fp=chrome&sni=fs.qicai99.com&type=ws&headerType=none&host=fs.qicai99.com&path=%2F#HK 🇭🇰 | رادار | 256324
+vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@23.156.153.40:443?host=fs.qicai99.com&path=%2Ffp%3Dchrome&security=tls&sni=fs.qicai99.com&type=ws#HK 🇭🇰 | رادار | 8F8CE4
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@39.109.111.23:48158/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&allowInsecure=1&fp=firefox&security=reality&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7#HK 🇭🇰 | رادار | FE986B
-ss://YWVzLTI1Ni1nY206QU1vazQwRmZhTStJa3dyZTE2cHNCcFZrNkpIeHNRWnc=@209.248.57.105:8388#HK 🇭🇰 | رادار | 9BE1BB
-vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@38.207.178.173:2087?path=%2Ftyxyws&security=tls&encryption=none&fm=%7B%22tcp%22%3A%5B%7B%22type%22%3A%22fragment%22%2C%22settings%22%3A%7B%22packets%22%3A%22tlshello%22%2C%22lengths%22%3A%5B%220%22%2C%22104%22%2C%221%22%5D%2C%22delays%22%3A%5B%220%22%5D%2C%22maxSplit%22%3A%220%22%7D%7D%2C%7B%22type%22%3A%22fragment%22%2C%22settings%22%3A%7B%22packets%22%3A%221-1%22%2C%22lengths%22%3A%5B%22114%22%2C%221%22%5D%2C%22delays%22%3A%5B%221%22%5D%2C%22maxSplit%22%3A%2211%22%7D%7D%5D%7D&insecure=0&host=jp3.yohototo.top&fp=unsafe&type=ws&allowInsecure=0&sni=jp3.yohototo.top#HK 🇭🇰 | رادار | 47F90E
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@doghkzf.zalolink.com:48158?fp=chrome&headerType=none&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&encryption=none&sid=54cca3c1c1c7&flow=xtls-rprx-vision&sni=www.apple.com&type=tcp&security=reality#HK 🇭🇰 | رادار | B2FD1A
