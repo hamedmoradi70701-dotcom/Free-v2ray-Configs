@@ -150616,7 +150616,7 @@ proxies:
     path: /wis
     headers:
       Host: aa.houdinix.space
-- name: "CA \U0001F1E8\U0001F1E6 | رادار | 0C031F"
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 0C031F"
   server: ac2088.herokuapp.com
   port: 443
   type: vmess
@@ -159224,7 +159224,7 @@ proxies:
     path: /cctv?ed=2048
     headers:
       Host: buyvmus.6bnw.top
-- name: "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   server: mycfwork.herokuapp.com
   port: 443
   type: vmess
@@ -180288,7 +180288,7 @@ proxy-groups:
   - "Global \U0001F310 | رادار | 62AD21"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1ED29A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 305DCF"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | 0C031F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 0C031F"
   - "RU \U0001F1F7\U0001F1FA | رادار | 00FA89"
   - "IT \U0001F1EE\U0001F1F9 | رادار | B7F8D3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 87E1D0"
@@ -180947,7 +180947,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | D78D86"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 2E825C"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 13E286"
-  - "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7B05FB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 011DEE"
   - "Global \U0001F310 | رادار | 414F05"
@@ -195016,7 +195016,7 @@ proxy-groups:
   - "Global \U0001F310 | رادار | 62AD21"
   - "US \U0001F1FA\U0001F1F8 | رادار | 1ED29A"
   - "US \U0001F1FA\U0001F1F8 | رادار | 305DCF"
-  - "CA \U0001F1E8\U0001F1E6 | رادار | 0C031F"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 0C031F"
   - "RU \U0001F1F7\U0001F1FA | رادار | 00FA89"
   - "IT \U0001F1EE\U0001F1F9 | رادار | B7F8D3"
   - "US \U0001F1FA\U0001F1F8 | رادار | 87E1D0"
@@ -195675,7 +195675,7 @@ proxy-groups:
   - "HK \U0001F1ED\U0001F1F0 | رادار | D78D86"
   - "HK \U0001F1ED\U0001F1F0 | رادار | 2E825C"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 13E286"
-  - "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7B05FB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 011DEE"
   - "Global \U0001F310 | رادار | 414F05"

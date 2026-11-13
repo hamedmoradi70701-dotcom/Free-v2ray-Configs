@@ -7,13 +7,13 @@
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCDYsdin2K/Yp9ixIHwgN0U4Nzk4IiwiYWRkIjoiMTI5LjE1NC42MS4xOTYiLCJwb3J0IjoiODAwIiwiaWQiOiJhOTE1YjFkNi1jZjI4LTRkYzgtZTRiNC1lMDljNDhjMzdlYzAiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | رادار | 75B776
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | رادار | DE0128
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | رادار | 75B776
 vless://3567660e-d2a7-4a8a-b379-2ff61e7f52ba@43.155.182.152:443?security=reality&type=tcp&allowInsecure=1&sni=live.douyin.com&fp=firefox&flow=xtls-rprx-vision&sid=a905935ed2d659fe&pbk=1HazPAvhO7sdmIloNjQEDXtjVP8i-Gn59doTSRVuiGY#KR 🇰🇷 | رادار | 56AD95
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?host=152.69.226.63&path=%2F&security=none&type=ws#KR 🇰🇷 | رادار | C98ACA
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&sni=152.69.226.63&type=ws#KR 🇰🇷 | رادار | E3B6CD
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F&sni=152.69.226.63#KR 🇰🇷 | رادار | 52445E
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws#KR 🇰🇷 | رادار | E820CB
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?path=%2F&security=none&type=ws#KR 🇰🇷 | رادار | 6913F7
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&sni=152.69.226.63&type=ws#KR 🇰🇷 | رادار | E3B6CD
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?host=152.69.226.63&path=%2F&security=none&type=ws#KR 🇰🇷 | رادار | C98ACA
 vless://a2de9567-9646-45a9-a410-7303a43bdb6c@151.245.106.49:2053?fp=random&host=www.cloudflare.com&pbk=F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo&security=reality&sid=429499c03d4cc8a0&sni=www.cloudflare.com&type=tcp#KR 🇰🇷 | رادار | B1880B
 vless://a2de9567-9646-45a9-a410-7303a43bdb6c@151.245.106.49:2053?fp=chrome&pbk=F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo&security=reality&sid=429499c03d4cc8a0&sni=www.cloudflare.com&type=raw#KR 🇰🇷 | رادار | C26A71
