@@ -356,6 +356,13 @@
 
 <main>
   <!-- ── live overview ─────────────────────────────────────────────── -->
+  <section class="shell" id="chooser" style="margin-top:48px" aria-label="بخش‌های رادار">
+    <div class="stats-grid" style="grid-template-columns:repeat(2,1fr)">
+      <a class="stat" href="#hub" style="text-decoration:none"><span class="stat-k">بخش ۱</span><strong>کانفیگ V2Ray</strong><span class="stat-foot">کانفیگ‌یاب و اشتراک‌های رادار</span></a>
+      <a class="stat stat-primary" href="#warp" style="text-decoration:none"><span class="stat-k">بخش ۲</span><strong>وارپ</strong><span class="stat-foot">سازنده، دکتر و یابنده‌ی وایرگارد</span></a>
+    </div>
+  </section>
+
   <section class="overview shell" aria-labelledby="overview-title">
     <div class="caption-row">
       <h2 class="caption" id="overview-title"><span class="diamond" aria-hidden="true"></span>این انتشار · خوانده‌شده به‌صورت زنده از index.json</h2>
@@ -449,33 +456,18 @@
   </section>
 
   <!-- ── warp maker ─────────────────────────────────────────────── -->
-  <section class="warp-promo shell" id="warp" aria-labelledby="warp-title">
+  
+
+  <!-- ── explorer ──────────────────────────────────────────────────── -->
+  <section class="shell" id="warp" aria-labelledby="warp-tools-title">
     <div class="section-head">
       <div>
         <div class="overline"><span class="overline-line"></span>ابزار وایرگارد رادار</div>
-        <h2 id="warp-title">وارپ‌ساز رادار</h2>
-        <p>حساب واقعی WARP بساز، کانفیگ خراب رو تعمیر کن و از هر لینکی کانفیگ وایرگارد دربیار — با فرمولی که روی نت ایران جواب داده است.</p>
-      </div>
-      <a class="btn btn-blue" href="#warp">باز کردن وارپ‌ساز<span aria-hidden="true" class="arrow">↗</span></a>
-    </div>
-    <div class="hub-card">
-      <div class="hub-steps">
-        <div class="hub-step">
-          <h3 class="step-title"><span class="step-n">01</span>سازنده‌ی وارپ</h3>
-          <p class="tier-desc">حساب واقعی WARP+ با آی‌پی تمیز و فرمول برنده‌ی آمنزیاWG</p>
-        </div>
-        <div class="hub-step">
-          <h3 class="step-title"><span class="step-n">02</span>دکتر کانفیگ</h3>
-          <p class="tier-desc">تشخیص و تعمیر خودکار کانفیگ خراب، با نمره‌ی اتصال و تبدیل دوطرفه</p>
-        </div>
-        <div class="hub-step">
-          <h3 class="step-title"><span class="step-n">03</span>یابنده‌ی وایرگارد</h3>
-          <p class="tier-desc">استخراج کانفیگ وایرگارد از لینک اشتراک و متن، آماده‌ی کپی و دانلود</p>
-        </div>
+        <h2 id="warp-tools-title">وارپ‌ساز رادار</h2>
+        <p>سازنده‌ی وارپ، دکتر کانفیگ و یابنده‌ی وایرگارد — همه تو همین صفحه، بدون رفتن به جای دیگه.</p>
       </div>
     </div>
-  </section>
-  <div id="warp-tools">
+    <div id="warp-tools">
 <div class="wgx shell">
 
   <div class="caption-row">
@@ -720,9 +712,9 @@
 
   <div class="toast wg-toast" id="wgToast" role="status"></div>
 </div>
-  </div>
+    </div>
+  </section>
 
-  <!-- ── explorer ──────────────────────────────────────────────────── -->
   <section class="explorer shell" id="explorer" aria-labelledby="explorer-title">
     <noscript><p class="noscript">کاوشگرِ تعاملی به جاوااسکریپت نیاز دارد. اشتراکِ تأییدشده بدونِ آن هم کار می‌کند: <a href="https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs_base64.txt">verified/configs_base64.txt</a></p></noscript>
     <div class="section-head">
