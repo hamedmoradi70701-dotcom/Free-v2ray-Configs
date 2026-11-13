@@ -6,4 +6,4 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@85.90.197.158:443?path=%2Ffp%3Dchrome&security=tls&encryption=none&insecure=0&host=fs.qicai99.com&type=ws&allowInsecure=0&sni=fs.qicai99.com#GR 🇬🇷 | رادار | 0B689A
+vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@85.90.197.158:443?path=/fp&security=tls&encryption=none&insecure=0&host=fs.qicai99.com&type=ws&allowInsecure=0&sni=fs.qicai99.com#GR 🇬🇷 | رادار | 924157

@@ -1,9 +1,0 @@
-#profile-title: رادار — NIGER (NE)
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — NIGER (NE) — 1 configs
-# source: verified/ — every config passed a real proxied request in ALL L3 rounds
-# location: GeoIP (DB-IP Country Lite) on the real network address of the server
-# note: this is where the SERVER is, not necessarily where your traffic exits
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.196.148.85:443?security=reality&encryption=none&pbk=l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs&headerType=none&fp=chrome&type=tcp&sni=5d0319t.nl7.h1clayd.click&sid=361d0dd59c70516f#NE 🇳🇪 | رادار | 0FEC3D

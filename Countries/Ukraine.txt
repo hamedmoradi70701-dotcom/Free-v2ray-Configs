@@ -2,15 +2,10 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — UKRAINE (UA) — 8 configs
+# رادار — UKRAINE (UA) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vmess://eyJhZGQiOiIxODUuMTk0LjE5MS4yMzEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZGIxNmM0OTQtMTdiZC00ZGE4LWIxMGQtM2M2ODMxZDI1YzQ1IiwiaW5zZWN1cmUiOiIwIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOiI0MjI1OSIsInBzIjoiVUEg8J+HuvCfh6YgfCDYsdin2K/Yp9ixIHwgMUNFOTE2Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiIsInZjbiI6IiJ9
 vless://d8b58872-cc25-4bb2-badb-b86399c075fa@31.222.235.81:443?security=reality&encryption=none&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&headerType=none&fp=chrome&type=tcp&sni=www.cloudflare.com&sid=d8b58872#UA 🇺🇦 | رادار | 957C79
 vless://d8b58872-cc25-4bb2-badb-b86399c075fa@netx.smrtai.top:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=L9IllZt5vcjYVY_6rmCJ_9ypmJsBK8dSWkNVCStrZjk&sid=d8b58872&type=tcp&headerType=none#UA 🇺🇦 | رادار | 6AAD21
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@dns24.m3hrzd.ir:1352#UA 🇺🇦 | رادار | F72D3E
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@185.194.191.35:1352?#UA 🇺🇦 | رادار | 8C5BDA
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@185.194.191.35:1349?#UA 🇺🇦 | رادار | BF1144
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWVHpPbGpzV0NNN2dGUDA0aG50RHBXY2hUTHowZVpxSg@dns24.m3hrzd.ir:1349#UA 🇺🇦 | رادار | 46E279
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpieVg0LURWMEM0MlBMRlRXUWhNVEFRNjNtWjhxckRSQg@dns24.m3hrzd.ir:1349#UA 🇺🇦 | رادار | 4BC4E4

@@ -1202,7 +1202,7 @@ trojan://d2adff89-5143-4d67-921f-3478464de5bb@130.0.236.88:443?security=tls&sni=
 trojan://d306137cdbd55eac0d79ca7d1e3904a4@tyy129.magiclampcloud.com:59443?allowInsecure=0&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | رادار | F8D3CF
 trojan://d30ab83dbde4480082048fb315bedebd@149.248.39.92:443?encryption=none&security=tls&sni=149.248.39.92&type=raw&headertype=none#US 🇺🇸 | رادار | C756A6
 trojan://d342d31e-d016-4c25-82fe-19a892795da2@43.134.48.62:443/?type=tcp&security=tls&sni=86sg.ljydw.top&alpn=http%2F1.1&allowInsecure=1&fp=chrome#SG 🇸🇬 | رادار | FFBF0B
-trojan://d3e663d2-5cce-56e1-a199-2fec6078fcb4@tgju.org:2096?path=trojan-ws%2F%3Fed&security=tls&host=mailbox.CpIfOrperSiA.UK&fp=chrome&type=ws&sni=mailbox.CpIfOrperSiA.UK#FI 🇫🇮 | رادار | 00F950
+trojan://d3e663d2-5cce-56e1-a199-2fec6078fcb4@tgju.org:2096?path=trojan-ws%2F%3Fed&security=tls&host=mailbox.CpIfOrperSiA.UK&fp=chrome&type=ws&sni=mailbox.CpIfOrperSiA.UK#DE 🇩🇪 | رادار | 00F950
 trojan://d453daeb7e9b5fb9cad882763bd71d85@ja304.magiclampcloud.cn:59443?allowInsecure=0&type=tcp&sni=ja304.magiclampcloud.cn#CN 🇨🇳 | رادار | 374C65
 trojan://d4e41ff772c7fd45@23.247.137.70:3389?security=tls#US 🇺🇸 | رادار | AE1990
 trojan://d4e41ff772c7fd45@45.11.104.94:3389?security=tls&sni=sbank.ir#HK 🇭🇰 | رادار | 037CBB
