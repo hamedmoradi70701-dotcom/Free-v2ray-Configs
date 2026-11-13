@@ -18,7 +18,8 @@
     "explorer": "探索",
     "countries": "国家",
     "proof": "验证",
-    "faq": "常见问题"
+    "faq": "常见问题",
+    "warp": "Warp 制作"
   },
   "hero": {
     "eyebrow": "实时 · 每 15 分钟重建",
@@ -32,6 +33,10 @@
     "logoAlt": "رادار Root-R 组合标志，位于电蓝色品牌背景上",
     "floatTitle": "3 / 3 轮全部通过",
     "floatDesc": "经每个配置的真实 HTTP 204 响应"
+  },
+  "promo": {
+    "title": "60 秒了解 Radar",
+    "sub": "看看 Radar 如何剔除失效配置，只发布真实可用的连接。"
   },
   "stats": {
     "eyebrow": "本次发布 · 实时读取自 index.json",
@@ -318,5 +323,17 @@
     "livePool": "来自仓库的实时配置 — 未经隧道测试",
     "mirrorStale": "GitHub 无法访问 · 当前显示的是 {age} 的 jsDelivr 镜像副本（镜像缓存时间更长）。如果 GitHub 被你所在网络屏蔽，请在订阅中心打开镜像开关。",
     "counter": "今日访问：{today} • 总计：{total}"
+  },
+  "warp": {
+    "overline": "Radar WireGuard 工具",
+    "title": "Radar Warp 制作器",
+    "desc": "创建真实的 WARP 账户、修复损坏的配置，并从任何链接中提取 WireGuard 配置——采用在伊朗网络验证有效的公式。",
+    "f1t": "Warp 制作",
+    "f1d": "真实 WARP+ 账户，干净 IP 与获胜的 AmneziaWG 公式",
+    "f2t": "配置医生",
+    "f2d": "自动诊断并修复损坏配置，附连接评分与双向转换",
+    "f3t": "WireGuard 查找器",
+    "f3d": "从订阅链接和文本中提取 WireGuard 配置，可直接复制或下载",
+    "cta": "打开 Warp 制作器"
   }
 }

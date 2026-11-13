@@ -18,7 +18,8 @@
     "explorer": "Explorer",
     "countries": "Countries",
     "proof": "Proof",
-    "faq": "Questions"
+    "faq": "Questions",
+    "warp": "Warp Maker"
   },
   "hero": {
     "eyebrow": "LIVE · REBUILT EVERY 15 MINUTES",
@@ -32,6 +33,10 @@
     "logoAlt": "رادار Root-R monogram on the electric-blue brand background",
     "floatTitle": "3 / 3 rounds passed",
     "floatDesc": "Real HTTP 204 through every config"
+  },
+  "promo": {
+    "title": "Radar in 60 seconds",
+    "sub": "Watch how Radar drops dead configs and publishes only the living ones."
   },
   "stats": {
     "eyebrow": "THIS RELEASE · READ LIVE FROM index.json",
@@ -318,5 +323,17 @@
     "livePool": "Live from repos — not tunnel-tested",
     "mirrorStale": "GitHub unreachable · showing the jsDelivr mirror copy from {age} (the mirror caches longer). If GitHub is blocked for you, turn on the mirror switch in the hub.",
     "counter": "Visits today: {today} • Total: {total}"
+  },
+  "warp": {
+    "overline": "Radar WireGuard tools",
+    "title": "Radar Warp Maker",
+    "desc": "Create a real WARP account, repair a broken config, and pull WireGuard configs out of any link — with the formula that works on Iran’s networks.",
+    "f1t": "Warp Maker",
+    "f1d": "A real WARP+ account with a clean IP and the winning AmneziaWG formula",
+    "f2t": "Config Doctor",
+    "f2d": "Auto-diagnose and repair a broken config, with a connection score and two-way converter",
+    "f3t": "WireGuard Finder",
+    "f3d": "Extract WireGuard configs from subscription links and text, ready to copy or download",
+    "cta": "Open Warp Maker"
   }
 }
