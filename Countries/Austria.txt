@@ -2,16 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — AUSTRIA (AT) — 9 configs
+# رادار — AUSTRIA (AT) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53
-vmess://eyJhZGQiOiIxNTQuNDcuMTkuMjI1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI1YzA0MGYxZC00NWRiLTQzYmQtOGQ0Ni1lNDk1MGU0MzM3MzUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6MTI3MCwicHMiOiJBVCDwn4em8J+HuSB8INix2KfYr9in2LEgfCBDQzcwMDgiLCJzY3kiOiJhdXRvIiwic25pIjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwibmFtZSI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IENDNzAwOCJ9
+vless://218b7565-b3ca-432e-924d-9654ee980dbe@2.59.21.188:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=edge&pbk=_0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I&sid=f00f58383241c807&sni=tg-lovers-free.com#AT 🇦🇹 | رادار | 800B9C
 vmess://eyJhZGQiOiIxNTQuNDcuMTkuMjI1IiwiYWlkIjowLCJob3N0IjoieG1maGxweS5jb20iLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoxMjcwLCJwcyI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IDI4NEJBNCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ4bWZobHB5LmNvbSIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-vless://90157e25-cee1-4217-921e-91f300bc1a24@66.90.106.28:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=banket-restoran.su&sid=428ef87fd47a3a32#AT 🇦🇹 | رادار | 42BF89
-vless://3dad6500-9910-4aae-9422-7374a0e422f6@2.59.21.188:443?encryption=none&security=reality&flow=xtls-rprx-vision&type=tcp&sni=tg-lovers-free.com&fp=chrome&pbk=_0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I&sid=f00f58383241c807#AT 🇦🇹 | رادار | 3E2BFA
-vless://90157e25-cee1-4217-921e-91f300bc1a24@fdat.titun.su:443?flow=xtls-rprx-vision&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&security=reality&sid=428ef87fd47a3a32&sni=banket-restoran.su&type=raw&fp=ios#AT 🇦🇹 | رادار | 7EAFB7
-vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@85.192.27.171:2053?encryption=none&host=fs.qicai99.com&path=/fp&security=tls&sni=fs.qicai99.com&type=ws#AT 🇦🇹 | رادار | E7E824
-vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@85.192.27.171:2053?path=/fp=chrome&security=tls&encryption=none&insecure=0&host=fs.qicai99.com&fp=chrome&type=ws&allowInsecure=0&sni=fs.qicai99.com#AT 🇦🇹 | رادار | 09C4A6
-vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@193.219.97.198:443?host=fs.qicai99.com&path=%2Ffp%3Dchrome&security=tls&sni=fs.qicai99.com&type=ws#AT 🇦🇹 | رادار | 881C59
+vmess://eyJhZGQiOiIxNTQuNDcuMTkuMjI1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI1YzA0MGYxZC00NWRiLTQzYmQtOGQ0Ni1lNDk1MGU0MzM3MzUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6MTI3MCwicHMiOiJBVCDwn4em8J+HuSB8INix2KfYr9in2LEgfCBDQzcwMDgiLCJzY3kiOiJhdXRvIiwic25pIjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwibmFtZSI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IENDNzAwOCJ9
+vless://90157e25-cee1-4217-921e-91f300bc1a24@fdat.titun.su:443?security=reality&type=tcp&packetEncoding=xudp&sni=banket-restoran.su&fp=firefox&flow=xtls-rprx-vision&sid=428ef87fd47a3a32&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&encryption=none#AT 🇦🇹 | رادار | 7EAFB7
