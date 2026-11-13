@@ -1,9 +1,9 @@
-#profile-title: رادار — VIETNAM (VN)
+#profile-title: رادار — GEORGIA (GE)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — VIETNAM (VN) — 1 configs
+# رادار — GEORGIA (GE) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://b83faafc-cbb7-4655-99d4-2c4c39a49d1b@150.95.109.109:2086?security=none&type=tcp&packetEncoding=xudp&encryption=none#VN 🇻🇳 | رادار | DE68F9
+vless://f8cb3c89-32af-4255-bebc-d90aad175069@206.53.48.69:443?type=grpc&security=reality&fp=chrome&pbk=pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ&sid=27350908de933e09&sni=gea.kosmosapp.net&mode=gun&serviceName=neurex#GE 🇬🇪 | رادار | 1904E6

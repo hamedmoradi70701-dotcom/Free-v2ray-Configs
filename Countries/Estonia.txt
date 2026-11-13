@@ -2,13 +2,15 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — ESTONIA (EE) — 6 configs
+# رادار — ESTONIA (EE) — 8 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://3f3160a0-747d-4fed-bf3d-4d884bfa964d@178.214.125.1:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=conf.emaar.ru&fp=chrome&pbk=ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY&sid=6172ba9cffe9c22f&spx=/&type=tcp#EE 🇪🇪 | رادار | 599E75
-vless://13e541f3-d09d-4633-89df-8513db0ced20@45.86.60.174:16443#EE 🇪🇪 | رادار | 29C4D9
-vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.50:443?security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&sid=428ef87fd47a3a32&sni=185.215.184.50#EE 🇪🇪 | رادار | A1D427
-vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.86:443?flow=xtls-rprx-vision&security=reality&sni=185.215.184.86&fp=chrome&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | 5A40F0
-vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.50:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | 5157EB
 vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.86:443?&security=reality&flow=xtls-rprx-vision&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&sid=428ef87fd47a3a32&fp=chrome&sni=dvizhok.su&type=tcp&headerType=none&path=%2F#EE 🇪🇪 | رادار | 9E42C1
+vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.86:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=dvizhok.su&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | 6D5B9D
+vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.50:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | 5157EB
+vless://90157e25-cee1-4217-921e-91f300bc1a24@ee.subv.ru:443?security=reality&encryption=none&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&headerType=none&fp=firefox&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=dvizhok.su&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | 82E221
+vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.50:443?security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&sid=428ef87fd47a3a32&sni=185.215.184.50#EE 🇪🇪 | رادار | A1D427
+vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.54:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=dvizhok.su&security=reality&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&sid=428ef87fd47a3a32#EE 🇪🇪 | رادار | DEF26B
+vless://90157e25-cee1-4217-921e-91f300bc1a24@185.215.184.54:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs&security=reality&sid=428ef87fd47a3a32&sni=185.215.184.54&type=tcp#EE 🇪🇪 | رادار | 61D5BA
