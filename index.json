@@ -1,11 +1,11 @@
 {
   "brand": "رادار",
   "generator": "رادارBot aggregator",
-  "updated_at": "2026-11-13T13:56:56.451561+00:00",
-  "updated_at_unix": 1794578216,
-  "next_update_eta": "2026-11-13T14:11:56.451561+00:00",
+  "updated_at": "2026-11-13T14:32:36.444999+00:00",
+  "updated_at_unix": 1794580356,
+  "next_update_eta": "2026-11-13T14:47:36.444999+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 31.4,
+  "elapsed_seconds": 38.0,
   "raw_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main",
@@ -23,19 +23,19 @@
   },
   "categories": {
     "all": {
-      "unique": 17668,
+      "unique": 17707,
       "broken": 1,
-      "duplicates": 16437,
-      "total_fetched": 34183,
+      "duplicates": 16104,
+      "total_fetched": 33872,
       "active_sources": 25,
       "protocols": {
-        "vless": 6519,
-        "vmess": 5734,
-        "shadowsocks": 2958,
-        "trojan": 2198,
-        "hysteria2": 203,
+        "vless": 6536,
+        "vmess": 5727,
+        "shadowsocks": 2986,
+        "trojan": 2196,
+        "hysteria2": 207,
         "shadowsocksr": 47,
-        "socks": 6,
+        "socks": 5,
         "vlessvless": 1,
         "slipnet-enc": 1,
         "tuic": 1
@@ -52,19 +52,19 @@
       }
     },
     "heavy": {
-      "unique": 15107,
+      "unique": 15167,
       "broken": 1,
-      "duplicates": 11180,
-      "total_fetched": 26361,
+      "duplicates": 10816,
+      "total_fetched": 26040,
       "active_sources": 18,
       "protocols": {
-        "vless": 6053,
-        "vmess": 3914,
-        "shadowsocks": 2912,
-        "trojan": 2083,
-        "hysteria2": 89,
+        "vless": 6071,
+        "vmess": 3924,
+        "shadowsocks": 2942,
+        "trojan": 2082,
+        "hysteria2": 93,
         "shadowsocksr": 47,
-        "socks": 6,
+        "socks": 5,
         "vlessvless": 1,
         "slipnet-enc": 1,
         "tuic": 1
@@ -83,8 +83,8 @@
     "light": {
       "unique": 5914,
       "broken": 0,
-      "duplicates": 1904,
-      "total_fetched": 7822,
+      "duplicates": 1914,
+      "total_fetched": 7832,
       "active_sources": 7,
       "protocols": {
         "vmess": 4105,
@@ -106,13 +106,13 @@
     }
   },
   "protocols": {
-    "vless": 6519,
-    "vmess": 5734,
-    "shadowsocks": 2958,
-    "trojan": 2198,
-    "hysteria2": 203,
+    "vless": 6536,
+    "vmess": 5727,
+    "shadowsocks": 2986,
+    "trojan": 2196,
+    "hysteria2": 207,
     "shadowsocksr": 47,
-    "socks": 6,
+    "socks": 5,
     "tuic": 1,
     "vlessvless": 1,
     "slipnet-enc": 1,
@@ -170,7 +170,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1208,
+      "unique": 1204,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/verified/configs.txt",
@@ -184,7 +184,7 @@
       }
     },
     "fast": {
-      "unique": 880,
+      "unique": 798,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/fast/configs.txt",
@@ -198,7 +198,7 @@
       }
     },
     "secure": {
-      "unique": 787,
+      "unique": 788,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/secure/configs.txt",
@@ -225,8 +225,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/hamedmoradi70701-dotcom/Free-v2ray-Configs@main/subs/golden.txt"
   },
   "countries": {
-    "count": 47,
-    "configs": 1208,
+    "count": 46,
+    "configs": 1204,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/hamedmoradi70701-dotcom/Free-v2ray-Configs/main/Countries/index.json",

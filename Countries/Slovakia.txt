@@ -2,14 +2,13 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — SLOVAKIA (SK) — 7 configs
+# رادار — SLOVAKIA (SK) — 6 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.104:443?encryption=none&fp=&host=e60833x.nl7.h1clayd.click&mode=auto&path=%2Fd20896a4ce30&pbk=jIRVNEf9SpuWP2nJrAbHGGIUnfzOmwZZlrNGw-Y-O2Q&security=reality&sid=2d2598d60447a967&sni=e60833x.nl7.h1clayd.click&type=xhttp#SK 🇸🇰 | رادار | EEAA2D
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.104:443?security=reality&encryption=none&pbk=l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs&headerType=none&fp=firefox&type=tcp&sni=5d0319t.nl7.h1clayd.click&sid=361d0dd59c70516f#SK 🇸🇰 | رادار | 8AF71C
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.104:443?encryption=none&fp=&mode=auto&path=/d20896a4ce30&pbk=jIRVNEf9SpuWP2nJrAbHGGIUnfzOmwZZlrNGw-Y-O2Q&security=reality&sid=2d2598d60447a967&sni=e60833x.nl7.h1clayd.click&type=xhttp#SK 🇸🇰 | رادار | AE587F
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@76574ct.nl8.h1clayd.click:443?security=reality&encryption=none&pbk=9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc&headerType=none&fp=chrome&spx=/&type=tcp&sni=76574ct.nl8.h1clayd.click&sid=2ca59bdc5121f921#SK 🇸🇰 | رادار | 62A9C4
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.104:443?encryption=none&fp=&host=e60833x.nl7.h1clayd.click&mode=auto&path=%2Fd20896a4ce30&pbk=jIRVNEf9SpuWP2nJrAbHGGIUnfzOmwZZlrNGw-Y-O2Q&security=reality&sid=2d2598d60447a967&sni=e60833x.nl7.h1clayd.click&type=xhttp#SK 🇸🇰 | رادار | EEAA2D
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.104:443?type=grpc&security=reality&fp=firefox&pbk=zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE&sid=50a749f0eccb628c&sni=15b171g.nl7.h1clayd.click&serviceName=5b79e8a94241#SK 🇸🇰 | رادار | A2FDA4
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.113:443?encryption=none&fp=firefox&pbk=kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI&security=reality&sid=8956c57cb4c4f8d2&sni=f0d7aft.nl13.h1clayd.click&type=tcp#SK 🇸🇰 | رادار | FE4027
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.92:443?encryption=none&security=reality&type=grpc&serviceName=204adda7e3da&mode=gun&sni=717252g.nl8.h1clayd.click&fp=chrome&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&sid=d3bd772514c87d28#SK 🇸🇰 | رادار | 99D403
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.111:443?security=reality&sni=76574ct.nl8.h1clayd.click&type=tcp&fp=firefox&pbk=9zW5lTDbs9svY-lzlPp-pq0j2Sr6g031SY0E-3xSHDc&sid=2ca59bdc5121f921#SK 🇸🇰 | رادار | 9EC026
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.153.156:443?encryption=none&pbk=xn7KVKS5MOnsFrYrEeRS04JssBCOxh12rxegaDFyGkA&security=reality&serviceName=7d5abcd7d8a1&sid=6d289ff0f47c0aac&sni=961ec0g.nl17.h1clayd.click&type=grpc&fp=firefox#SK 🇸🇰 | رادار | 20F409
