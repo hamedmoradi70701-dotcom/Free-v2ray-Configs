@@ -2,9 +2,10 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — IRAN (IR) — 2 configs
+# رادار — IRAN (IR) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://5191d3d6-56d0-46a1-ae79-ddf2b2460559@193.151.152.30:2085?encryption=none&flow=xtls-rprx-vision&security=reality&sni=dl.google.com&fp=chrome&pbk=BF26WqOIARMEEiD5I3qkq_QFCRIeYAjf99_WS6kXeiE&spx=%2F95afc22f1b72405&type=tcp&headerType=none#IR 🇮🇷 | رادار | 64B6DE
+vless://c224a3cc-e575-4212-9e4f-d85ec9f2085d@7e0211a7eea38e14.web.vipercloud.ir:40289?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&flow=xtls-rprx-vision&security=tls&sni=ask.w-ert.org&fp=chrome&insecure=0&allowInsecure=0&type=tcp&headerType=none#IR 🇮🇷 | رادار | 072B20
 vless://01b2b871-d68c-45f7-8df5-fb5cb472b866@mojif.fusetea.ir:1080?mode=packet-up&path=%2F&security=reality&encryption=none&pbk=u3EnhSlPtnsjoA4OQwRa8Pk5mQCnBXHYWSP1bfdjYm8&fp=chrome&type=xhttp&sni=www.aparat.com&sid=a17c76d6a2f35aaf#IR 🇮🇷 | رادار | 29E90D
+vless://9517e5e2-c4e9-425d-9355-0a8a9cfbf330@18855ef9d987ecd0.web.vipercloud.ir:38780?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#IR 🇮🇷 | رادار | 7AD19E

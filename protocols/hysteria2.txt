@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — hysteria2 — 202 configs
+# رادار — hysteria2 — 203 configs
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=off#US 🇺🇸 | رادار | 19974A
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=163.192.14.135#US 🇺🇸 | رادار | 4929FF
 hy2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=css.rbxcdn.com#US 🇺🇸 | رادار | BDDA85
@@ -125,6 +125,7 @@ hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@89.125.156.80:443?insecu
 hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@pixelcast.wwwinternetvideo.click:443?insecure=1&sni=pixelcast.wwwinternetvideo.click#DE 🇩🇪 | رادار | B21B99
 hysteria2://4ab7d1e3-f2a7-44ca-91bd-45d3c5f423d2@158.101.140.31:1985?insecure=1#JP 🇯🇵 | رادار | A4F752
 hysteria2://4afd4e1b1b0edd429b10d800a1cf64a7@47.89.232.46:8443?insecure=1&sni=hysteria2.local#US 🇺🇸 | رادار | 02181F
+hysteria2://54d2f622-fd71-4f5f-8813-832b68f4ca3b@104.165.205.42:8443/?sni=speedtestmark.com#LV 🇱🇻 | رادار | 56A4A9
 hysteria2://5icixgawam84vgrp@109.70.74.213:2098?security=tls&obfs=salamander&obfs-password=7922smqtd5qm70fu&insecure=0&sni=109.70.74.213#DE 🇩🇪 | رادار | E12A3A
 hysteria2://5ictxgawam84vgrp@109.70.74.213:2098?security=tls&obfs=salamander&obfs-password=7922smqtd5qm70fu&insecure=0&sni=109.70.74.213#DE 🇩🇪 | رادار | 1F16BF
 hysteria2://6f7a8009ecf6a12e10d03f9d88493c89@167.179.34.13:55443?insecure=1&sni=gorbachev-th.kvnfreetest.uk#TH 🇹🇭 | رادار | 84D0BF
@@ -174,7 +175,6 @@ hysteria2://OD6gGbGU9a@195.133.24.124:443?sni=hys26.wba-pn.ru#NL 🇳🇱 | را
 hysteria2://OD6gGbGU9a@hys26.wba-pn.ru:443?sni=hys26.wba-pn.ru#NL 🇳🇱 | رادار | 6FAA38
 hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.162:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#DE 🇩🇪 | رادار | 3E1DA0
 hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.163:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#DE 🇩🇪 | رادار | 6510F3
-hysteria2://p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR@130.49.161.70:443?security=tls&obfs=salamander&obfs-password=rG07s3COMIEvdnQipRyWzx_H_2xygNC3&insecure=0&sni=hy2.aspidnet.xyz#NL 🇳🇱 | رادار | E31BF1
 hysteria2://s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z@46.229.243.131:8443?sni=grape-turbo-fr.roxa.org#NL 🇳🇱 | رادار | B5BE82
 hysteria2://s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z@46.229.243.132:8443?insecure=1&sni=grape-turbo-fr.roxa.org#NL 🇳🇱 | رادار | A67CD9
 hysteria2://s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z@46.229.243.133:8443?sni=grape-turbo-fr.roxa.org#NL 🇳🇱 | رادار | 9962B5
@@ -188,6 +188,7 @@ hysteria2://sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX@217.60.182.79:443?insecure=1&sn
 hysteria2://sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX@cabinet.wwwinternetvideo.click:443?insecure=1&sni=cabinet.wwwinternetvideo.click#EE 🇪🇪 | رادار | 3743DD
 hysteria2://sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX@faq.wwwinternetvideo.click:443?insecure=1&sni=cabinet.wwwinternetvideo.click#RU 🇷🇺 | رادار | DC17B4
 hysteria2://suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g@159.223.157.129:8443?insecure=1#US 🇺🇸 | رادار | 6BCE08
+hysteria2://Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X-@ir.config7x.site:26503?security=tls&insecure=0&pinSHA256=22760B9798F4726D9B76C2F8FB4D5CEE6FDA9C6A75B391137937674AC5B2505F&sni=hy.config7x.site#IR 🇮🇷 | رادار | 1AE685
 hysteria2://Telegram-vpnjey@179.61.138.145:36264?sni=de2.jey.cc.cd&insecure=1&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | رادار | 97F01B
 hysteria2://Telegram-Vpnjey@179.61.138.145:54759?security=tls&insecure=1&pinSHA256=2dc4ced5b2f11471396071e90a76ae60273b2808ece4f07ef46a7a306350ee24&obfs=salamander&obfs-password=Telegram@vpnjey&fastopen=0#DE 🇩🇪 | رادار | 417AE5
 hysteria2://Telegram%3Avpnjey@179.61.138.145:36264?security=tls&obfs=salamander&obfs-password=Telegram%40vpnjey&insecure=0&sni=de2.jey.cc.cd#DE 🇩🇪 | رادار | 5395E7

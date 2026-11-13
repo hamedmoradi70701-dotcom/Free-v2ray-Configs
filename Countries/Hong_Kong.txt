@@ -2,19 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — HONG KONG (HK) — 12 configs
+# رادار — HONG KONG (HK) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vmess://eyJhZGQiOiIxNTYuMjM5LjIyNC4xMDciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyNzBiZWQ1LWY5MDgtNGVjYy1mMWM4LWRlMjQ2MDMzYjE4NiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNTcyNzgiLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDZBMEFEQyIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
 vless://99c5b713-dedf-4a10-8070-916ff3f49b0e@23.156.153.40:443?host=fs.qicai99.com&path=%2Ffp%3Dchrome&security=tls&sni=fs.qicai99.com&type=ws#HK 🇭🇰 | رادار | 8F8CE4
-vless://35cbae61-ee10-4cb9-abb8-4950b35e9851@156.226.168.221:35193?security=reality&encryption=none&pbk=d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=e8daed2d#HK 🇭🇰 | رادار | 7234B8
-vless://57beeeb0-03fc-4fc9-94da-7604488a7134@39.109.111.23:48158/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&allowInsecure=1&fp=firefox&security=reality&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7#HK 🇭🇰 | رادار | FE986B
-vmess://eyJ2IjpudWxsLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDE5MDE3MSIsImFkZCI6IjQ3LjI0NC4xMjAuMTk3IiwicG9ydCI6MjMwMjYsImlkIjoiYjlkZTFiYzktYmFhNy00MWFjLTg2ZjctY2NkNTk2OTVjYjIxIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOm51bGwsImhvc3QiOiI0Ny4yNDQuMTIwLjE5NyIsImFscG4iOm51bGwsInBhdGgiOiIvYXJraSIsInRscyI6Im5vbmUiLCJzbmkiOm51bGwsImZwIjpudWxsLCJuYW1lIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgMTkwMTcxIn0=
-vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImIxNWU0ODFkLTE3ZTQtNDFhOC04NGMyLTIzZDRmMDUxNGQ5YSIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgOTVBRTcxIiwic25pIjoiMTU2LjI0NS4yMzIuMjM5IiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@doghkzf.zalolink.com:48158?fp=chrome&headerType=none&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&encryption=none&sid=54cca3c1c1c7&flow=xtls-rprx-vision&sni=www.apple.com&type=tcp&security=reality#HK 🇭🇰 | رادار | B2FD1A
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20051?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | C883B7
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20086?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | D56851
-vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImIxNWU0ODFkLTE3ZTQtNDFhOC04NGMyLTIzZDRmMDUxNGQ5YSIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgOUQwMUI5Iiwic25pIjoid3d3LnB1Ymdtb2JpbGUuY29tIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Ind3dy5wdWJnbW9iaWxlLmNvbSIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIxIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgNTcwRjE0Iiwic2N5IjoiYXV0byIsInNuaSI6Ind3dy5wdWJnbW9iaWxlLmNvbSIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiIsInZjbiI6IiJ9
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20103?sni=hk.catxstar.com&type=tcp#HK 🇭🇰 | رادار | 427561
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@39.109.111.23:48158/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&allowInsecure=1&fp=firefox&security=reality&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7#HK 🇭🇰 | رادار | FE986B
+ss://YWVzLTI1Ni1nY206QU1vazQwRmZhTStJa3dyZTE2cHNCcFZrNkpIeHNRWnc=@209.248.57.105:8388#HK 🇭🇰 | رادار | 9BE1BB
