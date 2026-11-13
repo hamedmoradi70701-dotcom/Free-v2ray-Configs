@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — trojan — 2201 configs
+# رادار — trojan — 2198 configs
 trojan://95621b8e-5cf7-4123-9df4-38d903054a1b@193.233.216.27:443?mode=gun&security=reality&pbk=1HzJEMaYCrx2QQhuLLkcFiE5r2NegGHTBzHu0Sk1iWs&fp=chrome&spx=%2F&type=grpc&serviceName=62eec6c16880&sni=www.garmin.com&sid=4e34d88e858485db#RU 🇷🇺 | رادار | 7DC891
 trojan://dkp96mJVuj@5.175.249.117:443?security=reality&sni=google.com&fp=chrome&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&sid=9715efa856269398&spx=%2F&type=tcp&headerType=http&host=www.namasha.com%2Cs45.namasha.com#DE 🇩🇪 | رادار | 512385
 trojan://pkj3BBnG2NE4wD-72SwgzNcfaHSes-dr@191.44.113.95:443?security=reality&pbk=yAJlHrab9FWfz9f6Ya4xsBaBjnPytEQFqpVgs1aPHB0&headerType=none&fp=firefox&type=tcp&sni=16.img.avito.st&sid=43dcff53849b81e6#PL 🇵🇱 | رادار | A37720
@@ -623,7 +623,6 @@ trojan://5f27eb67-a1ea-43a3-9a33-8d85d61b9574@104.208.111.108:443?security=tls&s
 trojan://5f27eb67-a1ea-43a3-9a33-8d85d61b9574@52.231.36.138:443?security=tls&sni=krnode01.oportal.cc&type=tcp&headerType=none#KR 🇰🇷 | رادار | 1A89B7
 trojan://5f5fe3c0-066f-11f0-ba3c-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | رادار | 95B8BC
 trojan://5f9b5bfbf52c85aeddefdca3abc694b1@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | رادار | CDF183
-trojan://5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm@161.114.15.215:30502?sni=www.cloudflare.com&allowInsecure=1&type=tcp&fp=chrome#US 🇺🇸 | رادار | DB0DEA
 trojan://5qSmRbERsGMASvzP@mortedaxsq-production.up.railway.app:443?path=/api/Ff45FJ&security=tls&alpn=http/1.1&insecure=0&host=mortedaxsq-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=mortedaxsq-production.up.railway.app#SG 🇸🇬 | رادار | D0F2A4
 trojan://5t6i121em5lkmsmk@130.94.19.95:57277?fp=chrome&sni=us001.zestapp778.com#US 🇺🇸 | رادار | 3249A2
 trojan://5t6i121em5lkmsmk@130.94.19.95:57277?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=us001.zestapp778.com#US 🇺🇸 | رادار | 4D35E7
@@ -1203,7 +1202,7 @@ trojan://d2adff89-5143-4d67-921f-3478464de5bb@130.0.236.88:443?security=tls&sni=
 trojan://d306137cdbd55eac0d79ca7d1e3904a4@tyy129.magiclampcloud.com:59443?allowInsecure=0&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | رادار | F8D3CF
 trojan://d30ab83dbde4480082048fb315bedebd@149.248.39.92:443?encryption=none&security=tls&sni=149.248.39.92&type=raw&headertype=none#US 🇺🇸 | رادار | C756A6
 trojan://d342d31e-d016-4c25-82fe-19a892795da2@43.134.48.62:443/?type=tcp&security=tls&sni=86sg.ljydw.top&alpn=http%2F1.1&allowInsecure=1&fp=chrome#SG 🇸🇬 | رادار | FFBF0B
-trojan://d3e663d2-5cce-56e1-a199-2fec6078fcb4@tgju.org:2096?path=trojan-ws%2F%3Fed&security=tls&host=mailbox.CpIfOrperSiA.UK&fp=chrome&type=ws&sni=mailbox.CpIfOrperSiA.UK#DE 🇩🇪 | رادار | 00F950
+trojan://d3e663d2-5cce-56e1-a199-2fec6078fcb4@tgju.org:2096?path=trojan-ws%2F%3Fed&security=tls&host=mailbox.CpIfOrperSiA.UK&fp=chrome&type=ws&sni=mailbox.CpIfOrperSiA.UK#FI 🇫🇮 | رادار | 00F950
 trojan://d453daeb7e9b5fb9cad882763bd71d85@ja304.magiclampcloud.cn:59443?allowInsecure=0&type=tcp&sni=ja304.magiclampcloud.cn#CN 🇨🇳 | رادار | 374C65
 trojan://d4e41ff772c7fd45@23.247.137.70:3389?security=tls#US 🇺🇸 | رادار | AE1990
 trojan://d4e41ff772c7fd45@45.11.104.94:3389?security=tls&sni=sbank.ir#HK 🇭🇰 | رادار | 037CBB
@@ -1542,7 +1541,6 @@ trojan://humanity@104.18.192.53:443?path=%2Fassignment&security=tls&insecure=0&h
 trojan://humanity@104.18.32.37:443?path=%2Fassignment&security=tls&insecure=1&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=1&sni=www.gossipglove.com#CA 🇨🇦 | رادار | 07D13E
 trojan://humanity@104.18.32.47:443?allowInsecure=1&sni=www.calmlunch.com&type=ws#CA 🇨🇦 | رادار | 5A0111
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=www.calmlunch.com#CA 🇨🇦 | رادار | 9E7EBE
-trojan://humanity@104.18.32.47:443?path=%2Fassignment%3Fed%23Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=www.calmlunch.com#CA 🇨🇦 | رادار | BF45CB
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#CA 🇨🇦 | رادار | 3F1ADD
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&insecure=1&host=www.multiplydose.com&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#CA 🇨🇦 | رادار | 043732
 trojan://humanity@104.18.33.121:443?sni=www.cordweave.com&type=ws&path=/assignment&host=www.cordweave.com#CA 🇨🇦 | رادار | B558B3
@@ -1579,7 +1577,6 @@ trojan://humanity@104.27.201.80:443?path=%2Fassignment&security=tls&alpn=http%2F
 trojan://humanity@104.27.201.80:443?path=%2Fassignment&security=tls&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | D7B491
 trojan://humanity@104.27.203.207:443?path=/assignment&security=tls&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | 234D06
 trojan://humanity@108.162.194.134:443?path=/assignment&security=tls&insecure=0&host=www.pleadcourt.org&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | 9E1B7C
-trojan://humanity@108.162.194.134:443?path=%2Fassignment%3Fed%23Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&host=www.pleadcourt.org&type=ws&allowInsecure=0&sni=www.pleadcourt.org#CA 🇨🇦 | رادار | 015B25
 trojan://humanity@108.165.236.229:443?sni=www.cordweave.com&type=ws&path=/assignment&host=www.cordweave.com#DE 🇩🇪 | رادار | CC116E
 trojan://humanity@109.234.211.232:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.pleadcourt.org&fp=unsafe&type=ws&allowInsecure=0&sni=www.pleadcourt.org#ES 🇪🇸 | رادار | B76CDE
 trojan://humanity@127.0.0.1:40443?path=%2Fassignment&security=tls&alpn=http%2F1.1&host=www.calmloud.com&type=ws&sni=www.calmloud.com#Global 🌐 | رادار | 0A9B98

@@ -1,0 +1,7 @@
+#profile-title: رادار — SOCKS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — socks — 2 configs
+socks://Og@185.63.113.164:1085#IR 🇮🇷 | رادار | B3CB50
+socks://Og@5.160.103.162:1080#IR 🇮🇷 | رادار | 18D4FC

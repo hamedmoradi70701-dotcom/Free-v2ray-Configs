@@ -66019,7 +66019,7 @@ proxies:
   udp: true
   tls: false
   network: tcp
-- name: "DE \U0001F1E9\U0001F1EA | رادار | 875198"
+- name: "FI \U0001F1EB\U0001F1EE | رادار | 875198"
   server: tgju.org
   port: 8080
   type: vmess
@@ -76419,7 +76419,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | رادار | C51365"
   - "IR \U0001F1EE\U0001F1F7 | رادار | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | رادار | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | رادار | 875198"
+  - "FI \U0001F1EB\U0001F1EE | رادار | 875198"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 79F85B"
   - "Global \U0001F310 | رادار | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 198807"
@@ -82323,7 +82323,7 @@ proxy-groups:
   - "TW \U0001F1F9\U0001F1FC | رادار | C51365"
   - "IR \U0001F1EE\U0001F1F7 | رادار | DA5F3B"
   - "IR \U0001F1EE\U0001F1F7 | رادار | D8FEA2"
-  - "DE \U0001F1E9\U0001F1EA | رادار | 875198"
+  - "FI \U0001F1EB\U0001F1EE | رادار | 875198"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 79F85B"
   - "Global \U0001F310 | رادار | 6A574C"
   - "IR \U0001F1EE\U0001F1F7 | رادار | 198807"
