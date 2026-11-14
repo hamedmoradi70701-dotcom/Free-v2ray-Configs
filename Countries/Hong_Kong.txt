@@ -2,11 +2,13 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — HONG KONG (HK) — 4 configs
+# رادار — HONG KONG (HK) — 6 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20123?security=tls&sni=hk.catxstar.com&path=/#HK 🇭🇰 | رادار | D5EBCA
-vless://3012a26e-0f9e-41d9-a64d-5a5b736f8d99@sijiache.hief.store:33068?&security=reality&flow=xtls-rprx-vision&pbk=R6ikLAKWuvM4UxkaMchaOe3pOMUsjghIW_w7McCY9Hc&sid=39b10242&fp=chrome&sni=iosapps.itunes.apple.com&type=tcp&headerType=none&host=iosapps.itunes.apple.com&path=/#HK 🇭🇰 | رادار | F4BC7C
+vmess://eyJhZGQiOiI0Ny4yNDIuODEuOTQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Im9wZW5haS5jb20iLCJpZCI6ImU0N2I5Zjc3LTYwZTQtNDczOC04ZDUzLTc3MmI2MDAyZTE0NiIsImluc2VjdXJlIjoiMCIsIm5ldCI6InRjcCIsInBhdGgiOiIvUVFxdW4tNzM3ODA1NDQzIiwicGNzIjoiIiwicG9ydCI6IjUyMDgwIiwicHMiOiJISyDwn4et8J+HsCB8INix2KfYr9in2LEgfCA4RTUwOTUiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Imh0dHAiLCJ2IjoiMiIsInZjbiI6IiJ9
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20086?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | D56851
-trojan://d9064589-74af-432a-9390-5d8a9da281bf@Sclass-C1.catcat321.com:20086?security=tls&sni=hk.catxstar.com&fp=chrome&type=tcp&headerType=none#HK 🇭🇰 | رادار | 4AB5D5
+vless://3012a26e-0f9e-41d9-a64d-5a5b736f8d99@sijiache.hief.store:33068?&security=reality&flow=xtls-rprx-vision&pbk=R6ikLAKWuvM4UxkaMchaOe3pOMUsjghIW_w7McCY9Hc&sid=39b10242&fp=chrome&sni=iosapps.itunes.apple.com&type=tcp&headerType=none&host=iosapps.itunes.apple.com&path=/#HK 🇭🇰 | رادار | F4BC7C
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20086?security=tls&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 505110
+trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-00.catcat321.com:20103?sni=hk.catxstar.com&type=tcp#HK 🇭🇰 | رادار | 83CC15
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@Sclass-00.catcat321.com:20123?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 2BC027

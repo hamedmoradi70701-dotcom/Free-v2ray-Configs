@@ -2,14 +2,11 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — IRAN (IR) — 7 configs
+# رادار — IRAN (IR) — 4 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | رادار | EF1170
 vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=firefox&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#IR 🇮🇷 | رادار | C12062
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?path=%2F&security=tls&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 52D791
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?security=tls&type=tcp&packetEncoding=xudp&alpn=http%2F1.1&pcs=8f40a40d49c7e830e78111a9846f43f322ba049cee043259c108f28a66c16b2a&sni=base.hosamobenl.co.uk&fp=chrome&encryption=none#IR 🇮🇷 | رادار | 6AC1C8
-vless://b11716c2-6d11-4752-b2bf-ac240b0136e4@duke.abrdns.com:8443?security=reality&encryption=none&pbk=5wTeknadiZ3XFJA2bAe1ee5pkx-KL_3Wh8dZRzkonUQ&headerType=none&fp=chrome&type=tcp&sni=snapp.ir&sid=278eba2e20817876#IR 🇮🇷 | رادار | A4483A
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?encryption=none&security=tls&type=tcp#IR 🇮🇷 | رادار | 0D2884
-vless://ed8dda30-5751-4655-acca-4a4066c46e41@ns2.irts.lol:443?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=ns2.irts.lol#IR 🇮🇷 | رادار | 5AF690
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?encryption=none&security=tls&sni=base.hosamobenl.co.uk&type=tcp&headerType=none#IR 🇮🇷 | رادار | D53BE2

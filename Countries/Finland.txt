@@ -2,25 +2,19 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — FINLAND (FI) — 18 configs
+# رادار — FINLAND (FI) — 12 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://d4733b8c-4555-4332-a742-01d34f148dd6@static.72.244.109.65.clients.your-server.de:8088?encryption=none&type=tcp&headerType=http&path=%2F%40TurboConfigs---%40TurboConfigs---%40TurboConfigs--%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs--%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---%40TurboConfigs--%40TurboConfigs---%40TurboConfigs---%40TurboConfigs---&host=tgju.org#FI 🇫🇮 | رادار | 21728B
+vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?host=45.144.234.157&path=%2Fvless&security=none&type=ws#FI 🇫🇮 | رادار | 575D2D
 vless://4f51ca84-43ea-4087-b8a2-938e0ccbe27a@13.143.173.15:443?security=reality&encryption=none&pbk=mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=google.com#FI 🇫🇮 | رادار | 756218
 hysteria2://247802ca-0fbb-428a-b807-91a6e571b5c7@177.202.65.158:443/?insecure=1&obfs=salamander&obfs-password=AJyvWNsoDgVkMkboZ3juMJXYNRf6uEQE&pinSHA256=7d00549c6ffd691650d3dd203b223919fc94b0b0600aa74a2f8ad0f4e4ab7bb3&sni=hy2-fi2.snobvpn.online#FI 🇫🇮 | رادار | D57E8C
-vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?fp=unsafe&host=45.144.234.157&path=%2Fvless&security=none&sni=45.144.234.157&type=ws#FI 🇫🇮 | رادار | 56A19A
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@196.245.217.70:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA&security=reality&sid=8d0d0679f42ffd98&sni=8a2e72t.nl11.h1clayd.click&type=tcp#FI 🇫🇮 | رادار | 2F321D
-vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?host=45.144.234.157&path=%2Fvless&security=none&type=ws#FI 🇫🇮 | رادار | 575D2D
 vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?encryption=none&type=ws&path=%2Fvless%23Farah_VPN-56&sni=45.144.234.157#FI 🇫🇮 | رادار | 746824
+vless://59b0d30e-9b29-4fda-a35c-b2901ec32db7@45.144.234.157:14430?fp=unsafe&host=45.144.234.157&path=%2Fvless&security=none&sni=45.144.234.157&type=ws#FI 🇫🇮 | رادار | 56A19A
 vless://ba52cc43-700d-4040-9444-29214c98e6e0@213.176.92.168:14430?security=none&type=ws&path=%2Fvless&host=213.176.92.168&packetEncoding=xudp#FI 🇫🇮 | رادار | 7C2093
-vless://b79d736d-0f10-4169-b626-362059d18204@95.216.27.15:2053?encryption=none&security=reality&type=tcp&sni=www.cloudflare.com&pbk=aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs&sid=10351b07c712d2a2#FI 🇫🇮 | رادار | 0ED90B
 vless://ba52cc43-700d-4040-9444-29214c98e6e0@213.176.92.168:10444?encryption=none&flow=xtls-rprx-vision&security=reality&sni=video.yandex.ru&fp=chrome&pbk=0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo&sid=8debcf36f1cc69ff&type=tcp&headerType=none&path=%2F#FI 🇫🇮 | رادار | 7F223E
-vless://55458d10-24ab-4ea6-a522-13741b546f2a@345739t.de15.h1clayd.click:443?encryption=none&fp=&pbk=hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA&security=reality&sid=23732d14a527990d&sni=345739t.de15.h1clayd.click&type=tcp#FI 🇫🇮 | رادار | 0A36E2
-vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgQzY0MTYwIiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiIyMDUzIiwiaWQiOiJhZWIzYzAxOS1hZTgzLTQ2NzctYWY5Ny04NDZiYWE3ODdhZDUiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJodHRwIiwidGxzIjoiIiwiYWxwbiI6IiIsInBhdGgiOiIvM3giLCJob3N0IjoiZG93bi1jZG4uZGluZ3RhbGsuY29tIn0=
-vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgQzU3RUFBIiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiI1MjA4MCIsImlkIjoiZWMzYzhiOTctZjMwOC00ZmVlLWFhMTYtOTVlMmM3NTk1YWNkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLzN4IiwiaG9zdCI6ImRvd24tY2RuLmRpbmd0YWxrLmNvbSJ9
+vless://b79d736d-0f10-4169-b626-362059d18204@95.216.27.15:2053?encryption=none&security=reality&type=tcp&sni=www.cloudflare.com&pbk=aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs&sid=10351b07c712d2a2#FI 🇫🇮 | رادار | 0ED90B
 vless://55458d10-24ab-4ea6-a522-13741b546f2a@ec7a81g.de15.h1clayd.click:443?security=reality&type=grpc&mode=gun&serviceName=43f41cd7fee0&packetEncoding=xudp&sni=ec7a81g.de15.h1clayd.click&fp=chrome&sid=7a8e24da4eb2c1b5&pbk=shUbIWcBJdXaDzO80KqTU9exgMarUCOiiZ56Dwl7XVU&encryption=none#FI 🇫🇮 | رادار | 8BE2BB
-vmess://eyJ2IjoiMiIsInBzIjoiRkkg8J+Hq/Cfh64gfCDYsdin2K/Yp9ixIHwgM0E5NEM3IiwiYWRkIjoiMTg1LjIxMi4xNDkuNyIsInBvcnQiOiI1MjA4MCIsImlkIjoiZWMzYzhiOTctZjMwOC00ZmVlLWFhMTYtOTVlMmM3NTk1YWNkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLzN4In0=
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@8a2e72t.nl11.h1clayd.click:443?security=reality&type=tcp&packetEncoding=xudp&sni=8a2e72t.nl11.h1clayd.click&fp=chrome&flow=xtls-rprx-vision&sid=8d0d0679f42ffd98&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA#FI 🇫🇮 | رادار | 834BB7
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@132.243.163.125:443?security=reality&encryption=none&pbk=MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=4935e4t.de25.h1clayd.click&sid=6976d670818644cc#FI 🇫🇮 | رادار | AC57B6
+vless://55458d10-24ab-4ea6-a522-13741b546f2a@345739t.de15.h1clayd.click:443?encryption=none&fp=&pbk=hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA&security=reality&sid=23732d14a527990d&sni=345739t.de15.h1clayd.click&type=tcp#FI 🇫🇮 | رادار | 0A36E2
 vless://4201786b-d99b-4147-a5f0-20d47acddb81@7aa271t.es1.h1clayd.click:443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=7aa271t.es1.h1clayd.click&fp=firefox&pbk=ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE&sid=42426c882c5fcd41&spx=%2F&type=tcp&headerType=none#FI 🇫🇮 | رادار | B6E14D
+vless://4201786b-d99b-4147-a5f0-20d47acddb81@b3cd32g.es1.h1clayd.click:443?encryption=none&security=reality&sni=b3cd32g.es1.h1clayd.click&fp=firefox&pbk=7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30&sid=e7cffac9f8cfb434&spx=%2F&type=grpc&mode=gun&authority=&serviceName=#FI 🇫🇮 | رادار | E2E641
