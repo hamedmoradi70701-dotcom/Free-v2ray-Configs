@@ -24,9 +24,11 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import hashlib
+import html
 import json
 import os
 import random
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -167,6 +169,24 @@ def log(msg: str) -> None:
 # واکشی منابع (با retry + backoff + گزارشِ سلامت)
 # ──────────────────────────────────────────────────────────────────────────────
 
+_TG_URI_RE = re.compile(
+    r"(?:vless|vmess|ss|ssr|trojan|hysteria2|hy2|tuic|wireguard)"
+    r"://[^\s<>\"']+")
+
+
+def _telegram_configs(page_html: str) -> str:
+    """صفحهٔ پیش‌نمایشِ عمومیِ تلگرام (`t.me/s/…`) → متنِ خطیِ کاندیدها.
+
+    کانفیگ‌ها در HTML صفحه وسطِ متنِ پست‌ها نشسته‌اند، نه در خطوطِ جدا؛
+    `core.extract_valid_lines` خط‌به‌خط کار می‌کند و روی HTML خام صفر می‌دهد
+    (سنجیده شد). پس: نخست `unescape` (تا `&amp;` کوئری‌ها درست شود)، بعد
+    regex همهٔ URIها را می‌کشد و خطی تحویل می‌دهد تا همان اعتبارسنجیِ عمومی
+    رویشان بنشیند. سنجشِ زنده ۲۰۲۶-۱۱-۱۴: mdvpnsec ← ۸۶ معتبر از ۸۶ کاندید،
+    v2rayngvpn ← ۷۳ از ۷۳.
+    """
+    return "\n".join(_TG_URI_RE.findall(html.unescape(page_html)))
+
+
 def fetch_source(url: str) -> Tuple[str, List[str]]:
     """یک منبع → (url, لیست کانفیگ‌های معتبر) + ثبتِ سلامت در SOURCE_HEALTH.
 
@@ -212,6 +232,8 @@ def fetch_source(url: str) -> Tuple[str, List[str]]:
             last_code = resp.status_code
             body = resp.text.strip() if resp.text else ""
             if resp.status_code == 200 and body:
+                if "t.me/s/" in url:
+                    body = _telegram_configs(body)
                 cfgs = core.extract_valid_lines(body)
                 if cfgs:
                     SOURCE_HEALTH[url] = {
