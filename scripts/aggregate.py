@@ -1397,6 +1397,28 @@ def main() -> int:
     # غیرفعال‌شدنش) پاک می‌شد؛ یعنی دورِ بعد دوباره واکشی می‌شد.
     mem = advance_memory(mem, per_source, LIGHT_SOURCES + HEAVY_SOURCES, state_path)
 
+    # ── نقشهٔ خاستگاهِ تلگرام (`stats/provenance.json`) ──────────────────────
+    # خطِ لولهٔ آزمون (`pipeline.py`) جدا از این مرحله اجرا می‌شود و فقط
+    # فایل‌ها را می‌بیند؛ برایِ اینکه آن‌جا معلوم باشد هر کانفیگِ تأییدشده از
+    # کدام کانالِ تلگرام آمده، کلیدِ خاستگاهِ کانفیگ‌های واکشی‌شدهٔ منابعِ
+    # تلگرامی همین‌جا روی دیسک نوشته می‌شود تا `write_buckets` سابِ جدا برای
+    # هر کانال بسازد. فقط تلگرام (نه همهٔ منابع) تا فایل سبک بماند.
+    try:
+        _prov: Dict[str, set] = {}
+        for _url, _cfgs in per_source.items():
+            if "t.me/s/" not in _url:
+                continue
+            _ch = _url.rsplit("/", 1)[-1]
+            for _c in _cfgs:
+                _prov.setdefault(core.provenance_key(_c), set()).add(_ch)
+        os.makedirs(os.path.join(out_dir, "stats"), exist_ok=True)
+        _write_text(os.path.join(out_dir, "stats", "provenance.json"),
+                    json.dumps({k: sorted(v) for k, v in _prov.items()},
+                               ensure_ascii=False, separators=(",", ":")))
+        log(f"  • telegram provenance: {len(_prov)} fetched keys")
+    except Exception as exc:  # noqa: BLE001
+        log(f"  ⚠️ provenance: {exc}")
+
     log("💾 Writing output files …")
     # snapshot ِآمارِ حذف **بلافاصله پس از هر دسته** گرفته می‌شود، وگرنه
     # `clear_target()`ِ دستهٔ بعدی آن را پاک می‌کند (ریشهٔ باگِ E-11).

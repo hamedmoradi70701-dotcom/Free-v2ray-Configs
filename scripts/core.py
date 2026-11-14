@@ -1732,6 +1732,34 @@ def _normalize_packet_encoding(line: str) -> str:
     return line
 
 
+def provenance_key(uri: str) -> str:
+    """کلیدِ خاستگاهِ یک کانفیگ: «اعتبار + نقطهٔ پایانی»، مستقل از نام و کوئری.
+
+    برایِ تطبیقِ «این کانفیگ از کدام منبع آمد» بینِ دو مرحلهٔ جدا (واکشی در
+    `aggregate.py` و آزمون در `pipeline.py`) لازم است: نام (fragment) را
+    برندینگ عوض می‌کند و کوئری را نرمال‌سازی، ولی اعتبار و نقطهٔ پایانی در
+    هر دو مرحله دست‌نخورده می‌مانند. vmess بدنهٔ base64 است و netloc ندارد؛
+    کلیدش از خودِ سند خوانده می‌شود. هر خطایی ⇒ سقوط به متنِ خامِ بی‌نام.
+    """
+    try:
+        u = (uri or "").strip().split("#", 1)[0]
+        scheme = u.split("://", 1)[0].lower()
+        if scheme == "vmess":
+            import base64 as _b64
+            import json as _json
+            body = u.split("://", 1)[1].split("?", 1)[0]
+            doc = _json.loads(_b64.b64decode(
+                body + "=" * (-len(body) % 4)).decode("utf-8", "replace"))
+            return (f"vmess:{doc.get('id', '')}@{doc.get('add', '')}"
+                    f":{doc.get('port', '')}")
+        netloc = urllib.parse.urlsplit(u).netloc
+        if netloc:
+            return f"{scheme}:{netloc.lower()}"
+        return u.lower()
+    except Exception:  # noqa: BLE001
+        return (uri or "").split("#", 1)[0].lower()
+
+
 def extract_valid_lines(content: str) -> List[str]:
     """از یک blob (direct یا base64) خطوط کانفیگ معتبر را استخراج می‌کند."""
     if not content:

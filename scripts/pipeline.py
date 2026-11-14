@@ -624,6 +624,37 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
         written["source_trust"] = _trust_path
     except Exception as exc:  # noqa: BLE001
         print(f"⚠️ source_trust: {exc}", file=sys.stderr)
+
+    # ── سابِ جدا برای هر کانالِ تلگرام (`subs/tg_<channel>.txt`) ────────────
+    # خاستگاه را `aggregate.py` در `stats/provenance.json` نوشته (کلید =
+    # اعتبار + نقطهٔ پایانی، مستقل از برندینگِ نام). این‌جا کانفیگ‌های
+    # تأییدشدهٔ همین دور با آن نقشه قطع داده می‌شوند تا کاربر در کلاینتش
+    # ببیند هر کانفیگ از کدام کانال آمده. برایِ هر کانالِ حاضر در نقشه فایل
+    # نوشته می‌شود — حتی با صفرِ تأییدشده — تا فایلِ کهنهٔ دورِ قبل نماند.
+    # افزوده است و در `try` جدا می‌نشیند.
+    try:
+        import json as _json3
+
+        _prov_path = os.path.join(out_dir, "stats", "provenance.json")
+        if os.path.exists(_prov_path):
+            with open(_prov_path, encoding="utf-8") as _f:
+                _prov = _json3.load(_f) or {}
+            _channels = sorted({c for v in _prov.values() for c in v})
+            _by_ch: Dict[str, List[str]] = {c: [] for c in _channels}
+            for _u in (buckets.get("verified") or buckets["top"]):
+                for _ch in _prov.get(core.provenance_key(_u), []):
+                    _by_ch[_ch].append(_u)
+            for _ch, _lines in _by_ch.items():
+                _head = (
+                    core.hiddify_profile_header(f"@{_ch} — RADAR") +
+                    f"# {core.BRAND} — verified configs sourced from "
+                    f"Telegram channel @{_ch} in this run.\n")
+                _p = os.path.join(out_dir, "subs", f"tg_{_ch}.txt")
+                _write_lines(_p, _head,
+                             core.shield_unsupported_runs(_lines))
+                written[f"tg_{_ch}"] = _p
+    except Exception as exc:  # noqa: BLE001
+        print(f"⚠️ tg subs: {exc}", file=sys.stderr)
     return written
 
 
