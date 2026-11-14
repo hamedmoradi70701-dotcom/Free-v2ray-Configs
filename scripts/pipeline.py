@@ -476,6 +476,101 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
         written["golden"] = golden_path
     except Exception as exc:  # noqa: BLE001
         print(f"⚠️ subs/golden.txt: {exc}", file=sys.stderr)
+
+    # ── افسانه‌ها (`subs/legends.txt`) + سابِ شیکِ ایران (`subs/iran_chic.txt`) ──
+    # افسانه‌ها: تنها فهرستی که با «تاریخچه» ساخته می‌شود نه با یک آزمونِ
+    # لحظه‌ای — هر کانفیگِ تأییدشده یک «رکوردِ زنده‌ماندن» (streak) دارد که در
+    # `stats/survival.json` بینِ دورها نگه داشته می‌شود؛ کانفیگی که ۳ دورِ
+    # پیاپی آزمونِ واقعی را رد کند واردِ افسانه‌ها می‌شود و با همان رکورد
+    # رتبه می‌گیرد. جمع‌آورنده‌های معمولی این را ندارند چون تاریخچه می‌خواهد.
+    # سابِ شیکِ ایران: همان کانفیگ‌های ایرانِ همین دور، ولی دو خطِ اولش
+    # اطلاعاتی است (مثلِ پنل‌های اشتراکی) تا در کلاینت شبیهِ سابِ پولی دیده
+    # شود. هر دو افزوده‌اند و در `try` جدا می‌نشینند: شکستشان نباید خروجی‌های
+    # اصلی را ببرد.
+    try:
+        import json as _json
+        import urllib.parse as _uparse
+
+        _verified = list(buckets.get("verified") or buckets["top"])
+        _key = lambda u: u.split("#", 1)[0]  # noqa: E731
+
+        def _remark(u: str) -> str:
+            r = u.split("#", 1)[1] if "#" in u else ""
+            try:
+                return _uparse.unquote(r)
+            except Exception:  # noqa: BLE001
+                return r
+
+        # ــ رکوردِ زنده‌ماندن ──
+        _surv_path = os.path.join(out_dir, "stats", "survival.json")
+        _surv: Dict[str, Any] = {}
+        try:
+            with open(_surv_path, encoding="utf-8") as _f:
+                _surv = _json.load(_f) or {}
+        except Exception:  # noqa: BLE001
+            _surv = {}
+        _now_keys = set()
+        for _u in _verified:
+            _k = _key(_u)
+            if _k in _now_keys:
+                continue
+            _now_keys.add(_k)
+            _e = _surv.get(_k) or {"streak": 0, "best": 0}
+            _e["streak"] = int(_e.get("streak", 0)) + 1
+            _e["best"] = max(int(_e.get("best", 0)), _e["streak"])
+            _surv[_k] = _e
+        _surv = {k: v for k, v in _surv.items() if k in _now_keys}
+        os.makedirs(os.path.dirname(_surv_path), exist_ok=True)
+        with open(_surv_path, "w", encoding="utf-8") as _f:
+            _json.dump(_surv, _f, ensure_ascii=False, separators=(",", ":"))
+
+        # ــ فهرستِ افسانه‌ها: رکورد ≥ ۳، مرتب بر اساسِ رکورد و بعد رتبهٔ سرعت ──
+        _rank = {u: i for i, u in enumerate(buckets["top"])}
+        _leg = [u for u in _verified
+                if int(_surv.get(_key(u), {}).get("streak", 0)) >= 3]
+        _leg.sort(key=lambda u: (-int(_surv[_key(u)]["streak"]),
+                                 _rank.get(u, 1 << 30)))
+        _leg = _leg[:100]
+
+        def _legend_line(u: str) -> str:
+            s = int(_surv[_key(u)]["streak"])
+            orig = _remark(u)
+            name = f"🏆 LEGEND ×{s} | {orig}" if orig else f"🏆 LEGEND ×{s}"
+            return f"{_key(u)}#{name}"
+
+        _leg_lines = [_legend_line(u) for u in _leg]
+        _leg_head = (
+            core.hiddify_profile_header(f"LEGENDS {len(_leg_lines)}") +
+            f"# {core.BRAND} — LEGENDS — configs that passed the real "
+            f"tunnel test in 3+ consecutive runs, ranked by survival "
+            f"streak. History cannot be faked.\n")
+        _leg_path = os.path.join(out_dir, "subs", "legends.txt")
+        _write_lines(_leg_path, _leg_head,
+                     core.shield_unsupported_runs(_leg_lines))
+        written["legends"] = _leg_path
+
+        # ــ سابِ شیکِ ایران: دو خطِ اول اطلاعاتی، بقیه کانفیگ‌های ایرانِ دور ──
+        _ir = [u for u in _verified
+               if (_remark(u).split() or [""])[0] == "IR"]
+        if _ir:
+            _fa = str(len(_ir)).translate(
+                str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹"))
+            _chic = [f"{_key(_ir[0])}#👤 اشتراک رادار 📡 (✅ فعال)"
+                     f"(🇮🇷 {_fa} کانفیگ تأییدشده)"]
+            if len(_ir) >= 2:
+                _chic.append(f"{_key(_ir[1])}#🇮🇷 هر موقع قطع شد ‼️ "
+                             f"بروزرسانی کن")
+            _chic += _ir[2:]
+            _chic_head = (
+                core.hiddify_profile_header("RADAR IRAN") +
+                f"# {core.BRAND} — IRAN CHIC — live verified Iran "
+                f"configs with info rows.\n")
+            _chic_path = os.path.join(out_dir, "subs", "iran_chic.txt")
+            _write_lines(_chic_path, _chic_head,
+                         core.shield_unsupported_runs(_chic))
+            written["iran_chic"] = _chic_path
+    except Exception as exc:  # noqa: BLE001
+        print(f"⚠️ legends/iran_chic: {exc}", file=sys.stderr)
     return written
 
 
