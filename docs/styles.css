@@ -759,3 +759,12 @@ html[lang="fa"] .live-chip,html[lang="ar"] .live-chip{letter-spacing:0;font-size
 .growth-axis{fill:#8291AA;font-size:12px;font-family:var(--font)}
 .visitor-counter{flex-basis:100%;margin-top:14px;font-size:13px;font-weight:600;color:var(--muted)}
 @media (max-width:640px){.radar-map{height:320px}}
+
+/* ── radar features (legends / iran chic / telegram channels) ── */
+.feat{margin-top:56px}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.feat-card{display:block;background:var(--surface);border:1px solid var(--stroke);border-radius:18px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease}
+.feat-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,35,61,.12)}
+.feat-card strong{display:block;font-size:19px;font-weight:800;margin-bottom:6px}
+.feat-card small{display:block;color:var(--muted);font-size:13.5px;line-height:1.7}
+.feat-card .feat-arrow{display:inline-block;margin-top:10px;color:var(--blue-deep);font-weight:800}

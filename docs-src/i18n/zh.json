@@ -336,4 +336,18 @@
     "f3d": "从订阅链接和文本中提取 WireGuard 配置，可直接复制或下载",
     "cta": "打开 Warp 制作器"
   }
+,
+  "feat": {
+    "overline": "雷达新功能",
+    "title": "传奇与 Telegram 频道",
+    "sub": "机器人最新产出 — 每轮自动更新。",
+    "legendsT": "🏆 传奇",
+    "legendsD": "连续 3+ 轮通过真实隧道测试的配置 — 按存活记录排名。",
+    "iranT": "🇮🇷 伊朗精美订阅",
+    "iranD": "带信息行的伊朗已验证配置,如同付费订阅。",
+    "tg1T": "📡 @mdvpnsec",
+    "tg1D": "来自此 Telegram 频道的已验证配置。",
+    "tg2T": "📡 @v2rayngvpn",
+    "tg2D": "来自此 Telegram 频道的已验证配置。"
+  }
 }

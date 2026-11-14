@@ -336,4 +336,18 @@
     "f3d": "Extract WireGuard configs from subscription links and text, ready to copy or download",
     "cta": "Open Warp Maker"
   }
+,
+  "feat": {
+    "overline": "New on Radar",
+    "title": "Legends & Telegram Channels",
+    "sub": "Fresh outputs from the bot — refreshed automatically every run.",
+    "legendsT": "🏆 Legends",
+    "legendsD": "Configs that passed the real tunnel test in 3+ consecutive runs — ranked by survival streak.",
+    "iranT": "🇮🇷 Iran Chic Sub",
+    "iranD": "Verified Iran configs with info rows, like paid subscriptions.",
+    "tg1T": "📡 @mdvpnsec",
+    "tg1D": "Verified configs sourced from this Telegram channel.",
+    "tg2T": "📡 @v2rayngvpn",
+    "tg2D": "Verified configs sourced from this Telegram channel."
+  }
 }
