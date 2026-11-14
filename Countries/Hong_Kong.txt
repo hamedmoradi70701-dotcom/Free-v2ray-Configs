@@ -6,7 +6,7 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://8b17beac-b143-447d-aa68-14cbb121a602@8.217.1.203:8443?encryption=none&security=reality&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&type=tcp&pbk=74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38&sid=0bf55f64#HK 🇭🇰 | رادار | DBD109
-vless://8f9c04c9-5c94-495e-9452-ab8b7a8af1bc@46.8.226.4:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=23_VHT4FYqho1mngpot4LnR0zlkvLO7gOZZTZ1aY5Wc&security=reality&sni=hongkong.freegate.win&type=tcp#HK 🇭🇰 | رادار | 621F45
-vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIwIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOjM1MDQzLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Ii0tLSIsInYiOiIyIiwidmNuIjoiIiwibmFtZSI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCJ9
-vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImIxNWU0ODFkLTE3ZTQtNDFhOC04NGMyLTIzZDRmMDUxNGQ5YSIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgOTVBRTcxIiwic25pIjoiMTU2LjI0NS4yMzIuMjM5IiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20123?security=tls&sni=hk.catxstar.com&path=/#HK 🇭🇰 | رادار | D5EBCA
+vless://3012a26e-0f9e-41d9-a64d-5a5b736f8d99@sijiache.hief.store:33068?&security=reality&flow=xtls-rprx-vision&pbk=R6ikLAKWuvM4UxkaMchaOe3pOMUsjghIW_w7McCY9Hc&sid=39b10242&fp=chrome&sni=iosapps.itunes.apple.com&type=tcp&headerType=none&host=iosapps.itunes.apple.com&path=/#HK 🇭🇰 | رادار | F4BC7C
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20086?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | D56851
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@Sclass-C1.catcat321.com:20086?security=tls&sni=hk.catxstar.com&fp=chrome&type=tcp&headerType=none#HK 🇭🇰 | رادار | 4AB5D5

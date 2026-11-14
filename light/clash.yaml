@@ -206,7 +206,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: aa7f1b042f73
-- name: "US \U0001F1FA\U0001F1F8 | رادار | 55279C"
+- name: "Global \U0001F310 | رادار | 55279C"
   server: animator-likeliest.sports-streams.org
   port: 443
   type: vless
@@ -70618,7 +70618,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | رادار | 289D87"
   - "US \U0001F1FA\U0001F1F8 | رادار | EFC7C0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2C5B80"
-  - "US \U0001F1FA\U0001F1F8 | رادار | 55279C"
+  - "Global \U0001F310 | رادار | 55279C"
   - "DE \U0001F1E9\U0001F1EA | رادار | 578663"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9A5382"
   - "DE \U0001F1E9\U0001F1EA | رادار | 0FF40C"
@@ -76519,7 +76519,7 @@ proxy-groups:
   - "LV \U0001F1F1\U0001F1FB | رادار | 289D87"
   - "US \U0001F1FA\U0001F1F8 | رادار | EFC7C0"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2C5B80"
-  - "US \U0001F1FA\U0001F1F8 | رادار | 55279C"
+  - "Global \U0001F310 | رادار | 55279C"
   - "DE \U0001F1E9\U0001F1EA | رادار | 578663"
   - "DE \U0001F1E9\U0001F1EA | رادار | 9A5382"
   - "DE \U0001F1E9\U0001F1EA | رادار | 0FF40C"
