@@ -571,6 +571,59 @@ def write_buckets(out_dir: str, buckets: Dict[str, Any]) -> Dict[str, str]:
             written["iran_chic"] = _chic_path
     except Exception as exc:  # noqa: BLE001
         print(f"⚠️ legends/iran_chic: {exc}", file=sys.stderr)
+
+    # ── تابلوی اعتمادِ منابع (`stats/source_trust.json`) ────────────────────
+    # از رویِ دفترِ خودِ ربات (`state.json`): هر منبع بر اساسِ میانگینِ
+    # کانفیگِ یکتایی که در پنجرهٔ دورهای اخیر داده نمره می‌گیرد (A+ تا F و
+    # ☠️ برایِ غیرفعال‌ها). داده‌اش را هیچ جمع‌آورنده‌ای منتشر نمی‌کند؛ این
+    # همان چیزی است که رادار را از «جمع‌کننده» به «مرجع» تبدیل می‌کند.
+    # افزوده است و در `try` جدا می‌نشیند.
+    try:
+        import json as _json2
+
+        with open(os.path.join(out_dir, "state.json"),
+                  encoding="utf-8") as _f:
+            _state = _json2.load(_f) or {}
+        _rows = []
+        for _sid, _s in (_state.get("sources") or {}).items():
+            _uniq = _s.get("unique") or []
+            _rounds = len(_uniq) or int(_s.get("rounds") or 0)
+            _tot = sum(int(x) for x in _uniq)
+            _avg = (_tot / _rounds) if _rounds else 0.0
+            _disabled = bool(_s.get("disabled_since"))
+            if _disabled:
+                _grade = "☠️"
+            elif _avg >= 400:
+                _grade = "A+"
+            elif _avg >= 100:
+                _grade = "A"
+            elif _avg >= 20:
+                _grade = "B"
+            elif _avg >= 4:
+                _grade = "C"
+            elif _avg >= 0.5:
+                _grade = "D"
+            else:
+                _grade = "F"
+            _rows.append({
+                "source": _s.get("url", _sid),
+                "grade": _grade,
+                "avg_unique_per_round": round(_avg, 1),
+                "total_unique": _tot,
+                "rounds_window": _rounds,
+                "fail": int(_s.get("fail") or 0),
+                "disabled": _disabled,
+            })
+        _rows.sort(key=lambda r: (r["disabled"],
+                                  -r["avg_unique_per_round"]))
+        _trust_path = os.path.join(out_dir, "stats", "source_trust.json")
+        os.makedirs(os.path.dirname(_trust_path), exist_ok=True)
+        with open(_trust_path, "w", encoding="utf-8") as _f:
+            _json2.dump({"round": _state.get("round"), "sources": _rows},
+                        _f, ensure_ascii=False, indent=1)
+        written["source_trust"] = _trust_path
+    except Exception as exc:  # noqa: BLE001
+        print(f"⚠️ source_trust: {exc}", file=sys.stderr)
     return written
 
 
