@@ -6,6 +6,6 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206Qld5UFBUdXNGS2hHZ3pLaA==@64.177.90.30:8388#MX 🇲🇽 | رادار | 321663
-trojan://5t6i121em5lkmsmk@mx001.zestapp778.com:15083?type=tcp#MX 🇲🇽 | رادار | 4A012F
 trojan://5t6i121em5lkmsmk@mx001.zestapp778.com:15083?allowInsecure=1&sni=mx001.zestapp778.com&type=tcp#MX 🇲🇽 | رادار | 550EF9
+trojan://5t6i121em5lkmsmk@mx001.zestapp778.com:15083?type=tcp#MX 🇲🇽 | رادار | 4A012F
+trojan://5t6i121em5lkmsmk@149.104.87.125:15083?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=mx001.zestapp778.com#MX 🇲🇽 | رادار | 285F2D

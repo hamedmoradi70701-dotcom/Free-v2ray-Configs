@@ -1,9 +1,9 @@
-#profile-title: رادار — CYPRUS (CY)
+#profile-title: رادار — VIETNAM (VN)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — CYPRUS (CY) — 1 configs
+# رادار — VIETNAM (VN) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://ab53f3b6-7962-4bc1-90f6-8420767b22a8@45.88.176.30:8443?mode=auto&path=/xhttp&security=reality&encryption=none&pbk=KZejN2d1cwCrITHNxFYQVZ4rpMTZzHgJd9p30MZm_3k&fp=firefox&type=xhttp&sni=cdn-us.cahmes.space&sid=6bd33a75ebc0f26e#CY 🇨🇾 | رادار | 2B7E16
+vless://5407a1c6-fbbf-417a-864d-48563da8e454@163.61.182.194:34646?encryption=none&fp=chrome&pbk=UuXUXzPnZM8IY-D5bQPy4iBIzEpK4PJFEOJzeObISRA&security=reality&sid=4710d669&sni=api.receptivity.io&spx=/53ddb3cfd64cb7b&type=tcp#VN 🇻🇳 | رادار | 7B41FB
