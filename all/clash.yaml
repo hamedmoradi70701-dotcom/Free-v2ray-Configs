@@ -195806,7 +195806,7 @@ proxies:
     path: /aveiror.com:443/linkvws
     headers:
       Host: mute-math-d64e.0e503992ad7026.woRKERS.DeV
-- name: "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+- name: "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   server: mycfwork.herokuapp.com
   port: 443
   type: vmess
@@ -225270,7 +225270,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 01EDF5"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 13E286"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 761786"
-  - "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7B05FB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 011DEE"
   - "Global \U0001F310 | رادار | 363707"
@@ -243395,7 +243395,7 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 01EDF5"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 13E286"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 761786"
-  - "US \U0001F1FA\U0001F1F8 | رادار | A4AD1B"
+  - "CA \U0001F1E8\U0001F1E6 | رادار | A4AD1B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 7B05FB"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 011DEE"
   - "Global \U0001F310 | رادار | 363707"

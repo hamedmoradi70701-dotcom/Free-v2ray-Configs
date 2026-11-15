@@ -6,7 +6,7 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
+vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.222:8443?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE&encryption=none#PT 🇵🇹 | رادار | 4E494F
+vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.218:8443?security=reality&type=tcp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE#PT 🇵🇹 | رادار | D7157A
 vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.220:8443?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE#PT 🇵🇹 | رادار | 6EF3E1
 vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.221:8443?security=reality&type=tcp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE#PT 🇵🇹 | رادار | DC60C3
-vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.218:8443?security=reality&type=tcp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE#PT 🇵🇹 | رادار | D7157A
-vless://98a24806-141a-43d3-b094-bd66c4eb93b8@198.16.113.222:8443?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=69984b9e02545831&pbk=8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE&encryption=none#PT 🇵🇹 | رادار | 4E494F

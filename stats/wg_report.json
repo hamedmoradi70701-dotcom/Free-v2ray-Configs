@@ -1,8 +1,171 @@
 {
- "generated_at": "2026-11-15T15:40:09Z",
+ "generated_at": "2026-11-15T15:48:13Z",
  "tools_ok": true,
- "keys_active": 0,
- "tested": 0,
+ "keys_active": 9,
+ "tested": 27,
  "ok": 0,
- "results": []
+ "results": [
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "q052m4Tp-16J78UMj-b63q29Zr",
+   "endpoint": "8.6.112.152:942"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "q052m4Tp-16J78UMj-b63q29Zr",
+   "endpoint": "8.6.112.224:5279"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "q052m4Tp-16J78UMj-b63q29Zr",
+   "endpoint": "8.6.112.168:934"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "S2oy630p-b1lF8C59-D4l6r78x",
+   "endpoint": "8.6.112.31:3581"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "S2oy630p-b1lF8C59-D4l6r78x",
+   "endpoint": "8.6.112.40:7559"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "S2oy630p-b1lF8C59-D4l6r78x",
+   "endpoint": "8.6.112.194:859"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "U4c51e6k-K6d8rb71-3497XqIV",
+   "endpoint": "8.6.112.138:8886"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "U4c51e6k-K6d8rb71-3497XqIV",
+   "endpoint": "8.6.112.113:864"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "U4c51e6k-K6d8rb71-3497XqIV",
+   "endpoint": "8.6.112.120:878"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0y2oaS85-734Gxga0-2e5c6Bn9",
+   "endpoint": "8.6.112.168:934"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0y2oaS85-734Gxga0-2e5c6Bn9",
+   "endpoint": "8.6.112.204:943"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0y2oaS85-734Gxga0-2e5c6Bn9",
+   "endpoint": "8.6.112.44:1018"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8nH19WO2-2I97Ho0y-1NC4PY58",
+   "endpoint": "8.6.112.112:1387"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8nH19WO2-2I97Ho0y-1NC4PY58",
+   "endpoint": "8.6.112.131:8886"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8nH19WO2-2I97Ho0y-1NC4PY58",
+   "endpoint": "8.6.112.225:943"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8C3xHZ59-0mI72Kj1-876V3PhZ",
+   "endpoint": "8.6.112.83:5956"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8C3xHZ59-0mI72Kj1-876V3PhZ",
+   "endpoint": "8.6.112.168:3476"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "8C3xHZ59-0mI72Kj1-876V3PhZ",
+   "endpoint": "8.6.112.13:4177"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0sPO87I5-L84GR7X3-2s0q7uN4",
+   "endpoint": "8.6.112.213:1014"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0sPO87I5-L84GR7X3-2s0q7uN4",
+   "endpoint": "8.6.112.168:3476"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "0sPO87I5-L84GR7X3-2s0q7uN4",
+   "endpoint": "8.6.112.131:8886"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "e2qP739Y-ns81M9C6-rdj643z2",
+   "endpoint": "8.6.112.55:854"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "e2qP739Y-ns81M9C6-rdj643z2",
+   "endpoint": "8.6.112.31:859"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "e2qP739Y-ns81M9C6-rdj643z2",
+   "endpoint": "8.6.112.60:5279"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "I073YX2r-4Q2J9Et0-8buvL910",
+   "endpoint": "8.6.112.208:2408"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "I073YX2r-4Q2J9Et0-8buvL910",
+   "endpoint": "8.6.112.225:943"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: [#] ip link add wgr0 type wireguard\n[#] wg setconf wgr0 /dev/fd/63\nLine unrecognized: `Jc=3'\nConfiguration parsing error\n[#] ip link delete dev wgr0\n",
+   "license": "I073YX2r-4Q2J9Et0-8buvL910",
+   "endpoint": "8.6.112.113:864"
+  }
+ ]
 }

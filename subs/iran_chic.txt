@@ -3,12 +3,14 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
 # رادار — IRAN CHIC — live verified Iran configs with info rows.
-vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=firefox&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#👤 اشتراک رادار 📡 (✅ فعال)(🇮🇷 ۹ کانفیگ تأییدشده)
-vless://ca39b355-b488-9297-918f-9d011d075ba2@171.22.27.161:2083?security=reality&type=xhttp&sni=www.aparat.com&fp=chrome&sid=2f567c6d&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs#🇮🇷 هر موقع قطع شد ‼️ بروزرسانی کن
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?security=tls&alpn=http%2F1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 6AC1C8
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?security=tls&sni=base.hosamobenl.co.uk&type=tcp#👤 اشتراک رادار 📡 (✅ فعال)(🇮🇷 ۱۱ کانفیگ تأییدشده)
+vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?encryption=none&type=grpc&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&fp=firefox&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU#🇮🇷 هر موقع قطع شد ‼️ بروزرسانی کن
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpxM2RxVlpKaV9VZ2o2S0xtNVRPZDQ3QjY5RWtZVk0tQQ==@p1tun2.greewebservices.ir:2050#IR 🇮🇷 | رادار | CA2213
-vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?mode=auto&security=reality&encryption=none&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&fp=chrome&type=xhttp&sni=www.aparat.com&sid=2f567c6d#IR 🇮🇷 | رادار | B7E0F9
+vless://ca39b355-b488-9297-918f-9d011d075ba2@171.22.27.161:2083?security=reality&type=xhttp&sni=www.aparat.com&fp=chrome&sid=2f567c6d&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs#IR 🇮🇷 | رادار | 561F27
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?security=tls&alpn=http%2F1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 6AC1C8
+vless://8a1a991a-f206-447a-adaf-37a57c133418@ir2.cryptojakiro.com:443?security=tls&type=ws&path=%2F&host=ir2.cryptojakiro.com&sni=ir2.cryptojakiro.com&fp=chrome#IR 🇮🇷 | رادار | 1CBBC3
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?encryption=none&security=tls&type=tcp#IR 🇮🇷 | رادار | 0D2884
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@base.hosamobenl.co.uk:443?security=tls&sni=base.hosamobenl.co.uk&type=tcp#IR 🇮🇷 | رادار | D53BE2
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?security=tls&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 851594
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?path=%2F&security=tls&sni=base.hosamobenl.co.uk&type=tcp#IR 🇮🇷 | رادار | C43EE4
+vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?mode=auto&security=reality&encryption=none&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&fp=chrome&type=xhttp&sni=www.aparat.com&sid=2f567c6d#IR 🇮🇷 | رادار | B7E0F9
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?security=tls&alpn=http%2F1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 8AFCCF

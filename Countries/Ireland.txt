@@ -6,5 +6,5 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://2e69b088-6ef3-417f-8247-125cf257fafd@108.156.65.62:443?security=tls&type=xhttp&path=%2Fcf&sni=d1ivx1xk58pr8u.cloudfront.net&fp=chrome&encryption=none#IE 🇮🇪 | رادار | C6104E
 vless://2e69b088-6ef3-417f-8247-125cf257fafd@108.156.65.62:443?security=tls&sni=d1ivx1xk58pr8u.cloudfront.net&type=xhttp&host=d1ivx1xk58pr8u.cloudfront.net&path=%2Fcf&fp=chrome#IE 🇮🇪 | رادار | 2B19F3
+vless://2e69b088-6ef3-417f-8247-125cf257fafd@108.156.65.62:443?security=tls&type=xhttp&path=%2Fcf&sni=d1ivx1xk58pr8u.cloudfront.net&fp=chrome&encryption=none#IE 🇮🇪 | رادار | C6104E

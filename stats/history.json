@@ -56,100 +56,107 @@
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T12:30:44.675871+00:00",
-    "verified_count": 1156,
+    "ts": "2026-11-15T12:23:05.713707+00:00",
+    "verified_count": 1145,
+    "country_count": 48,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T12:38:15.836322+00:00",
+    "verified_count": 1089,
     "country_count": 45,
     "sources_ok": 26,
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T12:45:40.017002+00:00",
-    "verified_count": 1198,
-    "country_count": 47,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T12:59:59.000930+00:00",
-    "verified_count": 1158,
-    "country_count": 44,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T13:14:09.018904+00:00",
-    "verified_count": 1131,
-    "country_count": 42,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T13:28:49.843460+00:00",
-    "verified_count": 1173,
-    "country_count": 43,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T13:42:58.330569+00:00",
-    "verified_count": 1161,
+    "ts": "2026-11-15T12:52:57.610024+00:00",
+    "verified_count": 1164,
     "country_count": 45,
     "sources_ok": 26,
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T13:57:44.604439+00:00",
-    "verified_count": 1135,
-    "country_count": 43,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T14:11:49.583082+00:00",
-    "verified_count": 1151,
-    "country_count": 41,
-    "sources_ok": 26,
-    "sources_total": 31
-  },
-  {
-    "ts": "2026-11-15T14:26:24.234312+00:00",
+    "ts": "2026-11-15T13:07:11.076161+00:00",
     "verified_count": 1149,
+    "country_count": 45,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T13:21:20.184841+00:00",
+    "verified_count": 1177,
+    "country_count": 43,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T13:36:05.033923+00:00",
+    "verified_count": 1144,
+    "country_count": 45,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T13:50:42.331631+00:00",
+    "verified_count": 1161,
     "country_count": 46,
     "sources_ok": 26,
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T14:40:33.862501+00:00",
-    "verified_count": 1138,
+    "ts": "2026-11-15T14:04:52.428890+00:00",
+    "verified_count": 1143,
+    "country_count": 42,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T14:19:28.554454+00:00",
+    "verified_count": 1115,
     "country_count": 43,
     "sources_ok": 26,
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T14:55:02.510307+00:00",
-    "verified_count": 1185,
+    "ts": "2026-11-15T14:33:20.772500+00:00",
+    "verified_count": 1121,
+    "country_count": 44,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T14:48:02.855306+00:00",
+    "verified_count": 1097,
+    "country_count": 42,
+    "sources_ok": 26,
+    "sources_total": 31
+  },
+  {
+    "ts": "2026-11-15T15:01:53.667012+00:00",
+    "verified_count": 1127,
     "country_count": 43,
     "sources_ok": 26,
     "sources_total": 31
   },
   {
-    "ts": "2026-11-15T15:09:19.020096+00:00",
-    "verified_count": 1189,
+    "ts": "2026-11-15T15:16:37.180855+00:00",
+    "verified_count": 1167,
     "country_count": 44,
     "sources_ok": 35,
     "sources_total": 40
   },
   {
-    "ts": "2026-11-15T15:24:22.408081+00:00",
-    "verified_count": 1210,
-    "country_count": 44,
-    "sources_ok": 35,
-    "sources_total": 40
-  },
-  {
-    "ts": "2026-11-15T15:40:09.926320+00:00",
-    "verified_count": 1130,
+    "ts": "2026-11-15T15:31:55.219367+00:00",
+    "verified_count": 1152,
     "country_count": 45,
+    "sources_ok": 35,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-15T15:48:13.627566+00:00",
+    "verified_count": 1147,
+    "country_count": 46,
     "sources_ok": 35,
     "sources_total": 40
   }
