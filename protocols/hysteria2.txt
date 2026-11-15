@@ -150,7 +150,6 @@ hysteria2://7e68e32f-8015-4f37-9082-70e8b0b58043@52.79.88.129:443?insecure=1&sni
 hysteria2://8674df07-56b3-43ea-b687-aef2b1a20137@31.76.22.210:443?insecure=1&sni=crt.ultimagamest.com#PL 🇵🇱 | رادار | 9BED5E
 hysteria2://8b64b840-a48d-4ac0-b10f-8f7d7081a0f1@ru.xiaoliyu.cyou:1888?obfs=salamander&obfs-password=2%3D2E%25d4%23PJxu&up=100&down=50&insecure=1#RU 🇷🇺 | رادار | 6D2B3A
 hysteria2://92bd8c68-6434-11ee-b644-f23c91cfbbc9@88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com:443?insecure=1&sni=88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com#HK 🇭🇰 | رادار | 1F8C05
-hysteria2://github.com/Alvin9999-newpac/fanqiang@62.210.7.139:60111/?insecure=1&sni=ôĆöĽ#FR 🇫🇷 | رادار | B83F27
 hysteria2://a35c508f-4d5d-4531-842e-6e9d43c762c0@13.143.189.101:4444?insecure=0&sni=pl1.nexfile.net#PL 🇵🇱 | رادار | A6B4CE
 hysteria2://a35c508f-4d5d-4531-842e-6e9d43c762c0@13.143.189.105:4444?insecure=0&sni=pl2.nexfile.net#PL 🇵🇱 | رادار | F83653
 hysteria2://a35c508f-4d5d-4531-842e-6e9d43c762c0@13.143.189.146:4444?insecure=0&sni=pl3.nexfile.net#PL 🇵🇱 | رادار | 7173D2
@@ -252,6 +251,7 @@ hysteria2://suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g@159.223.157.129:8443?insecure=1#US 
 hysteria2://Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X-@ir.config7x.site:26503?insecure=0&sni=hy.config7x.site#IR 🇮🇷 | رادار | 6D319E
 hysteria2://Telegram-vpnjey@179.61.138.145:36264?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | رادار | 97F01B
 hysteria2://Telegram@179.61.138.145:443?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | رادار | 0A32A5
+hysteria2://Telegram%3Avpnjey@179.61.138.145:36264?security=tls&obfs=salamander&obfs-password=Telegram%40vpnjey&insecure=0&sni=de2.jey.cc.cd#DE 🇩🇪 | رادار | 5395E7
 hysteria2://Telegram:vpnjey@179.61.138.145:36264?security=tls&obfs=salamander&obfs-password=Telegram@vpnjey&insecure=0&sni=de2.jey.cc.cd#DE 🇩🇪 | رادار | 00BA77
 hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@5.83.129.11:443?insecure=1&sni=germany1.h2corp.local#DE 🇩🇪 | رادار | 14D688
 hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@de.1.22.washing.help:443?insecure=1&sni=germany1.h2corp.local#DE 🇩🇪 | رادار | 05ED52

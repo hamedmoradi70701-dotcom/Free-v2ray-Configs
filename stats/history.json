@@ -145,5 +145,12 @@
     "country_count": 44,
     "sources_ok": 35,
     "sources_total": 40
+  },
+  {
+    "ts": "2026-11-15T15:40:09.926320+00:00",
+    "verified_count": 1130,
+    "country_count": 45,
+    "sources_ok": 35,
+    "sources_total": 40
   }
 ]

@@ -2,16 +2,15 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — BULGARIA (BG) — 9 configs
+# رادار — BULGARIA (BG) — 8 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@94.156.250.148:7001#BG 🇧🇬 | رادار | 601424
 vless://6589c320-db68-43cd-a273-b46299bab355@195.123.226.21:443?security=reality&type=tcp&packetEncoding=xudp&sni=gateway.icloud.com&fp=chrome&flow=xtls-rprx-vision&sid=77bb0d07bddbc832&pbk=rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo#BG 🇧🇬 | رادار | 02BB68
 vless://b0511969-f769-460b-963b-70c6b84b6967@p11real1.greewebservices.ir:1020?encryption=none&fp=chrome&pbk=xwbp4EcOtus1W5Au4XCJJbCl9jCb4DwGgYQYEwUDqTY&security=reality&sid=354e34396eaa89ab&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | A856AE
-vless://b0511969-f769-460b-963b-70c6b84b6967@p11real2.greewebservices.ir:1030?encryption=none&fp=chrome&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 712C7C
-vless://b0511969-f769-460b-963b-70c6b84b6967@p1real3.greewebservices.ir:1250?encryption=none&fp=ios&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 82CB64
-vless://b0511969-f769-460b-963b-70c6b84b6967@p1real2.greewebservices.ir:1240?security=reality&type=tcp&sni=play.googleapis.com&fp=chrome&sid=9b60d3&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&encryption=none#BG 🇧🇬 | رادار | 7C42F8
 vless://b0511969-f769-460b-963b-70c6b84b6967@p1real5.greewebservices.ir:1270?encryption=none&fp=chrome&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 48B34F
-vless://b0511969-f769-460b-963b-70c6b84b6967@p1real4.greewebservices.ir:1260?encryption=none&fp=ios&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 2D02D8
+vless://b0511969-f769-460b-963b-70c6b84b6967@p11real2.greewebservices.ir:1030?encryption=none&fp=chrome&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 712C7C
+vless://b0511969-f769-460b-963b-70c6b84b6967@p1real2.greewebservices.ir:1240?security=reality&type=tcp&sni=play.googleapis.com&fp=chrome&sid=9b60d3&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&encryption=none#BG 🇧🇬 | رادار | 7C42F8
 vless://b0511969-f769-460b-963b-70c6b84b6967@p11real3.greewebservices.ir:1040?encryption=none&fp=chrome&pbk=xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8&security=reality&sid=9b60d3&sni=play.googleapis.com&type=tcp#BG 🇧🇬 | رادار | 938C86
+vless://313b84fa-b922-500f-9b65-acb67c040cc0@185.197.193.137:443/?type=ws&encryption=none&flow=&host=us2.v2less.site&path=%2Fvless&security=tls&sni=us2.v2less.site&fp=firefox#BG 🇧🇬 | رادار | 2FA3D6

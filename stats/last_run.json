@@ -1,8 +1,8 @@
 {
-  "ts": "2026-11-15T15:24:22.408081+00:00",
-  "verified_count": 1210,
-  "prev_verified_count": 1189,
-  "drop_pct": -1.8,
+  "ts": "2026-11-15T15:40:09.926320+00:00",
+  "verified_count": 1130,
+  "prev_verified_count": 1210,
+  "drop_pct": 6.6,
   "dead_sources": [],
   "sources_ok": 35,
   "sources_total": 40

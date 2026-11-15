@@ -2,10 +2,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — AUSTRIA (AT) — 3 configs
+# رادار — AUSTRIA (AT) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53
 vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4IiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoidGxzIiwic25pIjoieG1maGxweS5jb20iLCJhbHBuIjoiIiwiZnAiOiIiLCJuYW1lIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4In0=
 vmess://eyJ2IjpudWxsLCJwcyI6IkFUIPCfh6bwn4e5IHwg2LHYp9iv2KfYsSB8IDI4NEJBNCIsImFkZCI6IjE1NC40Ny4xOS4yMjUiLCJwb3J0IjoxMjcwLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6bnVsbCwiaG9zdCI6InhtZmhscHkuY29tIiwiYWxwbiI6bnVsbCwicGF0aCI6Ii8iLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ4bWZobHB5LmNvbSIsImZwIjpudWxsLCJuYW1lIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgMjg0QkE0In0=
