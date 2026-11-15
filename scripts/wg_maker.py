@@ -321,10 +321,18 @@ def run(out_dir: str) -> Dict[str, Any]:
 
     bootstrap = int(os.environ.get("RADAR_WG_BOOTSTRAP", _BOOTSTRAP_KEYS))
     want = bootstrap if not registry else _NEW_KEYS_PER_RUN
-    for _ in range(max(0, min(want, _MAX_KEYS - len(registry)))):
-        acct = _mint_account()
-        if acct and acct["license"]:
-            registry.append(acct)
+    minted = 0
+    for _attempt in range(2):  # ورکرها گاهی از IP رانر قفل می‌کنند؛ یک دورِ دیگر
+        added = 0
+        for _ in range(max(0, min(want, _MAX_KEYS - len(registry)))):
+            acct = _mint_account()
+            if acct and acct["license"]:
+                registry.append(acct)
+                added += 1
+        minted += added
+        if added or _attempt == 1:
+            break
+        time.sleep(5)
 
     eps = _clean_endpoints()
     tools_ok = False if os.environ.get("RADAR_WG_NO_TESTS") == "1" \
@@ -411,6 +419,7 @@ def run(out_dir: str) -> Dict[str, Any]:
                          f"file=subs/keys/{row['license']}.conf\n")
 
     report = {"generated_at": now_iso, "tools_ok": tools_ok,
+              "minted": minted,
               "keys_active": len(registry),
               "tested": len(results),
               "ok": sum(1 for r in results if r.get("ok")),
