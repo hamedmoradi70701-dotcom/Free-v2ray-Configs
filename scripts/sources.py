@@ -39,9 +39,11 @@ sources.py — منابع کانفیگ رایگان.
 `all_sources()` فقط عضوهای زندهٔ لیست‌ها را برمی‌گرداند. پس عددِ بالا همیشه
 «تعدادِ منابعِ فعال» است، نه تعدادِ خطوطِ فایل.
 
-آخرین اعتبارسنجی همهٔ URLهای زیر: ۱۴ نوامبر ۲۰۲۶ — هر ۳۱ منبع در لیست‌اند؛
-۱۶ منبع در همین تاریخ برای فورکِ «رادار» افزوده و تک‌تک با درخواستِ واقعیِ HTTP
-بررسی و کانفیگ‌هایشان شمرده شدند (پایین را ببینید). در همین بررسی `Epodonios`
+آخرین اعتبارسنجی همهٔ URLهای زیر: ۱۵ نوامبر ۲۰۲۶ — هر ۴۰ منبع در لیست‌اند؛
+۹ منبعِ تازه در ۱۵ نوامبر ۲۰۲۶ به درخواستِ مالک (استخرِ بزرگ‌تر و کانفیگِ
+ایرانِ بیشتر) افزوده و تک‌تک با درخواستِ واقعیِ HTTP بررسی و کانفیگ‌هایشان
+شمرده شدند (پایین را ببینید)؛ پیش از آن هم ۱۶ منبع در ۱۴ نوامبر برای فورکِ
+«رادار» افزوده شده بودند. در همین بررسی `Epodonios`
 ‏404 داد؛ حذفِ دستی نشد و غیرفعال‌سازی‌اش با روندِ سنجیدهٔ `state.py` است.
 
 حذفِ ۱۵ اکتبر ۲۰۲۶ — `V2RAYCONFIGSPOOL/V2RAY_SUB` (۹ URL)
@@ -80,7 +82,7 @@ from typing import List
 #: «اول زنده‌ها» می‌گیرد، پس اگر عوض شد هر دو جا با هم عوض می‌شود.
 VIFY_ALIVE_URL = "https://raw.githubusercontent.com/Mr-Meshky/vify/main/configs/alive.txt"
 
-# ── سبک / با کیفیت (۹ منبع فعال) ──────────────────────────────────────────────
+# ── سبک / با کیفیت (۱۴ منبع فعال) ──────────────────────────────────────────────
 # نکته: چهار آدرس mci/sub_2..4 و mtn/sub_2..4 که قبلاً اینجا بودند حذف شدند؛
 # همهٔ آن‌ها HTTP 200 با بدنهٔ صفر بایت برمی‌گرداندند (منبع مرده ولی نامرئی).
 # سه منبعِ کامنت‌شدهٔ زیر عمداً پاک نشده‌اند: دلیلِ سنجیده‌شدهٔ کنارشان تنها
@@ -151,9 +153,16 @@ LIGHT_SOURCES: List[str] = [
     # irproxy عمداً نیست: پیش‌نمایشش هیچ کانفیگِ متنی ندارد (فایل/عکس است).
     "https://t.me/s/mdvpnsec",
     "https://t.me/s/v2rayngvpn",
+    # ── افزودهٔ ۲۰۲۶-۱۱-۱۵ (رادار) — سه کانالِ عمومیِ تلگرامِ دیگر از همان مسیرِ
+    # پیش‌نمایشِ وب؛ سنجشِ زندهٔ همان روز با `aggregate.fetch_source`:
+    # freev2rayconfig ← ۴۲ کانفیگِ معتبر، v2ray_collector ← ۵۲، configfa ← ۳۳
+    # (configfa کانالِ فارسیِ کانفیگ است و برای سهمِ ایران مهم است).
+    "https://t.me/s/freev2rayconfig",
+    "https://t.me/s/v2ray_collector",
+    "https://t.me/s/configfa",
 ]
 
-# ── انبوه / حجم بالا (۲۰ منبع) ─────────────────────────────────────────────────
+# ── انبوه / حجم بالا (۲۶ منبع) ─────────────────────────────────────────────────
 HEAVY_SOURCES: List[str] = [
     "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt",
     "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
@@ -207,6 +216,22 @@ HEAVY_SOURCES: List[str] = [
     "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/main/mix/sub.html",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
+    # ── افزودهٔ ۲۰۲۶-۱۱-۱۵ (رادار) — به درخواستِ مالک برای استخرِ بزرگ‌تر؛ هر
+    # URL همان روز با `aggregate.fetch_source` واقعی سنجیده شد (عدد = کانفیگِ
+    # معتبرِ استخراج‌شده، نه حجمِ خام):
+    #   ALIILAPRO sub.txt ← ۴٬۶۹۰ (فایلِ اشتراکِ کاملِ همان مخزنِ LIGHT؛ هم‌پوشانی
+    #   با server.txt را `state.py` با بازدهِ یکتا قضاوت می‌کند)
+    #   ermaozi/get_subscribe ← ۵۱۸ · chengaopan/AutoMergePublicNodes ← ۴۳۰
+    #   peasoft/NoMoreWalls list.txt ← ۴۲۸ (فایلِ list_raw اش در بازنگریِ بالادست
+    #   ضعیف سنجیده شده بود؛ این list.txt است و به ترجیحِ حجمِ مالک آمد — گاردِ
+    #   بازدهِ یکتایِ `state.py` هزینه‌اش را محدود می‌کند)
+    #   roosterkid V2RAY_BASE64 ← ۱۵۰ · ssrsub/ssr ← ۷۵
+    "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt",
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
+    "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
+    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_BASE64.txt",
+    "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray",
 ]
 
 
