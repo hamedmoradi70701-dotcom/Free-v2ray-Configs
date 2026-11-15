@@ -1,0 +1,5 @@
+#profile-title: رادار — @freev2rayconfig — RADAR
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — verified configs sourced from Telegram channel @freev2rayconfig in this run.

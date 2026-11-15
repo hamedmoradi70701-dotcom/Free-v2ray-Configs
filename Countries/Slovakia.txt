@@ -2,10 +2,13 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — SLOVAKIA (SK) — 3 configs
+# رادار — SLOVAKIA (SK) — 6 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vless://6f2857ee-4d43-417f-8a60-6f29becf061f@45.151.70.116:443?encryption=none&fp=firefox&pbk=O-B_Lb2sUV9VaUIv0_d6gVMA20oSKEd1wwyZ5vJYvh8&security=reality&sid=836c3060&sni=www.amd.com&type=tcp#SK 🇸🇰 | رادار | F0005F
+vless://474638a5-dc58-4453-9e40-70bcaa4ef74c@b998f03d.de-p2.h1clayd.click:443?&security=reality&pbk=RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0&sid=c10f4100fa3a8d47&fp=chrome&sni=b998f03d.de-p2.h1clayd.click&type=tcp&headerType=none&host=b998f03d.de-p2.h1clayd.click&path=%2F#SK 🇸🇰 | رادار | B080EF
+vless://474638a5-dc58-4453-9e40-70bcaa4ef74c@196.245.153.112:443?&security=reality&pbk=RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0&sid=c10f4100fa3a8d47&fp=firefox&sni=b998f03d.de-p2.h1clayd.click&type=tcp&headerType=none&host=b998f03d.de-p2.h1clayd.click&path=%2F#SK 🇸🇰 | رادار | 1C0A17
+vless://4618cebd-e1e9-45c3-be98-d9d6e3ee8bef@bbcdd4t.de-p2.h1clayd.click:443?&security=reality&pbk=n9cdr2Qf9h3S_jf5Rcd15fl-4fxuztHvlexE7G-QvW8&sid=1aab0b827885a8b4&fp=firefox&sni=bbcdd4t.de-p2.h1clayd.click&type=tcp&headerType=none&host=bbcdd4t.de-p2.h1clayd.click&path=%2F#SK 🇸🇰 | رادار | A63A7B
 vless://474638a5-dc58-4453-9e40-70bcaa4ef74c@196.245.153.112:443?encryption=none&fp=firefox&pbk=RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0&security=reality&sid=c10f4100fa3a8d47&sni=b998f03d.de-p2.h1clayd.click&type=tcp#SK 🇸🇰 | رادار | 870568
 vless://474638a5-dc58-4453-9e40-70bcaa4ef74c@b998f03d.de-p2.h1clayd.click:443?encryption=none&type=tcp&security=reality&sni=b998f03d.de-p2.h1clayd.click&pbk=RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0&sid=c10f4100fa3a8d47&fp=chrome&spx=/#SK 🇸🇰 | رادار | 255EE1
