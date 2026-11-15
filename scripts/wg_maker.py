@@ -59,6 +59,8 @@ _NEW_KEYS_PER_RUN = 2
 _MAX_FAILS = 3
 _TRACE_URL = "https://1.1.1.1/cdn-cgi/trace"
 _IFACE = "wgr0"
+_KERNEL_BROKEN = False
+_WGGO = ""  # مسیرِ باینریِ wireguard-go (موتورِ نرم‌افزاری)
 
 
 def _http_get(url: str, timeout: int = 25) -> str:
@@ -136,19 +138,139 @@ def _sh(args: List[str], timeout: int = 45) -> subprocess.CompletedProcess:
 
 
 def _ensure_wg_tools() -> bool:
-    if shutil.which("wg") and shutil.which("wg-quick"):
-        return True
-    try:  # روی رانرِ گیت‌هاب نصبِ بدونِ رمز ممکن است؛ جای دیگر بی‌صدا رد می‌شود
-        _sh(["sudo", "-n", "apt-get", "update", "-qq"], timeout=120)
-        _sh(["sudo", "-n", "apt-get", "install", "-y", "-qq",
-             "wireguard-tools"], timeout=180)
+    global _WGGO
+    if not (shutil.which("wg") and shutil.which("wg-quick")):
+        try:  # روی رانرِ گیت‌هاب نصبِ بدونِ رمز ممکن است؛ جای دیگر بی‌صدا رد می‌شود
+            _sh(["sudo", "-n", "apt-get", "update", "-qq"], timeout=120)
+            _sh(["sudo", "-n", "apt-get", "install", "-y", "-qq",
+                 "wireguard-tools"], timeout=180)
+        except Exception:
+            pass
+    try:  # شاید فقط ماژولِ کرنل لود نشده باشد
+        _sh(["sudo", "-n", "modprobe", "wireguard"], timeout=30)
     except Exception:
         pass
-    return bool(shutil.which("wg") and shutil.which("wg-quick"))
+    found = shutil.which("wireguard-go")
+    if found:
+        _WGGO = found
+    elif shutil.which("go"):
+        # موتورِ نرم‌افزاری (userspace) — روی رانرهایی که ساختِ اینترفیسِ کرنلی
+        # بسته است، تونل را با TUN بالا می‌آورد. یک بار ساخته و کش می‌شود.
+        try:
+            dst = "/tmp/radar-wireguard-go"
+            if not os.path.exists(dst):
+                src = "/tmp/radar-wggo-src"
+                _sh(["git", "clone", "--depth", "1",
+                     "https://git.zx2c4.com/wireguard-go", src], timeout=180)
+                _sh(["go", "build", "-o", dst, "."], timeout=300)
+                # go build باید داخلِ پوشهٔ سورس اجرا شود:
+                if not os.path.exists(dst):
+                    r = subprocess.run(["go", "build", "-o", dst, "."],
+                                       cwd=src, capture_output=True,
+                                       text=True, timeout=300)
+            if os.path.exists(dst):
+                _WGGO = dst
+        except Exception:
+            pass
+    return bool(shutil.which("wg"))
+
+
+def _poll_traffic() -> Dict[str, Any]:
+    """تا ~۹ ثانیه هندشیک و ترافیکِ واقعی را صبر و اندازه می‌گیرد."""
+    for _ in range(6):
+        hs = _sh(["sudo", "-n", "wg", "show", _IFACE,
+                  "latest-handshakes"], timeout=15)
+        shook = any(int(p[1]) > 0 for p in
+                    (ln.split() for ln in hs.stdout.splitlines())
+                    if len(p) >= 2 and p[1].isdigit())
+        t0 = time.time()
+        tr = _sh(["curl", "-s", "--max-time", "10", _TRACE_URL],
+                 timeout=20)
+        ms = int((time.time() - t0) * 1000)
+        body = tr.stdout or ""
+        if shook and "ip=" in body:
+            loc = re.search(r"loc=(\w+)", body)
+            ip = re.search(r"ip=(\S+)", body)
+            return {"ok": True, "ms": ms,
+                    "loc": loc.group(1) if loc else "",
+                    "exit_ip": ip.group(1) if ip else ""}
+        time.sleep(1.5)
+    return {"ok": False, "error": "no-handshake-or-traffic"}
+
+
+def _test_tunnel_userspace(conf: str) -> Dict[str, Any]:
+    """موتورِ نرم‌افزاری: wireguard-go + ‎`wg setconf`‎ + روتِ فقط-برای-تست."""
+    if not _WGGO:
+        return {"ok": False, "error": "no-userspace-binary"}
+    addr = ""
+    for ln in conf.splitlines():
+        if ln.startswith("Address"):
+            addr = ln.split("=", 1)[1].split(",")[0].strip()
+            break
+    keep = []
+    for ln in conf.splitlines():
+        if ln.startswith(("DNS", "Jc", "Jmin", "Jmax", "H1", "H2", "H3",
+                          "H4", "Address", "MTU")):
+            continue
+        keep.append(ln)
+    setconf = "\n".join(keep) + "\n"
+    sc_path = f"/tmp/{_IFACE}-set.conf"
+    proc = None
+    try:
+        with io.open(sc_path, "w", encoding="utf-8") as fh:
+            fh.write(setconf)
+        _sh(["sudo", "-n", "ip", "link", "del", _IFACE], timeout=15)
+        proc = subprocess.Popen(["sudo", "-n", _WGGO, _IFACE],
+                                stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL)
+        for _ in range(10):  # صبر برای ساختِ تونل و سوکتِ UAPI
+            if _sh(["sudo", "-n", "wg", "show", _IFACE],
+                   timeout=10).returncode == 0:
+                break
+            time.sleep(0.7)
+        r = _sh(["sudo", "-n", "wg", "setconf", _IFACE, sc_path],
+                timeout=20)
+        if r.returncode != 0:
+            return {"ok": False,
+                    "error": "setconf: " + (r.stderr or "")[:280]}
+        if addr:
+            _sh(["sudo", "-n", "ip", "addr", "add", addr, "dev", _IFACE],
+                timeout=15)
+        _sh(["sudo", "-n", "ip", "link", "set", "up", "dev", _IFACE],
+            timeout=15)
+        _sh(["sudo", "-n", "ip", "route", "add", "1.1.1.1/32", "dev",
+             _IFACE], timeout=15)
+        return _poll_traffic()
+    except Exception as e:
+        return {"ok": False, "error": f"{type(e).__name__}: {e}"[:280]}
+    finally:
+        try:
+            _sh(["sudo", "-n", "ip", "link", "del", _IFACE], timeout=15)
+        except Exception:
+            pass
+        if proc is not None:
+            try:
+                proc.terminate()
+            except Exception:
+                pass
+        try:
+            os.unlink(sc_path)
+        except OSError:
+            pass
 
 
 def _test_tunnel(conf: str) -> Dict[str, Any]:
     """تونل را واقعاً بالا می‌آورد و زمانِ پاسخ + خروجی را اندازه می‌گیرد."""
+    global _KERNEL_BROKEN
+    if not _KERNEL_BROKEN:
+        res = _test_tunnel_kernel(conf)
+        if res.get("ok") or "ip link add" not in str(res.get("error", "")):
+            return res
+        _KERNEL_BROKEN = True  # کرنل بسته است؛ از این دور نرم‌افزاری می‌رویم
+    return _test_tunnel_userspace(conf)
+
+
+def _test_tunnel_kernel(conf: str) -> Dict[str, Any]:
     if not (shutil.which("wg") and shutil.which("wg-quick")):
         return {"ok": False, "error": "no-wg-tools"}
     path = f"/tmp/{_IFACE}.conf"
@@ -162,31 +284,13 @@ def _test_tunnel(conf: str) -> Dict[str, Any]:
         up = _sh(["sudo", "-n", "wg-quick", "up", path], timeout=60)
         if up.returncode != 0:
             return {"ok": False,
-                    "error": "wg-up: " + (up.stderr or "")[:160]}
+                    "error": "wg-up: " + (up.stderr or "")[:280]}
         try:
-            for _ in range(6):  # تا ~۹ ثانیه برای هندشیک + ترافیک صبر می‌کند
-                hs = _sh(["sudo", "-n", "wg", "show", _IFACE,
-                          "latest-handshakes"], timeout=15)
-                shook = any(int(p[1]) > 0 for p in
-                            (ln.split() for ln in hs.stdout.splitlines())
-                            if len(p) >= 2 and p[1].isdigit())
-                t0 = time.time()
-                tr = _sh(["curl", "-s", "--max-time", "10", _TRACE_URL],
-                         timeout=20)
-                ms = int((time.time() - t0) * 1000)
-                body = tr.stdout or ""
-                if shook and "ip=" in body:
-                    loc = re.search(r"loc=(\w+)", body)
-                    ip = re.search(r"ip=(\S+)", body)
-                    return {"ok": True, "ms": ms,
-                            "loc": loc.group(1) if loc else "",
-                            "exit_ip": ip.group(1) if ip else ""}
-                time.sleep(1.5)
-            return {"ok": False, "error": "no-handshake-or-traffic"}
+            return _poll_traffic()
         finally:
             _sh(["sudo", "-n", "wg-quick", "down", path], timeout=30)
     except Exception as e:  # تست هرگز نباید ناشر را بخواباند
-        return {"ok": False, "error": f"{type(e).__name__}: {e}"[:160]}
+        return {"ok": False, "error": f"{type(e).__name__}: {e}"[:280]}
     finally:
         try:
             os.unlink(path)
