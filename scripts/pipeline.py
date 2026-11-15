@@ -1093,6 +1093,14 @@ def _main(argv: Sequence[str]) -> int:
 
     res = run_pipeline(lines, args.out, rounds=args.rounds,
                        fast_ms=args.fast_ms, top_n=args.top_n)
+    # وایرگاردسازِ رادار — فقط در اجرای واقعیِ ورک‌فلو (خروجیِ ریشهٔ مخزن)؛
+    # تست‌ها و اجراهای محلی هرگز صدایش نمی‌زنند و خطایش انتشار را نمی‌خواباند.
+    if os.environ.get("GITHUB_ACTIONS") == "true" and args.out in (".", "./"):
+        try:
+            import wg_maker
+            wg_maker.run(args.out)
+        except Exception as _wge:
+            print(f"[wg] skipped: {_wge}", file=sys.stderr)
     st = res["stats"]
     print(f"→ rounds={st['rounds']} per_run_ok={st['per_run_ok']} "
           f"ever_ok={st['ever_ok']} stable={st['stable']} "
