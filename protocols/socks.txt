@@ -4,10 +4,10 @@
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
 # رادار — socks — 7 configs
 # --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
-socks5://ODg4ODo4ODg4@47.236.168.243:1080#SG 🇸🇬 | رادار | 20CAD7
-socks5://Og@95.38.170.222:1082#IR 🇮🇷 | رادار | 15D435
+socks5://65.21.252.66:10807#FI 🇫🇮 | رادار | BAB7A6
 socks5://Og@95.38.170.222:1085#IR 🇮🇷 | رادار | ECCE88
 socks5://Og@95.38.170.222:1087#IR 🇮🇷 | رادار | 9C3D25
+socks5://ufCobhydz4Wd:JdFlrZhqHP@69.16.157.244:1080#IT 🇮🇹 | رادار | 500DF6
 socks://ODg4ODo4ODg4@47.236.168.243:1080#SG 🇸🇬 | رادار | 054493
-socks://Og@95.38.170.222:1082#IR 🇮🇷 | رادار | B360A1
-socks://Og%3D%3D@188.166.178.163:1088#SG 🇸🇬 | رادار | 744887
+socks://Og%3D%3D@20.83.154.79:7070#US 🇺🇸 | رادار | 43E1F4
+socks://Og%3D%3D@69.55.49.177:38182#US 🇺🇸 | رادار | E208F9
