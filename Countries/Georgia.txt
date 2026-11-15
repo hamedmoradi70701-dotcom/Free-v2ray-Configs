@@ -2,10 +2,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — GEORGIA (GE) — 3 configs
+# رادار — GEORGIA (GE) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://052d73c9-1735-4008-b58c-e3a085dc2a37@89.125.175.24:8443?type=tcp&headerType=none&security=reality&encryption=none&sni=uk-room07.filesnap.tech&fp=firefox&pbk=48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM&sid=dbef98744832b751&flow=xtls-rprx-vision#GE 🇬🇪 | رادار | 7D5D9C
-vless://b0b355cb-a7f4-48ca-b613-b263ccaf87ee@89.125.175.54:8443?flow=xtls-rprx-vision&fp=firefox&pbk=FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8&security=reality&sid=7da3ba09a037e956&sni=uk-room05.filesnap.tech&type=raw&encryption=none#GE 🇬🇪 | رادار | 27EFA0
 vless://052d73c9-1735-4008-b58c-e3a085dc2a37@89.125.175.55:8443?type=tcp&headerType=none&security=reality&encryption=none&sni=uk-room05.filesnap.tech&fp=firefox&pbk=FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8&sid=7da3ba09a037e956&flow=xtls-rprx-vision#GE 🇬🇪 | رادار | 28859B
+vless://052d73c9-1735-4008-b58c-e3a085dc2a37@89.125.175.24:8443?type=tcp&headerType=none&security=reality&encryption=none&sni=uk-room07.filesnap.tech&fp=firefox&pbk=48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM&sid=dbef98744832b751&flow=xtls-rprx-vision#GE 🇬🇪 | رادار | 7D5D9C
