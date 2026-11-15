@@ -1101,6 +1101,11 @@ def _main(argv: Sequence[str]) -> int:
             wg_maker.run(args.out)
         except Exception as _wge:
             print(f"[wg] skipped: {_wge}", file=sys.stderr)
+        try:
+            import v2_maker
+            v2_maker.run(args.out)
+        except Exception as _v2e:
+            print(f"[v2] skipped: {_v2e}", file=sys.stderr)
     st = res["stats"]
     print(f"→ rounds={st['rounds']} per_run_ok={st['per_run_ok']} "
           f"ever_ok={st['ever_ok']} stable={st['stable']} "
