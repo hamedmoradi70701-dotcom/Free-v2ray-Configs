@@ -113,16 +113,14 @@ async function editU(uuid){const u=(window._users||[]).find(x=>x.uuid===uuid);if
  await fetch('/panel/api/edit',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({uuid,name,quotaGB:g,days:d})});load();}
 async function loadSettings(){try{const r=await fetch('/panel/api/settings');const d=await r.json();if(!d.ok)return;
  window._settings=d.settings;const S=d.settings;
- $('s_ips').value=(S.cleanIps||[]).join('
-');$('s_host').value=S.hostOverride||'';$('s_path').value=S.path||'/';
+ $('s_ips').value=(S.cleanIps||[]).join('\n');$('s_host').value=S.hostOverride||'';$('s_path').value=S.path||'/';
  $('s_fp').value=S.fp||'chrome';$('s_remark').value=S.remark||'📡';$('s_ipn').value=S.ipCount;$('s_isp').value=S.fragIsp||'mci';
  $('s_p8443').checked=!!S.p8443;$('s_p2053').checked=!!S.p2053;$('s_trj').checked=!!S.protoTrj;$('s_ss').checked=!!S.protoSS;$('s_ech').checked=!!S.ech;
  const ips=(S.cleanIps&&S.cleanIps.length)?S.cleanIps:(d.cleanIpsDefault||[]);
  window._ips=ips;
  $('b_addr').innerHTML='<option value="'+(S.hostOverride||location.host)+'">دامنهٔ ورکر</option>'+ips.map(ip=>'<option value="'+ip+'">آی‌پی تمیز '+ip+'</option>').join('');
  }catch(e){}}
-async function saveSettings(){const body={cleanIps:$('s_ips').value.split(/
-+/).map(x=>x.trim()).filter(Boolean),
+async function saveSettings(){const body={cleanIps:$('s_ips').value.split(/\n+/g).map(x=>x.trim()).filter(Boolean),
  hostOverride:$('s_host').value,path:$('s_path').value,fp:$('s_fp').value,remark:$('s_remark').value,
  ipCount:$('s_ipn').value,fragIsp:$('s_isp').value,p8443:$('s_p8443').checked,p2053:$('s_p2053').checked,
  protoTrj:$('s_trj').checked,protoSS:$('s_ss').checked,ech:$('s_ech').checked};
