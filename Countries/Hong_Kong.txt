@@ -2,13 +2,21 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — HONG KONG (HK) — 6 configs
+# رادار — HONG KONG (HK) — 14 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vmess://eyJhZGQiOiI0Ny4yNDIuODEuOTQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Im9wZW5haS5jb20iLCJpZCI6ImU0N2I5Zjc3LTYwZTQtNDczOC04ZDUzLTc3MmI2MDAyZTE0NiIsImluc2VjdXJlIjoiMCIsIm5ldCI6InRjcCIsInBhdGgiOiIvUVFxdW4tNzM3ODA1NDQzIiwicGNzIjoiIiwicG9ydCI6IjUyMDgwIiwicHMiOiJISyDwn4et8J+HsCB8INix2KfYr9in2LEgfCA4RTUwOTUiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Imh0dHAiLCJ2IjoiMiIsInZjbiI6IiJ9
-vless://0025b3da-a92e-45b4-ab2d-de0f3ef3bf23@141.98.234.5:8443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=linen-shop.justext.space&pbk=2kIZnJhcwmSnHlJ6I6kz5srz0R-9uUMJAAMAuS_U2xE&sid=1a60e2b1ca53aa6d&fp=firefox&spx=/#HK 🇭🇰 | رادار | 4F8252
-vless://8b17beac-b143-447d-aa68-14cbb121a602@8.217.1.203:8443?encryption=none&security=reality&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&type=tcp&pbk=74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38&sid=0bf55f64#HK 🇭🇰 | رادار | DBD109
-vless://8b17beac-b143-447d-aa68-14cbb121a602@8.217.1.203:8443?&security=reality&flow=xtls-rprx-vision&pbk=74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38&sid=0bf55f64&fp=chrome&sni=www.apple.com&type=tcp&headerType=none&host=www.apple.com&path=%2F#HK 🇭🇰 | رادار | 791AA7
-vmess://eyJhZGQiOiIxNTYuMjM5LjIyNC4xMDciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyNzBiZWQ1LWY5MDgtNGVjYy1mMWM4LWRlMjQ2MDMzYjE4NiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNTcyNzgiLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDZBMEFEQyIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-vless://57beeeb0-03fc-4fc9-94da-7604488a7134@43.255.157.53:48158?security=reality&flow=xtls-rprx-vision&sni=www.apple.com&type=tcp&fp=chrome&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7#HK 🇭🇰 | رادار | AB95D7
+vless://12a4f736-2238-49ee-831f-5516f15cc951@2.26.204.46:31001?flow=xtls-rprx-vision&security=reality&sni=mensura.cdn-apple.com&fp=firefox&pbk=lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY&sid=39793bc4708abbbb&encryption=none&type=tcp#HK 🇭🇰 | رادار | 5194BD
+vless://71327a90-b9c4-4385-b850-4d3c5832d9cc@91.213.186.45:46986?flow=xtls-rprx-vision&security=reality&sni=www.paypal.com&fp=chrome&pbk=5Uk63lFOn1Z3gmImXWrXbvQ0b9gXTOiY_VWuI898Vmk&packetEncoding=xudp#HK 🇭🇰 | رادار | 08AA80
+vless://3ee091ca-ab9c-11ef-a791-f23c9164ca5d@fb00fe3d-toq2o0-tpkogt-1ryup.hk2.hyhuawei.com:443?encryption=none&type=tcp&security=reality&pbk=c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo&sni=download.windowsupdate.com&fp=chrome#HK 🇭🇰 | رادار | 0C748B
+vless://8b17beac-b143-447d-aa68-14cbb121a602@8.217.1.203:8443?security=reality&encryption=none&pbk=74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=0bf55f64#HK 🇭🇰 | رادار | DBD109
+vless://ea93064c-176c-11f0-885d-f23c91cfbbc9@9e5f5c4b-tomdc0-tpolhi-1rgxu.hk2.hyhuawei.com:443?encryption=none&type=tcp&security=reality&pbk=c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo&sni=download.windowsupdate.com&fp=chrome#HK 🇭🇰 | رادار | 151A93
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 2BC027
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIwIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOjM1MDQzLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Ii0tLSIsInYiOiIyIiwidmNuIjoiIiwibmFtZSI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCJ9
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20086?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | D56851
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20086?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 505110
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImIxNWU0ODFkLTE3ZTQtNDFhOC04NGMyLTIzZDRmMDUxNGQ5YSIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgOUQwMUI5Iiwic25pIjoid3d3LnB1Ymdtb2JpbGUuY29tIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20051?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | C883B7
+trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-00.catcat321.com:20103?sni=hk.catxstar.com&type=tcp#HK 🇭🇰 | رادار | 83CC15
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20103?allowInsecure=1&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 427561
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?security=tls&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 0168AB

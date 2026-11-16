@@ -1,0 +1,12 @@
+# 📡 Radar — بهترین وایرگاردهای تست‌شدهٔ این دور
+# updated: 2026-11-16T20:51:08Z
+#1 ping=38ms ep=8.6.112.104:878 loc=US key=MB1O37i8-j5tu892B-xO76p18R file=subs/keys/MB1O37i8-j5tu892B-xO76p18R.conf
+#2 ping=38ms ep=8.6.112.10:1701 loc=US key=9Hqx05p8-kr451zs0-5MG7k16p file=subs/keys/9Hqx05p8-kr451zs0-5MG7k16p.conf
+#3 ping=38ms ep=8.6.112.132:908 loc=US key=1J93l4bt-379nH6XV-Bfp2358I file=subs/keys/1J93l4bt-379nH6XV-Bfp2358I.conf
+#4 ping=38ms ep=8.6.112.14:1074 loc=US key=z0dN81W3-5Ot0T1s7-ixBN0839 file=subs/keys/z0dN81W3-5Ot0T1s7-ixBN0839.conf
+#5 ping=38ms ep=8.6.112.155:8854 loc=US key=DL148EQ6-iQ9602MP-y645HjA8 file=subs/keys/DL148EQ6-iQ9602MP-y645HjA8.conf
+#6 ping=38ms ep=8.6.112.242:908 loc=US key=1O8Qdb05-q17rP40Q-02Re1N5Y file=subs/keys/1O8Qdb05-q17rP40Q-02Re1N5Y.conf
+#7 ping=38ms ep=8.6.112.208:2408 loc=US key=76A9s4iH-Ia9L680j-9854fpnG file=subs/keys/76A9s4iH-Ia9L680j-9854fpnG.conf
+#8 ping=38ms ep=8.6.112.83:5956 loc=US key=U361f2qI-34R8lI5p-bi7Q208H file=subs/keys/U361f2qI-34R8lI5p-bi7Q208H.conf
+#9 ping=39ms ep=8.6.112.44:1018 loc=US key=9zc3uZ46-x6f405aZ-3419wSQu file=subs/keys/9zc3uZ46-x6f405aZ-3419wSQu.conf
+#10 ping=39ms ep=8.6.112.237:3138 loc=US key=y169Kk5w-39UR86pY-h4s72qa3 file=subs/keys/y169Kk5w-39UR86pY-h4s72qa3.conf

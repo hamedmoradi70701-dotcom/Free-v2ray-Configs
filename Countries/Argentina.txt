@@ -1,0 +1,10 @@
+#profile-title: رادار — ARGENTINA (AR)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — ARGENTINA (AR) — 2 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://8197b9b9-8945-460f-99c9-325ef8a8a7c3@186.122.177.79:443?&security=reality&flow=xtls-rprx-vision&pbk=pBEW9XYZQsXxjgt44pCQcxoEOe-B1CdxaTdTnL2QhAA&sid=a5d67406&fp=firefox&sni=ar1.gofizz.in&type=tcp&headerType=none&host=ar1.gofizz.in&path=%2F#AR 🇦🇷 | رادار | 3E7FDC
+vless://8197b9b9-8945-460f-99c9-325ef8a8a7c3@186.122.177.79:443?security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=pBEW9XYZQsXxjgt44pCQcxoEOe-B1CdxaTdTnL2QhAA&sid=a5d67406&sni=ar1.gofizz.in#AR 🇦🇷 | رادار | 6DDA38
