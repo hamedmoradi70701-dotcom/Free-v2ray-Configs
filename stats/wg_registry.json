@@ -9,8 +9,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8a0b:369:a64d:1c9a:7ecf/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.152:942",
-   "best_ms": 38,
+   "best_ep": "8.6.112.121:500",
+   "best_ms": 35,
    "fails": 0
   },
   {
@@ -22,8 +22,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8942:2272:c322:fe2c:5474/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.10:1701",
-   "best_ms": 39,
+   "best_ep": "8.6.112.194:859",
+   "best_ms": 38,
    "fails": 0
   },
   {
@@ -35,8 +35,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8956:635c:2273:c7f0:d22a/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.132:908",
-   "best_ms": 39,
+   "best_ep": "8.6.112.237:3138",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -48,8 +48,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8f49:440d:7b59:62cd:20dc/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.131:8886",
-   "best_ms": 39,
+   "best_ep": "8.6.112.168:934",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -61,8 +61,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:80df:5b7a:28e2:65e:17ba/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.14:1074",
-   "best_ms": 39,
+   "best_ep": "8.6.112.208:2408",
+   "best_ms": 33,
    "fails": 0
   },
   {
@@ -74,8 +74,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8402:2f33:e0f8:3368:7d73/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.146:942",
-   "best_ms": 39,
+   "best_ep": "8.6.112.204:943",
+   "best_ms": 35,
    "fails": 0
   },
   {
@@ -87,8 +87,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8ed4:7bfd:b7bf:d9b1:684e/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.44:1018",
-   "best_ms": 38,
+   "best_ep": "8.6.112.230:1014",
+   "best_ms": 35,
    "fails": 0
   },
   {
@@ -100,8 +100,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:86d6:cfdc:471a:3929:d51d/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.242:908",
-   "best_ms": 38,
+   "best_ep": "8.6.112.120:878",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -113,8 +113,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8154:2ac4:1225:9b:8668/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.45:5279",
-   "best_ms": 38,
+   "best_ep": "8.6.112.96:4198",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -126,8 +126,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8152:deb4:9766:2a8f:5ed7/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.208:2408",
-   "best_ms": 39,
+   "best_ep": "8.6.112.113:864",
+   "best_ms": 36,
    "fails": 0
   },
   {
@@ -139,8 +139,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:8e34:e355:10cc:e1c9:6409/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.83:5956",
-   "best_ms": 38,
+   "best_ep": "8.6.112.138:8886",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -152,8 +152,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:821b:b903:df89:b921:76a3/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.213:1014",
-   "best_ms": 38,
+   "best_ep": "8.6.112.168:934",
+   "best_ms": 34,
    "fails": 0
   },
   {
@@ -165,8 +165,8 @@
    "address": "172.16.0.2/32, 2606:4700:110:802c:a8bd:72bf:e17d:1c1a/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.225:943",
-   "best_ms": 39,
+   "best_ep": "8.6.112.148:890",
+   "best_ms": 35,
    "fails": 0
   },
   {
@@ -179,58 +179,58 @@
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
    "best_ep": "8.6.112.152:942",
-   "best_ms": 39,
+   "best_ms": 36,
    "fails": 0
   },
   {
-   "license": "Oxy7r328-8nu0pc96-y14cD63p",
+   "license": "pI98a02N-GJ8415QO-325bp0Ot",
    "account_type": "WARP+ free",
-   "created": "2026-11-16T20:51:08.550930262Z",
-   "expires": "2027-02-14T20:51:08.877222782Z",
-   "private_key": "0ESshrXqjPfuwgbef/CUhGrSUbiOd+yamk/M6Wth4Xc=",
-   "address": "172.16.0.2/32, 2606:4700:110:8f50:ab26:d24f:ae19:facf/128",
+   "created": "2026-11-16T21:00:48.220217337Z",
+   "expires": "2027-02-14T21:00:48.503165446Z",
+   "private_key": "COhJsyStnc/TOuX1QWZeHgOYUQpaHpa8El/UuwcqKGA=",
+   "address": "172.16.0.2/32, 2606:4700:110:83d1:3a49:6c05:9994:60e6/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.213:1014",
+   "best_ep": "8.6.112.27:942",
    "best_ms": null,
    "fails": 2
   },
   {
-   "license": "62X7iT9p-0td4zg37-FQW085B7",
+   "license": "3Ky750OG-2O37Kd0o-70ycx62h",
    "account_type": "WARP+ free",
-   "created": "2026-11-16T20:51:10.002316735Z",
-   "expires": "2027-02-14T20:51:10.490182815Z",
-   "private_key": "kFB1G+ZL+MtyJJdUrmPv1Kufh4NXZTbQlNPF9HxLaEw=",
-   "address": "172.16.0.2/32, 2606:4700:110:8fa7:7d96:5eac:7cdd:bebd/128",
+   "created": "2026-11-16T21:00:49.550976733Z",
+   "expires": "2027-02-14T21:00:49.877804Z",
+   "private_key": "oMlrGxgVevOcalvU5Dv2Wn8avCS+Pfph7ns38pMaEH8=",
+   "address": "172.16.0.2/32, 2606:4700:110:842d:6efa:5995:668e:8976/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.213:1014",
+   "best_ep": "8.6.112.146:942",
    "best_ms": null,
    "fails": 2
   },
   {
-   "license": "LW80d4Y9-41HPY56k-cV75r2X4",
+   "license": "2p6bjd35-4K5Z1b2Y-714t6VCG",
    "account_type": "WARP+ free",
-   "created": "2026-11-16T21:10:29.428488289Z",
-   "expires": "2027-02-14T21:10:29.806564294Z",
-   "private_key": "cOkfHmy/zhv9MQIwD/Bbf3TkAM1PfSUNyqrvEg6jv1s=",
-   "address": "172.16.0.2/32, 2606:4700:110:82dd:9daf:fd82:473d:4447/128",
+   "created": "2026-11-16T21:19:59.609369963Z",
+   "expires": "2027-02-14T21:19:59.922346797Z",
+   "private_key": "sIsQeLZt59CLhSNSonJVA4w85a83yYaqI9+l07tOe38=",
+   "address": "172.16.0.2/32, 2606:4700:110:8b28:341d:fd55:1c47:3596/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.131:8886",
+   "best_ep": "8.6.112.213:1014",
    "best_ms": null,
    "fails": 1
   },
   {
-   "license": "H973V0AT-59t4x1Fj-83a1Z2Fr",
+   "license": "4Ee0w59V-0729pgxy-78IH5w2r",
    "account_type": "WARP+ free",
-   "created": "2026-11-16T21:10:30.451730569Z",
-   "expires": "2027-02-14T21:10:30.772496267Z",
-   "private_key": "2Mf/bCkFFQk8aM0/oBhdhMDyWGp0eT5M40LuUc5o41c=",
-   "address": "172.16.0.2/32, 2606:4700:110:87fb:cdec:4a5f:f431:287f/128",
+   "created": "2026-11-16T21:20:01.085421042Z",
+   "expires": "2027-02-14T21:20:01.48727721Z",
+   "private_key": "KGNILTPqQ2ush8UabTaUYyZgGHLg8MX9QzE9dueK6XY=",
+   "address": "172.16.0.2/32, 2606:4700:110:8632:189:c912:f0e4:68e4/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.224:5279",
+   "best_ep": "8.6.112.152:942",
    "best_ms": null,
    "fails": 1
   }

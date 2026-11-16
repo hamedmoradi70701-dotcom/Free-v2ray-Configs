@@ -1,12 +1,12 @@
 # 📡 Radar — بهترین وایرگاردهای تست‌شدهٔ این دور
-# updated: 2026-11-16T21:10:29Z
-#1 ping=38ms ep=8.6.112.152:942 loc=US key=MB1O37i8-j5tu892B-xO76p18R file=subs/keys/MB1O37i8-j5tu892B-xO76p18R.conf
-#2 ping=38ms ep=8.6.112.44:1018 loc=US key=DL148EQ6-iQ9602MP-y645HjA8 file=subs/keys/DL148EQ6-iQ9602MP-y645HjA8.conf
-#3 ping=38ms ep=8.6.112.242:908 loc=US key=y169Kk5w-39UR86pY-h4s72qa3 file=subs/keys/y169Kk5w-39UR86pY-h4s72qa3.conf
-#4 ping=38ms ep=8.6.112.45:5279 loc=US key=1O8Qdb05-q17rP40Q-02Re1N5Y file=subs/keys/1O8Qdb05-q17rP40Q-02Re1N5Y.conf
-#5 ping=38ms ep=8.6.112.83:5956 loc=US key=U361f2qI-34R8lI5p-bi7Q208H file=subs/keys/U361f2qI-34R8lI5p-bi7Q208H.conf
-#6 ping=38ms ep=8.6.112.213:1014 loc=US key=9X4qi36F-qW9DE475-F5R08I6M file=subs/keys/9X4qi36F-qW9DE475-F5R08I6M.conf
-#7 ping=39ms ep=8.6.112.10:1701 loc=US key=9Hqx05p8-kr451zs0-5MG7k16p file=subs/keys/9Hqx05p8-kr451zs0-5MG7k16p.conf
-#8 ping=39ms ep=8.6.112.132:908 loc=US key=1J93l4bt-379nH6XV-Bfp2358I file=subs/keys/1J93l4bt-379nH6XV-Bfp2358I.conf
-#9 ping=39ms ep=8.6.112.131:8886 loc=US key=4XQ78f0v-4R671zVe-95d6y1zp file=subs/keys/4XQ78f0v-4R671zVe-95d6y1zp.conf
-#10 ping=39ms ep=8.6.112.14:1074 loc=US key=z0dN81W3-5Ot0T1s7-ixBN0839 file=subs/keys/z0dN81W3-5Ot0T1s7-ixBN0839.conf
+# updated: 2026-11-16T21:19:59Z
+#1 ping=33ms ep=8.6.112.208:2408 loc=US key=z0dN81W3-5Ot0T1s7-ixBN0839 file=subs/keys/z0dN81W3-5Ot0T1s7-ixBN0839.conf
+#2 ping=34ms ep=8.6.112.237:3138 loc=US key=1J93l4bt-379nH6XV-Bfp2358I file=subs/keys/1J93l4bt-379nH6XV-Bfp2358I.conf
+#3 ping=34ms ep=8.6.112.168:934 loc=US key=4XQ78f0v-4R671zVe-95d6y1zp file=subs/keys/4XQ78f0v-4R671zVe-95d6y1zp.conf
+#4 ping=34ms ep=8.6.112.120:878 loc=US key=y169Kk5w-39UR86pY-h4s72qa3 file=subs/keys/y169Kk5w-39UR86pY-h4s72qa3.conf
+#5 ping=34ms ep=8.6.112.96:4198 loc=US key=1O8Qdb05-q17rP40Q-02Re1N5Y file=subs/keys/1O8Qdb05-q17rP40Q-02Re1N5Y.conf
+#6 ping=34ms ep=8.6.112.138:8886 loc=US key=U361f2qI-34R8lI5p-bi7Q208H file=subs/keys/U361f2qI-34R8lI5p-bi7Q208H.conf
+#7 ping=34ms ep=8.6.112.168:934 loc=US key=9X4qi36F-qW9DE475-F5R08I6M file=subs/keys/9X4qi36F-qW9DE475-F5R08I6M.conf
+#8 ping=35ms ep=8.6.112.121:500 loc=US key=MB1O37i8-j5tu892B-xO76p18R file=subs/keys/MB1O37i8-j5tu892B-xO76p18R.conf
+#9 ping=35ms ep=8.6.112.204:943 loc=US key=9zc3uZ46-x6f405aZ-3419wSQu file=subs/keys/9zc3uZ46-x6f405aZ-3419wSQu.conf
+#10 ping=35ms ep=8.6.112.230:1014 loc=US key=DL148EQ6-iQ9602MP-y645HjA8 file=subs/keys/DL148EQ6-iQ9602MP-y645HjA8.conf

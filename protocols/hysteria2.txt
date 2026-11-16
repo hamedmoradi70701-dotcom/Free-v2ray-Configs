@@ -202,7 +202,7 @@ hysteria2://ccb8ff48-3934-4250-b4ec-bb76b95d154f@185.126.237.178:443?sni=185.126
 hysteria2://CnVfXXvMzh@72.56.92.120:443?insecure=1&sni=hys13.wba-pn.ru#NL 🇳🇱 | رادار | BB67B0
 hysteria2://CnVfXXvMzh@hys13.wba-pn.ru:443?insecure=1&sni=hys13.wba-pn.ru#NL 🇳🇱 | رادار | 874A31
 hysteria2://d042d150716709bb778cc73889cddb02@138.2.89.249:443?insecure=1&sni=www.bing.com&obfs=salamander&obfs-password=309502c4a8df10b46fb976d4a8c43f42#SG 🇸🇬 | رادار | 5D3F33
-hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?sni=panel.autonetshop.ir&obfs=salamander&obfs-password=km9oqmefh2km1i5n#TR 🇹🇷 | رادار | 02F64C
+hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?insecure=0&sni=panel.autonetshop.ir&obfs=salamander&obfs-password=km9oqmefh2km1i5n#TR 🇹🇷 | رادار | 02F64C
 hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?security=tls&obfs=salamander&obfs-password=km9oqmefh2km1i5n&insecure=0&sni=panel.autonetshop.ir#TR 🇹🇷 | رادار | 5848FC
 hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@50.7.38.243:443/?sni=promo.betust.net#SE 🇸🇪 | رادار | D426B7
 hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@promo.betust.net:443?sni=promo.betust.net#SE 🇸🇪 | رادار | D44066

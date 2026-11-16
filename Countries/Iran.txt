@@ -2,18 +2,20 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — IRAN (IR) — 11 configs
+# رادار — IRAN (IR) — 13 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?path=%2F&security=tls&sni=base.hosamobenl.co.uk&type=tcp#IR 🇮🇷 | رادار | C43EE4
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | رادار | EF1170
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?security=tls&type=tcp&packetEncoding=xudp&alpn=http%2F1.1&sni=base.hosamobenl.co.uk&fp=chrome#IR 🇮🇷 | رادار | 8AFCCF
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?security=tls&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 851594
+vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&fp=&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&type=grpc#IR 🇮🇷 | رادار | 1E742A
 vless://12776e55-6230-48b9-b069-1bb8a04b4237@94.183.164.176:443?security=reality&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fp=firefox&sni=optim.tildacdn.pub&type=grpc&serviceName=ebl#IR 🇮🇷 | رادار | C12062
 vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?mode=gun&security=reality&encryption=none&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&type=grpc&serviceName=ebl&sni=optim.tildacdn.pub#IR 🇮🇷 | رادار | 63B499
-vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&fp=&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&security=reality&serviceName=ebl&sni=optim.tildacdn.pub&type=grpc#IR 🇮🇷 | رادار | 1E742A
+vless://b4192dfb-f458-4303-b877-29a41a6d8416@94.183.164.176:443?encryption=none&type=grpc&serviceName=ebl&mode=multi&security=reality&sni=optim.tildacdn.pub&fp=chrome&pbk=_KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU&fm=#IR 🇮🇷 | رادار | EF1170
+vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?path=%2F&security=tls&sni=base.hosamobenl.co.uk&type=tcp#IR 🇮🇷 | رادار | C43EE4
 vless://3380270a-76e0-4d94-8bb6-7b968adb513c@inexvip.nexvpnfun.com:14309?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=nexnexnex.nexvpnfun.com#IR 🇮🇷 | رادار | 2B82C4
-vless://39e3455f-f411-4f29-b506-40539ae8aaec@adgof.mgodping12.xyz:2087?alpn=h2%2Chttp%2F1.1%2Ch3&authority=&encryption=none&fp=chrome&mode=multi&security=tls&serviceName=&sni=&type=grpc#IR 🇮🇷 | رادار | 050DA5
 vless://4f5ddfed-8b04-410b-9827-2d5e2b2fea4f@cdn.shop.mygharehshop.ir:58462?encryption=none&security=none&type=tcp#IR 🇮🇷 | رادار | 8884C1
 vless://4f5ddfed-8b04-410b-9827-2d5e2b2fea4f@cdn.shop.mygharehshop.ir:18731?encryption=none&fp=chrome&pbk=GWG_GW2Ly2BRzI4neAFm8DgTeAH9kF0btFvCaKhHGxU&security=reality&sid=22&sni=filimo.com&spx=/3fd5a0e8d7ab7ef&type=tcp#IR 🇮🇷 | رادار | 70324B
+vless://39e3455f-f411-4f29-b506-40539ae8aaec@adgof.mgodping12.xyz:2087?alpn=h2%2Chttp%2F1.1%2Ch3&authority=&encryption=none&fp=chrome&mode=multi&security=tls&serviceName=&sni=&type=grpc#IR 🇮🇷 | رادار | 050DA5
+vless://49fe1f7b-e6f6-43dc-a67d-caade85128ba@englandddtun.whooisthebest.ir:9632?encryption=none&type=tcp&security=reality&sni=aparat.com&fp=chrome&pbk=BECatGFyR4lUoLv4-w-qOzPPDkAQt_P8yGB4cP3nE0k&sid=e9b64ca7d55f2672&allowInsecure=1#IR 🇮🇷 | رادار | 745314
 vless://4f5ddfed-8b04-410b-9827-2d5e2b2fea4f@cdn.shop.mygharehshop.ir:10006?encryption=none&fp=chrome&pbk=FoR8ZNnDPqTHewJXum6lRwYbJ78R0aXMtamo7Ir-xWQ&security=reality&sid=08&sni=filimo.com&spx=/d93cf96c9b2edae&type=tcp#IR 🇮🇷 | رادار | ABE603
-vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@194.60.228.97:443?security=tls&sni=base.hosamobenl.co.uk#IR 🇮🇷 | رادار | 851594

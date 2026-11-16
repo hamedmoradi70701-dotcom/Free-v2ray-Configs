@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T21:10:29Z",
+ "generated_at": "2026-11-16T21:19:59Z",
  "tools_ok": true,
  "minted": 2,
  "keys_active": 18,
@@ -8,321 +8,321 @@
  "results": [
   {
    "ok": true,
-   "ms": 43,
+   "ms": 37,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.104:878"
+   "endpoint": "8.6.112.60:5279"
+  },
+  {
+   "ok": true,
+   "ms": 35,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "MB1O37i8-j5tu892B-xO76p18R",
+   "endpoint": "8.6.112.121:500"
+  },
+  {
+   "ok": true,
+   "ms": 35,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "MB1O37i8-j5tu892B-xO76p18R",
+   "endpoint": "8.6.112.161:7152"
+  },
+  {
+   "ok": true,
+   "ms": 76,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "9Hqx05p8-kr451zs0-5MG7k16p",
+   "endpoint": "8.6.112.237:3138"
   },
   {
    "ok": true,
    "ms": 38,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.152:942"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.232:1180"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.10:1701"
+   "endpoint": "8.6.112.194:859"
   },
   {
    "ok": true,
-   "ms": 93,
+   "ms": 38,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.60:5279"
+   "endpoint": "8.6.112.31:3581"
   },
   {
    "ok": true,
-   "ms": 51,
+   "ms": 34,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.131:8886"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.228.77",
    "license": "1J93l4bt-379nH6XV-Bfp2358I",
+   "endpoint": "8.6.112.237:3138"
+  },
+  {
+   "ok": true,
+   "ms": 35,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "1J93l4bt-379nH6XV-Bfp2358I",
+   "endpoint": "8.6.112.225:943"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "1J93l4bt-379nH6XV-Bfp2358I",
+   "endpoint": "8.6.112.161:7152"
+  },
+  {
+   "ok": true,
+   "ms": 77,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
+   "endpoint": "8.6.112.121:903"
+  },
+  {
+   "ok": true,
+   "ms": 34,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
+   "endpoint": "8.6.112.168:934"
+  },
+  {
+   "ok": true,
+   "ms": 77,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
+   "endpoint": "8.6.112.135:8319"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
+   "endpoint": "8.6.112.162:987"
+  },
+  {
+   "ok": true,
+   "ms": 33,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
+   "endpoint": "8.6.112.208:2408"
+  },
+  {
+   "ok": true,
+   "ms": 33,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
+   "endpoint": "8.6.112.96:4198"
+  },
+  {
+   "ok": true,
+   "ms": 35,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
+   "endpoint": "8.6.112.204:943"
+  },
+  {
+   "ok": true,
+   "ms": 38,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
+   "endpoint": "8.6.112.14:1074"
+  },
+  {
+   "ok": true,
+   "ms": 42,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
    "endpoint": "8.6.112.132:908"
   },
   {
    "ok": true,
    "ms": 41,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "1J93l4bt-379nH6XV-Bfp2358I",
-   "endpoint": "8.6.112.42:1010"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "1J93l4bt-379nH6XV-Bfp2358I",
-   "endpoint": "8.6.112.138:8886"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.42:1010"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.131:8886"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.168:3476"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.14:1074"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.232:1180"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.38:8319"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.44:1018"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.146:942"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.152:942"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.155:8854"
+   "endpoint": "8.6.112.135:8319"
   },
   {
    "ok": true,
-   "ms": 38,
+   "ms": 35,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.44:1018"
+   "endpoint": "8.6.112.230:1014"
   },
   {
    "ok": true,
-   "ms": 40,
+   "ms": 44,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.121:903"
+   "endpoint": "8.6.112.132:8854"
   },
   {
    "ok": true,
-   "ms": 40,
+   "ms": 34,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.237:3138"
+   "endpoint": "8.6.112.120:878"
   },
   {
    "ok": true,
-   "ms": 40,
+   "ms": 37,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.14:1074"
-  },
-  {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.242:908"
-  },
-  {
-   "ok": true,
-   "ms": 41,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
-   "endpoint": "8.6.112.242:908"
-  },
-  {
-   "ok": true,
-   "ms": 41,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
-   "endpoint": "8.6.112.208:2408"
-  },
-  {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
    "endpoint": "8.6.112.45:5279"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 77,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
-   "endpoint": "8.6.112.208:2408"
-  },
-  {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
-   "endpoint": "8.6.112.224:5279"
-  },
-  {
-   "ok": true,
-   "ms": 46,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
+   "exit_ip": "104.28.196.79",
+   "license": "y169Kk5w-39UR86pY-h4s72qa3",
    "endpoint": "8.6.112.27:942"
   },
   {
    "ok": true,
-   "ms": 38,
+   "ms": 36,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "U361f2qI-34R8lI5p-bi7Q208H",
+   "exit_ip": "104.28.196.79",
+   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
+   "endpoint": "8.6.112.131:8886"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
    "endpoint": "8.6.112.83:5956"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 34,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
+   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
+   "endpoint": "8.6.112.96:4198"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "76A9s4iH-Ia9L680j-9854fpnG",
+   "endpoint": "8.6.112.113:864"
+  },
+  {
+   "ok": true,
+   "ms": 79,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "76A9s4iH-Ia9L680j-9854fpnG",
+   "endpoint": "8.6.112.132:8854"
+  },
+  {
+   "ok": true,
+   "ms": 37,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "76A9s4iH-Ia9L680j-9854fpnG",
+   "endpoint": "8.6.112.168:3476"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
    "license": "U361f2qI-34R8lI5p-bi7Q208H",
-   "endpoint": "8.6.112.146:942"
+   "endpoint": "8.6.112.148:890"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 77,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "U361f2qI-34R8lI5p-bi7Q208H",
-   "endpoint": "8.6.112.155:8854"
+   "endpoint": "8.6.112.213:1014"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 34,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.208:2408"
-  },
-  {
-   "ok": true,
-   "ms": 40,
-   "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.121:500"
+   "exit_ip": "104.28.196.79",
+   "license": "U361f2qI-34R8lI5p-bi7Q208H",
+   "endpoint": "8.6.112.138:8886"
   },
   {
    "ok": true,
    "ms": 38,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.213:1014"
+   "endpoint": "8.6.112.31:3581"
+  },
+  {
+   "ok": true,
+   "ms": 34,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
+   "license": "9X4qi36F-qW9DE475-F5R08I6M",
+   "endpoint": "8.6.112.168:934"
   },
   {
    "ok": true,
    "ms": 39,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
-   "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
-   "endpoint": "8.6.112.225:943"
+   "exit_ip": "104.28.196.79",
+   "license": "9X4qi36F-qW9DE475-F5R08I6M",
+   "endpoint": "8.6.112.131:8886"
   },
   {
    "ok": true,
-   "ms": 40,
+   "ms": 36,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
-   "endpoint": "8.6.112.10:1701"
+   "endpoint": "8.6.112.206:3854"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 36,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
    "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
-   "endpoint": "8.6.112.203:854"
+   "endpoint": "8.6.112.152:942"
   },
   {
    "ok": true,
-   "ms": 39,
+   "ms": 35,
    "loc": "US",
-   "exit_ip": "104.28.201.162",
+   "exit_ip": "104.28.196.79",
+   "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
+   "endpoint": "8.6.112.148:890"
+  },
+  {
+   "ok": true,
+   "ms": 36,
+   "loc": "US",
+   "exit_ip": "104.28.196.79",
    "license": "g49n73Cx-w4n5Xr98-G2le845E",
    "endpoint": "8.6.112.152:942"
   }

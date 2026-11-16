@@ -6,8 +6,8 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53
-vless://49db4ce7-ad48-41a3-9b6f-4c6dabd94504@50.7.115.245:443?&security=reality&pbk=Mwczt2QjgQo3q8N10PVx8bWNubwiNhgka5GvxUy-GHQ&sid=53df2804&fp=firefox&sni=beck.mossgill.top&type=xhttp#AT 🇦🇹 | رادار | E57F05
 vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4IiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoidGxzIiwic25pIjoieG1maGxweS5jb20iLCJhbHBuIjoiIiwiZnAiOiIiLCJuYW1lIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4In0=
-vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQTdCMTZDIiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOiIxMjcwIiwidHlwZSI6Im5vbmUiLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwiaG9zdCI6InhtZmhscHkuY29tIiwidGxzIjoidGxzIn0=
 vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgMjg0QkE0IiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6Im5vbmUiLCJob3N0IjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ4bWZobHB5LmNvbSIsIm5hbWUiOiJBVCDwn4em8J+HuSB8INix2KfYr9in2LEgfCAyODRCQTQifQ==
+vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQTdCMTZDIiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOiIxMjcwIiwidHlwZSI6Im5vbmUiLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwiaG9zdCI6InhtZmhscHkuY29tIiwidGxzIjoidGxzIn0=
+vless://49db4ce7-ad48-41a3-9b6f-4c6dabd94504@50.7.115.245:443?&security=reality&pbk=Mwczt2QjgQo3q8N10PVx8bWNubwiNhgka5GvxUy-GHQ&sid=53df2804&fp=firefox&sni=beck.mossgill.top&type=xhttp#AT 🇦🇹 | رادار | E57F05
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53

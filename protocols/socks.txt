@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — socks — 37 configs
+# رادار — socks — 33 configs
 # --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
 socks5://111:111@47.76.186.28:11408#HK 🇭🇰 | رادار | 5E9134
 socks5://45.74.31.42:4388#NL 🇳🇱 | رادار | F75F38
@@ -17,13 +17,9 @@ socks5://rVkkraqT:2j7CCZQb@94.194.164.203:62000#MX 🇲🇽 | رادار | F4B3F
 socks5://u_rb1dba2:l1tlrdx52v@66.253.2.69:62000#US 🇺🇸 | رادار | 5942BB
 socks5://UBXich0K:VvUAFi2E@72.57.228.30:62000#MX 🇲🇽 | رادار | B39DF2
 socks5://uwrgfkwg:0mvrt5jb@191.7.129.133:62000#BR 🇧🇷 | رادار | D4A8CA
-socks://111:111@47.76.186.28:11408#HK 🇭🇰 | رادار | 87E672
-socks://95.38.170.222:1084/#IR 🇮🇷 | رادار | 8F1DF1
-socks://95.38.170.222:1085/#IR 🇮🇷 | رادار | E63727
 socks://c29ja3M6cExCZ1oybU9XRG9wdlRJNkNVV3U1WmtJ@2.26.204.46:31003#HK 🇭🇰 | رادار | AA8CC7
 socks://cGFaRk4zSkE6RUdKRHk1S2c%3D@103.248.150.50:42000#JP 🇯🇵 | رادار | 317C39
-socks://dGVzdDEyMzp0ZXN0MTIz@104.168.249.36:1080#US 🇺🇸 | رادار | 291B2C
-socks://dXRkcjh3dnM6N2kxZGhlZzY=@216.132.114.194:62000#US 🇺🇸 | رادار | 3D4C03
+socks://dXRkcjh3dnM6N2kxZGhlZzY%3D@216.132.114.194:62000#US 🇺🇸 | رادار | 3D4C03
 socks://MTExOjExMQ%3D%3D@47.243.173.50:11211#HK 🇭🇰 | رادار | 5806FF
 socks://MTExOjExMQ%3D%3D@47.76.186.28:11408#HK 🇭🇰 | رادار | F2EFD3
 socks://MTIzOjEyMw%3D%3D@47.243.225.10:8888#HK 🇭🇰 | رادار | 9980AC
@@ -38,6 +34,6 @@ socks://Og%3D%3D@69.55.49.177:38182#US 🇺🇸 | رادار | E208F9
 socks://Og%3D%3D@91.107.179.68:10809#DE 🇩🇪 | رادار | 67C77C
 socks://Ok5vbmU%3D@69.55.49.177:38182#US 🇺🇸 | رادار | EE3388
 socks://QUozZDlnSnc6MXBCN0hWNnU%3D@151.246.109.86:42000#SG 🇸🇬 | رادار | 71FCED
-socks://REp5MVQwZHQ6c1puRDhHVHo=@144.225.47.106:42000#MX 🇲🇽 | رادار | 96EFAF
+socks://REp5MVQwZHQ6c1puRDhHVHo%3D@144.225.47.106:42000#MX 🇲🇽 | رادار | 96EFAF
 socks://VGVrMng2YXY6REp5MVQwZHQ%3D@144.225.47.161:42000#MX 🇲🇽 | رادار | 590A12
 socks://VGVrMng2YXY6REp5MVQwZHQ%3D@144.225.47.8:42000#MX 🇲🇽 | رادار | 88DECF
