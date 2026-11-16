@@ -1,11 +1,11 @@
 {
- "round": 489,
+ "round": 490,
  "sources": [
   {
    "source": "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1955.0,
-   "total_unique": 39100,
+   "avg_unique_per_round": 1957.0,
+   "total_unique": 39139,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -13,8 +13,8 @@
   {
    "source": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1832.5,
-   "total_unique": 36650,
+   "avg_unique_per_round": 1833.2,
+   "total_unique": 36663,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -22,8 +22,8 @@
   {
    "source": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/all_configs.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1288.8,
-   "total_unique": 25777,
+   "avg_unique_per_round": 1289.4,
+   "total_unique": 25788,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -31,8 +31,8 @@
   {
    "source": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/vless_iran.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1137.0,
-   "total_unique": 22740,
+   "avg_unique_per_round": 1139.3,
+   "total_unique": 22787,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -40,8 +40,8 @@
   {
    "source": "https://raw.githubusercontent.com/Mr-Meshky/vify/main/configs/all.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1040.8,
-   "total_unique": 20816,
+   "avg_unique_per_round": 1040.5,
+   "total_unique": 20809,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -49,8 +49,8 @@
   {
    "source": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/ss_iran.txt",
    "grade": "A+",
-   "avg_unique_per_round": 1028.3,
-   "total_unique": 20567,
+   "avg_unique_per_round": 1028.8,
+   "total_unique": 20575,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -58,8 +58,8 @@
   {
    "source": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
    "grade": "A+",
-   "avg_unique_per_round": 689.3,
-   "total_unique": 13786,
+   "avg_unique_per_round": 691.1,
+   "total_unique": 13823,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -67,8 +67,8 @@
   {
    "source": "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_base64_Sub.txt",
    "grade": "A+",
-   "avg_unique_per_round": 640.2,
-   "total_unique": 12804,
+   "avg_unique_per_round": 644.5,
+   "total_unique": 12889,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -76,8 +76,8 @@
   {
    "source": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
    "grade": "A+",
-   "avg_unique_per_round": 567.5,
-   "total_unique": 11349,
+   "avg_unique_per_round": 566.9,
+   "total_unique": 11338,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -85,8 +85,8 @@
   {
    "source": "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
    "grade": "A+",
-   "avg_unique_per_round": 441.4,
-   "total_unique": 8827,
+   "avg_unique_per_round": 443.1,
+   "total_unique": 8862,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -94,8 +94,8 @@
   {
    "source": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/trojan_iran.txt",
    "grade": "A",
-   "avg_unique_per_round": 315.8,
-   "total_unique": 6315,
+   "avg_unique_per_round": 316.1,
+   "total_unique": 6321,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -103,8 +103,8 @@
   {
    "source": "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt",
    "grade": "A",
-   "avg_unique_per_round": 160.8,
-   "total_unique": 3217,
+   "avg_unique_per_round": 160.9,
+   "total_unique": 3218,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -112,8 +112,8 @@
   {
    "source": "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/main/all_servers.txt",
    "grade": "A",
-   "avg_unique_per_round": 150.8,
-   "total_unique": 3016,
+   "avg_unique_per_round": 153.4,
+   "total_unique": 3069,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -121,8 +121,8 @@
   {
    "source": "https://raw.githubusercontent.com/MohammadBahemmat/V2ray-Collector/main/all_servers.txt",
    "grade": "A",
-   "avg_unique_per_round": 137.2,
-   "total_unique": 2743,
+   "avg_unique_per_round": 138.0,
+   "total_unique": 2760,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -130,8 +130,8 @@
   {
    "source": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
    "grade": "A",
-   "avg_unique_per_round": 115.4,
-   "total_unique": 2308,
+   "avg_unique_per_round": 116.6,
+   "total_unique": 2332,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -148,8 +148,8 @@
   {
    "source": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt",
    "grade": "B",
-   "avg_unique_per_round": 67.8,
-   "total_unique": 1356,
+   "avg_unique_per_round": 68.8,
+   "total_unique": 1376,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -166,8 +166,8 @@
   {
    "source": "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
    "grade": "B",
-   "avg_unique_per_round": 45.9,
-   "total_unique": 918,
+   "avg_unique_per_round": 45.2,
+   "total_unique": 904,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -184,8 +184,8 @@
   {
    "source": "https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/main/vmess_iran.txt",
    "grade": "B",
-   "avg_unique_per_round": 31.4,
-   "total_unique": 627,
+   "avg_unique_per_round": 30.9,
+   "total_unique": 618,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -202,8 +202,8 @@
   {
    "source": "https://raw.githubusercontent.com/iampedii/whitedns-sub/main/base64.txt",
    "grade": "C",
-   "avg_unique_per_round": 17.1,
-   "total_unique": 341,
+   "avg_unique_per_round": 17.2,
+   "total_unique": 344,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -211,8 +211,8 @@
   {
    "source": "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/main/mix/sub.html",
    "grade": "C",
-   "avg_unique_per_round": 16.8,
-   "total_unique": 336,
+   "avg_unique_per_round": 16.9,
+   "total_unique": 337,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -229,8 +229,8 @@
   {
    "source": "https://t.me/s/v2ray_collector",
    "grade": "C",
-   "avg_unique_per_round": 9.3,
-   "total_unique": 186,
+   "avg_unique_per_round": 9.9,
+   "total_unique": 198,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -247,8 +247,8 @@
   {
    "source": "https://raw.githubusercontent.com/LalatinaHub/LatinaSub/main/result/sub",
    "grade": "C",
-   "avg_unique_per_round": 5.7,
-   "total_unique": 113,
+   "avg_unique_per_round": 5.2,
+   "total_unique": 103,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -256,17 +256,17 @@
   {
    "source": "https://t.me/s/mdvpnsec",
    "grade": "C",
-   "avg_unique_per_round": 4.3,
-   "total_unique": 86,
+   "avg_unique_per_round": 4.5,
+   "total_unique": 89,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
   },
   {
    "source": "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_BASE64.txt",
-   "grade": "C",
+   "grade": "D",
    "avg_unique_per_round": 4.0,
-   "total_unique": 80,
+   "total_unique": 79,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false
@@ -284,7 +284,7 @@
    "source": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
    "grade": "D",
    "avg_unique_per_round": 0.8,
-   "total_unique": 17,
+   "total_unique": 16,
    "rounds_window": 20,
    "fail": 0,
    "disabled": false

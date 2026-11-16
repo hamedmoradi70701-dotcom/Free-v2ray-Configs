@@ -6,4 +6,4 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://128ce9ab-63bc-48dc-92ca-1b5426a9eb46@88.218.92.185:443?security=reality&encryption=none&pbk=0L0a22tcISNd3pY2Le6DS9vrW1ughjmzhjj5ec8iBHo&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=sadas.jugoslavija.uk&sid=a51a6973d7d358d6#AM 🇦🇲 | رادار | F14FEC
+vless://128ce9ab-63bc-48dc-92ca-1b5426a9eb46@88.218.92.185:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=0L0a22tcISNd3pY2Le6DS9vrW1ughjmzhjj5ec8iBHo&security=reality&sid=a51a6973d7d358d6&sni=sadas.jugoslavija.uk&type=tcp#AM 🇦🇲 | رادار | F14FEC

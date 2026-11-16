@@ -754,5 +754,12 @@
     "country_count": 52,
     "sources_ok": 32,
     "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T21:10:29.318077+00:00",
+    "verified_count": 1265,
+    "country_count": 52,
+    "sources_ok": 32,
+    "sources_total": 40
   }
 ]
