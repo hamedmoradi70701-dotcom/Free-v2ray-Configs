@@ -98,7 +98,7 @@ async function load(){const r=await fetch('/panel/api/users');const d=await r.js
   +'<button class="small red" onclick="act(\'delete\',\''+u.uuid+'\')">🗑 حذف</button></div>';}).join('')||'هنوز کاربری نیست';}
 async function add(){const body={name:$('n').value,quotaGB:$('g').value,days:$('d').value,trjPass:$('t').value};
  const r=await fetch('/panel/api/users',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
- if(r.ok){$('n').value='';load();}else alert('خطا در ساخت');}
+ if(r.ok){$('n').value='';load();}else alert('خطا در ساخت — کد: '+r.status);}
 async function act(action,uuid){if(action==='delete'&&!confirm('حذف شود؟'))return;
  await fetch('/panel/api/action',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,uuid})});load();}
 function cp(el,txt){navigator.clipboard.writeText(txt);el.textContent='✅ کپی شد';setTimeout(load,900);}
