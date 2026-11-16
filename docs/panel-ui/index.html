@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>__NAME__</title>
+<style>@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+*{box-sizing:border-box}
+body{font-family:Vazirmatn,Tahoma,system-ui;background:radial-gradient(1000px 600px at 85% -10%,#3b1470 0,transparent 60%),radial-gradient(800px 500px at 0% 110%,#241055 0,transparent 55%),linear-gradient(160deg,#150a2e,#0d0618);background-attachment:fixed;color:#F2EFFF;margin:0;padding:16px;min-height:100vh}
+.wrap{max-width:880px;margin:0 auto}h1{font-size:22px;margin:6px 0 2px}h1 .gold{color:#FFC24B}
+.card{background:rgba(255,255,255,.055);border:1px solid rgba(167,139,250,.28);border-radius:18px;padding:18px;margin:14px 0;backdrop-filter:blur(14px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.card b.t{font-size:16px;color:#E9E4FF}
+input,button,select,textarea{padding:10px;border-radius:10px;border:1px solid rgba(167,139,250,.35);background:rgba(13,6,24,.65);color:#fff;font-size:14px;font-family:inherit}
+textarea{width:100%;min-height:64px;resize:vertical}
+button{background:linear-gradient(135deg,#8B5CF6,#6D28D9);border:none;cursor:pointer;font-weight:bold;box-shadow:0 4px 18px rgba(139,92,246,.35)}
+button.red{background:linear-gradient(135deg,#e05252,#b03030)}button.gray{background:rgba(255,255,255,.12);box-shadow:none}
+button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.row input,.row select{flex:1;min-width:110px}
+.user{border-top:1px solid rgba(167,139,250,.2);padding:12px 0}.user:first-child{border-top:none}
+.bar{height:9px;background:rgba(0,0,0,.4);border-radius:99px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,#8B5CF6,#2ecc71)}
+.meta{font-size:12px;color:#B9B0E8}.sub{font-size:11px;word-break:break-all;color:#9fd8ff}
+.small{padding:6px 10px;font-size:12px;margin:2px}
+.chk{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(167,139,250,.25);padding:7px 10px;border-radius:99px;font-size:13px;cursor:pointer}
+.chk input{accent-color:#8B5CF6;width:16px;height:16px}
+.lbl{font-size:12px;color:#B9B0E8;display:block;margin:10px 0 4px}
+#b_qr{background:#fff;padding:8px;border-radius:12px;width:176px;margin:10px auto;display:none}
+.out{width:100%;min-height:56px;font-size:11px;word-break:break-all}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script></head>
+<body><div class="wrap"><h1>__NAME__</h1>
+<div class="card"><b>کاربر تازه</b><div class="row" style="margin-top:10px">
+<input id="n" placeholder="نام کاربر"><input id="g" type="number" placeholder="حجم (GB) — ۰ یعنی نامحدود">
+<input id="d" type="number" placeholder="روز — ۰ یعنی بی‌نهایت"><input id="t" placeholder="رمز تروجان (خالی = خودکار)">
+<button onclick="add()">➕ ساخت</button></div></div>
+<div class="card"><b class="t">⚙️ تنظیمات کانفیگ‌ساز</b>
+<div class="meta">این تنظیمات روی همهٔ اشتراک‌ها از همین لحظه اعمال می‌شود؛ خالی گذاشتن هرکدام یعنی پیش‌فرض.</div>
+<span class="lbl">آی‌پی‌های تمیز سفارشی — هر خط یکی (خالی = لیست پیش‌فرض)</span>
+<textarea id="s_ips" dir="ltr" placeholder="104.18.0.1"></textarea>
+<div class="row">
+<span style="flex:1;min-width:150px"><span class="lbl">دامنهٔ سفارشی ورکر (اگه دامنه وصل کردی)</span><input id="s_host" dir="ltr" placeholder="panel.example.com"></span>
+<span style="flex:1;min-width:110px"><span class="lbl">مسیر وب‌سوکت</span><input id="s_path" dir="ltr" placeholder="/"></span>
+<span style="flex:1;min-width:110px"><span class="lbl">پیشوند نام کانفیگ</span><input id="s_remark" placeholder="📡"></span>
+</div>
+<div class="row">
+<span style="flex:1;min-width:110px"><span class="lbl">فینگرپرینت TLS</span><select id="s_fp"><option>chrome</option><option>firefox</option><option>safari</option><option>ios</option><option>android</option><option>random</option></select></span>
+<span style="flex:1;min-width:110px"><span class="lbl">تعداد کانفیگ آی‌پی (۰ تا ۵)</span><input id="s_ipn" type="number" min="0" max="5"></span>
+<span style="flex:1;min-width:110px"><span class="lbl">پریست پیش‌فرض ضدفیلتر</span><select id="s_isp"><option value="mci">همراه اول</option><option value="irancell">ایرانسل</option><option value="rightel">رایتل</option><option value="tci">مخابرات</option><option value="game">گیمینگ</option></select></span>
+</div>
+<div class="row">
+<label class="chk"><input type="checkbox" id="s_p8443"> پورت ۸۴۴۳</label>
+<label class="chk"><input type="checkbox" id="s_p2053"> پورت ۲۰۵۳</label>
+<label class="chk"><input type="checkbox" id="s_trj"> Trojan</label>
+<label class="chk"><input type="checkbox" id="s_ss"> Shadowsocks</label>
+<label class="chk"><input type="checkbox" id="s_ech"> ECH در ساب sing-box</label>
+</div>
+<div class="row"><button class="gold" onclick="saveSettings()">💾 ذخیره تنظیمات</button></div>
+</div>
+<div class="card"><b class="t">🛠 کانفیگ‌ساز دستی</b>
+<div class="meta">هر ترکیبی می‌خوای بساز: کاربر، پروتکل، آدرس، پورت، SNI، مسیر و فینگرپرینت رو خودت انتخاب کن.</div>
+<div class="row">
+<select id="b_user"></select>
+<select id="b_proto"><option value="vless">VLESS</option><option value="trojan">Trojan</option><option value="ss">Shadowsocks</option></select>
+<select id="b_port"><option>443</option><option>8443</option><option>2053</option><option>2083</option><option>2087</option><option>2096</option><option>8880</option><option>8080</option><option>80</option></select>
+</div>
+<div class="row">
+<select id="b_addr"></select>
+<input id="b_addr_custom" dir="ltr" placeholder="یا آدرس دلخواه بنویس">
+</div>
+<div class="row">
+<input id="b_sni" dir="ltr" placeholder="SNI — خالی = دامنهٔ ورکر">
+<input id="b_path" dir="ltr" placeholder="مسیر — خالی = از تنظیمات">
+<select id="b_fp"><option value="">فینگرپرینت: از تنظیمات</option><option>chrome</option><option>firefox</option><option>safari</option><option>ios</option><option>android</option><option>random</option></select>
+</div>
+<div class="row"><button onclick="buildCustom()">⚡ بساز</button>
+<button class="gray" onclick="cp(this,document.getElementById('b_out').value)">📋 کپی کانفیگ</button></div>
+<textarea id="b_out" class="out" dir="ltr" readonly placeholder="کانفیگ ساخته‌شده اینجا میاد"></textarea>
+<div id="b_qr"></div>
+</div>
+<div class="card"><b>کاربرها</b>
+<div style="margin:10px 0"><button class="small" onclick="backup()">⬇️ بکاپ کاربران</button>
+<button class="small" onclick="document.getElementById('bf').click()">⬆️ برگرداندن بکاپ</button>
+<input type="file" id="bf" accept=".json" style="display:none" onchange="imp(this)"></div>
+<div id="list">...</div></div></div>
+<script>
+const $=id=>document.getElementById(id);
+function gb(b){return b?(b/1073741824).toFixed(2):'0';}
+async function load(){const r=await fetch('/panel/api/users');const d=await r.json();
+ if(!d.ok){$('list').textContent='خطا';return;}
+ window._users=d.users;
+ $('list').innerHTML=d.users.map(u=>{const used=u.up+u.down;const pct=u.quotaBytes?Math.min(100,used/u.quotaBytes*100):0;
+  const exp=u.expireAt?new Date(u.expireAt).toLocaleDateString('fa-IR'):'بی‌نهایت';
+  const sub=location.origin+'/sub/'+u.subToken;
+  return '<div class="user"><b>'+u.name+'</b> <span class="meta">'+(u.enabled?'✅ فعال':'⛔ غیرفعال')+' | انقضا: '+exp+'</span>'
+  +'<div class="bar"><i style="width:'+pct+'%"></i></div>'
+  +'<div class="meta">مصرف: '+gb(used)+' GB از '+(u.quotaBytes?gb(u.quotaBytes)+' GB':'نامحدود')+' | UUID: '+u.uuid+'</div>'
+  +'<div class="meta">رمز تروجان: '+u.trjPass+' | رمز SS: '+(u.ssPass||'—')+' | اتصال‌ها: '+(u.connections||0)+'</div>'
+  +'<div class="sub">'+sub+'</div>'
+  +'<button class="small" onclick="cp(this,\''+sub+'\')">📋 کپی ساب</button>'
+  +'<button class="small" onclick="editU(\''+u.uuid+'\')">✏️ ویرایش</button>'
+  +'<a href="/my/'+u.subToken+'" target="_blank"><button class="small">👤 صفحه کاربر</button></a>'
+  +'<button class="small" onclick="act(\'toggle\',\''+u.uuid+'\')">⏯ فعال/غیرفعال</button>'
+  +'<button class="small" onclick="act(\'reset\',\''+u.uuid+'\')">♻️ صفرکردن مصرف</button>'
+  +'<button class="small red" onclick="act(\'delete\',\''+u.uuid+'\')">🗑 حذف</button></div>';}).join('')||'هنوز کاربری نیست';}
+async function add(){const body={name:$('n').value,quotaGB:$('g').value,days:$('d').value,trjPass:$('t').value};
+ const r=await fetch('/panel/api/users',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+ if(r.ok){$('n').value='';load();}else alert('خطا در ساخت');}
+async function act(action,uuid){if(action==='delete'&&!confirm('حذف شود؟'))return;
+ await fetch('/panel/api/action',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,uuid})});load();}
+function cp(el,txt){navigator.clipboard.writeText(txt);el.textContent='✅ کپی شد';setTimeout(load,900);}
+function backup(){window.open('/panel/api/backup');}
+async function imp(inp){const f=inp.files[0];if(!f)return;const d=JSON.parse(await f.text());
+ const r=await fetch('/panel/api/import',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)});
+ const j=await r.json();alert(j.ok?('✅ '+j.imported+' کاربر برگشت'):'خطا');load();}
+async function editU(uuid){const u=(window._users||[]).find(x=>x.uuid===uuid);if(!u)return;
+ const name=prompt('نام کاربر:',u.name);if(name===null)return;
+ const g=prompt('حجم (GB) — ۰ یعنی نامحدود:',u.quotaBytes?(u.quotaBytes/1073741824):0);if(g===null)return;
+ const d=prompt('انقضا از امروز چند روز؟ — ۰ یعنی بی‌نهایت:','');if(d===null)return;
+ await fetch('/panel/api/edit',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({uuid,name,quotaGB:g,days:d})});load();}
+async function loadSettings(){try{const r=await fetch('/panel/api/settings');const d=await r.json();if(!d.ok)return;
+ window._settings=d.settings;const S=d.settings;
+ $('s_ips').value=(S.cleanIps||[]).join('
+');$('s_host').value=S.hostOverride||'';$('s_path').value=S.path||'/';
+ $('s_fp').value=S.fp||'chrome';$('s_remark').value=S.remark||'📡';$('s_ipn').value=S.ipCount;$('s_isp').value=S.fragIsp||'mci';
+ $('s_p8443').checked=!!S.p8443;$('s_p2053').checked=!!S.p2053;$('s_trj').checked=!!S.protoTrj;$('s_ss').checked=!!S.protoSS;$('s_ech').checked=!!S.ech;
+ const ips=(S.cleanIps&&S.cleanIps.length)?S.cleanIps:(d.cleanIpsDefault||[]);
+ window._ips=ips;
+ $('b_addr').innerHTML='<option value="'+(S.hostOverride||location.host)+'">دامنهٔ ورکر</option>'+ips.map(ip=>'<option value="'+ip+'">آی‌پی تمیز '+ip+'</option>').join('');
+ }catch(e){}}
+async function saveSettings(){const body={cleanIps:$('s_ips').value.split(/
++/).map(x=>x.trim()).filter(Boolean),
+ hostOverride:$('s_host').value,path:$('s_path').value,fp:$('s_fp').value,remark:$('s_remark').value,
+ ipCount:$('s_ipn').value,fragIsp:$('s_isp').value,p8443:$('s_p8443').checked,p2053:$('s_p2053').checked,
+ protoTrj:$('s_trj').checked,protoSS:$('s_ss').checked,ech:$('s_ech').checked};
+ const r=await fetch('/panel/api/settings',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+ const d=await r.json();alert(d.ok?'✅ تنظیمات ذخیره شد':'خطا در ذخیره');if(d.ok)loadSettings();}
+function fillBuilderUsers(){const sel=$('b_user');if(!sel)return;const cur=sel.value;
+ sel.innerHTML=(window._users||[]).map(u=>'<option value="'+u.uuid+'">'+u.name+'</option>').join('');
+ if(cur)sel.value=cur;}
+function buildCustom(){const u=(window._users||[]).find(x=>x.uuid===$('b_user').value);
+ if(!u){alert('اول یه کاربر بساز');return;}
+ const S=window._settings||{};const H=S.hostOverride||location.host;
+ const addr=$('b_addr_custom').value.trim()||$('b_addr').value||H;
+ const port=$('b_port').value;const sni=$('b_sni').value.trim()||H;
+ const path=$('b_path').value.trim()||S.path||'/';
+ const fp=$('b_fp').value||S.fp||'chrome';const proto=$('b_proto').value;
+ const nm=encodeURIComponent(((S.remark||'📡')+' '+u.name+' | دستی'));
+ const ws='security=tls&sni='+sni+'&fp='+fp+'&type=ws&host='+H+'&path='+encodeURIComponent(path);
+ let link='';
+ if(proto==='vless')link='vless://'+u.uuid+'@'+addr+':'+port+'?encryption=none&'+ws+'#'+nm;
+ else if(proto==='trojan'){if(!u.trjPass){alert('این کاربر رمز تروجان نداره');return;}
+  link='trojan://'+encodeURIComponent(u.trjPass)+'@'+addr+':'+port+'?'+ws+'#'+nm;}
+ else{if(!u.ssPass){alert('این کاربر رمز SS نداره');return;}
+  const pl=encodeURIComponent('v2ray-plugin;mode=websocket;host='+H+';path='+path+';tls;mux=0');
+  link='ss://'+encodeURIComponent(btoa('aes-256-gcm:'+u.ssPass))+'@'+addr+':'+port+'?plugin='+pl+'#'+nm;}
+ $('b_out').value=link;
+ try{const q=$('b_qr');q.innerHTML='';q.style.display='block';new QRCode(q,{text:link,width:160,height:160});}catch(e){}}
+const _load0=load;load=async()=>{await _load0();fillBuilderUsers();};
+load();loadSettings();</script></body></html>
