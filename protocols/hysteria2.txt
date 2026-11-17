@@ -196,8 +196,7 @@ hysteria2://h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT@138.124.0.168:8080?insecure=1&sn
 hysteria2://h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT@222.167.212.81:8443?sni=hopp-legend-se.roxa.org#FI 🇫🇮 | رادار | AB8199
 hysteria2://h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT@222.167.212.82:8443?insecure=1&sni=hopp-legend-se.roxa.org#FI 🇫🇮 | رادار | 456C6A
 hysteria2://hAUdd15a7YGHUSgiPOUz@43.103.2.53:443?insecure=1&obfs=salamander&obfs-password=9veAh9pTbrAfDwM1fIYI#HK 🇭🇰 | رادار | 32B3B8
-hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=t.me#NL 🇳🇱 | رادار | E8031B
-hysteria2://HowdyHysteria2023w0W@hysteria.udpgw.com:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=hysteria.udpgw.com#NL 🇳🇱 | رادار | 3ACE09
+hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=vk.com#NL 🇳🇱 | رادار | 281F86
 hysteria2://https%3A%2F%2Fxship.2fa.cat@starlink-ft.251313.xyz:443?insecure=1&security=tls&sni=xship.top#US 🇺🇸 | رادار | 10F7DC
 hysteria2://Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0@85.204.107.178:8080?insecure=1&sni=hopp-romania-new.roxa.org#RO 🇷🇴 | رادار | 1B770D
 hysteria2://Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0@85.204.107.181:8080?insecure=1&sni=hopp-romania-new.roxa.org#RO 🇷🇴 | رادار | 73C6C6
@@ -244,6 +243,7 @@ hysteria2://VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC@82.38.60.15:8443?insecure
 hysteria2://VPNJEY@179.61.138.145:36264?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | رادار | 1D19F4
 hysteria2://VPNJey@[2a0f:5707:aaf1:11a6::1]:5707?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#DE 🇩🇪 | رادار | F9C2C0
 hysteria2://VR7zICGZd3cB34G0FxSYQra3@82.152.161.146:10086?security=tls&insecure=0&pinSHA256=384dfd7165377a28b00c8feefed52b59abd376248b99d06495349c2ab24586bc&sni=pic.bstarstatic.com#HK 🇭🇰 | رادار | 6860E5
+hysteria2://VR7zICGZd3cB34G0FxSYQra3@#Global 🌐 | رادار | 951543
 hysteria2://wrSuBorIlf@72.56.116.57:443?insecure=1&sni=hys9.wba-pn.ru#NL 🇳🇱 | رادار | 68AEDF
 hysteria2://wrSuBorIlf@hys9.wba-pn.ru:443?insecure=1#NL 🇳🇱 | رادار | FA225A
 hysteria2://yO8pug5XmwkBXBAjleYIaVt@192.255.152.147:443?insecure=1&sni=192.255.152.147#US 🇺🇸 | رادار | BC1858

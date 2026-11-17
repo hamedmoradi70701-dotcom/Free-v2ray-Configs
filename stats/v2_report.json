@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-17T17:20:53Z",
+ "generated_at": "2026-11-17T18:23:56Z",
  "keys_active": 30,
  "pool": {
   "golden": 50,
   "iran": 7,
-  "verified": 1036
+  "verified": 986
  },
  "per_key_counts": {
   "RDR-D6FB35-F719DC": 87,
