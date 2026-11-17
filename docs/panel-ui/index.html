@@ -67,10 +67,49 @@ button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303;box
 <div class="stat"><div class="n" id="st_traffic">–</div><div class="l">📊 ترافیک کل (GB)</div></div>
 <div class="stat"><div class="n" id="st_conn">–</div><div class="l">🔌 اتصال‌ها</div></div>
 </div>
+<div class="tabbar">
+<button class="on" onclick="showTab('users',this)">👥 کاربران</button>
+<button onclick="showTab('builder',this)">🛠 کانفیگ‌ساز</button>
+<button onclick="showTab('settings',this)">⚙️ تنظیمات</button>
+<button onclick="showTab('tools',this)">🧰 ابزارها</button>
+</div>
+<div class="tab on" id="tab-users">
 <div class="card"><b class="t">➕ کاربر تازه</b><div class="row" style="margin-top:10px">
 <input id="n" placeholder="نام کاربر"><input id="g" type="number" placeholder="حجم (GB) — ۰ یعنی نامحدود">
 <input id="d" type="number" placeholder="روز — ۰ یعنی بی‌نهایت"><input id="t" placeholder="رمز تروجان (خالی = خودکار)">
 <button onclick="add()">➕ ساخت</button></div></div>
+
+<div class="card"><b class="t">👥 کاربرها</b>
+<div style="margin:10px 0"><button class="small" onclick="backup()">⬇️ بکاپ کاربران</button>
+<button class="small" onclick="document.getElementById('bf').click()">⬆️ برگرداندن بکاپ</button>
+<input type="file" id="bf" accept=".json" style="display:none" onchange="imp(this)"></div>
+<div id="list">...</div></div>
+</div>
+<div class="tab" id="tab-builder">
+<div class="card"><b class="t">🛠 کانفیگ‌ساز دستی</b>
+<div class="meta">هر ترکیبی می‌خوای بساز: کاربر، پروتکل، آدرس، پورت، SNI، مسیر و فینگرپرینت رو خودت انتخاب کن.</div>
+<div class="row">
+<select id="b_user"></select>
+<select id="b_proto"><option value="vless">VLESS</option><option value="trojan">Trojan</option><option value="ss">Shadowsocks</option></select>
+<select id="b_port"><option>443</option><option>8443</option><option>2053</option><option>2083</option><option>2087</option><option>2096</option><option>8880</option><option>8080</option><option>80</option></select>
+</div>
+<div class="row">
+<select id="b_addr"></select>
+<input id="b_addr_custom" dir="ltr" placeholder="یا آدرس دلخواه بنویس">
+</div>
+<div class="row">
+<input id="b_sni" dir="ltr" placeholder="SNI — خالی = دامنهٔ ورکر">
+<input id="b_path" dir="ltr" placeholder="مسیر — خالی = از تنظیمات">
+<select id="b_fp"><option value="">فینگرپرینت: از تنظیمات</option><option>chrome</option><option>firefox</option><option>safari</option><option>ios</option><option>android</option><option>random</option></select>
+</div>
+<div class="row"><button onclick="buildCustom()">⚡ بساز</button>
+<button class="gray" onclick="cp(this,document.getElementById('b_out').value)">📋 کپی کانفیگ</button></div>
+<textarea id="b_out" class="out" dir="ltr" readonly placeholder="کانفیگ ساخته‌شده اینجا میاد"></textarea>
+<div id="b_qr"></div>
+</div>
+
+</div>
+<div class="tab" id="tab-settings">
 <div class="card"><b class="t">⚙️ تنظیمات کانفیگ‌ساز</b>
 <div class="meta">این تنظیمات روی همهٔ اشتراک‌ها از همین لحظه اعمال می‌شود؛ خالی گذاشتن هرکدام یعنی پیش‌فرض.</div>
 <span class="lbl">آی‌پی‌های تمیز سفارشی — هر خط یکی (خالی = لیست پیش‌فرض)</span>
@@ -94,32 +133,26 @@ button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303;box
 </div>
 <div class="row"><button class="gold" onclick="saveSettings()">💾 ذخیره تنظیمات</button></div>
 </div>
-<div class="card"><b class="t">🛠 کانفیگ‌ساز دستی</b>
-<div class="meta">هر ترکیبی می‌خوای بساز: کاربر، پروتکل، آدرس، پورت، SNI، مسیر و فینگرپرینت رو خودت انتخاب کن.</div>
-<div class="row">
-<select id="b_user"></select>
-<select id="b_proto"><option value="vless">VLESS</option><option value="trojan">Trojan</option><option value="ss">Shadowsocks</option></select>
-<select id="b_port"><option>443</option><option>8443</option><option>2053</option><option>2083</option><option>2087</option><option>2096</option><option>8880</option><option>8080</option><option>80</option></select>
+
 </div>
-<div class="row">
-<select id="b_addr"></select>
-<input id="b_addr_custom" dir="ltr" placeholder="یا آدرس دلخواه بنویس">
+<div class="tab" id="tab-tools">
+<div class="card"><b class="t">🔍 اسکنر آی‌پی تمیز</b>
+<div class="meta">از روی اینترنت خودت، آی‌پی‌های تمیز کلودفلر رو تست و رتبه‌بندی می‌کنه. بهترین‌ها رو با دکمهٔ «➕» بنداز تو لیست تنظیمات و ذخیره کن.</div>
+<div class="row"><button class="gold" onclick="scanIps(this)">🚀 شروع اسکن</button></div>
+<div id="scan_list" style="margin-top:10px"></div>
 </div>
-<div class="row">
-<input id="b_sni" dir="ltr" placeholder="SNI — خالی = دامنهٔ ورکر">
-<input id="b_path" dir="ltr" placeholder="مسیر — خالی = از تنظیمات">
-<select id="b_fp"><option value="">فینگرپرینت: از تنظیمات</option><option>chrome</option><option>firefox</option><option>safari</option><option>ios</option><option>android</option><option>random</option></select>
+<div class="card"><b class="t">💊 تست سلامت پنل</b>
+<div class="meta">زنده‌بودن ورکر و سرعت پاسخش رو از همین‌جا چک کن.</div>
+<div class="row"><button onclick="healthTest(this)">💊 تست کن</button></div>
+<div id="health_out" class="meta" style="margin-top:8px"></div>
 </div>
-<div class="row"><button onclick="buildCustom()">⚡ بساز</button>
-<button class="gray" onclick="cp(this,document.getElementById('b_out').value)">📋 کپی کانفیگ</button></div>
-<textarea id="b_out" class="out" dir="ltr" readonly placeholder="کانفیگ ساخته‌شده اینجا میاد"></textarea>
-<div id="b_qr"></div>
+<div class="card"><b class="t">📥 دانلود برنامه‌ها</b>
+<a class="app" href="https://github.com/2dust/v2rayNG/releases" target="_blank"><span class="ic">🤖</span><span>v2rayNG<small>اندروید — نسخهٔ رسمی گیت‌هاب</small></span></a>
+<a class="app" href="https://hiddify.com/" target="_blank"><span class="ic">🛡</span><span>Hiddify<small>اندروید و ویندوز — بهترین کلاینت برای این پنل</small></span></a>
+<a class="app" href="https://github.com/KaringX/karing/releases" target="_blank"><span class="ic">📦</span><span>Karing<small>کلاینت sing-box چندسکویی</small></span></a>
+<a class="app" href="https://github.com/SagerNet/sing-box/releases" target="_blank"><span class="ic">⬛</span><span>sing-box (SFA)<small>نسخهٔ رسمی اندروید</small></span></a>
 </div>
-<div class="card"><b class="t">👥 کاربرها</b>
-<div style="margin:10px 0"><button class="small" onclick="backup()">⬇️ بکاپ کاربران</button>
-<button class="small" onclick="document.getElementById('bf').click()">⬆️ برگرداندن بکاپ</button>
-<input type="file" id="bf" accept=".json" style="display:none" onchange="imp(this)"></div>
-<div id="list">...</div></div></div>
+</div>
 <div id="toast">✅ کپی شد</div>
 <script>
 const $=id=>document.getElementById(id);
@@ -205,4 +238,32 @@ function buildCustom(){const u=(window._users||[]).find(x=>x.uuid===$('b_user').
  $('b_out').value=link;
  try{const q=$('b_qr');q.innerHTML='';q.style.display='block';new QRCode(q,{text:link,width:160,height:160});}catch(e){}}
 const _load0=load;load=async()=>{await _load0();fillBuilderUsers();};
+
+function showTab(name,btn){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+ document.querySelectorAll('.tabbar button').forEach(b=>b.classList.remove('on'));
+ $('tab-'+name).classList.add('on');if(btn)btn.classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
+const SCAN_IPS=['188.114.96.1','188.114.97.1','162.159.0.1','162.159.192.1','104.18.0.1','104.19.0.1','104.16.0.1','104.17.0.1','104.21.0.1','104.20.0.1','172.67.0.1','172.66.0.1'];
+async function scanIps(btn){btn.disabled=true;btn.textContent='⏳ در حال اسکن...';
+ const extra=(window._ips||[]).filter(ip=>!SCAN_IPS.includes(ip));
+ const ips=[...SCAN_IPS,...extra];const box=$('scan_list');
+ box.innerHTML=ips.map(ip=>'<div class="scanrow" id="sc_'+ip.replace(/\./g,'_')+'"><span dir="ltr">'+ip+'</span><span class="ms">…</span></div>').join('');
+ const res=await Promise.all(ips.map(async ip=>{const row=$('sc_'+ip.replace(/\./g,'_'));const msEl=row.querySelector('.ms');
+  const t0=performance.now();const ctl=new AbortController();const to=setTimeout(()=>ctl.abort(),4500);
+  try{await fetch('https://'+ip+'/cdn-cgi/trace',{mode:'no-cors',cache:'no-store',signal:ctl.signal});
+   const ms=Math.round(performance.now()-t0);clearTimeout(to);
+   msEl.textContent=faN(ms)+' ms';if(ms>600)msEl.classList.add('slow');
+   row.innerHTML+='<button class="small" onclick="addIp(\''+ip+'\')">➕ افزودن</button>';return{ip,ms};}
+  catch(e){clearTimeout(to);msEl.textContent='مرده';msEl.classList.add('dead');return{ip,ms:1e9};}}));
+ res.sort((a,b)=>a.ms-b.ms);
+ box.innerHTML=res.map(r=>'<div class="scanrow"><span dir="ltr">'+r.ip+'</span><span class="ms'+(r.ms>=1e9?' dead':r.ms>600?' slow':'')+'">'+(r.ms>=1e9?'مرده':faN(r.ms)+' ms')+'</span>'+(r.ms<1e9?'<button class="small" onclick="addIp(\''+r.ip+'\')">➕ افزودن</button>':'')+'</div>').join('');
+ btn.disabled=false;btn.textContent='🚀 شروع اسکن';}
+function addIp(ip){const ta=$('s_ips');const cur=ta.value.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+ if(!cur.includes(ip)){cur.push(ip);ta.value=cur.join('\n');}
+ toast('✅ '+ip+' به لیست تنظیمات اضافه شد — ذخیره یادت نره');}
+async function healthTest(btn){btn.disabled=true;const out=$('health_out');out.textContent='⏳ در حال تست...';
+ const t0=performance.now();
+ try{const r=await fetch('/',{cache:'no-store'});const ms=Math.round(performance.now()-t0);
+  out.innerHTML=r.ok?('✅ پنل زنده‌ست — کد '+faN(r.status)+' — پاسخ در '+faN(ms)+' میلی‌ثانیه'):('⚠️ کد '+faN(r.status)+' برگشت — '+faN(ms)+' میلی‌ثانیه');}
+ catch(e){out.textContent='❌ پنل جواب نداد';}
+ btn.disabled=false;}
 load();loadSettings();</script></body></html>
