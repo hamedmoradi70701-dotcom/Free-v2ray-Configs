@@ -468,6 +468,187 @@
       @media (max-width:560px){
         .status-dot{display:none}
       }
+
+      /* ---------- glass pass + round-2 components (Radar original) ---------- */
+      .panel{padding:1.25rem 1.15rem 3.2rem}
+      .card{
+        background:rgba(8,20,38,.60);
+        border:1px solid rgba(96,165,250,.26);border-radius:var(--radius);padding:1.35rem;
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:var(--glow),inset 0 1px 0 rgba(186,225,255,.10);
+      }
+      .card + .card{margin-top:1.15rem}
+      .stat{
+        background:rgba(8,20,38,.55);border:1px solid rgba(96,165,250,.24);
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:var(--glow),inset 0 1px 0 rgba(186,225,255,.10);
+      }
+      .stats{gap:1rem;margin-bottom:1.15rem}
+      .scell{
+        background:rgba(8,20,38,.55);border:1px solid rgba(96,165,250,.24);
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:inset 0 1px 0 rgba(186,225,255,.10);padding:.95rem 1rem;
+      }
+      .user{
+        background:rgba(8,20,38,.58);border:1px solid rgba(96,165,250,.22);
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:inset 0 1px 0 rgba(186,225,255,.08);padding:1.05rem 1.1rem;
+      }
+      .user-list{gap:.85rem}
+      .modal{
+        background:rgba(8,20,38,.78);border:1px solid rgba(96,165,250,.30);
+        backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
+        box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 40px rgba(34,211,238,.08),inset 0 1px 0 rgba(186,225,255,.12);
+      }
+      .upbox{
+        background:rgba(10,24,44,.50);border:1px solid rgba(96,165,250,.20);
+        backdrop-filter:blur(10px) saturate(130%);-webkit-backdrop-filter:blur(10px) saturate(130%);
+        box-shadow:inset 0 1px 0 rgba(186,225,255,.07);
+      }
+      .tabs{
+        background:rgba(8,20,38,.60);border:1px solid rgba(96,165,250,.24);
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:var(--glow),inset 0 1px 0 rgba(186,225,255,.09);margin-bottom:1.15rem;
+      }
+      .app{
+        background:rgba(8,20,38,.55);border:1px solid rgba(96,165,250,.20);
+        backdrop-filter:blur(12px) saturate(135%);-webkit-backdrop-filter:blur(12px) saturate(135%);
+      }
+      .login-card{
+        background:rgba(8,20,38,.72);border:1px solid rgba(96,165,250,.28);
+        backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);
+        box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(186,225,255,.12);
+      }
+      body.light .card,body.light .stat,body.light .scell,body.light .user,body.light .tabs,body.light .app{
+        background:rgba(255,255,255,.55);border-color:rgba(2,132,199,.28);
+        backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+        box-shadow:0 10px 30px rgba(30,64,175,.08),inset 0 1px 0 rgba(255,255,255,.65);
+      }
+      body.light .modal,body.light .login-card{background:rgba(255,255,255,.78);border-color:rgba(2,132,199,.30)}
+      body.light .upbox{background:rgba(255,255,255,.45)}
+      /* port chips (multi-select) */
+      .pchips{display:flex;gap:.4rem;flex-wrap:wrap}
+      .pchip{background:var(--field);border:1px solid var(--border-soft);color:var(--muted);border-radius:999px;padding:.32rem .8rem;font-size:.8rem;font-weight:800;min-height:2rem;transition:all .13s}
+      .pchip:hover{color:var(--text);border-color:rgba(34,211,238,.45)}
+      .pchip.sel{background:linear-gradient(180deg,rgba(8,145,178,.34),rgba(2,132,199,.18));border-color:rgba(34,211,238,.65);color:#d9f7ff;box-shadow:0 0 10px rgba(34,211,238,.16)}
+      .pchip.plain.sel{background:linear-gradient(180deg,rgba(217,119,6,.30),rgba(180,83,9,.16));border-color:rgba(245,158,11,.6);color:#fde9c8;box-shadow:0 0 10px rgba(245,158,11,.14)}
+      .mchip{background:var(--field);border:1px solid var(--border-soft);color:var(--muted);border-radius:999px;padding:.3rem .85rem;font-size:.8rem;font-weight:800;min-height:2rem;transition:all .13s}
+      .mchip:hover{color:var(--text);border-color:rgba(34,197,94,.5)}
+      /* expandable rows */
+      .xrow{border:1px solid var(--border-soft);border-radius:11px;margin-top:.8rem;background:rgba(10,24,44,.35)}
+      .xrow>summary{cursor:pointer;list-style:none;padding:.7rem .9rem;font-weight:800;font-size:.88rem;display:flex;align-items:center;gap:.5rem;color:#dbe7fa}
+      .xrow>summary::-webkit-details-marker{display:none}
+      .xrow>summary .chev{margin-inline-start:auto;color:var(--muted);transition:transform .18s}
+      .xrow[open ]>summary .chev{transform:rotate(180deg)}
+      .xrow .xbody{padding:0 .9rem .9rem}
+      body.light .xrow{background:rgba(255,255,255,.4)}
+      .msec{font-size:.86rem;font-weight:900;color:#eaf5ff;margin:1.1rem 0 .2rem;display:flex;align-items:center;gap:.5rem}
+      .msec::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+      /* scanner progress + dots */
+      .prog{height:8px;border-radius:99px;background:#060f1e;border:1px solid var(--border-soft);overflow:hidden;margin:.7rem 0}
+      .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0284c7,#22d3ee,#2dd4bf);box-shadow:0 0 10px rgba(34,211,238,.45);transition:width .25s}
+      body.light .prog{background:#d7e3f2}
+      .sdot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+      .sdot.g{background:var(--green);box-shadow:0 0 8px var(--green)}
+      .sdot.y{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+      .sdot.r{background:var(--red);box-shadow:0 0 8px rgba(248,113,113,.7)}
+      .sdot.x{background:#3d4a61}
+      /* quick-build country grid */
+      .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:.5rem;margin-top:.8rem}
+      .ccell{background:rgba(10,24,44,.45);border:1px solid var(--border-soft);border-radius:11px;padding:.55rem .2rem .45rem;text-align:center;cursor:pointer;transition:all .13s;min-height:0}
+      .ccell:hover{border-color:rgba(34,211,238,.5)}
+      .ccell.sel{border-color:rgba(34,197,94,.7);background:rgba(34,197,94,.12);box-shadow:0 0 14px rgba(34,197,94,.18)}
+      .ccell .fl{font-size:1.35rem;line-height:1.25}
+      .ccell .cc{font-size:.72rem;font-weight:800;color:#dbe7fa;letter-spacing:.04em}
+      body.light .ccell{background:rgba(255,255,255,.5)}
+      .qsteps{display:flex;gap:.4rem;margin-bottom:1rem}
+      .qstep{flex:1;text-align:center;font-size:.74rem;font-weight:800;color:var(--faint);border-bottom:2px solid var(--border-soft);padding-bottom:.45rem}
+      .qstep.on{color:#d9f7ff;border-color:var(--cyan)}
+      .qstep.done{color:var(--green-t);border-color:rgba(34,197,94,.55)}
+      .qlink{display:flex;gap:.5rem;align-items:flex-start;background:rgba(6,15,30,.55);border:1px solid var(--border-soft);border-radius:9px;padding:.6rem .7rem;margin-top:.55rem}
+      .qlink code{flex:1;font-size:.7rem;line-height:1.7;word-break:break-all;color:#bfe3ff;direction:ltr;text-align:left}
+      body.light .qlink{background:#e9eff8}
+      body.light .qlink code{color:#0c4a6e}
+
+      /* ---------- visual fidelity pass (Radar original) ---------- */
+      :root{
+        --border:rgba(110,180,255,.35);
+        --glow:0 0 0 1px rgba(56,189,248,.06),0 12px 34px rgba(0,0,0,.45),0 0 34px rgba(37,99,235,.14);
+      }
+      /* softer vignette so the mesh survives to the edges */
+      .veil{background:
+        radial-gradient(ellipse 55% 34% at 50% -4%,rgba(34,211,238,.13),transparent 70%),
+        radial-gradient(ellipse 70% 46% at 88% 108%,rgba(37,99,235,.12),transparent 70%),
+        radial-gradient(ellipse 95% 72% at 50% 42%,transparent 55%,rgba(2,6,16,.36) 100%)}
+      /* glass: more transparent sheets, brighter cyan edge, outer glow */
+      .card{background:rgba(8,20,38,.52);border-color:rgba(110,180,255,.35);box-shadow:var(--glow),inset 0 1px 0 rgba(186,225,255,.12)}
+      .stats-card{border-color:rgba(110,180,255,.38);box-shadow:var(--glow),0 0 40px rgba(37,99,235,.12),inset 0 1px 0 rgba(186,225,255,.13);margin-bottom:1.2rem}
+      .stat{background:rgba(8,20,38,.50);border-color:rgba(110,180,255,.32)}
+      .tabs{background:rgba(8,20,38,.52);border-color:rgba(110,180,255,.30)}
+      .user{background:rgba(8,20,38,.52);border-color:rgba(110,180,255,.32);box-shadow:var(--glow),inset 0 1px 0 rgba(186,225,255,.10)}
+      .modal{background:rgba(8,20,38,.68);border-color:rgba(110,180,255,.38)}
+      .login-card{background:rgba(8,20,38,.68);border-color:rgba(110,180,255,.36)}
+      /* inner cells sit lighter/bluer than their sheet */
+      .scell{background:rgba(19,40,76,.52);border-color:rgba(110,180,255,.30);box-shadow:inset 0 1px 0 rgba(186,225,255,.12)}
+      .ucell{background:rgba(15,32,62,.50);border-color:rgba(110,180,255,.22)}
+      .upbox{background:rgba(15,32,62,.48);border-color:rgba(110,180,255,.24)}
+      body:not(.light) .field{background:rgba(9,20,40,.68)}
+      body:not(.light) .out-box{background:rgba(5,11,22,.66)}
+      /* banner: ADS chip + telegram tile + text + solid join pill */
+      .banner{background:linear-gradient(90deg,rgba(37,99,235,.22),rgba(8,145,178,.13));border:1px solid rgba(110,180,255,.38);border-radius:14px;padding:.55rem .8rem;margin-bottom:1.15rem;box-shadow:0 0 26px rgba(37,99,235,.16),inset 0 1px 0 rgba(186,225,255,.12);backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%)}
+      .banner-t{min-width:130px;text-align:center}
+      .ads-chip{flex:none;font-size:.62rem;font-weight:800;letter-spacing:.09em;direction:ltr;color:#a8ccff;border:1px solid rgba(110,180,255,.45);border-radius:7px;padding:.3rem .5rem;background:rgba(37,99,235,.16)}
+      .banner-tg{flex:none;width:34px;height:34px;min-height:34px;border-radius:9px;display:grid;place-items:center;background:rgba(37,99,235,.20);border:1px solid rgba(110,180,255,.42);color:#7dd3fc;transition:box-shadow .15s}
+      .banner-tg svg{width:17px;height:17px}
+      .banner-tg:hover{box-shadow:0 0 14px rgba(56,189,248,.3)}
+      .banner-join{flex:none;display:inline-flex;align-items:center;gap:.3rem;background:linear-gradient(180deg,#3b82f6,#2563eb);border:1px solid rgba(147,197,253,.55);color:#fff;border-radius:10px;padding:.52rem 1.1rem;font-size:.85rem;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(37,99,235,.42),inset 0 1px 0 rgba(255,255,255,.25);transition:filter .15s,box-shadow .15s}
+      .banner-join svg{width:15px;height:15px}
+      .banner-join:hover{filter:brightness(1.1);box-shadow:0 8px 22px rgba(37,99,235,.55),0 0 18px rgba(59,130,246,.35)}
+      body.light .banner{background:linear-gradient(90deg,rgba(59,130,246,.14),rgba(8,145,178,.10));border-color:rgba(2,132,199,.30)}
+      body.light .ads-chip{color:#1d4ed8}
+      /* rhythm: blocks breathe, mesh shows in the gaps */
+      .roundrow{gap:1rem;padding:1.2rem 0 .85rem}
+      .user-list{gap:1rem}
+      .card + .card{margin-top:1.2rem}
+      /* round action buttons: strong neon halos + glowing icons */
+      .rbtn .rc{width:58px;height:58px;box-shadow:0 0 42px rgba(56,189,248,.52),0 0 110px rgba(56,189,248,.22),0 10px 24px rgba(2,132,199,.25),inset 0 0 16px rgba(56,189,248,.20)}
+      .rbtn:hover .rc{box-shadow:0 0 46px rgba(34,211,238,.55),0 0 110px rgba(34,211,238,.24),0 12px 26px rgba(2,132,199,.28),inset 0 0 16px rgba(34,211,238,.22)}
+      .rbtn.main .rc{box-shadow:0 0 42px rgba(34,197,94,.58),0 0 110px rgba(34,197,94,.26),0 10px 24px rgba(22,163,74,.25),inset 0 0 16px rgba(34,197,94,.20)}
+      .rbtn.main:hover .rc{box-shadow:0 0 46px rgba(34,197,94,.60),0 0 110px rgba(34,197,94,.28),0 12px 26px rgba(22,163,74,.30),inset 0 0 16px rgba(34,197,94,.22)}
+      .rbtn:nth-child(3) .rc{box-shadow:0 0 42px rgba(45,212,191,.55),0 0 110px rgba(45,212,191,.24),0 10px 24px rgba(13,148,136,.25),inset 0 0 16px rgba(45,212,191,.20)}
+      .rbtn:nth-child(3):hover .rc{box-shadow:0 0 46px rgba(45,212,191,.58),0 0 110px rgba(45,212,191,.26),0 12px 26px rgba(13,148,136,.28),inset 0 0 16px rgba(45,212,191,.22)}
+      .rbtn:nth-child(4) .rc{box-shadow:0 0 42px rgba(167,139,250,.55),0 0 110px rgba(167,139,250,.24),0 10px 24px rgba(124,58,237,.25),inset 0 0 16px rgba(167,139,250,.20)}
+      .rbtn:nth-child(4):hover .rc{box-shadow:0 0 46px rgba(167,139,250,.58),0 0 110px rgba(167,139,250,.26),0 12px 26px rgba(124,58,237,.28),inset 0 0 16px rgba(167,139,250,.22)}
+      .rbtn:nth-child(5) .rc{box-shadow:0 0 42px rgba(245,158,11,.55),0 0 110px rgba(245,158,11,.24),0 10px 24px rgba(217,119,6,.25),inset 0 0 16px rgba(245,158,11,.20)}
+      .rbtn:nth-child(5):hover .rc{box-shadow:0 0 46px rgba(245,158,11,.58),0 0 110px rgba(245,158,11,.26),0 12px 26px rgba(217,119,6,.28),inset 0 0 16px rgba(245,158,11,.22)}
+      .rbtn svg{filter:drop-shadow(0 0 5px currentColor)}
+      @media (max-width:760px){.rbtn .rc{width:58px;height:58px}}
+      /* user-card icon buttons: 2x2 grid with resting colored glows */
+      .u-ibtns{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
+      .ibtn{width:34px;height:34px;min-height:34px;border-radius:10px}
+      .ibtn svg{width:16px;height:16px}
+      .ibtn.g{background:rgba(34,197,94,.09);box-shadow:0 0 12px rgba(34,197,94,.22)}
+      .ibtn.b{background:rgba(8,145,178,.10);box-shadow:0 0 12px rgba(56,189,248,.22)}
+      .ibtn.a{background:rgba(245,158,11,.08);box-shadow:0 0 12px rgba(245,158,11,.22)}
+      .ibtn.r{background:rgba(248,113,113,.08);box-shadow:0 0 12px rgba(248,113,113,.22)}
+
+      /* ---------- palette + straightness pass (sampled from reference close-up) ---------- */
+      /* sampled: page bg #010207 · sheet #060a18 · cells ~#0d1526 · borders rgba(96,150,255,.19) */
+      :root{
+        --bg:#010207;
+        --border:rgba(96,150,255,.20);
+      }
+      /* stats sheet: matte sampled navy at .85 — mesh only faintly through it, glow off */
+      .stats-card{
+        background:rgba(6,10,24,.85);border-color:rgba(96,150,255,.19);
+        box-shadow:0 10px 28px rgba(0,0,0,.45),inset 0 1px 0 rgba(186,225,255,.05);
+      }
+      /* clean 2x2: both rows share one height */
+      .stats-grid{grid-auto-rows:1fr}
+      .scell{
+        background:rgba(13,21,38,.92);border-color:rgba(96,150,255,.19);
+        box-shadow:inset 0 1px 0 rgba(186,225,255,.05);
+      }
     </style>
   </head>
   <body>
@@ -531,9 +712,10 @@
         </div>
 
         <div class="banner">
-          <span class="banner-t">📡 برای ساخت رایگان پنل تازه یا گرفتن راهنما، ربات رادار قدم‌به‌قدم همراه‌تان است؛ خبرهای تازه هم در کانال رادار منتشر می‌شود.</span>
-          <a class="banner-btn" href="https://t.me/radarconfingbot" target="_blank" rel="noopener">ربات رادار</a>
-          <a class="banner-btn alt" href="https://t.me/radarconfing" target="_blank" rel="noopener">کانال رادار</a>
+          <span class="ads-chip">ADS</span>
+          <a class="banner-tg" href="https://t.me/radarconfing" target="_blank" rel="noopener" title="کانال رادار"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.8 19c-.23 1.03-.84 1.28-1.7.8l-4.7-3.47-2.27 2.18c-.25.25-.46.46-.95.46l.34-4.87 8.86-8c.39-.34-.08-.53-.6-.19L7.6 13.7 2.83 12.2c-1.04-.32-1.06-1.04.22-1.54l18.63-7.18c.86-.32 1.62.2 1.22 1.12Z"/></svg></a>
+          <span class="banner-t">📡 برای حمایت از رادار به کانال ما بپیوندید؛ آپدیت‌ها، آموزش‌ها و خبرهای تازه اینجاست.</span>
+          <a class="banner-join" href="https://t.me/radarconfing" target="_blank" rel="noopener">عضویت<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 5.5-6.5 6.5 6.5 6.5"/></svg></a>
         </div>
 
         <div class="card stats-card">
@@ -609,9 +791,9 @@
                 <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
                 کاربر تازه
               </button>
-              <button class="rbtn" data-goto="builder" type="button">
-                <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.5 6.5a4 4 0 0 0-5.6 5L3 17.4V21h3.6l5.9-5.9a4 4 0 0 0 5-5.6l-2.8 2.8-2.4-.7-.7-2.4 2.9-2.7Z"/></svg></span>
-                کانفیگ‌ساز
+              <button class="rbtn" id="quickBtn" type="button">
+                <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.2 4.8-.9 6 .5 6.5C7 21.9 8.2 21 9 20l-4-5Z"/><path d="M14 4c2.8-1.6 6.5-2 8-2-.2 1.8-.7 5.3-2.3 8.1L12 17.5 5.5 11 14 4Z"/><circle cx="15.5" cy="8.5" r="1.6"/></svg></span>
+                ساخت سریع
               </button>
               <button class="rbtn" data-goto="tools" type="button">
                 <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></svg></span>
@@ -777,14 +959,17 @@
         <section class="page" id="page-tools">
           <div class="card">
             <h2>اسکنر آی‌پی تمیز کلودفلر</h2>
-            <p class="sub">آی‌پی‌ها از روی اینترنت خودتان تست و رتبه‌بندی می‌شوند؛ بهترین نتیجه را با یک دکمه می‌توانید آی‌پی تمیز پیش‌فرض پنل کنید.</p>
+            <p class="sub">اسکن از اینترنت خودت انجام می‌شود: هر آی‌پی سه بار از همین مرورگر تست و میانه‌اش ثبت می‌شود؛ کشور ورودی را هم ورکر پنل از خود لبه‌ی کلودفلر می‌پرسد تا پرچم‌ها حدسی نباشند.</p>
+            <div class="prog"><i id="scanProg"></i></div>
             <div class="toolbar">
               <button class="btn-primary" id="scanBtn" type="button">شروع اسکن</button>
+              <button class="btn-mini danger" id="scanCancel" type="button">لغو اسکن</button>
+              <button class="btn-mini" id="scanAddAll" type="button">افزودن همه‌ی زنده‌ها</button>
               <span class="sub" id="scanState" style="margin:0"></span>
             </div>
             <div style="overflow-x:auto">
               <table class="ip-table">
-                <thead><tr><th>آی‌پی</th><th>تأخیر</th><th>وضعیت</th><th></th></tr></thead>
+                <thead><tr><th>آی‌پی</th><th>تأخیر</th><th>کشور ورودی</th><th>وضعیت</th><th></th></tr></thead>
                 <tbody id="ipBody"></tbody>
               </table>
             </div>
@@ -834,7 +1019,7 @@
         <div class="mtabs">
           <button class="mtab active" type="button" data-mtab="spec">مشخصات</button>
           <button class="mtab" type="button" data-mtab="net">پورت و IP</button>
-          <button class="mtab" type="button" data-mtab="adv">پیشرفته</button>
+          <button class="mtab" type="button" data-mtab="proxy">پروکسی</button>
         </div>
 
         <div class="mpage active" data-mpage="spec">
@@ -867,48 +1052,133 @@
             </div>
             <div class="fg"><label for="ufDays">مدت (روز) — ۰ یعنی بی‌نهایت</label><input class="field ltr" id="ufDays" type="number" min="0" step="1" value="0" /></div>
           </div>
+            <div class="fg" style="margin-top:.9rem"><label>مدت آماده</label>
+            <div class="row-btns" style="margin-top:0">
+              <button class="mchip" type="button" data-months="30">۱ ماه</button>
+              <button class="mchip" type="button" data-months="60">۲ ماه</button>
+              <button class="mchip" type="button" data-months="90">۳ ماه</button>
+              <button class="mchip" type="button" data-months="0">نامحدود</button>
+            </div>
+            </div>
+            <div class="switch-row">
+              <div><div class="t">شروع محاسبه‌ی زمان از اولین اتصال</div><div class="d">مدت کاربر از لحظه‌ی ساخت حساب نمی‌شود؛ از اولین اتصالی که واقعاً وصل شود شروع می‌شود.</div></div>
+              <label class="switch"><input type="checkbox" id="ufStartConn" /><span class="tr"></span></label>
+            </div>
+            <div class="msec">محدودیت‌های اتصال و امنیت</div>
+            <div class="grid2">
+              <div class="fg"><label for="ufFp">اثر انگشت TLS (Fingerprint)</label>
+                <select class="field" id="ufFp">
+                  <option value="unsafe">Unsafe (پیشنهادی)</option>
+                  <option value="">پیش‌فرض پنل</option>
+                  <option value="chrome">Chrome</option>
+                  <option value="firefox">Firefox</option>
+                  <option value="safari">Safari</option>
+                  <option value="edge">Edge</option>
+                  <option value="ios">iOS</option>
+                  <option value="android">Android</option>
+                  <option value="random">Random</option>
+                </select>
+                <span class="hint">فقط برای همین کاربر؛ روی لینک‌ها و اشتراک سینگ‌باکس او اعمال می‌شود.</span>
+              </div>
+              <div class="fg"><label for="ufMaxConn">سقف تعداد اتصال — ۰ یعنی نامحدود</label><input class="field ltr" id="ufMaxConn" type="number" min="0" value="0" /><span class="hint">وقتی شمار اتصال‌های این کاربر به سقف برسد، اتصال تازه قبول نمی‌شود.</span></div>
+              <div class="fg"><label for="ufRenew">تمدید خودکار حجم — هر چند روز؟ ۰ یعنی خاموش</label><input class="field ltr" id="ufRenew" type="number" min="0" value="0" /><span class="hint">با هر بار سر زدن کاربر به اشتراکش یا اتصال تازه، اگر دوره گذشته باشد حجم مصرفی‌اش خودکار صفر می‌شود.</span></div>
+            </div>
+            <div class="switch-row">
+              <div><div class="t">مسدودسازی سایت‌های غیراخلاقی</div><div class="d">DNS اشتراک سینگ‌باکس و رله‌ی DNS این کاربر از فیلتر خانواده‌ی کلودفلر رد می‌شود.</div></div>
+              <label class="switch"><input type="checkbox" id="ufBlockAdult" /><span class="tr"></span></label>
+            </div>
+            <div class="switch-row">
+              <div><div class="t">مسدودسازی تبلیغات اینترنتی</div><div class="d">DNS این کاربر از AdGuard رد می‌شود تا دامنه‌های تبلیغاتی و ردیاب‌ها جواب نگیرند.</div></div>
+              <label class="switch"><input type="checkbox" id="ufBlockAds" checked /><span class="tr"></span></label>
+            </div>
         </div>
 
         <div class="mpage" data-mpage="net">
-          <div class="fg">
-            <label for="ufIps">آی‌پی‌های تمیزی که در اشتراک این کاربر می‌آیند</label>
-            <textarea class="field ltr" id="ufIps" readonly rows="4"></textarea>
-            <span class="hint">این فهرست برای همه‌ی کاربرها از تنظیمات پنل می‌آید؛ ترتیب آی‌پی‌ها هر ساعت به‌صورت خودکار روی سرور می‌چرخد. برای عوض کردنش از دکمه‌ی زیر اسکنر را باز کنید یا در تنظیمات، فهرست آی‌پی تمیز را ویرایش کنید.</span>
-          </div>
-          <div class="row-btns">
-            <button class="btn-mini" type="button" id="ufScan">باز کردن اسکنر آی‌پی</button>
-          </div>
-          <div class="fg" style="margin-top:.9rem">
-            <label>پورت‌های اشتراک</label>
-            <div class="chiprow" id="ufPorts" style="margin-top:0"></div>
-            <span class="hint">پورت ۴۴۳ همیشه هست؛ ۸۴۴۳ و ۲۰۵۳ از تنظیمات پنل روشن و خاموش می‌شوند.</span>
-          </div>
+            <div class="fg"><label>پورت‌های TLS</label>
+              <div class="pchips" id="ufPortsTls">
+                <button type="button" class="pchip" data-p="443">443</button>
+                <button type="button" class="pchip" data-p="2053">2053</button>
+                <button type="button" class="pchip" data-p="2083">2083</button>
+                <button type="button" class="pchip" data-p="2087">2087</button>
+                <button type="button" class="pchip" data-p="2096">2096</button>
+                <button type="button" class="pchip" data-p="8443">8443</button>
+              </div>
+              <span class="hint">برای هر پورت و هر آی‌پی تمیز، یک لینک جدا ساخته می‌شود.</span>
+            </div>
+            <div class="fg" style="margin-top:.9rem"><label>پورت‌های بدون TLS</label>
+              <div class="pchips" id="ufPortsPlain">
+                <button type="button" class="pchip plain" data-p="80">80</button>
+                <button type="button" class="pchip plain" data-p="8080">8080</button>
+                <button type="button" class="pchip plain" data-p="8880">8880</button>
+                <button type="button" class="pchip plain" data-p="2052">2052</button>
+                <button type="button" class="pchip plain" data-p="2082">2082</button>
+                <button type="button" class="pchip plain" data-p="2086">2086</button>
+                <button type="button" class="pchip plain" data-p="2095">2095</button>
+              </div>
+              <span class="hint">اتصال بدون TLS روی این پورت‌ها ردوبدل می‌شود؛ فقط وقتی لازم شد روشنشان کنید.</span>
+            </div>
+            <div class="fg" style="margin-top:.9rem"><label for="ufPortsCustom">پورت‌های دلخواه</label><input class="field ltr" id="ufPortsCustom" placeholder="8443 2083" /><span class="hint">با فاصله جدا کنید؛ فقط پورت‌هایی از فهرست مجاز کلودفلر قبول می‌شوند و خودکار به چیپ‌های بالا اضافه می‌شوند.</span></div>
+            <div class="fg" style="margin-top:.9rem"><label for="ufIps">آی‌پی‌های تمیز مخصوص این کاربر — خالی = پیش‌فرض پنل</label><textarea class="field ltr" id="ufIps" rows="3" placeholder="104.18.0.1"></textarea><span class="hint">هر خط یا با کاما جدا کنید؛ فقط برای همین کاربر استفاده می‌شود.</span></div>
+            <div class="row-btns">
+              <button class="btn-mini" type="button" id="ufScan">اسکنر آی‌پی</button>
+              <button class="btn-mini" type="button" id="ufIpReset">برگرداندن آی‌پی‌های پیش‌فرض پنل</button>
+            </div>
+            <div class="switch-row">
+              <div><div class="t">تعویض خودکار آی‌پی</div><div class="d">ترتیب آی‌پی‌های تمیز در اشتراک این کاربر هر ساعت می‌چرخد؛ خاموشش کنید تا ترتیب همیشه ثابت بماند.</div></div>
+              <label class="switch"><input type="checkbox" id="ufRotate" checked /><span class="tr"></span></label>
+            </div>
+            <details class="xrow">
+              <summary>فرگمنت (ضد DPI)<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="xbody">
+                <div class="fg"><label for="ufFrag">پیش‌فرض اپراتور برای این کاربر</label>
+                  <select class="field" id="ufFrag">
+                    <option value="">پیش‌فرض پنل</option>
+                    <option value="mci">همراه اول</option>
+                    <option value="irancell">ایرانسل</option>
+                    <option value="rightel">رایتل</option>
+                    <option value="tci">مخابرات</option>
+                    <option value="game">گیمینگ (کمترین تیکه‌تیکه)</option>
+                  </select>
+                  <span class="hint">فقط روی اشتراک سینگ‌باکس/هیدیفای این کاربر اعمال می‌شود.</span>
+                </div>
+              </div>
+            </details>
+            <details class="xrow">
+              <summary>ECH<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <div class="xbody">
+                <div class="fg"><label for="ufEch">وضعیت ECH برای این کاربر</label>
+                  <select class="field" id="ufEch">
+                    <option value="">پیش‌فرض پنل</option>
+                    <option value="on">روشن</option>
+                    <option value="off">خاموش</option>
+                  </select>
+                  <span class="hint">ECH اسم واقعی سرور را داخل TLS قایم می‌کند؛ روی اشتراک سینگ‌باکس اعمال می‌شود.</span>
+                </div>
+              </div>
+            </details>
+            <p class="sub" style="margin:.9rem 0 0">⚠️ تنظیمات این تب روی پروتکل Shadowsocks اعمال نمی‌شوند؛ شدوساکس همیشه روی پورت ۴۴۳ با TLS می‌آید.</p>
         </div>
 
-        <div class="mpage" data-mpage="adv">
-          <div class="grid2">
-            <div class="fg">
-              <label for="ufFrag">فرگمنت ضدفیلتر این کاربر</label>
-              <select class="field" id="ufFrag">
-                <option value="">پیش‌فرض پنل</option>
-                <option value="mci">همراه اول</option>
-                <option value="irancell">ایرانسل</option>
-                <option value="rightel">رایتل</option>
-                <option value="tci">مخابرات</option>
-                <option value="game">گیمینگ</option>
-              </select>
-              <span class="hint">روی اشتراک سینگ‌باکس و Xray همین کاربر اعمال می‌شود.</span>
+          <div class="mpage" data-mpage="proxy">
+            <div class="fg"><label>تست اتصال مستقیم</label>
+              <div class="upbox" style="margin-top:0">
+                <div class="upbox-row"><span class="plab">پینگ شما تا کلودفلر</span><span class="vdiv"></span><span class="ltr" id="ufPingUser" style="font-weight:800">—</span></div>
+                <div class="upbox-row sep"><span class="plab">پینگ کلودفلر تا اینترنت آزاد</span><span class="vdiv"></span><span class="ltr" id="ufPingCf" style="font-weight:800">—</span></div>
+              </div>
+              <span class="hint">عدد اول از همین مرورگر و روی اینترنت خودتان اندازه گرفته می‌شود؛ عدد دوم را خود ورکر پنل با یک درخواست واقعی می‌سنجد.</span>
             </div>
-            <div class="fg">
-              <label for="ufEch">ECH این کاربر</label>
-              <select class="field" id="ufEch">
-                <option value="">پیش‌فرض پنل</option>
-                <option value="1">روشن</option>
-                <option value="0">خاموش</option>
-              </select>
+            <div class="row-btns">
+              <button class="btn-mini" type="button" id="ufDirectTest">گرفتن تست اتصال</button>
             </div>
+            <div class="msec">پروکسی خروجی ثابت</div>
+            <p class="sub" style="margin:0 0 .8rem">حالت پیش‌فرض «اتصال مستقیم» است: ترافیک کاربر صاف از ورکر رد می‌شود. اگر این‌جا یک پروکسی SOCKS5 یا HTTP بنویسید، اشتراک سینگ‌باکس این کاربر خروجی‌اش را از همان پروکسی رد می‌کند تا آی‌پی خروجی‌اش ثابت بماند.</p>
+            <div class="fg"><label for="ufProxyUrl">آدرس پروکسی</label><input class="field ltr" id="ufProxyUrl" placeholder="socks5://user:pass@1.2.3.4:1080" /><span class="hint">قالب: socks5:// یا http:// — با یوزر و پسورد هم می‌شود. زنجیره فقط داخل اشتراک سینگ‌باکس و Clash این کاربر ساخته می‌شود.</span></div>
+            <div class="row-btns">
+              <button class="btn-mini" type="button" id="ufProxyTest">تست پروکسی</button>
+              <span class="sub" id="ufProxyResult" style="margin:0"></span>
+            </div>
+            <p class="sub" style="margin:.9rem 0 0">تست پروکسی یعنی ورکر پنل به درگاه پروکسی وصل می‌شود و زمانش را می‌سنجد (برای SOCKS5 دست‌دادن پروتکل هم چک می‌شود)؛ ترافیکی از پروکسی رد نمی‌شود.</p>
           </div>
-        </div>
 
         <div class="row-btns">
           <button class="btn-primary" type="submit">ثبت کاربر</button>
@@ -933,6 +1203,79 @@
       </div>
     </div>
 
+    <!-- ===== IP SCANNER MODAL ===== -->
+    <div class="modal-veil" id="scanModal" role="dialog" aria-modal="true" style="z-index:70">
+      <div class="modal">
+        <h3>اسکنر آی‌پی تمیز</h3>
+        <p class="sub" style="color:var(--muted);font-size:.84rem;margin:0 0 .6rem;line-height:1.9">اسکن از اینترنت خودت انجام می‌شود: هر آی‌پی سه بار از همین مرورگر تست و میانه‌اش ثبت می‌شود؛ کشور ورودی را هم ورکر پنل از خود لبه‌ی کلودفلر می‌پرسد. آی‌پی مرده، مرده نشان داده می‌شود.</p>
+        <div class="toolbar">
+          <button class="btn-primary" id="scanBtnM" type="button">شروع اسکن</button>
+          <button class="btn-mini danger" id="scanCancelM" type="button" style="display:none">لغو اسکن</button>
+          <span class="sub" id="scanStateM" style="margin:0"></span>
+        </div>
+        <div class="prog"><i id="scanProgM"></i></div>
+        <div style="overflow-x:auto;max-height:46vh;overflow-y:auto">
+          <table class="ip-table">
+            <thead><tr><th>آی‌پی</th><th>تأخیر</th><th>کشور ورودی</th><th>وضعیت</th><th></th></tr></thead>
+            <tbody id="ipBodyM"></tbody>
+          </table>
+        </div>
+        <div class="mfoot">
+          <button class="btn-mini" id="scanAddAllM" type="button">افزودن همه‌ی زنده‌ها</button>
+          <span style="flex:1"></span>
+          <button class="btn-primary" id="scanCloseM" type="button">برگشت به فرم</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== QUICK BUILD MODAL ===== -->
+    <div class="modal-veil" id="quickModal" role="dialog" aria-modal="true">
+      <div class="modal">
+        <h3>ساخت کانفیگ سریع 🚀</h3>
+        <div class="qsteps">
+          <div class="qstep on" id="qs1">۱ · کشور ورودی</div>
+          <div class="qstep" id="qs2">۲ · اسکن و کاربر</div>
+          <div class="qstep" id="qs3">۳ · کانفیگ آماده</div>
+        </div>
+        <div id="qStep1">
+          <p class="sub" style="color:var(--muted);font-size:.84rem;margin:0;line-height:1.9">کشور ورودی را انتخاب کنید؛ اسکن از اینترنت خودتان آی‌پی‌هایی را پیدا می‌کند که لبه‌ی کلودفلرشان واقعاً در همان کشور جواب می‌دهد و سریع‌ترینشان اول کانفیگ می‌نشیند.</p>
+          <div class="cgrid" id="qGrid"></div>
+          <p class="sub" style="color:var(--muted);font-size:.78rem;margin:.9rem 0 0;line-height:1.9">پرچم فقط کشور «ورودی» است — همان‌جایی که اتصال وارد کلودفلر می‌شود و موقع اسکن اندازه گرفته شده؛ کشور خروجی تونل تضمینی نیست.</p>
+          <div class="mfoot">
+            <button class="btn-mini" id="qCancel" type="button">بستن</button>
+            <span style="flex:1"></span>
+            <button class="btn-primary" id="qScanGo" type="button">شروع اسکن و ساخت</button>
+          </div>
+        </div>
+        <div id="qStep2" style="display:none">
+          <div class="toolbar">
+            <button class="btn-mini danger" id="qScanCancel" type="button">لغو اسکن</button>
+            <span class="sub" id="qScanState" style="margin:0"></span>
+          </div>
+          <div class="prog"><i id="qProg"></i></div>
+          <div class="out-box" id="qFound" style="margin-bottom:.9rem">در حال اسکن…</div>
+          <div class="fg"><label for="qUser">کانفیگ برای کدام کاربر؟</label><select class="field" id="qUser"></select></div>
+          <div class="fg" style="margin-top:.8rem"><label for="qNewName">یا یک کاربر تازه بساز (نام)</label><input class="field" id="qNewName" placeholder="مثلاً: گوشی من" /><span class="hint">اگر این‌جا چیزی بنویسید، کاربر تازه با همین نام ساخته می‌شود و انتخاب بالا نادیده گرفته می‌شود.</span></div>
+          <div class="mfoot">
+            <button class="btn-mini" id="qBack" type="button">برگشت</button>
+            <span style="flex:1"></span>
+            <button class="btn-primary" id="qBuild" type="button">ساخت کانفیگ‌ها</button>
+          </div>
+        </div>
+        <div id="qStep3" style="display:none">
+          <div class="out-box" id="qSummary"></div>
+          <div id="qLinks"></div>
+          <div class="qr-wrap" id="qQrWrap"><div class="qr-in" id="qQrBox"></div></div>
+          <div class="mfoot">
+            <button class="btn-mini" id="qCopyAll" type="button">کپی همه‌ی لینک‌ها</button>
+            <button class="btn-mini" id="qQrBtn" type="button">QR اشتراک</button>
+            <span style="flex:1"></span>
+            <button class="btn-primary" id="qDone" type="button">تمام</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="toast" id="toast">کپی شد ✓</div>
 
     <script>
@@ -942,45 +1285,48 @@
       var W=0,H=0,t=0,raf=null,last=0;
       var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       function size(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;if(!raf)draw();}
-      function layer(yBase,amp,aMax,step,gap,phase,dir,rows){
-        var cols=Math.ceil(W/step)+2,pts=[],r,c;
-        for(r=0;r<rows;r++){
-          pts.push([]);
-          for(c=0;c<cols;c++){
-            var x=c*step-step,depth=r/(rows-1);
-            var y=yBase+dir*depth*gap*(rows-1)
-              +Math.sin(x*0.004+t*0.7+phase+depth*2.2)*amp*(0.35+depth)
-              +Math.cos(x*0.0016-t*0.45+phase*1.7)*amp*0.7*(0.3+depth);
-            pts[r].push([x,y,depth]);
-          }
-        }
-        for(r=0;r<rows;r++){
-          for(c=0;c<cols;c++){
-            var p0=pts[r][c],a=aMax*(0.18+0.82*p0[2]);
-            if(c<cols-1)seg(p0,pts[r][c+1],a);
-            if(r<rows-1)seg(p0,pts[r+1][c],a);
-          }
-        }
+      var STEP=26;
+      /* rolling terrain height field — ported from Radar_Wave_Bg, palette dimmed ~30%:
+         faint dark-blue threads up top, big terrain swell kept at the bottom */
+      function hgt(x,z,tt){
+        return Math.sin(x*0.010+tt*0.6+z*1.25)*0.55
+          +Math.sin(x*0.0042-tt*0.38+z*2.6)*0.75
+          +Math.sin((x*0.0021+z*3.4)-tt*0.22)*0.45;
       }
-      function seg(p0,p1,a){
-        ctx.strokeStyle='hsla(222,92%,62%,'+(a*0.35).toFixed(3)+')';ctx.lineWidth=2.6;
-        ctx.beginPath();ctx.moveTo(p0[0],p0[1]);ctx.lineTo(p1[0],p1[1]);ctx.stroke();
-        ctx.strokeStyle='hsla(222,92%,66%,'+a.toFixed(3)+')';ctx.lineWidth=1;
-        ctx.beginPath();ctx.moveTo(p0[0],p0[1]);ctx.lineTo(p1[0],p1[1]);ctx.stroke();
+      function field(horizon,extent,dir,tt){
+        var ROWS=26,r,p,persp,yBase,amp,alpha,x,y,cx,r2,p2,persp2,y2;
+        for(r=0;r<=ROWS;r++){
+          p=r/ROWS;persp=Math.pow(p,1.65);
+          yBase=horizon+dir*persp*extent;
+          amp=4+persp*30;
+          alpha=0.06+persp*0.40;
+          ctx.beginPath();
+          for(x=-STEP;x<=W+STEP;x+=STEP){
+            y=yBase+hgt(x,p*3.2,tt)*amp*dir;
+            if(x===-STEP)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+          }
+          ctx.strokeStyle='hsla(222,90%,62%,'+(alpha*0.5).toFixed(3)+')';ctx.lineWidth=3;ctx.stroke();
+          ctx.strokeStyle='hsla(222,90%,62%,'+alpha.toFixed(3)+')';ctx.lineWidth=1;ctx.stroke();
+        }
+        for(cx=0;cx<=W;cx+=STEP){
+          ctx.beginPath();
+          for(r2=0;r2<=ROWS;r2++){
+            p2=r2/ROWS;persp2=Math.pow(p2,1.65);
+            y2=horizon+dir*persp2*extent+hgt(cx,p2*3.2,tt)*(4+persp2*30)*dir;
+            if(r2===0)ctx.moveTo(cx,y2);else ctx.lineTo(cx,y2);
+          }
+          ctx.strokeStyle='hsla(222,90%,62%,0.11)';ctx.lineWidth=1;ctx.stroke();
+        }
       }
       function draw(){
         if(!W)size();
-        ctx.fillStyle='#04070f';ctx.fillRect(0,0,W,H);
-        var step=W<520?30:36;
-        layer(H*0.02,H*0.05,0.16,step,12,3.1,1,4);
-        layer(H*0.15,H*0.05,0.55,step,12,0,-1,14);
-        layer(H*0.52,H*0.035,0.10,step,14,1.3,1,8);
-        layer(H*0.86,H*0.055,0.55,step,12,2.4,1,14);
-        layer(H*1.0,H*0.05,0.16,step,12,5.2,-1,4);
+        ctx.fillStyle='#010207';ctx.fillRect(0,0,W,H);
+        field(H*0.44,H*0.60,-1,t);
+        field(H*0.56,H*0.62,1,t);
       }
       function loop(now){
         raf=requestAnimationFrame(loop);
-        if(now-last<33)return;
+        if(now-last<50)return;
         last=now;t+=0.016;draw();
       }
       function running(){
@@ -1059,22 +1405,24 @@
       };
     }
     function cfgCount(u){
-      // same arithmetic the worker's buildLinks uses for the text sub
+      // mirrors the worker's buildLinks arithmetic for the text sub:
+      // entry-IP variants ride on the first TLS port only; the other
+      // ports and the plain ports are worker-host entries.
       var P=userProtosOf(u),n=0;
       var ipCount=settings?(settings.ipCount==null?3:settings.ipCount):3;
-      if(P.vl){
-        n+=1+ipCount;
-        if(!settings||settings.p8443)n+=1;
-        if(!settings||settings.p2053)n+=1;
-      }
-      if(P.tr&&u.trjPass)n+=ipCount>0?2:1;
-      if(P.ss&&u.ssPass)n+=ipCount>0?2:1;
+      var cleanN=(u.cleanIps&&u.cleanIps.length)?u.cleanIps.length:((settings&&settings.cleanIps&&settings.cleanIps.length)?settings.cleanIps.length:8);
+      var ipsN=1+Math.min(cleanN,ipCount);
+      var tPorts=portsOf(u),pPorts=(u.portsPlain&&u.portsPlain.length)?u.portsPlain:[];
+      if(P.vl)n+=ipsN+(tPorts.length-1)+pPorts.length;
+      if(P.tr&&u.trjPass)n+=tPorts.length+(cleanN>0?1:0)+pPorts.length;
+      if(P.ss&&u.ssPass)n+=1+(cleanN>0?1:0);
       return n;
     }
-    function portsOf(){
-      var out=['443'];
-      if(!settings||settings.p8443)out.push('8443');
-      if(!settings||settings.p2053)out.push('2053');
+    function portsOf(u){
+      if(u&&u.portsTls&&u.portsTls.length)return u.portsTls.slice();
+      var out=[443];
+      if(!settings||settings.p8443)out.push(8443);
+      if(!settings||settings.p2053)out.push(2053);
       return out;
     }
     function userBlockedUi(u){
@@ -1151,6 +1499,7 @@
     /* ============ users ============ */
     var editingId=null;
     function expiryText(u){
+      if(u.startOnConnect&&!u.startedAt)return 'شروع نشده — از اولین اتصال ('+faNum(u.daysTotal||0)+' روز)';
       if(!u.expireAt)return 'انقضا: بی‌نهایت';
       var left=Math.ceil((u.expireAt-Date.now())/86400000);
       return left>0?('انقضا: '+faNum(left)+' روز دیگر'):('منقضی شده');
@@ -1265,12 +1614,18 @@
         $('userFormTitle').textContent='ویرایش کاربر';
         $('ufName').value=u.name;
         $('ufLimit').value=u.quotaBytes?gb(u.quotaBytes):0;
-        $('ufDays').value=u.expireAt?Math.max(0,Math.ceil((u.expireAt-Date.now())/86400000)):0;
+        $('ufDays').value=(u.startOnConnect&&!u.startedAt)?(u.daysTotal||0):(u.expireAt?Math.max(0,Math.ceil((u.expireAt-Date.now())/86400000)):0);
         var P=(u.protos&&typeof u.protos==='object')?{vl:u.protos.vl!==0&&u.protos.vl!==false,tr:u.protos.tr!==0&&u.protos.tr!==false,ss:u.protos.ss!==0&&u.protos.ss!==false}:{vl:true,tr:true,ss:true};
         $('ufP_vl').checked=P.vl;$('ufP_tr').checked=P.tr;$('ufP_ss').checked=P.ss;
-        $('ufFrag').value=u.fragIsp||'';
-        $('ufEch').value=u.ech===true?'1':(u.ech===false?'0':'');
-        fillModalNet();
+        $('ufStartConn').checked=!!u.startOnConnect;
+        $('ufFp').value=u.fp||'unsafe';
+        $('ufMaxConn').value=u.maxConn||0;
+        $('ufRenew').value=u.renewDays||0;
+        $('ufBlockAdult').checked=!!u.blockAdult;
+        $('ufBlockAds').checked=u.blockAds!==false&&u.blockAds!==0?!!u.blockAds:false;
+        $('ufProxyUrl').value=u.proxyUrl||'';
+        $('ufProxyResult').textContent='';
+        fillModalNet(u);
         setMtab('spec');
         $('userModal').classList.add('open');
         return;
@@ -1298,11 +1653,18 @@
     document.querySelectorAll('.mtab').forEach(function(t){
       t.addEventListener('click',function(){setMtab(t.dataset.mtab);});
     });
-    function fillModalNet(){
-      var ips=effIps();
+    function fillModalNet(u){
+      var tls=(u&&u.portsTls&&u.portsTls.length)?u.portsTls:globalTlsPorts();
+      var plain=(u&&u.portsPlain)?u.portsPlain:[];
+      setChips('ufPortsTls',tls);
+      setChips('ufPortsPlain',plain);
+      $('ufPortsCustom').value='';
+      var ips=(u&&u.cleanIps&&u.cleanIps.length)?u.cleanIps:effIps();
       if(!ips.length&&window.__defIps)ips=window.__defIps;
       $('ufIps').value=ips.join('\n');
-      $('ufPorts').innerHTML=portsOf().map(function(p){return '<span class="chip port ltr">'+p+'</span>';}).join(' ');
+      $('ufRotate').checked=!(u&&u.rotateIp===false);
+      $('ufFrag').value=(u&&u.fragIsp)||'';
+      $('ufEch').value=u?(u.ech===true?'1':(u.ech===false?'0':'')):'';
     }
     $('ufRandom').addEventListener('click',function(){
       var words=['rad','gol','abr','saba','tara','mahi','dera','nava','rud','mehr'];
@@ -1312,17 +1674,26 @@
     document.querySelectorAll('#ufChips button').forEach(function(b){
       b.addEventListener('click',function(){$('ufLimit').value=b.dataset.gb;});
     });
-    $('ufScan').addEventListener('click',function(){
-      $('userModal').classList.remove('open');gotoTab('tools');
+    $('ufScan').addEventListener('click',function(){openScanModal();});
+    $('ufIpReset').addEventListener('click',function(){
+      var ips=effIps();
+      if(!ips.length&&window.__defIps)ips=window.__defIps;
+      $('ufIps').value=ips.join('\n');
+      toast('آی‌پی‌های پیش‌فرض پنل برگشت');
     });
     $('addUserBtn').addEventListener('click',function(){
       editingId=null;$('userFormTitle').textContent='ساخت کاربر جدید';
-      $('userForm').reset();$('ufLimit').value=0;$('ufDays').value=0;
+      $('userForm').reset();$('ufLimit').value=0;$('ufDays').value=30;
       $('ufP_vl').checked=true;
       $('ufP_tr').checked=!settings||!!settings.protoTrj;
       $('ufP_ss').checked=!settings||!!settings.protoSS;
-      $('ufFrag').value='';$('ufEch').value='';
-      fillModalNet();
+      $('ufStartConn').checked=false;
+      $('ufFp').value='unsafe';
+      $('ufMaxConn').value=0;$('ufRenew').value=0;
+      $('ufBlockAdult').checked=false;$('ufBlockAds').checked=true;
+      $('ufProxyUrl').value='';$('ufProxyResult').textContent='';
+      $('ufPingUser').textContent='—';$('ufPingCf').textContent='—';
+      fillModalNet(null);
       setMtab('spec');
       $('userModal').classList.add('open');
     });
@@ -1335,7 +1706,23 @@
       var protos={vl:$('ufP_vl').checked,tr:$('ufP_tr').checked,ss:$('ufP_ss').checked};
       if(!protos.vl&&!protos.tr&&!protos.ss){toast('دست‌کم یک پروتکل را روشن کنید');setMtab('spec');return;}
       var echV=$('ufEch').value;
-      var payload={name:name,quotaGB:quotaGB,days:days,protos:protos,fragIsp:$('ufFrag').value,ech:echV==='1'?true:(echV==='0'?false:null)};
+      var tlsSel=chipsOf('ufPortsTls'),plainSel=chipsOf('ufPortsPlain');
+      $('ufPortsCustom').value.split(/[\s,]+/).forEach(function(s){
+        var p=parseInt(s,10);if(!p)return;
+        if(TLS_SET.indexOf(p)>=0&&tlsSel.indexOf(p)<0)tlsSel.push(p);
+        if(PLAIN_SET.indexOf(p)>=0&&plainSel.indexOf(p)<0)plainSel.push(p);
+      });
+      if(!tlsSel.length){toast('دست‌کم یک پورت TLS انتخاب کنید');setMtab('net');return;}
+      var gTls=globalTlsPorts();
+      var portsTls=(tlsSel.slice().sort(function(a,b){return a-b;}).join()===gTls.slice().sort(function(a,b){return a-b;}).join())?[]:tlsSel;
+      var ipList=$('ufIps').value.split(/[\n,]+/).map(function(x){return x.trim();}).filter(Boolean);
+      var gIps=effIps();
+      var cleanIps=(ipList.join()===gIps.join())?[]:ipList;
+      var payload={name:name,quotaGB:quotaGB,days:days,protos:protos,fragIsp:$('ufFrag').value,ech:echV==='1'?true:(echV==='0'?false:null),
+        startOnConnect:$('ufStartConn').checked,fp:$('ufFp').value,maxConn:+$('ufMaxConn').value||0,renewDays:+$('ufRenew').value||0,
+        blockAdult:$('ufBlockAdult').checked,blockAds:$('ufBlockAds').checked,
+        portsTls:portsTls,portsPlain:plainSel,cleanIps:cleanIps,rotateIp:$('ufRotate').checked,
+        proxyUrl:$('ufProxyUrl').value.trim()};
       var p;
       if(editingId){
         payload.uuid=editingId;
@@ -1477,62 +1864,160 @@
     $('statsTgl').addEventListener('change',syncChev);
     syncChev();
 
-    /* ============ tools: IP scanner ============ */
-    var CANDIDATES=['188.114.96.1','188.114.97.1','188.114.98.1','188.114.99.1','162.159.192.1','162.159.193.1','104.16.0.1','172.64.0.1'];
-    function renderIpRows(results){
-      var tb=$('ipBody');tb.innerHTML='';
-      CANDIDATES.forEach(function(ip){
-        var r=results&&results[ip];
-        var tr=document.createElement('tr');
-        var msHtml='<span class="ms bad">—</span>',st='در انتظار';
-        if(r){
-          if(r.ok){var cls=r.ms<250?'good':(r.ms<600?'mid':'bad');msHtml='<span class="ms '+cls+' ltr">'+r.ms+' ms</span>';st='پاسخ داد';}
-          else{msHtml='<span class="ms bad">ناموفق</span>';st='بدون پاسخ';}
-        }
-        tr.innerHTML='<td class="ltr" style="text-align:left">'+ip+'</td><td>'+msHtml+'</td><td>'+st+'</td>';
-        var td=document.createElement('td');
-        if(r&&r.ok){
-          var b=document.createElement('button');b.className='btn-mini';b.type='button';b.textContent='استفاده در تنظیمات';
-          b.addEventListener('click',function(){
-            var cur=$('sCleanIp').value.split(/[,\n]+/).map(function(x){return x.trim();}).filter(Boolean);
-            if(cur.indexOf(ip)<0)cur.push(ip);
-            $('sCleanIp').value=cur.join(', ');
-            $('bHost').value=ip;buildConfig();
-            toast('آی‌پی '+ip+' به لیست تنظیمات اضافه شد — «ذخیره‌ی تنظیمات» یادت نره');
-          });
-          td.appendChild(b);
-        }
-        tr.appendChild(td);tb.appendChild(tr);
-      });
+    /* ============ shared clean-IP scanner: browser latency + worker entry lookup ============ */
+    var SCAN_POOL=['104.16.0.1','104.17.0.1','104.18.0.1','104.19.0.1','104.20.0.1','104.21.0.1','104.22.0.1','104.23.0.1','104.24.0.1','104.25.0.1','104.26.0.1','104.27.0.1','104.28.0.1','104.29.0.1','104.30.0.1','104.31.0.1','172.64.0.1','172.64.32.1','172.65.0.1','172.66.0.1','172.67.0.1','172.67.68.1','162.159.0.1','162.159.192.1','188.114.96.1','188.114.97.1','188.114.98.1','188.114.99.1','8.6.112.13','141.101.64.1','141.101.65.1','141.101.66.1','141.101.67.1','141.101.68.1','108.162.192.1','108.162.193.1','108.162.194.1','108.162.195.1','108.162.196.1','190.93.240.1','190.93.241.1','190.93.242.1','190.93.243.1','103.21.244.1','103.22.200.1','103.31.4.1','173.245.48.1','198.41.128.1'];
+    var geoCache={};
+    var scanCtx=null;
+    function flagOf(cc){
+      if(!cc||cc.length!==2)return '';
+      return String.fromCodePoint(127397+cc.charCodeAt(0))+String.fromCodePoint(127397+cc.charCodeAt(1));
     }
-    renderIpRows(null);
-    function pingIp(ip){
+    function scanCandidates(){
+      var out=[],seen={};
+      effIps().concat(window.__defIps||[]).concat(SCAN_POOL).forEach(function(ip){
+        if(ip&&!seen[ip]){seen[ip]=1;out.push(ip);}
+      });
+      return out;
+    }
+    function pingOnce(ip){
       return new Promise(function(res){
         var start=performance.now(),done=false;
         var ctl=new AbortController();
-        var to=setTimeout(function(){if(!done){done=true;res({ok:false});}},4000);
+        var to=setTimeout(function(){if(!done){done=true;try{ctl.abort();}catch(e){}res(null);}},3500);
         fetch('https://'+ip+'/cdn-cgi/trace',{mode:'no-cors',signal:ctl.signal,cache:'no-store'})
-          .then(function(){if(!done){done=true;clearTimeout(to);res({ok:true,ms:Math.round(performance.now()-start)});}})
-          .catch(function(){if(!done){done=true;clearTimeout(to);res({ok:true,ms:Math.round(performance.now()-start)});}});
+          .then(function(){if(!done){done=true;clearTimeout(to);res(Math.round(performance.now()-start));}})
+          .catch(function(){if(!done){done=true;clearTimeout(to);res(null);}});
       });
     }
-    $('scanBtn').addEventListener('click',function(){
-      effIps().forEach(function(ip){if(CANDIDATES.indexOf(ip)<0)CANDIDATES.push(ip);});
-      $('scanState').textContent='در حال تست از روی اینترنت شما…';
-      var results={},pending=CANDIDATES.length;
-      CANDIDATES.forEach(function(ip){
-        pingIp(ip).then(function(r){
-          results[ip]=r;pending--;
-          var sorted=CANDIDATES.slice().sort(function(a,b){
-            var ra=results[a],rb=results[b];
-            if(!ra)return 1;if(!rb)return -1;
-            if(ra.ok&&rb.ok)return ra.ms-rb.ms;return ra.ok?-1:1;
-          });
-          CANDIDATES.splice(0,CANDIDATES.length);sorted.forEach(function(x){CANDIDATES.push(x);});
-          renderIpRows(results);
-          if(!pending)$('scanState').textContent='اسکن تمام شد؛ سریع‌ترین آی‌پی بالای فهرست است.';
+    async function pingMedian(ip){
+      var vals=[];
+      for(var i=0;i<3;i++){var v=await pingOnce(ip);if(v!=null)vals.push(v);}
+      if(!vals.length)return null;
+      vals.sort(function(a,b){return a-b;});
+      return vals[Math.floor(vals.length/2)];
+    }
+    function geoFill(ips){
+      var todo=ips.filter(function(ip){return !(ip in geoCache);});
+      var chunks=[];
+      for(var i=0;i<todo.length;i+=20)chunks.push(todo.slice(i,i+20));
+      return chunks.reduce(function(p,ch){
+        return p.then(function(){
+          return api('/panel/api/ipscan?ips='+encodeURIComponent(ch.join(','))).then(function(d){
+            (d.results||[]).forEach(function(r){geoCache[r.ip]={colo:r.colo,loc:r.loc,ok:r.ok};});
+          }).catch(function(){ch.forEach(function(ip){geoCache[ip]={colo:'',loc:'',ok:false};});});
+        });
+      },Promise.resolve());
+    }
+    function scanSorted(results){
+      return Object.keys(results).sort(function(a,b){
+        var ra=results[a],rb=results[b];
+        if(ra==null&&rb==null)return 0;
+        if(ra==null)return 1;if(rb==null)return -1;
+        return ra-rb;
+      });
+    }
+    function renderScanRows(tbody,results,onAdd){
+      if(!tbody)return;
+      tbody.innerHTML='';
+      scanSorted(results).forEach(function(ip){
+        var ms=results[ip],g=geoCache[ip];
+        var tr=document.createElement('tr');
+        var msHtml,st,dot;
+        if(ms==null){msHtml='<span class="ms bad">ناموفق</span>';st='بدون پاسخ';dot='r';}
+        else{var cls=ms<250?'good':(ms<600?'mid':'bad');msHtml='<span class="ms '+cls+' ltr">'+faNum(ms)+' ms</span>';st='پاسخ داد';dot=ms<250?'g':(ms<600?'y':'r');}
+        var geoHtml=g?(g.loc?('<span title="کولو: '+g.colo+'">'+flagOf(g.coloLoc||g.loc)+' '+g.loc+(g.colo?' · '+g.colo:'')+'</span>'):'<span style="color:var(--faint)">نامشخص</span>'):'<span style="color:var(--faint)">…</span>';
+        tr.innerHTML='<td class="ltr" style="text-align:left">'+ip+'</td><td>'+msHtml+'</td><td>'+geoHtml+'</td><td><span class="sdot '+dot+'"></span> '+st+'</td>';
+        var td=document.createElement('td');
+        if(ms!=null){
+          var b=document.createElement('button');b.className='btn-mini';b.type='button';b.textContent='➕ افزودن';
+          b.addEventListener('click',function(){onAdd(ip);});
+          td.appendChild(b);
+        }
+        tr.appendChild(td);tbody.appendChild(tr);
+      });
+    }
+    function runScanner(opts){
+      // opts: {stateEl, progEl, tbody, onAdd, onDone}
+      var list=scanCandidates();
+      var results={},done=0,cancelled=false;
+      var run={cancel:function(){cancelled=true;}};
+      scanCtx=run;
+      if(opts.stateEl)opts.stateEl.textContent='اسکن از اینترنت خودت شروع شد…';
+      var idx=0;
+      async function worker(){
+        while(idx<list.length&&!cancelled){
+          var ip=list[idx++];
+          results[ip]=await pingMedian(ip);
+          done++;
+          if(opts.progEl)opts.progEl.style.width=Math.round(done/list.length*100)+'%';
+          if(opts.stateEl)opts.stateEl.textContent='در حال اسکن… '+faNum(done)+' از '+faNum(list.length);
+          if(opts.tbody)renderScanRows(opts.tbody,results,opts.onAdd);
+        }
+      }
+      var pool=[];
+      for(var i=0;i<8;i++)pool.push(worker());
+      Promise.all(pool).then(function(){
+        var alive=list.filter(function(ip){return results[ip]!=null;});
+        if(opts.stateEl)opts.stateEl.textContent=cancelled?'اسکن لغو شد.':'اسکن تمام شد؛ دارم کشور ورودی‌ها را از کلودفلر می‌پرسم…';
+        return geoFill(alive).then(function(){
+          if(opts.tbody)renderScanRows(opts.tbody,results,opts.onAdd);
+          if(opts.stateEl&&!cancelled)opts.stateEl.textContent='تمام شد — '+faNum(alive.length)+' آی‌پی زنده از '+faNum(list.length)+' تا؛ سریع‌ترین بالا است.';
+          if(opts.onDone)opts.onDone(results,cancelled);
         });
       });
+      return run;
+    }
+    function addIpToSettings(ip){
+      var cur=$('sCleanIp').value.split(/[,\n]+/).map(function(x){return x.trim();}).filter(Boolean);
+      if(cur.indexOf(ip)<0)cur.push(ip);
+      $('sCleanIp').value=cur.join(', ');
+      $('bHost').value=ip;buildConfig();
+      toast('آی‌پی '+ip+' به لیست تنظیمات اضافه شد — «ذخیره‌ی تنظیمات» یادت نره');
+    }
+    function addIpToUserForm(ip){
+      var cur=$('ufIps').value.split(/[\n,]+/).map(function(x){return x.trim();}).filter(Boolean);
+      if(cur.indexOf(ip)<0)cur.push(ip);
+      $('ufIps').value=cur.join('\n');
+      toast('آی‌پی '+ip+' به آی‌پی‌های این کاربر اضافه شد ✓');
+    }
+    var toolsScan=null;
+    $('scanBtn').addEventListener('click',function(){
+      if(toolsScan)toolsScan.cancel();
+      toolsScan=runScanner({stateEl:$('scanState'),progEl:$('scanProg'),tbody:$('ipBody'),onAdd:addIpToSettings});
+    });
+    $('scanCancel').addEventListener('click',function(){if(toolsScan)toolsScan.cancel();});
+    $('scanAddAll').addEventListener('click',function(){
+      var alive=Object.keys(geoCache).length||null;
+      var rows=$('ipBody').querySelectorAll('tr');
+      var added=0;
+      rows.forEach(function(tr){
+        var ip=tr.querySelector('td')?tr.querySelector('td').textContent.trim():'';
+        var btn=tr.querySelector('button');
+        if(ip&&btn){addIpToSettings(ip);added++;}
+      });
+      if(!added)toast('اول یک اسکن بگیرید تا آی‌پی زنده‌ای باشد');
+    });
+    var modalScan=null;
+    function openScanModal(){
+      $('scanModal').classList.add('open');
+      renderScanRows($('ipBodyM'),{},addIpToUserForm);
+    }
+    $('scanBtnM').addEventListener('click',function(){
+      if(modalScan)modalScan.cancel();
+      modalScan=runScanner({stateEl:$('scanStateM'),progEl:$('scanProgM'),tbody:$('ipBodyM'),onAdd:addIpToUserForm});
+    });
+    $('scanCancelM').addEventListener('click',function(){if(modalScan)modalScan.cancel();});
+    $('scanAddAllM').addEventListener('click',function(){
+      var added=0;
+      $('ipBodyM').querySelectorAll('tr').forEach(function(tr){
+        var ip=tr.querySelector('td')?tr.querySelector('td').textContent.trim():'';
+        if(ip&&tr.querySelector('button')){addIpToUserForm(ip);added++;}
+      });
+      if(!added)toast('اول یک اسکن بگیرید تا آی‌پی زنده‌ای باشد');
+    });
+    $('scanCloseM').addEventListener('click',function(){
+      if(modalScan)modalScan.cancel();
+      $('scanModal').classList.remove('open');
     });
 
     /* ============ tools: health + backup ============ */
@@ -1564,6 +2049,154 @@
         }catch(e){toast('فایل پشتیبان خوانا نیست');}
       };
       rd.readAsText(f);this.value='';
+    });
+
+
+    /* ============ user modal extras: port chips, month chips, tests ============ */
+    var TLS_SET=[443,2053,2083,2087,2096,8443],PLAIN_SET=[80,8080,8880,2052,2082,2086,2095];
+    function globalTlsPorts(){
+      var out=[443];
+      if(!settings||settings.p8443)out.push(8443);
+      if(!settings||settings.p2053)out.push(2053);
+      return out;
+    }
+    function setChips(id,selected){
+      document.querySelectorAll('#'+id+' .pchip').forEach(function(b){
+        b.classList.toggle('sel',selected.indexOf(+b.dataset.p)>=0);
+      });
+    }
+    function chipsOf(id){
+      var out=[];
+      document.querySelectorAll('#'+id+' .pchip.sel').forEach(function(b){out.push(+b.dataset.p);});
+      return out;
+    }
+    ['ufPortsTls','ufPortsPlain'].forEach(function(id){
+      document.querySelectorAll('#'+id+' .pchip').forEach(function(b){
+        b.addEventListener('click',function(){b.classList.toggle('sel');});
+      });
+    });
+    document.querySelectorAll('[data-months]').forEach(function(b){
+      b.addEventListener('click',function(){$('ufDays').value=b.dataset.months;});
+    });
+    $('ufDirectTest').addEventListener('click',function(){
+      $('ufPingUser').textContent='…';$('ufPingCf').textContent='…';
+      var t0=performance.now();
+      api('/panel/api/directtest').then(function(d){
+        $('ufPingUser').textContent=faNum(Math.round(performance.now()-t0))+' ms';
+        $('ufPingCf').textContent=d.ok?(faNum(d.ms)+' ms'):'خطا در سنجش ورکر';
+      }).catch(function(){
+        $('ufPingUser').textContent=faNum(Math.round(performance.now()-t0))+' ms';
+        $('ufPingCf').textContent='پاسخی نیامد';
+      });
+    });
+    $('ufProxyTest').addEventListener('click',function(){
+      var v=$('ufProxyUrl').value.trim();
+      if(!v){$('ufProxyResult').textContent='اول آدرس پروکسی را بنویسید';return;}
+      $('ufProxyResult').textContent='در حال تست…';
+      api('/panel/api/proxytest?url='+encodeURIComponent(v)).then(function(d){
+        $('ufProxyResult').textContent=d.ok?('✓ وصل شد — '+faNum(d.ms)+' میلی‌ثانیه ('+(d.stage==='socks5-handshake'?'دست‌دادن ساکس هم درست بود':'اتصال TCP')+')'):('✗ وصل نشد'+(d.error?' — '+d.error:''));
+      }).catch(function(e){$('ufProxyResult').textContent='✗ '+e.message;});
+    });
+
+    /* ============ quick build: country entry + scan + links ============ */
+    var Q_COUNTRIES=[['AE','امارات'],['AT','اتریش'],['AU','استرالیا'],['BG','بلغارستان'],['BR','برزیل'],['CA','کانادا'],['CH','سوئیس'],['CN','چین'],['DE','آلمان'],['FI','فنلاند'],['FR','فرانسه'],['GB','انگلیس'],['HK','هنگ‌کنگ'],['ID','اندونزی'],['IT','ایتالیا'],['JP','ژاپن'],['MY','مالزی'],['NZ','نیوزیلند'],['RO','رومانی'],['SG','سنگاپور'],['TH','تایلند'],['TR','ترکیه'],['US','آمریکا']];
+    var qCountry='',qIps=[],qScan=null,qLinks=[];
+    function qSetStep(n){
+      [1,2,3].forEach(function(i){
+        $('qStep'+i).style.display=i===n?'':'none';
+        var s=$('qs'+i);s.classList.toggle('on',i===n);s.classList.toggle('done',i<n);
+      });
+    }
+    function renderQGrid(){
+      $('qGrid').innerHTML='';
+      Q_COUNTRIES.forEach(function(c){
+        var b=document.createElement('button');b.type='button';b.className='ccell'+(qCountry===c[0]?' sel':'');
+        b.innerHTML='<div class="fl">'+flagOf(c[0])+'</div><div class="cc">'+c[0]+'</div><div style="font-size:.66rem;color:var(--muted)">'+c[1]+'</div>';
+        b.addEventListener('click',function(){qCountry=c[0];renderQGrid();});
+        $('qGrid').appendChild(b);
+      });
+    }
+    function qLinkFor(u,ip){
+      var H=effHost(),sni=H;
+      var fp=(u.fp&&u.fp!=='')?u.fp:effFp();
+      var port=(u.portsTls&&u.portsTls.length)?u.portsTls[0]:443;
+      var name=encodeURIComponent((effRemark()+' '+u.name).trim());
+      var ws='security=tls&sni='+sni+'&fp='+fp+'&type=ws&host='+sni+'&path='+encodeURIComponent(effPath());
+      var P=userProtosOf(u),out=[];
+      if(P.vl)out.push('vless://'+u.uuid+'@'+ip+':'+port+'?encryption=none&'+ws+'#'+name);
+      if(P.tr&&u.trjPass)out.push('trojan://'+encodeURIComponent(u.trjPass)+'@'+ip+':'+port+'?'+ws+'#'+name);
+      if(P.ss&&u.ssPass){
+        var cred=encodeURIComponent(btoa('aes-256-gcm:'+u.ssPass));
+        var plugin=encodeURIComponent('v2ray-plugin;mode=websocket;host='+sni+';path='+effPath()+';tls;mux=0');
+        out.push('ss://'+cred+'@'+ip+':443?plugin='+plugin+'#'+name);
+      }
+      return out;
+    }
+    function openQuick(){
+      qCountry='';qIps=[];qLinks=[];
+      renderQGrid();qSetStep(1);
+      var sel=$('qUser');
+      sel.innerHTML=state.users.map(function(u){return '<option value="'+u.uuid+'">'+u.name+'</option>';}).join('')||'<option value="">— هنوز کاربری نیست —</option>';
+      $('qNewName').value='';
+      $('quickModal').classList.add('open');
+    }
+    $('quickBtn').addEventListener('click',openQuick);
+    $('qCancel').addEventListener('click',function(){$('quickModal').classList.remove('open');});
+    $('qBack').addEventListener('click',function(){if(qScan)qScan.cancel();qSetStep(1);});
+    $('qDone').addEventListener('click',function(){$('quickModal').classList.remove('open');});
+    $('qScanGo').addEventListener('click',function(){
+      if(!qCountry){toast('اول یک کشور ورودی انتخاب کنید');return;}
+      qSetStep(2);
+      $('qFound').textContent='در حال اسکن از اینترنت خودتان…';
+      if(qScan)qScan.cancel();
+      qScan=runScanner({stateEl:$('qScanState'),progEl:$('qProg'),onDone:function(results){
+        var inCountry=Object.keys(results).filter(function(ip){return results[ip]!=null&&geoCache[ip]&&geoCache[ip].loc===qCountry;})
+          .sort(function(a,b){return results[a]-results[b];});
+        if(inCountry.length){
+          qIps=inCountry.slice(0,3);
+          $('qFound').textContent='✓ '+faNum(inCountry.length)+' آی‌پی با ورودی '+flagOf(qCountry)+' '+qCountry+' پیدا شد؛ سریع‌ترین‌ها: '+qIps.map(function(ip){return ip+' ('+faNum(results[ip])+'ms)';}).join(' · ');
+        }else{
+          var fastest=scanSorted(results).filter(function(ip){return results[ip]!=null;}).slice(0,3);
+          qIps=fastest;
+          $('qFound').textContent=fastest.length?('⚠️ هیچ آی‌پی زنده‌ای با ورودی '+qCountry+' پیدا نشد؛ به‌جایش سریع‌ترین‌های کلی گذاشته شد: '+fastest.map(function(ip){return ip+' ('+faNum(results[ip])+'ms)';}).join(' · ')):'✗ هیچ آی‌پی زنده‌ای پیدا نشد؛ اینترنت را چک کنید و دوباره اسکن بگیرید.';
+        }
+      }});
+    });
+    $('qScanCancel').addEventListener('click',function(){if(qScan)qScan.cancel();});
+    $('qBuild').addEventListener('click',function(){
+      if(!qIps.length){toast('هنوز آی‌پی اسکن‌شده‌ای نیست؛ اول اسکن را کامل کنید');return;}
+      var newName=$('qNewName').value.trim();
+      var proceed=function(u){
+        if(!u){toast('کاربری برای ساخت کانفیگ نیست');return;}
+        qLinks=[];
+        qIps.forEach(function(ip){qLinks=qLinks.concat(qLinkFor(u,ip));});
+        $('qSummary').textContent='کاربر: '+u.name+' · آی‌پی‌های اول کانفیگ: '+qIps.join(' · ')+' · لینک اشتراک کامل کاربر هم مثل همیشه از کارت خودش کپی می‌شود.';
+        var box=$('qLinks');box.innerHTML='';
+        qLinks.forEach(function(l){
+          var d=document.createElement('div');d.className='qlink';
+          var code=document.createElement('code');code.textContent=l;
+          var b=document.createElement('button');b.className='btn-mini';b.type='button';b.textContent='کپی';
+          b.addEventListener('click',function(){copyText(l,'لینک کپی شد ✓');});
+          d.appendChild(code);d.appendChild(b);box.appendChild(d);
+        });
+        $('qQrWrap').classList.remove('open');
+        qSetStep(3);
+      };
+      if(newName){
+        api('/panel/api/users',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:newName,quotaGB:0,days:0})})
+          .then(function(){return loadUsers();})
+          .then(function(){proceed(state.users.filter(function(x){return x.name===newName;})[0]||state.users[state.users.length-1]);})
+          .catch(function(e){toast(e.message);});
+      }else{
+        proceed(state.users.filter(function(x){return x.uuid===$('qUser').value;})[0]);
+      }
+    });
+    $('qCopyAll').addEventListener('click',function(){
+      if(qLinks.length)copyText(qLinks.join('\n'),'همه‌ی لینک‌ها کپی شد ✓');
+    });
+    $('qQrBtn').addEventListener('click',function(){
+      if(!qLinks.length)return;
+      var w=$('qQrWrap');w.classList.add('open');makeQr($('qQrBox'),qLinks[0]);
     });
 
     applyUiPrefs();
