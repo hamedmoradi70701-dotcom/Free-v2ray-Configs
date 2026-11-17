@@ -2,7 +2,7 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — trojan — 2203 configs
+# رادار — trojan — 2204 configs
 trojan://95621b8e-5cf7-4123-9df4-38d903054a1b@193.233.216.27:443?mode=gun&security=reality&pbk=1HzJEMaYCrx2QQhuLLkcFiE5r2NegGHTBzHu0Sk1iWs&fp=chrome&spx=%2F&type=grpc&serviceName=62eec6c16880&sni=www.garmin.com&sid=4e34d88e858485db#RU 🇷🇺 | رادار | 7DC891
 trojan://CH1uIwV42k@5.175.249.117:443?security=reality&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&host=www.namasha.com%2Cs45.namasha.com&headerType=http&fp=chrome&spx=%2F&type=tcp&sni=google.com&sid=9715efa856269398#DE 🇩🇪 | رادار | 146F2D
 trojan://dkp96mJVuj@5.175.249.117:443?security=reality&sni=google.com&fp=chrome&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&sid=9715efa856269398&spx=%2F&type=tcp&headerType=http&host=www.namasha.com%2Cs45.namasha.com#DE 🇩🇪 | رادار | 512385
@@ -838,6 +838,7 @@ trojan://8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239dbv025
 trojan://8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65ge-1239d0255272@185.44.76.188:443?security=tls#GB 🇬🇧 | رادار | 121A0B
 trojan://8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11ebf-b65e-1239d0255272@185.44.76.188:443?security=tls#GB 🇬🇧 | رادار | 8FA534
 trojan://8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5ab3ef0-b4ab-11eb-b65e-1239d0255272@185.44.76.188:443?security=tls#GB 🇬🇧 | رادار | 46739A
+trojan://8771fca3-242d-4c68-9fe3-db8c5ab4c86b@vegatu3-production.up.railway.app:443?path=%2Ftr%2F8771fca3-242d-4c68-9fe3-db8c5ab4c86b%3Fed%3D2048&type=ws&host=vegatu3-production.up.railway.app&security=tls&sni=vegatu3-production.up.railway.app&allowInsecure=0&alpn=h2%2Chttp%2F1.1&fp=firefox#SG 🇸🇬 | رادار | A5AFA9
 trojan://8771fca3-242d-4c68-9fe3-db8c5ab4c86b@vegatu3-production.up.railway.app:443?path=%2Ftr%2F8771fca3-242d-4c68-9fe3-db8c5ab4c86b&security=tls&alpn=http%2F1.1&insecure=0&host=vegatu3-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=vegatu3-production.up.railway.app#SG 🇸🇬 | رادار | 62E58F
 trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.21.71.249:443?security=tls&type=ws&sni=_acme-challenge.2go.cloudns.be&path=/&host=_acme-challenge.2go.cloudns.be#CA 🇨🇦 | رادار | 3E78C9
 trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.149.209:443?path=%2F&security=tls&host=_acme-challenge.2go.cloudns.be&type=ws&sni=_acme-challenge.2go.cloudns.be#CA 🇨🇦 | رادار | 4D2DBF

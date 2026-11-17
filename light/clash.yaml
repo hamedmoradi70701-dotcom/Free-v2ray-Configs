@@ -1726,18 +1726,6 @@ proxies:
     short-id: 1c3e8241a8743df9
   client-fingerprint: chrome
   network: tcp
-- name: "FI \U0001F1EB\U0001F1EE | رادار | 9E22E5"
-  server: 169.40.34.41
-  port: 443
-  type: vless
-  uuid: 622654a4-b666-000b-9260-fb717e05154f
-  udp: true
-  tls: true
-  reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: ''
-  client-fingerprint: chrome
-  network: tcp
 - name: "NL \U0001F1F3\U0001F1F1 | رادار | AFD4B0"
   server: 185.121.179.122
   port: 443
@@ -20137,6 +20125,19 @@ proxies:
   servername: djj.zjlo.top
   client-fingerprint: chrome
   network: tcp
+- name: "IR \U0001F1EE\U0001F1F7 | رادار | 16955E"
+  server: 109.94.164.115
+  port: 2070
+  type: vless
+  uuid: f6a9376f-87de-45c1-902f-05ab773ce333
+  udp: true
+  tls: true
+  servername: www.intel.com
+  reality-opts:
+    public-key: WZ0GmAztQy5OSLWgsYUW5VIZEaCiy_s-iILHB_i5gUo
+    short-id: bbba1d
+  client-fingerprint: chrome
+  network: tcp
 - name: "CA \U0001F1E8\U0001F1E6 | رادار | B7E92E"
   server: perplexity.com
   port: 443
@@ -20420,6 +20421,34 @@ proxies:
   port: 443
   type: vless
   uuid: XpnTeam-129
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: Xpnt5eam.global.ssl.fastly.net
+    mode: auto
+    x-padding-bytes: 100-1000
+- name: "US \U0001F1FA\U0001F1F8 | رادار | 44AAB2"
+  server: 167.82.64.7
+  port: 443
+  type: vless
+  uuid: XpnTeam-130
+  udp: true
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: Xpnt5eam.global.ssl.fastly.net
+    mode: auto
+    x-padding-bytes: 100-1000
+- name: "US \U0001F1FA\U0001F1F8 | رادار | BB6844"
+  server: 167.82.64.7
+  port: 443
+  type: vless
+  uuid: XpnTeam-131
   udp: true
   tls: true
   servername: cdn.akamai.steamstatic.com
@@ -74108,7 +74137,6 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 3C8FD0"
   - "DE \U0001F1E9\U0001F1EA | رادار | 1D5B92"
   - "FI \U0001F1EB\U0001F1EE | رادار | E45567"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 9E22E5"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AFD4B0"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 6F91FD"
   - "JP \U0001F1EF\U0001F1F5 | رادار | AA31A8"
@@ -75865,6 +75893,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | C4B138"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AD54E0"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 43DB6B"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 16955E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | B7E92E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 48BD2C"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 343380"
@@ -75888,6 +75917,8 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 540785"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2959E3"
   - "US \U0001F1FA\U0001F1F8 | رادار | E68C8A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 44AAB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BB6844"
   - "Global \U0001F310 | رادار | 8234D0"
   - "Global \U0001F310 | رادار | 4DF60F"
   - "Global \U0001F310 | رادار | 8D2765"
@@ -80265,7 +80296,6 @@ proxy-groups:
   - "DE \U0001F1E9\U0001F1EA | رادار | 3C8FD0"
   - "DE \U0001F1E9\U0001F1EA | رادار | 1D5B92"
   - "FI \U0001F1EB\U0001F1EE | رادار | E45567"
-  - "FI \U0001F1EB\U0001F1EE | رادار | 9E22E5"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AFD4B0"
   - "GB \U0001F1EC\U0001F1E7 | رادار | 6F91FD"
   - "JP \U0001F1EF\U0001F1F5 | رادار | AA31A8"
@@ -82022,6 +82052,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | C4B138"
   - "NL \U0001F1F3\U0001F1F1 | رادار | AD54E0"
   - "JP \U0001F1EF\U0001F1F5 | رادار | 43DB6B"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 16955E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | B7E92E"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 48BD2C"
   - "NL \U0001F1F3\U0001F1F1 | رادار | 343380"
@@ -82045,6 +82076,8 @@ proxy-groups:
   - "SG \U0001F1F8\U0001F1EC | رادار | 540785"
   - "US \U0001F1FA\U0001F1F8 | رادار | 2959E3"
   - "US \U0001F1FA\U0001F1F8 | رادار | E68C8A"
+  - "US \U0001F1FA\U0001F1F8 | رادار | 44AAB2"
+  - "US \U0001F1FA\U0001F1F8 | رادار | BB6844"
   - "Global \U0001F310 | رادار | 8234D0"
   - "Global \U0001F310 | رادار | 4DF60F"
   - "Global \U0001F310 | رادار | 8D2765"

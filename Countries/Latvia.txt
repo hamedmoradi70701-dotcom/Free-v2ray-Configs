@@ -2,11 +2,10 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — LATVIA (LV) — 4 configs
+# رادار — LATVIA (LV) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://5234b2b7-5e07-422c-8159-d62a676c00c6@138.124.180.137:443?flow=xtls-rprx-vision&fp=firefox&pbk=GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c&security=reality&sid=33acba1b&sni=www.apple.com&type=raw#LV 🇱🇻 | رادار | B55611
-vless://cebc5f19-18d9-48e6-9029-fb4b04caf393@45.38.143.210:30584?fp=chrome&pbk=2hV4TY2ygvQ7ISa5o4u_FUKXzlIhLgbsScE8M1h0m3Y&security=reality&sid=67ece882d65d0f1a&sni=m.vk.com&type=tcp#LV 🇱🇻 | رادار | D611CB
 vless://02fcc1a4-ee90-4970-8bbb-4ffaa8109d24@195.123.213.28:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo&security=reality&sid=5c256336e3b673fa&sni=www.cloudflare.com&type=raw#LV 🇱🇻 | رادار | 289D87
+vless://5234b2b7-5e07-422c-8159-d62a676c00c6@138.124.180.137:443?flow=xtls-rprx-vision&fp=firefox&pbk=GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c&security=reality&sid=33acba1b&sni=www.apple.com&type=raw#LV 🇱🇻 | رادار | B55611
 vless://93ffca4d-8049-4829-befd-0d836b874169@31.57.105.41:28941?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&flow=xtls-rprx-vision&encryption=mlkem768x25519plus.native.0rtt.QmGLWk38nIXyw9JJ4c7RtQhF-8hyY_vPDdgUxB7y_VE&security=reality&sni=www.filimo.com&fp=chrome&pbk=zKqLG9Axd0EtdmheNV4tZf3NaalxyCEDetYvFBy_eBM&sid=a19f72c4e83b605d&type=tcp&headerType=none#LV 🇱🇻 | رادار | E78CDB

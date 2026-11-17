@@ -167,7 +167,6 @@
         "DE 🇩🇪 | رادار | 3C8FD0",
         "DE 🇩🇪 | رادار | 1D5B92",
         "FI 🇫🇮 | رادار | E45567",
-        "FI 🇫🇮 | رادار | 9E22E5",
         "NL 🇳🇱 | رادار | AFD4B0",
         "GB 🇬🇧 | رادار | 6F91FD",
         "JP 🇯🇵 | رادار | AA31A8",
@@ -1874,6 +1873,7 @@
         "CH 🇨🇭 | رادار | C4B138",
         "NL 🇳🇱 | رادار | AD54E0",
         "JP 🇯🇵 | رادار | 43DB6B",
+        "IR 🇮🇷 | رادار | 16955E",
         "CA 🇨🇦 | رادار | B7E92E",
         "CA 🇨🇦 | رادار | 48BD2C",
         "NL 🇳🇱 | رادار | 343380",
@@ -6218,7 +6218,6 @@
         "DE 🇩🇪 | رادار | 3C8FD0",
         "DE 🇩🇪 | رادار | 1D5B92",
         "FI 🇫🇮 | رادار | E45567",
-        "FI 🇫🇮 | رادار | 9E22E5",
         "NL 🇳🇱 | رادار | AFD4B0",
         "GB 🇬🇧 | رادار | 6F91FD",
         "JP 🇯🇵 | رادار | AA31A8",
@@ -7925,6 +7924,7 @@
         "CH 🇨🇭 | رادار | C4B138",
         "NL 🇳🇱 | رادار | AD54E0",
         "JP 🇯🇵 | رادار | 43DB6B",
+        "IR 🇮🇷 | رادار | 16955E",
         "CA 🇨🇦 | رادار | B7E92E",
         "CA 🇨🇦 | رادار | 48BD2C",
         "NL 🇳🇱 | رادار | 343380",
@@ -14597,26 +14597,6 @@
           "enabled": true,
           "public_key": "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY",
           "short_id": "1c3e8241a8743df9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "FI 🇫🇮 | رادار | 9E22E5",
-      "server": "169.40.34.41",
-      "server_port": 443,
-      "uuid": "622654a4-b666-000b-9260-fb717e05154f",
-      "tls": {
-        "enabled": true,
-        "server_name": "169.40.34.41",
-        "reality": {
-          "enabled": true,
-          "public_key": "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY",
-          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -39522,6 +39502,26 @@
       "tls": {
         "enabled": true,
         "server_name": "djj.zjlo.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "IR 🇮🇷 | رادار | 16955E",
+      "server": "109.94.164.115",
+      "server_port": 2070,
+      "uuid": "f6a9376f-87de-45c1-902f-05ab773ce333",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "WZ0GmAztQy5OSLWgsYUW5VIZEaCiy_s-iILHB_i5gUo",
+          "short_id": "bbba1d"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
