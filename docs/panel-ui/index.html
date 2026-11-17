@@ -2,28 +2,72 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>__NAME__</title>
 <style>@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 *{box-sizing:border-box}
-body{font-family:Vazirmatn,Tahoma,system-ui;background:radial-gradient(1000px 600px at 85% -10%,#3b1470 0,transparent 60%),radial-gradient(800px 500px at 0% 110%,#241055 0,transparent 55%),linear-gradient(160deg,#150a2e,#0d0618);background-attachment:fixed;color:#F2EFFF;margin:0;padding:16px;min-height:100vh}
-.wrap{max-width:880px;margin:0 auto}h1{font-size:22px;margin:6px 0 2px}h1 .gold{color:#FFC24B}
-.card{background:rgba(255,255,255,.055);border:1px solid rgba(167,139,250,.28);border-radius:18px;padding:18px;margin:14px 0;backdrop-filter:blur(14px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
-.card b.t{font-size:16px;color:#E9E4FF}
-input,button,select,textarea{padding:10px;border-radius:10px;border:1px solid rgba(167,139,250,.35);background:rgba(13,6,24,.65);color:#fff;font-size:14px;font-family:inherit}
+:root{--v1:#8B5CF6;--v2:#6D28D9;--gold:#FFC24B;--grn:#2ecc71;--bg:#0d0618}
+body{font-family:Vazirmatn,Tahoma,system-ui;background:linear-gradient(160deg,#150a2e,#0d0618);color:#F2EFFF;margin:0;padding:18px 14px 30px;min-height:100vh;overflow-x:hidden}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:.5;z-index:-1;animation:drift 16s ease-in-out infinite alternate}
+.o1{width:480px;height:480px;background:#4c1d95;top:-160px;left:-120px}
+.o2{width:420px;height:420px;background:#7c2d12;bottom:-180px;right:-100px;animation-delay:-6s;opacity:.28}
+.o3{width:300px;height:300px;background:#1e3a8a;top:40%;left:55%;animation-delay:-11s;opacity:.3}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(50px,36px) scale(1.13)}}
+.grid{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(167,139,250,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 75%)}
+.wrap{max-width:920px;margin:0 auto}
+header{display:flex;align-items:center;gap:14px;margin:8px 2px 4px}
+.logo{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:30px;background:linear-gradient(135deg,rgba(139,92,246,.35),rgba(109,40,217,.12));border:1px solid rgba(167,139,250,.5);box-shadow:0 0 0 5px rgba(139,92,246,.12),0 10px 30px rgba(109,40,217,.45);animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(139,92,246,.12),0 10px 30px rgba(109,40,217,.45)}50%{box-shadow:0 0 0 9px rgba(139,92,246,.05),0 10px 34px rgba(109,40,217,.6)}}
+h1{font-size:23px;margin:0}
+header .sub2{font-size:12px;color:#B9B0E8;margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 4px}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(167,139,250,.25);border-radius:16px;padding:12px 14px;backdrop-filter:blur(12px)}
+.stat .n{font-size:21px;font-weight:800;background:linear-gradient(90deg,#fff,#cdbffb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .l{font-size:11px;color:#B9B0E8;margin-top:2px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));border:1px solid rgba(167,139,250,.3);border-radius:20px;padding:18px;margin:14px 0;backdrop-filter:blur(16px);box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.card b.t{font-size:16px;color:#E9E4FF;display:flex;align-items:center;gap:8px}
+input,button,select,textarea{padding:10px;border-radius:11px;border:1px solid rgba(167,139,250,.35);background:rgba(13,6,24,.65);color:#fff;font-size:14px;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--v1);box-shadow:0 0 0 3px rgba(139,92,246,.25)}
 textarea{width:100%;min-height:64px;resize:vertical}
-button{background:linear-gradient(135deg,#8B5CF6,#6D28D9);border:none;cursor:pointer;font-weight:bold;box-shadow:0 4px 18px rgba(139,92,246,.35)}
-button.red{background:linear-gradient(135deg,#e05252,#b03030)}button.gray{background:rgba(255,255,255,.12);box-shadow:none}
-button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303}
+button{background:linear-gradient(135deg,#8B5CF6,#6D28D9);border:none;cursor:pointer;font-weight:bold;box-shadow:0 4px 18px rgba(139,92,246,.35);transition:transform .12s,box-shadow .12s}
+button:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(139,92,246,.5)}
+button:active{transform:translateY(0)}
+button.red{background:linear-gradient(135deg,#e05252,#b03030);box-shadow:0 4px 16px rgba(224,82,82,.3)}
+button.gray{background:rgba(255,255,255,.12);box-shadow:none}
+button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303;box-shadow:0 4px 18px rgba(245,158,11,.35)}
 .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.row input,.row select{flex:1;min-width:110px}
-.user{border-top:1px solid rgba(167,139,250,.2);padding:12px 0}.user:first-child{border-top:none}
-.bar{height:9px;background:rgba(0,0,0,.4);border-radius:99px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,#8B5CF6,#2ecc71)}
-.meta{font-size:12px;color:#B9B0E8}.sub{font-size:11px;word-break:break-all;color:#9fd8ff}
-.small{padding:6px 10px;font-size:12px;margin:2px}
+.user{display:flex;gap:12px;border:1px solid rgba(167,139,250,.18);background:rgba(13,6,24,.35);border-radius:16px;padding:14px;margin:10px 0}
+.ava{width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;font-size:19px;font-weight:800;color:#fff;background:linear-gradient(135deg,#8B5CF6,#4c1d95);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.user .main{flex:1;min-width:0}
+.user .nm{font-weight:800;font-size:15px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-start:6px;vertical-align:middle}
+.on{background:var(--grn);box-shadow:0 0 8px var(--grn)}.off{background:#e05252}
+.bar{height:10px;background:rgba(0,0,0,.45);border-radius:99px;overflow:hidden;margin:8px 0 4px}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8B5CF6,#2ecc71);transition:width .5s ease}
+.bar i.hot{background:linear-gradient(90deg,#F59E0B,#e05252)}
+.meta{font-size:12px;color:#B9B0E8;line-height:1.9}
+.chip{display:inline-block;font-size:11px;padding:2px 9px;border-radius:99px;background:rgba(139,92,246,.16);border:1px solid rgba(167,139,250,.3);color:#d9d2ff;margin:2px 0 2px 6px}
+.chip.warn{background:rgba(224,82,82,.15);border-color:rgba(224,82,82,.45);color:#ffb4b4}
+.sub{font-size:11px;word-break:break-all;color:#9fd8ff;direction:ltr;text-align:left;background:rgba(0,0,0,.3);border-radius:9px;padding:6px 9px;margin:6px 0}
+.small{padding:6px 11px;font-size:12px;margin:2px;border-radius:9px}
+.acts{margin-top:8px;display:flex;flex-wrap:wrap;gap:2px}
 .chk{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(167,139,250,.25);padding:7px 10px;border-radius:99px;font-size:13px;cursor:pointer}
 .chk input{accent-color:#8B5CF6;width:16px;height:16px}
 .lbl{font-size:12px;color:#B9B0E8;display:block;margin:10px 0 4px}
 #b_qr{background:#fff;padding:8px;border-radius:12px;width:176px;margin:10px auto;display:none}
-.out{width:100%;min-height:56px;font-size:11px;word-break:break-all}</style>
+.out{width:100%;min-height:56px;font-size:11px;word-break:break-all}
+#toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,80px);background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:#fff;padding:10px 22px;border-radius:99px;font-size:13px;font-weight:bold;box-shadow:0 12px 34px rgba(0,0,0,.5);transition:transform .3s ease;z-index:99}
+#toast.show{transform:translate(-50%,0)}
+.empty{text-align:center;color:#B9B0E8;padding:26px 0;font-size:14px}
+</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script></head>
-<body><div class="wrap"><h1>__NAME__</h1>
-<div class="card"><b>کاربر تازه</b><div class="row" style="margin-top:10px">
+<body><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="grid"></div>
+<div class="wrap">
+<header><div class="logo">📡</div><div><h1>__NAME__</h1><div class="sub2">مدیریت کاربرها، کانفیگ‌ساز و تنظیمات ضدفیلتر — همه در یک جا</div></div></header>
+<div class="stats">
+<div class="stat"><div class="n" id="st_users">–</div><div class="l">👥 کاربرها</div></div>
+<div class="stat"><div class="n" id="st_active">–</div><div class="l">✅ فعال</div></div>
+<div class="stat"><div class="n" id="st_traffic">–</div><div class="l">📊 ترافیک کل (GB)</div></div>
+<div class="stat"><div class="n" id="st_conn">–</div><div class="l">🔌 اتصال‌ها</div></div>
+</div>
+<div class="card"><b class="t">➕ کاربر تازه</b><div class="row" style="margin-top:10px">
 <input id="n" placeholder="نام کاربر"><input id="g" type="number" placeholder="حجم (GB) — ۰ یعنی نامحدود">
 <input id="d" type="number" placeholder="روز — ۰ یعنی بی‌نهایت"><input id="t" placeholder="رمز تروجان (خالی = خودکار)">
 <button onclick="add()">➕ ساخت</button></div></div>
@@ -71,37 +115,50 @@ button.gold{background:linear-gradient(135deg,#FFC24B,#F59E0B);color:#231303}
 <textarea id="b_out" class="out" dir="ltr" readonly placeholder="کانفیگ ساخته‌شده اینجا میاد"></textarea>
 <div id="b_qr"></div>
 </div>
-<div class="card"><b>کاربرها</b>
+<div class="card"><b class="t">👥 کاربرها</b>
 <div style="margin:10px 0"><button class="small" onclick="backup()">⬇️ بکاپ کاربران</button>
 <button class="small" onclick="document.getElementById('bf').click()">⬆️ برگرداندن بکاپ</button>
 <input type="file" id="bf" accept=".json" style="display:none" onchange="imp(this)"></div>
 <div id="list">...</div></div></div>
+<div id="toast">✅ کپی شد</div>
 <script>
 const $=id=>document.getElementById(id);
 function gb(b){return b?(b/1073741824).toFixed(2):'0';}
+function faN(x){return Number(x).toLocaleString('fa-IR');}
+function relT(ts){if(!ts)return 'هنوز وصل نشده';const s=Math.floor((Date.now()-ts)/1000);
+ if(s<60)return 'همین الان';if(s<3600)return faN(Math.floor(s/60))+' دقیقه پیش';
+ if(s<86400)return faN(Math.floor(s/3600))+' ساعت پیش';return faN(Math.floor(s/86400))+' روز پیش';}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400);}
+function stats(us){$('st_users').textContent=faN(us.length);
+ $('st_active').textContent=faN(us.filter(u=>u.enabled).length);
+ $('st_traffic').textContent=gb(us.reduce((a,u)=>a+u.up+u.down,0));
+ $('st_conn').textContent=faN(us.reduce((a,u)=>a+(u.connections||0),0));}
 async function load(){const r=await fetch('/panel/api/users');const d=await r.json();
  if(!d.ok){$('list').textContent='خطا';return;}
- window._users=d.users;
+ window._users=d.users;stats(d.users);
  $('list').innerHTML=d.users.map(u=>{const used=u.up+u.down;const pct=u.quotaBytes?Math.min(100,used/u.quotaBytes*100):0;
   const exp=u.expireAt?new Date(u.expireAt).toLocaleDateString('fa-IR'):'بی‌نهایت';
+  const expSoon=u.expireAt&&(u.expireAt-Date.now())<3*864e5;
   const sub=location.origin+'/sub/'+u.subToken;
-  return '<div class="user"><b>'+u.name+'</b> <span class="meta">'+(u.enabled?'✅ فعال':'⛔ غیرفعال')+' | انقضا: '+exp+'</span>'
-  +'<div class="bar"><i style="width:'+pct+'%"></i></div>'
-  +'<div class="meta">مصرف: '+gb(used)+' GB از '+(u.quotaBytes?gb(u.quotaBytes)+' GB':'نامحدود')+' | UUID: '+u.uuid+'</div>'
-  +'<div class="meta">رمز تروجان: '+u.trjPass+' | رمز SS: '+(u.ssPass||'—')+' | اتصال‌ها: '+(u.connections||0)+'</div>'
+  const ini=(u.name||'?').trim().charAt(0)||'؟';
+  return '<div class="user"><div class="ava">'+ini+'</div><div class="main"><span class="nm">'+u.name+'</span><span class="dot '+(u.enabled?'on':'off')+'"></span>'
+  +'<div><span class="chip">📅 انقضا: '+exp+'</span>'+(expSoon?'<span class="chip warn">⏰ نزدیک انقضاست</span>':'')+'<span class="chip">🕐 آخرین اتصال: '+relT(u.lastSeen)+'</span><span class="chip">🔌 '+faN(u.connections||0)+' اتصال</span></div>'
+  +'<div class="bar"><i class="'+(pct>85?'hot':'')+'" style="width:'+pct+'%"></i></div>'
+  +'<div class="meta">مصرف: '+gb(used)+' GB از '+(u.quotaBytes?gb(u.quotaBytes)+' GB ('+faN(Math.round(pct))+'٪)':'نامحدود')+' | ⬆️ '+gb(u.up)+' | ⬇️ '+gb(u.down)+'</div>'
+  +'<div class="meta">UUID: '+u.uuid+'<br>رمز تروجان: '+u.trjPass+' | رمز SS: '+(u.ssPass||'—')+'</div>'
   +'<div class="sub">'+sub+'</div>'
-  +'<button class="small" onclick="cp(this,\''+sub+'\')">📋 کپی ساب</button>'
+  +'<div class="acts"><button class="small" onclick="cp(this,\''+sub+'\')">📋 کپی ساب</button>'
   +'<button class="small" onclick="editU(\''+u.uuid+'\')">✏️ ویرایش</button>'
   +'<a href="/my/'+u.subToken+'" target="_blank"><button class="small">👤 صفحه کاربر</button></a>'
   +'<button class="small" onclick="act(\'toggle\',\''+u.uuid+'\')">⏯ فعال/غیرفعال</button>'
   +'<button class="small" onclick="act(\'reset\',\''+u.uuid+'\')">♻️ صفرکردن مصرف</button>'
-  +'<button class="small red" onclick="act(\'delete\',\''+u.uuid+'\')">🗑 حذف</button></div>';}).join('')||'هنوز کاربری نیست';}
+  +'<button class="small red" onclick="act(\'delete\',\''+u.uuid+'\')">🗑 حذف</button></div></div></div>';}).join('')||'<div class="empty">هنوز کاربری نیست — از کارت بالا اولین کاربر رو بساز 🚀</div>';}
 async function add(){const body={name:$('n').value,quotaGB:$('g').value,days:$('d').value,trjPass:$('t').value};
  const r=await fetch('/panel/api/users',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});const j=await r.json().catch(()=>({}));
- if(r.ok){$('n').value='';load();}else alert('خطا در ساخت — کد: '+r.status+' — '+(j.error||''));}
+ if(r.ok){$('n').value='';toast('✅ کاربر ساخته شد');load();}else alert('خطا در ساخت — کد: '+r.status+' — '+(j.error||''));}
 async function act(action,uuid){if(action==='delete'&&!confirm('حذف شود؟'))return;
  await fetch('/panel/api/action',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,uuid})});load();}
-function cp(el,txt){navigator.clipboard.writeText(txt);el.textContent='✅ کپی شد';setTimeout(load,900);}
+function cp(el,txt){if(!txt)return;navigator.clipboard.writeText(txt);toast('✅ کپی شد');}
 function backup(){window.open('/panel/api/backup');}
 async function imp(inp){const f=inp.files[0];if(!f)return;const d=JSON.parse(await f.text());
  const r=await fetch('/panel/api/import',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)});
@@ -125,7 +182,7 @@ async function saveSettings(){const body={cleanIps:$('s_ips').value.split(/\n+/g
  ipCount:$('s_ipn').value,fragIsp:$('s_isp').value,p8443:$('s_p8443').checked,p2053:$('s_p2053').checked,
  protoTrj:$('s_trj').checked,protoSS:$('s_ss').checked,ech:$('s_ech').checked};
  const r=await fetch('/panel/api/settings',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
- const d=await r.json();alert(d.ok?'✅ تنظیمات ذخیره شد':'خطا در ذخیره');if(d.ok)loadSettings();}
+ const d=await r.json();if(d.ok){toast('✅ تنظیمات ذخیره شد');loadSettings();}else alert('خطا در ذخیره');}
 function fillBuilderUsers(){const sel=$('b_user');if(!sel)return;const cur=sel.value;
  sel.innerHTML=(window._users||[]).map(u=>'<option value="'+u.uuid+'">'+u.name+'</option>').join('');
  if(cur)sel.value=cur;}
