@@ -1,330 +1,118 @@
 {
- "generated_at": "2026-11-16T21:19:59Z",
+ "generated_at": "2026-11-17T15:23:44Z",
  "tools_ok": true,
  "minted": 2,
- "keys_active": 18,
- "tested": 40,
- "ok": 40,
+ "keys_active": 4,
+ "tested": 18,
+ "ok": 0,
  "results": [
   {
-   "ok": true,
-   "ms": 37,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.60:5279"
-  },
-  {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.121:500"
-  },
-  {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "MB1O37i8-j5tu892B-xO76p18R",
-   "endpoint": "8.6.112.161:7152"
-  },
-  {
-   "ok": true,
-   "ms": 76,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.237:3138"
-  },
-  {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.194:859"
-  },
-  {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9Hqx05p8-kr451zs0-5MG7k16p",
-   "endpoint": "8.6.112.31:3581"
-  },
-  {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.228.77",
-   "license": "1J93l4bt-379nH6XV-Bfp2358I",
-   "endpoint": "8.6.112.237:3138"
-  },
-  {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "1J93l4bt-379nH6XV-Bfp2358I",
-   "endpoint": "8.6.112.225:943"
-  },
-  {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "1J93l4bt-379nH6XV-Bfp2358I",
-   "endpoint": "8.6.112.161:7152"
-  },
-  {
-   "ok": true,
-   "ms": 77,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.121:903"
-  },
-  {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.168:934"
-  },
-  {
-   "ok": true,
-   "ms": 77,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "4XQ78f0v-4R671zVe-95d6y1zp",
-   "endpoint": "8.6.112.135:8319"
-  },
-  {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.162:987"
-  },
-  {
-   "ok": true,
-   "ms": 33,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.208:2408"
-  },
-  {
-   "ok": true,
-   "ms": 33,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "z0dN81W3-5Ot0T1s7-ixBN0839",
-   "endpoint": "8.6.112.96:4198"
-  },
-  {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.204:943"
-  },
-  {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.14:1074"
-  },
-  {
-   "ok": true,
-   "ms": 42,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9zc3uZ46-x6f405aZ-3419wSQu",
-   "endpoint": "8.6.112.132:908"
-  },
-  {
-   "ok": true,
-   "ms": 41,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.135:8319"
-  },
-  {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.230:1014"
-  },
-  {
-   "ok": true,
-   "ms": 44,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "DL148EQ6-iQ9602MP-y645HjA8",
-   "endpoint": "8.6.112.132:8854"
-  },
-  {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.120:878"
-  },
-  {
-   "ok": true,
-   "ms": 37,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.45:5279"
-  },
-  {
-   "ok": true,
-   "ms": 77,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "y169Kk5w-39UR86pY-h4s72qa3",
-   "endpoint": "8.6.112.27:942"
-  },
-  {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
-   "endpoint": "8.6.112.131:8886"
-  },
-  {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
-   "endpoint": "8.6.112.83:5956"
-  },
-  {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "1O8Qdb05-q17rP40Q-02Re1N5Y",
-   "endpoint": "8.6.112.96:4198"
-  },
-  {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
-   "endpoint": "8.6.112.113:864"
-  },
-  {
-   "ok": true,
-   "ms": 79,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
-   "endpoint": "8.6.112.132:8854"
-  },
-  {
-   "ok": true,
-   "ms": 37,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "76A9s4iH-Ia9L680j-9854fpnG",
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "I58R2eb6-U5Fr80u9-Vda5718P",
    "endpoint": "8.6.112.168:3476"
   },
   {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "U361f2qI-34R8lI5p-bi7Q208H",
-   "endpoint": "8.6.112.148:890"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "I58R2eb6-U5Fr80u9-Vda5718P",
+   "endpoint": "8.6.112.46:903"
   },
   {
-   "ok": true,
-   "ms": 77,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "U361f2qI-34R8lI5p-bi7Q208H",
-   "endpoint": "8.6.112.213:1014"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "I58R2eb6-U5Fr80u9-Vda5718P",
+   "endpoint": "8.6.112.146:942"
   },
   {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "U361f2qI-34R8lI5p-bi7Q208H",
-   "endpoint": "8.6.112.138:8886"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "H641Ie3C-Dg4G3v62-y2Q93Ud1",
+   "endpoint": "8.6.112.13:4177"
   },
   {
-   "ok": true,
-   "ms": 38,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.31:3581"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "H641Ie3C-Dg4G3v62-y2Q93Ud1",
+   "endpoint": "8.6.112.120:878"
   },
   {
-   "ok": true,
-   "ms": 34,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.168:934"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "H641Ie3C-Dg4G3v62-y2Q93Ud1",
+   "endpoint": "8.6.112.204:943"
   },
   {
-   "ok": true,
-   "ms": 39,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "9X4qi36F-qW9DE475-F5R08I6M",
-   "endpoint": "8.6.112.131:8886"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "c5698gFv-0bm48E1k-0Oo8m37g",
+   "endpoint": "8.6.112.217:864"
   },
   {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "c5698gFv-0bm48E1k-0Oo8m37g",
+   "endpoint": "8.6.112.90:955"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "c5698gFv-0bm48E1k-0Oo8m37g",
    "endpoint": "8.6.112.206:3854"
   },
   {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "8Oer97R3-43Lv6Et9-859t4dXj",
+   "endpoint": "8.6.112.217:864"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "8Oer97R3-43Lv6Et9-859t4dXj",
+   "endpoint": "8.6.112.45:5279"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "8Oer97R3-43Lv6Et9-859t4dXj",
+   "endpoint": "8.6.112.206:3854"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "l3T9K75o-Y5f7C18h-1ZXp863S",
+   "endpoint": "8.6.112.45:5279"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "l3T9K75o-Y5f7C18h-1ZXp863S",
+   "endpoint": "8.6.112.10:1701"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "l3T9K75o-Y5f7C18h-1ZXp863S",
    "endpoint": "8.6.112.152:942"
   },
   {
-   "ok": true,
-   "ms": 35,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "0P87s1zg-0IVm4r56-Zo2Q35t1",
-   "endpoint": "8.6.112.148:890"
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "e62m0EB7-896DBt7u-51zN6ld0",
+   "endpoint": "8.6.112.38:8319"
   },
   {
-   "ok": true,
-   "ms": 36,
-   "loc": "US",
-   "exit_ip": "104.28.196.79",
-   "license": "g49n73Cx-w4n5Xr98-G2le845E",
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "e62m0EB7-896DBt7u-51zN6ld0",
    "endpoint": "8.6.112.152:942"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "e62m0EB7-896DBt7u-51zN6ld0",
+   "endpoint": "8.6.112.31:3581"
   }
  ]
 }

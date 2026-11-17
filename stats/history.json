@@ -761,5 +761,446 @@
     "country_count": 51,
     "sources_ok": 32,
     "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T21:38:42.342508+00:00",
+    "verified_count": 1427,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T21:57:48.390195+00:00",
+    "verified_count": 1384,
+    "country_count": 53,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T22:22:49.039087+00:00",
+    "verified_count": 1428,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T22:41:55.628027+00:00",
+    "verified_count": 1386,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T23:00:14.914367+00:00",
+    "verified_count": 1537,
+    "country_count": 57,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T23:18:26.625517+00:00",
+    "verified_count": 1521,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T23:36:21.056351+00:00",
+    "verified_count": 1566,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-16T23:54:31.079332+00:00",
+    "verified_count": 1558,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T00:12:56.573663+00:00",
+    "verified_count": 1550,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T00:38:02.779139+00:00",
+    "verified_count": 1629,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T00:55:49.627560+00:00",
+    "verified_count": 1539,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T01:14:51.620481+00:00",
+    "verified_count": 1682,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T01:34:03.087896+00:00",
+    "verified_count": 1620,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T01:53:27.045922+00:00",
+    "verified_count": 1589,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T02:12:17.307441+00:00",
+    "verified_count": 1610,
+    "country_count": 57,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T02:30:49.198791+00:00",
+    "verified_count": 1634,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T02:49:34.703200+00:00",
+    "verified_count": 1555,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T03:23:21.764631+00:00",
+    "verified_count": 1543,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T03:39:40.266216+00:00",
+    "verified_count": 1547,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T03:55:14.772056+00:00",
+    "verified_count": 1500,
+    "country_count": 56,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T04:10:06.070496+00:00",
+    "verified_count": 1518,
+    "country_count": 58,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T04:25:13.003207+00:00",
+    "verified_count": 1520,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T04:40:47.951133+00:00",
+    "verified_count": 1560,
+    "country_count": 53,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T04:56:15.058196+00:00",
+    "verified_count": 1479,
+    "country_count": 52,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T05:11:58.179330+00:00",
+    "verified_count": 1485,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T05:27:53.679999+00:00",
+    "verified_count": 1405,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T05:43:22.225550+00:00",
+    "verified_count": 1437,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T05:59:35.373233+00:00",
+    "verified_count": 1359,
+    "country_count": 54,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T06:14:32.632554+00:00",
+    "verified_count": 1417,
+    "country_count": 55,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T06:29:56.823008+00:00",
+    "verified_count": 1346,
+    "country_count": 53,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T06:46:09.497765+00:00",
+    "verified_count": 1395,
+    "country_count": 52,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T07:02:12.550723+00:00",
+    "verified_count": 1269,
+    "country_count": 49,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T07:19:03.173743+00:00",
+    "verified_count": 1352,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T07:34:56.787330+00:00",
+    "verified_count": 1322,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T07:51:41.068195+00:00",
+    "verified_count": 1287,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T08:07:13.900347+00:00",
+    "verified_count": 1274,
+    "country_count": 53,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T08:23:02.190506+00:00",
+    "verified_count": 1254,
+    "country_count": 52,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T08:39:05.161939+00:00",
+    "verified_count": 1327,
+    "country_count": 52,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T08:55:10.556087+00:00",
+    "verified_count": 1315,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T09:11:08.767884+00:00",
+    "verified_count": 1184,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T09:26:56.867128+00:00",
+    "verified_count": 1167,
+    "country_count": 50,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T09:43:43.325263+00:00",
+    "verified_count": 1155,
+    "country_count": 48,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T09:59:22.655105+00:00",
+    "verified_count": 1205,
+    "country_count": 50,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T10:15:02.863023+00:00",
+    "verified_count": 1179,
+    "country_count": 51,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T10:31:12.450834+00:00",
+    "verified_count": 1098,
+    "country_count": 48,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T10:46:35.976637+00:00",
+    "verified_count": 1066,
+    "country_count": 49,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T11:03:03.371021+00:00",
+    "verified_count": 1080,
+    "country_count": 48,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T11:19:16.080836+00:00",
+    "verified_count": 1098,
+    "country_count": 49,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T11:35:35.606526+00:00",
+    "verified_count": 1072,
+    "country_count": 49,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T11:51:41.728961+00:00",
+    "verified_count": 1057,
+    "country_count": 47,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T12:07:49.554553+00:00",
+    "verified_count": 1091,
+    "country_count": 44,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T12:23:58.846093+00:00",
+    "verified_count": 1136,
+    "country_count": 45,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T12:40:02.517206+00:00",
+    "verified_count": 1142,
+    "country_count": 45,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T12:56:18.146210+00:00",
+    "verified_count": 1146,
+    "country_count": 46,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T13:12:36.958657+00:00",
+    "verified_count": 1144,
+    "country_count": 44,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T13:29:11.640533+00:00",
+    "verified_count": 1075,
+    "country_count": 42,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T13:45:52.957633+00:00",
+    "verified_count": 1056,
+    "country_count": 42,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T14:02:17.677505+00:00",
+    "verified_count": 1064,
+    "country_count": 40,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T14:18:36.934988+00:00",
+    "verified_count": 1089,
+    "country_count": 42,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T14:34:47.804504+00:00",
+    "verified_count": 1109,
+    "country_count": 43,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T14:50:48.668061+00:00",
+    "verified_count": 1104,
+    "country_count": 43,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T15:07:19.361165+00:00",
+    "verified_count": 1076,
+    "country_count": 41,
+    "sources_ok": 32,
+    "sources_total": 40
+  },
+  {
+    "ts": "2026-11-17T15:23:44.715071+00:00",
+    "verified_count": 1102,
+    "country_count": 41,
+    "sources_ok": 32,
+    "sources_total": 40
   }
 ]

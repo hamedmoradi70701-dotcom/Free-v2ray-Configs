@@ -1,9 +1,0 @@
-#profile-title: رادار — DENMARK (DK)
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — DENMARK (DK) — 1 configs
-# source: verified/ — every config passed a real proxied request in ALL L3 rounds
-# location: GeoIP (DB-IP Country Lite) on the real network address of the server
-# note: this is where the SERVER is, not necessarily where your traffic exits
-vless://8197b9b9-8945-460f-99c9-325ef8a8a7c3@193.181.210.205:443?security=reality&encryption=none&pbk=arZrNPbhlxNAGMzO_g2Dx3AAV_FEMnFyydbBsyZUCiY&headerType=none&fp=firefox&spx=%2Fb4fcc6d25bda84e&type=tcp&flow=xtls-rprx-vision&sni=dk1.gofizz.in&sid=54005328cd#DK 🇩🇰 | رادار | 97D260

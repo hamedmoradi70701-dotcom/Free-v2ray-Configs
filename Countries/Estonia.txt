@@ -2,18 +2,8 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — ESTONIA (EE) — 11 configs
+# رادار — ESTONIA (EE) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://3619ae0e-bd3a-458c-bb0a-c0479019d9ec@178.130.46.226:443?encryption=none&flow=xtls-rprx-vision&security=tls&sni=serv1.fishtohome.ru&type=tcp#EE 🇪🇪 | رادار | 6794EC
-vless://8197b9b9-8945-460f-99c9-325ef8a8a7c3@185.223.171.1:443?&security=reality&flow=xtls-rprx-vision&pbk=z46-GwLD2TvzK2o95okMP7IMNPUfwYHmqt2JV6nJ03I&sid=8c9f899dba63f6c7&fp=firefox&sni=ee1.gofizzin.com&type=tcp&headerType=none&host=ee1.gofizzin.com&path=%2F#EE 🇪🇪 | رادار | 958840
-vless://5c09e56b-f97f-4360-8f01-eb4d39202095@185.155.55.2:8443?type=tcp&fp=firefox&flow=xtls-rprx-vision&security=reality&encryption=none&sid=661766b2bcef440a&pbk=ApMfbcEyBOve6DxXoBNVu3bCCzQ7XCEYB4ummsDtTBE&headerType=none&sni=ee-nf.reddotcorp.org#EE 🇪🇪 | رادار | D346E4
-vless://5c09e56b-f97f-4360-8f01-eb4d39202095@185.155.55.11:8443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=ApMfbcEyBOve6DxXoBNVu3bCCzQ7XCEYB4ummsDtTBE&security=reality&sid=661766b2bcef440a&sni=ee-nf.reddotcorp.org&type=tcp#EE 🇪🇪 | رادار | 068F20
-vless://62995b2a-8f82-41f8-ac80-dfdfc1253e76@13.143.239.236:25700?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&mode=stream-one&path=%2Fastral-edge-h1&security=reality&encryption=none&pbk=w698in_6eoH8y_C5jY3cpScMyaRaPpmPQEQhzw8QMUM&host=pl9.h1cloud.net&type=xhttp&sni=5dc396r.pl9.h1clayd.click&sid=54c9c22217db5c86#EE 🇪🇪 | رادار | B3D7B5
-vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@b1eb8et.de14.h1clayd.click:443?type=tcp&security=reality&fp=chrome&pbk=l3fn2CzC6-oVy6Mf5jafL-kVs8aX_jUfMUjhupBkPz0&sid=1a5d9b3be394fdc7&sni=b1eb8et.de14.h1clayd.click#EE 🇪🇪 | رادار | C5E4E6
-vless://4618cebd-e1e9-45c3-be98-d9d6e3ee8bef@f3b21at.de18.h1clayd.click:443?security=reality&encryption=none&pbk=lneTk9CP66okHF_VgXVaSj_QNpRzEmvrAmRxmux5JVU&fp=chrome&spx=/&type=tcp&sni=f3b21at.de18.h1clayd.click&sid=08485ad122fafbd5#EE 🇪🇪 | رادار | 7E9FEE
-vless://c82031be-e90f-4b15-ab4f-7ccef236d3ca@132.243.67.225:443?encryption=none&fp=firefox&pbk=BLhS7fE4Yh6kAADw7yRIn2PzKun-JDagJHJNOePYRSY&security=reality&sid=bee802ae4ab66496&sni=362c1eg.se1.h1clayd.click&type=grpc#EE 🇪🇪 | رادار | CFEDBD
-vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@801a40g.de14.h1clayd.click:443?type=grpc&security=reality&sni=801a40g.de14.h1clayd.click&pbk=tXovWVNlInVZuMVIQLpSbb__RuTUEZKyhjcdpBrThBY&sid=caa2bd1009a29530&fp=firefox&serviceName=0136d39d9d85#EE 🇪🇪 | رادار | 3FEDF0
-vless://4618cebd-e1e9-45c3-be98-d9d6e3ee8bef@a566d1g.de18.h1clayd.click:443?encryption=none&pbk=C_DlyXDDS4fWcAlxb-6O7LBKtq28fg2slCrH5tPaTQ4&security=reality&serviceName=98b9c56e8ebb&sid=16cea10606a4e401&sni=a566d1g.de18.h1clayd.click&spx=/&type=grpc&fp=chrome#EE 🇪🇪 | رادار | 577AA3
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@717252g.nl8.h1clayd.click:443?encryption=none&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&security=reality&serviceName=204adda7e3da&sid=d3bd772514c87d28&sni=717252g.nl8.h1clayd.click&spx=%2F&type=grpc&fp=ios#EE 🇪🇪 | رادار | F59C9F
+vless://13e541f3-d09d-4633-89df-8513db0ced20@45.86.60.174:16443?encryption=none&type=tcp&security=none#EE 🇪🇪 | رادار | 29C4D9

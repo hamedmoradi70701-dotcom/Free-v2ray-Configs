@@ -2,17 +2,11 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — hysteria — 13 configs
-hysteria://137.175.82.43:20022?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=50&insecure=1&upmbps=10&udp=true#US 🇺🇸 | رادار | 10D9F2
-hysteria://137.175.82.44:20022?alpn=h3&auth=dongtaiwang.com&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#US 🇺🇸 | رادار | A0F03A
+# رادار — hysteria — 7 configs
 hysteria://163.172.117.163:36699?alpn=h3&auth=dongtaiwang.com&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#FR 🇫🇷 | رادار | 21AEFE
 hysteria://198.200.57.142:22335?alpn=h3&auth=github.com/Alvin9999-newpac/fanqiang&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#US 🇺🇸 | رادار | E8A2D1
 hysteria://5.83.129.143:26691?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&insecure=1&upmbps=11&udp=true#DE 🇩🇪 | رادار | E1FFC4
 hysteria://5.83.129.90:54177?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=apple.com&insecure=1&peer=apple.com&upmbps=11&udp=true#DE 🇩🇪 | رادار | B26946
 hysteria://62.210.28.175:24667?alpn=h3&auth=dongtaiwang.com&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#FR 🇫🇷 | رادار | 6A95D7
-hysteria://62.210.70.191:24667?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=50&insecure=1&upmbps=10&udp=true#FR 🇫🇷 | رادار | 727A71
-hysteria://dongtaiwang.com@163.172.117.163:36699?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#FR 🇫🇷 | رادار | BD2C94
+hysteria://62.210.70.191:24667?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=50&insecure=1&upmbps=10#FR 🇫🇷 | رادار | 727A71
 hysteria://dongtaiwang.com@5.83.129.143:26691?upmbps=11&downmbps=55&security=tls&insecure=1&alpn=h3#DE 🇩🇪 | رادار | 3EB3E2
-hysteria://dongtaiwang.com@5.83.129.90:54177?upmbps=11&downmbps=55&security=tls&sni=apple.com&insecure=1&alpn=h3#DE 🇩🇪 | رادار | F98345
-hysteria://dongtaiwang.com@62.210.28.175:24667?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#FR 🇫🇷 | رادار | DA2060
-hysteria://github.com%2FAlvin9999-newpac%2Ffanqiang@198.200.57.142:22335?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#US 🇺🇸 | رادار | 922C49
