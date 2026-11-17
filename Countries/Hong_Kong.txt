@@ -2,13 +2,19 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — HONG KONG (HK) — 6 configs
+# رادار — HONG KONG (HK) — 12 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 vmess://eyJhZGQiOiI0Ny4yNDIuODEuOTQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Im9wZW5haS5jb20iLCJpZCI6ImU0N2I5Zjc3LTYwZTQtNDczOC04ZDUzLTc3MmI2MDAyZTE0NiIsImluc2VjdXJlIjoiMCIsIm5ldCI6InRjcCIsInBhdGgiOiIvUVFxdW4tNzM3ODA1NDQzIiwicGNzIjoiIiwicG9ydCI6IjUyMDgwIiwicHMiOiJISyDwn4et8J+HsCB8INix2KfYr9in2LEgfCA4RTUwOTUiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Imh0dHAiLCJ2IjoiMiIsInZjbiI6IiJ9
-vless://ea93064c-176c-11f0-885d-f23c91cfbbc9@3ae7b69c-toq2o0-tpolhi-1rgxu.hk2.hyhuawei.com:443?encryption=none&type=tcp&security=reality&pbk=c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo&sni=download.windowsupdate.com&fp=chrome#HK 🇭🇰 | رادار | EA820A
 vless://8b17beac-b143-447d-aa68-14cbb121a602@8.217.1.203:8443?security=reality&encryption=none&pbk=74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=0bf55f64#HK 🇭🇰 | رادار | DBD109
-vless://12a4f736-2238-49ee-831f-5516f15cc951@2.26.204.46:31001?flow=xtls-rprx-vision&security=reality&sni=mensura.cdn-apple.com&fp=chrome&pbk=lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY&sid=39793bc4708abbbb&encryption=none&type=tcp#HK 🇭🇰 | رادار | 5194BD
 vless://ea93064c-176c-11f0-885d-f23c91cfbbc9@9e5f5c4b-tomdc0-tpolhi-1rgxu.hk2.hyhuawei.com:443?encryption=none&type=tcp&security=reality&pbk=c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo&sni=download.windowsupdate.com&fp=chrome#HK 🇭🇰 | رادار | 151A93
+vless://12a4f736-2238-49ee-831f-5516f15cc951@2.26.204.46:31001?flow=xtls-rprx-vision&security=reality&sni=mensura.cdn-apple.com&fp=chrome&pbk=lzpIiMqHXas_qayw-HvrySb78FNkVroBOqniwqPXPzY&sid=39793bc4708abbbb&encryption=none&type=tcp#HK 🇭🇰 | رادار | 5194BD
+vless://ea93064c-176c-11f0-885d-f23c91cfbbc9@3ae7b69c-toq2o0-tpolhi-1rgxu.hk2.hyhuawei.com:443?encryption=none&type=tcp&security=reality&pbk=c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo&sni=download.windowsupdate.com&fp=chrome#HK 🇭🇰 | رادار | EA820A
+vless://8614bde7-34cf-4413-8360-e96f1b960528@45.192.193.54:35600?security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=fJwbUNPAxu-CcoWnzWrvtDkX7QMDvJwFGWzJ3lDcFC4&sni=www.iij.ad.jp#HK 🇭🇰 | رادار | BC59F7
 vmess://eyJhZGQiOiIxNTYuMjM5LjIyNC4xMDciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyNzBiZWQ1LWY5MDgtNGVjYy1mMWM4LWRlMjQ2MDMzYjE4NiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNTcyNzgiLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IDZBMEFEQyIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20086?security=tls&insecure=0&headerType=none&fp=android&type=tcp&allowInsecure=0&sni=hk.catxstar.com#HK 🇭🇰 | رادار | 505110
+trojan://d9064589-74af-432a-9390-5d8a9da281bf@16.106.7.232:20086?security=tls&sni=hk.catxstar.com&path=/#HK 🇭🇰 | رادار | 5102F6
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIwIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOjM1MDQzLCJwcyI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6Ii0tLSIsInYiOiIyIiwidmNuIjoiIiwibmFtZSI6IkhLIPCfh63wn4ewIHwg2LHYp9iv2KfYsSB8IEI4NDk1MCJ9
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImIxNWU0ODFkLTE3ZTQtNDFhOC04NGMyLTIzZDRmMDUxNGQ5YSIsIm5ldCI6IndzIiwicGF0aCI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgOTVBRTcxIiwic25pIjoiMTU2LjI0NS4yMzIuMjM5IiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4yMzkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Ind3dy5wdWJnbW9iaWxlLmNvbSIsImlkIjoiYjE1ZTQ4MWQtMTdlNC00MWE4LTg0YzItMjNkNGYwNTE0ZDlhIiwiaW5zZWN1cmUiOiIxIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBjcyI6IiIsInBvcnQiOiIzNTA0MyIsInBzIjoiSEsg8J+HrfCfh7AgfCDYsdin2K/Yp9ixIHwgNTcwRjE0Iiwic2N5IjoiYXV0byIsInNuaSI6Ind3dy5wdWJnbW9iaWxlLmNvbSIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiIsInZjbiI6IiJ9

@@ -2,10 +2,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — socks — 48 configs
+# رادار — socks — 46 configs
 # --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
 socks5://216.234.214.144:1080#ZW 🇿🇼 | رادار | E61AE1
-socks5://@Enkelte_notif:@Notif_Chat@205.198.66.189:2470#CA 🇨🇦 | رادار | 329B33
 socks5://u_rb1dba2:l1tlrdx52v@66.253.2.69:62000#US 🇺🇸 | رادار | 5942BB
 socks://a2luZ3N0YXIxMjM6a2luZ3N0YXIxMjMrKw%3D%3D@23.230.200.250:62000#US 🇺🇸 | رادار | 40DD63
 socks://a3M4Nzg0NDkyNjBkOllsUm9XdkUwZExfY1VxUzk0d1BlS25BNA%3D%3D@87.84.49.140:62000#TH 🇹🇭 | رادار | 06013B
@@ -34,7 +33,6 @@ socks://MTExOjExMQ%3D%3D@47.243.173.50:11211#HK 🇭🇰 | رادار | 5806FF
 socks://MTExOjExMQ%3D%3D@47.76.186.28:11408#HK 🇭🇰 | رادار | F2EFD3
 socks://MTIzOjEyMw%3D%3D@47.243.225.10:8888#HK 🇭🇰 | رادار | 9980AC
 socks://ODg4ODo4ODg4@47.236.168.243:1080#SG 🇸🇬 | رادار | 054493
-socks://Og@95.38.170.222:1087#IR 🇮🇷 | رادار | A3073C
 socks://Og%3D%3D@101.36.104.46:10808#JP 🇯🇵 | رادار | E0A7A1
 socks://Og%3D%3D@31.58.144.19:1080#DE 🇩🇪 | رادار | 2D3697
 socks://Og%3D%3D@57.128.249.250:9052#PL 🇵🇱 | رادار | E54E30
