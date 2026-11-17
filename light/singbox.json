@@ -164,7 +164,6 @@
         "DE 🇩🇪 | رادار | FDF16E",
         "DE 🇩🇪 | رادار | 3C8FD0",
         "DE 🇩🇪 | رادار | 1D5B92",
-        "FI 🇫🇮 | رادار | E45567",
         "NL 🇳🇱 | رادار | AFD4B0",
         "GB 🇬🇧 | رادار | 6F91FD",
         "JP 🇯🇵 | رادار | AA31A8",
@@ -865,6 +864,7 @@
         "US 🇺🇸 | رادار | 919CDF",
         "CN 🇨🇳 | رادار | 2B53CC",
         "TW 🇹🇼 | رادار | 98C5EE",
+        "ZA 🇿🇦 | رادار | F7DB86",
         "ZA 🇿🇦 | رادار | AF6AB4",
         "SG 🇸🇬 | رادار | E75317",
         "SG 🇸🇬 | رادار | 1D777C",
@@ -1710,7 +1710,7 @@
         "CH 🇨🇭 | رادار | C5E5CF",
         "CH 🇨🇭 | رادار | 1ED64E",
         "CH 🇨🇭 | رادار | 99AF64",
-        "Global 🌐 | رادار | 2B7458",
+        "IR 🇮🇷 | رادار | 2B7458",
         "HK 🇭🇰 | رادار | C4B4E0",
         "IR 🇮🇷 | رادار | C7AD0B",
         "CA 🇨🇦 | رادار | 50ABA9",
@@ -3890,6 +3890,7 @@
         "IR 🇮🇷 | رادار | 2C717C",
         "NL 🇳🇱 | رادار | D18621",
         "SE 🇸🇪 | رادار | 98E112",
+        "SE 🇸🇪 | رادار | 5C118B",
         "SE 🇸🇪 | رادار | 25AADA",
         "SE 🇸🇪 | رادار | B239B4",
         "DE 🇩🇪 | رادار | B44FC1",
@@ -5870,15 +5871,15 @@
         "US 🇺🇸 | رادار | 275065",
         "US 🇺🇸 | رادار | 17FAD5",
         "US 🇺🇸 | رادار | BC94B7",
-        "HK 🇭🇰 | رادار | 44F22F",
+        "JP 🇯🇵 | رادار | 44F22F",
         "CN 🇨🇳 | رادار | 21C649",
         "CN 🇨🇳 | رادار | CA891B",
         "SG 🇸🇬 | رادار | 771433",
         "SG 🇸🇬 | رادار | 0BCCEF",
         "SG 🇸🇬 | رادار | DF19B9",
         "HK 🇭🇰 | رادار | AD83BD",
-        "HK 🇭🇰 | رادار | E69D4E",
-        "HK 🇭🇰 | رادار | 4DA707",
+        "JP 🇯🇵 | رادار | E69D4E",
+        "JP 🇯🇵 | رادار | 4DA707",
         "HK 🇭🇰 | رادار | 0B46CB",
         "HK 🇭🇰 | رادار | 176EF8",
         "HK 🇭🇰 | رادار | 0F620F",
@@ -6191,7 +6192,6 @@
         "DE 🇩🇪 | رادار | FDF16E",
         "DE 🇩🇪 | رادار | 3C8FD0",
         "DE 🇩🇪 | رادار | 1D5B92",
-        "FI 🇫🇮 | رادار | E45567",
         "NL 🇳🇱 | رادار | AFD4B0",
         "GB 🇬🇧 | رادار | 6F91FD",
         "JP 🇯🇵 | رادار | AA31A8",
@@ -6892,6 +6892,7 @@
         "US 🇺🇸 | رادار | 919CDF",
         "CN 🇨🇳 | رادار | 2B53CC",
         "TW 🇹🇼 | رادار | 98C5EE",
+        "ZA 🇿🇦 | رادار | F7DB86",
         "ZA 🇿🇦 | رادار | AF6AB4",
         "SG 🇸🇬 | رادار | E75317",
         "SG 🇸🇬 | رادار | 1D777C",
@@ -7737,7 +7738,7 @@
         "CH 🇨🇭 | رادار | C5E5CF",
         "CH 🇨🇭 | رادار | 1ED64E",
         "CH 🇨🇭 | رادار | 99AF64",
-        "Global 🌐 | رادار | 2B7458",
+        "IR 🇮🇷 | رادار | 2B7458",
         "HK 🇭🇰 | رادار | C4B4E0",
         "IR 🇮🇷 | رادار | C7AD0B",
         "CA 🇨🇦 | رادار | 50ABA9",
@@ -9917,6 +9918,7 @@
         "IR 🇮🇷 | رادار | 2C717C",
         "NL 🇳🇱 | رادار | D18621",
         "SE 🇸🇪 | رادار | 98E112",
+        "SE 🇸🇪 | رادار | 5C118B",
         "SE 🇸🇪 | رادار | 25AADA",
         "SE 🇸🇪 | رادار | B239B4",
         "DE 🇩🇪 | رادار | B44FC1",
@@ -11897,15 +11899,15 @@
         "US 🇺🇸 | رادار | 275065",
         "US 🇺🇸 | رادار | 17FAD5",
         "US 🇺🇸 | رادار | BC94B7",
-        "HK 🇭🇰 | رادار | 44F22F",
+        "JP 🇯🇵 | رادار | 44F22F",
         "CN 🇨🇳 | رادار | 21C649",
         "CN 🇨🇳 | رادار | CA891B",
         "SG 🇸🇬 | رادار | 771433",
         "SG 🇸🇬 | رادار | 0BCCEF",
         "SG 🇸🇬 | رادار | DF19B9",
         "HK 🇭🇰 | رادار | AD83BD",
-        "HK 🇭🇰 | رادار | E69D4E",
-        "HK 🇭🇰 | رادار | 4DA707",
+        "JP 🇯🇵 | رادار | E69D4E",
+        "JP 🇯🇵 | رادار | 4DA707",
         "HK 🇭🇰 | رادار | 0B46CB",
         "HK 🇭🇰 | رادار | 176EF8",
         "HK 🇭🇰 | رادار | 0F620F",
@@ -14487,27 +14489,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "FI 🇫🇮 | رادار | E45567",
-      "server": "169.40.34.41",
-      "server_port": 443,
-      "uuid": "622654a4-b666-000b-9260-fb717e05154f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "key-master-saver.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY",
-          "short_id": "1c3e8241a8743df9"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     },
@@ -23552,6 +23533,21 @@
       "transport": {
         "type": "grpc",
         "service_name": ""
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ZA 🇿🇦 | رادار | F7DB86",
+      "server": "139.84.231.142",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "explorecareerpathsandunlockprofessionalsuccesstoday.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -36947,7 +36943,7 @@
     },
     {
       "type": "vless",
-      "tag": "Global 🌐 | رادار | 2B7458",
+      "tag": "IR 🇮🇷 | رادار | 2B7458",
       "server": "decdn-28.nome-rkp.net",
       "server_port": 443,
       "uuid": "c1208c5a-2350-0003-affd-fc41b4319286",
@@ -67337,6 +67333,19 @@
     },
     {
       "type": "vmess",
+      "tag": "SE 🇸🇪 | رادار | 5C118B",
+      "server": "62.93.166.184",
+      "server_port": 1270,
+      "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "xmfhlpy.com"
+      }
+    },
+    {
+      "type": "vmess",
       "tag": "SE 🇸🇪 | رادار | 25AADA",
       "server": "62.93.166.184",
       "server_port": 1270,
@@ -95746,7 +95755,7 @@
     },
     {
       "type": "vmess",
-      "tag": "HK 🇭🇰 | رادار | 44F22F",
+      "tag": "JP 🇯🇵 | رادار | 44F22F",
       "server": "v30.hdacd.com",
       "server_port": 30830,
       "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
@@ -95809,7 +95818,7 @@
     },
     {
       "type": "vmess",
-      "tag": "HK 🇭🇰 | رادار | E69D4E",
+      "tag": "JP 🇯🇵 | رادار | E69D4E",
       "server": "v6.hdacd.com",
       "server_port": 30806,
       "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
@@ -95818,7 +95827,7 @@
     },
     {
       "type": "vmess",
-      "tag": "HK 🇭🇰 | رادار | 4DA707",
+      "tag": "JP 🇯🇵 | رادار | 4DA707",
       "server": "v6.hdacd.com",
       "server_port": 30806,
       "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",

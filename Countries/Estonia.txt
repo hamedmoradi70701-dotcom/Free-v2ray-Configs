@@ -2,12 +2,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — ESTONIA (EE) — 5 configs
+# رادار — ESTONIA (EE) — 2 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@13.143.239.251:443?encryption=none&fp=&host=54cc62x.de14.h1clayd.click&mode=auto&path=%2F992b47694855&pbk=PNYigUDSUt_SiXpHyzrpE5EKcP__vTTPWXM8NCUllyQ&security=reality&sid=3a4318d0b7862c4f&sni=54cc62x.de14.h1clayd.click&type=xhttp#EE 🇪🇪 | رادار | CDFA7C
-vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@13.143.239.251:443?type=raw&security=reality&fp=firefox&pbk=l3fn2CzC6-oVy6Mf5jafL-kVs8aX_jUfMUjhupBkPz0&sid=1a5d9b3be394fdc7&sni=b1eb8et.de14.h1clayd.click#EE 🇪🇪 | رادار | 606BE7
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@8a2e72t.nl11.h1clayd.click:443?security=reality&type=tcp&packetEncoding=xudp&sni=8a2e72t.nl11.h1clayd.click&fp=firefox&flow=xtls-rprx-vision&sid=8d0d0679f42ffd98&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA#EE 🇪🇪 | رادار | 834BB7
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@143.246.41.58:443?security=reality&flow=xtls-rprx-vision&sni=8a2e72t.nl20.h1clayd.shop&type=tcp&fp=firefox&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA&sid=8d0d0679f42ffd98#EE 🇪🇪 | رادار | F21DFD
 vless://4201786b-d99b-4147-a5f0-20d47acddb81@13.143.239.253:443?security=reality&encryption=none&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=8a2e72t.nl11.h1clayd.click&sid=8d0d0679f42ffd98#EE 🇪🇪 | رادار | DAD5DF
+vless://4201786b-d99b-4147-a5f0-20d47acddb81@8a2e72t.nl11.h1clayd.click:443?security=reality&type=tcp&packetEncoding=xudp&sni=8a2e72t.nl11.h1clayd.click&fp=firefox&flow=xtls-rprx-vision&sid=8d0d0679f42ffd98&pbk=VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA#EE 🇪🇪 | رادار | 834BB7

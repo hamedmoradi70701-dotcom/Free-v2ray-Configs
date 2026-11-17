@@ -2,11 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — AUSTRIA (AT) — 4 configs
+# رادار — AUSTRIA (AT) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA==@152.53.1.57:8388#AT 🇦🇹 | رادار | 88EA53
 vless://04cbe9ea-9791-4195-827f-5d4cabbdba10@95.163.153.141:8443?path=%2F&security=reality&encryption=none&pbk=bRtDyXYrSK7YP6zKZGTUIVfNlpilQViJ4ih_43oSWnU&fp=firefox&type=xhttp&sni=www.cloudflare.com&sid=c9ea2355ddeab39b#AT 🇦🇹 | رادار | D60FAA
-vless://6cb43560-a676-4187-8c94-3df74be5d706@188.137.153.12:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=tUpGwnxgFj9DJbLOQ2RiMO6oe_q7Cv0bhJMARLHeqkI&security=reality&sid=b18ce9b0074410&sni=napecu.galardoxtn.ir&type=tcp#AT 🇦🇹 | رادار | 887D6C
 vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4IiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoidGxzIiwic25pIjoieG1maGxweS5jb20iLCJhbHBuIjoiIiwiZnAiOiIiLCJuYW1lIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQ0M3MDA4In0=
+vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgMjg0QkE0IiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOjEyNzAsImlkIjoiNWMwNDBmMWQtNDVkYi00M2JkLThkNDYtZTQ5NTBlNDMzNzM1IiwiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6Im5vbmUiLCJob3N0IjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ4bWZobHB5LmNvbSIsIm5hbWUiOiJBVCDwn4em8J+HuSB8INix2KfYr9in2LEgfCAyODRCQTQifQ==
+vmess://eyJ2IjoiMiIsInBzIjoiQVQg8J+HpvCfh7kgfCDYsdin2K/Yp9ixIHwgQTdCMTZDIiwiYWRkIjoiMTU0LjQ3LjE5LjIyNSIsInBvcnQiOiIxMjcwIiwidHlwZSI6Im5vbmUiLCJpZCI6IjVjMDQwZjFkLTQ1ZGItNDNiZC04ZDQ2LWU0OTUwZTQzMzczNSIsImFpZCI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwiaG9zdCI6InhtZmhscHkuY29tIiwidGxzIjoidGxzIn0=
