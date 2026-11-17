@@ -2,29 +2,30 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — JAPAN (JP) — 22 configs
+# رادار — JAPAN (JP) — 23 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://1751bebc-1bf1-420c-8b9d-97157aad179b@168.110.21.56:18453?security=none&type=tcp&encryption=none#JP 🇯🇵 | رادار | CFEA5D
 ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@168.138.205.100:53758#JP 🇯🇵 | رادار | 1A14DC
-vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?flow=xtls-rprx-vision&fp=chrome&path=%2F&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP 🇯🇵 | رادار | 419490
-vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:12683?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#JP 🇯🇵 | رادار | C99843
-vless://f67b1159-a61f-4ae4-9844-0701b716a290@djj.zjlo.top:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | 43DB6B
-vless://9da605d3-f5f7-4135-f806-450f036f9351@djj.zjlo.top:23169?security=tls&type=tcp&allowInsecure=0&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | 271196
+vless://1751bebc-1bf1-420c-8b9d-97157aad179b@168.110.21.56:18453?security=none&type=tcp&encryption=none#JP 🇯🇵 | رادار | CFEA5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.87.241:443#JP 🇯🇵 | رادار | 9EF41E
+ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@jpa.123069.xyz:53758#JP 🇯🇵 | رادار | 66A632
+vmess://eyJ2IjoiMiIsInBzIjoiSlAg8J+Hr/Cfh7UgfCDYsdin2K/Yp9ixIHwgOUI1QzMzIiwiYWRkIjoiMTY4LjExMC42My4yNDciLCJwb3J0IjoiODA4MSIsImlkIjoiYzNiZGUyOTYtOGU0NC00YjhjLWEzMjUtNTc3ZDViM2NjN2M4IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiIiLCJwYXRoIjoiL3ZsZXNzIn0=
 vless://7072eeba-94fd-4fb3-92f2-a4506dd84cd8@31.76.91.98:443?security=reality&encryption=none&pbk=ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=fuji.etherhub.cc&sid=bd6f67b6b2152b45#JP 🇯🇵 | رادار | 890048
 vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=tcp&allowInsecure=1&sni=www.microsoft.com&fp=firefox&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8#JP 🇯🇵 | رادار | AA31A8
-ss://YWVzLTEyOC1nY206QndscWg3R2NGQg==@jpa.123069.xyz:53758#JP 🇯🇵 | رادار | 66A632
-vless://f67b1159-a61f-4ae4-9844-0701b716a290@155.248.175.201:23169?type=tcp&security=tls&flow=xtls-rprx-vision&fp=firefox&sni=djj.zjlo.top#JP 🇯🇵 | رادار | B8450B
-vless://3eb053cb-d6f8-4b31-8180-222e1cc6f8ff@djj.zjlo.top:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | A1D5B6
-vless://7318caa1-93d1-4a9d-c481-504599902700@djj.zjlo.top:23169?security=tls&type=tcp&allowInsecure=0&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | D2F30C
 ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:80#JP 🇯🇵 | رادار | EA55E0
+vless://9da605d3-f5f7-4135-f806-450f036f9351@djj.zjlo.top:23169?security=tls&type=tcp&allowInsecure=0&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | 271196
 ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:443#JP 🇯🇵 | رادار | 17E3DC
+vless://9da605d3-f5f7-4135-f806-450f036f9351@155.248.175.201:23169?security=tls&flow=xtls-rprx-vision&fp=chrome&sni=djj.zjlo.top&encryption=none&type=tcp#JP 🇯🇵 | رادار | 5336A4
+vless://7318caa1-93d1-4a9d-c481-504599902700@155.248.175.201:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=firefox&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | 9F5101
 vless://3eb053cb-d6f8-4b31-8180-222e1cc6f8ff@155.248.175.201:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=firefox&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | 6F74B8
+vless://7318caa1-93d1-4a9d-c481-504599902700@djj.zjlo.top:23169?security=tls&type=tcp&allowInsecure=0&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#JP 🇯🇵 | رادار | D2F30C
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:43149?&security=reality&flow=xtls-rprx-vision&pbk=cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE&sid=15aa0ad4&fp=chrome&sni=psstatic.cdn.bcebos.com&type=tcp&headerType=none&host=psstatic.cdn.bcebos.com&path=%2F#JP 🇯🇵 | رادار | D46988
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:43149?security=reality&encryption=none&pbk=cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=psstatic.cdn.bcebos.com&sid=15aa0ad4#JP 🇯🇵 | رادار | 60E71D
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:55688?&security=reality&flow=xtls-rprx-vision&pbk=6dqd0hqbC0bht9RtsYamvlYdMpxyUbk7uXw0xtO8DzQ&sid=865c1b2c&fp=chrome&sni=bilibili-vn.biliimg.com&type=tcp&headerType=none&host=bilibili-vn.biliimg.com&path=%2F#JP 🇯🇵 | رادار | 35B1D8
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:47691?security=reality&flow=xtls-rprx-vision&pbk=6PbC7GxOg_YdXya-53llPReUzoU_yknQbkDvI4uorBg&sid=2905326a&sni=m.media-amazon.com&type=tcp&headerType=none&host=m.media-amazon.com&path=/&fp=chrome#JP 🇯🇵 | رادار | 03CB34
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:47691?security=reality&encryption=none&pbk=6PbC7GxOg_YdXya-53llPReUzoU_yknQbkDvI4uorBg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=m.media-amazon.com&sid=2905326a#JP 🇯🇵 | رادار | 1F8551
-vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:54528?security=reality&flow=xtls-rprx-vision&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7&sni=www.apple.com&type=tcp&headerType=none&host=zfapi.zalolink.com&path=/&fp=chrome#JP 🇯🇵 | رادار | C5FBA2
-vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@13.114.101.22:443?&security=tls&fp=unsafe&sni=jp3.yohototo.top&type=ws&headerType=none&host=jp3.yohototo.top&path=%2Ftyxyws#JP 🇯🇵 | رادار | 32DC87
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:30322?encryption=none&flow=xtls-rprx-vision&security=reality&sni=psstatic.cdn.bcebos.com&fp=ios&pbk=5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo&sid=6a60e7e382d6&type=tcp&headerType=none&host=psstatic.cdn.bcebos.com#JP 🇯🇵 | رادار | 91CC10
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:30322?&security=reality&flow=xtls-rprx-vision&pbk=5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo&sid=6a60e7e382d6&fp=ios&sni=psstatic.cdn.bcebos.com&type=tcp&headerType=none&host=psstatic.cdn.bcebos.com&path=%2F#JP 🇯🇵 | رادار | 4A29E8
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@zfapi.zalolink.com:30322?security=reality&encryption=none&pbk=5gncThwqPFzLu23WO3mPTEhG7-KgVYlGVvveHjM2SUo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=psstatic.cdn.bcebos.com&sid=6a60e7e382d6#JP 🇯🇵 | رادار | B955EB
-vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@152.69.200.216:443?fp=chrome&host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | رادار | 3C8099
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@154.31.114.162:8443?host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#JP 🇯🇵 | رادار | 8EB17B

@@ -539,7 +539,7 @@ proxies:
     short-id: 0dfc23fe80778c00
   client-fingerprint: chrome
   network: tcp
-- name: "US \U0001F1FA\U0001F1F8 | رادار | EB7118"
+- name: "RU \U0001F1F7\U0001F1FA | رادار | EB7118"
   server: ec7a81g.de15.h1clayd.click
   port: 443
   type: vless
@@ -18414,7 +18414,7 @@ proxies:
     short-id: ad86e2d52ff40ebd
   client-fingerprint: random
   network: tcp
-- name: "IN \U0001F1EE\U0001F1F3 | رادار | 2B7458"
+- name: "IR \U0001F1EE\U0001F1F7 | رادار | 2B7458"
   server: decdn-28.nome-rkp.net
   port: 443
   type: vless
@@ -74055,7 +74055,7 @@ proxy-groups:
   - "TR \U0001F1F9\U0001F1F7 | رادار | DC9937"
   - "AM \U0001F1E6\U0001F1F2 | رادار | F14FEC"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 2FD6B5"
-  - "US \U0001F1FA\U0001F1F8 | رادار | EB7118"
+  - "RU \U0001F1F7\U0001F1FA | رادار | EB7118"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7D3347"
   - "DE \U0001F1E9\U0001F1EA | رادار | 6D6B6A"
   - "DE \U0001F1E9\U0001F1EA | رادار | 69CC10"
@@ -75750,7 +75750,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | C5E5CF"
   - "CH \U0001F1E8\U0001F1ED | رادار | 1ED64E"
   - "CH \U0001F1E8\U0001F1ED | رادار | 99AF64"
-  - "IN \U0001F1EE\U0001F1F3 | رادار | 2B7458"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 2B7458"
   - "HK \U0001F1ED\U0001F1F0 | رادار | C4B4E0"
   - "IR \U0001F1EE\U0001F1F7 | رادار | C7AD0B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 50ABA9"
@@ -80214,7 +80214,7 @@ proxy-groups:
   - "TR \U0001F1F9\U0001F1F7 | رادار | DC9937"
   - "AM \U0001F1E6\U0001F1F2 | رادار | F14FEC"
   - "ES \U0001F1EA\U0001F1F8 | رادار | 2FD6B5"
-  - "US \U0001F1FA\U0001F1F8 | رادار | EB7118"
+  - "RU \U0001F1F7\U0001F1FA | رادار | EB7118"
   - "US \U0001F1FA\U0001F1F8 | رادار | 7D3347"
   - "DE \U0001F1E9\U0001F1EA | رادار | 6D6B6A"
   - "DE \U0001F1E9\U0001F1EA | رادار | 69CC10"
@@ -81909,7 +81909,7 @@ proxy-groups:
   - "CH \U0001F1E8\U0001F1ED | رادار | C5E5CF"
   - "CH \U0001F1E8\U0001F1ED | رادار | 1ED64E"
   - "CH \U0001F1E8\U0001F1ED | رادار | 99AF64"
-  - "IN \U0001F1EE\U0001F1F3 | رادار | 2B7458"
+  - "IR \U0001F1EE\U0001F1F7 | رادار | 2B7458"
   - "HK \U0001F1ED\U0001F1F0 | رادار | C4B4E0"
   - "IR \U0001F1EE\U0001F1F7 | رادار | C7AD0B"
   - "CA \U0001F1E8\U0001F1E6 | رادار | 50ABA9"
