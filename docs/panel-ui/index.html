@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
       :root{
-        --bg:#020610;
+        --bg:#04070f;
         --card:rgba(9,17,32,.92);
         --card-2:#0b1729;
         --card-3:#0e1e36;
@@ -127,9 +127,9 @@
       .panel.open{display:block}
       .topbar{
         display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
-        background:linear-gradient(180deg,rgba(13,26,47,.95),rgba(8,17,32,.95));
-        border:1px solid var(--border);border-radius:var(--radius);
-        padding:.8rem 1.1rem;margin-bottom:1rem;backdrop-filter:blur(8px);box-shadow:var(--glow);
+        background:transparent;
+        border:1px solid transparent;border-radius:var(--radius);
+        padding:.5rem .25rem;margin-bottom:.55rem;
       }
       .brand{display:flex;align-items:center;gap:.65rem;font-weight:900;font-size:1.14rem}
       .brand .radar-ic{width:35px;height:35px;border-radius:10px;background:rgba(8,145,178,.16);border:1px solid rgba(34,211,238,.5);display:grid;place-items:center;color:var(--cyan);box-shadow:0 0 16px rgba(34,211,238,.22),inset 0 0 10px rgba(34,211,238,.10)}
@@ -203,9 +203,10 @@
       .chip.off{color:var(--red);border-color:rgba(248,113,113,.5);background:rgba(248,113,113,.09)}
       .chip.proto{color:#a5ecfb;border-color:rgba(34,211,238,.4);background:rgba(8,145,178,.12)}
       .user .meta{color:var(--muted);font-size:.77rem;margin-top:.3rem;display:flex;gap:.9rem;flex-wrap:wrap}
-      .bar{height:8px;border-radius:99px;background:#060f1e;border:1px solid var(--border-soft);overflow:hidden;margin-top:.55rem}
+      .bar{height:7px;border-radius:99px;background:#060f1e;border:1px solid var(--border-soft);overflow:hidden;margin-top:.55rem}
       .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#0284c7,#22d3ee,#2dd4bf);box-shadow:0 0 10px rgba(34,211,238,.45);transition:width .4s}
       .bar i.hot{background:linear-gradient(90deg,#dc2626,#f59e0b);box-shadow:0 0 10px rgba(245,158,11,.4)}
+      .bar.grey i{background:linear-gradient(90deg,#3d4a61,#5d6d87);box-shadow:none}
       .user .acts{display:flex;gap:.45rem;flex-wrap:wrap}
       .empty{border:1.5px dashed rgba(56,189,248,.35);border-radius:12px;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.9rem;line-height:2;background:rgba(8,17,32,.5)}
 
@@ -289,29 +290,31 @@
       .btn-icon{background:var(--field);border:1px solid var(--border-soft);color:var(--muted);border-radius:9px;padding:.45rem .7rem;font-size:.79rem;font-weight:700;transition:all .15s}
       .btn-icon:hover{color:var(--text);border-color:rgba(34,211,238,.55);box-shadow:0 0 12px rgba(34,211,238,.12)}
       .toolbar select.search{flex:0 1 150px;min-width:120px}
-      .roundrow{display:flex;gap:1.15rem;flex-wrap:wrap;justify-content:center;padding:.5rem 0 1.15rem}
+      .roundrow{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;padding:.95rem 0 .55rem}
       .rbtn{display:flex;flex-direction:column;align-items:center;gap:.5rem;background:none;border:none;color:var(--muted);font-size:.73rem;font-weight:700;padding:0;transition:color .15s}
       .rbtn .rc{
-        position:relative;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+        position:relative;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
         background:radial-gradient(circle at 32% 28%,#14304f,#0a1728 72%);
-        border:1.5px solid rgba(56,189,248,.5);color:var(--blue);
-        box-shadow:0 0 16px rgba(56,189,248,.20),inset 0 0 12px rgba(56,189,248,.10);
+        border:1.5px solid rgba(56,189,248,.55);color:var(--blue);
+        box-shadow:0 0 24px rgba(56,189,248,.38),0 8px 20px rgba(2,132,199,.22),inset 0 0 14px rgba(56,189,248,.15);
         transition:all .16s;
       }
       .rbtn:hover{color:var(--text)}
       .rbtn:hover .rc{transform:translateY(-2px);border-color:rgba(103,232,249,.85);box-shadow:0 0 26px rgba(34,211,238,.4),0 10px 22px rgba(2,132,199,.25),inset 0 0 14px rgba(34,211,238,.16)}
       .rbtn.main{color:#bbf7d0}
-      .rbtn.main .rc{background:radial-gradient(circle at 32% 28%,#14532d,#0a2013 75%);border-color:rgba(74,222,128,.65);color:var(--green-t);box-shadow:0 0 18px rgba(34,197,94,.3),inset 0 0 12px rgba(34,197,94,.12)}
+      .rbtn.main .rc{background:radial-gradient(circle at 32% 28%,#14532d,#0a2013 75%);border-color:rgba(74,222,128,.65);color:var(--green-t);box-shadow:0 0 27px rgba(34,197,94,.48),inset 0 0 14px rgba(34,197,94,.16)}
       .rbtn.main:hover .rc{border-color:rgba(134,239,172,.9);box-shadow:0 0 28px rgba(34,197,94,.45),0 10px 22px rgba(22,163,74,.28),inset 0 0 14px rgba(34,197,94,.18)}
-      .rbtn:nth-child(3) .rc{border-color:rgba(45,212,191,.55);color:var(--teal);box-shadow:0 0 16px rgba(45,212,191,.22),inset 0 0 12px rgba(45,212,191,.10)}
+      .rbtn:nth-child(3) .rc{border-color:rgba(45,212,191,.55);color:var(--teal);box-shadow:0 0 25px rgba(45,212,191,.40),inset 0 0 14px rgba(45,212,191,.15)}
       .rbtn:nth-child(3):hover .rc{border-color:rgba(94,234,212,.9);box-shadow:0 0 26px rgba(45,212,191,.4),0 10px 22px rgba(13,148,136,.25),inset 0 0 14px rgba(45,212,191,.16)}
-      .rbtn:nth-child(4) .rc{border-color:rgba(167,139,250,.55);color:#c4b5fd;box-shadow:0 0 16px rgba(167,139,250,.22),inset 0 0 12px rgba(167,139,250,.10)}
+      .rbtn:nth-child(4) .rc{border-color:rgba(167,139,250,.55);color:#c4b5fd;box-shadow:0 0 25px rgba(167,139,250,.40),inset 0 0 14px rgba(167,139,250,.15)}
       .rbtn:nth-child(4):hover .rc{border-color:rgba(196,181,253,.9);box-shadow:0 0 26px rgba(167,139,250,.4),0 10px 22px rgba(124,58,237,.25),inset 0 0 14px rgba(167,139,250,.16)}
-      .rbtn:nth-child(5) .rc{border-color:rgba(251,191,36,.55);color:var(--amber-t);box-shadow:0 0 16px rgba(245,158,11,.22),inset 0 0 12px rgba(245,158,11,.10)}
+      .rbtn:nth-child(5) .rc{border-color:rgba(251,191,36,.55);color:var(--amber-t);box-shadow:0 0 25px rgba(245,158,11,.40),inset 0 0 14px rgba(245,158,11,.15)}
       .rbtn:nth-child(5):hover .rc{border-color:rgba(252,211,77,.9);box-shadow:0 0 26px rgba(245,158,11,.4),0 10px 22px rgba(217,119,6,.25),inset 0 0 14px rgba(245,158,11,.16)}
       body.light .rbtn .rc{background:radial-gradient(circle at 32% 28%,#ffffff,#dbe8fa 75%)}
       body.light .rbtn.main .rc{background:radial-gradient(circle at 32% 28%,#f0fdf4,#bbf7d0 78%)}
-      .rbtn svg{width:22px;height:22px}
+      .rbtn svg{width:21px;height:21px}
+      .rbadge{position:absolute;left:-8px;bottom:-6px;min-width:21px;height:21px;padding:0 5px;border-radius:999px;background:linear-gradient(180deg,#fb4d6d,#e11d48);border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;color:#fff;box-shadow:0 0 13px rgba(244,63,94,.5);z-index:2}
+      .rbadge svg{width:11px;height:11px}
       .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
       .dot.live{background:var(--green);box-shadow:0 0 8px var(--green)}
       .dot.idle{background:#62779c}
@@ -320,6 +323,20 @@
       .bar-row .bar{flex:1;margin-top:0}
       .bar-row .bv{font-size:.71rem;color:var(--muted);min-width:86px}
       .chiprow{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem;align-items:center}
+      .upbox{margin-top:.7rem;background:rgba(6,15,30,.55);border:1px solid var(--border-soft);border-radius:11px;padding:.6rem .75rem}
+      body.light .upbox{background:#e9f0fa}
+      .upbox-row{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
+      .upbox-row.sep{margin-top:.55rem;padding-top:.55rem;border-top:1px solid var(--border-soft)}
+      .upbox .plab{font-size:.72rem;font-weight:700;color:var(--muted)}
+      .upbox .vdiv{width:1px;align-self:stretch;background:var(--border-soft);margin:0 .3rem}
+      .upbox .chip{font-size:.7rem;padding:.22rem .6rem}
+      .cntbox{min-width:26px;text-align:center;font-size:.78rem;font-weight:900;color:#052e12;background:linear-gradient(180deg,#4ade80,#22c55e);border-radius:7px;padding:.14rem .4rem;box-shadow:0 0 10px rgba(34,197,94,.3)}
+      .chip.p-vl{color:#93c5fd;border-color:rgba(59,130,246,.5);background:rgba(37,99,235,.13)}
+      .chip.p-tr{color:#ddd6fe;border-color:rgba(139,92,246,.5);background:rgba(124,58,237,.13)}
+      .chip.p-ss{color:#fcd34d;border-color:rgba(245,158,11,.5);background:rgba(217,119,6,.12)}
+      .users-head .toolbar{margin-bottom:.1rem}
+      .hdr-chev svg{transition:transform .2s}
+      .hdr-chev.closed svg{transform:rotate(180deg)}
       .chip.num{color:var(--amber-t);border-color:rgba(245,158,11,.45);background:rgba(245,158,11,.08)}
       .chip.port{color:#c9dbf2;border-color:var(--border-soft);background:var(--field)}
       body.light .chip.port{color:#33475f}
@@ -355,6 +372,102 @@
         .mpage.active{animation:none}
       }
 
+
+      /* ---------- structure additions (Radar original) ---------- */
+      .capsule{display:inline-flex;gap:.35rem;background:rgba(6,15,30,.85);border:1px solid var(--border);border-radius:999px;padding:.35rem;box-shadow:inset 0 0 14px rgba(34,211,238,.06)}
+      .cbtn{width:38px;height:38px;min-height:38px;border-radius:50%;display:grid;place-items:center;background:var(--field);border:1px solid var(--border-soft);color:#a5ecfb;text-decoration:none;transition:all .15s;padding:0}
+      .cbtn svg{width:17px;height:17px}
+      .cbtn:hover{border-color:rgba(34,211,238,.65);box-shadow:0 0 14px rgba(34,211,238,.25);color:#fff}
+      .cbtn.danger{color:var(--red)}
+      .cbtn.danger:hover{border-color:rgba(248,113,113,.6);box-shadow:0 0 14px rgba(248,113,113,.2)}
+      body.light .capsule{background:#eef3fb}
+      .banner{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;background:linear-gradient(90deg,rgba(8,145,178,.17),rgba(37,99,235,.10));border:1px solid var(--border);border-radius:12px;padding:.5rem .9rem;margin-bottom:.9rem;font-size:.82rem;color:#c9dbf2;box-shadow:var(--glow)}
+      .banner-t{flex:1;min-width:200px;line-height:1.8}
+      .banner-btn{background:rgba(8,145,178,.20);border:1px solid rgba(34,211,238,.5);color:#d9f7ff;border-radius:999px;padding:.32rem .95rem;font-size:.78rem;font-weight:800;text-decoration:none;transition:all .15s}
+      .banner-btn:hover{box-shadow:0 0 14px rgba(34,211,238,.25)}
+      .banner-btn.alt{background:transparent}
+      body.light .banner{color:#33475f}
+      .stats-card{position:relative;margin-bottom:1rem;padding:1rem 1.1rem 1.1rem}
+      .stats-tgl{position:absolute;opacity:0;pointer-events:none}
+      .stats-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;padding:.1rem 0 .85rem}
+      .stats-title{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1rem;color:#eaf5ff}
+      .stats-title svg{width:19px;height:19px;color:var(--cyan)}
+      .chev{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;border:1px solid var(--border-soft);color:var(--muted);transition:transform .2s}
+      .chev svg{width:15px;height:15px}
+      .stats-card:has(.stats-tgl:not(:checked)) .stats-grid{display:none}
+      .stats-card:has(.stats-tgl:not(:checked)) .stats-head{padding-bottom:.1rem}
+      .stats-card:has(.stats-tgl:not(:checked)) .chev{transform:rotate(180deg)}
+      .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+      .scell{display:flex;flex-direction:column;gap:.6rem;background:linear-gradient(165deg,#0d1d33,#0a1626);border:1px solid var(--border-soft);border-radius:11px;padding:.85rem .9rem;min-width:0}
+      .scell-top{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+      .scell-bot{display:flex;align-items:flex-end;justify-content:space-between;gap:.6rem}
+      .sic{width:34px;height:34px;flex:none;border-radius:9px;display:grid;place-items:center;border:1px solid}
+      .sic svg{width:18px;height:18px}
+      .scell-main{min-width:0}
+      .scell .k{font-size:.82rem;color:#dbe7fa;font-weight:700}
+      .scell .v{font-size:1.28rem;font-weight:900;line-height:1.2}
+      .scell .v small{font-size:.72rem;color:var(--muted);font-weight:600}
+      .scell .d{font-size:.7rem;color:var(--muted);line-height:1.5}
+      .c-cyan .sic{color:var(--cyan);background:rgba(8,145,178,.13);border-color:rgba(34,211,238,.35)}
+      .c-cyan .v{color:#a5ecfb}
+      .c-green .sic{color:var(--green-t);background:rgba(34,197,94,.10);border-color:rgba(34,197,94,.35)}
+      .c-green .v{color:#86efac}
+      .c-violet .sic{color:#c4b5fd;background:rgba(139,92,246,.12);border-color:rgba(167,139,250,.4)}
+      .c-violet .v{color:#ddd6fe}
+      .c-amber .sic{color:var(--amber-t);background:rgba(245,158,11,.10);border-color:rgba(245,158,11,.35)}
+      .c-amber .v{color:#fcd34d}
+      body.light .scell{background:#eef3fb}
+      body.light .scell .v{color:#14243e}
+      .toolbar.col{flex-direction:column;align-items:stretch}
+      .selrow{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+      .user{flex-direction:column;align-items:stretch;gap:.8rem}
+      .user.picked{border-color:rgba(34,211,238,.7);box-shadow:0 0 0 1px rgba(34,211,238,.35),0 0 22px rgba(34,211,238,.15)}
+      .u-top{display:flex;align-items:center;gap:.7rem}
+      .u-name{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:.97rem;min-width:0}
+      .u-nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .u-sel{width:17px;height:17px;accent-color:var(--blue-deep);flex:none;cursor:pointer}
+      .u-ibtns{margin-inline-start:auto;display:flex;gap:.4rem;flex:none}
+      .ibtn{width:30px;height:30px;min-height:30px;border-radius:8px;display:grid;place-items:center;background:var(--field);border:1px solid var(--border-soft);color:#c9dbf2;padding:0;transition:all .15s}
+      .ibtn svg{width:15px;height:15px}
+      .ibtn.g{color:var(--green-t);border-color:rgba(34,197,94,.42)}
+      .ibtn.g:hover{background:rgba(34,197,94,.12);box-shadow:0 0 12px rgba(34,197,94,.2)}
+      .ibtn.b{color:#7dd3fc;border-color:rgba(56,189,248,.42)}
+      .ibtn.b:hover{background:rgba(8,145,178,.14);box-shadow:0 0 12px rgba(56,189,248,.2)}
+      .ibtn.a{color:var(--amber-t);border-color:rgba(245,158,11,.42)}
+      .ibtn.a:hover{background:rgba(245,158,11,.10);box-shadow:0 0 12px rgba(245,158,11,.2)}
+      .ibtn.r{color:var(--red);border-color:rgba(248,113,113,.42)}
+      .ibtn.r:hover{background:rgba(248,113,113,.10);box-shadow:0 0 12px rgba(248,113,113,.2)}
+      .ugrid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+      .ucell{background:rgba(6,15,30,.55);border:1px solid var(--border-soft);border-radius:10px;padding:.6rem .7rem;min-width:0}
+      body.light .ucell{background:#e6eef9}
+      .ucell-t{font-size:.78rem;font-weight:800;color:#7dd3fc;margin-bottom:.35rem}
+      .ucell:nth-child(2) .ucell-t{color:#c4b5fd}
+      .ucell:nth-child(3) .ucell-t{color:var(--amber-t)}
+      .ucell:nth-child(4) .ucell-t{color:var(--green-t)}
+      .ucell-v{display:flex;align-items:center;justify-content:space-between;gap:.4rem;font-size:.73rem;color:var(--muted);font-weight:700}
+      .ric{width:22px;height:22px;min-height:22px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.45);color:var(--amber-t);padding:0}
+      button.ric{cursor:pointer}
+      button.ric:hover{color:#fde68a;border-color:rgba(245,158,11,.75)}
+      .ric svg{width:12px;height:12px}
+      .ric.dotw{background:transparent;border-color:transparent}
+      .ucell .bar{margin-top:.5rem}
+      .ufoot{display:flex;flex-direction:column;gap:.5rem}
+      .ufoot-row{display:flex;gap:.5rem}
+      .ubtn{flex:1;min-width:92px;background:var(--field);border:1px solid var(--border-soft);color:#dbe7fa;border-radius:9px;padding:.5rem .6rem;font-size:.8rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;transition:all .15s}
+      .ubtn svg{width:16px;height:16px}
+      .ubtn.green{color:var(--green-t);border-color:rgba(34,197,94,.45);background:rgba(34,197,94,.07)}
+      .ubtn.green:hover{background:rgba(34,197,94,.14)}
+      .ubtn.rose{color:#fda4af;border-color:rgba(251,113,133,.45);background:rgba(251,113,133,.07)}
+      .ubtn.rose:hover{background:rgba(251,113,133,.14)}
+      .ubtn.wide{flex:1.7}
+      .ubtn.sq{flex:0 0 46px;min-width:46px;color:var(--amber-t);border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.07)}
+      @media (max-width:370px){
+        .stats-grid{grid-template-columns:1fr}
+        .banner-t{min-width:0}
+      }
+      @media (max-width:560px){
+        .status-dot{display:none}
+      }
     </style>
   </head>
   <body>
@@ -404,30 +517,48 @@
               <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.9 19.1a10 10 0 1 1 14.2 0"/><path d="M7.8 16.2a6 6 0 1 1 8.4 0"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><path d="M12 13.4V21"/></svg>
             </span>
             <span>پنل رادار<small class="ltr" id="brandDomain">…</small></span>
+            <span class="ver-pill ltr"><i></i>v6.3.0</span>
           </div>
           <span class="sp"></span>
           <span class="status-dot"><i></i> ورکر فعال و در حال سرویس‌دهی</span>
-          <button class="btn-icon" id="themeBtn" type="button" title="تم روشن / تیره">تم</button>
-          <button class="btn-icon" id="animBtn" type="button" title="پس‌زمینه‌ی متحرک">حرکت پس‌زمینه</button>
-          <button class="btn-ghost" id="logoutBtn" type="button">خروج</button>
+          <div class="capsule">
+            <button class="cbtn" id="themeBtn" type="button" title="تم روشن / تیره"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.5A8.5 8.5 0 1 1 10.5 4a6.8 6.8 0 0 0 9.5 9.5Z"/></svg></button>
+            <button class="cbtn" id="animBtn" type="button" title="پس‌زمینه‌ی متحرک"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 15c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3"/></svg></button>
+            <a class="cbtn" href="https://t.me/radarconfingbot" target="_blank" rel="noopener" title="ربات رادار"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.8 19c-.23 1.03-.84 1.28-1.7.8l-4.7-3.47-2.27 2.18c-.25.25-.46.46-.95.46l.34-4.87 8.86-8c.39-.34-.08-.53-.6-.19L7.6 13.7 2.83 12.2c-1.04-.32-1.06-1.04.22-1.54l18.63-7.18c.86-.32 1.62.2 1.22 1.12Z"/></svg></a>
+            <button class="cbtn danger" id="logoutBtn" type="button" title="خروج"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6M10 12h11m0 0-3.5-3.5M21 12l-3.5 3.5"/></svg></button>
+          </div>
+          <button class="cbtn hdr-chev" id="hdrChev" type="button" title="نمایش / پنهان‌کردن آمار سرور"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
 
-        <div class="stats">
-          <div class="stat">
-            <div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M3.5 20c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><path d="M16 5.5a3.5 3.5 0 0 1 0 6.5M18.5 15.4c1.2.8 1.9 2.2 2.1 4.1"/></svg>کل کاربران</div>
-            <div class="v" id="stUsers">۰</div>
-          </div>
-          <div class="stat">
-            <div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>ترافیک مصرف‌شده</div>
-            <div class="v"><span id="stTraffic">۰</span> <small>گیگابایت</small></div>
-          </div>
-          <div class="stat">
-            <div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z"/></svg>پروتکل‌های فعال</div>
-            <div class="v" id="stProtos">۳ <small>/ ۳</small></div>
-          </div>
-          <div class="stat">
-            <div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>به‌روزرسانی اشتراک</div>
-            <div class="v">۱۲ <small>ساعت</small></div>
+        <div class="banner">
+          <span class="banner-t">📡 برای ساخت رایگان پنل تازه یا گرفتن راهنما، ربات رادار قدم‌به‌قدم همراه‌تان است؛ خبرهای تازه هم در کانال رادار منتشر می‌شود.</span>
+          <a class="banner-btn" href="https://t.me/radarconfingbot" target="_blank" rel="noopener">ربات رادار</a>
+          <a class="banner-btn alt" href="https://t.me/radarconfing" target="_blank" rel="noopener">کانال رادار</a>
+        </div>
+
+        <div class="card stats-card">
+          <input type="checkbox" class="stats-tgl" id="statsTgl" checked />
+          <label class="stats-head" for="statsTgl">
+            <span class="stats-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10m6 10V4m6 16v-8m4 8H2"/></svg> آمار و وضعیت سرور</span>
+            <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg></span>
+          </label>
+          <div class="stats-grid">
+            <div class="scell c-cyan">
+              <div class="scell-top"><span class="k">کل کاربران</span><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M3.5 20c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><path d="M16 5.5a3.5 3.5 0 0 1 0 6.5M18.5 15.4c1.2.8 1.9 2.2 2.1 4.1"/></svg></span></div>
+              <div class="scell-bot"><span class="d">کاربر ثبت‌شده در این پنل</span><span class="v" id="stUsers">۰</span></div>
+            </div>
+            <div class="scell c-green">
+              <div class="scell-top"><span class="k">ترافیک مصرف‌شده</span><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v11m0 0 4-4m-4 4-4-4"/><path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg></span></div>
+              <div class="scell-bot"><span class="d">مجموع آپلود و دانلود همه</span><span class="v"><span id="stTraffic">۰</span> <small>گیگابایت</small></span></div>
+            </div>
+            <div class="scell c-violet">
+              <div class="scell-top"><span class="k">پروتکل‌های فعال</span><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z"/></svg></span></div>
+              <div class="scell-bot"><span class="d">روشن در تنظیمات پنل</span><span class="v" id="stProtos">۳ <small>/ ۳</small></span></div>
+            </div>
+            <div class="scell c-amber">
+              <div class="scell-top"><span class="k">به‌روزرسانی اشتراک</span><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span></div>
+              <div class="scell-bot"><span class="d">به‌روزرسانی خودکار اشتراک‌ها</span><span class="v">۱۲ <small>ساعت</small></span></div>
+            </div>
           </div>
         </div>
 
@@ -452,24 +583,27 @@
 
         <!-- ===== TAB: USERS ===== -->
         <section class="page active" id="page-users">
-          <div class="card">
+          <div class="card users-head">
             <h2>مدیریت کاربران</h2>
             <p class="sub">هر کاربر یک لینک اشتراک جدا دارد؛ هر سه پروتکل VLESS و Trojan و Shadowsocks از یک مسیر وب‌سوکت مشترک روی همین اشتراک داده می‌شوند.</p>
-            <div class="toolbar">
+            <div class="toolbar col">
               <input class="field search" id="userSearch" type="search" placeholder="جست‌وجو با نام یا UUID…" />
-              <select class="field search" id="userSort">
+              <div class="selrow">
+              <select class="field" id="userSort">
                 <option value="new">تازه‌ترین‌ها</option>
                 <option value="old">قدیمی‌ترین‌ها</option>
                 <option value="usage">بیشترین مصرف</option>
                 <option value="name">بر اساس نام</option>
               </select>
-              <select class="field search" id="userFilter">
+              <select class="field" id="userFilter">
                 <option value="all">همه‌ی کاربرها</option>
                 <option value="on">فقط فعال‌ها</option>
                 <option value="off">فقط غیرفعال‌ها</option>
                 <option value="exp">تمام‌شده یا منقضی</option>
-              </select>
+                </select>
+              </div>
             </div>
+          </div>
             <div class="roundrow">
               <button class="rbtn main" id="addUserBtn" type="button">
                 <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
@@ -488,12 +622,11 @@
                 تست سلامت
               </button>
               <button class="rbtn" data-goto="settings" type="button">
-                <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 0 0-.14-1.4l2-1.55-2-3.46-2.35.95a7 7 0 0 0-2.42-1.4L13.7 2.6h-3.4l-.39 2.54a7 7 0 0 0-2.42 1.4l-2.35-.95-2 3.46 2 1.55a7 7 0 0 0 0 2.8l-2 1.55 2 3.46 2.35-.95a7 7 0 0 0 2.42 1.4l.39 2.54h3.4l.39-2.54a7 7 0 0 0 2.42-1.4l2.35.95 2-3.46-2-1.55c.1-.45.14-.92.14-1.4Z"/></svg></span>
+                <span class="rc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 0 0-.14-1.4l2-1.55-2-3.46-2.35.95a7 7 0 0 0-2.42-1.4L13.7 2.6h-3.4l-.39 2.54a7 7 0 0 0-2.42 1.4l-2.35-.95-2 3.46 2 1.55a7 7 0 0 0 0 2.8l-2 1.55 2 3.46 2.35-.95a7 7 0 0 0 2.42 1.4l.39 2.54h3.4l.39-2.54a7 7 0 0 0 2.42-1.4l2.35.95 2-3.46-2-1.55c.1-.45.14-.92.14-1.4Z"/></svg><span class="rbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 0 0-.14-1.4l2-1.55-2-3.46-2.35.95a7 7 0 0 0-2.42-1.4L13.7 2.6h-3.4l-.39 2.54a7 7 0 0 0-2.42 1.4l-2.35-.95-2 3.46 2 1.55a7 7 0 0 0 0 2.8l-2 1.55 2 3.46 2.35-.95a7 7 0 0 0 2.42 1.4l.39 2.54h3.4l.39-2.54a7 7 0 0 0 2.42-1.4l2.35.95 2-3.46-2-1.55c.1-.45.14-.92.14-1.4Z"/></svg></span></span>
                 تنظیمات
               </button>
             </div>
             <div class="user-list" id="userList"></div>
-          </div>
         </section>
 
         <!-- ===== TAB: BUILDER ===== -->
@@ -803,45 +936,67 @@
     <div class="toast" id="toast">کپی شد ✓</div>
 
     <script>
-    /* ============ wireframe wave background (canvas) ============ */
+    /* ============ wireframe wave-mesh background (canvas) ============ */
     (function(){
       var cv=document.getElementById('bg'),ctx=cv.getContext('2d');
-      var W,H,t=0,reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function size(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;}
-      size();window.addEventListener('resize',size);
-      function layer(yBase,amp,hue,aMax,step,gap,phase){
-        var cols=Math.ceil(W/step)+2;
-        var rows=13,pts=[];
-        for(var r=0;r<rows;r++){
+      var W=0,H=0,t=0,raf=null,last=0;
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function size(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;if(!raf)draw();}
+      function layer(yBase,amp,aMax,step,gap,phase,dir,rows){
+        var cols=Math.ceil(W/step)+2,pts=[],r,c;
+        for(r=0;r<rows;r++){
           pts.push([]);
-          for(var c=0;c<cols;c++){
-            var x=c*step-step;
-            var depth=r/(rows-1);
-            var y=yBase+depth*gap*7
+          for(c=0;c<cols;c++){
+            var x=c*step-step,depth=r/(rows-1);
+            var y=yBase+dir*depth*gap*(rows-1)
               +Math.sin(x*0.004+t*0.7+phase+depth*2.2)*amp*(0.35+depth)
               +Math.cos(x*0.0016-t*0.45+phase*1.7)*amp*0.7*(0.3+depth);
             pts[r].push([x,y,depth]);
           }
         }
-        for(var r2=0;r2<rows;r2++){
-          for(var c2=0;c2<cols;c2++){
-            var p=pts[r2][c2];
-            var a=aMax*(0.15+0.85*p[2]);
-            ctx.strokeStyle='hsla('+hue+',90%,60%,'+a.toFixed(3)+')';
-            ctx.lineWidth=1;
-            if(c2<cols-1){ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(pts[r2][c2+1][0],pts[r2][c2+1][1]);ctx.stroke();}
-            if(r2<rows-1){ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(pts[r2+1][c2][0],pts[r2+1][c2][1]);ctx.stroke();}
+        for(r=0;r<rows;r++){
+          for(c=0;c<cols;c++){
+            var p0=pts[r][c],a=aMax*(0.18+0.82*p0[2]);
+            if(c<cols-1)seg(p0,pts[r][c+1],a);
+            if(r<rows-1)seg(p0,pts[r+1][c],a);
           }
         }
       }
-      function frame(){
-        ctx.fillStyle='#020610';ctx.fillRect(0,0,W,H);
-        layer(H*0.16,H*0.045,222,0.5,34,13,0);
-        layer(H*0.86,H*0.05,222,0.5,34,13,2.4);
-        t+=0.016;
-        if(!reduce)requestAnimationFrame(frame);
+      function seg(p0,p1,a){
+        ctx.strokeStyle='hsla(222,92%,62%,'+(a*0.35).toFixed(3)+')';ctx.lineWidth=2.6;
+        ctx.beginPath();ctx.moveTo(p0[0],p0[1]);ctx.lineTo(p1[0],p1[1]);ctx.stroke();
+        ctx.strokeStyle='hsla(222,92%,66%,'+a.toFixed(3)+')';ctx.lineWidth=1;
+        ctx.beginPath();ctx.moveTo(p0[0],p0[1]);ctx.lineTo(p1[0],p1[1]);ctx.stroke();
       }
-      frame();
+      function draw(){
+        if(!W)size();
+        ctx.fillStyle='#04070f';ctx.fillRect(0,0,W,H);
+        var step=W<520?30:36;
+        layer(H*0.02,H*0.05,0.16,step,12,3.1,1,4);
+        layer(H*0.15,H*0.05,0.55,step,12,0,-1,14);
+        layer(H*0.52,H*0.035,0.10,step,14,1.3,1,8);
+        layer(H*0.86,H*0.055,0.55,step,12,2.4,1,14);
+        layer(H*1.0,H*0.05,0.16,step,12,5.2,-1,4);
+      }
+      function loop(now){
+        raf=requestAnimationFrame(loop);
+        if(now-last<33)return;
+        last=now;t+=0.016;draw();
+      }
+      function running(){
+        return !reduce&&!document.hidden
+          &&!document.body.classList.contains('noanim')
+          &&!document.body.classList.contains('light');
+      }
+      function sync(){
+        if(running()){if(!raf)raf=requestAnimationFrame(loop);}
+        else{if(raf){cancelAnimationFrame(raf);raf=null;}draw();}
+      }
+      size();draw();
+      window.addEventListener('resize',size);
+      document.addEventListener('visibilitychange',sync);
+      new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});
+      sync();
     })();
 
     /* ============ helpers & state ============ */
@@ -1027,9 +1182,9 @@
         var pct=limit>0?Math.min(100,Math.round(used/limit*100)):0;
         var P=userProtosOf(u);
         var protos='';
-        if(P.vl)protos+='<span class="chip proto">VLESS</span> ';
-        if(P.tr)protos+='<span class="chip proto">Trojan</span> ';
-        if(P.ss)protos+='<span class="chip proto">SS</span>';
+        if(P.vl)protos+='<span class="chip p-vl">VLESS</span>';
+        if(P.tr)protos+='<span class="chip p-tr">Trojan</span>';
+        if(P.ss)protos+='<span class="chip p-ss">SS</span>';
         var ports=portsOf().map(function(p){return '<span class="chip port ltr">'+p+'</span>';}).join(' ');
         var online=u.lastSeen&&(Date.now()-u.lastSeen)<300000;
         var timePct=0,timeVal='بی‌نهایت';
@@ -1039,27 +1194,55 @@
           var leftD=Math.ceil((u.expireAt-Date.now())/86400000);
           timeVal=leftD>0?faNum(leftD)+' روز مانده':'تمام شده';
         }
+        var fmtB=function(b){
+          b=b||0;
+          if(b>=1073741824)return faNum(Math.round(b/1073741824*10)/10)+' گیگ';
+          if(b>=1048576)return faNum(Math.round(b/1048576))+' مگ';
+          if(b>=1024)return faNum(Math.round(b/1024))+' کیلوبایت';
+          return faNum(b)+' بایت';
+        };
+        var upB=u.up||0, dnB=u.down||0;
+        var connW=Math.min(100,u.connections||0);
+        var dnShare=(upB+dnB)>0?Math.round(dnB/(upB+dnB)*100):0;
+        var totDays=u.expireAt?Math.max(1,Math.round((u.expireAt-(u.createdAt||u.expireAt))/86400000)):0;
+        var icoEdit='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>';
+        var icoCopy='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        var icoPause='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5v14M15 5v14"/></svg>';
+        var icoPlay='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5Z"/></svg>';
+        var icoDel='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13"/></svg>';
+        var icoReset='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 3v4h-4"/></svg>';
+        var icoQr='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 14v.01M14 21v.01M18 18h3v3h-3z"/></svg>';
         var row=document.createElement('div');row.className='user';
         row.innerHTML=
-          '<div class="avatar">'+u.name.trim().charAt(0)+'</div>'+
-          '<div class="info">'+
-            '<div class="name"><span class="dot '+(online?'live':'idle')+'" title="'+(online?'تازه وصل بوده':'آفلاین')+'"></span>'+u.name+' <span class="chip '+(u.enabled?'on':'off')+'">'+(u.enabled?'فعال':'غیرفعال')+'</span></div>'+
-            '<div class="bar-row"><span class="bl">حجم</span><div class="bar"><i class="'+(pct>85?'hot':'')+'" style="width:'+(limit>0?pct:0)+'%"></i></div><span class="bv">'+faNum(used)+' از '+(limit>0?faNum(limit)+' گیگ':'نامحدود')+'</span></div>'+
-            '<div class="bar-row"><span class="bl">زمان</span><div class="bar"><i style="width:'+(u.expireAt?timePct:0)+'%"></i></div><span class="bv">'+timeVal+'</span></div>'+
-            '<div class="meta"><span>'+expiryText(u)+'</span><span>آخرین اتصال: '+relT(u.lastSeen)+'</span><span>'+faNum(u.connections||0)+' اتصال</span></div>'+
-            '<div class="chiprow">'+protos+'<span class="chip num">'+faNum(cfgCount(u))+' کانفیگ</span> '+ports+'</div>'+
+          '<div class="u-top">'+
+            '<div class="u-name"><input type="checkbox" class="u-sel" title="انتخاب کاربر" /><span class="dot '+(online?'live':'idle')+'"></span><span class="u-nm">'+u.name+'</span> <span class="chip '+(u.enabled?'on':'off')+'">'+(u.enabled?'فعال':'غیرفعال')+'</span></div>'+
+            '<div class="u-ibtns">'+
+              '<button class="ibtn g" data-act="edit" type="button" title="ویرایش">'+icoEdit+'</button>'+
+              '<button class="ibtn b" data-act="sub" type="button" title="کپی اشتراک">'+icoCopy+'</button>'+
+              '<button class="ibtn a" data-act="toggle" type="button" title="'+(u.enabled?'توقف':'فعال‌کردن')+'">'+(u.enabled?icoPause:icoPlay)+'</button>'+
+              '<button class="ibtn r" data-act="del" type="button" title="حذف">'+icoDel+'</button>'+
+            '</div>'+
           '</div>'+
-          '<div class="acts">'+
-            '<button class="btn-mini" data-act="sub" type="button">کپی اشتراک</button>'+
-            '<button class="btn-mini" data-act="status" type="button">صفحه‌ی وضعیت</button>'+
-            '<button class="btn-mini" data-act="cfg" type="button">کانفیگ‌ها</button>'+
-            '<button class="btn-mini" data-act="toggle" type="button">'+(u.enabled?'غیرفعال':'فعال')+'</button>'+
-            '<button class="btn-mini" data-act="edit" type="button">ویرایش</button>'+
-            '<button class="btn-mini danger" data-act="del" type="button">حذف</button>'+
+          '<div class="ugrid">'+
+            '<div class="ucell"><div class="ucell-t">حجم</div><div class="ucell-v"><span>'+fmtB(upB+dnB)+'</span><button class="ric" data-act="reset" type="button" title="صفر کردن شمارنده‌ی ترافیک">'+icoReset+'</button><span>'+(limit>0?fmtB(u.quotaBytes):'∞')+'</span></div><div class="bar"><i class="'+(pct>85?'hot':'')+'" style="width:'+(limit>0?pct:0)+'%"></i></div></div>'+
+            '<div class="ucell"><div class="ucell-t">زمان</div><div class="ucell-v"><span>'+timeVal+'</span><button class="ric" data-act="edit" type="button" title="ویرایش مدت و سقف">'+icoReset+'</button><span>'+(u.expireAt?faNum(totDays)+' روز':'∞')+'</span></div><div class="bar"><i style="width:'+(u.expireAt?timePct:0)+'%"></i></div></div>'+
+            '<div class="ucell"><div class="ucell-t">ترافیک کاربر</div><div class="ucell-v"><span>↑ '+fmtB(upB)+'</span><button class="ric" data-act="reset" type="button" title="صفر کردن شمارنده‌ی ترافیک">'+icoReset+'</button><span>↓ '+fmtB(dnB)+'</span></div><div class="bar"><i style="width:'+dnShare+'%"></i></div></div>'+
+            '<div class="ucell"><div class="ucell-t">اتصال‌ها</div><div class="ucell-v"><span>'+faNum(u.connections||0)+' اتصال</span><span class="ric dotw"><span class="dot '+(online?'live':'idle')+'"></span></span><span>'+relT(u.lastSeen)+'</span></div><div class="bar grey"><i style="width:'+connW+'%"></i></div></div>'+
+          '</div>'+
+          '<div class="meta"><span>'+expiryText(u)+'</span><span>آخرین اتصال: '+relT(u.lastSeen)+'</span></div>'+
+          '<div class="upbox">'+
+            '<div class="upbox-row"><span class="plab">پروتکل:</span>'+protos+'<span class="vdiv"></span><span class="plab">تعداد کانفیگ‌ها:</span><span class="cntbox">'+faNum(cfgCount(u))+'</span></div>'+
+            '<div class="upbox-row sep"><span class="plab">پورت‌ها:</span>'+ports+'</div>'+
+          '</div>'+
+          '<div class="ufoot">'+
+            '<div class="ufoot-row"><button class="ubtn green" data-act="status" type="button">صفحه‌ی وضعیت</button><button class="ubtn rose" data-act="yaml" type="button">ساب YAML</button></div>'+
+            '<div class="ufoot-row"><button class="ubtn wide" data-act="sub" type="button">ساب متنی</button><button class="ubtn sq" data-act="cfg" type="button" title="کانفیگ‌ها و QR">'+icoQr+'</button></div>'+
           '</div>';
         row.querySelectorAll('[data-act]').forEach(function(btn){
           btn.addEventListener('click',function(){userAction(u,btn.dataset.act);});
         });
+        var selBox=row.querySelector('.u-sel');
+        if(selBox)selBox.addEventListener('change',function(){row.classList.toggle('picked',selBox.checked);});
         list.appendChild(row);
       });
       var total=state.users.reduce(function(s,u){return s+gb((u.up||0)+(u.down||0));},0);
@@ -1090,6 +1273,12 @@
         fillModalNet();
         setMtab('spec');
         $('userModal').classList.add('open');
+        return;
+      }
+      if(act==='yaml'){copyText(subLink(u)+'?format=clash','ساب YAML کپی شد ✓');return;}
+      if(act==='reset'){
+        if(!confirm('شمارنده‌ی ترافیک «'+u.name+'» صفر شود؟'))return;
+        api('/panel/api/action',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action:'reset',uuid:u.uuid})}).then(function(){toast('شمارنده‌ی ترافیک صفر شد ✓');return loadUsers();}).catch(function(e){toast(e.message);});
         return;
       }
       if(act==='cfg')openCfg(u);
@@ -1279,6 +1468,14 @@
       var off=document.body.classList.contains('noanim');
       localStorage.setItem('rdr_anim',off?'1':'0');applyUiPrefs();
     });
+    var hdrChev=$('hdrChev');
+    function syncChev(){hdrChev.classList.toggle('closed',!$('statsTgl').checked);}
+    hdrChev.addEventListener('click',function(){
+      var tgl=$('statsTgl');tgl.checked=!tgl.checked;syncChev();
+      document.querySelector('.stats-card').scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+    $('statsTgl').addEventListener('change',syncChev);
+    syncChev();
 
     /* ============ tools: IP scanner ============ */
     var CANDIDATES=['188.114.96.1','188.114.97.1','188.114.98.1','188.114.99.1','162.159.192.1','162.159.193.1','104.16.0.1','172.64.0.1'];
