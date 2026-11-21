@@ -2,17 +2,18 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — SPAIN (ES) — 10 configs
+# رادار — SPAIN (ES) — 11 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@66.163.118.103:19999#ES 🇪🇸 | رادار | E665A3
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@167.17.71.167:19999#ES 🇪🇸 | رادار | 4EE568
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@79.127.139.242:19999#ES 🇪🇸 | رادار | 35832A
-vless://8197b9b9-8945-460f-99c9-325ef8a8a7c3@185.176.9.26:443?&security=reality&flow=xtls-rprx-vision&pbk=Qxpi1A9yJXwgZ1ycBrasKBCrX3qkRJ646U28a-99WBE&sid=85750bd7&fp=firefox&sni=es1.gofizz.in&type=tcp&headerType=none&host=es1.gofizz.in&path=%2F#ES 🇪🇸 | رادار | 4A56E0
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@62.93.179.117:19999#ES 🇪🇸 | رادار | 0000A4
-vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@66.163.118.113:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=PwN5VWqwWKVfrqqrbLE4kzVu9vIXSENAUiAPjMWIrVY&sid=32209e627ee109c7&type=tcp&headerType=none#ES 🇪🇸 | رادار | 566EE5
+vless://29872718-970b-493e-abc9-524fa266d16b@208.76.223.30:40118?encryption=none&security=reality&sni=delivery.mp.microsoft.com&fp=firefox&pbk=NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs&sid=29a833ab20778306&type=tcp&headerType=none#ES 🇪🇸 | رادار | CBE4CC
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@167.17.71.167:19999#ES 🇪🇸 | رادار | 4EE568
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@66.163.118.103:19999#ES 🇪🇸 | رادار | E665A3
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@62.93.179.117:19999#ES 🇪🇸 | رادار | 0000A4
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@62.93.179.97:19999#ES 🇪🇸 | رادار | 2EC96E
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.187:443?encryption=none&security=reality&sni=04535dt.us8.h1clayd.click&fp=firefox&pbk=UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY&sid=ba2a3dce62b99092&type=tcp&headerType=none#ES 🇪🇸 | رادار | 2086CB
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@79.127.139.242:19999#ES 🇪🇸 | رادار | 35832A
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.131:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | رادار | FA4837
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.discovergreatjobsandadvanceyourcareer.com#ES 🇪🇸 | رادار | 15FDDA
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.183:443?security=reality&type=grpc&mode=gun&serviceName=5b79e8a94241&packetEncoding=xudp&sni=15b171g.nl7.h1clayd.click&fp=firefox&sid=50a749f0eccb628c&pbk=zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE&encryption=none#ES 🇪🇸 | رادار | E005F0
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.187:443?security=reality&type=xhttp&path=%2F1812842934d4&packetEncoding=xudp&sni=35295cx.us8.h1clayd.click&fp=firefox&sid=9acff4d98e2fbcc6&pbk=LsaTohbE6CqCH9UbYKwIybVXG3E5Wgz_X9czqas2LAI&encryption=none#ES 🇪🇸 | رادار | A9C4D0
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.187:443?&security=reality&pbk=UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY&sid=ba2a3dce62b99092&fp=chrome&sni=04535dt.us8.h1clayd.click&type=tcp&headerType=none&path=%2F#ES 🇪🇸 | رادار | 83FFEA

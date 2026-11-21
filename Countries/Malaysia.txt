@@ -1,9 +1,9 @@
-#profile-title: رادار — INDIA (IN)
+#profile-title: رادار — MALAYSIA (MY)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — INDIA (IN) — 1 configs
+# رادار — MALAYSIA (MY) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://7d53c50c-3abf-4cb5-9d58-e7a42ce1d1c6@148.113.5.22:443?security=reality&encryption=none&pbk=Z427KvuqeeUvrRo-BDKuc9xG5t0z0y4zAnhA_NIFFwI&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=7ff98efcced3fd5b#IN 🇮🇳 | رادار | A9A46D
+vless://adb16f46-ebc3-4f72-ba20-f8872dec43a9@47.250.139.22:443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=erG7hYnWx8wELFn1-USl81_0mJlSJFlr8VBhtSsJwhY&sid=734c1ee6&type=tcp&headerType=none#MY 🇲🇾 | رادار | EE6809

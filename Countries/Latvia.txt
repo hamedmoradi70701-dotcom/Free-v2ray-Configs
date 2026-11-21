@@ -6,6 +6,6 @@
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://5234b2b7-5e07-422c-8159-d62a676c00c6@138.124.180.137:443?flow=xtls-rprx-vision&fp=firefox&pbk=GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c&security=reality&sid=33acba1b&sni=www.apple.com&type=raw#LV 🇱🇻 | رادار | B55611
-vless://02fcc1a4-ee90-4970-8bbb-4ffaa8109d24@195.123.213.28:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo&security=reality&sid=5c256336e3b673fa&sni=www.cloudflare.com&type=raw#LV 🇱🇻 | رادار | 289D87
-vless://93ffca4d-8049-4829-befd-0d836b874169@31.57.105.41:28941?flow=xtls-rprx-vision&encryption=mlkem768x25519plus.native.0rtt.QmGLWk38nIXyw9JJ4c7RtQhF-8hyY_vPDdgUxB7y_VE&security=reality&sni=www.filimo.com&fp=chrome&pbk=zKqLG9Axd0EtdmheNV4tZf3NaalxyCEDetYvFBy_eBM&sid=a19f72c4e83b605d&type=tcp&headerType=none#LV 🇱🇻 | رادار | E78CDB
+vless://70f1696c-8b82-4614-9c1e-8ec21201684d@185.220.223.78:443?&security=reality&flow=xtls-rprx-vision&pbk=wEJIqlLqor9Z_LMHvcsXh5FSoKMz3NbbcORwPDBgbhw&sid=5a8e1a04f3d92b67&fp=safari&sni=lv.meltun.org&type=tcp&headerType=none&host=lv.meltun.org&path=%2F#LV 🇱🇻 | رادار | 208FA4
+vless://02fcc1a4-ee90-4970-8bbb-4ffaa8109d24@195.123.213.28:443?security=reality&encryption=none&pbk=NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=5c256336e3b673fa#LV 🇱🇻 | رادار | 289D87
+vless://9a597d68-6688-4046-bf24-a5a541e115e0@195.123.209.159:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU&security=reality&sid=f8d0271b4b5f9efc&sni=www.apple.com&type=tcp#LV 🇱🇻 | رادار | 691925
