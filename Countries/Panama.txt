@@ -1,0 +1,9 @@
+#profile-title: رادار — PANAMA (PA)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — PANAMA (PA) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://17f3c566-b6c3-42f4-a098-b2f5374339a8@185.210.155.38:443?mode=packet-up&path=/&security=reality&encryption=none&pbk=gF44pErBRsCwFGY398I654T5EBhcB6sryObLgcqxTSI&fp=chrome&type=xhttp&sni=cira.ca&sid=41b779#PA 🇵🇦 | رادار | 9D2898

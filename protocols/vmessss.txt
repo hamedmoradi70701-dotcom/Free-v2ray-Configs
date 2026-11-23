@@ -1,0 +1,7 @@
+#profile-title: رادار — VMESSSS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — vmessss — 1 configs
+# --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
+vmessss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@149.88.106.74:19999#SG 🇸🇬 | رادار | 1C021B

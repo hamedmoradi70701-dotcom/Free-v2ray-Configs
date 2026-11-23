@@ -1,0 +1,9 @@
+#profile-title: رادار — CHINA (CN)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — CHINA (CN) — 1 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206cXJ5bDZ4VkxrV1habHFEN0NjY3BRdz09@103.238.140.162:10002#CN 🇨🇳 | رادار | 5599DB

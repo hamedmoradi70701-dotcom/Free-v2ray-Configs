@@ -2,17 +2,19 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — SOUTH KOREA (KR) — 10 configs
+# رادار — SOUTH KOREA (KR) — 12 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&path=/#KR 🇰🇷 | رادار | D1BD16
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&type=tcp&headerType=none#KR 🇰🇷 | رادار | DE0128
-vless://cdb7d825-9892-4d6f-80b8-7add83159dac@43.108.48.169:40701?encryption=none&security=reality&sni=amazon.com&fp=chrome&pbk=TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA&sid=7ef3a8ab2886&type=tcp&headerType=none#KR 🇰🇷 | رادار | D51229
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | رادار | 75B776
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws#KR 🇰🇷 | رادار | E820CB
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F#KR 🇰🇷 | رادار | 6913F7
-vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F&sni=152.69.226.63#KR 🇰🇷 | رادار | 52445E
+vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCDYsdin2K/Yp9ixIHwgNUQyNjBEIiwiYWRkIjoiNDMuMTU1LjE5OS4yMiIsInBvcnQiOiI4MCIsImlkIjoiMzcyMmFkMTYtZjNlMS00NDA2LWIwNGEtOTI5YjUyOWQ4ZTBkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiaHR0cCIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiLyJ9
+vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCDYsdin2K/Yp9ixIHwgMTY4MTE4IiwiYWRkIjoiMjE3LjE0Mi4xMzguNjEiLCJwb3J0IjoiODAiLCJpZCI6ImFjMWI5MzNkLWFmZmYtNDQ4Ny05M2VmLWY1NzEzMGE1NWRmZiIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidHlwZSI6Imh0dHAiLCJ0bHMiOiIiLCJhbHBuIjoiIiwicGF0aCI6Ii8ifQ==
+vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCDYsdin2K/Yp9ixIHwgRDUxOEYxIiwiYWRkIjoiMTMyLjE0NS44MC4yMzAiLCJwb3J0IjoiODAiLCJpZCI6IjUxNTU4NjBlLWQwN2QtNDZjMy05MTI4LTNhZmJkODQ2MjZjNyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiL2NjdHYxMy5tM3U4IiwidGxzIjoiIiwic25pIjoia3IwMi5hMGEueHl6IiwiYWxwbiI6IiIsImZwIjoiIiwiaW5zZWN1cmUiOiIwIn0=
+vmess://eyJ2IjoiMiIsInBzIjoiS1Ig8J+HsPCfh7cgfCDYsdin2K/Yp9ixIHwgOUYzQkU2IiwiYWRkIjoiMTMyLjE0NS44MC4yMzAiLCJwb3J0IjoiODAiLCJpZCI6IjUxNTU4NjBlLWQwN2QtNDZjMy05MTI4LTNhZmJkODQ2MjZjNyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoiIiwidGxzIjoiIiwicGF0aCI6Ii9jY3R2MTMubTN1OCIsImhvc3QiOiIxMzIuMTQ1LjgwLjIzMCJ9
+vless://4ded3111-b418-475a-93de-0360932508b2@43.108.109.112:443?security=reality&type=tcp&sni=www.samsung.com&fp=chrome&flow=xtls-rprx-vision&sid=b79a86e2b1a586a0&pbk=vrFq4-k-eiTSyRF3T3e7Fqmlv4XSKmByKYsw55zeX3w&encryption=none#KR 🇰🇷 | رادار | 2253B9
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&sni=152.69.226.63&type=ws#KR 🇰🇷 | رادار | E3B6CD
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?host=152.69.226.63&path=%2F&security=none&type=ws#KR 🇰🇷 | رادار | C98ACA
-vless://319d5ffb-57e8-4bbd-ac0c-5d55d0c253de@47.80.19.173:2053?security=reality&encryption=none&pbk=DfFU5OG93GxB1x25Dl2BTkxKsBTFF4Su4PXYPbYvmms&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=gateway.icloud.com&sid=3c4041d3#KR 🇰🇷 | رادار | B37B15
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws#KR 🇰🇷 | رادار | E820CB
+vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F#KR 🇰🇷 | رادار | 6913F7
+trojan://463f7453753f4d47@ikr200.zxom.eu.org:20045?encryption=chacha20#KR 🇰🇷 | رادار | 32554C
+trojan://463f7453753f4d47@168.107.51.32:20045?security=tls&sni=ikr200.zxom.eu.org#KR 🇰🇷 | رادار | 54D837
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxMjI0Mg==@glance.asuscomm.com:10099#KR 🇰🇷 | رادار | 8F395A

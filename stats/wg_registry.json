@@ -1,56 +1,30 @@
 {
  "keys": [
   {
-   "license": "8E5hr63s-l4RH16i5-51Ggr26U",
+   "license": "71hd9e6M-Lg542A0B-X7065xUK",
    "account_type": "WARP+ free",
-   "created": "2026-11-17T18:58:21.424203216Z",
-   "expires": "2027-02-15T18:58:21.713977739Z",
-   "private_key": "oPb+mkOxG8Vh71GSoiTeR3ZbKrEkmLQeox0hD8EfQGo=",
-   "address": "172.16.0.2/32, 2606:4700:110:892c:20f1:d60b:b7f:4491/128",
+   "created": "2026-11-23T06:24:53.906286553Z",
+   "expires": "2027-02-21T06:24:54.267511138Z",
+   "private_key": "+I1HLnUas3hsO/m2U/ZKC093OU6z77opGRIA22qIMHE=",
+   "address": "172.16.0.2/32, 2606:4700:110:8956:7e12:659b:f4c1:28aa/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.135:8319",
+   "best_ep": "8.6.112.203:854",
    "best_ms": null,
    "fails": 2
   },
   {
-   "license": "df63Q70a-J073efa9-I4jK038d",
+   "license": "BEG978S0-4W38kf2E-569DI8aM",
    "account_type": "WARP+ free",
-   "created": "2026-11-17T18:58:22.378197645Z",
-   "expires": "2027-02-15T18:58:22.66482888Z",
-   "private_key": "OL6YAgQbzSNSeWLk0gTdCqXtY62TyrTpXiMLLSo1GVg=",
-   "address": "172.16.0.2/32, 2606:4700:110:8bfa:a72b:a5ad:a2f5:702c/128",
+   "created": "2026-11-23T06:24:54.807956558Z",
+   "expires": "2027-02-21T06:24:55.292821936Z",
+   "private_key": "MHwxdcXf2fZr4MGyyu5nxRWv7s/cTReuXAaqMPd1tnA=",
+   "address": "172.16.0.2/32, 2606:4700:110:88a1:b915:1eb8:86ed:9046/128",
    "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
    "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.27:942",
+   "best_ep": "8.6.112.155:8854",
    "best_ms": null,
    "fails": 2
-  },
-  {
-   "license": "4QGi1B30-2cBIw348-502krq7L",
-   "account_type": "WARP+ free",
-   "created": "2026-11-17T19:16:30.482016735Z",
-   "expires": "2027-02-15T19:16:30.757819261Z",
-   "private_key": "0Dg71WXdRzIKMmd+ZK/uMJFYJ0GEPS6Guw7/gBWHVW0=",
-   "address": "172.16.0.2/32, 2606:4700:110:86cb:155c:298c:bb47:d098/128",
-   "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
-   "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.132:908",
-   "best_ms": null,
-   "fails": 1
-  },
-  {
-   "license": "J5y476RF-tG210O5C-X5KhZ970",
-   "account_type": "WARP+ free",
-   "created": "2026-11-17T19:16:32.33333907Z",
-   "expires": "2027-02-15T19:16:32.611342738Z",
-   "private_key": "4G9PjTrcSfdHEB0Gg2YLHCn+eoZM7kKKfj7H5Qg2Z3g=",
-   "address": "172.16.0.2/32, 2606:4700:110:8b14:2541:21ab:cb97:f95/128",
-   "dns": "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
-   "peer_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-   "best_ep": "8.6.112.27:942",
-   "best_ms": null,
-   "fails": 1
   }
  ]
 }

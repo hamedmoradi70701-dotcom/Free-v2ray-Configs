@@ -2,11 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — hysteria — 7 configs
-hysteria://163.172.117.163:36699?alpn=h3&auth=dongtaiwang.com&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#FR 🇫🇷 | رادار | 21AEFE
-hysteria://198.200.57.142:22335?alpn=h3&auth=github.com/Alvin9999-newpac/fanqiang&downmbps=55&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#US 🇺🇸 | رادار | E8A2D1
-hysteria://5.83.129.143:26691?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&insecure=1&upmbps=11&udp=true#DE 🇩🇪 | رادار | E1FFC4
-hysteria://5.83.129.90:54177?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=apple.com&insecure=1&peer=apple.com&upmbps=11&udp=true#DE 🇩🇪 | رادار | B26946
-hysteria://62.210.28.175:24667?alpn=h3&auth_str=dongtaiwang.com&downmbps=55&obfsParam=&insecure=1&peer=&upmbps=11&disable_sni=true#FR 🇫🇷 | رادار | 6A95D7
-hysteria://62.210.70.191:24667?alpn=h3&auth_str=dongtaiwang.com&downmbps=50&obfsParam=&insecure=1&peer=&upmbps=10&disable_sni=true#FR 🇫🇷 | رادار | 727A71
-hysteria://dongtaiwang.com@5.83.129.143:26691?upmbps=11&downmbps=55&security=tls&insecure=1&alpn=h3#DE 🇩🇪 | رادار | 3EB3E2
+# رادار — hysteria — 8 configs
+hysteria://137.175.82.41:20022?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11&udp=true#US 🇺🇸 | رادار | 65485D
+hysteria://38.6.222.131:11008?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&upmbps=11&udp=true#US 🇺🇸 | رادار | 51143B
+hysteria://38.6.222.132:11008?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11&udp=true#US 🇺🇸 | رادار | BB5D7A
+hysteria://62.210.124.132:24667?alpn=h3&auth=dongtaiwang.com&downmbps=55&protocol=udp&insecure=1&upmbps=11&x_toolall-mihomo=true&udp=true#FR 🇫🇷 | رادار | EA34EF
+hysteria://dongtaiwang.com@137.175.82.41:20022?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#US 🇺🇸 | رادار | AE15E7
+hysteria://dongtaiwang.com@38.6.222.131:11008?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#US 🇺🇸 | رادار | 1C8D5D
+hysteria://dongtaiwang.com@38.6.222.132:11008?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#US 🇺🇸 | رادار | DD9BAA
+hysteria://dongtaiwang.com@62.210.124.132:24667?upmbps=11&downmbps=55&security=tls&sni=bing.com&insecure=1&alpn=h3#FR 🇫🇷 | رادار | 01DB08

@@ -1,0 +1,11 @@
+#profile-title: رادار — INDONESIA (ID)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — INDONESIA (ID) — 3 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@149.33.27.162:443?allowInsecure=1&sni=i1tr.mateflora.com#ID 🇮🇩 | رادار | 8803C0
+trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@i1tr.mateflora.com:443?security=tls&sni=i1tr.mateflora.com&type=tcp#ID 🇮🇩 | رادار | 529D6E
+trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@i1tr.mateflora.com:443?allowInsecure=1&sni=i1tr.mateflora.com#ID 🇮🇩 | رادار | B454CB

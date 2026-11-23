@@ -2,6 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — anytls — 1 configs
+# رادار — anytls — 7 configs
 # --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
-anytls://0324fbc29561@sdf65h46wr.df6h451rh.xin:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=images.ctfassets.net&insecure=1&udp=1#TW 🇹🇼 | رادار | 28985F
+anytls://0324fbc29561@5641sdds.df6h451rh.xin:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=images.ctfassets.net&insecure=1&udp=1#HK 🇭🇰 | رادار | 63680A
+anytls://0324fbc29561@a54ge.df6h451rh.xin:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=docs.microsoft.com&insecure=1&udp=1&username=0324fbc29561#TW 🇹🇼 | رادار | 5F728B
+anytls://2902c46c8493@er8u54dh.df6h451rh.xin:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=px.ads.linkedin.com&insecure=1&udp=1#TW 🇹🇼 | رادار | B9D6AF
+anytls://2902c46c8493@ibsdsf.df6h451rh.xin:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=docs.microsoft.com&insecure=1&udp=1#HK 🇭🇰 | رادار | E0274F
+anytls://c698e777-2ede-446c-aa76-04ea46070e43@turn.gosthk.site:57180?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=turn.gosthk.site&insecure=1&udp=1#TW 🇹🇼 | رادار | 9D0C88
+anytls://czxPueuXQB1wUfMU@45.192.203.110:36835?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=www.bing.com&insecure=1&udp=1#JP 🇯🇵 | رادار | 3736B8
+anytls://e2413369-16de-4c90-97c5-b39b8d6b71cd@im.frnhk.xyz:443?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=im.frnhk.xyz&insecure=1&udp=1#TW 🇹🇼 | رادار | A1251A

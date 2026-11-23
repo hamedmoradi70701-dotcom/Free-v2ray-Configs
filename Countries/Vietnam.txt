@@ -2,8 +2,10 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — VIETNAM (VN) — 1 configs
+# رادار — VIETNAM (VN) — 3 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://b83faafc-cbb7-4655-99d4-2c4c39a49d1b@150.95.109.109:2086?security=none&type=tcp#VN 🇻🇳 | رادار | DE68F9
+vless://b83faafc-cbb7-4655-99d4-2c4c39a49d1b@150.95.109.109:2086#VN 🇻🇳 | رادار | DE68F9
+vless://a1f0cbb8-c74a-4c27-b881-7b14d96aece1@kir3.crackerbinam.org:56026?security=reality&encryption=none&pbk=gjOKbmRb5cGDPbdz3x8xkBFL43pn3xqL-I6sALHO7ls&headerType=none&fp=chrome&type=tcp&sni=www.cloudflare.com&sid=99676967e6867063#VN 🇻🇳 | رادار | A2E7FF
+vless://a1f0cbb8-c74a-4c27-b881-7b14d96aece1@103.163.24.22:56026?security=reality&fp=firefox&pbk=gjOKbmRb5cGDPbdz3x8xkBFL43pn3xqL-I6sALHO7ls&sid=99676967e6867063&sni=www.cloudflare.com&encryption=none&type=tcp#VN 🇻🇳 | رادار | 11024B

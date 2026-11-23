@@ -2,16 +2,54 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — RUSSIA (RU) — 9 configs
+# رادار — RUSSIA (RU) — 47 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://27f26dee-9cf1-4cca-93f8-9ac23d311408@147.45.47.101:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sid=6ba85179e30d4fc2&sni=apple.com&type=tcp#RU 🇷🇺 | رادار | 77BE9F
-vless://2ae0670d-0bdf-409e-9a55-4e970252d378@37.235.247.81:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sid=6ba85179e30d4fc2&sni=apple.com&type=tcp#RU 🇷🇺 | رادار | 96B587
-vless://32b5ca9b-3f81-4031-965d-e8b074216e8d@201.24.121.243:443?sni=kk-ru24a1.testkknegr.online&alpn=h2&type=grpc&serviceName=vlgrpc&fp=chrome&security=tls#RU 🇷🇺 | رادار | 711BAA
+vless://a71d6c6d-c95e-4ec1-a892-22e21733bf09@178.248.236.229:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=_3mkK8SY6YVqws73SUVPKL77tzxDVNUt4ag9J9ec-D0&security=reality&sid=d05a120d3506d2cc&sni=144.hexdey.com&type=raw#RU 🇷🇺 | رادار | A42451
+ss://YWVzLTI1Ni1nY206Y0NNSmdKVEEzQkE0ODlZVVlyRnE3WEhYU2lTcFdsTGE@176.32.33.126:18443#RU 🇷🇺 | رادار | 0E422A
+vless://ef5a57c7-84d5-4f86-b99c-875a16da485f@195.209.223.0:443?encryption=none&flow=xtls-rprx-vision&pbk=KYCw7cXjogBXLwakD95fS0ez_Ohp841nJv0w0ntu_FU&security=reality&sid=8b360b27c8ae3791&sni=ruhsds735.thebestqas.am&type=tcp#RU 🇷🇺 | رادار | D5DA8E
+vless://7ad63b26-bf70-4872-8fab-ebaf73a1e19d@176.98.176.60:443?sni=mosaic.topp-con.xyz&alpn=h2,http/1.1&flow=xtls-rprx-vision&fp=chrome&security=tls#RU 🇷🇺 | رادار | B29884
+vless://4777d90d-265b-4927-a0d1-63f36ed1421c@193.160.208.240:443?mode=auto&path=/assets/twru01/&security=tls&encryption=none&insecure=0&type=xhttp&allowInsecure=0#RU 🇷🇺 | رادار | 2A91F2
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.51.12.98:443?mode=gun&security=tls&alpn=h2&encryption=none&insecure=0&fp=firefox&type=grpc&serviceName=mobile.api.Event&allowInsecure=0&sni=vps3.nemnogogo.com#RU 🇷🇺 | رادار | 606758
+vless://ebd1c0d6-7ff4-4b9f-8692-237517a27a64@83.217.201.82:443?security=reality&encryption=none&pbk=mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=skvoz-dpi.com&sid=93ae75024604f796#RU 🇷🇺 | رادار | 03BCBB
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.51.12.98:443?mode=gun&security=tls&encryption=none&insecure=0&fp=firefox&type=grpc&serviceName=mobile.api.Event&allowInsecure=0&sni=vps3.nemnogogo.com#RU 🇷🇺 | رادار | EAF75F
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.51.12.98:443?encryption=none&fp=firefox&security=tls&serviceName=mobile.api.Event&sni=vps3.nemnogogo.com&type=grpc#RU 🇷🇺 | رادار | A88909
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.24.116.192:443?sni=vps3.nemnogogo.com&type=grpc&serviceName=mobile.api.Event&fp=firefox&security=tls#RU 🇷🇺 | رادار | 2D4649
 vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.51.12.98:443?security=tls&sni=vps3.nemnogogo.com&type=grpc&serviceName=mobile.api.Event&fp=firefox&alpn=h2#RU 🇷🇺 | رادار | 761CBD
-vless://4cabcd59-a405-4c00-96f5-03507e1e28fa@188.225.73.41:443?security=tls&encryption=none&insecure=0&type=grpc&serviceName=cache.sync.v1&allowInsecure=0&sni=cadrin.wtf#RU 🇷🇺 | رادار | 44ABD3
-vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@vps3.nemnogogo.com:443?encryption=none&security=tls&serviceName=mobile.api.Event&sni=vps3.nemnogogo.com&type=grpc#RU 🇷🇺 | رادار | B1C4D0
-vless://f09ca6e3-c547-4f91-95f5-77f34c4282ac@109.71.245.99:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=zICjcFkqI720WzWpHXRLjSFYmcu4Hd0jk1iDEo1nUAU&security=reality&sid=c27a26812e5d2208&sni=www.yandex.ru&type=tcp#RU 🇷🇺 | رادار | 9C79BA
-vless://4b50270b-5caf-4c34-b3da-17b4525604a6@luminexorizon.ink:443?encryption=none&type=grpc&mode=gun&serviceName=glush.de3.v1&security=tls&sni=luminexorizon.ink&alpn=h2&fp=safari#RU 🇷🇺 | رادار | 5D1860
-vless://ebd1c0d6-7ff4-4b9f-8692-237517a27a64@tg.skvoz-dpi.com:443?encryption=none&type=tcp&flow=xtls-rprx-vision&security=reality&pbk=mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0&sni=skvoz-dpi.com&fp=qq&sid=93ae75024604f796#RU 🇷🇺 | رادار | 3198F8
+vless://Fluffy_VPN-Oth8rOq3@104.171.135.229:443?security=reality&encryption=none&pbk=mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0&host=absolute-disaster.org&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=absolute-disaster.org#RU 🇷🇺 | رادار | 305469
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@201.24.116.192:443?mode=gun&security=tls&encryption=none&insecure=0&fp=firefox&type=grpc&serviceName=mobile.api.Event&allowInsecure=0&sni=vps3.nemnogogo.com#RU 🇷🇺 | رادار | 2976C2
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@vps3.nemnogogo.com:443?mode=gun&security=tls&encryption=none&insecure=0&type=grpc&serviceName=mobile.api.Event&allowInsecure=0&sni=vps3.nemnogogo.com#RU 🇷🇺 | رادار | 211062
+vless://c50eae6b-18de-4bdc-a22f-9edda40a57ed@77.232.40.206:443?encryption=none&flow=xtls-rprx-vision&pbk=pPGE5Uacj1AGAB_WLOXB_UUnVBOmuJGH0vTSfmRBKzM&security=reality&sid=2e40144ddc07e8e1&sni=ch02.tunnely.space&type=tcp&fp=chrome#RU 🇷🇺 | رادار | DC1EB3
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@vps3.nemnogogo.com:443?encryption=none&type=grpc&security=tls&sni=vps3.nemnogogo.com&alpn=h2&serviceName=mobile.api.Event&fp=safari#RU 🇷🇺 | رادار | 6151C7
+vless://38308ff1-5aa9-494f-a25a-0f2870d56b3e@vps3.nemnogogo.com:443?type=grpc&encryption=none&security=tls&path=%2F&serviceName=mobile.api.Event#RU 🇷🇺 | رادار | 8F4341
+vless://37af0181-5598-4aad-a040-d926bcb65757@185.86.145.173:443?path=api%2Fv1%2Fupload&security=tls&encryption=none&insecure=0&host=wholebeam.com&fp=firefox&type=xhttp&allowInsecure=0&sni=wholebeam.com#RU 🇷🇺 | رادار | 9A5139
+vless://Fluffy_VPN-zKZUa4Ie@72.56.38.83:443?flow=xtls-rprx-vision&fp=firefox&pbk=ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8&security=reality&sni=absolute-disaster.org&type=tcp#RU 🇷🇺 | رادار | E12D49
+vless://1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200@72.56.38.83:443?flow=xtls-rprx-vision&fp=chrome&host=absolute-disaster.org&path=%2F&pbk=ZzIetLcQtENjIXQ9XZqFo8p3J81p8Emj0wi51Uy07n8&security=reality&sni=absolute-disaster.org&type=tcp#RU 🇷🇺 | رادار | 754689
+vless://37af0181-5598-4aad-a040-d926bcb65757@185.86.145.173:443?encryption=none&extra=null&fp=chrome&path=/api/v1/upload&security=tls&sni=wholebeam.com&type=xhttp#RU 🇷🇺 | رادار | DC607D
+vless://08ef7604-b3a5-0001-b264-0038fa7c44fc@188.68.216.33:443?security=tls&fp=chrome&sni=pmdhivnevikmltdhqp.fcloudservices.site&type=tcp&headerType=none&path=/#RU 🇷🇺 | رادار | 8D400F
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@188.225.36.219:443?type=grpc&security=tls&fp=chrome&sni=olvento.space&mode=gun&serviceName=olvento.sync.v1#RU 🇷🇺 | رادار | 75EC72
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@ochre.merlano.monster:443?alpn=h2,http/1.1&encryption=none&host=ochre.merlano.monster&mode=auto&path=/api/de6/sync&security=tls&sni=ochre.merlano.monster&type=xhttp&fp=chrome#RU 🇷🇺 | رادار | 763BA6
+vless://7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe@193.233.89.130:8443?mode=gun&security=reality&encryption=none&pbk=xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c&fp=chrome&type=grpc&serviceName=grpc&sni=g.play2go.gay#RU 🇷🇺 | رادار | F540D4
+vless://37af0181-5598-4aad-a040-d926bcb65757@185.86.145.173:443?encryption=none&extra=null&fp=chrome&host=wholebeam.com&mode=auto&path=/api/v1/upload&security=tls&sni=wholebeam.com&type=xhttp#RU 🇷🇺 | رادار | 02E5FA
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@rainwater.elvano.website:443?type=xhttp&security=tls&fp=chrome&sni=rainwater.elvano.website&path=/api/de6/sync&host=rainwater.elvano.website&mode=auto#RU 🇷🇺 | رادار | 1CEFD7
+vless://4a923161-156f-4914-8cac-762fb2433bfb@144.48.11.146:43000?security=reality&encryption=none&pbk=CG0mVPuvPcfZjplA21zehlqoDpGHihJBK8K_u1zfhgQ&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=144.48.11.146&sid=ee4ea980#RU 🇷🇺 | رادار | 1320C8
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@72.56.238.135:443?host=parchment.merlano.monster&path=%2Fapi%2Fde7%2Fstream&security=tls&sni=parchment.merlano.monster&type=ws#RU 🇷🇺 | رادار | 025F1F
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cabinet.filnex.baby:443?alpn=http%2F1.1&encryption=none&path=%2Fapi%2Fde7%2Fstream&security=tls&sni=claywick.elvano.website&type=ws&fp=ios#RU 🇷🇺 | رادار | 9A6F99
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@parchment.merlano.monster:443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=parchment.merlano.monster&type=ws&headerType=none&host=parchment.merlano.monster&path=%2Fapi%2Fde7%2Fstream#RU 🇷🇺 | رادار | 40E404
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@estuary.gerqix.online:443?encryption=none&type=ws&security=tls&sni=estuary.gerqix.online&fp=firefox&alpn=http/1.1&path=/api/de7/stream#RU 🇷🇺 | رادار | 93CAF0
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@fresco.merlano.monster:443?alpn=h2,http/1.1&encryption=none&host=fresco.merlano.monster&mode=auto&path=/api/de4/sync&security=tls&sni=fresco.merlano.monster&type=xhttp&fp=chrome#RU 🇷🇺 | رادار | 5C2093
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@archive.filnex.baby:443?alpn=h2&encryption=none&security=tls&serviceName=glush.de7.v1&sni=elmharbor.gerqix.online&type=grpc&fp=edge#RU 🇷🇺 | رادار | C87623
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cedar.filnex.baby:443?host=cedar.filnex.baby&path=%2Fapi%2Fde7%2Fstream&security=tls&sni=fieldstone.moltex.click&type=ws#RU 🇷🇺 | رادار | 89B880
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cedar.filnex.baby:443?&security=tls&fp=edge&alpn=http%2F1.1&sni=fieldstone.moltex.click&type=ws&headerType=none&host=cedar.filnex.baby&path=%2Fapi%2Fde7%2Fstream#RU 🇷🇺 | رادار | 3CAECA
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cabinet.filnex.baby:443?&security=tls&fp=edge&alpn=http%2F1.1&sni=claywick.elvano.website&type=ws&headerType=none&host=cabinet.filnex.baby&path=%2Fapi%2Fde7%2Fstream#RU 🇷🇺 | رادار | 069538
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@rowanberry.moltex.click:443?encryption=none&type=ws&security=tls&sni=rowanberry.moltex.click&fp=firefox&alpn=http/1.1&path=/api/de7/stream#RU 🇷🇺 | رادار | ACA97F
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@birchbark.gerqix.online:443?alpn=h2&encryption=none&security=tls&serviceName=glush.de7.v1&sni=birchbark.gerqix.online&type=grpc&fp=safari#RU 🇷🇺 | رادار | A4522C
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@parchment.merlano.monster:443?encryption=none&type=ws&security=tls&sni=parchment.merlano.monster&fp=firefox&alpn=http/1.1&path=/api/de7/stream#RU 🇷🇺 | رادار | 4336C2
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@inlay.merlano.monster:443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=inlay.merlano.monster&type=ws&headerType=none&host=inlay.merlano.monster&path=%2Fapi%2Fde3%2Fstream#RU 🇷🇺 | رادار | 64CADF
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cedar.filnex.baby:443?alpn=http/1.1&encryption=none&path=/api/de7/stream&security=tls&sni=fieldstone.moltex.click&type=ws&fp=chrome#RU 🇷🇺 | رادار | 6A9131
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@honeycomb.merlano.monster:443?alpn=h2&encryption=none&security=tls&serviceName=glush.de7.v1&sni=honeycomb.merlano.monster&type=grpc&fp=safari#RU 🇷🇺 | رادار | FD7602
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@parchment.merlano.monster:443?host=parchment.merlano.monster&path=%2Fapi%2Fde7%2Fstream&security=tls&sni=parchment.merlano.monster&type=ws#RU 🇷🇺 | رادار | 5562BF
+vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@cabinet.filnex.baby:443?host=cabinet.filnex.baby&path=%2Fapi%2Fde7%2Fstream&security=tls&sni=claywick.elvano.website&type=ws#RU 🇷🇺 | رادار | A78F7B
+vless://fbe22815-0718-4eae-816f-e91c67d15b54@191.217.215.228:2096?security=tls&type=ws&path=%2Fcdn%2Fv3%2Flive&host=st3b6e5.rumedia-cdn.com&packetEncoding=xudp&sni=st3b6e5.rumedia-cdn.com&fp=firefox&encryption=none#RU 🇷🇺 | رادار | CD6192
+ss://YWVzLTI1Ni1nY206TlRpSEJnNjRmc1k4dThEYkdydHlwRDlnUEdTTDM4NnA=@46.17.42.129:18443?#RU 🇷🇺 | رادار | BC77DF

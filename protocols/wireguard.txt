@@ -1,0 +1,6 @@
+#profile-title: رادار — WIREGUARD
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — wireguard — 1 configs
+wireguard://QA9tXp3mpp1GVAmE1wF%2FKAI4vT%2Fpj6QaLaY4Lt1sXV0%3D@162.159.192.5:2408/?keepalive=5&mtu=1280&persistent-keepalive=5&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=149%2C115%2C173&udp=1&wnoise=quic&wnoisecount=5&wnoisedelay=5&wpayloadsize=40-90&address=172.16.0.2%2F32#CA 🇨🇦 | رادار | D1D45C
