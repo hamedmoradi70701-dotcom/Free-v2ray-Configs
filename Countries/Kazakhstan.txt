@@ -1,0 +1,13 @@
+#profile-title: رادار — KAZAKHSTAN (KZ)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — KAZAKHSTAN (KZ) — 5 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://f121ffc8-f6dc-4728-a871-a05e3f9cf8c5@196.198.111.166:8443?encryption=none&flow=xtls-rprx-vision&security=tls&sni=usr-6b09ce88-api-v3.alcors.net&alpn=h2&type=tcp&headerType=none#KZ 🇰🇿 | رادار | 1FD315
+vless://f121ffc8-f6dc-4728-a871-a05e3f9cf8c5@196.198.111.166:8443?&security=tls&flow=xtls-rprx-vision&fp=firefox&sni=usr-6b09ce88-api-v3.alcors.net&type=tcp&headerType=none&path=%2F#KZ 🇰🇿 | رادار | BD0A41
+vless://fa906181-5d9b-4ff6-8a81-e6148ce4ece7@5.180.27.134:443?security=reality&encryption=none&pbk=qljbddkyGqBkkOnPdvgw4s6HX_iyEUB2qesNM1qiFg0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=kz.koteika3528.dev&sid=36f3c7#KZ 🇰🇿 | رادار | 80F1E3
+vless://b573cefb-7bc7-4a42-b407-b8b534e66773@109.248.170.119:13447?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=chrome&sid=83&pbk=_0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE#KZ 🇰🇿 | رادار | 620A80
+vless://f121ffc8-f6dc-4728-a871-a05e3f9cf8c5@196.198.111.166:8443?sni=usr-6b09ce88-api-v3.alcors.net&flow=xtls-rprx-vision&fp=firefox&security=tls#KZ 🇰🇿 | رادار | E54B50

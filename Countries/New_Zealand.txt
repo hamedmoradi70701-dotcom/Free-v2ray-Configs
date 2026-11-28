@@ -1,9 +1,9 @@
-#profile-title: رادار — TAIWAN (TW)
+#profile-title: رادار — NEW ZEALAND (NZ)
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — TAIWAN (TW) — 1 configs
+# رادار — NEW ZEALAND (NZ) — 1 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-vless://ead3595f-4020-4e76-a3ec-c248e1a2f2f7@free.fugui.lol:47396?encryption=none&flow=xtls-rprx-vision&fp=ios&pbk=IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ&security=reality&sid=fa514b83&sni=swdist.apple.com&type=tcp#TW 🇹🇼 | رادار | 2F5748
+vless://53bbdad4-2f4e-45db-8df4-fa491a6a7227@202.37.33.80:443?path=%2F%3FTELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&security=tls&alpn=http%2F1.1&encryption=none&host=freeceshi6.frii.site&type=ws&sni=freeceshi6.frii.site#NZ 🇳🇿 | رادار | 4441EA

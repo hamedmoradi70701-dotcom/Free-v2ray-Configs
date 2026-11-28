@@ -2,25 +2,12 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
-# رادار — POLAND (PL) — 18 configs
+# رادار — POLAND (PL) — 5 configs
 # source: verified/ — every config passed a real proxied request in ALL L3 rounds
 # location: GeoIP (DB-IP Country Lite) on the real network address of the server
 # note: this is where the SERVER is, not necessarily where your traffic exits
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZXRrN3B3@54.36.174.140:443#PL 🇵🇱 | رادار | 9B0BD2
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZXRrN3B3@54.36.174.134:443#PL 🇵🇱 | رادار | 748B0C
-vless://352a250d-080b-47b5-b7db-f9f8fa31c551@45.194.66.177:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&security=tls&sni=31tawwo0.virtual-network.lol&type=tcp#PL 🇵🇱 | رادار | F94B50
-trojan://c76f0a11e6ba410084c745ad5e92db5f@187.52.45.183:54032?mode=auto&path=/assets/static/main.js&security=reality&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&host=flawers.shop&fp=chrome&type=xhttp&sni=flawers.shop&sid=75aaaa50d52b0121#PL 🇵🇱 | رادار | 6909C8
-vless://a30903dc-1bf0-4be5-8b1b-603a3a56211c@195.3.223.125:443?encryption=none&fp=firefox&pbk=drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ&security=reality&sid=a7c92e4b10d6f835&sni=api-net-ctl.galioncc.com&type=tcp#PL 🇵🇱 | رادار | 990CDD
-vless://ecc0e60a-f2cc-4266-8353-b228df89730a@pl.galacticworld.online:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=pl.galacticworld.online&fp=qq&pbk=GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4#PL 🇵🇱 | رادار | D99E8E
-vless://7d43670b-6b08-45b9-8a24-8f3971abc132@poland.biznes.lol:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | رادار | 453B91
-vless://d7ddade6-b7a0-4cab-a910-d5d5c378d98a@201.58.189.105:2083?encryption=none&type=grpc&serviceName=google.storage.v2.Storage&security=reality&fp=chrome&sni=dl.google.com&pbk=B7x5bYp-YhtLeH31zYcilpKFCkGTMe3jtSECSw-bMC4&sid=8bd80253&spx=/#PL 🇵🇱 | رادار | 3A60CD
-vless://d7ddade6-b7a0-4cab-a910-d5d5c378d98a@201.58.189.105:2083?security=reality&type=grpc&mode=gun&serviceName=google.storage.v2.Storage&packetEncoding=xudp&sni=dl.google.com&fp=chrome&sid=8bd80253&pbk=B7x5bYp-YhtLeH31zYcilpKFCkGTMe3jtSECSw-bMC4&encryption=none#PL 🇵🇱 | رادار | 45949E
-vless://5dd429fa-3fa6-44d0-bce6-01b84ce846f1@217.60.25.100:8443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=max.ru&fp=qq&pbk=wh9zHZTegXrUKKsAKvM7habKnQ7QK3ii71NRjlKVLWc&sid=76f3d7039ad727bf#PL 🇵🇱 | رادار | BBC5D4
-trojan://c76f0a11e6ba410084c745ad5e92db5f@flawers.shop:54032?fp=&host=flawers.shop&mode=auto&path=%2Fassets%2Fstatic%2Fmain.js&pbk=SmpFJJ640phT1swTmtifquX9PSuaq2eA0hdUkD2mfyo&security=reality&sid=a4&sni=flawers.shop&type=xhttp#PL 🇵🇱 | رادار | B0B4A3
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZXRrN3B3@pl134.vpnbook.com:443#PL 🇵🇱 | رادار | FA9C98
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplZXRrN3B3@pl140.vpnbook.com:443#PL 🇵🇱 | رادار | E5990D
-vless://352a250d-080b-47b5-b7db-f9f8fa31c551@132.243.212.204:443?flow=xtls-rprx-vision&security=tls&encryption=none&sni=10w0wjw.virtual-network.lol&fp=firefox&type=tcp&path=/&allow_insecure=0#PL 🇵🇱 | رادار | C4E9CD
-vmess://eyJ2IjoiMiIsInBzIjoiUEwg8J+HtfCfh7EgfCDYsdin2K/Yp9ixIHwgQ0YwRUY5IiwiYWRkIjoiNTQuMzcuMTMxLjEyNiIsInBvcnQiOjgwLCJpZCI6IjFlNTViZWNhLTNjNjktNGZhNy1mYjFmLTE1YzFiNzY3NDM1ZiIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJnb29nbGUud2hhdHNhcHAuc25hcHAudG9yb2IuYmFzYWxhbS5oZXNhbmlkOC5pci4iLCJwYXRoIjoiLyIsInRscyI6Im5vbmUiLCJzbmkiOiIiLCJhbHBuIjoiIiwiZnAiOiIiLCJuYW1lIjoiUEwg8J+HtfCfh7EgfCDYsdin2K/Yp9ixIHwgQ0YwRUY5In0=
-vless://352a250d-080b-47b5-b7db-f9f8fa31c551@132.243.212.204:443?security=tls&encryption=none&insecure=0&headerType=&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=10w0wjw.virtual-network.lol#PL 🇵🇱 | رادار | 338F7E
-vless://fd90e601-a56c-42b8-aab7-aa02d26fcb04@179.253.101.162:443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=app.streamru17.net#PL 🇵🇱 | رادار | 14AADD
-vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#PL 🇵🇱 | رادار | 76B2DF
+vless://352a250d-080b-47b5-b7db-f9f8fa31c551@45.194.66.177:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=31tawwo0.virtual-network.lol&type=tcp#PL 🇵🇱 | رادار | F94B50
+vless://a2490dfc-3950-4765-8421-8f3dddee29f6@tpii.sublinkplas.ir:12190?security=reality&encryption=none&pbk=33hVTwP-1rQYG0F92oXJ-o1zPo4Cc8n2Uml_i9tv6XM&headerType=none&fp=safari&type=tcp&sni=delivery.mp.microsoft.com&sid=3e5cba1bd6eb6221#PL 🇵🇱 | رادار | FC9FB7
+vless://21d1180e-e19f-4510-9afb-d5a6b0d1668f@tpii.sublinkplas.ir:12190?security=reality&encryption=none&pbk=33hVTwP-1rQYG0F92oXJ-o1zPo4Cc8n2Uml_i9tv6XM&headerType=none&fp=safari&type=tcp&sni=delivery.mp.microsoft.com&sid=3e5cba1bd6eb6221#PL 🇵🇱 | رادار | D81BBE
+vless://e894c08a-fecc-46f5-bf03-c95d0274c79d@201.58.178.197:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=lesson4.schoolpizorbz.xyz&fp=chrome&security=reality&pbk=EUuZAVtneL8O7MgjETmHvOyInaxqJu2RD6hiFQdDPwk&sid=0df067145606c0b0#PL 🇵🇱 | رادار | A117F8
+vless://e894c08a-fecc-46f5-bf03-c95d0274c79d@201.58.178.236:443?flow=xtls-rprx-vision&security=reality&sni=lesson1.schoolpizorbz.xyz&fp=chrome&pbk=AdOl7XVxVk4Yb_tBxjrG-FP5elV_V2MeI_6WVC4H41s&sid=d14566fcec627162#PL 🇵🇱 | رادار | 49D02B

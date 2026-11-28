@@ -4,4 +4,4 @@
 #profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
 # رادار — ssvless — 1 configs
 # --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
-ssvless://128bd8ad-4f6c-4d70-af13-15a2cec331d2@185.71.216.177:2194?security=reality&encryption=none&pbk=jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.apple.com&sid=55986a94e2228791#TR 🇹🇷 | رادار | D2B9F3
+ssvless://549766c3-fa5f-471e-8031-ffc1f8d5064f@178.17.52.31:2087?mode=auto&path=%2Fv2%2Fsync%2F6e9367&security=reality&encryption=none&pbk=mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY&type=xhttp&sni=maps.blog-forme.ru&sid=3258252d44113e23#DE 🇩🇪 | رادار | A9D842

@@ -1,0 +1,7 @@
+#profile-title: رادار — SSSS
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-web-page-url: https://github.com/hamedmoradi70701-dotcom/Free-v2ray-Configs
+# رادار — ssss — 1 configs
+# --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
+ssss://YWVzLTI1Ni1nY206RGdNeXdYS3FvakhYZXVYWThoT0phWUdQRmNqd2VDSUplRDVjZGcvY1VVWT0@213.176.92.148:40647#FI 🇫🇮 | رادار | 3E5259

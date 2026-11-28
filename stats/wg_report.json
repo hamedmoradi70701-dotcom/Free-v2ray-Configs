@@ -1,118 +1,64 @@
 {
- "generated_at": "2026-11-17T19:16:30Z",
+ "generated_at": "2026-11-28T17:17:47Z",
  "tools_ok": true,
  "minted": 2,
- "keys_active": 4,
- "tested": 18,
+ "keys_active": 2,
+ "tested": 9,
  "ok": 0,
  "results": [
   {
    "ok": false,
    "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "f15p4at6-87nU42YV-Y3K90wV8",
+   "license": "uG127Pm3-B74tp59v-a8K5Rk76",
+   "endpoint": "8.6.112.138:987"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "uG127Pm3-B74tp59v-a8K5Rk76",
    "endpoint": "8.6.112.162:987"
   },
   {
    "ok": false,
    "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "f15p4at6-87nU42YV-Y3K90wV8",
-   "endpoint": "8.6.112.31:3581"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "f15p4at6-87nU42YV-Y3K90wV8",
-   "endpoint": "8.6.112.208:2408"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "U67Yv2N9-9s21TV3k-P93tM1V4",
-   "endpoint": "8.6.112.45:5279"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "U67Yv2N9-9s21TV3k-P93tM1V4",
-   "endpoint": "8.6.112.55:854"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "U67Yv2N9-9s21TV3k-P93tM1V4",
-   "endpoint": "8.6.112.168:934"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "8E5hr63s-l4RH16i5-51Ggr26U",
-   "endpoint": "8.6.112.135:8319"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "8E5hr63s-l4RH16i5-51Ggr26U",
-   "endpoint": "8.6.112.42:1010"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "8E5hr63s-l4RH16i5-51Ggr26U",
-   "endpoint": "8.6.112.96:4198"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "df63Q70a-J073efa9-I4jK038d",
-   "endpoint": "8.6.112.27:942"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "df63Q70a-J073efa9-I4jK038d",
-   "endpoint": "8.6.112.138:8886"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "df63Q70a-J073efa9-I4jK038d",
-   "endpoint": "8.6.112.44:1018"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "4QGi1B30-2cBIw348-502krq7L",
-   "endpoint": "8.6.112.132:908"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "4QGi1B30-2cBIw348-502krq7L",
-   "endpoint": "8.6.112.161:7152"
-  },
-  {
-   "ok": false,
-   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "4QGi1B30-2cBIw348-502krq7L",
+   "license": "uG127Pm3-B74tp59v-a8K5Rk76",
    "endpoint": "8.6.112.230:1014"
   },
   {
    "ok": false,
    "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "J5y476RF-tG210O5C-X5KhZ970",
-   "endpoint": "8.6.112.27:942"
+   "license": "0uD9a15X-xn5K6u73-Aw9b231C",
+   "endpoint": "8.6.112.230:1014"
   },
   {
    "ok": false,
    "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "J5y476RF-tG210O5C-X5KhZ970",
-   "endpoint": "8.6.112.13:4177"
+   "license": "0uD9a15X-xn5K6u73-Aw9b231C",
+   "endpoint": "8.6.112.135:8319"
   },
   {
    "ok": false,
    "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
-   "license": "J5y476RF-tG210O5C-X5KhZ970",
-   "endpoint": "8.6.112.213:1014"
+   "license": "0uD9a15X-xn5K6u73-Aw9b231C",
+   "endpoint": "8.6.112.96:4198"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "G6s093cJ-Rs9G15J6-c9Xb06n2",
+   "endpoint": "8.6.112.219:4198"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "G6s093cJ-Rs9G15J6-c9Xb06n2",
+   "endpoint": "8.6.112.168:3476"
+  },
+  {
+   "ok": false,
+   "error": "wg-up: /usr/bin/wg-quick: line 40: /tmp/wgr0.conf: Permission denied\n",
+   "license": "G6s093cJ-Rs9G15J6-c9Xb06n2",
+   "endpoint": "8.6.112.132:8854"
   }
  ]
 }
